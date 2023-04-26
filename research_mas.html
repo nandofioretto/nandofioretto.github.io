@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Your description goes here" />
+		<meta name="keywords" content="Ferdinando Fioretto,Nando Fioretto,Nando,Ferdinando,Fioretto,DCOP,Smart Grid,AI,GPU,Distributed" />
+		<meta name="author" content="Ferdinando Fioretto" />
+		<link rel="shortcut icon" href="img/su_icon.png">
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" media="all" href="inland.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+		<title>Ferdinando Fioretto</title>
+		<script>
+			$(document).ready(function(){
+				var moreText = "Show more",
+				lessText = "Show less",
+				moreButton = $("a.read_more");
+
+				moreButton.click(
+					function () {
+						var $this = $(this);
+						$this.text($this.text() == moreText ? lessText : moreText).next("div.more").slideToggle("fast");
+					}
+					);
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+				var moreText = "Show more",
+				lessText = "Show less",
+				moreButton = $("a.read_more_title");
+				moreButton.click(
+					function () {
+						$(this).nextAll("div.more").slideToggle("fast");
+						var $show_text = $(this).nextAll("a.read_more");
+						$show_text.text($show_text.text() == moreText ? lessText : moreText)
+					}
+					);
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="wrapper960" class="clearfix">
+			<div id="toplinks">
+				<ul class="toplinks_links">
+					<li>
+						<a href='https://www.isye.gatech.edu'>
+						<img align='center' src="img/su_logo.png"  height="40pt" style="margin:-14px -20px -14px 0px">
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="header" class="clearfix shadow">
+				<div id="sitetitle" class="clearfix">
+					<h1>Ferdinando Fioretto</h1>
+				</div>
+
+			<div id="nav" class="clearfix">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<!-- <li><a href="news.html">News</a></li> -->
+					<li><a class="current" href="research.html">Research</a></li>
+					<li><a href="publications.html">Publications</a></li>
+					<li><a href="people.html">People</a></li>
+					<li><a href="teaching.html">Teaching</a></li>
+					<li><a href="index.html#contacts">Contacts</a></li>
+				</ul>
+			</div>
+		</div>
+
+				<!-- HEAD -->
+				<div id="content" class="clearfix shadow">
+					<h1> Multiagent Optimization </h1>
+				</div>
+
+			<div id="content">
+
+			<table style="height: 220px;" width="100%">
+				<tr>
+					<td style="vertical-align: top;" align="justified">
+						<p style="text-align: justify; padding-bottom: 0px">
+
+						Multi-agent optimization is at the forefront of modern optimization theory and has undergone a dramatic development, stimulated by emerging applications, such as those powered by the Internet of Things, in a host of diverse disciplines.
+						The <a href="">Distributed Constrained Optimization Problem</a> (DCOP) is a model in which multiple autonomous agents coordinate their decisions by exploiting a graphical model, and so to achieve a shared goal while accounting for personal preferences.
+						<br>
+						It can been used to model many multi-agent coordination problems, including  scheduling of devices in a smart home, the coordination of autonomous vehicles, and the assignment of targets in sensor networks.
+						The agents solve a combinatorial problem while the coordination process is executed within the boundaries of confined communication.
+						<br>
+						Although existing DCOP solvers offer desirable properties, such as using a bounded number of messages and localizing communication to between neighboring agents, their application to practical problems has been challenged due to their computational inefficiency and lack of generality. Thus, my research in multi-agent optimization has focused on increasing the efficiency and expressiveness of DCOPs.
+					</td>
+					<td style="vertical-align: top; padding-left: 10px"
+						width="200">
+						<img src="img/rs_smart_homes2.jpg" alt="Privacy" width="200"/>
+					</td>
+					</tr>
+					</table>
+
+
+		<h3>Related Awards</h3>
+		<ul>
+		    <li>
+				<span style="color: #000;">Best AI Dissertation Award</span>: <a href="https://sites.google.com/a/aixia.it/vincitori-premi/Home">Italian Artificial Intelligence Association</a>, (AI*IA), 2017.
+			</li>
+
+		    <li>
+		      <span style="color: #000">Most Visionary Paper Award</span>: International Conference on Autonomous Agents and Multiagent Systems (AAMAS) Workshop series, 2017. <br>
+		      William Kluegel, Muhammad Aamir Iqbal, Ferdinando Fioretto, William Yeoh, and Enrico Pontelli.
+		      &quot;<a href="publications.html">A Realistic Dataset for the Smart Home Device Scheduling Problem for DCOPs</a>&quot;.
+		    </li>
+		</ul>
+
+			<h3>Collaborators</h3>
+			<ul>
+				<li><a href="http://idm-lab.org">Sven Koenig</a>, University of Southern California</li>
+				<li><a href="https://www.tkskwork.org">TK Satish Kumar</a>, University of Southern California/ISI</li>
+				<li><a href="https://www.cs.nmsu.edu/wp/people/faculty-members/enrico-pontelli/">Enrico Pontelli</a>, New Mexico State University </li>
+				<li><a href="https://www.cs.nmsu.edu/~tson/">Tran Cao Son</a>, New Mexico State University</li>
+				<li><a href="http://www.hong.me">Hong Xu</a>, University of Southern California</li>
+				<li><a href="https://sites.wustl.edu/wyeoh/">William Yeoh</a>, Washington University in St. Louis</li>
+				<li><a href="http://agent.inf.kyushu-u.ac.jp/~yokoo/">Makoto Yokoo</a>, Kyushu University</li>
+				<li><a href="http://www.bgu.ac.il/~zivanr/">Roie Zivan</a>, Ben Gurion University</li>
+<!-- 				<li><a href="#">Khoi D. Hoang</a>, Washington University in St. Louis</li>
+				<li><a href="#">Tiep Le</a>, New Mexico State University</li>
+ -->			</ul>
+
+			<h3>Recent Publications</h3>
+
+			<li name="pscc20" id="pscc20">
+				Terrence W.K. Mak, <strong>Ferdinando Fioretto</strong>, Pascal Van Hentenryck.
+				<a class="read_more_title">&quot;Privacy-Preserving Obfuscation for Distributed Power Systems&quot;</a>.
+				<em>PSCC</em> (to appear), 2020.
+				<br>
+				<span class="paper_links">
+					<em style="color: #16A085";>Downloads</em>:
+					<a href="files/papers/pscc20.pdf"  target="blank">[pdf]</a>
+					<a href="files/bibtex/pscc20-bib.txt" target="blank">[BibTex]</a>
+					| 
+					<em style="color: #16A085";>Links</em>:
+					<a href="#" target="">[web]</a>
+					<a href="mailto:fioretto@gatech.edu?subject=Code request for paper id [pscc20]
+					&body=Hi,  I would like to request code and results associated to your paper ID: pscc20. Thanks!
+					&cc=wmak@gatech.edu,pvh@isye.gatech.edu">[request code]</a>
+				</span>
+				<a class="read_more">Show more</a>
+				<div class="more abstract bg-blue">
+					<strong><em>Abstract</em></strong>:
+					This paper considers the problem of releasing privacy-preserving 
+					load data of a decentralized operated power system. The paper 
+					focuses on data used to solve Optimal Power Flow (OPF) problems 
+					and proposes a distributed algorithm that complies with the notion 
+					of Differential Privacy, a strong privacy framework used to bound 
+					the risk of re-identification. The problem is challenging since 
+					the application of traditional differential privacy mechanisms to the 
+					load data fundamentally changes the nature of the underlying 
+					optimization problem and often leads to severe feasibility issues. 
+					The proposed differentially private distributed algorithm is based on 
+					the Alternating Direction Method of Multipliers (ADMM) and guarantees 
+					that the released privacy-preserving data retains high fidelity 
+					and satisfies the AC power flow constraints. Experimental results on 
+					a variety of OPF benchmarks demonstrate the effectiveness of the approach.
+				</div>
+			</li>
+			
+							<li name="ia19" id="ia19">
+								<strong>Ferdinando Fioretto</strong>, Agostino Dovier, Enrico Pontelli.
+								<a class="read_more_title">&quot;Distributed multi-agent optimization for smart grids and home automation&quot;</a>.
+								In <em>Intelligenza Artificiale (IA)</em>, 2019.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/ia19.pdf"  target="blank">[pdf]</a>
+									<a href="files/bibtex/ia19-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="https://content.iospress.com/articles/intelligenza-artificiale/ia180037" target="blank">[web]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									Distributed Constraint Optimization Problems (DCOPs) have emerged as one of the prominent multi-agent 
+									architectures to govern the agents’ autonomous behavior in a cooperative multi-agent system (MAS) 
+									where several agents coordinate with each other to optimize a global cost function taking into account 
+									their local preferences. They represent a powerful approach to the description and resolution of many 
+									practical problems. However, typical MAS applications are characterized by complex dynamics and 
+									interactions among a large number of entities, which translate into hard combinatorial problems, 
+									posing significant challenges from a computational and coordination standpoints. This paper reviews 
+									two methods to promote a hierarchical parallel model for solving DCOPs, with the aim of improving the 
+									performance of the DCOP algorithm. The first is a Multi-Variable Agent (MVA) DCOP decomposition, which 
+									exploits co-locality of an agent’s variables allowing the adoption of efficient centralized techniques 
+									to solve the subproblem of an agent. The second is the use of Graphics Processing Units (GPUs) to 
+									speed up a class of DCOP algorithms. Finally, exploiting these hierarchical parallel model, the paper 
+									presents two critical applications of DCOPs for demand response (DR) program in smart grids. The 
+									Multi-agent Economic Dispatch with Demand Response (EDDR), which provides an integrated approach to the 
+									economic dispatch and the DR model for power systems, and the Smart Home Device Scheduling (SHDS) 
+									problem, that formalizes the device scheduling and coordination problem across multiple smart homes 
+									to reduce energy peaks.
+								</div>
+							</li>
+
+							<li name="jair18" id="jair18">
+								<strong>Ferdinando Fioretto</strong>, William Yeoh, Enrico Pontelli.
+								<a class="read_more_title">&quot;Distributed Constraint Optimization Problems and Applications: A Survey&quot;</a>.
+								In <em>Journal of Artificial Intelligence Research (JAIR)</em>, 2018.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/jair18.pdf"  target="blank">[pdf]</a>
+									<a href="files/bibtex/jair18-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="http://www.jair.org/papers/paper5565.html" target="blank">[web]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									The field of <em>Multi-Agent System</em> (MAS) is an active area of research within Artificial Intelligence, with an increasingly important
+									impact in industrial and other real-world applications. Within a MAS, autonomous agents interact to pursue personal interests and/or to
+									achieve common objectives. <em>Distributed Constraint Optimization Problems</em> (DCOPs) have emerged as one of the prominent agent
+									architectures to govern the agents’ autonomous behavior, where both algorithms and communication models are driven by the structure
+									of the specific problem. During the last decade, several extensions to the DCOP model have enabled them to support MAS in complex,
+									real-time, and uncertain environments.
+									This survey aims at providing an overview of the DCOP model, giving a classification of its multiple extensions and addressing both
+									resolution methods and applications that find a natural mapping within each class of DCOPs. The proposed classification suggests
+									several future perspectives for DCOP extensions, and identifies challenges in the design of efficient resolution algorithms, possibly
+									through the adaptation of strategies from different areas.
+								</div>
+							</li>
+
+							<li name="aimatter18" id="aimatter18">
+								<strong>Ferdinando Fioretto</strong>, William Yeoh.
+								<a class="read_more_title">&quot;AI buzzwords explained: distributed constraint optimization problems&quot;</a>.
+								In <em>AI Matters</em>, 2018.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/aimatter18.pdf"  target="blank">[pdf]</a>
+									<a href="files/bibtex/aimatter18-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="https://dl.acm.org/citation.cfm?doid=3175502.3175506" target="blank">[web]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									The power network is the largest operating machine on earth, generating more than US$400bn a year1 keeping the lights on for our homes, offices, and factories. A significant concern in power networks is for the energy providers to be able to generate enough power to supply the demands at any point in time. Short terms demand peaks are however hard to predict and, thus, in the modern smart electricity grid, the energy providers can exploit the demand-side flexibility of the consumers to reduce the peaks in load demand.
+								</div>
+							</li>
+
+							<li name="constraints18" id="constraints18">
+								<strong>Ferdinando Fioretto</strong>, Enrico Pontelli, William Yeoh, Rina Dechter.
+								<a class="read_more_title">"Accelerating Exact and Approximate Inference for (Distributed) Discrete Optimization with GPUs"</a>.
+								In <em>Constraints</em>, 2018.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/constraints18.pdf"  target="blank">[pdf]</a>
+									<a href="files/bibtex/constraints18-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="https://link.springer.com/article/10.1007/s10601-017-9274-1" target="blank">[web]</a>
+									<a href="https://github.com/nandofioretto/GpuBE"  target="blank">[github]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									Discrete optimization is a central problem in artificial intelligence. The optimization of the aggregated cost of a network of cost functions arises in a variety of problems including Weighted Constraint Programs (WCSPs), Distributed Constraint Optimization (DCOP), as well as optimization in stochastic variants such as the tasks of finding the most probable explanation (MPE) in belief networks. Inference-based algorithms are powerful techniques for solving discrete optimization problems, which can be used independently or in combination with other techniques. However, their applicability is often limited by their compute intensive nature and their space requirements. This paper proposes the design and implementation of a novel inference-based technique, which exploits modern massively parallel architectures, such as those found in Graphical Processing Units (GPUs), to speed up the resolution of exact and approximated inference-based algorithms for discrete optimization. The paper studies the proposed algorithm in both centralized and distributed optimization contexts. The paper demonstrates that the use of GPUs provides significant advantages in terms of runtime and scalability, achieving up to two orders of magnitude in speedups and showing a considerable reduction in execution time (up to 345 times faster) with respect to a sequential version.
+								</div>
+							</li>
+
+
+							<li name="prima18" id="prima18">
+								<strong>Ferdinando Fioretto</strong>, Hong Xu, Sven Koenig, TK Satish Kumar.
+								<a class="read_more_title">" Solving Multiagent Constraint Optimization Problems on the Constraint Composite Graph"</a>.
+								In <em>International Conference on Principles and Practice of Multi-Agent Systems (PRIMA)</em>, 2018.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/prima18.pdf"  target="blank">[pdf]</a>
+<!-- 									<a href="files/talks/prima18-slides.pdf"  target="blank">[slides]</a>
+ -->									<a href="files/bibtex/prima18-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="http://2018.prima-conference.org/accepted-papers.html" target="">[web]</a>
+<!-- 									<a href="https://github.com/nandofioretto/SHDS_dataset"  target="blank">[github]</a>
+ -->									<a href="mailto:fioretto@umich.edu?subject=Code request for paper id [prima18]
+									&body=Hi,  I would like to request code and results associated to your paper ID: prima18. Thanks!
+									&cc=hongx@usc.edu">[request code]</a>
+								</span>
+
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									We introduce the Constraint Composite Graph (CCG) for Distributed Constraint Optimization Problems (DCOPs), a popular paradigm used for the description and resolution of cooperative multi-agent problems. The CCG is a novel graphical representation of DCOPs on which agents can coordinate their assignments to solve the distributed problem suboptimally. By leveraging this representation, agents are able to reduce the size of the problem. We propose a novel variant of Max- Sum—a popular DCOP incomplete algorithm—called CCG-Max-Sum, which is applied to CCGs, and demonstrate its efficiency and effectiveness on DCOP benchmarks based on several network topologies.
+								</div>
+							</li>
+
+							<li name="cp18" id="cp18">
+								Khoi Hoang, <strong>Ferdinando Fioretto</strong>, William Yeoh, Enrico Pontelli, Roie Zivan.
+								<a class="read_more_title">"A large neighboring search schema for multi-agent optimization"</a>.
+								In <em>Proceedings of the International Conference on Principles and Practice of Constraint Programming (CP)</em>, 2018.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/cp18.pdf"  target="blank">[pdf]</a>
+<!-- 									<a href="files/talks/cpaior18-slides.pdf"  target="blank">[slides]</a>
+ -->									<a href="files/bibtex/cp18-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="http://cp2018.a4cp.org/acceptedpapers.html" target="blank">[web]</a>
+									<a href="mailto:fioretto@umich.edu?subject=Code request for paper id [cp18]
+									&body=Hi,  I would like to request code and results associated to your paper ID: cp18. Thanks!
+									&cc=khoi.hoang@wustl.edu,wyeoh@wustl.edu">[request code]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									The Distributed Constraint Optimization Problem (DCOP) is an elegant paradigm for modeling and solving multi-agent problems which are distributed in nature, and where agents cooperate to optimize a global objective within the confines of localized communication. Since solving DCOPs optimally is NP-hard, recent effort in the development of DCOP algorithms has focused on incomplete methods. Unfortunately, many of such proposals do not provide quality guarantees or provide a loose quality assessment. Thus, this paper proposes the Distributed Large Neighborhood Search (DLNS), a novel iterative local search framework to solve DCOPs, which provides guarantees on solution quality refining lower and upper bounds in an iterative process. Our experimental analysis of DCOP benchmarks on several important classes of graphs illustrates the effectiveness of DLNS in finding good solutions and tight upper bounds in both problems with and without hard constraints.
+								</div>
+							</li>
+
+<li name="cp17" id="cp17">
+								Atena M. Tabakhi, Tiep Le, <strong>Ferdinando Fioretto</strong>, William Yeoh
+								<a class="read_more_title">"Preference Elicitation for DCOPs"</a>.
+								In <em>Proceedings of the International Conference on Principles and Practice of Constraint Programming (CP)</em>, 2017.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/cp17.pdf"  target="blank">[pdf]</a>
+									<a href="files/bibtex/cp17-bib.txt" target="blank">[BibTex]</a>
+									<!-- <a href="files/slides/cp17-slides.pdf"  target="blank">[slides]</a> -->
+									| Links:
+									<a href="http://cp2017.a4cp.org/accepted_papers.html" target="blank">[web]</a>
+									<a href="mailto:fioretto@umich.edu?subject=Code request for paper id [cp17]
+									&body=Hi,  I would like to request code and results associated to your paper ID: cp17. Thanks!
+									&cc=amtabakh@cs.nmsu.edu,khoang@cs.nmsu.edu,wyeoh@cs.nmsu.edu">[request code]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									<em>Distributed Constraint Optimization Problems</em> (DCOPs) offer a powerful approach for the
+									description and resolution of cooperative multi-agent problems. In this model, a group of agents
+									coordinate their actions to optimize a global objective function, taking into account their
+									preferences or constraints. A core limitation of this model is the assumption that the preferences
+									of all agents or the costs of all constraints are specified a priori. Unfortunately, this
+									assumption does not hold in a number of application domains where preferences or constraints must
+									be elicited from the users. One of such domains is the <em>Smart Home Device Scheduling </em>
+									(SHDS) problem. Motivated by this limitation, we make the following contributions in this paper:
+									(1) We propose a general model for preference elicitation in DCOPs;
+									(2) We propose several heuristics to elicit preferences in DCOPs; and
+									(3) We empirically evaluate the effect of these heuristics on random binary DCOPs as well as
+									SHDS problems.
+								</div>
+							</li>
+
+							<!-- aamas17c -->
+							<li name="aamas17c" id="aamas17c">
+								Khoi D. Hoang, Ping Hou, <strong>Ferdinando Fioretto</strong>, William Yeoh, Roie Zivan, Makoto Yokoo.
+								<a class="read_more_title">"Infinite-Horizon Proactive Dynamic DCOPs"</a>.
+								In Proceedings of the <em>International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>,  2017.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/aamas17c.pdf"  target="blank">[pdf]</a>
+									<a href="files/talks/aamas17c-slides.pdf"  target="blank">[slides]</a>
+									<a href="files/bibtex/aamas17c-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="http://dl.acm.org/citation.cfm?id=3091160" target="blank">[web]</a>
+									<a href="mailto:fioretto@umich.edu?subject=Code request for paper id [aamas17c]
+									&body=Hi,  I would like to request code and results associated to your paper ID: aamas17c. Thanks!
+									&cc=khoang@cs.nmsu.edu,wyeoh@cs.nmsu.edu,zivanr@cs.bgu.ac.il,yokoo@inf.kyushu-u.ac.jp">[request code]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									The <em>Distributed Constraint Optimization Problem (DCOP)</em> formulation is a powerful tool for modeling multi-agent
+									coordination problems. Researchers have recently extended this model to <em>Proactive Dynamic DCOPs (PD-DCOPs)</em> to
+									capture the inherent dynamism present in many coordination problems. The PD-DCOP formulation is a finite-horizon model
+									that assumes a finite horizon is known a priori. It ignores changes to the problem after the horizon and is thus not
+									guaranteed to find optimal solutions for infinite-horizon problems, which often occur in the real world. Therefore, we
+									<em>(i)</em> propose the Infinite-Horizon PD-DCOP (IPD- DCOP) model, which extends PD-DCOPs to handle infinite horizons;
+									<em>(ii)</em> exploit the convergence properties of Markov chains to determine the optimal solution to the problem after
+									it has converged;
+									<em>(iii)</em> propose three distributed greedy algorithms to solve IPD-DCOPs;
+									<em>(iv)</em> provide theoretical quality guarantees on the new model; and
+									<em>(v)</em> empirically evaluate both proactive and reactive algorithms to determine the tradeoffs between the two classes.
+									The final contribution is important as, thus far, researchers have exclusively evaluated the two classes of algorithms in
+									isolation. As a result, it is difficult to identify the characteristics of problems that they excel in. Our results are
+									the first in this important direction.
+								</div>
+							</li>
+
+							<!-- aamas17b -->
+							<li name="aamas17b" id="aamas17b">
+								<strong>Ferdinando Fioretto</strong>, William Yeoh, Enrico Pontelli.
+								<a class="read_more_title">"A Multiagent System Approach to Scheduling Devices in Smart Homes"</a>.
+								In Proceedings of the <em>International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, 2017.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/aamas17b.pdf"  target="blank">[pdf]</a>
+									<a href="files/talks/aamas17b-slides.pdf"  target="blank">[slides]</a>
+									<a href="files/bibtex/aamas17b-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="http://dl.acm.org/citation.cfm?id=3091265" target="blank">[web]</a>
+									<a href="https://github.com/nandofioretto/SHDS-AAMAS17"  target="blank">[github]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									<em>Demand-side management (DSM)</em> in the smart grid allows customers to make autonomous decisions on their energy consumption,
+									helping energy providers to reduce the energy peaks in load demand. The automated scheduling of smart devices in residential and
+									commercial buildings plays a key role in DSM. Due to data privacy and user autonomy, such an approach is best implemented through
+									distributed multi-agent systems. This paper makes the following contributions:
+									<em>(i)</em> It introduces the <em>Smart Home Device Scheduling (SHDS)</em> problem, which formalizes the device scheduling and coordination
+									problem across multiple smart homes as a multi-agent system;
+									<em>(ii)</em> It describes a mapping of this problem to a <em>distributed constraint optimization problem</em>;
+									<em>(iii)</em> It proposes a distributed algorithm for the SHDS problem; and
+									<em>(iv)</em> It presents empirical results from a physically distributed system of Raspberry Pis, each capable of controlling smart
+									devices through hardware interfaces, as well as larger scale synthetic experiments.
+								</div>
+							</li>
+
+							<!-- aamas17a -->
+							<li name="aamas17a" id="aamas17a">
+								<strong>Ferdinando Fioretto</strong>, William Yeoh, Enrico Pontelli, Ye Ma, Satishkumar Ranade.
+								<a class="read_more_title">"A Distributed Constraint Optimization (DCOP) Approach to the Economic Dispatch with Demand Response"</a>.
+								In Proceedings of the <em>International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, 2017.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/aamas17a.pdf"  target="blank">[pdf]</a>
+									<a href="files/talks/aamas17a-slides.pdf"  target="blank">[slides]</a>
+									<a href="files/bibtex/aamas17a-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="http://dl.acm.org/citation.cfm?id=3091267" target="blank">[web]</a>
+									<a href="mailto:fioretto@umich.edu?subject=Code request for paper id [aamas17a]
+									&body=Hi,  I would like to requestcode and results associated to your paper ID: aamas17a. Thanks!
+									&cc=wyeoh@cs.nmsu.edu,epontell@cs.nmsu.edu">[request code]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									With the growing complexity of the current power grid, there is an increasing need for intelligent operations coordinating
+									energy supply and demand. A key feature of the smart grid vision is that intelligent mechanisms will coordinate the production,
+									transmission, and consumption of energy in a distributed and reliable way.
+									<em>Economic Dispatch</em> (ED) and <em>Demand Response</em> (DR) are two key problems that need to be solved to achieve this
+									vision. In traditional operations, ED and DR are implemented separately, despite the strong inter-dependencies between these
+									two problems. Therefore, we propose an integrated approach to solve the ED and DR problems that simultaneously maximizes the
+									benefits of customers and minimizes the generation costs, and introduce an effective multi-agent-based algorithm, based on
+									<em>Distributed Constraint Optimization Problems</em> (DCOPs), acting on direct control of both generators and dispatchable
+									loads. To cope with the high complexity of the problem, our solution employs <em>General Purpose Graphical Processing Units</em>
+									(GPGPUs) to speed up the computational runtime. We empirically evaluate the proposed algorithms on standard IEEE bus systems
+									and test the stability of the proposed solution with a state-of-the-art power system simulator on the IEEE 30-bus system.
+								</div>
+							</li>
+
+
+							<!-- aamas-workshop-17 -->
+							<li name="aamasworkshop17" id="aamasworkshop17">
+								William Kluegel, Muhammad Aamir Iqbal, <strong>Ferdinando Fioretto</strong>, William Yeoh, Enrico Pontelli:
+								<a class="read_more_title">"A Realistic Dataset for the Smart Home Device Scheduling Problem for DCOPs"</a>.
+								In Proceedings of the International <em>Workshop on Optimisation in Multi-Agent Systems (OPTMAS)</em>, 2017.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/lcns17.pdf"  target="blank">[pdf]</a>
+									<a href="files/bibtex/lcns17-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="https://link.springer.com/chapter/10.1007%2F978-3-319-71679-4_9" target="blank">[web]</a>
+									<a href="https://github.com/nandofioretto/SHDS_dataset"  target="blank">[github]</a>
+									<span style="font-size: 105%; margin: 0 0 0 4pt; color: #df0101;">*Most visionary paper award*</span>
+								</span>
+
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									The field of Distributed Constraint Optimization has gained momentum in recent years thanks to its
+									ability to address various applications related to multi-agent cooperation. While techniques for solving
+									<em>Distributed Constraint Optimization Problems (DCOPs)</em> are abundant and have matured substantially
+									since the field inception, the number of DCOP realistic applications available to assess the performance
+									of DCOP algorithms is lagging behind. To contrast this background we <em>(i)</em> introduce the
+									<em>Smart Home Device Scheduling (SHDS)</em> problem, which describe the problem of coordinating smart
+									devices schedules across multiple homes as a multi-agent system, <em>(ii)</em> detail the physical models
+									adopted to simulate smart sensors, smart actuators, and homes' environments, and <em>(iii)</em> introduce
+									a DCOP realistic benchmark for SHDS problems.
+								</div>
+							</li>
+
+														<!-- aamas-16a -->
+							<li>
+								Khoi Hoang, <strong>Ferdinando Fioretto</strong>, Ping Hou, Makoto Yokoo, William Yeoh, Roie Zivan.
+								<a class="read_more_title">&quot;Proactive Dynamic Distributed Constraint Optimization&quot;</a>.
+								In Proceedings of the <em>International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, 2016.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/aamas16a.pdf"  target="blank">[pdf]</a>
+									<a href="files/talks/aamas16a-slides.pdf"  target="blank">[slides]</a>
+									<a href="files/bibtex/aamas16a-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="http://dl.acm.org/citation.cfm?id=2936924.2937013" target="blank">[web]</a>
+									<a href="mailto:fioretto@umich.edu?subject=Code request for paper id [aamas16a]
+									&body=Hi, I would like to request code and results associated to your paper ID: aamas16a. Thanks!
+									&cc=khoang@cs.nmsu.edu,phou@cs.nmsu.edu,wyeoh@cs.nmsu.edu,yokoo@inf.kyushu-u.ac.jp,zivanr@cs.bgu.ac.il">[request code]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									Current approaches that model dynamism in <em>DCOPs</em> solve a sequence of static problems, reacting to changes in the
+									environment as the agents observe them. Such approaches thus ignore possible predictions on future changes. To overcome this
+									limitation, we introduce <em>Proactive Dynamic DCOPs</em> (PD-DCOPs), a novel formalism to model dynamic DCOPs in the presence
+									of exogenous uncertainty.
+									In contrast to reactive approaches, PD-DCOPs are able to explicitly model the possible changes to the problem, and take such
+									information into account proactively, when solving the dynamically changing problem. The additional expressivity of this
+									formalism allows it to model a wider variety of distributed optimization problems. Our work presents both theoretical and
+									practical contributions that advance current dynamic DCOP models:
+									<em>(i)</em> we introduce the PD-DCOP model, which explicitly captures dynamic changes of the DCOP over time;
+									<em>(ii)</em> we discuss the complexity of this new class of DCOPs; and
+									<em>(iii)</em> we develop both exact and approximation algorithms with quality guarantees to solve PD-DCOPs proactively.
+								</div>
+							</li>
+
+							<!-- aamas-16b -->
+							<li>
+								Tiep Le, <strong>Ferdinando Fioretto</strong>, William Yeoh, Tran Cao Son, and Enrico Pontelli.
+								<a class="read_more_title">&quot;ER-DCOPs: A Framework for DCOPs with Uncertainty in Constraint Utilities&quot;</a>.
+								In Proceedings of the <em>International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, 2016.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/aamas16b.pdf"  target="blank">[pdf]</a>
+									<a href="files/talks/aamas16b-slides.pdf"  target="blank">[slides]</a>
+									<a href="files/bibtex/aamas16b-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="http://dl.acm.org/citation.cfm?id=2937014" target="blank">[web]</a>
+									<a href="mailto:fioretto@umich.edu?subject=Code request for paper id [aamas16b]
+									&body=Hi,  I would like to request code and results associated to your paper ID: aamas16b. Thanks!
+									&cc=tile@cs.nmsu.edu,wyeoh@cs.nmsu.edu,tson@cs.nmsu.edu,epontell@cs.nmsu.edu">[request code]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									<em>Distributed Constraint Optimization Problems</em> (DCOPs) have been used to model a number of multi-agent
+									coordination problems. In DCOPs, agents are assumed to have complete information about the utility of their
+									possible actions. However, in many real-world applications, such utilities are stochastic due to the presence
+									of exogenous events that are beyond the direct control of the agents. This paper addresses this issue by
+									extending the standard DCOP model to <em>Expected Regret DCOP</em> (ER-DCOP) for DCOP applications with
+									uncertainty in constraint utilities. Different from other approaches, ER-DCOPs aim at minimizing the overall
+									expected regret of the problem. The paper proposes the ER-DPOP algorithm for solving ER-DCOPs, which is
+									complete and requires a linear number of messages with respect to the number of agents in the problem. We
+									further present two implementations of ER-DPOP---GPU- and ASP-based implementations---that orthogonally
+									exploit the problem structure and present their evaluations on random networks and power network problems.
+								</div>
+							</li>
+
+							<!-- aaai-16 -->
+							<li>
+								<strong>Ferdinando Fioretto</strong>, William Yeoh, Enrico Pontelli.
+								<a class="read_more_title">&quot;Multi-Variable Agent Decomposition for DCOPs&quot;</a>.
+								In <em>Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)</em>, 2016.
+								<br>
+								<span class="paper_links">
+									Downloads:
+									<a href="files/papers/aaai16.pdf"  target="blank">[pdf]</a>
+									<a href="files/talks/aaai16-slides.pdf"  target="blank">[slides]</a>
+									<a href="files/bibtex/aaai16-bib.txt" target="blank">[BibTex]</a>
+									| Links:
+									<a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12093" target="blank">[web]</a>
+									<a href="https://github.com/nandofioretto/MVA-DCOP"  target="blank">[github]</a>
+								</span>
+								<a class="read_more">Show more</a>
+								<div class="more abstract bg-blue">
+									<strong><em>Abstract</em></strong>:
+									The application of <em>DCOP</em> models to large problems faces two main limitations:
+									<em>(i)</em> Modeling limitations, as each agent can handle only a single variable of the problem; and
+									<em>(ii)</em> Resolution limitations, as current approaches do not exploit the local problem structure
+									within each agent. This paper proposes a novel Multi-Variable Agent (MVA) DCOP decomposition technique,
+									which: <em>(i)</em> Exploits the co-locality of each agent's variables, allowing us to adopt efficient
+									centralized techniques within each agent; <em>(ii)</em> Enables the use of hierarchical parallel models
+									and proposes the use of GPUs; and <em>(iii)</em> Reduces the amount of computation and communication
+									required in several classes of DCOP algorithms.
+								</div>
+							</li>
+
+			</div>
+
+			<!-- Footer -->
+		<div id="footer" class="shadow">
+		  <p>&copy; 2018 - 2020 Ferdinando Fioretto | <a href="http://andreasviklund.com/templates/inland/">Template design</a> by <a href="http://andreasviklund.com/">andreasviklund.com</a><br /></p>
+		  <p> Last Update: Mar. 2020
+		</div>
+		</div>
+
+		<script type="text/javascript">
+					$(window).load(function() {
+						$('#slider').nivoSlider();
+					});
+		</script>
+
+		<script>w3.includeHTML();</script>
+
+		</body>
+	</html>

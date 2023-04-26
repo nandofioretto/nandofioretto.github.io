@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Your description goes here" />
+		<meta name="keywords" content="Ferdinando Fioretto,Nando Fioretto,Nando,Ferdinando,Fioretto,DCOP,Smart Grid,AI,GPU,Distributed" />
+		<meta name="author" content="Ferdinando Fioretto" />
+		<link rel="shortcut icon" href="img/su_icon.png">
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" media="all" href="inland.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+		<title>Ferdinando Fioretto</title>
+		<script>
+			$(document).ready(function(){
+				var moreText = "Show more",
+				lessText = "Show less",
+				moreButton = $("a.read_more");
+
+				moreButton.click(
+					function () {
+						var $this = $(this);
+						$this.text($this.text() == moreText ? lessText : moreText).next("div.more").slideToggle("fast");
+					}
+					);
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+				var moreText = "Show more",
+				lessText = "Show less",
+				moreButton = $("a.read_more_title");
+				moreButton.click(
+					function () {
+						$(this).nextAll("div.more").slideToggle("fast");
+						var $show_text = $(this).nextAll("a.read_more");
+						$show_text.text($show_text.text() == moreText ? lessText : moreText)
+					}
+					);
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="wrapper960" class="clearfix">
+			<div id="toplinks">
+				<ul class="toplinks_links">
+					<li>
+						<a href='https://www.isye.gatech.edu'>
+						<img align='center' src="img/su_logo.png"  height="40pt" style="margin:-14px -20px -14px 0px">
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="header" class="clearfix shadow">
+				<div id="sitetitle" class="clearfix">
+					<h1>Ferdinando Fioretto</h1>
+				</div>
+
+			<div id="nav" class="clearfix">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<!-- <li><a href="news.html">News</a></li> -->
+					<li><a class="current" href="research.html">Research</a></li>
+					<li><a href="publications.html">Publications</a></li>
+					<li><a href="people.html">People</a></li>
+					<li><a href="teaching.html">Teaching</a></li>
+					<li><a href="index.html#contacts">Contacts</a></li>
+				</ul>
+			</div>
+		</div>
+
+			<!-- HEAD -->
+			<div id="content" class="clearfix shadow">
+				<h1> Scalable AI </h1>
+			</div>
+
+		<div id="content">
+		<table style="height: 220px;" width="100%">
+			<tr>
+				<td style="vertical-align: top;" align="justified">
+					<p style="text-align: justify; padding-bottom: 0px">
+				A variety of central problems in AI, including finding the most probable explanation (MPE) in Bayesian networks and constraint optimization problems, are modeled as optimizing the costs of a network of cost functions.
+				These graphical models are used to support decision making under uncertainty as well as to  explain a domain, and are used in medical diagnosis, semantic search, and biological network learning. Despite their importance, the inherent complexity of these models challenges their scalability and usability in large complex problems.
+				<br>
+				Recently, massively parallel architectures, such as those found in <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">Graphical Processing Units</a> (GPUs), have witnessed an enormous success in a wide range of AI applications, including accelerated deep learning, image processing, and data analysis. A GPU offers thousands of computing cores and can provide an unprecedented application performance by offloading compute-intensive portions of the application into it.
+				<br>
+				Part of my research investigates how to devise efficient and scalable algorithms to solve large optimization problems over graphical models by exploiting the availability of GPUs.
+				</td>
+				<td style="vertical-align: top; padding-left: 10px" width="200">
+					<img src="img/rs_gpu2.jpg" alt="Privacy" width="200" />
+				</td>
+			</tr>
+		</table>
+		&nbsp;
+
+		<h3>Related Awards</h3>
+		<ul>
+			<span style="color: #000;">Best AI Dissertation Award</span>: <a href="https://sites.google.com/a/aixia.it/vincitori-premi/Home">Italian Artificial Intelligence Association</a>, (AI*IA), 2017.
+		</ul>
+
+		<h3>Collaborators</h3>
+		<ul>
+			<li><a href="https://www.linkedin.com/in/federicocampeotto/?locale=en_US">Federico Campeotto</a>, Amazon </li>
+			<li><a href="Agostino Dovier">Agostino Dovier</a>, University of Udine</li>
+			<li><a href="https://www.ics.uci.edu/~dechter/">Rina Dechter</a>, University of California, Irvine</li>
+			<li><a href="http://www2.unipr.it/~dalpalu/">Alessandro Dal Palu'</a>, University of Parma</li>
+			<li><a href="https://sites.wustl.edu/wyeoh/">William Yeoh</a>, Washington University in St. Louis</li>
+			<li><a href="https://www.cs.nmsu.edu/wp/people/faculty-members/enrico-pontelli/">Enrico Pontelli</a>, New Mexico State University </li>
+		</ul>
+
+		<h3>Recent Publications</h3>
+		<ul>
+
+			<li name="constraints18" id="constraints18">
+				<strong>Ferdinando Fioretto</strong>, Enrico Pontelli, William Yeoh, Rina Dechter.
+				<a class="read_more_title">"Accelerating Exact and Approximate Inference for (Distributed) Discrete Optimization with GPUs"</a>.
+				In <em>Constraints</em>, 2018.
+				<br>
+				<span class="paper_links">
+					Downloads:
+					<a href="files/papers/constraints18.pdf"  target="blank">[pdf]</a>
+					<a href="files/bibtex/constraints18-bib.txt" target="blank">[BibTex]</a>
+					| Links:
+					<a href="https://link.springer.com/article/10.1007/s10601-017-9274-1" target="blank">[web]</a>
+					<a href="https://github.com/nandofioretto/GpuBE"  target="blank">[github]</a>
+				</span>
+				<a class="read_more">Show more</a>
+				<div class="more abstract bg-blue">
+					<strong><em>Abstract</em></strong>:
+					Discrete optimization is a central problem in artificial intelligence. The optimization of the aggregated cost of a network of cost functions arises in a variety of problems including Weighted Constraint Programs (WCSPs), Distributed Constraint Optimization (DCOP), as well as optimization in stochastic variants such as the tasks of finding the most probable explanation (MPE) in belief networks. Inference-based algorithms are powerful techniques for solving discrete optimization problems, which can be used independently or in combination with other techniques. However, their applicability is often limited by their compute intensive nature and their space requirements. This paper proposes the design and implementation of a novel inference-based technique, which exploits modern massively parallel architectures, such as those found in Graphical Processing Units (GPUs), to speed up the resolution of exact and approximated inference-based algorithms for discrete optimization. The paper studies the proposed algorithm in both centralized and distributed optimization contexts. The paper demonstrates that the use of GPUs provides significant advantages in terms of runtime and scalability, achieving up to two orders of magnitude in speedups and showing a considerable reduction in execution time (up to 345 times faster) with respect to a sequential version.
+				</div>
+			</li>
+
+
+			<!-- aamas17a -->
+			<li name="aamas17a" id="aamas17a">
+				<strong>Ferdinando Fioretto</strong>, William Yeoh, Enrico Pontelli, Ye Ma, Satishkumar Ranade.
+				<a class="read_more_title">"A Distributed Constraint Optimization (DCOP) Approach to the Economic Dispatch with Demand Response"</a>.
+				In Proceedings of the <em>International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, 2017.
+				<br>
+				<span class="paper_links">
+					Downloads:
+					<a href="files/papers/aamas17a.pdf"  target="blank">[pdf]</a>
+					<a href="files/talks/aamas17a-slides.pdf"  target="blank">[slides]</a>
+					<a href="files/bibtex/aamas17a-bib.txt" target="blank">[BibTex]</a>
+					| Links:
+					<a href="http://dl.acm.org/citation.cfm?id=3091267" target="blank">[web]</a>
+					<a href="mailto:fioretto@umich.edu?subject=Code request for paper id [aamas17a]
+					&body=Hi,  I would like to requestcode and results associated to your paper ID: aamas17a. Thanks!
+					&cc=wyeoh@cs.nmsu.edu,epontell@cs.nmsu.edu">[request code]</a>
+				</span>
+				<a class="read_more">Show more</a>
+				<div class="more abstract bg-blue">
+					<strong><em>Abstract</em></strong>:
+					With the growing complexity of the current power grid, there is an increasing need for intelligent operations coordinating
+					energy supply and demand. A key feature of the smart grid vision is that intelligent mechanisms will coordinate the production,
+					transmission, and consumption of energy in a distributed and reliable way.
+					<em>Economic Dispatch</em> (ED) and <em>Demand Response</em> (DR) are two key problems that need to be solved to achieve this
+					vision. In traditional operations, ED and DR are implemented separately, despite the strong inter-dependencies between these
+					two problems. Therefore, we propose an integrated approach to solve the ED and DR problems that simultaneously maximizes the
+					benefits of customers and minimizes the generation costs, and introduce an effective multi-agent-based algorithm, based on
+					<em>Distributed Constraint Optimization Problems</em> (DCOPs), acting on direct control of both generators and dispatchable
+					loads. To cope with the high complexity of the problem, our solution employs <em>General Purpose Graphical Processing Units</em>
+					(GPGPUs) to speed up the computational runtime. We empirically evaluate the proposed algorithms on standard IEEE bus systems
+					and test the stability of the proposed solution with a state-of-the-art power system simulator on the IEEE 30-bus system.
+				</div>
+			</li>
+
+
+			<!-- aamas-16b -->
+			<li>
+				Tiep Le, <strong>Ferdinando Fioretto</strong>, William Yeoh, Tran Cao Son, and Enrico Pontelli.
+				<a class="read_more_title">&quot;ER-DCOPs: A Framework for DCOPs with Uncertainty in Constraint Utilities&quot;</a>.
+				In Proceedings of the <em>International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, 2016.
+				<br>
+				<span class="paper_links">
+					Downloads:
+					<a href="files/papers/aamas16b.pdf"  target="blank">[pdf]</a>
+					<a href="files/talks/aamas16b-slides.pdf"  target="blank">[slides]</a>
+					<a href="files/bibtex/aamas16b-bib.txt" target="blank">[BibTex]</a>
+					| Links:
+					<a href="http://dl.acm.org/citation.cfm?id=2937014" target="blank">[web]</a>
+					<a href="mailto:fioretto@umich.edu?subject=Code request for paper id [aamas16b]
+					&body=Hi,  I would like to request code and results associated to your paper ID: aamas16b. Thanks!
+					&cc=tile@cs.nmsu.edu,wyeoh@cs.nmsu.edu,tson@cs.nmsu.edu,epontell@cs.nmsu.edu">[request code]</a>
+				</span>
+				<a class="read_more">Show more</a>
+				<div class="more abstract bg-blue">
+					<strong><em>Abstract</em></strong>:
+					<em>Distributed Constraint Optimization Problems</em> (DCOPs) have been used to model a number of multi-agent
+					coordination problems. In DCOPs, agents are assumed to have complete information about the utility of their
+					possible actions. However, in many real-world applications, such utilities are stochastic due to the presence
+					of exogenous events that are beyond the direct control of the agents. This paper addresses this issue by
+					extending the standard DCOP model to <em>Expected Regret DCOP</em> (ER-DCOP) for DCOP applications with
+					uncertainty in constraint utilities. Different from other approaches, ER-DCOPs aim at minimizing the overall
+					expected regret of the problem. The paper proposes the ER-DPOP algorithm for solving ER-DCOPs, which is
+					complete and requires a linear number of messages with respect to the number of agents in the problem. We
+					further present two implementations of ER-DPOP---GPU- and ASP-based implementations---that orthogonally
+					exploit the problem structure and present their evaluations on random networks and power network problems.
+				</div>
+			</li>
+
+
+			<!-- cp16 -->
+			<li>
+				<strong>Ferdinando Fioretto</strong>, William Yeoh, Enrico Pontelli.
+				<a class="read_more_title">&quot;A Dynamic Programming-based MCMC Framework for Solving DCOPs with GPUs&quot;</a>.
+				In <em>Proceedings of the International Conference on Principles and Practice of Constraint Programming (CP)</em>, 2016.
+				<br>
+				<span class="paper_links">
+					Downloads:
+					<a href="files/papers/cp16.pdf"  target="blank">[pdf]</a>
+					<a href="files/talks/cp16-slides.pdf" target="blank">[slides]</a>
+					<a href="files/bibtex/cp16-bib.txt" target="blank">[BibTex]</a>
+					| Links:
+					<a href="http://link.springer.com/chapter/10.1007%2F978-3-319-44953-1_51" target="blank">[web]</a>
+					<a href="https://github.com/nandofioretto/GPU-MCMC"  target="blank">[github]</a>
+				</span>
+				<a class="read_more">Show more</a>
+				<div class="more abstract bg-blue">
+					<strong><em>Abstract</em></strong>:
+					The field of <em>Distributed Constraint Optimization</em> (DCOP) has gained momentum in recent years, thanks to its ability to
+					address various applications related to multi-agent coordination. Nevertheless, solving DCOPs is computationally challenging.
+					Thus, in large scale, complex applications, incomplete DCOP algorithms are necessary. Recently, researchers have introduced a
+					promising class of incomplete DCOP algorithms, based on sampling. However, this paradigm requires a multitude of samples to
+					ensure convergence. This paper exploits the property that sampling is amenable to parallelization, and introduces a general
+					framework, called <em>Distributed MCMC</em> (DMCMC), that is based on a dynamic programming procedure and uses
+					<em>Markov Chain Monte Carlo</em> (MCMC) sampling algorithms to solve DCOPs. Additionally, DMCMC harnesses the parallel computing
+					power of <em>Graphical Processing Units</em> (GPUs) to speed-up the sampling process. The experimental results show that DMCMC
+					can find good solutions up to two order of magnitude faster than other incomplete DCOP algorithms.
+				</div>
+			</li>
+
+
+		<!-- CP15 -->
+		<li name="cp15" id="cp15">
+			<strong>Ferdinando Fioretto</strong>, Tiep Le, William Yeoh, Enrico Pontelli and Tran Cao Son.
+			<a class="read_more_title">&quot;Exploiting GPUs in Solving (Distributed) Constraint Optimization Problems with Dynamic Programming&quot;</a>.
+		  	In <em>Proceedings of the International Conference on Principles and Practice of Constraint Programming (CP)</em>, 2015.
+		  	<br>
+			<span class="paper_links">
+				Downloads:
+				<a href="files/papers/cp15.pdf"  target="blank">[pdf]</a>
+				<a href="files/talks/cp15-slides.pdf" target="blank">[slides]</a>
+				<a href="files/bibtex/cp15-bib.txt" target="blank">[BibTex]</a>
+				| Links:
+				<a href="https://link.springer.com/chapter/10.1007/978-3-319-23219-5_9" target="blank">[web]</a>
+				<a href="https://github.com/nandofioretto/GpuDBE"  target="blank">[github]</a>
+		  	</span>
+		  	<a class="read_more">Show more</a>
+		  	<div class="more abstract bg-blue">
+		  		<strong><em>Abstract</em></strong>:
+					This paper proposes the design and implementation of a dynamic programming based algorithm for (distributed) constraint optimization, which exploits modern massively parallel architectures, such as those found in modern Graphical Processing Units (GPUs). The paper studies the proposed algorithm in both centralized and distributed optimization contexts. The experimental analysis, performed on unstructured and structured graphs, shows the advantages of employing GPUs, resulting in enhanced performances and scalability.
+		  	</div>
+		</li>
+
+
+		<!-- ECAI14 -->
+		<li name="ecai14" id="ecai14">
+			Federico Campeotto, Agostino Dovier, <strong>Ferdinando Fioretto</strong> and Enrico Pontelli.
+			<a class="read_more_title">&quot;A GPU Implementation of Large Neighborhood Search for Solving Constraint Optimization Problems&quot;</a>.
+			In <em>Proceedings of the European Conference of Artificial Intelligence (ECAI)</em>, 2014.
+		  	<br>
+			<span class="paper_links">
+				Downloads:
+				<a href="files/papers/ecai14.pdf"  target="blank">[pdf]</a>
+				<a href="files/talks/ecai14-slides.pdf" target="blank">[slides]</a>
+				<a href="files/bibtex/ecai14-bib.txt" target="blank">[BibTex]</a>
+				| Links:
+				<a href="http://ebooks.iospress.nl/publication/36938" target="blank">[web]</a>
+
+				<a href="mailto:fioretto@umich.edu?subject=Code request for paper id [ecai14]
+				&body=Hi,  I would like to request code and results associated to your paper ID: ecai14. Thanks!
+				&cc=epontell@cs.nmsu.edu,agostino.dovier@uniud.it">[request code]</a>
+		  	</span>
+		  	<a class="read_more">Show more</a>
+		  	<div class="more abstract bg-blue">
+		  		<strong><em>Abstract</em></strong>:
+				Constraint programming has gained prominence as an effective and declarative paradigm for modeling and solving complex combinatorial problems. Techniques based on local search have proved practical to solve real-world problems, providing a good compromise between optimality and efficiency. In spite of the natural presence of concurrency, there has been relatively limited effort to use novel massively parallel architectures, such as those found in modern Graphical Processing Units (GPUs), to speedup local search techniques in constraint programming. This paper describes a novel framework which exploits parallelism from a popular local search method (the Large Neighborhood Search method), using GPUs.
+		  	</div>
+		</li>
+
+	</ul>
+
+		</div>
+
+		<!-- Footer -->
+		<div id="footer" class="shadow">
+		  <p>&copy; 2018 - 2020 Ferdinando Fioretto | <a href="http://andreasviklund.com/templates/inland/">Template design</a> by <a href="http://andreasviklund.com/">andreasviklund.com</a><br /></p>
+		  <p> Last Update: Mar. 2020
+		</div>
+	</div>
+
+	<script type="text/javascript">
+				$(window).load(function() {
+					$('#slider').nivoSlider();
+				});
+	</script>
+
+	<script>w3.includeHTML();</script>
+
+	</body>
+</html>
