@@ -1,0 +1,8 @@
+@inproceedings{fioretto:AAMAS-16a,
+  author    = "Khoi D. Hoang and Ferdinando Fioretto and Ping Hou and Makoto Yokoo and William Yeoh and Roie Zivan",
+  title     = "Proactive Dynamic Distributed Constraint Optimization",
+  booktitle = "Proceedings of the International Joint Conference on Autonomous Agents and Multiagent Systems {(AAMAS)}",
+  pages     = "597--605",
+  year      = "2016",
+  url       = "http://dl.acm.org/citation.cfm?id=2937013"
+}

@@ -1,0 +1,6 @@
+@inproceedings{fioretto:ISIAM18,
+  author    = "Ferdinando Fioretto and Hong Xu and Sven Koenig and T. K. Satish Kumar",
+  title     = "Constraint Composite Graph-Based Lifted Message Passing for Distributed Constraint Optimization Problems",
+  booktitle = "International Symposium on Artificial Intelligence and Mathematics (ISAIM)",
+  year      = "2018"
+}

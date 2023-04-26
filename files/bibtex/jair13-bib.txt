@@ -1,0 +1,9 @@
+@article{fioretto:JAIR-13,
+  author    = "Federico Campeotto and Alessandro Dal Pal{\`{u}} and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli",
+  title     = "A Constraint Solver for Flexible Protein Model",
+  journal   = "Journal of Artificial Intelligence Research {(JAIR)}",
+  volume    = "48",
+  pages     = "953--1000",
+  year      = "2013",
+  url       = "http://jair.org/papers/paper4193.html"
+}

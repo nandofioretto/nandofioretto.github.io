@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>AAMAS-19 Tutorial on Multiagent Distributed Constraint Optimization</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header -->
+<header id="header" class="alt">
+<h1>Tutorial on Multi-agent Distributed Constrained Optimization</h1>
+<h2>@AAMAS-19</h2>
+</header>
+
+<!-- Nav -->
+<nav id="nav">
+<ul>
+<li><a href="#scope" class="active">Scope</a></li>
+<li><a href="#syllabus">Syllabus</a></li>
+<li><a href="#time">Time and Venue</a></li>
+<li><a href="#material">Slides and Links</a></li>
+<li><a href="#contacts">Contacts</a></li>
+</ul>
+</nav>
+
+<!-- Main -->
+<div id="main">
+
+<section id="scope" class="main">
+	<div class="spotlight"><div class="content">
+	<p>
+	Teams of agents often have to coordinate their decisions in a distributed manner to achieve both individual and shared goals.
+	Examples include service-oriented computing, sensor network problems, and smart devices coordination homes problems. The 
+	resulting <b>Distributed Constraint Optimization Problem (DCOP)</b> is NP-hard to solve, and the multi-agent coordination 
+	process non-trivial.
+	</p>
+	<p>
+	This tutorial is composed of two parts and will provide an overview of DCOPs, focusing on its algorithms and its applications to the <b>Internet-of-Things</b> (IoT).
+	<br>
+	In the first part, we will present an accessible and structured overview of the available optimal and suboptimal approaches to solving DCOPs. We will discuss recent extensions to the DCOP framework to capture agents acting in a dynamic environment and/or using asymmetric costs/rewards.
+	<br>
+	In the second part, we will review the application of DCOP methods that are suitable for the IoT context,  illustrate a case study on how to model a real smart home, and, finally, show how to program and deploy DCOP algorithms on a real IoT environment composed of Raspberry PIs.
+	<br>
+	The tutorial will conclude with the most recurrent challenges and open questions.
+	</p>
+
+	</div></div>
+</section>
+
+
+<section id="syllabus" class="main">
+<header class="major">
+<h2>Syllabus</h2>
+</header>
+
+<div class="content" style="text-align: left;">
+<div class="row">
+
+<div class="6u 12u$(medium)">
+<ol>
+	<li><b>Preliminaries</b></li>
+	<ul>
+	<li>CSP and WCSP</li>
+	<li>Multiagent Systems</li>
+	<li>DCOP</li>
+	<li>Overview of Agents Interaction Graphs</li>
+	</ul> 
+<li><b>DCOP Algorithms</b></li>
+	<ul>
+	<li>Overview and Categorization</li>
+	<li>Introduction to Search-based Algorithms</li>
+		<ul style="margin: 0 0em;">
+		<li>SyncBB</li>
+		<li>DSA and MGM</li>
+		</ul>
+	<li>Introduction to Inference-based Algorithms</li>
+	<ul style="margin: 0 0em;">
+		<li>DPOP</li>
+		</ul>
+	<li>Critical Overview of DCOP Algorithms</li>
+	</ul>
+<li><b>DCOP Extensions</b></li>
+	<ul>
+	<li>Asymmetric DCOP</li>
+	<li>Dynamic DCOP</li>
+	</ul>
+<li><b>Applications for Cooperative Multiagent Systems</b></li>
+	<ul>
+	<li>Meetings Scheduling</li>
+	<li>Traffic Flow Control</li>
+	<li>Smart Device Scheduling in Smart Homes</li>
+	</ul>
+</ol>
+</div>
+<div class="6u 12u$(medium)">
+<ol start="5">
+<li><b> Hands on PyDCOP I </b></li>
+<ul>
+	<li> Install VirtualBox</li>
+	<li> Import the pyDCOP Virtual Machine</li>
+	<li> Modeling a graph coloring problem</li>
+	<li> Solving a DCOP</li>
+	<li> Analysing results</li>
+	<li> Web UI see <a href="https://pydcop.readthedocs.io/en/latest/installation.html"> here</a></li>
+</ul>
+<li><b>Hands on PyDCOP II</b></li>
+<ul>
+	<li>Implementing DSA</li>
+	<li>Use DSA to solve a DCOP</li>
+</ul>
+<li><b>Hands on PyDCOP III</b></li>
+<ul>
+	<li>Modeling a smart home scenario : SECP</li>
+	<li>Running SECP on several machines</li>
+	<li>Distributing SECP</li>
+</ul>
+<li><b>Hands on PyDCOP IV</b></li>
+<ul>
+	<li>Repairing distributions</li>
+</ul>
+</ol>
+
+<!-- 
+<ol>
+</ol>  
+</div>
+</div> 
+-->
+</div>
+</section>
+
+<section id="time" class="main">
+	<header class="major">
+	<h2>Time and Venue</h2>
+	<div class="content">
+	<strong>Monday, May 13</strong> &nbsp;&nbsp; 9:00 AM - 12:30 PM
+	<br>
+	<strong>Room: MB 3.430</strong>
+	</div>
+	</header>
+</section>
+
+<!-- First Section -->
+<section id="material" class="main special">
+	<header class="major"> <h2>Slides and Links</h2> </header>
+	<ul class="features">
+	<li>
+	<span class="icon major style1 fa-copy"></span>
+	<h3> Tutorial Slides</h3>
+	<a href="tutorial-PartI.pdf">Parts I and II</a>
+	<br>
+	<a href="tutorial-PartII.pdf">Parts III and IV</a>
+	</li>
+
+	<li>
+	<span class="icon major style3 fa-copy"></span>
+	<h3>DCOP Survey Papers</h3>
+
+	<ul style="text-align: left">
+		<a href="https://jair.org/index.php/jair/article/view/11185">
+		Fioretto,&nbsp;Yeoh,&nbsp;Pontelli&nbsp;(JAIR 2018)</a>
+		<br>
+		<a href="http://www.springer.com/us/book/9781848000391">Meisels&nbsp;(2008)</a>
+		<br>
+		<a href="https://link.springer.com/article/10.1023/A:1010078712316">
+		Yokoo&nbsp;&&nbsp;Hirayama&nbsp;(JAAMAS 2000)</a>
+	</ul>
+	</li>
+
+	<li>
+	<span class="icon major style5 fa-code"></span>
+	<h3>DCOP Simulators</h3>
+	<ul>
+	<a href="https://github.com/Orange-OpenSource/pyDcop">PyDCOP</a>
+	<br>
+	<a href="https://sourceforge.net/projects/frodo2/">FRODO&nbsp;2</a>
+	</ul>
+	</li>
+	</ul>
+</section>
+
+<!-- Get Started -->
+<section id="contacts" class="main special">
+	<header class="major">
+	<h2>Contacts</h2>
+
+	<ul class="features">
+	<li style="width: calc(25% - 1em)";>
+		<span class="image">
+		<a href="http://www-personal.umich.edu/~fioretto/">
+		<img src="images/Fioretto.jpg" width="120" alt="" />
+		</a>
+		</span>
+		<h3 style="margin: 0 0em;">Ferdinando Fioretto</h3>
+		<h4 style="margin: 0 0em;">Georgia Institute of Technology</h4>
+		<a href="mailto:fioretto@umich.edu"> fioretto@gatech.edu</a>
+<!-- 		<br>
+		Ferdinando Fioretto is a postdoctoral researcher at the 
+		Georgia Institute of Technology. His research includes multiagent 
+		systems, data privacy, and optimization. He is the recipient of a 
+		best student paper award (CMSB, 2013), a most visionary paper 
+		award (AAMAS workshop series, 2017), and a best AI dissertation 
+		award (AI*IA, 2017).
+ -->	</li>
+	<li style="width: calc(25% - 1em)";>
+	<span class="image">
+		<a href="https://sites.wustl.edu/wyeoh/">
+		<img src="images/gauthier.jpeg" width="120" alt="" />
+		</a>
+		</span>
+		<h3 style="margin: 0 0em;">Gauthier Picard</h3>
+		<h4 style="margin: 0 0em;">MINES Saint-Étienne</h4>
+		<a href="mailto:picard@emse.fr">picard@emse.fr</a>
+<!-- 		<br>
+		Gauthier Picard is currently an associate professor in Computer Science at MINES Saint-Etienne and a full researcher at Laboratoire Hubert Curien UMR CNRS 5516. His research focuses on cooperation and adaptation in multiagent systems and distributed optimization with applications to smart grids, aircraft design, ambient intelligence, and intelligent transport. 
+ -->
+	</li>
+	<li style="width: calc(25% - 1em)";>
+		<span class="image">
+		<a href="https://www.ecs.soton.ac.uk/people/ltt1m09">
+		<img src="images/Long.jpg" width="120" alt="" />
+		</a>
+		</span>
+		<h3 style="margin: 0 0em;">Long Tran-Thanh </h3>
+		<h4 style="margin: 0 0em;">University of Southampton</h4>
+		<a href="mailto:L.Tran-Thanh@soton.ac.uk
+">L.Tran-Thanh@soton.ac.uk</a>
+	</li>
+	<li style="width: calc(25% - 1em)";>
+		<span class="image">
+		<a href="http://www.bgu.ac.il/~zivanr/">
+		<img src="images/Pierre.jpg" width="120" alt="" />
+		</a>
+		</span>
+		<h3 style="margin: 0 0em;">Pierre Rust</h3>
+		<h4 style="margin: 0 0em;">Orange</h4>
+		<a href="mailto:pierre.rust@orange.com">rust@orange.com</a>
+	</li>
+	</ul>
+	</header>
+</section>
+
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

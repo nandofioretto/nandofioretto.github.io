@@ -1,0 +1,11 @@
+@ARTICLE{fioretto:TSG20, 
+author={F. {Fioretto} and T. W. K. {Mak} and P. {Van Hentenryck}}, 
+journal={IEEE Transactions on Smart Grid}, 
+title={Differential Privacy for Power Grid Obfuscation}, 
+year={2020}, 
+volume={11}, 
+number={2}, 
+pages={1356-1366}, 
+doi={10.1109/TSG.2019.2936712}, 
+ISSN={1949-3061}, 
+month={March}}

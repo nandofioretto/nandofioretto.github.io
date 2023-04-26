@@ -1,0 +1,7 @@
+@inproceedings{fioretto:PRIMA-18,
+    author    = "Ferdinando Fioretto and Hong Xu and Sven Koenig and T. K. Satish Kumar",
+    title     = "Solving Multiagent Constraint Optimization Problems on the Constraint Composite Graph",
+    booktitle = "Proceeding of the International Conference on Principles and Practice of Multi-Agent Systems ({PRIMA})",
+    pages     = "106--122",
+    year      = "2018"
+}

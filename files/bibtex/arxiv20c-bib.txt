@@ -1,0 +1,9 @@
+@misc{Fioretto:ArXiv20b,
+    title="Differential Privacy for Stackelberg Games",
+    author="Ferdinando Fioretto and Lesia Mitridati and Pascal {Van Hentenryck}",
+    year="2020",
+    eprint="2002.00944",
+    archivePrefix="arXiv",
+    primaryClass="math.OC"
+    secondaryClass="cs.CR"
+}

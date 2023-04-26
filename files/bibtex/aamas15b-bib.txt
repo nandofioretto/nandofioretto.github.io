@@ -1,0 +1,8 @@
+@inproceedings{fioretto:AAMAS-15b,
+  author    = "Ferdinando Fioretto and Federico Campeotto and Agostino Dovier and Enrico Pontelli and William Yeoh",
+  title     = "Large Neighborhood Search with Quality Guarantees for Distributed Constraint Optimization Problems",
+  booktitle = "Proceedings of the International Joint Conference on Autonomous Agents and Multiagent Systems {(AAMAS)}",
+  pages     = "1835--1836",
+  year      = "2015",
+  url       = "http://dl.acm.org/citation.cfm?id=2773461"
+}

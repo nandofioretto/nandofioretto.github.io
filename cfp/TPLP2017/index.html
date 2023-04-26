@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<!-- Page Title -->
+		<title>Special Issue of Theory and Practice of Logic Programming</title>
+		<meta name="viewport" content="width=device-width" />
+		
+		<!-- Import CSS files -->
+		<link rel="stylesheet" href="css/stylesheet.css" />
+		<link rel="stylesheet" href="css/jquery.fancybox-1.3.1.css" />
+		
+		<!-- Begin javascript -->	
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox-1.3.1.js"></script>
+		<![if !IE]>
+		<script type="text/javascript" src="js/cufon-yui.js"></script>
+		<![endif]>
+		<script type="text/javascript" src="js/Droid_Sans.font.js"></script>
+		<![if !IE]>
+		<script type="text/javascript">		
+			if(window.screen.availWidth > 1000) {
+				Cufon.replace('#sidebar p#slogan, #sidebar ul, .left p, .right p, .wide p, .left ul, .right ul, .wide ul, h3.title', 
+					{ fontFamily: 'Droid Sans' });
+			}	
+		</script>
+		<![endif]>
+				
+		<!-- Google maps -->
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="js/googlemaps.js"></script>
+		
+		<!-- Execute Javascript -->
+		<script type="text/javascript">
+			$(document).ready(function() { 
+				$.scrollTo( 0 );
+				
+				// ScrollTo animation	
+				$("div#sidebar ul.menu li").click(function(){
+					$("div#sidebar ul.menu li").removeClass("active");
+					$(this).addClass("active");
+					var href = $(this).attr('class').replace("active","");
+					var link = "div#" + href;
+					var position = $(link).position();
+					$.scrollTo({ top: position.top, left: 0}, 800);
+					Cufon.replace('#sidebar ul', { fontFamily: 'Droid Sans' });
+				});
+				
+				$("div.panel_header ul li.next").click(function() {
+					$("div#sidebar ul.menu li.active").removeClass("active").nextAll("li:first").addClass("active");
+					var href = $(this).attr('class').replace("next ","");
+					var link = "div#" + href;
+					var position = $(link).position();
+					$.scrollTo({ top: position.top, left: 0}, 800);
+					Cufon.replace('#sidebar ul', { fontFamily: 'Droid Sans' });
+				});
+				
+				$("div.panel_header ul li.previous").click(function() {
+					$("div#sidebar ul.menu li.active").removeClass("active").prevAll("li:first").addClass("active");
+					var href = $(this).attr('class').replace("previous ","");
+					var link = "div#" + href;
+					var position = $(link).position();
+					$.scrollTo({ top: position.top, left: 0}, 800);
+					Cufon.replace('#sidebar ul', { fontFamily: 'Droid Sans' });
+				});
+				
+				// Portfolio hover effect
+				$("div.inner_left a img").hover(function() {
+					$(this).css("background", "#ddddff");
+				}, function () {
+					$(this).css("background", "#f0f0f0");
+				});
+				
+				// Fancybox settings
+				$("a.fancybox").fancybox({
+					'titlePosition'	: 'over'
+				});
+				
+				$("a[rel=Envato]").fancybox({
+					'type' : 'iframe',
+					'height' : '90%',
+					'width' : '90%',
+					'autoScale' : false,
+					'titlePosition' : 'over'
+				});
+				
+			});
+		</script>
+		<!-- End javascript -->
+		
+		<!-- If javascript disabled -->
+		<noscript>
+			<meta http-equiv="refresh" content="0; URL=enable_javascript.html">
+		</noscript>
+		<!-- End if javascript disabled -->
+				
+	</head>
+	
+	<body onload="initialize()">
+		
+		<!--[if (lt IE7)|(IE7) ] <div id="container" style="width: auto;"> <![endif]-->
+		<![if gt IE 7 ]>
+		<div id="container">
+		<![endif]>
+		
+			<!-- Sidebar on the left -->
+			<![if gt IE 7 ]>
+			<div id="sidebar">
+				<div id="top">
+					<!-- Logo -->
+                    <a href="http://www.cs.nmsu.edu/ALP/" target="_blank"><img src="images/logo.png" alt="aamas15" width="265"/></a>					
+					<ul class="menu">
+						<li class="tplp active" >Scope</li>
+						<!-- <li class="scope">Scope</li> -->
+						<li class="topics">Topics</li>
+						<li class="dates">Important Dates</li>
+						<li class="subission">Submission Guidelines</li>
+						<li class="contact">Contact</li>
+				  </ul>					
+			  </div> <!-- End sidebar (Top) -->
+				
+				<div id="footer">
+					<p>Theme modified from <a href="http://softarch.usc.edu/se45/" target="_blank">SE@45.</a></p>
+				</div> <!-- End footer -->
+				
+			</div> <!-- end sidebar -->
+			<![endif]>
+			
+			<div id="content">
+			
+				<!-- ======================= Home ======================= -->
+				
+				<div class="panel_header" id="tplp">
+                	<p>	
+						Special Issue of Theory and Practice of Logic Programming: 
+                	</p>
+					<p>
+						<h3>Past and Present (and Future) of Parallel and <br> Distributed Computation in (Constraint) Logic Programming</h3>
+					</p>
+					
+					<ul><li class="next topics"><img src="images/down.jpg" alt="next" /></li></ul>
+				</div>
+				
+				<!-- <div class="panel">
+					<div class="wide">						 -->
+						<!-- <p>
+							Theory and Practice of Logic Programming is an international journal that publishes refereed papers
+							covering both the theory and the practice of logic programming.
+							TPLP is the sole official journal of the Association for Logic Programming (ALP,
+							http://logicprogramming.org/) and is offered to its members at a preferential rate. It is also endorsed by
+							SPARC, the Scholarly Publishing & Academic Resources Coalition (URL: www.arl.org/sparc).
+						</p> -->
+					<!-- </div>
+				</div>  -->
+				
+				
+				<!-- ======================= Scope ======================= -->
+				<!-- <div class="panel_header" id="scope">
+					<p>Scope</p>
+					<ul>
+						<li class="previous tplp"><img src="images/up.jpg" alt="previous"/></li>
+						<li class="next topics"><img src="images/down.jpg" alt="next" /></li>
+					</ul>
+				</div> -->
+		 	   <div class="panel">
+					<div class="wide">
+						<!-- <p>
+							<h3>Scope</h3>
+						</p> -->
+					  <p>
+						  Since its inception, logic programming has been recognized as an ideal paradigm for addressing the needs of parallel computing. 
+						  An extensive literature has been developed exploring issues like automated parallelization of logic programs, the use of logic programs to 
+						  describe parallel and distributed computations, and logic programming models to capture concurrency and facilitate the development of 
+						  provably correct concurrent applications.
+						  <br>
+						  After over 30 years of research in these domains, the state of the art has reached a stage where technologies are highly complex and
+						  sophisticated, and applications are plentiful. Yet, the continuous development of novel architectures (e.g., the onset of GPU-based 
+						  computing; the widespread use of simple inter-connected  devices, like Arduino and Raspberry Pi; the development of affordable multi-core 
+						  platforms and reconfigurable computing; the widespread use of cloud computing), the appearance of new domains and potential applications 
+						  (e.g., big data), and the developments in novel logic programming languages and paradigms are creating new research opportunities and fueling 
+						  new ideas and developments.
+					  </p>
+              	</div> 
+				<!-- End .wide --> 
+			</div> 
+			<!-- End panel -->
+								
+				
+				<!-- ======================= Topics ======================= -->
+				
+				<div class="panel_header" id="topics">
+					<p>Topics</p>
+					<ul>
+						<li class="previous tplp"><img src="images/up.jpg" alt="previous"/></li>
+						<li class="next dates"><img src="images/down.jpg" alt="next" /></li>
+					</ul>
+				</div>
+ 		 	   <div class="panel">
+ 					<div class="wide">
+				
+				<p>
+					The goal of this special issue is to provide a multi-fold perspective of research at the junction between parallel and distributed computation 
+					and (constraint) logic programming:
+	  			  <ul>
+	  			    <li>Provide well-thought assessments of the state of the art (e.g., in the form of well organized surveys, personal perspectives)</li>
+					<li>Describe cutting-edge coverage of new developments (e.g., novel execution models, innovative systems and implementations)</li>
+					<li>Describe new research directions, offering clear motivations, new perspectives and solid foundations for other researchers to build upon</li>
+					<li> Novel applications (e.g., in big data, cyber-physical systems) that critically rely on the use on the integration of parallelism and
+						 logic programming</li>
+				</ul>
+  			  </p>
+	          </div> 
+				<!-- End .wide --> 
+			</div> <!-- End panel -->
+								
+				
+
+				<!-- ======================= Dates ======================= -->
+
+				<div class="panel_header" id="dates">
+					<p>Important Dates</p> 
+					<ul>
+						<li class="previous topics"><img src="images/up.jpg" alt="previous"/></li>
+						<li class="next subission"><img src="images/down.jpg" alt="next" /></li>	
+    				</ul>
+				</div>
+
+				<div class="panel">
+					<div class="wide">
+						<p>
+							<ul>
+								<li>December 1, 2016	- Optional Notes of Interest </li>
+								<li>February 15, 2017	- Title and Abstract (<b>Extended</b>)</li>
+								<li>May 15, 2017    	- Full Paper (<b>Extended</b>)</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+                
+				<!-- ======================= Links ======================= -->
+				
+				<div class="panel_header" id="subission">
+					<p>Submission Guidelines</p> 
+					<ul>
+						<li class="previous dates"><img src="images/up.jpg" alt="previous"/></li>
+						<li class="next contact"><img src="images/down.jpg" alt="next" /></li>	
+    				</ul>
+				</div>
+				
+				<div class="panel">
+					<div class="wide">
+                   	 	<p>
+							<!-- The authors should prepare their manuscript following the formatting guidelines at Instruction for Contributors online:  -->
+							Submissions should be prepared in the TPLP format, following the formatting guidelines at Instruction for Contributors online: 
+						</p>
+						<ul>
+							<li>
+							<a href="https://www.cambridge.org/core/journals/theory-and-practice-of-logic-programming/information/instructions-contributors
+">
+								https://www.cambridge.org/core/journals/theory-and-practice-of-logic-programming/information/instructions-contributors
+								</a>
+							</li>
+						</ul>
+						<p>
+							and handled through the TPLP Submission site:
+						</p>
+						<ul>
+							<li>
+							<a href="https://mc.manuscriptcentral.com/tplp">https://mc.manuscriptcentral.com/tplp</a>
+							</li>
+						</ul>
+						<p>
+							selecting "special issue" and using "Enrico Pontelli" as for the "Special issue Guest Editor".
+							The Publisher encourages the submission of final manuscripts written in LaTeX which can be used for direct typesetting. 
+							Authors can download style files <a href="TPLP.tar">here</a>.
+							<br>
+							For further questions or inquiries, please contact the Guest Editors (see contact details below).
+						
+						</p>
+
+					</div> 
+			</div> 
+			<!-- End panel -->
+
+                
+				<!-- ======================= Contact ======================= -->
+				
+				<div class="panel_header" id="contact">
+					<p>Contact</p> 
+					<ul>
+						<li class="previous subission"><img src="images/up.jpg" alt="previous"/></li>
+    				</ul>
+				</div>
+				
+				<div class="panel">
+					<div class="wide">
+                    	<p>Guest Editors:</p>
+					  	<ul>
+					    	<li> 
+								<!-- <a href="http://www.cs.nmsu.edu/~epontell/" target="_blank"> -->
+									Enrico Pontelli, 
+								<!-- </a>:  -->
+								<a href="mailto:epontell@cs.nmsu.edu"> epontell@cs.nmsu.edu</a>, 
+								New Mexico State University, USA
+							</li>
+					    	<li> 
+								<!-- <a href="http://www.cs.nmsu.edu/~ffiorett/" target="_blank">Ferdinando Fioretto</a>:  -->
+								Ferdinando Fioretto, 
+								<a href="mailto:fioretto@umich.edu">fioretto@umich.edu</a>, 
+								University of Michigan, USA 
+							</li>
+					  	</ul>					
+					</div>
+                    <div class="space"> </div> 
+					<!-- End .wide -->
+				</div>
+			</div> <!-- End content -->
+			
+		</div> <!-- end container -->
+		
+	</body>
+</html>

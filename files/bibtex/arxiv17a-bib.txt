@@ -1,0 +1,9 @@
+@article{fioretto:arXiv-17a,
+    author    = "William Kluegel and Muhammad Aamir Iqbal and Ferdinando Fioretto and William Yeoh and Enrico Pontelli",
+    title     = "A Realistic Dataset for the Smart Home Device Scheduling Problem for {DCOP}s",
+    year      = "2017",
+    archivePrefix = "arXiv",
+    eprint    = "1702.06970",
+    primaryClass = "cs.AI",
+    url    = "https://arxiv.org/abs/1702.06970"
+}

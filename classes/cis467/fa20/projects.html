@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Ferdinando Fioretto,Nando Fioretto,Nando,Ferdinando,Fioretto,DCOP,Smart Grid,AI,GPU,Distributed" />
+  <meta name="author" content="Ferdinando Fioretto" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="../../../img/su_icon.png" target="blank">
+  <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" type="text/css" media="all" href="../../../inland.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+  <script src="assets/js/jquery.qtip.min.js" type="text/javascript"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/fullcalendar.min.js"></script>
+
+  <!-- Adds on from BK -->
+<!--   <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" type="text/css" href="assets/css/fullcalendar.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/calendar.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/jquery.qtip.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ -->  <!-- stop -->
+
+
+  <title>Ferdinando Fioretto</title>
+  <script>
+  $(document).ready(function(){
+    var moreText = "Show more",
+    lessText = "Show less",
+    moreButton = $("a.read_more");
+
+    moreButton.click(
+      function () {
+        var $this = $(this);
+        $this.text($this.text() == moreText ? lessText : moreText).next("div.more").slideToggle("fast");
+      }
+      );
+  });
+  </script>
+  <script>
+  $(document).ready(function(){
+    var moreText = "Show more",
+    lessText = "Show less",
+    moreButton = $("a.read_more_title");
+    moreButton.click(
+      function () {
+        $(this).nextAll("div.more").slideToggle("fast");
+        var $show_text = $(this).nextAll("a.read_more");
+        $show_text.text($show_text.text() == moreText ? lessText : moreText)
+      }
+      );
+  });
+  </script>
+
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 400px;
+  }
+
+  td, th {
+    border: 1px solid #CCD1D1;
+    text-align: left;
+    padding: 4px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #EAECEE;
+  }
+  </style>
+</head>
+
+
+<body>
+<div id="wrapper960" class="clearfix">
+  <div id="toplinks">
+  <ul class="toplinks_links">
+  <li>
+    <a href='https://eng-cs.syr.edu/our-departments/electrical-engineering-and-computer-science/'>
+    <img align='center' src="../../../img/su_logo.png"  height="40pt" style="margin:-14px -20px -14px 0px">
+    </a>
+
+  </li>
+  </ul>
+  </div>
+
+  <div id="header" class="clearfix shadow">
+    <div id="sitetitle" class="clearfix">
+      <h1>SU-CIS467 - Fall 2020</h1>
+    </div>
+
+    <div id="nav" class="clearfix">
+    <ul>
+      <li><a href="../../../index.html">FF's Home</a></li>
+      <li><a href="syllabus.html">Syllabus</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Links and Contact</a></li>
+    </ul>
+    </div>
+  </div>
+
+  <!-- HEAD -->
+  <div id="content" class="clearfix shadow">
+    <h1> The Pac-Man Projects </h1>
+  <div id="content">
+
+
+<!-- ######################################################## -->
+          <center>
+          <img src="img/pacman_game.gif" width=550px alt="Pac-Man Game"/>
+          </center>
+          <br/>
+
+          <h2>Overview</h2>
+          <p>These projects will allow you to consolidate the AI techniques you'll learn in class to play Pac-Man. These projects teach foundational AI concepts, such as informed state-space search, probabilistic inference, and reinforcement learning.  These concepts underly real-world application areas such as natural language processing, computer vision, and robotics.</p>
+
+          <p>
+          The projects allow you to visualize the results of the techniques you implement.  
+          They also contain code examples and clear directions, but do not force you to 
+          wade through undue amounts of scaffolding.
+          Real-world AI problems are challenging and Pac-Man provides a challenging problem 
+          environment that demands creative solutions; 
+          </p>
+          <br/>
+
+          <h2>Projects Overview </h2>
+
+          <div class="project">
+            <b> <a href="projects/p0.html">P0: UNIX/Python Tutorial</a> </b> <br>
+            <p>This short UNIX/Python tutorial introduces students to the
+            <a target="_blank" href="http://www.python.org">Python</a> programming language and the UNIX environment.</p><br>
+          </div>
+
+          <div class="project">
+            <b> <a href="projects/p1.html">P1: Search</a> </b> <br>
+            <p>Students implement depth-first, breadth-first, uniform cost, and A* search algorithms. These algorithms are used to solve navigation and traveling salesman problems in the Pacman world. </p><br>
+          </div>
+
+          <div class="project">
+            <b> <a href="projects/mc1.html">Mini-Contest 1: Multi-Agent Pacman</a> </b> <br>
+            <p>Students will apply the search algorithms and problems implemented in Project 1 to handle more difficult scenarios that include controlling multiple pacman agents and
+            planning under time constraints </p><br>
+          </div>
+
+          <div class="project">
+            <b> <a href="projects/p2.html">P2: Multi-Agent Search</a> </b> <br>
+            <p>Classic Pacman is modeled as both an adversarial and a stochastic search problem. Students implement multiagent minimax and expectimax algorithms, as well as designing evaluation functions.</p><br>
+          </div>
+
+          <div class="project">
+           <b> <a href="projects/p3.html">P3: Reinforcement Learning</a>  </b> <br>
+            <p>Students implement model-based and model-free reinforcement learning algorithms, applied to the AIMA textbook's Gridworld, Pacman, and a simulated crawling robot. </p>
+            <br>
+          </div>
+
+          <div class="project">
+            <b> <a href="projects/mc2.html">Mini-Contest 2: Multi-Agent Adversarial Pacman</a> </b> <br>
+            <p>This minicontest involves a multiplayer capture-the-flag variant of Pacman, where agents control both Pacman and ghosts in coordinated team-based strategies. Each team will try to eat the food on the far side of the map, while defending the food on their home side.</p>
+            <br>
+          </div>
+          
+<!--           <div class="project">
+            <b> <a href="project4.html">P4: Ghostbusters</a> </b> <br>
+            <p> Probabilistic inference in a hidden Markov model tracks the movement of hidden ghosts in the Pacman world.  Students implement exact inference using the forward algorithm and approximate inference via particle filters.  </p>
+          <br>
+ -->
+          <div class="project">
+            <b> <a href="projects/p4.html">P4: Machine Learning</a> </b> <br>
+            <p>Students implement the perceptron algorithm and neural network models, and apply the models to several tasks including digit classification. </p>
+            <br/>
+          </div>
+            
+<!--           </div>
+            <b> <a href="#">Contest: Pacman Capture the Flag</a> </b> <br>
+
+          <p>Students create strategies for a team of two agents to play a multi-player
+          capture-the-flag variant of Pacman. </p>
+
+          </div>
+          <br/>
+ -->
+          <h2>Technical Notes</h2>
+          <p> The Pac-Man projects are written in pure Python 3.6 and do not depend on any packages external to a standard Python distribution. </p>
+
+          <br/>
+
+          <h2>Credits</h2>
+          <p> The projects were developed by John DeNero, Dan Klein, Pieter Abbeel, and many others</a>. </p>
+        </div>
+      </div>
+    </div>
+
+    </body>
+</html>

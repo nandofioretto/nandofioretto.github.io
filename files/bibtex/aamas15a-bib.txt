@@ -1,0 +1,8 @@
+@inproceedings{fioretto:AAMAS-15a,
+  author    = "Ferdinando Fioretto and William Yeoh and Enrico Pontelli",
+  title     = "Multi-Variable Agents Decomposition for DCOPs to Exploit Multi-Level Parallelism",
+  booktitle = "Proceedings of the International Joint Conference on Autonomous Agents and Multiagent Systems {(AAMAS)}",
+  pages     = "1823--1824",
+  year      = "2015",
+  url       = "http://dl.acm.org/citation.cfm?id=2773455"
+}

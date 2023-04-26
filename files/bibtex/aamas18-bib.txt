@@ -1,0 +1,7 @@
+@inproceedings{fioretto:AAMAS-18,
+  author    = "Ferdinando Fioretto and Chansoo Lee and Pascal {Van Hentenryck}",
+  title     = "Constrained-Based Differential Privacy for Mobility Services",
+  booktitle = "Proceedings of the International Joint Conference on Autonomous Agents and Multiagent Systems {(AAMAS)}",
+  year      = "2018",
+  pages     = "1405--1413"
+}

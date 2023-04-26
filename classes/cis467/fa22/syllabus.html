@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ferdinando Fioretto</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Fioretto's Home Page" />
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+	<link rel="shortcut icon" href="img/su_icon.png" target="blank">
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Work+Sans:400,700,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../inland.css" />
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+	 <script type="text/javascript">
+	    $(document).ready(function() {
+	      $('.slider').cycle( {
+	        fx: 'scrollRight',
+	        timeout: 500,
+	        pause: 5,
+	        cleartypeNoBg: false
+	      } );
+	    } );
+	</script>	
+	<style>
+	table {
+	  font-family: arial, sans-serif;
+	  border-collapse: collapse;
+	  width: 400px;
+	}
+
+	td, th {
+	  border: 1px solid #CCD1D1;
+	  text-align: left;
+	  padding: 4px;
+	}
+
+	tr:nth-child(even) {
+	  background-color: #EAECEE;
+	}
+	</style>
+
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix">
+	<div id="toplinks">
+	<ul class="toplinks_links">
+	<li>
+		<a href='https://eng-cs.syr.edu/our-departments/electrical-engineering-and-computer-science/'>
+		<img align='center' src="../../../img/su_logo.png"  height="40pt" style="margin:-14px -20px -14px 0px">
+		</a>
+
+	</li>
+	</ul>
+	</div>
+
+	<div id="header" class="clearfix shadow">
+		<div id="sitetitle" class="clearfix">
+			<h1>SU-CIS467 - Fall 2022</h1>
+		</div>
+
+		<div id="nav" class="clearfix">
+		<ul>
+			<li><a href="../../../index.html">FF's Home</a></li>
+			<li><a href="syllabus.html">Syllabus</a></li>
+			<li><a href="schedule.html">Schedule</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="contact.html">Links and Contact</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<!-- HEAD -->
+	<div id="content" class="clearfix shadow">
+		<h1> Intro to AI - Syllabus</h1>
+	<div id="content">
+		<strong>Note</strong>: The syllabus is subject to change.
+
+		<h3>Course Description</h3>
+		<p>
+			This course will introduce the basic ideas and techniques 
+			underlying the design of intelligent agents to enable them 
+			to act and "think" like humans. The topics covered include 
+			problem-solving via search, game playing, logical and 
+			probabilistic reasoning, machine learning (decision trees, 
+			linear models, neural networks, and reinforcement learning). 
+			A key aspect of this course is the presence of several 
+			<a href="prjects.html">hands-on projects</a> that will help 
+			to concertize the fundamental methods studied. 
+		</p>
+		<p>
+			By the end of this course, you will have 
+			<ul>
+				<li>Built autonomous agents that efficiently make decisions in fully informed, 
+					partially observable, and adversarial settings.</li>
+				<li>Your agents will draw inferences in uncertain environments 
+				    and optimize actions for arbitrary reward structures.</li>
+				<li>Your machine learning algorithms will classify handwritten 
+					digits and photographs.</li> 
+			</ul> 
+			The techniques you learn in this course apply to a wide 
+			variety of artificial intelligence problems and will serve 
+			as the foundation for further study in any application area 
+			you choose to pursue.
+		</p>
+
+		<h3>Classroom Instruction</h3>
+
+		<h5>Attendance</h5>
+		The course will be in-person. Attendance is mandatory unless 
+		justified by sickness / quarantine isolation (if applicable). 
+		<br>
+		Students who enter quarantine (exposure to a COVID-positive person) 
+		or isolation (confirmed COVID infection) may not be able to attend 
+		in-person class sessions (depending on university-level policy). 
+		<br>
+		<strong>Pre-recorded lectures</strong> will be available to all, 
+		thus, even if you cannot attend class I will ensure you will get 
+		the best possible learning experience through these material. 
+
+		
+		<h5>Suggestions</h5>		
+		<ul>
+			<li><span style="color: #B03A2E;">Wear a mask</span>: 
+				This is recommended. </li>
+
+			<li><span style="color: #B03A2E;">No eating/drinking</span>:
+			This is a strict rule.</li> 
+
+			<li><span style="color: #B03A2E;">No questions at the end 
+			of the class</span>: 
+			To safeguard our mutual health, I will not accept 
+			students stopping by to ask questions at the end of the 
+			class. Please see below for the mechanisms we are adopting 
+			to foster online discussion. 
+			</li>
+		</ul>
+
+		<h5>Online Tools</h5>
+		We will use different systems to enhance the class experience:
+		<ul>
+			<li><a href="https://teams.microsoft.com/l/team/19%3aSlM7JP-RNOHQuKUxZRIf5sVp6roTdHOXqsAUm1fRc8E1%40thread.tacv2/conversations?groupId=d4533ba7-cde4-4d57-a959-198a709208f0&tenantId=4278a402-1a9e-4eb9-8414-ffb55a5fcf1e">Teams</a>: Group activities performed during
+			class, FAQ, and homework/project discussions will take place 
+			on the class Teams channel.
+			</li>
+			<li><a href="https://www.gradescope.com/courses/264994">Gradscope</a>: 
+				Homework, Projects, (and possibly Exams)
+				will be submitted and graded using the Gradscope 
+				course page.
+			</li>
+		</ul>
+
+
+		<h3>Prereq</h3>
+		<ul>
+			<li>CIS 375, CIS 321 and (CIS 351 or CSE 382)</li>
+			<li>Knowledge of Python. This will be critical to complete 
+			the projects. 
+			Students may not have strong experience with the language, 
+			but we do expect you to learn the basics very rapidly. 
+			<a href="projects/p0.html">Project 0</a> is designed to teach you the 
+			basics of Python. <br>
+			If you want to follow some extra good tutorial, try the
+			<a href="http://www.acm.uiuc.edu/sigunix/workshops/crashpython/crashpython.pdf">ACM Python Tutorial</a>
+		</li>
+		</ul>		
+		If you are unsure about any of these, please speak to the instructor.
+		
+		<h3>Communication</h3>
+
+		There will be several routes of communication for this course:
+		<ul>
+		<li>
+			<a href="https://teams.microsoft.com/l/team/19%3aSlM7JP-RNOHQuKUxZRIf5sVp6roTdHOXqsAUm1fRc8E1%40thread.tacv2/conversations?groupId=d4533ba7-cde4-4d57-a959-198a709208f0&tenantId=4278a402-1a9e-4eb9-8414-ffb55a5fcf1e">Teams Channel</a>
+		The main mode of electronic communication between students 
+		instructors and TAs, as well as amongst students, is through 
+		Teams. It is intended for general questions about the course, 
+		clarifications about assignments, student questions to each 
+		other, discussions about the material, and so on. We strongly encourage 
+		students to participate in discussions, ask, and answer questions. 
+		</li>
+		<li>
+		<a href="mailto:ffiorett@syr.edu">Email</a>:
+		If you need to contact the course staff privately, you should email 
+		the instructor or TAs.
+		Emails sent to the instructor's or TAs' email addresses may not
+		receive an answer. 
+		</li>
+
+		
+		<h3>Textbook and Online Material</h3>
+		<ul>
+			<li>Course textbook: <a href="http://aima.cs.berkeley.edu/index.html">
+			Artificial Intelligence, A Modern Approach (3rd edition)</a> 
+		by Russell and Norvig and published by Prentice Hall (ISBN: 0136042597).</li>
+			<li>Online Material: <a href="https://d2l.ai">Dive into Deep Learning</a>  
+				by Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola</li>
+			<li><a href="https://github.com/aimacode/aima-python">AIMACODE Python</a></li>
+		</ul>
+
+
+		<h3>Assignments</h3>
+
+		This class includes 11 homework (highly recommended and for extra-credits), 6 programming projects, 
+		2 mini-exams, and 1 final exam.
+
+		Homework are handled electronically on the 
+		<a href="https://www.gradescope.com/courses/264994">gradscope course page</a> 
+		<br>
+		<br>
+		<h5>Late Policy</h5>
+		<ul>
+<!-- 		<li>Homework cannot be turned in late, you have to use your homework drops.</li> -->
+		<li>Projects lose 20% of their total point value per day turned in late, and the maximum number 
+		of late days is 3.</li>
+		</ul>
+
+		<br>
+		<h5>Collaboration</h5>
+		<ul>
+		<li>Projects are to be submitted individually, but may be 
+			discussed in groups. If discussed in a group, acknowledge 
+			your collaborators.
+		</li>
+		</ul>
+
+		<br>
+<!-- 		<h5>Homework Drop Policy</h5>
+		You will be allowed to drop your <strong>3 lowest-scoring homework</strong>. 
+		These may be distributed throughout the semester. 
+		When calculating final grades, this will happen automatically, 
+		we’ll just use your highest scoring submissions.
+		<br>
+		Note that this policy is also meant to deal with cases like 
+		internet issues while submitting, forgetting about the deadline, 
+		emergency situations (including medical).
+ -->
+		<h3>Exams</h3>
+		There will be 2 mini-exams and 1 final exam. Both mini-exams 
+		and the final exam are open-book and open-notes.<br>
+		<br>
+		There will be no make-up exams unless there is a medical document
+		that justifies the absence. 
+
+		<h3>Academic Integrity</h3>
+		<p>
+		Any instance of sharing or plagiarism, copying, cheating, or other 
+		disallowed behavior will constitute a breach of ethics. Students 
+		are responsible for reporting any violation of these rules by other 
+		students, and failure to constitutes an ethical violation that carries 
+		with it similar penalties.
+		<br><br>
+		SU students are required to read an online summary of the University’s academic
+		integrity expectations and provide an electronic signature agreeing to abide by them twice a
+		year during pre-term check-in on <a href="https://myslice.ps.syr.edu/">MySlice</a>. 
+		For more information about the policy, see the <a href="https://class.syr.edu/">policy website</a>. 
+		<br><br>
+		All academic integrity expectations that apply to in-person quizzes 
+		and exams also apply to online quizzes and exams. In this course, 
+		all work submitted for quizzes and exams must be yours alone. 
+		Discussing quiz or exam questions with anyone during the quiz or exam 
+		period violates academic integrity expectations for this course.
+		<br><br>
+		Using websites that charge fees or require uploading of course material 
+		(e.g. Chegg, Course Hero) to obtain exam solutions or assignments 
+		completed by others and present the work as your own violates academic 
+		integrity expectations in this course.
+		</p>
+
+		<h3>Grading</h3>
+		<ul>
+			<li>Homework Assignments: 0% (the homework are for you to practice)</li>
+			<li>Projects: 50%</li>
+			<li>Mini-exam 1: 10%</li>
+			<li>Mini-exam 2: 10%</li>
+			<li>Final Exam: 25%</li>
+			<li>Bonus (contests): up to 5%</li>
+			<li>Bonus (homework): up to 10%</li>
+		</ul>
+
+		<h5>Grading Scale</h5>
+		The grading scale is fixed and as follows.
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col">Grade</th>
+			  <th scope="col">Overall Percentage</th>
+			  <th scope="col">Grade</th>
+			  <th scope="col">Overall Percentage</th>
+			</tr>
+			</thead>
+
+			<tbody>
+			<tr><td>A </td><td>[90, 100]</td>  <td>C </td><td>[60, 65)</td>  </tr>
+			<tr><td>A-</td><td>[85, 90)</td>   <td>C-</td><td>[55, 60)</td> </tr>
+			<tr><td>B+</td><td>[80, 85)</td>   <td>D+</td><td>[50, 55)</td> </tr>
+			<tr><td>B </td><td>[75, 80)</td>   <td>D </td><td>[45, 50)</td> </tr>
+			<tr><td>B-</td><td>[70, 75)</td>   <td>D-</td><td>[40, 45)</td> </tr>
+			<tr><td>C+</td><td>[65, 70)</td>   <td>F </td><td>[0, 40)</td> </tr>
+		</table>
+
+	For more information about letter grades, including in the event 
+	of withdrawal, drop, or incomplete, see Grades and Grading Symbols 
+	in Academic Rules (Academic Catalog, Academic Rules Section 8.4.1).
+	<br>
+	For academic support services such as tutoring, see the 
+	<a href="https://class.syr.edu/">Center for Learning and Student Success</a>.
+
+	<h5>Regrade Policy</h5>
+	If you believe an error has been made in the grading of one of 
+	your exams or assignments, you may resubmit it for a regrade. 
+	Regrades for cases where we misapplied a rubric in an individual 
+	case is much more likely to be successful than regrades that argue 
+	about relative point values within the rubric, as the rubric is 
+	applied to the entire class. <br>
+	Because we will examine your entire submission in detail, your 
+	grade can go up or down as a result of a regrade request.
+
+	<h3>SU Stay Safe Pledge</h3>
+	Syracuse University’s Stay Safe Pledge reflects the high value that we, as a university community, place on the well-being of our community members. This pledge defines norms for behavior that will promote community health and wellbeing. Classroom expectations include the following: wearing a mask that covers the nose and mouth at all times, maintaining a distance of six feet from others, and staying away from class if you feel unwell. Students who do not follow these norms will not be allowed to continue in face-to-face classes; repeated violations will be treated as violations of the Code of Student Conduct and may result in disciplinary action. 
+
+
+	<h3>Mental Health</h3>
+
+	Mental health and overall well-being are significant predictors of 
+	academic success.  As such it is essential that during your college 
+	experience you develop the skills and resources effectively to 
+	navigate stress, anxiety, depression, and other mental health concerns.  
+	Please familiarize yourself with the range of resources the Barnes 
+	Center provides (<a href="https://ese.syr.edu/bewell/">https://ese.syr.edu/bewell/</a>) 
+	and seek out support for mental health concerns as needed. Counseling services are 
+	available 24/7, 365 days, at 315-443-8000, and I encourage you to 
+	explore the resources available through the Wellness Leadership Institute, 
+	<a href="https://ese.syr.edu/bewell/wellness-leadership-institute/">https://ese.syr.edu/bewell/wellness-leadership-institute/</a>
+
+	<h3>University-wide Policies</h3>
+	
+	Students should review the University’s policies regarding:
+	<ul>
+		<li><a href="https://www.syracuse.edu/life/accessibility-diversity/">Diversity and Disability</a></li>
+		<li><a href="https://policies.syr.edu/">Religious Observances Notification and Policy</a></li>	
+		<li><a href="https://orangesuccess.syr.edu/getting-started-2/">Orange SUccess</a></li>
+		<li><a href="https://policies.syr.edu/policies/university-governance-ethics-integrity-and-legal-compliance/non-discrimination-and-equal-opportunity-policy-statement/">Non-discrimination and STOP Bias</a></li>	
+		<li><a href="http://coursecatalog.syr.edu/content.php?catoid=15&navoid=1985">All Other Academic Rules</a></li>
+	</ul>
+	
+	<br>
+	<h5>Disability-Related Accommodations</h5>
+	<p>
+	Syracuse University values diversity and inclusion; we are committed 
+	to a climate of mutual respect and full participation.  
+	There may be aspects of the instruction or design of this course 
+	that result in barriers to your inclusion and full participation in this course.  
+	I invite any student to contact me to discuss strategies and/or 
+	accommodations (academic adjustments) that may be essential to your 
+	success and to collaborate with the Center for Disability Resources (CDR) in this process.
+	<br>
+	If you would like to discuss disability-accommodations or register with CDR, 
+	please visit Center for Disability Resources. Please call (315) 443-4498 or 
+	email <a href="mailto:disabilityresources@syr.edu">disabilityresources@syr.edu</a> 
+	for more detailed information.
+	<br>
+	The CDR is responsible for coordinating disability-related academic 
+	accommodations and will work with the student to develop an access plan. 
+	Since academic accommodations may require early planning and generally are 
+	not provided retroactively, please contact CDR as soon as possible to begin this process.
+	</p>
+
+	<br>
+	<h5>Discrimination or Harassment</h5> 
+	<p> 
+		Federal and state law, and
+	University policy prohibit discrimination and harassment based
+	on sex or gender (including sexual harassment, sexual assault,
+	domestic/dating violence, stalking, sexual exploitation, and
+	retaliation). If a student has been harassed or assaulted,
+	they can obtain confidential counseling support, 24-hours a
+	day, 7 days a week, from the <a href="https://ese.syr.edu/bewell/sexual-and-relationship-violence/">
+		Sexual and Relationship Violence Response Team</a> at the Counseling Center (315-443-8000, Barnes
+	Center at The Arch, 150 Sims Drive, Syracuse, New York 13244).
+	Incidents of sexual violence or harassment can be reported
+	non-confidentially to the University’s Title IX Officer
+	(Sheila Johnson Willis, 315-443-0211, <a href="mailto:titleix@syr.edu">titleix@syr.edu</a>, 005
+	Steele Hall). Reports to law enforcement can be made to the
+	University’s Department of Public Safety (315-443-2224, 005
+	Sims Hall), the Syracuse Police Department (511 South State
+	Street, Syracuse, New York, 911 in case of emergency or
+	315-435-3016 to speak with the Abused Persons Unit), or the
+	State Police (844-845-7269). I will seek to keep information
+	you share with me private to the greatest extent possible, but
+	as a professor I have mandatory reporting responsibilities to
+	share information regarding sexual misconduct, harassment, and
+	crimes I learn about with the University’s Title IX Officer to
+	help make our campus a safer place for all.
+	</p>
+
+
+<!-- 		<h3>Overview</h3>
+		<ul>
+			<li>Instructor: Ferdinando Fioretto <a href="mailto:ffiorett@syr.edu">[email]</a></li>
+			<li>Location: <a href="https://www.google.com/maps/place/Life+Sciences+Complex,+Syracuse,+NY+13210/@43.0381033,-76.1327506,17z/data=!3m1!4b1!4m5!3m4!1s0x89d9f3756db9604f:0xb3f780abea9df41e!8m2!3d43.0380994!4d-76.1305566" target="_blank">Life Science Building 300</a></li>
+			<li>Time: Mon and Wed: 5:15-6:35pm</li>
+			<li>Office hours: Fridays 12:30-1:30pm</li>
+			<li>Office location: <a href="https://www.google.com/maps/place/Center+for+Science+and+Technology/@43.0374165,-76.1306932,21z/data=!3m1!5s0x89d9f3759f1f44fd:0xb825fcec7dd2d45c!4m5!3m4!1s0x89d9f3759f72e9a9:0xf55b7e60a321f302!8m2!3d43.0375369!4d-76.1306182" target="_blank">4-125 CST</a></li>
+			<li>Initial Project Report Deadline: January 31</li>
+			<li>Project Progress Report: February 28</li> 
+		</ul>
+ -->
+	
+<!-- 	<br><br>
+	<p>
+		<strong>Links to Related Courses</strong> 
+		<ul>
+		  <li><a href="https://papernot.fr/teaching/f19-trustworthy-ml">Trustwothy Machine Learning</a></li>
+		  <li><a href="https://secml.github.io">Security and Privacy of ML</a></li>
+		</ul>
+	</p>
+ -->
+	</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer" class="shadow">
+	  <p>&copy; 2018 - 2022 Ferdinando Fioretto | <a href="http://andreasviklund.com/templates/inland/">Template design</a> by <a href="http://andreasviklund.com/">andreasviklund.com</a><br /></p>
+	  <p> Last Update: Aug. 2022
+	</div>
+	</div>
+
+	<script type="text/javascript">
+				$(window).load(function() {
+					$('#slider').nivoSlider();
+				});
+	</script>
+
+	<script>w3.includeHTML();</script>
+
+	</body>
+</html>

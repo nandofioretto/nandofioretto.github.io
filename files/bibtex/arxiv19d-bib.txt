@@ -1,0 +1,8 @@
+@misc{Fioretto:ArXiv19c,
+    title="Privacy-Preserving Obfuscation for Distributed Power Systems",
+    author="Terrence W.K.~Mak and Ferdinando Fioretto and Pascal {Van Hentenryck}",
+    year="2019",
+    eprint="1910.04250",
+    archivePrefix="arXiv",
+    primaryClass="math.OC"
+}

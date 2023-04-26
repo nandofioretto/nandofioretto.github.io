@@ -1,0 +1,8 @@
+@article{fioretto:JAIR18,
+  title="Distributed Constraint Optimization Problems and Applications: A Survey",
+  author="Fioretto, Ferdinando and Pontelli, Enrico and Yeoh, William",
+  journal="Journal of Artificial Intelligence Research",
+  volume="61",
+  pages="623--698",
+  year="2018"
+}

@@ -1,0 +1,8 @@
+@inproceedings{fioretto:CP-15,
+  author    = "Ferdinando Fioretto and Tiep Le and William Yeoh and Enrico Pontelli and Tran Cao Son",
+  title     = "Exploiting {GPU}s in Solving (Distributed) Constraint Optimization Problems with Dynamic Programming",
+  booktitle = "Proceedings of the International Conference on Principles and Practice of Constraint Programming {(CP)}",
+  year      = "2015",
+  pages     = "121--139",
+  doi       = "10.1007/978-3-319-23219-5_9"
+}

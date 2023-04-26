@@ -1,0 +1,6 @@
+@inproceedings{fioretto:WCB-13,
+  author    = "Ferdinando Fioretto and Enrico Pontelli",
+  title     = "Constraint Programming in Community-Based Gene Regulatory Network Inference",
+  booktitle = "Proceedings of the Workshop on Constraint-Based-Methods for Bioinformatics {(WCB)}",
+  year      = "2013"
+}

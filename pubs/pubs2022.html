@@ -1,0 +1,102 @@
+<script>
+	$(document).ready(function(){
+		var showAbs = "[Abstract]",
+		hideAbs = "[Hide]",
+		absButton = $("a.show_abstract");
+
+		absButton.click(
+			function () {
+				$(this).nextAll("div.abstract").slideToggle("fast");
+				var $show_text = $(this).nextAll("a.show_abstract");
+				//$show_text.text($show_text.text() == showAbs ? hideAbs : showAbs)
+				// var $this = $(this);
+				// $this.text($this.text() == moreText ? lessText : moreText).next("div.show_abstract").slideToggle("fast");
+			}
+			);
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		var showTlr = "[Abstract]",
+		hideTlt = "[Hide]",
+		titleButton = $("a.show_abstract_title");
+		titleButton.click(
+			function () {
+				$(this).nextAll("div.abstract").slideToggle("fast");
+				var $show_text = $(this).nextAll("a.show_abstract");
+				//$show_text.text($show_text.text() == showTlr ? hideTlt : showTlr)
+			}
+			);
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		var showBib = "[BibTex]",
+		hideBib = "[Hide]",
+		bibButton = $("a.show_bib");
+
+		bibButton.click(
+			function () {
+				$(this).nextAll("div.bib").slideToggle("fast");
+				var $show_text = $(this).nextAll("a.show_bib");
+				//$show_text.text($show_text.text() == showBib ? hideBib : showBib)
+			}
+			);
+	});
+	function cpClick(elem) {
+		var copyElem = $(elem).parent().prev();
+	    //copyElem.css({"color": "red", "border": "2px solid red"});
+	    var copyText = copyElem[0].innerHTML;
+	    navigator.clipboard.writeText(copyText);
+	    $(elem).next()[0].innerHTML="Copied!";
+	}
+
+	function cpOut(elem) {
+	  $(elem).next()[0].innerHTML="Copy to clipboard";
+	}
+	</script>
+
+		<h5>Journals</h5>
+		
+		<dl name="jair22" id="jair22"></dl>
+			<dt>JAIR</dt>
+			<dd>
+				<a class="show_abstract_title">"Proactive Dynamic Distributed Constraint Optimization Problems"</a>.<br>
+				Khoi D. Hoang, <strong>Ferdinando Fioretto</strong>, Ping Hou, William Yeoh, Makoto Yokoo, Roie Zivan.<br>
+				In <em>Journal of Artificial Intelligence Research (JAIR)</em>, 2022.
+				<br>
+				<span class="paper_links">
+					<em style="color: #16A085";>Links</em>:
+					<a href="https://jair.org/index.php/jair/article/view/13499/26800"target="_blank">[pdf]</a>
+					| 
+					<a href="https://jair.org/index.php/jair/article/view/13499/" target="_blank">[online]</a>
+				</span>
+
+				<em style="color: #16A085";>Show</em>:
+				<a class="show_abstract">[Abstract]</a>
+				|
+				<a class="show_bib">[BibTeX]</a>
+				<div class="bib bib_box">
+<pre id="bib">@article{Hoang:JAIR22,
+	title = {Proactive Dynamic Distributed Constraint Optimization Problems},
+	author = {Khoi D. Hoang and Ferdinando Fioretto and Ping Hou and William Yeoh and Makoto Yokoo and Roie Zivan},
+	journal = {Journal of Artificial Intelligence Research ({JAIR})},
+	volume = {73},
+	pages = {179--225},
+	year = {2022}
+}</pre>
+			        <div class="tooltip">
+						<button onclick="cpClick(this)" onmouseout="cpOut(this)">
+				          Copy text
+			    	    </button>
+						<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+					</div>
+			    </div>
+
+				<div class="abstract abstract_box">
+					<i class="fa-solid fa-quote-left"></i>
+					The Distributed Constraint Optimization Problem (DCOP) formulation is a powerful  tool for modeling multi-agent coordination problems. To solve DCOPs in a dynamic environment, Dynamic DCOPs (D-DCOPs) have been proposed to model the inherent dynamism present in many coordination problems. D-DCOPs solve a sequence of static problems by reacting to changes in the environment as the agents observe them. Such reactive approaches ignore knowledge about future changes of the problem. To overcome this limitation, we introduce Proactive Dynamic DCOPs (PD-DCOPs), a novel formal- ism to model D-DCOPs in the presence of exogenous uncertainty. In contrast to reactive approaches, PD-DCOPs are able to explicitly model possible changes of the problem and take such information into account when solving the dynamically changing problem in a proactive manner. The additional expressivity of this formalism allows it to model a wider variety of distributed optimization problems. Our work presents both theoretical and practical contributions that advance current dynamic DCOP models: (i) We introduce Proactive Dynamic DCOPs (PD-DCOPs), which explicitly model how the DCOP will change over time; (ii) We develop exact and heuristic algorithms to solve PD-DCOPs in a proactive manner; (iii) We provide theoretical results about the complexity of this new class of DCOPs; and (iv) We empirically evaluate both proactive and reactive algorithms to determine the trade-offs between the two classes. The final contribution is important as our results are the first that identify the characteristics of the problems that the two classes of algorithms excel in.
+					<i class="fa-solid fa-quote-right"></i>
+				</div>
+			</dd>
+		</dl>

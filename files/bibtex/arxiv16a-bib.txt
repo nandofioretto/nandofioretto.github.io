@@ -1,0 +1,8 @@
+@article{fioretto:arXiv-16a,
+  author    = "Ferdinando Fioretto and Enrico Pontelli and William Yeoh",
+  title     = "Distributed Constraint Optimization Problems and Applications: {A} Survey",
+  journal   = "CoRR",
+  volume    = "abs/1602.06347",
+  year      = "2016",
+  url       = "http://arxiv.org/abs/1602.06347"
+}

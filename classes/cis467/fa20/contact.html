@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Ferdinando Fioretto,Nando Fioretto,Nando,Ferdinando,Fioretto,DCOP,Smart Grid,AI,GPU,Distributed" />
+	<meta name="author" content="Ferdinando Fioretto" />
+	<link rel="shortcut icon" href="../../../img/su_icon.png" target="blank">
+	<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" media="all" href="../../../inland.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+	<title>Ferdinando Fioretto</title>
+	<script>
+	$(document).ready(function(){
+		var moreText = "Show more",
+		lessText = "Show less",
+		moreButton = $("a.read_more");
+
+		moreButton.click(
+			function () {
+				var $this = $(this);
+				$this.text($this.text() == moreText ? lessText : moreText).next("div.more").slideToggle("fast");
+			}
+			);
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		var moreText = "Show more",
+		lessText = "Show less",
+		moreButton = $("a.read_more_title");
+		moreButton.click(
+			function () {
+				$(this).nextAll("div.more").slideToggle("fast");
+				var $show_text = $(this).nextAll("a.read_more");
+				$show_text.text($show_text.text() == moreText ? lessText : moreText)
+			}
+			);
+	});
+	</script>
+
+	<style>
+	table {
+	  font-family: arial, sans-serif;
+	  border-collapse: collapse;
+	  width: 400px;
+	}
+
+	td, th {
+	  border: 1px solid #CCD1D1;
+	  text-align: left;
+	  padding: 4px;
+	}
+
+	tr:nth-child(even) {
+	  background-color: #EAECEE;
+	}
+	</style>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix">
+	<div id="toplinks">
+	<ul class="toplinks_links">
+	<li>
+		<a href='https://eng-cs.syr.edu/our-departments/electrical-engineering-and-computer-science/'>
+		<img align='center' src="../../../img/su_logo.png"  height="40pt" style="margin:-14px -20px -14px 0px">
+		</a>
+
+	</li>
+	</ul>
+	</div>
+
+	<div id="header" class="clearfix shadow">
+		<div id="sitetitle" class="clearfix">
+			<h1>SU-CIS467 - Fall 2020</h1>
+		</div>
+
+		<div id="nav" class="clearfix">
+		<ul>
+			<li><a href="../../../index.html">FF's Home</a></li>
+			<li><a href="syllabus.html">Syllabus</a></li>
+			<li><a href="schedule.html">Schedule</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="contact.html">Links and Contact</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<!-- HEAD -->
+	<div id="content" class="clearfix shadow">
+		<h1> Introduction to Artificial Intelligence - Links and Contact</h1>
+	<div id="content">
+	
+		<h3>Class Overview</h3>
+		<ul>
+			<li>Class Time: Mo & We [5:15 - 6:35]PM</li>
+			<li>Class location: SCITC 4-201</li>
+			<li>Special Days (class will take place): 
+			Sep 5 (Saturday), 
+			Sep 7 (Labor day)
+			</li>
+			<li>Class start-end: [Aug 24 - Nov 23], 2020</li>
+			<li>Mini-exam 1: Sep 17, 2020</li>
+			<li>Mini-exam 2: Oct 20, 2020</li>
+			<li>Final exam: TBA</li>
+
+		</ul>
+
+		<h3>Staff</h3>
+		<h5>Ferdinando Fioretto (Instructor)</h5>
+		<ul>
+			<li>email:<a href="mailto:cis467fall20@gmail.com">cis467fall20@gmail.com</a></li>
+			<li>Office Hours: Fri: 1:00-2:00pm</li>
+		</ul>
+
+		<h5>Jiajing Chen (TA)</h5>
+		<ul>
+			<li>email:<a href="mailto:cis467fall20@gmail.com">cis467fall20@gmail.com</a></li>
+			<li>Office Hours: Wed: 3:00-4:00pm</li>
+		</ul>
+		
+		<h3>Links to Online Tools</h3>
+		<ul>
+			<li><a href="https://blackboard.syracuse.edu/webapps/blackboard/execute/announcement?method=search&context=mybb&searchSelect=_436768_1">Zoom</a>: All lectures will be accessible, 
+				synchronously, via a zoom link provided in the blackboard 
+				course page.
+			</li> 
+			<li><a href="https://discord.com/">Discord</a>: Group activities performed during class, FAQ, and homework/project discussions will take place  on the class Discord channel. <br>
+				To access the class channel, check the Blackboard course intro page.
+			</li>
+			<li><a href="https://www.gradescope.com">Gradscope</a>: Homework, Projects, and Exam will be submitted and graded using the Gradscope course page.<br>
+				The Gradscope code associated to the class is listed in the Blackboard course intro page.
+			</li>
+			<li><a href="https://blackboard.syracuse.edu/">Blackboard</a>: It contains the  recorded video lectures associated to each class.
+			</li>
+		</ul>
+	</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer" class="shadow">
+	  <p>&copy; 2018 - 2020 Ferdinando Fioretto | <a href="http://andreasviklund.com/templates/inland/">Template design</a> by <a href="http://andreasviklund.com/">andreasviklund.com</a><br /></p>
+	  <p> Last Update: Jan. 2020
+	</div>
+	</div>
+
+	<script type="text/javascript">
+				$(window).load(function() {
+					$('#slider').nivoSlider();
+				});
+	</script>
+
+	<script>w3.includeHTML();</script>
+
+	</body>
+</html>

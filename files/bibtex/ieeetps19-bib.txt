@@ -1,0 +1,11 @@
+@ARTICLE{fioretto:TPS20, 
+author={T. W. K. {Mak} and F. {Fioretto} and L. {Shi} and P. {Van Hentenryck}}, 
+journal={IEEE Transactions on Power Systems}, 
+title={Privacy-Preserving Power System Obfuscation: A Bilevel Optimization Approach}, 
+year={2020}, 
+volume={35}, 
+number={2}, 
+pages={1627-1637}, 
+doi={10.1109/TPWRS.2019.2945069}, 
+ISSN={1558-0679}, 
+month={March}}

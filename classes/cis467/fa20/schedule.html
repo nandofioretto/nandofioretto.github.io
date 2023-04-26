@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Ferdinando Fioretto,Nando Fioretto,Nando,Ferdinando,Fioretto,DCOP,Smart Grid,AI,GPU,Distributed" />
+	<meta name="author" content="Ferdinando Fioretto" />
+	<link rel="shortcut icon" href="../../../img/su_icon.png" target="blank">
+	<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" media="all" href="../../../inland.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+	<title>Ferdinando Fioretto</title>
+	<script>
+	$(document).ready(function(){
+		var moreText = "Show more",
+		lessText = "Show less",
+		moreButton = $("a.read_more");
+
+		moreButton.click(
+			function () {
+				var $this = $(this);
+				$this.text($this.text() == moreText ? lessText : moreText).next("div.more").slideToggle("fast");
+			}
+			);
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		var moreText = "Show more",
+		lessText = "Show less",
+		moreButton = $("a.read_more_title");
+		moreButton.click(
+			function () {
+				$(this).nextAll("div.more").slideToggle("fast");
+				var $show_text = $(this).nextAll("a.read_more");
+				$show_text.text($show_text.text() == moreText ? lessText : moreText)
+			}
+			);
+	});
+	</script>
+
+	<style>
+	table {
+	  font-family: arial, sans-serif;
+	  border-collapse: collapse;
+	  width: 100%;
+	}
+
+	td, th {
+	  border: 1px solid #CCD1D1;
+	  text-align: left;
+	  padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	  background-color: #EAECEE;
+	}
+	</style>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix">
+	<div id="toplinks">
+	<ul class="toplinks_links">
+	<li>
+		<a href='https://eng-cs.syr.edu/our-departments/electrical-engineering-and-computer-science/'>
+		<img align='center' src="../../../img/su_logo.png"  height="40pt" style="margin:-14px -20px -14px 0px">
+		</a>
+
+	</li>
+	</ul>
+	</div>
+
+	<div id="header" class="clearfix shadow">
+		<div id="sitetitle" class="clearfix">
+			<h1>SU-CIS467 - Fall 2020</h1>
+		</div>
+
+		<div id="nav" class="clearfix">
+		<ul>
+			<li><a href="../../../index.html">FF's Home</a></li>
+			<li><a href="syllabus.html">Syllabus</a></li>
+			<li><a href="schedule.html">Schedule</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="contact.html">Links and Contact</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<!-- HEAD -->
+	<div id="content" class="clearfix shadow">
+		<h1> Introduction to Artificial Intelligence - Schedule</h1>
+	<div id="content">
+
+		<p>Below is the calendar for this semester course. This is the preliminary schedule, which will be altered as the semester progresses. I will attempt to announce any change to the class, but this webpage should be viewed as authoritative. </p>
+
+		<h4>Module 1: Search</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col"></th>
+			  <th scope="col">Date</th>
+			  <th scope="col">Lecture Topic</th>
+			  <th scope="col">Readings</th>
+			  <th scope="col">Homework</th>
+			  <th scope="col">due</th>
+			  <th scope="col">Project</th>
+			  <th scope="col">due</th>
+			  <th scope="col">Contest</th>
+			  <th scope="col">due</th>
+			</tr>
+			</thead>
+
+			<tbody>
+			<tr>
+			  <td>H</td>
+			  <td>Aug 24</td>
+			  <td>Intro & Course Overview</td> 
+			  <td>Ch 1,2</td>
+			  <td><a href="https://www.gradescope.com/courses/140660/assignments/571002/submissions/new">HW0 (warm-up)</a></td>
+			  <td>Aug 28</td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+   			<td>T</td>
+			  <td>Aug 26</td>
+			  <td>Uniformed Search</td> 
+			  <td>Ch 3.[1-4]</td>
+			  <td><a href="https://www.gradescope.com/courses/140660/assignments/">HW1 (search)</a></td>
+			  <td>Sep 4</td>
+			  <td><a href="projects/p0.html">P0 (tutorial)</a></td>
+			  <td>Aug 30</td>
+			  <td colspan="2"></td>
+			</tr>
+			
+			<tr>
+				<td>H</td>
+			  <td>Aug 31</td>
+			  <td>A* Search and Heuristics</td> 
+			  <td>Ch 3.[5-6]</td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+				<td>T</td>
+			  <td>Sep 2</td>
+			  <td>Local Search</td> 
+			  <td>Ch 4</td>
+			  <td><a href="https://www.gradescope.com/courses/140660/assignments/">HW2 (CSP)</a></td>
+			  <td>Sep 9</td>
+			  <td colspan="1"><a href="projects/p1.html">P1 (search)</a></td>
+			  <td>Sep 14</td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+				<td>H</td>
+			  <td>Sep 5</td>
+			  <td>CSP I</td> 
+			  <td>Ch 6.1</td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+				<td>T</td>
+			  <td>Sep 7</td>
+			  <td>CSP II</td> 
+			  <td>Ch 6.[2-5]</td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+				<td>H</td>
+			  <td>Sep 9</td>
+			  <td>Game Trees: Minimax</td> 
+			  <td>Ch 5.[2-4]</td>
+			  <td><a href="https://www.gradescope.com/courses/140660/assignments/">HW3 (games)</a></td>
+			  <td>Sep 16</td>
+			  <td colspan="2"></td>
+  			  <td colspan="1"><a href="projects/mc1.html">contest 1</a></td>
+			  <td>Oct 18</td>
+			</tr>
+
+			<tr>
+				<td>T</td>
+			  <td>Sep 14</td>
+			  <td>Game Trees: Expectimax</td> 
+			  <td>Ch 5.[2-5], 16.[1-3]</td>
+			  <td colspan="2"></td>
+			  <td colspan="1"><a href="projects/p2.html">P2 (MAS)</a></td>
+			  <td>Sep 30</td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+				<td>H</td>
+			  <td>Sep 16</td>
+			  <td colspan="2"><strong>Review 1</strong></td> 
+			  <td colspan="1">
+				<span style="font-size: 105%; margin: 0 0 0 4pt; color: #B03A2E;">
+			  	<strong>Mini-exam 1</strong>
+			  </span>
+			  </td>
+			  <td>Sep 17-19</td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+			</tbody>
+		</table>
+
+
+		<h4>Module 2: Uncertainty</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col"></th>
+			  <th scope="col">Date</th>
+			  <th scope="col">Lecture Topic</th>
+			  <th scope="col">Readings</th>
+			  <th scope="col">Homework</th>
+			  <th scope="col">due</th>
+			  <th scope="col">Project</th>
+			  <th scope="col">due</th>
+			  <th scope="col">Contest</th>
+			  <th scope="col">due</th>
+			</tr>
+			</thead>
+
+			<tbody>
+			<tr>
+				<td>T</td>
+			  <td>Sep 21</td>
+			  <td>Review of Probability</td> 
+			  <td>Ch 13.[1-5]</td>
+			  <td rowspan="2"><a href="https://www.gradescope.com/courses/140660/assignments">HW4 (BN I)</a></td>
+			  <td rowspan="2">Oct 5 (ext)</td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+			<td>H</td>
+			  <td>Sep 23</td>
+			  <td>Bayesian Networks I</td> 
+			  <td>Ch 14.[1-3]</td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+				<td>T</td>				
+			  <td>Sep 28</td>
+			  <td>Bayesian Networks II</td> 
+			  <td>Ch 14.[4-5]</td>
+			  <td rowspan="3"><a href="https://www.gradescope.com/courses/140660/assignments">HW5 (BN II)</a></td>
+			  <td rowspan="3">Oct 7</td>
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+				<td>H</td>				
+			  <td>Sep 30</td>
+			  <td>Bayesian Networks III</td> 
+			  <td>Ch 14.[4-5]</td>
+			  <!-- <td colspan="2"></td> -->
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+				<td>T</td>				
+			  <td>Oct 5</td>
+			  <td>Bayesian Networks IV</td> 
+			  <td>Ch 14.[4-5]</td>
+			  <!-- <td colspan="2"></td> -->
+			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+
+			<tr>				
+				<td>H</td>
+			  <td>Oct 7</td>
+			  <td>Hidden Markov Models</td> 
+			  <td>Ch 15.[2-5]</td>
+			  <td><a href="https://www.gradescope.com/courses/140660/assignments">HW6 (HMM)</a></td>
+			  <td>Oct 14</td>
+  			  <td rowspan="3"><a href="projects/p3.html">P3 (RL)</a></td>
+			  <td rowspan="3">Nov 6</td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+			<td>T</td>
+			  <td>Oct 12</td>
+			  <td>Markov Decision Processes I</td> 
+			  <td>Ch 17.[1-3]</td>
+			  <td rowspan="2"><a href="https://www.gradescope.com/courses/140660/assignments">HW7 (MDP)</a></td>
+			  <td rowspan="2">Oct 18</td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+				<td>H</td>
+			  <td>Oct 14</td>
+			  <td>Markov Decision Processes II</td> 
+			  <td>Ch 17.[1-3]</td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+			<td>T</td>
+			  <td>Oct 19</td>
+			  <td colspan="2"><strong>Review 2</strong></td> 
+			  <td colspan="1">
+				<span style="font-size: 105%; margin: 0 0 0 4pt; color: #B03A2E;">
+			  	<strong>Mini-exam 2</strong>
+			  </span>
+			  </td>
+			  <td>Oct 20-22</td>
+  			  <td colspan="2"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+		</tbody>
+	</table>
+
+
+	<h4>Module 3: Learning</h4>
+	<table class="table">
+		<thead>
+		<tr style="font-weight:bold">
+		  <th scope="col"></th>
+		  <th scope="col">Date</th>
+		  <th scope="col">Lecture Topic</th>
+		  <th scope="col">Readings</th>
+		  <th scope="col">Homework</th>
+		  <th scope="col">due</th>
+		  <th scope="col">Project</th>
+		  <th scope="col">due</th>
+		  <th scope="col">Contest</th>
+		  <th scope="col">due</th>
+		</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+  			  <td>H</td>
+			  <td>Oct 21</td>
+			  <td>No Lecture (due to exam)</td> 
+  			  <td></td>
+			  <td colspan="2"></td>
+			  <td colspan="2" rowspan="3"></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+  			  <td>T</td>
+			  <td>Oct 26</td>
+			  <td>Reinforcement Learning I</td> 
+  			  <td>Ch 17.[1-3]</td>
+			  <td rowspan="2"><a href="https://www.gradescope.com/courses/140660/assignments">HW8 (RL)</a></td>
+			  <td rowspan="2">Nov 2</td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+   			  <td>H</td>
+			  <td>Oct 28</td>
+			  <td>Reinforcement Learning II</td> 
+			  <td>Ch 17.[1-3]</td>
+			  <td colspan="2">C1 winners announc.</td>
+			<tr>
+
+		<tr>
+		<td>T</td>
+		  <td>Nov 2</td>
+		  <td>Naive Bayes</td> 
+		  <td>Ch 20.[1-2]</td>
+		  <td rowspan="2"><a href="https://www.gradescope.com/courses/140660/assignments">HW9 (ML1)</a></td>
+		  <td rowspan="2">Nov 9</td>
+		  <td rowspan="7"><a href="#">P4 (ML)</a></td>
+		  <td rowspan="7">Nov 25</td>
+		  <td rowspan="6"><a href="#">contest 2</a></td>
+		  <td rowspan="6">Dec 1</td>
+		</tr>
+
+		<tr>
+		<td>H</td>
+		  <td>Nov 4</td>
+		  <td>Decision Trees</td> 
+		  <td>Ch 18.[1-3]</td>
+		</tr>
+
+		<tr>
+		<td>T</td>
+		  <td>Nov 9</td>
+		  <td>Neural Networks I</td> 
+		  <td>Ch 18.[8]</td>
+		  <td rowspan="4"><a href="https://www.gradescope.com/courses/140660/assignments">HW10 (NNs)</a></td>
+		  <td rowspan="4">Nov 22</td>
+		</tr>
+		
+		<tr>
+		<td>H</td>
+		  <td>Nov 11</td>
+		  <td>Neural Networks II</td> 
+		  <td>Ch 18.[7]</td>
+		</tr>
+
+		<tr>
+		<td>T</td>
+		  <td>Nov 16</td>
+		  <td>Deep Learning I </td> 
+		  <td>...</td>
+		</tr>
+
+		<tr>
+		<td>H</td>
+		  <td>Nov 18</td>
+		  <td>Deep Learning II</td> 
+		  <td></td>
+		</tr>
+
+		<tr>
+		<td>T</td>
+		  <td>Nov 23</td>
+		  <td colspan="2"><strong>Final Review</strong></td> 
+		  <td colspan="2"></td>
+		  <td colspan="2">C2 winners announc.</td>
+		</tr>
+
+		<tr>
+		<td> </td>
+		  <td>Dec 1-4</td>
+		  <td colspan="2"><strong>(on Gradscope)</strong></td> 
+		  <td colspan="1">
+			<span style="font-size: 105%; margin: 0 0 0 4pt; color: #B03A2E;">
+		  	<strong>Final Exam</strong>
+		  </span>
+		  </td>
+		  <td>Dec 1-4</td>
+			  <td colspan="2"></td>
+		  <td colspan="2"></td>
+		</tr>
+
+		</tbody>
+	</table>
+
+	</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer" class="shadow">
+	  <p>&copy; 2018 - 2020 Ferdinando Fioretto | <a href="http://andreasviklund.com/templates/inland/">Template design</a> by <a href="http://andreasviklund.com/">andreasviklund.com</a><br /></p>
+	  <p> Last Update: Jan. 2020
+	</div>
+	</div>
+
+	<script type="text/javascript">
+				$(window).load(function() {
+					$('#slider').nivoSlider();
+				});
+	</script>
+
+	<script>w3.includeHTML();</script>
+
+	</body>
+</html>
+
+
+<!--
+					P		R
+ 				1 2 3 4 5 6 7 8 9
+Team Alderaan	x	2	x			[3]
+Team Coruscant	x 2	x		x		[2]
+Team Kamino		x	  3	  x		x	[4]
+Team Mandalore	x	  x	3      	x	[5]
+Team Naboo		4  	x 	  x	  		[1]
+Team Onderon	  x	  	x 	  3		[8]
+Team Tatooine	  x	  x	  2	  x		[6]
+Team Yavin		  x	    x 	  x	2	[9]
+ 				1 2 3 4 5 6 7 8 9
+ -->

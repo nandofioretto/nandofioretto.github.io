@@ -1,0 +1,6 @@
+@inproceedings{fioretto:TADA-16,
+  author    = "Porag Chowdhury and Russell Y. Folk and Ferdinando Fioretto and Christopher Kiekintveld and William Yeoh",
+  title     = "Investigation of Learning Strategies for the {SPOT} Broker in Power {TAC}",
+  booktitle = "Proceedings of the International Workshop on Agent Mediated Electronic Commerce and Trading Agents Design and Analysis {(AMEC/TADA)}",
+  year      = "2016"
+}

@@ -1,0 +1,8 @@
+@misc{fioretto:20_census,
+    title={Differential Privacy of Hierarchical Census Data: An Optimization Approach},
+    author={Ferdinando Fioretto and Pascal Van Hentenryck and Keyu Zhu},
+    year={2020},
+    eprint={2006.15673},
+    archivePrefix={arXiv},
+    primaryClass={cs.DB}
+}

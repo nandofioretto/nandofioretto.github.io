@@ -1,0 +1,8 @@
+@misc{Fioretto:ArXiv21a,
+      title={Load Embeddings for Scalable AC-OPF Learning}, 
+      author={Terrence W. K. Mak and Ferdinando Fioretto and Pascal VanHentenryck},
+      year={2021},
+      eprint={2101.03973},
+      archivePrefix={arXiv},
+      primaryClass={eess.SY}
+}

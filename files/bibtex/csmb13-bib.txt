@@ -1,0 +1,8 @@
+@inproceedings{fioretto:CMSB-13,
+  author    = "Ferdinando Fioretto and Enrico Pontelli",
+  title     = "Constraint Programming in Community-Based Gene Regulatory Network Inference",
+  booktitle = "Proceedings of the International Conference on Computational Methods in Systems Biology {(CMSB)}",
+  pages     = "135--149",
+  year      = "2013",
+  url       = {http://dx.doi.org/10.1007/978-3-642-40708-6_11}
+}

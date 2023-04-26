@@ -1,0 +1,8 @@
+@misc{Fioretto:ArXiv19c,
+    title="Predicting AC Optimal Power Flows: Combining Deep Learning and Lagrangian Dual Methods",
+    author="Ferdinando Fioretto and Terrence W.K.~Mak and Pascal {Van Hentenryck}",
+    year="2019",
+    eprint="1909.10461",
+    archivePrefix="arXiv",
+    primaryClass="eess.SP"
+}

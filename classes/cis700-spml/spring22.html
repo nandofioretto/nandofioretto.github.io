@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Ferdinando Fioretto,Nando Fioretto,Nando,Ferdinando,Fioretto,DCOP,Smart Grid,AI,GPU,Distributed" />
+	<meta name="author" content="Ferdinando Fioretto" />
+	<link rel="shortcut icon" href="../../img/su_icon.png" target="blank">
+	<link rel="stylesheet" type="text/css" media="all" href="../../inland.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Work+Sans:400,700,800&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+	<title>Ferdinando Fioretto</title>
+	<script>
+	$(document).ready(function(){
+		var moreText = "Show more",
+		lessText = "Show less",
+		moreButton = $("a.read_more");
+
+		moreButton.click(
+			function () {
+				var $this = $(this);
+				$this.text($this.text() == moreText ? lessText : moreText).next("div.more").slideToggle("fast");
+			}
+			);
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		var moreText = "Show more",
+		lessText = "Show less",
+		moreButton = $("a.read_more_title");
+		moreButton.click(
+			function () {
+				$(this).nextAll("div.more").slideToggle("fast");
+				var $show_text = $(this).nextAll("a.read_more");
+				$show_text.text($show_text.text() == moreText ? lessText : moreText)
+			}
+			);
+	});
+	</script>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #CCD1D1;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #EAECEE;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix">
+	<div id="toplinks">
+	<ul class="toplinks_links">
+	<li>
+		<a href='https://eng-cs.syr.edu/our-departments/electrical-engineering-and-computer-science/'>
+		<img align='center' src="../../img/su_logo.png"  height="40pt" style="margin:-14px -20px -14px 0px">
+		</a>
+
+	</li>
+	</ul>
+	</div>
+
+	<div id="header" class="clearfix shadow">
+		<div id="sitetitle" class="clearfix">
+			<h1>Ferdinando Fioretto</h1>
+		</div>
+
+		<div id="nav" class="clearfix">
+			<ul>
+				<li><a class="current" href="index.html">Home</a></li>
+				<li><a href="news.html">News</a></li>
+<!-- 				<li><a href="research.html">Research</a></li> -->
+ 				<li><a href="publications.html">Publications</a></li>
+				<li><a href="people.html">People</a></li>
+				<li><a href="teaching.html">Teaching</a></li>
+				<li><a href="index.html#contacts">Contacts</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- HEAD -->
+	<div id="content" class="clearfix shadow">
+		<h1> Security and Privacy of Machine Learning</h1>
+		<h3> CIS 700 - Spring 2022</h3>
+	
+	<div id="content">
+
+		<h3>Overview</h3>
+		<ul>
+			<li>Instructor: Ferdinando Fioretto <a href="mailto:ffiorett@syr.edu">[email]</a></li>
+			<li>Location: <a href="https://www.syracuse.edu/about/map/" target="_blank">Life Science Building 300</a></li>
+			<!-- <li>Online class: <a href="https://syracuseuniversity.zoom.us/j/93514618930" targe="_blank">Zoom link</a> (must be logged with SYR account)</li> -->
+			<li>Time: Mondays and Wednesday: 5:15-6:35pm</li>
+			<li>Office hours: Fridays 12:00-1:00pm (on <a href="https://syracuseuniversity.zoom.us/j/91231480645">Zoom</a>)</li>
+			<li>Deadline to choose your project: Feb 14</li>
+			<li>Initial Project Report : Mar 7</li>
+			<li>Project Progress Report: Apr 18</li> 
+			<li>Class starts/ends: Jan 24, 2022 - May 4, 2022</li>
+			<li>Syllabus <a href="#syllabus">below</a>
+			<li><a href="#projects">Project Examples below</a>
+		</ul>
+
+
+		<h3>Schedule and material</h3>
+
+		<p>Below is the calendar for this semester course. This is the preliminary 
+		   schedule, which will be altered as the semester progresses. I will attempt 
+	     to announce any change to the class, but this webpage should be viewed as 
+       authoritative. If you have any questions, please contact me.</p>
+
+		<h4>Module 1: Evasion Attacks</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col">Date</th>
+			  <th scope="col">Topic</th>
+			  <th scope="col">Reading</th>
+			  <th scope="col">Presenter</th>
+			</tr>
+			</thead>
+
+		<tbody>
+			<tr>
+			  <td>Jan 24</td>	<td>Overview & motivation</td> 	<td colspan="2"><a href="class-1.pdf" target="_blank">slides</a></td>
+			</tr>
+
+			<!-- Lectures 1 and 2 -->
+			<tr>
+				<td>Jan&nbsp;26</td>
+				<td>Attacks</td>
+				<td>
+					<em>C. Szegedy et al.</em>&quot;<a href="https://arxiv.org/abs/1312.6199">Intriguing properties of neural networks</a>&quot;
+				<br>
+				<strong>Additional Reading</strong>:
+				<ul>
+				  	<li><em>A. Kurakin, I. Goodfellow, S. Bengio</em>. &quot;<a href="https://arxiv.org/abs/1607.02533">Adversarial examples in the physical world</a>&quot;.</li>
+  					<li><em>N. Papernot, P. McDaniel, I. Goodfellow</em> &quot;<a href="https://arxiv.org/abs/1605.07277">Transferability in Machine Learning: from Phenomena to Black-Box Attacks using Adversarial Samples</a>&quot;.</li>
+				</ul>
+				</td>
+				<td>Instructor</a></td>
+			</tr>
+
+			<tr>
+				<td>Jan&nbsp;31</td>
+				<td>Attacks</td>
+				<td>
+					<em></em>Papernot et al. &quot;<a href="https://arxiv.org/abs/1602.02697">Practical Black-Box Attacks against Machine Learning</a>&quot;
+					<br>
+					<strong>Additional Reading</strong>:
+					<ul>
+						<li><em>D Lowd, C. Meek</em>. &quot;<a href="https://ix.cs.uoregon.edu/~lowd/ceas05lowd.pdf">Good Word Attacks on Statistical Spam Filters</a>&quot;</li>
+						<li><em>N Dalvi et al.</em>. &quot;<a href="https://homes.cs.washington.edu/~pedrod/papers/kdd04.pdf">Adversarial classification</a>&quot;.</li>
+					</ul>
+				</td>
+				<td>Yiming</td>
+			</tr>
+
+
+			<!-- Lecture 2 -->
+			<tr>
+			  <td>Feb&nbsp;2</td>
+			  <td>Attacks and Adversarial Training</td>
+			  <td>
+				<em>I Goodfellow et al.</em>.&quot;<a href="https://arxiv.org/abs/1412.6572">Explaining and harnessing adversarial examples</a>&quot;
+				<br>
+				<strong>Additional Reading</strong>:
+				<ul>
+					<li><em>F Tramèr, A Kurakin, N Papernot, I Goodfellow, D Boneh, P McDanie</em>. &quot;<a href="https://arxiv.org/abs/1705.07204">Ensemble Adversarial Training: Attacks and Defenses</a>&quot;</li>
+					<li><em>B. Biggio et al.</em>. &quot;<a href="http://www.ecmlpkdd2013.org/wp-content/uploads/2013/07/527.pdf">Evasion Attacks against Machine Learning at Test Time</a>&quot;.</li>
+				</ul>
+				<strong>Tutorial software</strong>:
+				<ul>
+					<li><a href="https://github.com/cleverhans-lab/cleverhans/blob/master/tutorials/torch/mnist_tutorial.py">Cleverhans mnist tutorial (Pytorch)</a></li>
+				</ul>
+			  </td>
+	  			<td>Daniel</td>
+			</tr>
+
+			<!-- Lecture 3 -->
+			<tr>
+			  <td>Feb&nbsp;7</td>	
+			  <td>Defensive Distillation</td>
+			  <td>
+			  	<ul>
+					<li><em>A Athalye, N Carlini, D Wagner</em>. &quot;<a href="https://arxiv.org/abs/1802.00420">Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples</a>&quot;</li>
+					<li><em>N Papernot et al.</em>.&quot;<a href="https://arxiv.org/abs/1511.04508">Distillation as a Defense to Adversarial Perturbations against Deep Neural Networks</a>&quot;</li>
+					</ul>
+				<br>
+				<strong>Additional Reading</strong>:
+				<ul>
+					<li><em>Siyue Wang et al.</em> &quot;<a href="https://arxiv.org/abs/1809.05165">Defensive Dropout for Hardening Deep Neural Networks under Adversarial Attacks</a>&quot;</li>
+					<li><em>G Hinton, O Vinyals, J Dean</em>.&quot;<a href="https://arxiv.org/abs/1503.02531">Distilling the knowledge in a neural networks</a>&quot;</li>
+				</ul>
+				</td>
+				<td>Chang</td>
+			</tr>
+
+
+			<tr>
+			  <td>Feb&nbsp;9</td>	
+			  <td>Certified  Distillation</td>
+			  <td>
+			  	<em>Cohen et al.</em>, &quot;<a href="https://arxiv.org/pdf/1902.02918.pdf">Certified Adversarial Robustness via Randomized Smoothing</a>.&quot;
+				<br>
+				<strong>Additional Reading</strong>:
+				<ul>
+					<li><em>J Jo, Y Bengio</em>&quot;<a href="https://arxiv.org/abs/1711.11561">Measuring the tendency of CNNs to Learn Surface Statistical Regularities</a>&quot;</li>
+					<li><em>N Papernot et al.</em>&quot;<a href="https://dl.acm.org/doi/10.1145/3052973.3053009">Practical Black-Box Attacks against Deep Learning Systems using Adversarial Examples</a>&quot;</li>
+				</ul>
+				</td>
+				<td>Shwetha</td>
+			</tr>
+		
+			</tbody>
+		</table>
+
+
+
+		<h4>Module 2: Poisoning Attacks</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col">Date</th>
+			  <th scope="col">Topic</th>
+			  <th scope="col">Reading</th>
+			  <th scope="col">Presenter</th>
+			</tr>
+			</thead>
+
+			<tbody>
+			<tr>
+			  <td>Feb&nbsp;14 </td>	
+			  <td>Introduction</td>
+			  <td>
+				<em>A Shafahi et al</em>.<a href="https://arxiv.org/abs/1804.00792">&quot;Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks</a>.&quot;
+			  	<br>
+			  	<strong>Additional Reading</strong>:
+			  	<ul>
+			  		<li><em>X. Huang et al</em>.&quot;<a href="https://arxiv.org/abs/1804.07933" target="_blank">Is feature selection secure against training data poisoning?</a>&quot;.</li>
+					<li><em>B Nelson et al</em>.<a href="https://people.eecs.berkeley.edu/~tygar/papers/SML/Spam_filter.pdf">&quot;Exploiting Machine Learning to Subvert Your Spam Filter</a>.&quot;</li>
+			  	</ul>
+			  </td>
+			  <td>Instructor</td>
+			</tr>
+			
+			<tr>
+			  <td>Feb&nbsp;16</td><td>Attacks on ML systems</td>
+			  <td>
+					<em>M Jagielski et al</em>.&quot;<a href="https://arxiv.org/abs/1804.00308">Manipulating Machine Learning: Poisoning Attacks and Countermeasures for Regression Learning</a>&quot;.
+			  	<br>
+				<strong>Additional Reading</strong>:
+				<ul>
+			  	<li><em>Biggio et al</em>&quot;<a href="https://arxiv.org/abs/1206.6389">Poisoning attacks against support vector machines</a>&quot;.</li>
+					<li><em>C Yudong, C Caramanis, S Mannor</em>.&quot;<a href="http://proceedings.mlr.press/v28/chen13h.html">Robust sparse regression under adversarial corruption</a>&quot;.</li>
+				</ul>
+			  </td>
+			  <td>Hao</td>
+			</tr>
+
+			<tr>
+			  <td>Feb&nbsp;21 </td><td>Defense Mechanisms</td>
+			  <td>
+				<em>J Steinhardt, PW Koh, P Liang</em>.&quot;<a href="https://papers.nips.cc/paper/6943-certified-defenses-for-data-poisoning-attacks.pdf">Certified Defenses for Data Poisoning Attack</a>&quot;.
+				<br>				
+			  	<strong>Additional Reading</strong>:
+			  	<ul>
+			  		<li><em>I. Diakonikolas et al</em>.
+			  			&quot;<a href="https://arxiv.org/abs/1803.02815">Sever: A Robust Meta-Algorithm for Stochastic Optimization</a>&quot;
+			  		</li>
+						<li><em>B Rubinstein et al</em>.
+							&quot;<a href="https://people.eecs.berkeley.edu/~tygar/papers/SML/IMC.2009.pdf">ANTIDOTE: Understanding and Defending against Poisoning of Anomaly Detectors</a>&quot;.
+						</li>
+			  		<li><em>B Wang et al</em>.
+			  			&quot;<a href="https://people.cs.uchicago.edu/~ravenben/publications/pdf/backdoor-sp19.pdf">Neural Cleanse: Identifying and Mitigating Backdoor Attacks in Neural Networks</a>&quot;.
+			  		</li>
+			  	</ul>
+			  </td>
+			  <td>Zixi</td>
+			</tr>
+		</tbody>
+		</table>
+
+
+		<h4>Module 3: Privacy Attacks</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col">Date</th>
+			  <th scope="col">Topic</th>
+			  <th scope="col">Reading</th>
+			  <th scope="col">Presenter</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			  <td>Feb&nbsp;23 </td>
+			  <td>Data Exposure</td>
+			  <td>
+			  	<ul>
+			  		<li><em>A Narayanan, V Shmatikov</em>.&quot;<a href="https://www.cs.utexas.edu/~shmat/shmat_oak08netflix.pdf">Robust de-anonymization of large sparse datasets.</a>&quot;.</li>
+					<li><em>Y de Montjoye et al.</em><a href="https://www.nature.com/articles/srep01376">Unique in the Crowd: The privacy bounds of human mobility</a></li>
+				</ul>
+			  	<strong>Additional Reading</strong>: 
+			  	<ul>
+			  		<li><em>Y de Montjoye et al.</em><a href="https://dspace.mit.edu/bitstream/handle/1721.1/96321/UniqueInTheShoppingMall_draft.pdf?sequence=1&isAllowed=y">Unique in the shopping mall: On the reidentifiability of credit card metadata</a></li>
+					<li><em>F. Tramèr et al</em>.&quot;<a href="https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_tramer.pdf">Stealing Machine Learning Models via Prediction APIs</a>&quot;.</li>
+			  		<li><em>C Dwork et al</em>.&quot;<a href="https://privacytools.seas.harvard.edu/files/privacytools/files/pdf_02.pdf">Exposed! A Survey of Attacks on Private Data</a>&quot;.</li>
+			  		<li><em>JA Calandrino et al</em>.&quot;<a href="https://www.cs.utexas.edu/~shmat/shmat_oak11ymal.pdf">‘You Might Also Like’: Privacy Risks of Collaborative Filtering</a>&quot;.</li>
+			  	</ul>
+			  </td>
+  			  <td>Liam</td>
+			</tr>
+
+			<tr>
+			  <td>Feb&nbsp;28 </td><td colspan="3"> No class (AAAI-22)</td>
+			</tr>
+
+
+			<tr>
+			  <td>Mar&nbsp;2 </td><td>Privacy Attacks in Deep Learning</td>
+			  <td>
+			  		<em>R Shokri et al</em>.&quot;<a href="https://arxiv.org/abs/1610.05820" target="_blank">Membership Inference Attacks against Machine Learning Models</a>&quot;.
+				<br>			  		
+			  	<strong>AdditionalReading</strong>:
+			  	<ul>
+			  		<li><em>M Nasr, R Shokri, A Houmansadr</em>.
+			  			&quot;<a href="https://www.comp.nus.edu.sg/~reza/files/Shokri-SP2019.pdf" target="_blank">Comprehensive Privacy Analysis of Deep Learning</a>&quot;.
+			  		</li>
+			  	</ul>
+			  </td>
+  			  <td>Jinfen</td>
+			</tr>
+
+			<tr>
+			  <td>Mar&nbsp;7 </td><td>Privacy Attacks in Deep Learning</td>
+			  <td>
+		  		<em>N Carlini et al</em>.&quot;<a href="https://arxiv.org/abs/1802.08232" target="_blank">The Secret Sharer: Evaluating and Testing Unintended Memorization in Neural Networks. </a>&quot;.
+				<br>			  		
+			  	<strong>Additional Reading</strong>:
+			  	<ul>
+			  		<li><em>C Song, V Shmatikov</em>.&quot;<a href="https://arxiv.org/abs/1905.11742" target="_blank">Overlearning Reveals Sensitive Attributes.</a>&quot;.</li>
+			  	</ul>
+			  </td>
+  			  <td>Ziyang</td>
+			</tr>
+
+			<tr>
+			  <td>Mar&nbsp;9</td>
+			  <td><strong>Initial Project Report</strong></td>
+			  <td colspan="2">submission on Teams</td>
+			</tr>
+
+		</tbody>
+		</table>
+
+		<h4>Module 4: Foundations of Differential Privacy</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col">Date</th>
+			  <th scope="col">Topic</th>
+			  <th scope="col">Reading</th>
+			  <th scope="col">Presenter</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			  <td>Mar&nbsp;9</td>
+			  <td>Preliminaries</td>
+			  <td>
+				<em>C Dwork, A Roth</em>.&quot;<a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>&quot;. 
+  				Chapters 2 and 3
+			  </td>
+  			  <td>Instructor</td>
+			</tr>
+
+			<tr>
+			  <td>Mar&nbsp;14 </td>
+			  <td><strong>Spring break</strong></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+			  <td>Mar&nbsp;16 </td>
+			  <td><strong>Spring break</strong></td>
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+			  <td>Mar&nbsp;21 </td>
+<<<<<<< HEAD
+			  <td><strong>Online office hour -- from 6PM</strong></td>
+=======
+			  <td><strong>Online Office hours (from 6pm)</strong></td>
+>>>>>>> 524c2987b8ca00c1b951cf6b878f509021557f11
+			  <td colspan="2"></td>
+			</tr>
+
+			<tr>
+			  <td>Mar&nbsp;23</td>
+			  <td>Exponential Mechanism and Composition</td>
+			  <td>
+			  	<ul>
+					<li><em>C Dwork, A Roth</em>.&quot;<a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>&quot;. Chapter 3 </li>
+  					<li><em>Kairouz et al.</em>:<a href="https://arxiv.org/abs/1311.0776">The Composition Theorem for Differential Privacy</a></li>
+  				</ul>
+			  </td>
+  			  <td>Instructor</td>			  
+			</tr>
+
+			  <td>Mar&nbsp;28</td>
+			  <td>Data Generation</td>
+			  <td>
+		  		<em>J Zhang et al</em>.&quot;<a href="http://dimacs.rutgers.edu/~graham/pubs/papers/PrivBayes.pdf" target="_blank">PrivBayes: Private Data Release via Bayesian Networks</a>&quot;.
+			  	</ul>
+			  	<strong>Additional Reading</strong>:
+			  	<ul>
+			  		<li><em>G. Cormode et al</em>.
+			  			&quot;
+			  			<a href="http://dimacs.rutgers.edu/~graham/pubs/papers/spatialpriv.pdf" target="_blank">Differentially private spatial decompositions</a>
+			  			&quot;.
+			  		</li>
+			  		<li><em>C Liand, G Miklau</em>.
+			  			&quot;
+			  			<a href="http://vldb.org/pvldb/vol5/p514_chaoli_vldb2012.pdf" target="_blank">
+			  			An adaptive mechanism for accurate query answering under differential privacy</a>
+			  			&quot;.
+			  		</li>
+			  	</ul>
+			  </td>
+			  <td>Henil</td>
+			</tr>
+
+			<tr>
+			  <td>Mar&nbsp;30</td>
+			  <td>Optimization</td>
+			  <td>
+		  			<em>F Fioretto P Van Hentenryck.</em>:&quot;<a href="https://www2.isye.gatech.edu/~fferdinando3/files/papers/cp19.pdf" target="_blank">Differential Privacy of Hierarchical Census Data: An Optimization Approach</a>&quot;.
+		  			<br>
+			  	<strong>Additional Reading</strong>:
+			  	<ul>
+			  		<li><em>H Rastogi, M Suciu.</em>:&nbsp;
+			  			&quot;
+			  			<a href="https://arxiv.org/abs/0904.0942" target="_blank">Boosting the Accuracy of Differentially Private Histograms Through Consistency</a>
+			  			&quot;.
+			  		</li>
+<!-- 			  		<li><em>B Ding et al.</em>:&nbsp;
+			  			&quot;
+			  			<a href="https://faculty.ist.psu.edu/jessieli/Publications/sigmod11_bding.pdf" target="_blank">Differentially private data cubes: optimizing noise sources and consistency</a>
+			  			&quot;.
+			  		</li>
+ -->
+<!-- 			  		<li><em>C Li et al.</em>:&nbsp;
+			  			&quot;
+			  			<a href="https://people.cs.umass.edu/~miklau/assets/pubs/dp/li2014data.pdf	" target="_blank">A Data- and Workload-Aware Algorithm for Range Queries Under Differential Privacy</a>
+			  			&quot;.
+			  		</li>
+ -->	
+ 			  		<li><em>T Mak, F Fioretto, P Van Hentenryck.</em>:&nbsp;
+			  			&quot;
+			  			<a href="https://arxiv.org/abs/1910.04250" target="_blank">Privacy-Preserving Obfuscation for Distributed Power Systems</a>
+			  			&quot;.
+			  		</li>
+			  	</ul>
+			  </td>
+  			  <td>Yiming</td>
+			</tr>
+
+		</tbody>
+		</table>
+
+		<h4>Module 5: Differential Privacy and Machine Learning</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col">Date</th>
+			  <th scope="col">Topic</th>
+			  <th scope="col">Reading</th>
+			  <th scope="col">Presenter</th>
+			</tr>
+			</thead>
+			<tbody>
+			
+			<tr>
+			  <td>Apr&nbsp;4</td>
+			  <td>DP Empirical Risk Minimization</td>
+			  <td>
+			  	<ul>
+					<li><em>C Dwork, A Roth</em>:&quot;<a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>&quot;. Chapter 11 </li>
+			  		<li><em>K Chaudhuri et al.</em>:&quot;<a href="http://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf" target="_blank">Differentially private empirical risk minimization</a>
+			  			&quot;.
+			  		</li>
+  				</ul>
+			  </td>
+  			  <td>Instructor</td>
+  			</tr>
+
+  			<tr>
+			  <td>Apr&nbsp;6</td>
+			  <td>DP Stochastic Gradient Descent</td>
+			  <td>
+			  	<ul>
+			  		<li><em>M Abadi et al.</em>&quot;<a href="#https://arxiv.org/abs/1607.00133" target="_blank">Deep learning with differential privacy</a>&quot;.</li>
+			  		<li><em>Balle et al.</em>&quot;<a href="https://arxiv.org/abs/1807.01647">Privacy amplification by subsampling: tight analyses via couplings and divergences</a>&quot;.</ul>
+			  </td>
+  			  <td>Instructor</td>
+  			</tr>
+
+  			<tr>
+			  <td>Apr&nbsp;11</td>
+  				<td>Other Deep Learning Approaches</td>
+  				<td>
+  					<ul>
+			  		<li><em>N Papernot et al.</em>&quot;<a href="https://arxiv.org/abs/1610.05755" target="_blank">Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data</a>&quot;.</li>
+			  		<li><em>N Papernot et al.</em>&quot;<a href="https://arxiv.org/abs/1802.08908" target="_blank">Scalable Private Learning with PATE</a>&quot;.</li>
+			  		</ul>
+				  	<strong>Software</strong>:
+					<ul>
+						<li><a href="http://www.cleverhans.io/privacy/2018/04/29/privacy-and-machine-learning.html">cleverhans</a</li>
+						<li><a href="https://github.com/tensorflow/privacy">TensorFlow privacy</a></li>
+					</ul>
+		  		<td>Daniel</td>
+			  </tr>	
+		</tbody>
+		</table>
+
+		<h4>Module 6: Differential Privacy Model Extensions</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col">Date</th>
+			  <th scope="col">Topic</th>
+			  <th scope="col">Reading</th>
+			  <th scope="col">Presenter</th>
+			</tr>
+			</thead>
+			<tbody>
+
+			<tr>
+			  <td>Apr&nbsp;13 </td>
+			  <td>Local DP</td>
+			  <td> 
+			  	<ul>
+			  		<li>Local Privacy and Statistical Minimax Rates.</li>
+			  		<li>Amplification by Shuffling: From Local to Central Differential Privacy via Anonymity.</li>
+			  	</ul>
+			  	<strong>Additional Reading</strong>
+			  	<ul>
+				  		<li><em>P Kairouz, S Oh, P Viswanath.</em>:&nbsp;
+			  			&quot;
+			  			<a href="https://papers.nips.cc/paper/5392-extremal-mechanisms-for-local-differential-privacy.pdf" target="_blank">Extremal Mechanisms for Local Differential Privacy</a>
+			  			&quot;.
+			  		</li>
+			  		<li><em>B Bebensee.</em>:&nbsp;
+			  			&quot;
+			  			<a href="https://arxiv.org/pdf/1907.11908.pdf" target="_blank">Local Differential Privacy: a tutorial</a>
+			  			&quot;.
+			  		</li>
+
+			  	</ul>
+			  </td>
+			  <td>Shwetha</td>
+			</tr>
+
+
+		 	<td>Apr&nbsp;18 </td>
+		 	<td>Temporal DP</td>
+			<td>
+		  		<li><em>F Fioretto, P Van Hentenryck.</em>:&nbsp;
+		  			&quot;
+		  			<a href="https://arxiv.org/abs/1808.01949" target="_blank">OptStream: Releasing Time Series Privately</a>
+		  			&quot;.
+		  		</li>
+			  	<strong>Additional Reading</strong>:
+			  	<ul>
+			  		<li><em>V Rastogi, S Nath. </em>:&nbsp;
+			  			&quot;
+			  			<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2009/11/paper.pdf" target="_blank">Differentially private aggregation of distributed time-series with transformation and encryption</a>
+			  			&quot;.
+			  		</li>
+			  		<li><em>Y Cao et al</em>:&nbsp;&quot;<a href="https://arxiv.org/pdf/1711.11436.pdf" target="_blank">Quantifying Differential Privacy in ContinuousData Release under Temporal Correlations</a>&quot;.</li>
+			  	</ul>
+			  </td>
+			  <td>Hao</td>
+			</tr>
+
+			<tr>
+			  <td>Apr&nbsp;20 </td>
+			  <td>Deployments</td>
+			  <td>
+			  	<ul>
+			  		<li><em>U Erlingsson, V Pihur, A Korolova.</em>:&quot;<a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42852.pdf" target="_blank">RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal Response</a>&quot;.</li>
+		  			<li>Abowd, Ashmead, Garfinkel, et.al., 2019. Census TopDown: Differentially Private Data, Incremental Schemas, and Consistency with Public Knowledge</li>
+
+			  	</ul>
+			  	<strong>Additional Reading</strong>:
+			  	<ul>
+			  		<li><em>B Ding, J Kulkarni, S Yekhanin</em>:&nbsp;
+			  			&quot;
+			  			<a href="https://papers.nips.cc/paper/6948-collecting-telemetry-data-privately.pdf" target="_blank">Collecting telemetry data privately		</a>
+			  			&quot;.
+			  		</li>
+			  		<li>Kifer, Messing, Roth, Thakurta, Zhang, 2020. Guidelines for Implementing and Auditing Differentially Private Systems</li>
+			  		<li>Apple Differential Privacy Team, 2017. Learning with Privacy at Scale and Differential Privacy Overview</li>
+			  		<li>Kenthapadi and Tran. SIGKM 2018. <a href="/private-systems-class/papers/Kenthapadi2018PriPeARL.pdf">PriPeARL: A Framework for Privacy-Preserving Analytics and Reporting at LinkedIn</a></li>
+			  	</ul>
+			  </td>
+			  <td>Zixi</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h4>Module 7: Federated Learning</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col">Date</th>
+			  <th scope="col">Topic</th>
+			  <th scope="col">Reading</th>
+			  <th scope="col">Presenter</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			  <td>Apr&nbsp;25</td>
+			  <td>Preliminaries</td>
+			  <td>
+			  	<em>McMahan et al.</em><a href="http://proceedings.mlr.press/v54/mcmahan17a/mcmahan17a.pdf">Communication-Efficient Learning of Deep Networks from Decentralized Data</a></li>
+			  	<br>
+			  	<strong>Additional Reading</strong>:
+				<em>Kairouz et al.</em>:&nbsp;&quot;<a href="https://arxiv.org/pdf/1912.04977.pdf">Advances and Open Problems in Federated Learning</a>&quot;
+			  </td>
+			  <td>Liam</td>
+			</tr>
+
+<!-- 			<tr>
+			  <td>May 3 </td>
+			  <td>Seminal papers</td>
+			  <td>
+			  	<strong>Additional Reading</strong>:
+			  	<ul>
+			  		<li><em>Bagdasaryan, et al.</em> <a href="https://arxiv.org/pdf/1807.00459.pdf"> How To Backdoor Federated Learning</a></li>
+			  		<li><em>Li, et al.</em>: <a href="https://arxiv.org/pdf/1812.06127.pdf">Federated Optimization in Heterogeneous Networks</a>.</li>
+			  		<li><em>Unkown</em><a href="https://openreview.net/pdf?id=BkluqlSFDS">Federated learning with matched averaging</a></li>
+			  	</ul>
+			  </td>
+			  <td>TBD</td>
+			</tr>
+
+ -->			<tr>
+			  <td>Apr&nbsp;27</td>
+			  <td>Privacy</td>
+			  <td>McMahan<a href="https://arxiv.org/pdf/1710.06963.pdf">Learning differentially private recurrent language models</a>
+			  	<strong>Additional Reading</strong>:
+			  	<ul>
+			  		<li><em>Geyer et al.</em><a href="https://arxiv.org/pdf/1712.07557.pdf">Differentially private federated learning: a client level perspective</a></li>
+			  		<li><em>Liang et al.</em>: <a href="https://arxiv.org/pdf/2001.01523v1.pdf">Think Locally, Act Globally: Federated Learning with Local and Global Representations.</a></li>
+			  	</ul>
+			  </td>
+  			  <td>Jinfen</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h4>Module 8: Fairness and Bias</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col">Date</th>
+			  <th scope="col">Topic</th>
+			  <th scope="col">Reading</th>
+			  <th scope="col">Presenter</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			  <td>May&nbsp;2</td>
+			  <td>Preliminaries</td>
+			  <td>
+			  	<strong>Mandatory Reading</strong>: 
+			  	<ul>
+		  		<li><em>Dwork et al.</em><a href="https://arxiv.org/abs/1104.3913">
+		  		Fairness Through Awareness</a>
+			  	</li>
+
+			  	<li><em>Goh et al.</em>
+			  		<a href="http://papers.nips.cc/paper/6316-satisfying-real-world-goals-with-dataset-constraints.pdf">Satisfying Real-world Goals with Dataset Constraints</a>
+			  	</li>
+			  </ul>
+
+			  	<strong>Additional Reading</strong>:
+			  	<ul>		  		
+			  		<li><em>M. Feldman et al.</em><a href="https://arxiv.org/abs/1412.3756">
+		  			Certifying and removing disparate impact</a>
+			  		</li>
+				</ul>
+			  </td>
+  			  <td>Ziyang</td>
+			</tr>
+
+			<tr>
+			  <td>May&nbsp;4 </td><td>Applications</td>
+			  <td>
+			  	<strong>Mandatory Reading</strong>: 
+		  		<li><em>Zafar et al.</em><a href="https://people.mpi-sws.org/~gummadi/papers/disparate_impact_AISTATS_2017.pdf">Fairness Constraints: Mechanisms for Fair Classification</a></li>
+		  		<li>
+		  			<em>Liu et al.</em>
+		  			<a href="https://arxiv.org/abs/1803.04383">Delayed Impact of Fair Machine Learning</a>
+		  		</li>
+		  		<strong>Additional Reading</strong>:
+			  	<ul>
+			  		<li>
+			  			Y. Bechavod, K. Ligett<a href="https://arxiv.org/pdf/1707.00044.pdf">Penalizing Unfairness in Binary Classification</a>
+			  		</li>
+			  		<li>
+			  			<em>Hardt et al.</em>
+			  			<a href="http://papers.nips.cc/paper/6374-equality-of-opportunity-in-supervised-learning.pdf">Equality of Opportunity in Supervised Learning</a>
+			  		</li>
+			  	</ul>
+			  </td>
+  			  <td>Henil</td>
+			</tr>
+		</tbody>
+		</table>
+	<!-- Chang -->
+
+		<h4>Final Presentation</h4>
+		<table class="table">
+			<thead>
+			<tr style="font-weight:bold">
+			  <th scope="col">Date</th>
+			  <th scope="col">Topic</th>
+			  <th scope="col">Reading</th>
+			  <th scope="col">Presenter</th>
+			</tr>
+			</thead>
+			<tbody>
+
+			<tr>
+			  <td>May&nbsp;9</td><td colspan="3">Poster Session</td>
+			</tr>
+
+			</tbody>
+		</table>
+
+
+		<h2 id="syllabus">Syllabus</h2>
+		
+		<h3>Assignments</h3>
+
+		<p><h5>Paper presentation</h5> 
+		In each class, a team of students will present the assigned papers. 
+		Different types of presentation are allowed (e.g., slides, interactive demos or code tutorials). The only requirements is that the presentation should (a) involve the class in active discussions, (b) cover all papers assigned for reading, and (c) last no more than 1:15h including discussions. </p>
+
+		<p><h5>Research projects</h5> 
+		Students will work on a course-long research project. Each project will be presented on May 10 or 12.</p>
+
+		
+		<h3>Grading</h3>
+
+		<p><h5>Grading scheme</h5> 
+		35% paper presentation, 10% quizzes, 5% class participation, 50% research project.
+		<br>
+		Paper presentations will be graded according to the this <a href="rubric.pdf">rubric</a>.
+		</p>
+
+
+		<p><h5>Class participation</h5> 
+		Course lectures will be driven by the contents of assigned papers. All students are asked to participate in an active discussions of the paper content during each class. 
+		<br>During the class each student is <strong>required to as at least ONE question</strong>
+		</p>
+
+		<p><h5>Lateness policy</h5> 
+		The presentation material should be presented two days prior the day of presentation.
+		A 10% per-day late-penalty will be applied for delays. 
+		If the presentation is not ready for the day in which the team is supposed to present all students in the team will be assigned 0 points.
+		</p>
+
+
+		<h3>Ethics statement</h3>
+
+		<p>In this course, you will be learning about and exploring some vulnerabilities that could be exploited to compromise deployed systems. You are trusted to behave responsibility and ethically. You may not attack any system without permission of its owners, and may not use anything you learn in this class for evil. If you have doubts about ethical and legal aspects of what you want to do, you should check with the course instructor before proceeding.
+		Any activity outside the letter or spirit of these guidelines will be reported to the proper authorities and may result in dismissal from the class.</p>
+
+
+		<p><h5>Integrity</h5> 
+		Syracuse University’s Academic Integrity Policy reflects the high value that we, as a university community, place on honesty in academic work. The policy defines our expectations for academic honesty and holds students accountable for the integrity of all work they submit. Students should understand that it is their responsibility to learn about course-specific expectations, as well as about university-wide academic integrity expectations. The policy governs appropriate citation and use of sources, the integrity of work submitted in exams and assignments, and the veracity of signatures on attendance sheets and other verification of participation in class activities. The policy also prohibits students from submitting the same work in more than one class without receiving written authorization in advance from both instructors. Under the policy, students found in violation are subject to grade sanctions determined by the course instructor and non-grade sanctions determined by the School or College where the course is offered as described in the Violation and Sanction Classification Rubric. Syracuse University students are required to read an online summary of the University’s academic integrity expectations and provide an electronic signature agreeing to abide by them twice a year during pre-term check- in on MySlice.
+		<br>
+		Any instance of sharing or plagiarism, copying, cheating, or other disallowed behavior will constitute a breach of ethics. 
+		Students are responsible for reporting any violation of these rules by other students, and failure to constitutes an 
+		ethical violation that carries with it similar penalties.
+		<br>
+		The Violation and Sanction Classification Rubric establishes recommended guidelines for the determination of grade penalties by faculty and instructors, while also giving them discretion to select the grade penalty they believe most suitable, including course failure, regardless of violation level. Any established violation in this course may result in course failure regardless of violation level.
+		</p>
+
+
+		<h5>Academic Integrity Online</h5>
+		<p>
+		All academic integrity expectations that apply to in-person quizzes and exams also apply to online quizzes and exams. In this course, all work submitted for quizzes and exams must be yours alone. Discussing quiz or exam questions with anyone during the quiz or exam period violates academic integrity expectations for this course.
+		</p>
+
+
+
+		<h3>Stay Safe Pledge</h3>
+		<p>
+		As part of the university’s plan for re-opening, all students are expected to affirm their commitment to keeping themselves and the campus community safe by signing the Stay Safe Pledge. The Pledge requires students to wear a mask or face covering while on campus, maintain six feet of distance from others, and avoid attending class or participating in campus activities when feeling unwell. Instructors will enforce these expectations in their classrooms. Further guidance, including tips on how to address students who are not upholding these requirements, may be found in The Stay Safe Pledge: Guidance for Faculty, TAs, and Instructional Staff. The following language should be included prominently in your syllabus and highlighted at your first class session:
+		<br>
+		Syracuse University’s Stay Safe Pledge reflects the high value that we, as a university community, place on the well-being of our community members. This pledge defines norms for behavior that will promote community health and wellbeing. Classroom expectations include the following: wearing a mask that covers the nose and mouth at all times, maintaining a distance of six feet from others, and staying away from class if you feel unwell. Students who do not follow these norms will not be allowed to continue in face-to-face classes; repeated violations will be treated as violations of the Code of Student Conduct and may result in disciplinary action.
+		</p>
+
+		<h5>Food and Drink in the Classroom</h5>
+
+		<p>Eating and drinking require the lowering of the face mask, creating a potentially dangerous situation. For this reason, students are not allowed to eat or drink in class during the COVID-19 pandemic. Instructors teaching classes that are longer than 80 minutes in duration should allow students to leave the room as needed or include a short break to allow students to get a drink.</p>
+
+		<h5>Online Etiquette</h5>
+		<p>
+		Students participating remotely in hybrid and synchronous online class sessions can be expected to conduct themselves as they would in an in-person class. They should dress and behave as they would in a face-to-face class. The issue of whether or not students must keep their web cameras on during class is complicated. In general, it is reasonable to expect students to keep their cameras on. However, faculty should be sensitive to each student’s personal circumstances and be prepared to find an equitable solution in cases where students are uncomfortable keeping their cameras on during class.
+		<br>
+		In both hybrid and fully online classes, students should use the “raise hand” function to ask questions and refrain from interrupting the class. Faculty may wish to download and review the “chat” transcript from each class session. You may wish to review, or refer your students to, the ‘Netiquette for Students’ resource at the ITS Answers page.
+		</p>
+
+		<h3>Use of Class Materials and Recordings</h3>
+		<p>
+		Original class materials (handouts, assignments, tests, etc.) and recordings of class sessions are the intellectual property of the course instructor. You may download these materials for your use in this class. However, you may not provide these materials to other parties (e.g., web sites, social media, other students) without permission. Doing so is a violation of intellectual property law and of the student code of conduct.
+		</p>
+
+		<div name="projects" id="projects">
+		<h3>Projects Examples</h3>
+		These projects are just simple, short, undescriptive, title. 
+		If you are interested in any of those, please discus the details with the instructor.
+
+		<ul>
+			<li>Implement an ML pipeline and an attack model as described 
+			in a paper you'll read. Reproduce and extend the experimental results 
+			presented in the paper</li>
+
+			<li>Create an ML pipeline, and make it differentially private</li>
+
+			<li>Literature Review of Differentially Private Deployments</li>			
+
+			<li>Analyze the effects of applying a security method to privacy</li>
+
+			<li>Analyze the effects of applying a security method to fairness</li>
+
+			<li>Analyze the effects of applying a privacy method to fairness</li>
+		</ul>
+	
+	</div>
+
+		<p></p>
+		<strong>Links to Related Courses</strong> 
+		<ul>
+		  <li><a href="https://papernot.fr/teaching/f19-trustworthy-ml">Trustwothy Machine Learning</a></li>
+		  <li><a href="https://secml.github.io">Security and Privacy of ML</a></li>
+		  <!-- https://columbia.github.io/private-systems-class/02-project/ -->
+		  <!-- http://researchers.lille.inria.fr/abellet/teaching/private_machine_learning_course.html -->
+		</ul>
+	</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer" class="shadow">
+	  <p>&copy; 2018 - 2022 Ferdinando Fioretto | <a href="http://andreasviklund.com/templates/inland/">Template design</a> by <a href="http://andreasviklund.com/">andreasviklund.com</a><br /></p>
+	  <p> Last Update: Jan. 2022
+	</div>
+	</div>
+
+	<script type="text/javascript">
+				$(window).load(function() {
+					$('#slider').nivoSlider();
+				});
+	</script>
+
+	<script>w3.includeHTML();</script>
+
+	</body>
+</html>
+
+
+<!--
+					P		R
+ 				1 2 3 4 5 6 7 8 9
+- Yiming
+- Daniel
+- Chang
+- Shwetha
+- Hao
+- Zixi
+- Liam
+- Jinfen
+- Ziyang
+- Henil
+ 				1 2 3 4 5 6 7 8 9
+ -->

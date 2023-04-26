@@ -1,0 +1,8 @@
+@misc{zhu:2022,
+      title={Post-processing of Differentially Private Data: A Fairness Perspective}, 
+      author={Keyu Zhu and Ferdinando Fioretto and Pascal Van Hentenryck},
+      year={2022},
+      eprint={2201.09425},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR}
+}

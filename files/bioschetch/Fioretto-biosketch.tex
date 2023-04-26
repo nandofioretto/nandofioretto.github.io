@@ -1,0 +1,187 @@
+\documentclass[times, 10pt]{article}
+%\usepackage{times}
+\usepackage{fullpage}
+\usepackage{etaremune}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage{paralist}
+\usepackage{enumitem}
+
+\newcommand{\emptymemo}[1]{\noindent\fbox{\begin{minipage}[b]{1.0in}#1\end{minipage}}}
+\newcommand{\newitemize}[2]{\newcounter{#1}\begin{list}{\arabic{#1}}{\usecounter{#1}\addtolength{\itemsep}{-0.60\baselineskip}\addtolength{\leftmargin}{-0.00\leftmargin}}#2\end{list}}
+
+\newcommand{\belist}{\begin{list}{\labelitemi}{\itemsep 0.00em \parsep 0.00em \topsep 1.20em}} 
+\newcommand{\enlist}{\end{list}}
+
+\newcommand{\belistb}{\begin{list}{\labelitemi}{\itemsep 0.25em \parsep 0.00em \topsep 1.20em \parskip -1.00em}} 
+\newcommand{\enlistb}{\end{list}}
+
+\def\beginTitleList{\begin{list}{}{\topsep=0pt \itemsep=10pt \parsep=0pt \leftmargin=0pt}}
+\def\endTitleList{\end{list}}
+
+\def\procAAMAS{\emph{Proceedings of International Conference on Autonomous Agents and  Multiagent Systems (AAMAS)}}
+\def\procAAAI{\emph{Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)}}
+\def\procIJCAI{\emph{Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI)}}
+\def\procCP{\emph{Proceedings of the International Conference on Principles and Practice of  Constraint Programming (CP)}}
+\def\procECAI{\emph{Proceedings of the European Conference of Artificial Intelligence (ECAI)}}
+\def\procISIAM{\emph{International Symposium on Artificial Intelligence and Mathematics (ISAIM)}}
+\def\procCPAIOR{\emph{In Proceedings of the International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research (CPAIOR)}}
+\def\procPADL{\emph{Proceedings of the Practical Aspects of Declarative Languages (PADL)}}
+\def\procPRIMA{\emph{Proceedings of the International Conference on Principles and Practice of Multi-Agent Systems} (PRIMA)}
+\def\procCMSB{\emph{Proceedings of the Computational Methods in System Biology (CMSB)}}
+\def\JAIR{\emph{Journal of Artificial Intelligence Research} (JAIR)}
+
+
+\setlength{\parskip}{0pt}
+
+\newboolean{forPnT}
+\setboolean{forPnT}{false} % boolvar=true or false
+
+\newcommand{\pnt}[1]{
+  \ifthenelse {\boolean{forPnT}}{#1}
+
+}
+
+\sloppy
+
+ \special{! /pdfmark where
+ {pop} {userdict /pdfmark /cleartomark load put} ifelse
+ [ /Author (Ferdinando Fioretto)
+ /Title (Ferdinando Fioretto - Curriculum Vitae)
+ /Subject ()
+ /Keywords ()
+ /DOCINFO pdfmark}
+
+\pagestyle{fancy} \lhead{Ferdinando Fioretto} \cfoot{\thepage}
+\rhead{Short CV}
+
+%\headheight 0.2in
+\headsep 0.3in
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\vspace*{-0.50in} \noindent {\LARGE Ferdinando Fioretto \hfill Short CV} \line(1,0){475}
+
+\begin{tabular}[t]{r}
+\hspace{2.6in} 
+Department of Electrical Engineering \& Computer Science \\
+%College of Engineering \& Computer Science \\
+Syracuse University \\
+%223 Link Hall, 
+Syracuse, NY 13244\\
+%Phone: (575) 621-5948 \\
+\texttt{ffiorett@syr.edu} \\
+\texttt{http://nandofioretto.com}
+\end{tabular}
+
+\subsection*{\sc Professional Preparation:}
+% \begin{list}{$\bullet$}{\topsep=1pt \itemsep=1pt     \parsep=0pt}
+
+\begin{tabular}{l l l l l }
+$\bullet$ & University of Parma, Italy & Computer Science 
+&\phantom{a}B.S.E. & {2009} \\ 
+$\bullet$ & New Mexico State University, USA & Computer Science 
+&\phantom{a}M.S. & {2011} \\ 
+$\bullet$ & University of Udine, Italy & Computer Science 
+&\phantom{a}Ph.D. & {2016} \\
+$\bullet$ & New Mexico State University, USA & Computer Science 
+&\phantom{a}Ph.D. & {2016} \\ 
+\end{tabular}
+
+
+\subsection*{\sc Appointments:}
+
+\belist
+	\item
+	{\em Assistant Professor}, Syracuse University, Syracuse, NY \hfill{2020 -- Current}
+	\item Postdoc, Georgia Institute of Technology, Atlanta, GA 
+	\hfill{2018 -- 2019}
+	\item Postdoc, University of Michigan, Ann Arbor, MI 
+	\hfill{2018 -- 2020}	
+\enlist
+
+
+
+\subsection*{\sc Five Most Closely Related Products:}
+
+\begin{enumerate}[leftmargin=*, parsep=2pt, itemsep=2pt, topsep=2pt]
+\item 
+	James Kotary, Ferdinando Fioretto, Pascal Van Hentenryck.
+	``Learning Hard Optimization Problems: A Data Generation Perspective'. NeurIPS 2021.
+
+% \item 
+% 	Ferdinando Fioretto, Lesia Mitridati, Pascal Van Hentenryck ``Differential Privacy for Stackelberg Games''. 
+%   	IJCAI, 2020.
+
+\item 
+	Ferdinando Fioretto, Terrence W.K.~Mak, and Pascal Van Hentenryck.
+	``Predicting AC Optimal Power Flows: Combining Deep Learning and Lagrangian Dual Methods".
+  	AAAI, 2020.
+
+% \item 
+% 	Ferdinando Fioretto, Terrence W.K. Mak, Federico Baldo, Michele Lombardi, Pascal Van Hentenryck 
+% 	``A Lagrangian Dual Framework for Deep Neural Networks with Constraints''. 
+% 	\emph{ECML}, 2020. 
+
+\item
+	Ferdinando Fioretto and Pascal Van~Hentenryck.
+	``Privacy-Preserving Federated Data Sharing".
+  	AAMAS, 2019.
+
+\item
+	Ferdinando Fioretto, Enrico Pontelli, and William Yeoh.
+	{``Distributed Constraint Optimization Problems and Applications: A Survey"}.
+	JAIR, 61, pages 623--698, 2018. 
+
+\item 
+	Ferdinando Fioretto,  William Yeoh, and Enrico Pontelli. 
+	{``A Multiagent System Approach to Scheduling Devices in Smart Homes"}.
+	AAMAS, 2017. 
+
+	% \item 
+	% Ferdinando Fioretto, William Yeoh, and Enrico Pontelli.
+	% {``Multi-Variable Agent Decompositions for DCOPs"}. 
+	% AAAI, 2016.
+\end{enumerate}
+
+
+\subsection*{\sc Synergistic Activities:}
+
+\begin{itemize}[leftmargin=*, parsep=2pt, itemsep=2pt, topsep=2pt]
+\item \textbf{Selected Awards}: ACP Early CAREER Research Award (2021); NeurIPS Outstanding Reviewer Award (2021); Young Investigator Award, Finalist, ISSNAF (2020); Best Paper Award, IEEE Transaction of Power System (2020); Differentially Private Temporal Map Challenge Award (2020); Best AI Dissertation Award - IA*AI (2017); Most Visionary Workshop Paper Award - AAMAS (2017); Best Student Paper Award - CMSB (2013); Top 5\% Graduate student honor’s cord - NMSU (2016).
+
+\item \textbf{Selected Symposium/Workshop/Track Co-Chair}: AAAI Workshop on Privacy Preserving Artificial Intelligence (2020-2022); AAAI Workshop on Machine Learning for Operations Research (2022); Multiagent and Parallel CP track, International Conference on Principles and Practice of Constraint Programming (2018, 2019); International Workshop on Optimization in Multi-Agent Systems (2018-2021); CP cluster, International Symposium of Mathematical Programming (2018).
+
+\item \textbf{Selected Senior Program Committee Member/Area Chair}: AAAI Conference on Artificial Intelligence (2021-2022); International Conference on Principles and Practice of Constraint Programming (2018, 2019); International Joint Conference on Artificial Intelligence (2021-2022);
+% •	Program Committee Member: AAAI Conference on Artiﬁcial Intelligence (2018, 2019); European Con-ference on Artiﬁcial Intelligence (2016–2018); European Conference on Machine Learning (2020); Inter-national Conference on Autonomous Agents and Multiagent Systems (2017–2021); International Joint Conference on Artiﬁcial Intelligence (2016–2020); Neural Information Processing Systems (2020).
+\end{itemize}
+
+% \subsection*{\sc List of Collaborators:}
+% \begin{itemize}[leftmargin=*, parsep=0pt, itemsep=0pt, topsep=2pt,partopsep=0pt]
+% 	\item {\bf Post-doctoral Advisor} 
+% 	Pascal Van Hentenryck (Georgia Institute of Technology)
+% 	\item {\bf Ph.D.~Advisors} 
+% 	Enrico Pontelli (New Mexico State University); 
+% 	Agostino Dovier \mbox{(University of Udine)}
+% 	\item {\bf Collaborators} 
+% 	%Eric Boyd (University of Michigan)
+% 	Rina Dechter (University of California, Irvine),
+% 	Christopher Kiekintveld	(University of Texas, El Paso),
+% 	Sven Koenig (University of Southern California),
+% 	T.~K.~Satish Kumar (University of Southern California),
+% 	Chansoo Lee (Google),
+% 	Michele Lombardi (University of Bologna), 
+% 	Terrence W.~K.~Mak (Georgia Institute of Technology),
+% 	Lesia Mitridati (Georgia Institute of Technology), 
+% 	Alessandro Dal Pal\'{}u (University of Parma),
+% 	Satish J.~Ranade (New Mexico State University),
+% 	Tran Cao Son (New Mexico State University)
+% 	William Yeoh (Washington University in St.~Louis),
+% 	Makoto Yokoo (Kyushu University),
+% 	Roie Zivan (Ben-Gurion University).
+% \end{itemize}
+
+\end{document}

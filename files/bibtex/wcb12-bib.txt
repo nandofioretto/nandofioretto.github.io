@@ -1,0 +1,6 @@
+@inproceedings{fioretto:WCB-12,
+   author		= "Federico Campeotto and Alessandro Dal Pal{\`{u}} and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli",
+   title		= "Protein Loop Modelling via Constraints and Fragment Assembly",
+   booktitle	= "Proceedings of the Workshop on Constraint-Based-Methods for Bioinformatics {(WCB)}",
+   year			= "2012"
+}

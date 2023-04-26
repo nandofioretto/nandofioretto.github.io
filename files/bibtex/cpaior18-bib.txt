@@ -1,0 +1,7 @@
+@inproceedings{fioretto:CPAIOR-18,
+  author    = "Ferdinando Fioretto and Pascal {Van Hentenryck}",
+  title     = "Constrained-based Differential Privacy: Releasing Optimal Power Flow Benchmarks Privately",
+  booktitle = "Proceedings of the International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research {(CPAIOR)}",
+  year      = "2018",
+  pages     = "215--231"
+}

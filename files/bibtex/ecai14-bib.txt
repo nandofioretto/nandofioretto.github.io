@@ -1,0 +1,8 @@
+@inproceedings{fioretto:ECAI-14,
+  author    = "Federico Campeotto and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli",
+  title     = "A {GPU} Implementation of Large Neighborhood Search for Solving Constraint Optimization Problems",
+  booktitle = "Proceedings of the European Conference on Artificial Intelligence {(ECAI)}",
+  pages     = "189--194",
+  year      = "2014",
+  url       = "https://doi.org/10.1007/978-3-319-04132-2_11"
+}

@@ -1,0 +1,7 @@
+@article{Fioretto:ijcai-19,
+  author    = "Ferdinando Fioretto and Terrence W. K. Mak and Pascal {Van Hentenryck}",
+  title     = "Privacy-Preserving Obfuscation of Critical Infrastructure Networks},
+  booktitle = "Proceedings of the International Joint Conference on Artificial Intelligence ({IJCAI})",
+  pages     = "1086-1092",
+  year      = "2019"
+}

@@ -1,0 +1,8 @@
+@inproceedings{fioretto:AAMAS-17b,
+    author    = “Ferdinando Fioretto and William Yeoh and Enrico Pontelli”,
+    title     = "A Multiagent System Approach to Scheduling Devices in Smart Homes",
+    booktitle = "Proceedings of the International Joint Conference on Autonomous Agents and Multiagent Systems {(AAMAS)}",
+    year      = "2017",
+    pages     = "981--989",
+    url       = "http://dl.acm.org/citation.cfm?id=3091265",
+}

@@ -1,0 +1,8 @@
+@inproceedings{fioretto:PADL-14,
+  author    = "Federico Campeotto and Alessandro Dal Pal{\`{u}} and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli",
+  title     = "Exploring the Use of GPUs in Constraint Solving",
+  booktitle = "Proceedings of the International Conference on Practical Aspects of Declarative Languages {(PADL)}",
+  year      = "2014",
+  pages     = "152--167",
+  url       = "http://dx.doi.org/10.1007/978-3-319-04132-2_11"
+}

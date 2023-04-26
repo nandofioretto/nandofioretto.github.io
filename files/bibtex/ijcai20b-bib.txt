@@ -1,0 +1,7 @@
+@article{Fioretto:ijcai-20b,
+  author="Ferdinando Fioretto and Pascal {Van Hentenryck}",
+  title="OptStream: Releasing Time Series Privately (Extended Abstract)",
+  booktitle = "Proceedings of the International Joint Conference on Artificial Intelligence ({IJCAI})",
+  pages     = "TBA",
+  year      = "2020"
+}

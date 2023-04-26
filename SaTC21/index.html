@@ -1,0 +1,384 @@
+<!DOCTYPE html> <html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Your description goes here" />
+	<meta name="keywords" content="Ferdinando Fioretto,Nando Fioretto,Nando,Ferdinando,Fioretto,DCOP,Smart Grid,AI,GPU,Distributed" />
+	<meta name="author" content="Ferdinando Fioretto" />
+	<link rel="shortcut icon" href="../img/su_icon.png" target="blank">
+	<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Work+Sans:400,700,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="all" href="../inland.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.nivo.slider.js"></script>
+	<script src="https://kit.fontawesome.com/3301b3bfbc.js" crossorigin="anonymous"></script>
+	<title>Ferdinando Fioretto</title>
+	<script>
+	$(document).ready(function(){
+		var showAbs = "[Abstract]",
+		hideAbs = "[Hide]",
+		absButton = $("a.show_abstract");
+
+		absButton.click(
+			function () {
+				$(this).nextAll("div.abstract").slideToggle("fast");
+				var $show_text = $(this).nextAll("a.show_abstract");
+				//$show_text.text($show_text.text() == showAbs ? hideAbs : showAbs)
+				// var $this = $(this);
+				// $this.text($this.text() == moreText ? lessText : moreText).next("div.show_abstract").slideToggle("fast");
+			}
+			);
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		var showTlr = "[Abstract]",
+		hideTlt = "[Hide]",
+		titleButton = $("a.show_abstract_title");
+		titleButton.click(
+			function () {
+				$(this).nextAll("div.abstract").slideToggle("fast");
+				var $show_text = $(this).nextAll("a.show_abstract");
+				//$show_text.text($show_text.text() == showTlr ? hideTlt : showTlr)
+			}
+			);
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		var showBib = "[BibTex]",
+		hideBib = "[Hide]",
+		bibButton = $("a.show_bib");
+
+		bibButton.click(
+			function () {
+				$(this).nextAll("div.bib").slideToggle("fast");
+				var $show_text = $(this).nextAll("a.show_bib");
+				//$show_text.text($show_text.text() == showBib ? hideBib : showBib)
+			}
+			);
+	});
+	function cpClick(elem) {
+		var copyElem = $(elem).parent().prev();
+	    //copyElem.css({"color": "red", "border": "2px solid red"});
+	    var copyText = copyElem[0].innerHTML;
+	    navigator.clipboard.writeText(copyText);
+	    $(elem).next()[0].innerHTML="Copied!";
+	}
+
+	function cpOut(elem) {
+	  $(elem).next()[0].innerHTML="Copy to clipboard";
+	}
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-P8JC74EJL8"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-P8JC74EJL8');
+	</script>
+
+
+<style>
+	dl {
+	background:none!important;
+	height:auto;
+	line-height:20px;
+	margin-bottom:0px;
+	margin-top:8px;
+	  }
+	  dt {
+	    float: left;
+	    clear: left;
+	    width: 70px;
+	    text-align: right;
+	    font-weight: bold;
+	    color: #16A085;
+	/*    margin: 0 0 0 40px;*/
+	  }
+	  dt::after {
+	padding: 0 0 0.0 0;
+	    content: ":";
+	  }
+	  dd {
+	    margin: 0 0 0 80px;
+	    padding: 0 0 0.0 0;
+	  }
+	  dd::after {
+	    content: "";
+	    display: table;
+	    clear: left;
+	  } 
+</style>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix">
+	<div id="toplinks">
+		<ul class="toplinks_links">
+		<li>
+			<a href='../https://eng-cs.syr.edu/our-departments/electrical-engineering-and-computer-science/'>
+			<img align='center' src="img/su_logo.png"  height="40pt" style="margin:-14px -20px -14px 0px">
+			</a>
+		</li>
+		</ul>
+	</div>
+
+	<div id="header" class="clearfix shadow">
+		<div id="sitetitle" class="clearfix">
+			<h1>Ferdinando Fioretto</h1>
+		</div>
+
+		<div id="nav" class="clearfix">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<!-- <li><a href="news.html">News</a></li> -->
+			<!-- <li><a href="research.html">Research</a></li> -->
+			<li><a href="../publications.html">Publications</a></li>
+			<li><a href="../people.html">People</a></li>
+			<li><a href="../teaching.html">Teaching</a></li>
+			<li><a href="../index.html#contacts">Contacts</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<!-- HEAD -->
+	<div id="content" class="clearfix shadow">
+		<h2><img align="middle" src="../img/nsf-logo.jpg" alt="" width="40">
+		 Privacy and Fairness in Critical Decision Making </h2>
+	</div>
+
+		<div id="content">
+		<p class="aligncenter">
+		<img src="SaTC_scheme.png" alt="Privacy" width="600" />
+		</p>
+		<br>
+		<p style="text-align: justify; padding-bottom: 4px">
+		Many agencies or companies release statistics about groups of individuals that are then used as input to critical decision processes. For example, census data is used to allocate funds and distribute critical resources to states and jurisdictions. The resulting decisions can have significant societal and economic impacts for participating individuals. In many cases, the released data contain sensitive information whose privacy is strictly regulated and Differential Privacy (DP) has become the paradigm of choice for protecting data privacy. However, while differential privacy provides strong privacy guarantees on the released data, it has become apparent recently that it may induce biases and fairness issues in downstream decision processes, including the allotment of federal funds, apportionment of congressional seats, and distribution of vaccines and therapeutics. These biases and fairness issues may adversely affect the health, well-being, and sense of belonging of many individuals, and are poorly understood. This project addresses this knowledge gap at the intersection of privacy, fairness, bias, and decision processes. It will offer novel perspectives on differential privacy tools to address fairness and privacy jointly in critical decision processes. It will quantify the disparate impact arising in these applications and contribute novel mechanisms and mitigation techniques to overcome some of these issues. These contributions will be embedded in modeling and software tools to make the technology widely available and applicable.
+		<p>
+		<p style="text-align: justify; padding-bottom: 4px">
+		From a scientific standpoint, this project will develop a new generation of privacy-preserving tools that, by exploiting knowledge from differential privacy, optimization, and programming languages, will address biases and fairness issues in their designs, not as an afterthought. The project contributes new scientific knowledge along with five directions: (1) it identifies and understands the structure of downstream decision processes that may be subject to fairness issues when using DP data releases; (2) it identifies and understands the structure of DP mechanisms that may introduce biases; (3) it defines theoretical frameworks to characterize and reason about biases and fairness issues; (4) it designs mitigation measures that would remove or alleviate the biases and fairness issues, finding an appropriate tradeoff between privacy, accuracy, and fairness; (5) it develops modeling and software tools to automatically identify and explain biases and fairness issues, and derive mitigation measures from the specification of the decision process.
+		</p>
+
+		<h3>Students and Collaborators</h3>
+		<ul>
+			<li><a href="http://pwp.gatech.edu/pascal-van-hentenryck/">Pascal Van Hentenryck</a>, co-PI, Georgia Institute of Technology</li>
+			<li>Coung Trang, Syracuse University.</li>
+			<li>Keyu Zhu, Georgia Institute of Technology</li>
+		</ul>
+
+		<h3>Sponsors</h3>
+		<table>
+		<tbody>
+		<tr>
+	        <td style="padding: 4px; text-align: center; vertical-align: middle;"><img src="../img/nsf-logo.jpg" alt="" width="40"></td>
+    	    <td style="padding: 4px; vertical-align: middle;"><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2133169">Collaborative Research: SaTC: CORE: Small: Privacy and Fairness in Critical Decision Making
+</a><br>National Science Foundation (2021 – 2024).</td>
+		  </td>
+		</tr>
+		</tbody>
+		</table>
+
+
+		<h3>Publications</h3>
+		<ul>
+
+
+			<dl name="ijcai22b" id="ijcai22b">
+				<dt>IJCAI</dt>
+				<dd>
+				<a class="show_abstract_title">"Post-processing of Differentially Private Data: A Fairness Perspective"</a>.<br>
+				Keyu Zhu, <strong>Ferdinando Fioretto</strong>, Pascal Van Hentenryck.<br>
+				In Proceedings of the <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2022.
+				<br>
+				<span class="paper_links">
+					<em style="color: #16A085";>Links</em>:
+					<a href="https://arxiv.org/abs/2201.09425"  target="blank">[preprint]</a>
+				</span>
+
+				<em style="color: #16A085";>Show</em>:
+				<a class="show_abstract">[Abstract]</a>
+				|
+				<a class="show_bib">[BibTeX]</a>
+				<div class="bib bib_box">
+<pre id="bib">@inproceedings{Fioretto:IJCAI22b,
+  author = "Keyu Zhu, Ferdinando Fioretto, Pascal {Van Hentenryck}",
+  title = "Post-processing of Differentially Private Data: A Fairness Perspective",
+  booktitle = "In Proceedings of the International Joint Conference on Artificial Intelligence ({IJCAI})",
+  year = "2022",
+  pages = "to appear",
+  url = "to appear"
+}</pre>
+			        <div class="tooltip">
+						<button onclick="cpClick(this)" onmouseout="cpOut(this)">Copy text</button>
+						<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+					</div>
+			    </div>
+
+				<div class="abstract abstract_box">
+				<i class="fa-solid fa-quote-left"></i>
+				Post-processing immunity is a fundamental property of differential privacy: it enables arbitrary data-independent transformations to differentially private outputs without affecting their privacy guarantees. Post-processing is routinely applied in data-release applications, including census data, which are then used to make allocations with substantial societal impacts. This paper shows that post-processing causes disparate impacts on individuals or groups and analyzes two critical settings: the release of differentially private datasets and the use of such private datasets for downstream decisions, such as the allocation of funds informed by US Census data. In the first setting, the paper proposes tight bounds on the unfairness of traditional post-processing mechanisms, giving a unique tool to decision-makers to quantify the disparate impacts introduced by their release. In the second setting, this paper proposes a novel post-processing mechanism that is (approximately) optimal under different fairness metrics, either reducing fairness issues substantially or reducing the cost of privacy. The theoretical analysis is complemented with numerical simulations on Census data.				
+				<i class="fa-solid fa-quote-right"></i>
+				</div>
+			</dd>
+		</dl>
+
+			<dl name="ijcai22a" id="ijcai22a">
+				<dt>IJCAI</dt>
+				<dd>
+				<a class="show_abstract_title">"Differential Privacy and Fairness in Decisions and Learning Tasks: A Survey"</a>.<br>
+			 	<strong>Ferdinando Fioretto</strong>, Cuong Tran, Pascal Van Hentenryck, Keyu Zhu.<br>
+				In Proceedings of the <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2022.
+				<br>
+				<span class="paper_links">
+					<em style="color: #16A085";>Links</em>:
+					<a href="https://arxiv.org/abs/2202.08187"  target="blank">[preprint]</a>
+				</span>
+
+				<em style="color: #16A085";>Show</em>:
+				<a class="show_abstract">[Abstract]</a> | <a class="show_bib">[BibTeX]</a>
+<div class="bib bib_box">
+<pre id="bib">@inproceedings{Fioretto:IJCAI22a,
+  author = "Ferdinando Fioretto, Cuong Tran, Pascal {Van Hentenryck}, Keyu Zhu",
+  title = "Differential Privacy and Fairness in Decisions and Learning Tasks: A Survey",
+  booktitle = "In Proceedings of the International Joint Conference on Artificial Intelligence ({IJCAI})",
+  year = "2022",
+  pages = "to appear",
+  url = "to appear"
+}</pre>
+			        <div class="tooltip">
+						<button onclick="cpClick(this)" onmouseout="cpOut(this)">Copy text</button>
+						<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+					</div>
+			    </div>
+
+				<div class="abstract abstract_box">
+				<i class="fa-solid fa-quote-left"></i>
+					This paper surveys recent work in the intersection of differential privacy (DP) and fairness. It reviews the conditions under which privacy and fairness may have aligned or contrasting goals, analyzes how and why DP may exacerbate bias and unfairness in decision problems and learning tasks, and describes available mitigation measures for the fairness issues arising in DP systems. The survey provides a unified understanding of the main challenges and potential risks arising when deploying privacy-preserving machine-learning or decisions-making tasks under a fairness lens.		
+				<i class="fa-solid fa-quote-right"></i>
+				</div>
+				</dd>
+			</dl>
+
+		<dl name="ppai22" id="ppai22">
+			<dt>PPAI</dt>
+			<dd>
+				<a class="show_abstract_title">"A Fairness Analysis on Private Aggregation of Teacher Ensembles"</a> 
+				Cuong Tran, My H. Dinh, Kyle Beiter, <strong>Ferdinando Fioretto</strong>. 
+				In <em>Privacy-Preserving Artificial Intelligence (PPAI)</em>–at AAAI, 2022.
+				<br>
+				<span class="paper_links">
+					<em style="color: #16A085";>Downloads</em>:
+					<a href="https://arxiv.org/pdf/2109.08630.pdf"  target="blank">[pdf]</a>
+					<a href="https://dblp.dagstuhl.de/rec/journals/corr/abs-2109-08630.html?view=bibtex" target="blank">[BibTex]</a>
+					| 
+					<em style="color: #16A085";>Links</em>:
+					<a href="https://arxiv.org/abs/2109.08630" target="">[online]</a>
+				</span>
+				<a class="show_abstract">Show more</a>
+				<div class="abstract abstract_box bg-blue">
+					<strong><em>Abstract</em></strong>:
+					The Private Aggregation of Teacher Ensembles (PATE) is an important private machine learning framework. It combines multiple learning models used as teachers for a student model that learns to predict an output chosen by noisy voting among the teachers. The resulting model satisfies differential privacy and has been shown effective in learning high-quality private models in semisupervised settings or when one wishes to protect the data labels.
+					This paper asks whether this privacy-preserving framework introduces or exacerbates bias and unfairness and shows that PATE can introduce accuracy disparity among individuals and groups of individuals. The paper analyzes which algorithmic and data properties are responsible for the disproportionate impacts, why these aspects are affecting different groups disproportionately, and proposes guidelines to mitigate these effects. The proposed approach is evaluated on several datasets and settings.
+				</div>
+			</dd>
+		</dl>
+
+
+			<dl name="arxiv22d" id="arxiv22d">
+				<dt><i class="fa-regular fa-file-lines"></i> </dt>
+				<dd>
+				<a class="show_abstract_title">"SF-PATE: Scalable, Fair, and Private Aggregation of Teacher Ensembles"</a>.
+				Cuong Tran, Keyu Zhu, <strong>Ferdinando Fioretto</strong>, Pascal Van Hentenryck.
+				<em>CoRR abs/2204.05157 [cs.LG]</em>, 2022.
+				<br>
+				<span class="paper_links">
+					<em style="color: #16A085";>Downloads</em>:
+					<a href="https://arxiv.org/pdf/2204.05157.pdf"  target="blank">[pdf]</a>
+					<a href="files/bibtex/arxiv22d-bib.txt" target="blank">[BibTex]</a>
+					| 
+					<em style="color: #16A085";>Links</em>:
+					<a href="https://arxiv.org/abs/2204.05157" target="">[online]</a>
+				</span>
+				<a class="show_abstract">Show more</a>
+				<div class="abstract abstract_box bg-blue">
+					<strong><em>Abstract</em></strong>:
+				A critical concern in data-driven processes is to build models whose outcomes do not discriminate against some demographic groups, including gender, ethnicity, or age. To ensure non-discrimination in learning tasks, knowledge of the group attributes is essential. However, in practice, these attributes may not be available due to legal and ethical requirements. To address this challenge, this paper studies a model that protects the privacy of the individuals' sensitive information while also allowing it to learn non-discriminatory predictors. A key characteristic of the proposed model is to enable the adoption of off-the-selves and non-private fair models to create a privacy-preserving and fair model. The paper analyzes the relation between accuracy, privacy, and fairness, and the experimental evaluation illustrates the benefits of the proposed models on several prediction tasks. In particular, this proposal is the first to allow both scalable and accurate training of private and fair models for very large neural networks.
+				</div>
+				</dd>
+			</dl>
+
+
+		<dl name="neurips21a" id="neurips21a">
+			<dt>NeurIPS</dt>	
+			<dd>
+				<a class="show_abstract_title">&quot;Differentially Private Deep Learning under the Fairness Lens&quot;</a>.
+				<br>
+				Cuong Tran, My H. Dinh, <strong>Ferdinando Fioretto</strong>.
+				<br>
+				In <em>Conference on Neural Information Processing Systems (NeurIPS)</em>, 2021.
+				<br>
+				<span class="paper_links">
+					<em style="color: #16A085";>Downloads</em>:
+					<a href="https://arxiv.org/pdf/2106.02674.pdf"  target="blank">[pdf]</a>
+					<a href="https://dblp.dagstuhl.de/rec/journals/corr/abs-2106-02674.html?view=bibtex" target="blank">[BibTex]</a>
+					| 
+					<em style="color: #16A085";>Links</em>:
+					<a href="https://arxiv.org/abs/2106.02674" target="">[online]</a>
+				</span>
+				<a class="show_abstract">Show more</a>
+				<div class="abstract abstract_box bg-blue">
+					<strong><em>Abstract</em></strong>:
+					Differential Privacy (DP) is an important privacy-enhancing technology for private machine learning systems. It allows to measure and bound the risk associated with an individual participation in a computation. However, it was recently observed that DP learning systems may exacerbate bias and unfairness for different groups of individuals. This paper builds on these important observations and sheds light on the causes of the disparate impacts arising in the problem of differentially private empirical risk minimization. It focuses on the accuracy disparity arising among groups of individuals in two well-studied DP learning methods: output perturbation and differentially private stochastic gradient descent. The paper analyzes which data and model properties are responsible for the disproportionate impacts, why these aspects are affecting different groups disproportionately and proposes guidelines to mitigate these effects. The proposed approach is evaluated on several datasets and settings.
+				</div>
+			</dd>
+		</dl>
+
+		<dl name="ijcai21b" id="ijcai21b">
+		<dt>IJCAI</dt>	
+		<dd> 
+			<a class="show_abstract_title">"Decision Making with Differential Privacy under the Fairness Lens"</a>.
+			Cuong Tran, <strong>Ferdinando Fioretto</strong>, Pascal Van Hentenryck, Zhiyan Yao.
+			In Proceedings of the <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2021.
+			<br>
+				<span class="paper_links">
+					<em style="color: #16A085";>Downloads</em>:
+					TBA
+					<a href="files/papers/ijcai21b.pdf" target="blank">[pdf]</a>
+					<a href="files/papers/ijcai21b-bib.txt" target="blank">[BibTex]</a>
+					| 
+					<em style="color: #16A085";>Links</em>: 
+					<a href="https://arxiv.org/abs/2105.07513" target="">[online]</a>
+				</span>
+				<a class="show_abstract">Show more</a>
+				<div class="abstract abstract_box bg-blue">
+					<strong><em>Abstract</em></strong>:
+					Agencies, such as the U.S. Census Bureau, release data sets and statistics about groups of individuals that are used as input to a number of critical decision processes. To conform with privacy and confidentiality requirements, these agencies are often required to release privacy-preserving versions of the data. This paper studies the release of differentially private census datasets and analyzes their impact on some critical resource allocation tasks under a fairness perspective.
+					The paper shows that, when the decisions take as input differentially private data, the noise added to achieve privacy disproportionately impacts some groups over others. The paper sheds light on the reason for these disproportionate impacts and proposes two approaches to mitigate these effects. Finally, the proposed approaches are evaluated on several resource allocation tasks that use differentially private census data.
+				</div>
+			</dd>
+		</dl>
+		</ul>
+
+		</div>
+
+		<!-- Footer -->
+		<div id="footer" class="shadow">
+		  <p>&copy; 2018 - 2022 Ferdinando Fioretto | <a href="http://andreasviklund.com/templates/inland/">Template design</a> by <a href="http://andreasviklund.com/">andreasviklund.com</a><br /></p>
+		  <p> Last Update: May 2022
+		</div>
+	</div>
+
+	<script type="text/javascript">
+				$(window).load(function() {
+					$('#slider').nivoSlider();
+				});
+	</script>
+
+	<script>w3.includeHTML();</script>
+
+	</body>
+</html>
