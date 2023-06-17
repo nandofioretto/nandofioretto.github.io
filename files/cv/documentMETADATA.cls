@@ -418,7 +418,7 @@
 \newcommand\confentry[6]{
   \textbf{#1}. & #2. \\
                & \link{#5}{\title{#3}}. \\
-               & {#4}. \press{#5}{}.\\[0.5em]
+               & {#4}. \press{#5}{}\\[0.5em]
                %& Acceptance Rate: {#6}. \\[0.5em]
 }
 \newcommand\confentryAwd[8]{
