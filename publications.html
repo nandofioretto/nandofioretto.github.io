@@ -110,19 +110,19 @@
 	    content: "";
 	    display: table;
 	    clear: left;
-	  } 
+	  }
 </style>
 
 
-	<script> 
+	<script>
 		$(function () {
 		  var includes = $('[data-include]')
 		  $.each(includes, function () {
 		    var file = 'pubs/' + $(this).data('include') + '.html'
 		    $(this).load(file)
 		  })
-		}) 
- </script> 
+		})
+ </script>
 </head>
 
 <body>
@@ -168,6 +168,40 @@
 
 		<h3>2023</h3>
 
+				<dl name="EPSR" id="EPSR">
+					<dt>EPSR</dt>
+					<dd>
+						<a class="show_abstract_title">"Folded Optimization for End-to-End Model-Based Learning"</a>.<br>
+						Mostafa Mohammadian, Kyri Baker, <strong>Ferdinando Fioretto</strong>.<br>
+						<em>Electric Power Systems Research</em>, 2023.
+						<br>
+						<span class="paper_links">
+							<em style="color: #16A085";>Links</em>:
+							<a href="https://www.sciencedirect.com/science/article/pii/S0378779623004406"  target="blank">[Online]</a>
+						</span>
+						<em style="color: #16A085";>Show</em>:
+						<a class="show_abstract">[Abstract]</a>
+						 <a class="show_bib">[BibTeX]</a><div class="bib bib_box">
+		<pre id="bib">@article{MOHAMMADIAN2023109551,
+title = {Gradient-enhanced physics-informed neural networks for power systems operational support},
+journal = {Electric Power Systems Research},
+volume = {223},
+pages = {109551},
+year = {2023},
+issn = {0378-7796},
+doi = {https://doi.org/10.1016/j.epsr.2023.109551},
+url = {https://www.sciencedirect.com/science/article/pii/S0378779623004406},
+author = {Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
+}</pre><div class="tooltip"><button onclick="cpClick(this)" onmouseout="cpOut(this)">Copy text</button><span class="tooltiptext" id="myTooltip">Copy to clipboard</span></div></div>
+						<div class="abstract abstract_box">
+						<i class="fa-solid fa-quote-left"></i>
+The application of deep learning methods to speed up the challenging power system problems has recently shown very encouraging results. However, power system dynamics are not snapshot, steady-state operations. These dynamics must be considered to ensure that the optimal solutions provided by these models adhere to practical constraints to avoid frequency fluctuations and grid instabilities. Unfortunately, dynamic system models based on ordinary or partial differential equations are frequently unsuitable for direct application in control or state estimates due to their high computational costs. To address these challenges, this paper introduces a machine learning method to approximate the behavior of power systems dynamics in near real-time. The proposed framework is based on gradient-enhanced physics-informed neural networks (gPINNs) and encodes the underlying physical laws governing power systems. A key characteristic of the proposed gPINN is its ability to train without the need of generating expensive training data. The paper illustrates the potential of the proposed approach in both forward and inverse problems in a single-machine infinite bus system and a three-bus power network for predicting rotor angles and frequency, and uncertain parameters such as inertia and damping to showcase its potential for a range of power systems applications. The model exhibited high accuracy in predicting the variables, achieving a range of 0.533–4.092 and an average L2 relative error improvement of up to 13.30× compared to the PINN model. The computational performance of the proposed gPINN model was compared to a conventional solver, revealing a remarkable speed-up of 31 to 171 times faster in solving differential–algebraic systems of equations in power systems.						<i class="fa-solid fa-quote-right"></i>
+						</div>
+					</dd>
+				</dl>
+
+				<!--/////////////////////////////////////////////////////////////////// -->
+
 		<dl name="ijcai23a" id="ijcai23a">
 			<dt>IJCAI</dt>
 			<dd>
@@ -177,7 +211,7 @@
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2301.12047"  target="blank">[ArXiv version]</a>					
+					<a href="https://arxiv.org/abs/2301.12047"  target="blank">[ArXiv version]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -259,7 +293,7 @@ expressiveness.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2109.08630"  target="blank">[ArXiv version]</a>					
+					<a href="https://arxiv.org/abs/2109.08630"  target="blank">[ArXiv version]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -289,7 +323,7 @@ expressiveness.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2204.05157"  target="blank">[ArXiv version]</a>					
+					<a href="https://arxiv.org/abs/2204.05157"  target="blank">[ArXiv version]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -397,7 +431,7 @@ expressiveness.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2305.16474"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2305.16474"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -427,7 +461,7 @@ expressiveness.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2305.17593"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2305.17593"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -440,7 +474,7 @@ expressiveness.
 }</pre><div class="tooltip"><button onclick="cpClick(this)" onmouseout="cpOut(this)">Copy text</button><span class="tooltiptext" id="myTooltip">Copy to clipboard</span></div></div>
 				<div class="abstract abstract_box">
 				<i class="fa-solid fa-quote-left"></i>
-				A number of learning models used in consequential domains, such as to assist in legal, banking, hiring, and healthcare decisions, make use of potentially sensitive users' information to carry out inference. Further, the complete set of features is typically required to perform inference. This not only poses severe privacy risks for the individuals using the learning systems, but also requires companies and organizations massive human efforts to verify the correctness of the released information. 
+				A number of learning models used in consequential domains, such as to assist in legal, banking, hiring, and healthcare decisions, make use of potentially sensitive users' information to carry out inference. Further, the complete set of features is typically required to perform inference. This not only poses severe privacy risks for the individuals using the learning systems, but also requires companies and organizations massive human efforts to verify the correctness of the released information.
 				<br>
 				This paper asks whether it is necessary to require \emph{all} input features for a model to return accurate predictions at test time and shows that, under a personalized setting, each individual may need to release only a small subset of these features without impacting the final decisions.
 				The paper also provides an efficient sequential algorithm that chooses which attributes should be provided by each individual. Evaluation over several learning tasks shows that individuals may be able to report as little as 10\% of their information to ensure the same level of accuracy of a model that uses the complete users' information.
@@ -460,7 +494,7 @@ expressiveness.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2301.12204"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2301.12204"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -502,7 +536,7 @@ used DA mechanisms.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2301.12288"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2301.12288"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -535,7 +569,7 @@ used DA mechanisms.
 		</dl>
 
 		<h3>2022</h3>
-	
+
 	<!--/////////////////////////////////////////////////////////////////// -->
 		<dl name="jair22" id="jair22"></dl>
 			<dt>JAIR</dt>
@@ -591,7 +625,7 @@ used DA mechanisms.
 
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2205.13574"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2205.13574"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a> <a class="show_bib">[BibTeX]</a><div class="bib bib_box">
@@ -599,8 +633,8 @@ used DA mechanisms.
   author = {Tran, Cuong and Fioretto, Ferdinando, and Kim, Jung-Eun and Naidu, Rakshit},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
   title = {Pruning has a disparate impact on model accuracy},
-  year = {2022}, 
-  volume = {35}, 
+  year = {2022},
+  volume = {35},
   pages = {TBA},
   publisher = {Curran Associates, Inc.}
 }
@@ -622,7 +656,7 @@ used DA mechanisms.
 				In Proceedings of the <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2022.<br>
 				<span style="font-size: 105%; margin: 0 0 0 4pt; color: #B03A2E;">*Early Career Spotlight talk*</span><br>
 
-				<span class="paper_links"><em style="color: #16A085";>Links</em>: 
+				<span class="paper_links"><em style="color: #16A085";>Links</em>:
 					<a href="https://www.ijcai.org/proceedings/2022/815"  target="_blank">[online]</a>
 				</span>
 
@@ -666,7 +700,7 @@ used DA mechanisms.
 }</pre><div class="tooltip"><button onclick="cpClick(this)" onmouseout="cpOut(this)">Copy text</button><span class="tooltiptext" id="myTooltip">Copy to clipboard</span></div></div>
 
 				<div class="abstract abstract_box"><i class="fa-solid fa-quote-left"></i>
-				Post-processing immunity is a fundamental property of differential privacy: it enables arbitrary data-independent transformations to differentially private outputs without affecting their privacy guarantees. Post-processing is routinely applied in data-release applications, including census data, which are then used to make allocations with substantial societal impacts. This paper shows that post-processing causes disparate impacts on individuals or groups and analyzes two critical settings: the release of differentially private datasets and the use of such private datasets for downstream decisions, such as the allocation of funds informed by US Census data. In the first setting, the paper proposes tight bounds on the unfairness of traditional post-processing mechanisms, giving a unique tool to decision-makers to quantify the disparate impacts introduced by their release. In the second setting, this paper proposes a novel post-processing mechanism that is (approximately) optimal under different fairness metrics, either reducing fairness issues substantially or reducing the cost of privacy. The theoretical analysis is complemented with numerical simulations on Census data.				
+				Post-processing immunity is a fundamental property of differential privacy: it enables arbitrary data-independent transformations to differentially private outputs without affecting their privacy guarantees. Post-processing is routinely applied in data-release applications, including census data, which are then used to make allocations with substantial societal impacts. This paper shows that post-processing causes disparate impacts on individuals or groups and analyzes two critical settings: the release of differentially private datasets and the use of such private datasets for downstream decisions, such as the allocation of funds informed by US Census data. In the first setting, the paper proposes tight bounds on the unfairness of traditional post-processing mechanisms, giving a unique tool to decision-makers to quantify the disparate impacts introduced by their release. In the second setting, this paper proposes a novel post-processing mechanism that is (approximately) optimal under different fairness metrics, either reducing fairness issues substantially or reducing the cost of privacy. The theoretical analysis is complemented with numerical simulations on Census data.
 				<i class="fa-solid fa-quote-right"></i></div>
 			</dd>
 		</dl>
@@ -704,7 +738,7 @@ used DA mechanisms.
 
 				<div class="abstract abstract_box">
 				<i class="fa-solid fa-quote-left"></i>
-					This paper surveys recent work in the intersection of differential privacy (DP) and fairness. It reviews the conditions under which privacy and fairness may have aligned or contrasting goals, analyzes how and why DP may exacerbate bias and unfairness in decision problems and learning tasks, and describes available mitigation measures for the fairness issues arising in DP systems. The survey provides a unified understanding of the main challenges and potential risks arising when deploying privacy-preserving machine-learning or decisions-making tasks under a fairness lens.		
+					This paper surveys recent work in the intersection of differential privacy (DP) and fairness. It reviews the conditions under which privacy and fairness may have aligned or contrasting goals, analyzes how and why DP may exacerbate bias and unfairness in decision problems and learning tasks, and describes available mitigation measures for the fairness issues arising in DP systems. The survey provides a unified understanding of the main challenges and potential risks arising when deploying privacy-preserving machine-learning or decisions-making tasks under a fairness lens.
 				<i class="fa-solid fa-quote-right"></i>
 				</div>
 				</dd>
@@ -802,7 +836,7 @@ used DA mechanisms.
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://ieeexplore.ieee.org/document/9810564" target="_blank">[online]</a>
-					<a href="https://arxiv.org/abs/2201.10634"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2201.10634"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -822,7 +856,7 @@ used DA mechanisms.
 				</div>
 			</dd>
 		</dl>
-		
+
 <!--/////////////////////////////////////////////////////////////////// -->
 		<dl name="pmaps22b" id="pmaps22b">
 			<dt>PMAPS</dt>
@@ -833,8 +867,8 @@ used DA mechanisms.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://ieeexplore.ieee.org/document/9810638" target="_blank">[online]</a> 
-					<a href="https://arxiv.org/abs/2201.10634"  target="blank">[preprint]</a>					
+					<a href="https://ieeexplore.ieee.org/document/9810638" target="_blank">[online]</a>
+					<a href="https://arxiv.org/abs/2201.10634"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -865,7 +899,7 @@ used DA mechanisms.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2109.08630"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2109.08630"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -898,7 +932,7 @@ used DA mechanisms.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2211.11835"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2211.11835"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -926,7 +960,7 @@ used DA mechanisms.
 				experiments on non-linear models and different architectures validate the
 				theoretical findings in multiple vision domains. Finally, the paper proposes a
 				simple, yet effective, solution to construct models achieving good tradeoffs
-				between fairness and robustness.				
+				between fairness and robustness.
 				<i class="fa-solid fa-quote-right"></i>
 				</div>
 			</dd>
@@ -944,7 +978,7 @@ used DA mechanisms.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2211.00251"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2211.00251"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -977,7 +1011,7 @@ used DA mechanisms.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2209.14152"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2209.14152"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -1005,7 +1039,7 @@ used DA mechanisms.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2206.10579"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2206.10579"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -1024,7 +1058,7 @@ used DA mechanisms.
 			</dd>
 		</dl>
 
-		
+
 <!--/////////////////////////////////////////////////////////////////// -->
 <!-- 			<dl name="arxiv22d" id="arxiv22d">
 				<dt>ArXiv </dt>
@@ -1035,7 +1069,7 @@ used DA mechanisms.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2204.05157"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2204.05157"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -1064,7 +1098,7 @@ used DA mechanisms.
 				<br>
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2202.05226"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2202.05226"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -1094,7 +1128,7 @@ used DA mechanisms.
 
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2202.08187"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2202.08187"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -1107,7 +1141,7 @@ used DA mechanisms.
 }</pre><div class="tooltip"><button onclick="cpClick(this)" onmouseout="cpOut(this)">Copy text</button><span class="tooltiptext" id="myTooltip">Copy to clipboard</span></div></div>
 				<div class="abstract abstract_box">
 				<i class="fa-solid fa-quote-left"></i>
-					This paper surveys recent work in the intersection of differential privacy (DP) and fairness. It reviews the conditions under which privacy and fairness may have aligned or contrasting goals, analyzes how and why DP may exacerbate bias and unfairness in decision problems and learning tasks, and describes available mitigation measures for the fairness issues arising in DP systems. The survey provides a unified understanding of the main challenges and potential risks arising when deploying privacy-preserving machine-learning or decisions-making tasks under a fairness lens.		
+					This paper surveys recent work in the intersection of differential privacy (DP) and fairness. It reviews the conditions under which privacy and fairness may have aligned or contrasting goals, analyzes how and why DP may exacerbate bias and unfairness in decision problems and learning tasks, and describes available mitigation measures for the fairness issues arising in DP systems. The survey provides a unified understanding of the main challenges and potential risks arising when deploying privacy-preserving machine-learning or decisions-making tasks under a fairness lens.
 				<i class="fa-solid fa-quote-right"></i>
 				</div>
 			</dd>
@@ -1124,7 +1158,7 @@ used DA mechanisms.
 
 				<span class="paper_links">
 					<em style="color: #16A085";>Links</em>:
-					<a href="https://arxiv.org/abs/2201.09425"  target="blank">[preprint]</a>					
+					<a href="https://arxiv.org/abs/2201.09425"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
 				<a class="show_abstract">[Abstract]</a>
@@ -1137,7 +1171,7 @@ used DA mechanisms.
 }</pre><div class="tooltip"><button onclick="cpClick(this)" onmouseout="cpOut(this)">Copy text</button><span class="tooltiptext" id="myTooltip">Copy to clipboard</span></div></div>
 				<div class="abstract abstract_box">
 				<i class="fa-solid fa-quote-left"></i>
-					 Post-processing immunity is a fundamental property of differential privacy: it enables arbitrary data-independent transformations to differentially private outputs without affecting their privacy guarantees. Post-processing is routinely applied in data-release applications, including census data, which are then used to make allocations with substantial societal impacts. This paper shows that post-processing causes disparate impacts on individuals or groups and analyzes two critical settings: the release of differentially private datasets and the use of such private datasets for downstream decisions, such as the allocation of funds informed by US Census data. In the first setting, the paper proposes tight bounds on the unfairness of traditional post-processing mechanisms, giving a unique tool to decision-makers to quantify the disparate impacts introduced by their release. In the second setting, this paper proposes a novel post-processing mechanism that is (approximately) optimal under different fairness metrics, either reducing fairness issues substantially or reducing the cost of privacy. The theoretical analysis is complemented with numerical simulations on Census data.				
+					 Post-processing immunity is a fundamental property of differential privacy: it enables arbitrary data-independent transformations to differentially private outputs without affecting their privacy guarantees. Post-processing is routinely applied in data-release applications, including census data, which are then used to make allocations with substantial societal impacts. This paper shows that post-processing causes disparate impacts on individuals or groups and analyzes two critical settings: the release of differentially private datasets and the use of such private datasets for downstream decisions, such as the allocation of funds informed by US Census data. In the first setting, the paper proposes tight bounds on the unfairness of traditional post-processing mechanisms, giving a unique tool to decision-makers to quantify the disparate impacts introduced by their release. In the second setting, this paper proposes a novel post-processing mechanism that is (approximately) optimal under different fairness metrics, either reducing fairness issues substantially or reducing the cost of privacy. The theoretical analysis is complemented with numerical simulations on Census data.
 				<i class="fa-solid fa-quote-right"></i>
 				</div>
 			</dd>
@@ -1146,7 +1180,7 @@ used DA mechanisms.
 
 
 		<h3>2021</h3>
-		<!--/////////////////////////////////////////////////////////////////// -->		
+		<!--/////////////////////////////////////////////////////////////////// -->
 		<dl name="aij21" id="aij21"></dl>
 			<dt>AIJ<br><i class="fa-solid fa-award" style="font-size:20px;"></i></dt>
 			<dd>
@@ -1208,7 +1242,7 @@ used DA mechanisms.
 					<a href="https://ieeexplore.ieee.org/document/9226144" target="_blank">[online]</a>
 					|
 					<a href="files/papers/ieeetps21.pdf"target="_blank">[preprint]</a>
-					 
+
 				</span>
 
 				<em style="color: #16A085";>Show</em>:
@@ -1217,9 +1251,9 @@ used DA mechanisms.
 				<a class="show_bib">[BibTeX]</a>
 				<div class="bib bib_box">
 <pre id="bib">@article{Dvorkin:TSG21,
-  title = {Differentially Private Optimal Power Flow for Distribution Grids}, 
+  title = {Differentially Private Optimal Power Flow for Distribution Grids},
   author = {Dvorkin, Vladimir and Fioretto, Ferdinando and Van Hentenryck, Pascal and Pinson, Pierre and Kazempour, Jalal},
-  journal = {IEEE Transactions on Power Systems}, 
+  journal = {IEEE Transactions on Power Systems},
   year = {2021},
   volume = {36},
   number = {3},
@@ -1247,7 +1281,7 @@ used DA mechanisms.
 
 <!--/////////////////////////////////////////////////////////////////// -->
 		<dl name="neurips21a" id="neurips21a">
-			<dt>NeurIPS</dt>	
+			<dt>NeurIPS</dt>
 			<dd>
 				<a class="show_abstract_title">&quot;Differentially Private Empirical Risk Minimization under the Fairness Lens&quot;</a>.
 				<br>
@@ -1269,8 +1303,8 @@ used DA mechanisms.
   author = {Tran, Cuong and Dinh, My and Fioretto, Ferdinando},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
   title = {Differentially Private Empirical Risk Minimization under the Fairness Lens},
-  year = {2021}, 
-  volume = {34}, 
+  year = {2021},
+  volume = {34},
   pages = {27555--27565},
   publisher = {Curran Associates, Inc.}
 }
@@ -1311,8 +1345,8 @@ used DA mechanisms.
   author = {Kotary, James and Fioretto, Ferdinando and  Van Hentenryck, Pascal},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
   title = {Learning Hard Optimization Problems: A Data Generation Perspective},
-  year = {2021}, 
-  volume = {34}, 
+  year = {2021},
+  volume = {34},
   pages = {24981--24992},
   publisher = {Curran Associates, Inc.}
 }
@@ -1333,7 +1367,7 @@ used DA mechanisms.
 <!--/////////////////////////////////////////////////////////////////// -->
 		<dl name="ijcai21b" id="ijcai21b">
 		<dt>IJCAI <br><i class="fa-solid fa-award" style="font-size:20px"></i></dt>
-		<dd> 
+		<dd>
 			<a class="show_abstract_title">"Decision Making with Differential Privacy under the Fairness Lens"</a>.<br>
 			Cuong Tran, <strong>Ferdinando Fioretto</strong>, Pascal Van Hentenryck, Zhiyan Yao.<br>
 			In Proceedings of the <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2021.
@@ -1354,7 +1388,7 @@ used DA mechanisms.
   author = {Cuong Tran and Ferdinando Fioretto and  Pascal {Van Hentenryck} and Zhiyan Yao},
   booktitle = {International Joint Conference on Artificial Intelligence ({IJCAI})},
   title = {Decision Making with Differential Privacy under the Fairness Lens},
-  year = {2021}, 
+  year = {2021},
   pages = {560--566}
   doi       = {10.24963/ijcai.2021/78},
 }
@@ -1617,8 +1651,8 @@ used DA mechanisms.
 		<dl name="tpdp21" id="tpdp21">
 			<dt>TPDP</dt>
 			<dd>
-				<a class="show_abstract_title">"Decision Making with Differential Privacy under the Fairness Lens"</a>.<br> 
-				Cuong Tran, <strong>Ferdinando Fioretto</strong>. 
+				<a class="show_abstract_title">"Decision Making with Differential Privacy under the Fairness Lens"</a>.<br>
+				Cuong Tran, <strong>Ferdinando Fioretto</strong>.
 				In the Workshop of <em>Theory and Practice of Differential Privacy (TPDP)</em>–at ICML, 2021.
 				<br>
 
@@ -1635,7 +1669,7 @@ used DA mechanisms.
   author = {Cuong Tran and Ferdinando Fioretto and  Pascal {Van Hentenryck} and Zhiyan Yao},
   booktitle = {International Joint Conference on Artificial Intelligence ({IJCAI})},
   title = {Decision Making with Differential Privacy under the Fairness Lens},
-  year = {2021}, 
+  year = {2021},
   pages = {560--566}
   doi       = {10.24963/ijcai.2021/78},
 }
@@ -1695,8 +1729,8 @@ used DA mechanisms.
 		<dl name="optmas21" id="optmas21">
 			<dt>OptLMAS</dt>
 			<dd>
-				<a class="show_abstract_title">"A Privacy-Preserving and Accountable Multi-agent Learning Framework"</a> 
-				Anudit Nagar, Cuong Tran, <strong>Ferdinando Fioretto</strong>. 
+				<a class="show_abstract_title">"A Privacy-Preserving and Accountable Multi-agent Learning Framework"</a>
+				Anudit Nagar, Cuong Tran, <strong>Ferdinando Fioretto</strong>.
 				In <em>International Workshop on Learning and Optimisation in Multi-Agent Systems (OPTLearnMAS)</em>–at AAMAS, 2021
 				<br>
 				<span class="paper_links">
@@ -1863,7 +1897,7 @@ used DA mechanisms.
 			<br>
 	<span class="paper_links">
 				<em style="color: #16A085";>Links</em>:
-					<a href="https://ieeexplore.ieee.org/document/8809257"  target="blank">[online]</a>				
+					<a href="https://ieeexplore.ieee.org/document/8809257"  target="blank">[online]</a>
 					<a href="https://arxiv.org/abs/1901.06949"  target="blank">[preprint]</a>
 				</span>
 				<em style="color: #16A085";>Show</em>:
@@ -1894,7 +1928,7 @@ used DA mechanisms.
 		<dt>IEEE-TSP<br><i class="fa-solid fa-award" style="font-size:20px;"></i></dt>
 			<dd>
 			<a class="show_abstract_title">&quot;Privacy-Preserving Power System Obfuscation: A Bilevel Optimization Approach&quot;</a>.
-			Terrence W.K. Mak, <strong>Ferdinando Fioretto</strong>, Lyndon Shi, Pascal Van Hentenryck.    
+			Terrence W.K. Mak, <strong>Ferdinando Fioretto</strong>, Lyndon Shi, Pascal Van Hentenryck.
 			In <em>IEEE Transactions on Power Systems</em>, 2020.
 			<br>
 				<span style="font-size: 105%; margin: 0 0 0 4pt; color: #B03A2E;">*2021 TPWRS Best Paper Award*</span>
@@ -1910,8 +1944,8 @@ used DA mechanisms.
 <div class="bib bib_box">
 <pre id="bib">@article{Mak:TPS20,
   author		=	{Mak, Terrence W. K. and Fioretto, Ferdinando and Shi, Lyndon and Van Hentenryck, Pascal},
-  journal		= {IEEE Transactions on Power Systems}, 
-  title 		= {Privacy-Preserving Power System Obfuscation: A Bilevel Optimization Approach}, 
+  journal		= {IEEE Transactions on Power Systems},
+  title 		= {Privacy-Preserving Power System Obfuscation: A Bilevel Optimization Approach},
   year		  = {2020},
   volume		= {35},
   number		= {2},
@@ -1936,29 +1970,29 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/prima20.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/prima20-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
-					<a href="http://uchiya.online.nitech.ac.jp/prima2020/acceptedpaper.html" target="">[online]</a>								
+					<a href="http://uchiya.online.nitech.ac.jp/prima2020/acceptedpaper.html" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [prima20]
 					&body=Hi,  I would like to request code and results associated to your paper ID: prima20. Thanks!">[request code]</a>
 				</span>
 				<a class="show_abstract">Show more</a>
 				<div class="abstract abstract_box bg-blue">
 				<strong><em>Abstract</em></strong>:
-				Daily energy demand peaks induce high green house gas emissions and are 
-				deleterious to the power grid operations. The autonomous and coordinated 
-				control of smart appliances in residential buildings represents an effective 
-				solution to reduce peak demands. This coordination problem is challenging as 
-				it involves, not only, scheduling devices to minimize energy peaks, but also 
-				to comply with user’ preferences. Prior work assumed these preferences to be 
-				fully specified and known a priori, which is, however, unrealistic. To remedy 
-				this limitation, this paper introduces a Bayesian optimization approach for 
-				smart appliance scheduling when the users’ satisfaction with a schedule must 
-				be elicited, and thus considered expensive to evaluate. The paper presents a 
-				set of ad-hoc energy-cost based acquisition functions to drive the Bayesian 
-				optimization problem to find schedules that maximize the user’s satisfaction. 
-				The experimental results demonstrate the effectiveness of the proposed 
-				energy-cost based acquisition functions which improve the algorithm’s performance 
+				Daily energy demand peaks induce high green house gas emissions and are
+				deleterious to the power grid operations. The autonomous and coordinated
+				control of smart appliances in residential buildings represents an effective
+				solution to reduce peak demands. This coordination problem is challenging as
+				it involves, not only, scheduling devices to minimize energy peaks, but also
+				to comply with user’ preferences. Prior work assumed these preferences to be
+				fully specified and known a priori, which is, however, unrealistic. To remedy
+				this limitation, this paper introduces a Bayesian optimization approach for
+				smart appliance scheduling when the users’ satisfaction with a schedule must
+				be elicited, and thus considered expensive to evaluate. The paper presents a
+				set of ad-hoc energy-cost based acquisition functions to drive the Bayesian
+				optimization problem to find schedules that maximize the user’s satisfaction.
+				The experimental results demonstrate the effectiveness of the proposed
+				energy-cost based acquisition functions which improve the algorithm’s performance
 				up to 26%.
 			</div>
 			</dd>
@@ -1972,13 +2006,13 @@ used DA mechanisms.
 			In Proceedings of the <em>European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD)</em>, 2020.
 			<br>
 			<span class="paper_links">
-				<em style="color: #16A085";>Links</em>: 
+				<em style="color: #16A085";>Links</em>:
 				<a href="files/papers/ecml2020_arxiv.pdf"  target="blank">[pdf (ArXiv version)]</a>
 				<!-- <a href="files/papers/ijcai20a-slides.pdf"  target="blank">[slides]</a> -->
 				<a href="files/bibtex/arxiv20b-bib.txt" target="blank">[BibTex]</a>
-				| 
+				|
 				<em style="color: #16A085";>Links</em>:
-				<a href="https://ecmlpkdd2020.net/programme/accepted/#allTab" target="blank">[online]</a>	
+				<a href="https://ecmlpkdd2020.net/programme/accepted/#allTab" target="blank">[online]</a>
 				<a href="https://github.com/AIPOpt-Lab-SU/lagrangian-dual-deep-learning">[GitHub]</a>
 			</span>
 			<a class="show_abstract">Show more</a>
@@ -1998,13 +2032,13 @@ used DA mechanisms.
 			In Proceedings of the <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>,  2020.
 			<br>
 			<span class="paper_links">
-				<em style="color: #16A085";>Links</em>: 
+				<em style="color: #16A085";>Links</em>:
 				<a href="files/papers/arxiv20c.pdf"  target="blank">[pdf (ArXiv version)]</a>
 				<!-- <a href="files/papers/ijcai20a-slides.pdf"  target="blank">[slides]</a> -->
 				<a href="files/bibtex/ijcai20a-bib.txt" target="blank">[BibTex]</a>
-				| 
+				|
 				<em style="color: #16A085";>Links</em>:
-				<a href="https://ijcai20.org/" target="blank">[online]</a>	
+				<a href="https://ijcai20.org/" target="blank">[online]</a>
 				<a href="mailto:ffiorett@syr.edu?subject=Code request for
 				 paper id [ijcai20a]
 				&body=Hi,  I would like to request code and results associated to your paper ID: ijcai20a. Thanks!
@@ -2027,15 +2061,15 @@ used DA mechanisms.
 			In Proceedings of the <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>,  2020.
 			<br>
 			<span class="paper_links">
-				<em style="color: #16A085";>Links</em>: 
+				<em style="color: #16A085";>Links</em>:
 				<!-- <a href="files/papers/ijcai20b.pdf"  target="blank">[pdf]</a> -->
 				<a href="files/papers/jair19.pdf"  target="blank">[pdf (journal version)]</a>
 				<!-- <a href="files/papers/ijcai20b-slides.pdf"  target="blank">[slides]</a> -->
 				<a href="files/bibtex/ijcai20b-bib.txt" target="blank">[BibTex]</a>
-				| 
+				|
 				<em style="color: #16A085";>Links</em>:
-				<a href="https://ijcai20.org/" target="blank">[online]</a>	
-				<a href="#jair19">[journal-version]</a>	
+				<a href="https://ijcai20.org/" target="blank">[online]</a>
+				<a href="#jair19">[journal-version]</a>
 				<a href="mailto:ffiorett@syr.edu?subject=Code request for
 				 paper id [ijcai20b]
 				&body=Hi,  I would like to request code and results associated to your paper ID: ijcai20b. Thanks!
@@ -2060,7 +2094,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/pscc20.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/pscc20-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="http://pscc.epfl.ch/rms/modules/request.php?module=oc_program&action=summary.php&id=73" target="blank">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [pscc20]
@@ -2070,19 +2104,19 @@ used DA mechanisms.
 				<a class="show_abstract">Show more</a>
 				<div class="abstract abstract_box bg-blue">
 					<strong><em>Abstract</em></strong>:
-					This paper considers the problem of releasing privacy-preserving 
-					load data of a decentralized operated power system. The paper 
-					focuses on data used to solve Optimal Power Flow (OPF) problems 
-					and proposes a distributed algorithm that complies with the notion 
-					of Differential Privacy, a strong privacy framework used to bound 
-					the risk of re-identification. The problem is challenging since 
-					the application of traditional differential privacy mechanisms to the 
-					load data fundamentally changes the nature of the underlying 
-					optimization problem and often leads to severe feasibility issues. 
-					The proposed differentially private distributed algorithm is based on 
-					the Alternating Direction Method of Multipliers (ADMM) and guarantees 
-					that the released privacy-preserving data retains high fidelity 
-					and satisfies the AC power flow constraints. Experimental results on 
+					This paper considers the problem of releasing privacy-preserving
+					load data of a decentralized operated power system. The paper
+					focuses on data used to solve Optimal Power Flow (OPF) problems
+					and proposes a distributed algorithm that complies with the notion
+					of Differential Privacy, a strong privacy framework used to bound
+					the risk of re-identification. The problem is challenging since
+					the application of traditional differential privacy mechanisms to the
+					load data fundamentally changes the nature of the underlying
+					optimization problem and often leads to severe feasibility issues.
+					The proposed differentially private distributed algorithm is based on
+					the Alternating Direction Method of Multipliers (ADMM) and guarantees
+					that the released privacy-preserving data retains high fidelity
+					and satisfies the AC power flow constraints. Experimental results on
 					a variety of OPF benchmarks demonstrate the effectiveness of the approach.
 				</div>
 				</dd>
@@ -2099,7 +2133,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/aaai20.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/aaai20-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://aaai.org/ojs/index.php/AAAI/article/view/5403" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [aaai20]
@@ -2126,7 +2160,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv20i.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv20i-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<!-- <a href="https://arxiv.org/abs/2006.16356" target="">[online]</a> -->
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv20i]
@@ -2151,7 +2185,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv20h.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv20h-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<!-- <a href="https://arxiv.org/abs/2006.16356" target="">[online]</a> -->
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv20h]
@@ -2175,7 +2209,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv20g.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv20g-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/2006.16356" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv20g]
@@ -2200,7 +2234,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv20f.pdf"  target="blank">[online]</a>
 					<a href="files/bibtex/arxiv20f-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/2006.15673" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv20f]
@@ -2224,7 +2258,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv20e.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv20e-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/2006.12338" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv20e]
@@ -2248,7 +2282,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv20d.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv20d-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/2004.03921" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv20d]
@@ -2272,7 +2306,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv20c.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv20c-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/2002.00944" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv20c]
@@ -2297,7 +2331,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv20b.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv20b-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/2001.09394" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv20b]
@@ -2321,7 +2355,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv20a.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv20a-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/2001.09508" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv20a]
@@ -2354,7 +2388,7 @@ used DA mechanisms.
 				<em style="color: #16A085";>Links</em>:
 				<a href="files/papers/jair19.pdf"  target="blank">[pdf]</a>
 				<a href="files/bibtex/jair19-bib.txt" target="blank">[BibTex]</a>
-				| 
+				|
 				<em style="color: #16A085";>Links</em>:
 				<a href="https://www.jair.org/index.php/jair/article/view/11583">[online]</a>
 			</span>
@@ -2379,29 +2413,29 @@ used DA mechanisms.
 				<em style="color: #16A085";>Links</em>:
 				<a href="files/papers/ia19.pdf"  target="blank">[pdf]</a>
 				<a href="files/bibtex/ia19-bib.txt" target="blank">[BibTex]</a>
-				| 
+				|
 				<em style="color: #16A085";>Links</em>:
 				<a href="https://content.iospress.com/articles/intelligenza-artificiale/ia180037?utm_source=TrendMD&utm_medium=cpc&utm_campaign=Intelligenza_Artificiale_TrendMD_0" target="blank">[online]</a>
 			</span>
 			<a class="show_abstract">Show more</a>
 			<div class="abstract abstract_box bg-blue">
 				<strong><em>Abstract</em></strong>:
-				Distributed Constraint Optimization Problems (DCOPs) have emerged as one of the prominent multi-agent 
-				architectures to govern the agents’ autonomous behavior in a cooperative multi-agent system (MAS) 
-				where several agents coordinate with each other to optimize a global cost function taking into account 
-				their local preferences. They represent a powerful approach to the description and resolution of many 
-				practical problems. However, typical MAS applications are characterized by complex dynamics and 
-				interactions among a large number of entities, which translate into hard combinatorial problems, 
-				posing significant challenges from a computational and coordination standpoints. This paper reviews 
-				two methods to promote a hierarchical parallel model for solving DCOPs, with the aim of improving the 
-				performance of the DCOP algorithm. The first is a Multi-Variable Agent (MVA) DCOP decomposition, which 
-				exploits co-locality of an agent’s variables allowing the adoption of efficient centralized techniques 
-				to solve the subproblem of an agent. The second is the use of Graphics Processing Units (GPUs) to 
-				speed up a class of DCOP algorithms. Finally, exploiting these hierarchical parallel model, the paper 
-				presents two critical applications of DCOPs for demand response (DR) program in smart grids. The 
-				Multi-agent Economic Dispatch with Demand Response (EDDR), which provides an integrated approach to the 
-				economic dispatch and the DR model for power systems, and the Smart Home Device Scheduling (SHDS) 
-				problem, that formalizes the device scheduling and coordination problem across multiple smart homes 
+				Distributed Constraint Optimization Problems (DCOPs) have emerged as one of the prominent multi-agent
+				architectures to govern the agents’ autonomous behavior in a cooperative multi-agent system (MAS)
+				where several agents coordinate with each other to optimize a global cost function taking into account
+				their local preferences. They represent a powerful approach to the description and resolution of many
+				practical problems. However, typical MAS applications are characterized by complex dynamics and
+				interactions among a large number of entities, which translate into hard combinatorial problems,
+				posing significant challenges from a computational and coordination standpoints. This paper reviews
+				two methods to promote a hierarchical parallel model for solving DCOPs, with the aim of improving the
+				performance of the DCOP algorithm. The first is a Multi-Variable Agent (MVA) DCOP decomposition, which
+				exploits co-locality of an agent’s variables allowing the adoption of efficient centralized techniques
+				to solve the subproblem of an agent. The second is the use of Graphics Processing Units (GPUs) to
+				speed up a class of DCOP algorithms. Finally, exploiting these hierarchical parallel model, the paper
+				presents two critical applications of DCOPs for demand response (DR) program in smart grids. The
+				Multi-agent Economic Dispatch with Demand Response (EDDR), which provides an integrated approach to the
+				economic dispatch and the DR model for power systems, and the Smart Home Device Scheduling (SHDS)
+				problem, that formalizes the device scheduling and coordination problem across multiple smart homes
 				to reduce energy peaks.
 			</div>
 		</dd>
@@ -2419,13 +2453,13 @@ used DA mechanisms.
 			<span style="font-size: 105%; margin: 0 0 0 4pt; color: #B03A2E;">*Invited to Constraint journal - selected paper*</span>
 			<br>
 			<span class="paper_links">
-				<em style="color: #16A085";>Links</em>: 
-				<a href="files/papers/cp19.pdf"  target="blank">[pdf]</a>
-				<a href="files/slides/cp19-slides.pdf"  target="blank">[slides]</a> 
-				<a href="files/bibtex/cp19-bib.txt" target="blank">[BibTex]</a>
-				| 
 				<em style="color: #16A085";>Links</em>:
-				<a href="https://link.springer.com/chapter/10.1007/978-3-030-30048-7_37" target="blank">[online]</a>	
+				<a href="files/papers/cp19.pdf"  target="blank">[pdf]</a>
+				<a href="files/slides/cp19-slides.pdf"  target="blank">[slides]</a>
+				<a href="files/bibtex/cp19-bib.txt" target="blank">[BibTex]</a>
+				|
+				<em style="color: #16A085";>Links</em>:
+				<a href="https://link.springer.com/chapter/10.1007/978-3-030-30048-7_37" target="blank">[online]</a>
 				<a href="mailto:ffiorett@syr.edu?subject=Code request for
 				 paper id [cp19]
 				&body=Hi,  I would like to request code and results associated to your paper ID: cp19. Thanks!
@@ -2435,17 +2469,17 @@ used DA mechanisms.
 			<a class="show_abstract">Show more</a>
 			<div class="abstract abstract_box bg-blue">
 				<strong><em>Abstract</em></strong>:
-				This paper is motivated by applications of a Census Bureau interested in releasing aggregate socio-economic 
-				data about a large population without revealing sensitive information. The released information can be the 
-				number of individuals living alone, the number of cars they own, or their salary brackets. Recent events have 
-				identified some of the privacy challenges faced by these organizations. To address them, this paper presents 
-				a novel differential-privacy mechanism for releasing hierarchical counts of individuals satisfying a given 
-				property. The counts are reported at multiple granularities (e.g., the national, state, and county levels) 
-				and must be consistent across levels. The core of the mechanism is an optimization model that redistributes 
-				the noise introduced to attain privacy in order to meet the consistency constraints between the hierarchical 
-				levels. The key technical contribution of the paper shows that this optimization problem can be solved in 
-				polynomial time by exploiting the structure of its cost functions. Experimental results on very large, real 
-				datasets show that the proposed mechanism provides improvements up to two orders of magnitude in terms of 
+				This paper is motivated by applications of a Census Bureau interested in releasing aggregate socio-economic
+				data about a large population without revealing sensitive information. The released information can be the
+				number of individuals living alone, the number of cars they own, or their salary brackets. Recent events have
+				identified some of the privacy challenges faced by these organizations. To address them, this paper presents
+				a novel differential-privacy mechanism for releasing hierarchical counts of individuals satisfying a given
+				property. The counts are reported at multiple granularities (e.g., the national, state, and county levels)
+				and must be consistent across levels. The core of the mechanism is an optimization model that redistributes
+				the noise introduced to attain privacy in order to meet the consistency constraints between the hierarchical
+				levels. The key technical contribution of the paper shows that this optimization problem can be solved in
+				polynomial time by exploiting the structure of its cost functions. Experimental results on very large, real
+				datasets show that the proposed mechanism provides improvements up to two orders of magnitude in terms of
 				computational efficiency and accuracy with respect to other state-of-the-art techniques.
 			</div>
 			</dd>
@@ -2460,13 +2494,13 @@ used DA mechanisms.
 			In Proceedings of the <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>,  2019.
 			<br>
 			<span class="paper_links">
-				<em style="color: #16A085";>Links</em>: 
+				<em style="color: #16A085";>Links</em>:
 				<a href="files/papers/ijcai19.pdf"  target="blank">[pdf]</a>
 				<a href="files/papers/ijcai19-slides.pdf"  target="blank">[slides]</a>
 				<a href="files/bibtex/ijcai19-bib.txt" target="blank">[BibTex]</a>
-				| 
+				|
 				<em style="color: #16A085";>Links</em>:
-				<a href="https://ijcai19.org/" target="blank">[online]</a>	
+				<a href="https://ijcai19.org/" target="blank">[online]</a>
 				<a href="mailto:ffiorett@syr.edu?subject=Code request for
 				 paper id [ijcai19]
 				&body=Hi,  I would like to request code and results associated to your paper ID: ijcai19. Thanks!
@@ -2493,7 +2527,7 @@ used DA mechanisms.
 				<a href="files/papers/aamas19.pdf"  target="blank">[pdf]</a>
 				<a href="files/talks/aamas19-slides.pdf" target="blank">[slides]</a>
 				<a href="files/bibtex/aamas19-bib.txt" target="blank">[BibTex]</a>
-				| 
+				|
 				<em style="color: #16A085";>Links</em>:
 				<a href="https://dl.acm.org/citation.cfm?id=3331750" target="blank">[online]</a>
 			</span>
@@ -2510,7 +2544,7 @@ used DA mechanisms.
 				 Privacy-preserving Data Sharing (MPDS) protocol that each agent can
 				 run locally and produce a privacy-preserving version of its original
 				 dataset. The MPDS protocol is evaluated on several standard
-				 prediction tasks and the experimental results demonstrate the potential 
+				 prediction tasks and the experimental results demonstrate the potential
 				 of sharing privacy-preserving datasets to produce accurate predictors.
 			</div>
 			</dd>
@@ -2529,7 +2563,7 @@ used DA mechanisms.
 					<a href="files/papers/cp18.pdf"  target="blank">[pdf]</a>
 <!-- 									<a href="files/talks/cpaior18-slides.pdf"  target="blank">[slides]</a>
 -->									<a href="files/bibtex/cp18-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="http://cp2018.a4cp.org/acceptedpapers.html" target="blank">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [cp18]
@@ -2557,7 +2591,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv19d.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv19d-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/1910.04250" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv19d]
@@ -2582,7 +2616,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv19c.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv19c-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/1909.10461" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv19c]
@@ -2608,7 +2642,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/ijcai19.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv19b-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/1905.09778" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv19b]
@@ -2633,7 +2667,7 @@ used DA mechanisms.
 					<em style="color: #16A085";>Links</em>:
 					<a href="files/papers/arxiv19a.pdf"  target="blank">[pdf]</a>
 					<a href="files/bibtex/arxiv19a-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://arxiv.org/abs/1901.06949" target="">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv19a]
@@ -2643,14 +2677,14 @@ used DA mechanisms.
 				<a class="show_abstract">Show more</a>
 				<div class="abstract abstract_box bg-blue">
 					<strong><em>Abstract</em></strong>:
-					The availability of high-fidelity energy networks brings significant value to academic and commercial research. 
-					However, such releases also raise fundamental concerns related to privacy and security as they can reveal sensitive 
-					commercial information and expose system vulnerabilities. This paper investigates how to release power networks where 
-					the parameters of transmission lines and transformers are obfuscated. It does so by using the framework of Differential 
-					Privacy (DP), that provides strong privacy guarantees and has attracted significant attention in recent years. 
-					Unfortunately, simple DP mechanisms often result in AC-infeasible networks. To address these concerns, this paper presents 
-					a novel differential privacy mechanism that guarantees AC-feasibility and largely preserves the fidelity of the obfuscated 
-					network. Experimental results also show that the obfuscation significantly reduces the potential damage of an attacker 
+					The availability of high-fidelity energy networks brings significant value to academic and commercial research.
+					However, such releases also raise fundamental concerns related to privacy and security as they can reveal sensitive
+					commercial information and expose system vulnerabilities. This paper investigates how to release power networks where
+					the parameters of transmission lines and transformers are obfuscated. It does so by using the framework of Differential
+					Privacy (DP), that provides strong privacy guarantees and has attracted significant attention in recent years.
+					Unfortunately, simple DP mechanisms often result in AC-infeasible networks. To address these concerns, this paper presents
+					a novel differential privacy mechanism that guarantees AC-feasibility and largely preserves the fidelity of the obfuscated
+					network. Experimental results also show that the obfuscation significantly reduces the potential damage of an attacker
 					exploiting the release of the dataset.
 				</div>
 			</dd>
@@ -2673,7 +2707,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/jair18.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/jair18-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://www.jair.org/papers/paper5565.html" target="blank">[online]</a>
 					</span>
@@ -2705,7 +2739,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/aimatter18.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/aimatter18-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://dl.acm.org/citation.cfm?doid=3175502.3175506" target="blank">[online]</a>
 					</span>
@@ -2728,7 +2762,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/constraints18.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/constraints18-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://link.springer.com/article/10.1007/s10601-017-9274-1" target="blank">[online]</a>
 						<a href="https://github.com/nandofioretto/GpuBE"  target="blank">[github]</a>
@@ -2756,7 +2790,7 @@ used DA mechanisms.
 						<a href="files/papers/prima18.pdf"  target="blank">[pdf]</a>
 <!-- 									<a href="files/talks/prima18-slides.pdf"  target="blank">[slides]</a>
 -->									<a href="files/bibtex/prima18-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://2018.prima-conference.org/accepted-papers.html" target="">[online]</a>
 <!-- 									<a href="https://github.com/nandofioretto/SHDS_dataset"  target="blank">[github]</a>
@@ -2785,7 +2819,7 @@ used DA mechanisms.
 						<a href="files/papers/cp18.pdf"  target="blank">[pdf]</a>
 <!-- 									<a href="files/talks/cpaior18-slides.pdf"  target="blank">[slides]</a>
 -->									<a href="files/bibtex/cp18-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://cp2018.a4cp.org/acceptedpapers.html" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [cp18]
@@ -2813,7 +2847,7 @@ used DA mechanisms.
 						<a href="files/papers/aamas18.pdf"  target="blank">[pdf]</a>
 							<a href="files/talks/aamas18-slides.pdf"  target="blank">[slides]</a>
 							<a href="files/bibtex/aamas18-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://celonline.vuse.vanderbilt.edu/aamas18/acceptedPapers/" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [aamas18]
@@ -2840,7 +2874,7 @@ used DA mechanisms.
 						<a href="files/papers/cpaior18.pdf"  target="blank">[pdf]</a>
 							<a href="files/talks/cpaior18-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/cpaior18-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://sites.google.com/view/cpaior2018/program/schedule" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [cpaior18]
@@ -2867,7 +2901,7 @@ used DA mechanisms.
 						<a href="files/papers/isaim18.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/isaim18-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/isaim18-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://isaim2018.cs.virginia.edu/papers.html" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [isaim18]
@@ -2897,7 +2931,7 @@ used DA mechanisms.
 						<a href="files/papers/optmas18.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/optmas18-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/optmas18-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://www-personal.umich.edu/~fioretto/cfp/OPTMAS18/" target="">[online]</a>
 						<a href="https://github.com/nandofioretto/SHDS_dataset"  target="blank">[github]</a>
@@ -2928,7 +2962,7 @@ used DA mechanisms.
 						<a href="files/papers/arxiv18.pdf"  target="blank">[pdf]</a>
 						<!-- <a href="files/talks/optmas18-slides.pdf"  target="blank">[slides]</a> -->
 						<a href="files/bibtex/arxiv18-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://arxiv.org/abs/1808.01949" target="">[online]</a>
 						<!-- <a href="https://github.com/nandofioretto/SHDS_dataset"  target="blank">[github]</a> -->
@@ -2962,7 +2996,7 @@ used DA mechanisms.
 						<a href="files/papers/cp17.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/cp17-bib.txt" target="blank">[BibTex]</a>
 						<!-- <a href="files/slides/cp17-slides.pdf"  target="blank">[slides]</a> -->
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://cp2017.a4cp.org/accepted_papers.html" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [cp17]
@@ -3001,7 +3035,7 @@ used DA mechanisms.
 						<a href="files/papers/aamas17c.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/aamas17c-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/aamas17c-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://dl.acm.org/citation.cfm?id=3091160" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [aamas17c]
@@ -3042,7 +3076,7 @@ used DA mechanisms.
 						<a href="files/papers/aamas17b.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/aamas17b-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/aamas17b-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://dl.acm.org/citation.cfm?id=3091265" target="blank">[online]</a>
 						<a href="https://github.com/nandofioretto/SHDS-AAMAS17"  target="blank">[github]</a>
@@ -3077,7 +3111,7 @@ used DA mechanisms.
 						<a href="files/papers/aamas17a.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/aamas17a-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/aamas17a-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://dl.acm.org/citation.cfm?id=3091267" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [aamas17a]
@@ -3118,7 +3152,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/lcns17.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/lcns17-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://link.springer.com/chapter/10.1007%2F978-3-319-71679-4_9" target="blank">[online]</a>
 						<a href="https://github.com/nandofioretto/SHDS_dataset"  target="blank">[github]</a>
@@ -3152,7 +3186,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/amectada17.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/amectada17-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://www.springerprofessional.de/en/investigation-of-learning-strategies-for-the-spot-broker-in-powe/12088104" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [amectada17]
@@ -3188,7 +3222,7 @@ used DA mechanisms.
 						<a href="files/papers/optmas17.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/optmas17-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/optmas17-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://www.cs.nmsu.edu/~wyeoh/OPTMAS2017/" target="">[online]</a>
 						<a href="https://github.com/nandofioretto/SHDS_dataset"  target="blank">[github]</a>
@@ -3224,7 +3258,7 @@ used DA mechanisms.
 						<a href="files/papers/aisgsb17.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/aisgsb17-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/aisgsb17-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://www.cs.nmsu.edu/aisgsb17/" target="">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [aisgsb17]
@@ -3262,7 +3296,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/arxiv17a.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/arxiv17a-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://arxiv.org/abs/1702.06970" target="blank">[online]</a>
 						<a href="https://github.com/nandofioretto/SHDS_dataset">[github]</a>
@@ -3294,7 +3328,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/arxiv17b.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/arxiv17b-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://arxiv.org/abs/1702.06915" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv17b]
@@ -3340,7 +3374,7 @@ used DA mechanisms.
 						<a href="files/papers/aamas16a.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/aamas16a-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/aamas16a-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://dl.acm.org/citation.cfm?id=2936924.2937013" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [aamas16a]
@@ -3378,7 +3412,7 @@ used DA mechanisms.
 						<a href="files/papers/aamas16b.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/aamas16b-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/aamas16b-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://dl.acm.org/citation.cfm?id=2937014" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [aamas16b]
@@ -3415,7 +3449,7 @@ used DA mechanisms.
 						<a href="files/papers/aaai16.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/aaai16-slides.pdf"  target="blank">[slides]</a>
 						<a href="files/bibtex/aaai16-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12093" target="blank">[online]</a>
 						<a href="https://github.com/nandofioretto/MVA-DCOP"  target="blank">[github]</a>
@@ -3448,7 +3482,7 @@ used DA mechanisms.
 						<a href="files/papers/cp16.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/cp16-slides.pdf" target="blank">[slides]</a>
 						<a href="files/bibtex/cp16-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://link.springer.com/chapter/10.1007%2F978-3-319-44953-1_51" target="blank">[online]</a>
 						<a href="https://github.com/nandofioretto/GPU-MCMC"  target="blank">[github]</a>
@@ -3483,7 +3517,7 @@ used DA mechanisms.
 						<a href="files/papers/mpref16.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/mpref16-slides.pdf" target="blank">[slides]</a>
 						<a href="files/bibtex/mpref16-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://www.mpref-2016.preflib.org/program/" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [mpref16]
@@ -3520,7 +3554,7 @@ used DA mechanisms.
 						<a href="files/papers/tada16.pdf"  target="blank">[pdf]</a>
 						<!-- <a href="files/talks/tada16-slides.pdf" target="blank">[slides]</a>   -->
 						<a href="files/bibtex/tada16-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://www.sofiaceppi.com/AMECTADA2016/programme.html" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [tada16]
@@ -3554,7 +3588,7 @@ used DA mechanisms.
 						<a href="files/papers/aisgsb16.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/aisgsb16-slides.pdf" target="blank">[slides]</a>
 						<a href="files/bibtex/aisgsb16-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://www.aaai.org/ocs/index.php/WS/AAAIW16/paper/view/12593" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [aisgsb16]
@@ -3585,7 +3619,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://arxiv.org/pdf/1602.06347.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/arxiv16a-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://arxiv.org/abs/1602.06347" target="blank">[online]</a>
 					</span>
@@ -3617,7 +3651,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://arxiv.org/pdf/1608.05288.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/arxiv16b-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://arxiv.org/abs/1608.05288" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [arxiv16b]
@@ -3660,7 +3694,7 @@ used DA mechanisms.
 						<a href="files/papers/tomacs15.pdf"  target="blank">[pdf]</a>
 						<a href="files/papers/tomacs15_appendix.pdf" target="blank">[appendix]</a>
 						<a href="files/bibtex/tomacs15-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://dl.acm.org/citation.cfm?doid=2688909" target="blank">[online]</a>
 						<a href="https://github.com/nandofioretto/CCN-GRN"  target="blank">[github]</a>
@@ -3688,7 +3722,7 @@ used DA mechanisms.
 						<a href="files/papers/cp15.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/cp15-slides.pdf" target="blank">[slides]</a>
 						<a href="files/bibtex/cp15-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://link.springer.com/chapter/10.1007/978-3-319-23219-5_9" target="blank">[online]</a>
 						<a href="https://github.com/nandofioretto/GpuDBE"  target="blank">[github]</a>
@@ -3714,7 +3748,7 @@ used DA mechanisms.
 						<a href="files/papers/aamas15a.pdf"  target="blank">[pdf]</a>
 <!-- 									<a href="files/talks/cp15-slides.pdf" target="blank">[slides]</a>
 -->									<a href="files/bibtex/aamas15a-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://dl.acm.org/citation.cfm?id=2773455" target="blank">[online]</a>
 						<a href="https://github.com/nandofioretto/MVA-DCOP"  target="blank">[github]</a>
@@ -3739,7 +3773,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/aamas15b.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/aamas15b-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://dl.acm.org/citation.cfm?id=2773461" target="blank">[online]</a>
 <!-- 									<a href="https://github.com/nandofioretto/MVA-DCOP"  target="blank">[github]</a>
@@ -3764,7 +3798,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/aaai15.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/aaai15-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9293" target="blank">[online]</a>
 <!-- 									<a href="https://github.com/nandofioretto/MVA-DCOP"  target="blank">[github]</a>
@@ -3788,7 +3822,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/aamas15c.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/aamas15c-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://dl.acm.org/citation.cfm?id=2773549" target="blank">[online]</a>
 <!-- 									<a href="https://github.com/nandofioretto/MVA-DCOP"  target="blank">[github]</a>
@@ -3816,7 +3850,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/optmas15a.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/optmas15a-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://www.cs.nmsu.edu/~wyeoh/OPTMAS2015/" target="blank">[online]</a>
 				  	</span>
@@ -3839,7 +3873,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/optmas15b.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/optmas15b-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://www.cs.nmsu.edu/~wyeoh/OPTMAS2015/" target="blank">[online]</a>
 				  	</span>
@@ -3871,7 +3905,7 @@ used DA mechanisms.
 						<a href="files/papers/cp14.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/cp14-slides.pdf" target="blank">[slides]</a>
 						<a href="files/bibtex/cp14-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://link.springer.com/chapter/10.1007%2F978-3-319-10428-7_24" target="blank">[online]</a>
 						<a href="https://github.com/nandofioretto/BrC-DPOP"  target="blank">[github]</a>
@@ -3897,7 +3931,7 @@ used DA mechanisms.
 						<a href="files/papers/ecai14.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/ecai14-slides.pdf" target="blank">[slides]</a>
 						<a href="files/bibtex/ecai14-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://ebooks.iospress.nl/publication/36938" target="blank">[online]</a>
 
@@ -3926,7 +3960,7 @@ used DA mechanisms.
 						<a href="files/papers/aamas14.pdf"  target="blank">[pdf]</a>
 						<!--<a href="files/talks/aamas14-slides.pdf" target="blank">[slides]</a>-->
 							<a href="files/bibtex/aamas14-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://dl.acm.org/citation.cfm?id=2617462" target="blank">[online]</a>
 
@@ -3955,7 +3989,7 @@ used DA mechanisms.
 						<a href="files/papers/padl14.pdf"  target="blank">[pdf]</a>
 						<a href="files/talks/padl14-slides.pdf" target="blank">[slides]</a>
 							<a href="files/bibtex/padl14-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://www.springer.com/us/book/9783319041315" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [padl14]
@@ -3987,7 +4021,7 @@ used DA mechanisms.
 						<a href="files/papers/wcb14.pdf"  target="blank">[pdf]</a>
 <!-- 									<a href="files/talks/wcb14-slides.pdf" target="blank">[slides]</a>
 --> 									<a href="files/bibtex/wcb14-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://cp2014.a4cp.org/workshops/bioinfo14" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [wcb14]
@@ -4017,7 +4051,7 @@ used DA mechanisms.
 						<a href="files/papers/parsearchopt14.pdf"  target="blank">[pdf]</a>
 <!-- 									<a href="files/talks/parsearchopt14-slides.pdf" target="blank">[slides]</a>
 --> 									<a href="files/bibtex/parsearchopt14-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://easychair.org/smart-program/VSL2014/program.html" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [parsearchopt14]
@@ -4051,7 +4085,7 @@ used DA mechanisms.
 						<em style="color: #16A085";>Links</em>:
 						<a href="files/papers/jair13.pdf"  target="blank">[pdf]</a>
 						<a href="files/bibtex/jair13-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="https://jair.org/index.php/jair/article/view/10856" target="blank">[online]</a>
 					</span>
@@ -4081,7 +4115,7 @@ used DA mechanisms.
 						<a href="files/papers/cmsb13.pdf"  target="blank">[pdf]</a>
 							<a href="files/talks/cmsb13-slides.pdf"  target="blank">[slides]</a>
 							<a href="files/bibtex/cmsb13-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://ist.ac.at/cmsb13/program/" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [cmsb13]
@@ -4111,7 +4145,7 @@ used DA mechanisms.
 						<a href="files/papers/cmsb13.pdf"  target="blank">[pdf]</a>
 <!-- 									<a href="files/talks/cpaior18-slides.pdf"  target="blank">[slides]</a>
 -->									<a href="files/bibtex/cmsb13-bib.txt" target="blank">[BibTex]</a>
-						| 
+						|
 						<em style="color: #16A085";>Links</em>:
 						<a href="http://ist.ac.at/cmsb13/program/" target="blank">[online]</a>
 						<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [cmsb13]
@@ -4146,7 +4180,7 @@ used DA mechanisms.
 					<a href="files/papers/cp12.pdf"  target="blank">[pdf]</a>
 <!-- 									<a href="files/talks/cp12-slides.pdf"  target="blank">[slides]</a>
 -->									<a href="files/bibtex/cp12-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://link.springer.com/chapter/10.1007/978-3-642-33558-7_61" target="blank">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [cp12]
@@ -4176,7 +4210,7 @@ used DA mechanisms.
 					<a href="files/papers/wcb12.pdf"  target="blank">[pdf]</a>
 <!-- 									<a href="files/talks/wcb12-slides.pdf"  target="blank">[slides]</a>
 -->					<a href="files/bibtex/wcb12-bib.txt" target="blank">[BibTex]</a>
-					| 
+					|
 					<em style="color: #16A085";>Links</em>:
 					<a href="https://link.springer.com/chapter/10.1007/978-3-642-33558-7_61" target="blank">[online]</a>
 					<a href="mailto:ffiorett@syr.edu?subject=Code request for paper id [wcb12]
@@ -4207,6 +4241,6 @@ used DA mechanisms.
 					$('#slider').nivoSlider();
 				});
 	</script>
-	
+
 	</body>
 </html>
