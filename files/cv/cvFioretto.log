@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.8)  5 APR 2023 11:53
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.8)  6 JUL 2023 12:14
  restricted system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.046 seconds
+luaotfload | main : initialization completed in 0.055 seconds
 (./documentMETADATA.cls
 Document Class: documentMETADATA 2018/07/19 v1.9.2 'YAAC: Another Awesome CV' Cl
 ass
@@ -1485,12 +1485,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
  []
 
 (./section_experience.tex
-Overfull \hbox (5.28076pt too wide) in alignment at lines 5--27
+Overfull \hbox (5.28076pt too wide) in alignment at lines 5--20
  [][] 
  []
 
 
-Overfull \hbox (5.28076pt too wide) in alignment at lines 31--62
+Overfull \hbox (5.28076pt too wide) in alignment at lines 24--73
  [][] 
  []
 
@@ -1515,84 +1515,91 @@ Overfull \hbox (5.69046pt too wide) in paragraph at lines 46--47
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 58--59
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 57--66
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 75--76
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 73--74
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 89--90
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 87--88
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 99--100
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 97--98
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 115--116
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 113--114
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 126--127
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 124--125
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 134--135
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 132--133
 []|[]| 
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 141--142
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 139--140
 []|[]| 
  []
 
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 168--169
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 170--171
 []|[]| 
  []
 
-[2]) (./section_publications.tex [3]
+[2]) (./section_publications.tex
 
-Package hyperref Warning: Suppressing link with empty target on input line 210.
+Package hyperref Warning: Suppressing link with empty target on input line 34.
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 210.
+Package hyperref Warning: Suppressing link with empty target on input line 34.
+
+[3]
+
+Package hyperref Warning: Suppressing link with empty target on input line 250.
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 250.
 
 [4] [5] [6]
 
-Package hyperref Warning: Suppressing link with empty target on input line 574.
+Package hyperref Warning: Suppressing link with empty target on input line 616.
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 574.
+Package hyperref Warning: Suppressing link with empty target on input line 616.
 
-[7] [8] [9]) (./section_teaching_mentoring.tex
-Overfull \hbox (5.28076pt too wide) in alignment at lines 24--39
+[7] [8] [9] [10]) (./section_teaching_mentoring.tex
+Overfull \hbox (5.28076pt too wide) in alignment at lines 24--40
  [][] 
  []
 
-[10] [11]) (./section_talks.tex
+[11]) (./section_talks.tex [12]
 
 LaTeX Font Warning: Font shape `TU/FontAwesome(0)/m/it' undefined
-(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 43.
+(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 67.
 
 
 LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/bx/it' undefined
 (Font)              using `TU/SourceSansPro-Light(0)/bx/n' instead on input line
- 95.
+ 119.
 
-[12]
+[13]
 
-Package hyperref Warning: Suppressing link with empty target on input line 133.
+Package hyperref Warning: Suppressing link with empty target on input line 157.
 
 ) (./section_projects.tex
 Underfull \hbox (badness 10000) in paragraph at lines 17--17
@@ -1605,12 +1612,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--36
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
 
  []
 
@@ -1625,21 +1632,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--60
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 69.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
 
  []
 
-[13]
 
-Package hyperref Warning: Suppressing link with empty target on input line 82.
+Package hyperref Warning: Suppressing link with empty target on input line 77.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
 
  []
+
+[14]
+
+Package hyperref Warning: Suppressing link with empty target on input line 90.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 90--90
@@ -1651,42 +1658,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--98
 
  []
 
-) (./section_pending-support.tex
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--76
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-
- []
-
-[14]) (./section_service.tex [15] [16]) [17]
+) (./section_service.tex [15] [16]) [17]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
  (./cvFioretto.aux)
@@ -1701,14 +1678,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 36738 strings out of 494291
- 476937,953878 words of node,token memory allocated
- 329955 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 156 glue, 4 kern, 1 penalty, 44153 glyph, 84
-04 attribute, 75 glue_spec, 1202 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:13,2:6808,3:892,4:273,5:1926,6:239,7:2582,8:61,9:1352,10:13,11
-:1097
- 39727 multiletter control sequences out of 65536+600000
+ 36726 strings out of 494291
+ 476934,953878 words of node,token memory allocated
+ 337348 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 dir, 159 glue, 4 kern, 1 penalty, 45133 glyph, 86
+28 attribute, 75 glue_spec, 1234 attribute_list, 2 write, 1 pdf_action nodes
+   avail lists: 1:9,2:4367,3:543,4:249,5:1954,6:222,7:3011,8:53,9:1293,10:21,11:
+1114
+ 39723 multiletter control sequences out of 65536+600000
  63 fonts using 12861839 bytes
  62i,12n,87p,1198b,881s stack positions out of 5000i,500n,10000p,200000b,100000s
 
@@ -1721,10 +1698,10 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (17 pages, 126055 bytes).
+Output written on cvFioretto.pdf (17 pages, 126243 bytes).
 
-PDF statistics: 488 PDF objects out of 1000 (max. 8388607)
- 449 compressed objects within 5 object streams
- 45 named destinations out of 1000 (max. 131072)
+PDF statistics: 487 PDF objects out of 1000 (max. 8388607)
+ 448 compressed objects within 5 object streams
+ 43 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 

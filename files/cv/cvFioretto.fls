@@ -1,4 +1,4 @@
-PWD /Users/ferdinandofioretto/Repos/web/web-ff_home/files/cv
+PWD /Users/ferdinandofioretto/Repos/web/nandofioretto.github.io/files/cv
 INPUT /usr/local/texlive/2019/texmf-var/web2c/luatex/lualatex.fmt
 INPUT ./cvFioretto.tex
 OUTPUT cvFioretto.log
@@ -348,8 +348,6 @@ INPUT ./section_talks.tex
 INPUT ./section_talks.tex
 INPUT ./section_projects.tex
 INPUT ./section_projects.tex
-INPUT ./section_pending-support.tex
-INPUT ./section_pending-support.tex
 INPUT ./section_service.tex
 INPUT ./section_service.tex
 INPUT ./cvFioretto.aux
