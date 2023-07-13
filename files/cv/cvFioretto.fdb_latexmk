@@ -1,5 +1,5 @@
 # Fdb version 3
-["lualatex"] 1688660075 "cvFioretto.tex" "cvFioretto.pdf" "cvFioretto" 1688841584
+["lualatex"] 1688660075 "cvFioretto.tex" "cvFioretto.pdf" "cvFioretto" 1689261311
   "/Users/ferdinandofioretto/Library/texlive/2019/texmf-var/luatex-cache/generic/fonts/otl/fontawesome.luc" 1635730297 57580 ad0d512028a2a3400b89a5026a35d5b0 ""
   "/Users/ferdinandofioretto/Library/texlive/2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1635730296 124191 9fc62cd5dea2dd0999ede8369a3fb526 ""
   "/Users/ferdinandofioretto/Library/texlive/2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1635730297 132117 336b2f4ecc4545c8ddc88590432919bf ""
@@ -212,6 +212,6 @@
   "section_teaching_mentoring.tex" 1687183758 6625 ebea5c9a9d25cb40d1a82807bcb88c06 ""
   (generated)
   "cvFioretto.out"
-  "cvFioretto.log"
   "cvFioretto.aux"
   "cvFioretto.pdf"
+  "cvFioretto.log"
