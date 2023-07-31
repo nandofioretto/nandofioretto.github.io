@@ -1,5 +1,5 @@
 # Fdb version 3
-["lualatex"] 1689790052 "cvFioretto.tex" "cvFioretto.pdf" "cvFioretto" 1689790055
+["lualatex"] 1690810682 "cvFioretto.tex" "cvFioretto.pdf" "cvFioretto" 1690810685
   "/Users/ferdinandofioretto/Library/texlive/2019/texmf-var/luatex-cache/generic/fonts/otl/fontawesome.luc" 1635730297 57580 ad0d512028a2a3400b89a5026a35d5b0 ""
   "/Users/ferdinandofioretto/Library/texlive/2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1635730296 124191 9fc62cd5dea2dd0999ede8369a3fb526 ""
   "/Users/ferdinandofioretto/Library/texlive/2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1635730297 132117 336b2f4ecc4545c8ddc88590432919bf ""
@@ -196,9 +196,9 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/tex/generic/config/language.dat" 1557341548 6531 8f2ab85c450abbd520bc791d27444c3b ""
   "/usr/local/texlive/2019/texmf-var/web2c/luatex/lualatex.fmt" 1557342091 1381805 ec0a220958007dfa519e904da00016e2 ""
-  "cvFioretto.aux" 1689790055 3285 2b220e634cbe275e54c567a45d220f7f "lualatex"
-  "cvFioretto.out" 1689790055 488 6fc36a4b6e700d04b29eb98185dafb7e "lualatex"
-  "cvFioretto.tex" 1689260740 1623 09747d27a31570ff8e40c875dcd14040 ""
+  "cvFioretto.aux" 1690810685 3285 7f516ce38ff4d9a1ce942039d66b6d88 "lualatex"
+  "cvFioretto.out" 1690810685 488 6fc36a4b6e700d04b29eb98185dafb7e "lualatex"
+  "cvFioretto.tex" 1690810681 1623 df6b6f79a4e39c822f754b15c48ff289 ""
   "documentMETADATA.cls" 1687183758 20710 0e3defddb5509bfbbbb14b5dd30039f0 ""
   "fonts/SourceSansPro-Light.otf" 1635695814 226032 779f3bf41b852b5582d41cd866ca3ddc ""
   "fonts/SourceSansPro-LightIt.otf" 1635695814 77816 06b76910b912d54a5696d0854f51dc6c ""
@@ -206,12 +206,12 @@
   "section_experience.tex" 1689260681 1973 223481e60b20dac2436e9afe42d5eafc ""
   "section_honors_awards.tex" 1689260681 11142 1fd35a8a9be1dec3310ed4344f98c577 ""
   "section_projects.tex" 1689261194 3056 c8da9bd8a21eebecddeb48e3a960d89b ""
-  "section_publications.tex" 1689260828 41154 69f9f66465a086d3339bbb21cf3e113d ""
-  "section_service.tex" 1689260681 10083 12e4f4167302b5deee7a73dcdb47cf7a ""
+  "section_publications.tex" 1690810666 41465 3bb888ef23de85de55dda34e52ed8227 ""
+  "section_service.tex" 1690810400 10268 d7d24f958c02e8a22511d3fd52a1de6f ""
   "section_talks.tex" 1689790051 10613 2ad947ae55922dea0cded6a04d2b291e ""
   "section_teaching_mentoring.tex" 1689261096 6933 a4e8a10bc1bc2839df0a999f4c521586 ""
   (generated)
   "cvFioretto.aux"
-  "cvFioretto.out"
   "cvFioretto.log"
+  "cvFioretto.out"
   "cvFioretto.pdf"
