@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.8)  19 JUL 2023 14:07
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.8)  31 JUL 2023 09:38
  restricted system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.042 seconds
+luaotfload | main : initialization completed in 0.043 seconds
 (./documentMETADATA.cls
 Document Class: documentMETADATA 2018/07/19 v1.9.2 'YAAC: Another Awesome CV' Cl
 ass
@@ -1609,7 +1609,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--33
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 43--43
 
  []
@@ -1637,7 +1637,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--76
 
  []
 
-[14]
 
 Package hyperref Warning: Suppressing link with empty target on input line 89.
 
@@ -1656,7 +1655,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--105
 
  []
 
-) (./section_service.tex [15] [16]) [17]
+) (./section_service.tex [15] [16] [17]) [18]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
  (./cvFioretto.aux)
@@ -1671,12 +1670,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 36726 strings out of 494291
+ 36727 strings out of 494291
  476948,953878 words of node,token memory allocated
- 339584 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 161 glue, 4 kern, 1 penalty, 45439 glyph, 86
-63 attribute, 75 glue_spec, 1239 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:8,2:4559,3:561,4:249,5:1956,6:225,7:3011,8:55,9:1293,10:12,11:
+ 342651 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 dir, 163 glue, 4 kern, 1 penalty, 45850 glyph, 87
+40 attribute, 75 glue_spec, 1250 attribute_list, 2 write, 1 pdf_action nodes
+   avail lists: 1:9,2:5024,3:678,4:249,5:1957,6:224,7:3219,8:55,9:1293,10:12,11:
 1114
  39723 multiletter control sequences out of 65536+600000
  63 fonts using 12861839 bytes
@@ -1691,10 +1690,10 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (17 pages, 126771 bytes).
+Output written on cvFioretto.pdf (18 pages, 127338 bytes).
 
-PDF statistics: 489 PDF objects out of 1000 (max. 8388607)
- 450 compressed objects within 5 object streams
- 43 named destinations out of 1000 (max. 131072)
+PDF statistics: 495 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 44 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 
