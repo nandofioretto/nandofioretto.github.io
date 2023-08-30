@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>distributed constraint optimization | Ferdinando  Fioretto</title>
+    <meta name="author" content="Ferdinando  Fioretto">
+    <meta name="description" content="">
+    <meta name="keywords" content="Ferdinando Fioretto, AI, ML, Optimization, differential privacy, fairness, trustworthy, university of virginia">
+</head>
+<body>
+<p>
+'
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://nandofioretto.github.io/projects/dcop/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  
+
+  <!-- Body -->
+  </p>
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Ferdinando </span>Fioretto</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">home</a>
+              </li>
+              
+
+
+              <!-- Other pages -->
+              <!-- External links -->
+              <li class="nav-item">
+                <a class="nav-link" href="https://yeoh-lab.wustl.edu" rel="external nofollow noopener" target="_blank">research
+                </a>
+              </li>                            
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <!-- External links -->
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.cse.wustl.edu/~wyeoh/William%20Yeoh%20-%20CV.pdf" rel="external nofollow noopener" target="_blank">cv
+                </a>
+              </li>                            
+              <li class="nav-item ">
+                <a class="nav-link" href="/teaching/">teaching</a>
+              </li>                            
+              <li class="nav-item ">
+                <a class="nav-link" href="/contact/">contact</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- page.html -->
+        <div class="post">
+
+          <header class="post-header">
+            <h1 class="post-title">distributed constraint optimization</h1>
+            <p class="post-description"></p>
+          </header>
+
+          <article>
+            <p><img style="float: left; margin: 5px 10px 5px 0px; width: 240px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="/assets/img/project-dcop.jpg">
+A distributed constraint optimization problem (DCOP) is a problem where multiple agents coordinate with each other to take on values such that the sum of the resulting constraint costs, that are dependent on the values of the agents, is minimal. DCOPs are a popular way of formulating and solving multi-agent coordination problems such as the distributed scheduling of meetings, distributed coordination of unmanned air vehicles and the distributed allocation of targets in sensor networks. Privacy concerns in the scheduling of meetings and the limitation of communication and computation resources of each sensor in a sensor network makes centralized constraint optimization difficult. Therefore, the nature of these applications call for a distributed approach.</p>
+
+<p>Our current research focus is three fold:</p>
+<ul>
+  <li>We seek to speed and scale up DCOP algorithms so that they can be amenable for real-world deployment. We have proposed methods that (1) exploit domain properties of the problems; (2) are parallelizable and, thus, sped up using graphical processing units (GPUs); (3) prune the search space through consistency propagation techniques; etc.</li>
+  <li>We are investigating ways to enrich the DCOP model and extend DCOP algorithms to better account for imperfect communication (e.g., message delays and message losses).</li>
+  <li>We plan to enrich DCOPs so that they can be used to model dynamic and uncertain problems through integration with concepts from decentralized Markov decision processes (Dec-MDPs). The proposed models and algorithms will serve as a bridge between DCOPs and Dec-MDPs, balancing the tradeoffs between expressivity and scalability.</li>
+</ul>
+
+<p>To learn more, please see our <a href="/assets/pdf/tutorial-aaai20-dcop.pdf" target="_blank">tutorial on multi-agent distributed constrained optimization</a>, which we gave at AAAI 2020.</p>
+
+<h2>sponsors</h2>
+
+<p></p>
+
+<p><img style="float: left; margin: 0px 10px 0px 0px;" src="/assets/img/bsf.png" width="50px">
+<a href="https://www.bsf.org.il/search-grant/?SearchPI=yeoh" rel="external nofollow noopener" target="_blank">Communication-Aware Distributed Constraint Optimization Problems: Foundations, Models, and Algorithms</a>.
+Binational Science Foundation (2019 – 2022).</p>
+
+<p><img style="float: left; margin: 0px 10px 0px 0px;" src="/assets/img/nsf.png" width="50px">
+<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1550662" rel="external nofollow noopener" target="_blank">CAREER: Decentralized Constraint-based Optimization for Multi-Agent Planning and Coordination</a>.
+National Science Foundation (2016 – 2021).</p>
+
+<p><img style="float: left; margin: 0px 10px 0px 0px;" src="/assets/img/nsf.png" width="50px">
+<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1540168" rel="external nofollow noopener" target="_blank">BSF: 2014012: Robust Solutions for Distributed Constraint Optimization Problems</a>.<br>
+National Science Foundation (2015 – 2019).<br></p>
+<font size="1"><br></font>
+
+<h3>selected publications</h3>
+
+<p></p>
+
+<div class="publications">
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography">
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">JAIR</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:journals/jair/RachmutZ022" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Communication-Aware Local Search for Distributed Constraint Optimization</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Ben Rachmut, <a href="https://tzin.bgu.ac.il/~zivanr/" rel="external nofollow noopener" target="_blank">Roie Zivan</a>, and <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>Journal of Artificial Intelligence Research</em>, 2022
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/jair-RachmutZ022.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Most studies investigating models and algorithms for distributed constraint optimization problems (DCOPs) assume that messages arrive instantaneously and are never lost. Specifically, distributed local search DCOP algorithms, have been designed as synchronous algorithms (i.e., they perform in synchronous iterations in which each agent exchanges messages with all its neighbors), despite running in asynchronous environments. This is true also for an anytime mechanism that reports the best solution explored during the run of synchronous distributed local search algorithms. Thus, when the assumption of perfect communication is relaxed, the properties that were established for the state-of-the-art local search algorithms and the anytime mechanism may not necessarily apply.
+  
+In this work, we address this limitation by: (1) Proposing a Communication-Aware DCOP model (CA-DCOP) that can represent scenarios with different communication disturbances; (2) Investigating the performance of existing local search DCOP algorithms, specifically Distributed Stochastic Algorithm (DSA) and Maximum Gain Messages (MGM), in the presence of message latency and message loss; (3) Proposing a latency-aware monotonic distributed local search DCOP algorithm; and (4) Proposing an asynchronous anytime framework for reporting the best solution explored by non-monotonic asynchronous local search DCOP algorithms. Our empirical results demonstrate that imperfect communication has a positive effect on distributed local search algorithms due to increased exploration. Furthermore, the asynchronous anytime framework we proposed allows one to benefit from algorithms with inherent explorative heuristics.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">DBLP:journals/jair/RachmutZ022</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Rachmut, Ben and Zivan, Roie and Yeoh, William}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Communication-Aware Local Search for Distributed Constraint Optimization}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Journal of Artificial Intelligence Research}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{75}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{637--675}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">JAIR</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:journals/jair/HoangFHYYZ22" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Proactive Dynamic Distributed Constraint Optimization Problems</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://www.linkedin.com/in/khoi-hd/" rel="external nofollow noopener" target="_blank">Khoi D. Hoang</a>, <a href="https://web.ecs.syr.edu/~ffiorett/" rel="external nofollow noopener" target="_blank">Ferdinando Fioretto</a>, <a href="https://www.linkedin.com/in/ping-hou-ba54aa17/" rel="external nofollow noopener" target="_blank">Ping Hou</a>, and
+          <span class="more-authors" title="click to view 3 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '3 more authors' ? 'William Yeoh, Makoto Yokoo, Roie Zivan' : '3 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">3 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>Journal of Artificial Intelligence Research</em>, 2022
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/jair-HoangFHYYZ22.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>The Distributed Constraint Optimization Problem (DCOP) formulation is a powerful tool for modeling multi-agent coordination problems. To solve DCOPs in a dynamic environment, Dynamic DCOPs (D-DCOPs) have been proposed to model the inherent dynamism present in many coordination problems. D-DCOPs solve a sequence of static problems by reacting to changes in the environment as the agents observe them. Such reactive approaches ignore knowledge about future changes of the problem. To overcome this limitation, we introduce Proactive Dynamic DCOPs (PD-DCOPs), a novel formalism to model D-DCOPs in the presence of exogenous uncertainty. In contrast to reactive approaches, PD-DCOPs are able to explicitly model possible changes of the problem and take such information into account when solving the dynamically changing problem in a proactive manner. The additional expressivity of this formalism allows it to model a wider variety of distributed optimization problems. Our work presents both theoretical and practical contributions that advance current dynamic DCOP models: (i) We introduce Proactive Dynamic DCOPs (PD-DCOPs), which explicitly model how the DCOP will change over time; (ii) We develop exact and heuristic algorithms to solve PD-DCOPs in a proactive manner; (iii) We provide theoretical results about the complexity of this new class of DCOPs; and (iv) We empirically evaluate both proactive and reactive algorithms to determine the trade-offs between the two classes. The final contribution is important as our results are the first that identify the characteristics of the problems that the two classes of algorithms excel in.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">DBLP:journals/jair/HoangFHYYZ22</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Hoang, Khoi D. and Fioretto, Ferdinando and Hou, Ping and Yeoh, William and Yokoo, Makoto and Zivan, Roie}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Proactive Dynamic Distributed Constraint Optimization Problems}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Journal of Artificial Intelligence Research}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{74}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{179--225}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+</ol>
+
+  <ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">DAI</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:conf/dai/TabakhiYZ21" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Incomplete Distributed Constraint Optimization Problems: Model, Algorithms,
+                  and Heuristics</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://sites.wustl.edu/amtabakhi/" rel="external nofollow noopener" target="_blank">Atena M. Tabakhi</a>, <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>, and <a href="https://tzin.bgu.ac.il/~zivanr/" rel="external nofollow noopener" target="_blank">Roie Zivan</a>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In International Conference on Distributed Artificial Intelligence</em>, 2021
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          	<img class="emoji" title=":trophy:" alt=":trophy:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f3c6.png" height="20" width="20"> Best Paper Award
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/dai-TabakhiYZ21.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>The Distributed Constraint Optimization Problem (DCOP) formulation is a powerful tool to model cooperative multi-agent problems, especially when they are sparsely constrained with one another. A key assumption in this model is that all constraints are fully specified or known a priori, which may not hold in applications where constraints encode preferences of human users. In this paper, we extend the model to Incomplete DCOPs (I-DCOPs), where some constraints can be partially specified. User preferences for these partially-specified constraints can be elicited during the execution of I-DCOP algorithms, but they incur some elicitation costs. Additionally, we extend SyncBB, a complete DCOP algorithm, and ALS-MGM, an incomplete DCOP algorithm, to solve I-DCOPs. We also propose parameterized heuristics that those algorithms can utilize to trade off solution quality for faster runtime and fewer elicitation. They also provide theoretical quality guarantees when used by SyncBB when elicitations are free. Our model and heuristics thus extend the state-of-the-art in distributed constraint reasoning to better model and solve distributed agent-based applications with user preferences.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/dai/TabakhiYZ21</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Tabakhi, Atena M. and Yeoh, William and Zivan, Roie}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Incomplete Distributed Constraint Optimization Problems: Model, Algorithms,
+                    and Heuristics}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{International Conference on Distributed Artificial Intelligence}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{64--78}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li></ol>
+
+  <ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">AAMAS</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:conf/aamas/Hoang0YR20" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">New Algorithms for Continuous Distributed Constraint Optimization
+                  Problems</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://www.linkedin.com/in/khoi-hd/" rel="external nofollow noopener" target="_blank">Khoi D. Hoang</a>, <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>, <a href="https://sites.google.com/view/makoto-yokoo/" rel="external nofollow noopener" target="_blank">Makoto Yokoo</a>, and
+          <span class="more-authors" title="click to view 1 more author" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '1 more author' ? 'Zinovi Rabinovich' : '1 more author';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">1 more author</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In International Conference on Autonomous Agents and Multiagent Systems</em>, 2020
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/aamas-Hoang0YR20.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Distributed Constraint Optimization Problems (DCOPs) are a powerful tool to model multi-agent coordination problems that are distributed by nature. The formulation is suitable for problems where variables are discrete and constraint utilities are represented in tabular form. However, many real-world applications have variables that are continuous and tabular forms thus cannot accurately represent constraint utilities. To overcome this limitation, researchers have proposed the Continuous DCOP (C-DCOP) model, which are DCOPs with continuous variables. But existing approaches usually come with some restrictions on the form of constraint utilities and are without quality guarantees. Therefore, in this paper, we (i) propose an exact algorithm to solve a specific subclass of C-DCOPs; (ii) propose an approximation method with quality guarantees to solve general C-DCOPs; (iii) propose additional C-DCOP algorithms that are more scalable; and (iv) empirically show that our algorithms outperform existing state-of-the-art C-DCOP algorithms when given the same communication limitations.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/aamas/Hoang0YR20</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Hoang, Khoi D. and Yeoh, William and Yokoo, Makoto and Rabinovich, Zinovi}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{New Algorithms for Continuous Distributed Constraint Optimization
+                    Problems}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{International Conference on Autonomous Agents and Multiagent Systems}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{502--510}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li></ol>
+
+  <ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">JAIR</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:journals/jair/NguyenYLZ19" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Distributed Gibbs: A Linear-Space Sampling-Based DCOP Algorithm</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Duc Thien Nguyen, <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>, <a href="http://www.mysmu.edu/faculty/hclau/" rel="external nofollow noopener" target="_blank">Hoong Chuin Lau</a>, and
+          <span class="more-authors" title="click to view 1 more author" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '1 more author' ? 'Roie Zivan' : '1 more author';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">1 more author</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>Journal of Artificial Intelligence Research</em>, 2019
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/jair-NguyenYLZ19.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Researchers have used distributed constraint optimization problems (DCOPs) to model various multi-agent coordination and resource allocation problems. Very recently, Ottens et al. proposed a promising new approach to solve DCOPs that is based on confidence bounds via their Distributed UCT (DUCT) sampling-based algorithm. Unfortunately, its memory requirement per agent is exponential in the number of agents in the problem, which prohibits it from scaling up to large problems. Thus, in this article, we introduce two new sampling-based DCOP algorithms called Sequential Distributed Gibbs (SD-Gibbs) and Parallel Distributed Gibbs (PD-Gibbs). Both algorithms have memory requirements per agent that is linear in the number of agents in the problem. Our empirical results show that our algorithms can find solutions that are better than DUCT, run faster than DUCT, and solve some large problems that DUCT failed to solve due to memory limitations.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">DBLP:journals/jair/NguyenYLZ19</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Nguyen, Duc Thien and Yeoh, William and Lau, Hoong Chuin and Zivan, Roie}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Distributed Gibbs: {A} Linear-Space Sampling-Based {DCOP} Algorithm}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Journal of Artificial Intelligence Research}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{64}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{705--748}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2019}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li></ol>
+
+  <ol class="bibliography">
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">JAIR</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:journals/jair/FiorettoPY18" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Distributed Constraint Optimization Problems and Applications: A Survey</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://web.ecs.syr.edu/~ffiorett/" rel="external nofollow noopener" target="_blank">Ferdinando Fioretto</a>, <a href="https://www.cs.nmsu.edu/~epontell/" rel="external nofollow noopener" target="_blank">Enrico Pontelli</a>, and <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>Journal of Artificial Intelligence Research</em>, 2018
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/jair-FiorettoPY18.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>The field of multi-agent system (MAS) is an active area of research within artificial intelligence, with an increasingly important impact in industrial and other real-world applications. In a MAS, autonomous agents interact to pursue personal interests and/or to achieve common objectives. Distributed Constraint Optimization Problems (DCOPs) have emerged as a prominent agent model to govern the agents? autonomous behavior, where both algorithms and communication models are driven by the structure of the specific problem. During the last decade, several extensions to the DCOP model have been proposed to enable support of MAS in complex, real-time, and uncertain environments.
+
+This survey provides an overview of the DCOP model, offering a classification of its multiple extensions and addressing both resolution methods and applications that find a natural mapping within each class of DCOPs. The proposed classification suggests several future perspectives for DCOP extensions and identifies challenges in the design of efficient resolution algorithms, possibly through the adaptation of strategies from different areas.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">DBLP:journals/jair/FiorettoPY18</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Fioretto, Ferdinando and Pontelli, Enrico and Yeoh, William}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Distributed Constraint Optimization Problems and Applications: {A} Survey}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Journal of Artificial Intelligence Research}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{61}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{623--698}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2018}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">CP</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:conf/cp/HoangF0PZ18" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">A Large Neighboring Search Schema for Multi-agent Optimization</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://www.linkedin.com/in/khoi-hd/" rel="external nofollow noopener" target="_blank">Khoi D. Hoang</a>, <a href="https://web.ecs.syr.edu/~ffiorett/" rel="external nofollow noopener" target="_blank">Ferdinando Fioretto</a>, <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>, and
+          <span class="more-authors" title="click to view 2 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '2 more authors' ? 'Enrico Pontelli, Roie Zivan' : '2 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">2 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In International Conference on Principles and Practice of Constraint Programming</em>, 2018
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/cp-HoangF0PZ18.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>The Distributed Constraint Optimization Problem (DCOP) is an elegant paradigm for modeling and solving multi-agent problems which are distributed in nature, and where agents cooperate to optimize a global objective within the confines of localized communication. Since solving DCOPs optimally is NP-hard, recent effort in the development of DCOP algorithms has focused on incomplete methods. Unfortunately, many of such proposals do not provide quality guarantees or provide a loose quality assessment. Thus, this paper proposes the Distributed Large Neighborhood Search (DLNS), a novel iterative local search framework to solve DCOPs, which provides guarantees on solution quality refining lower and upper bounds in an iterative process. Our experimental analysis of DCOP benchmarks on several important classes of graphs illustrates the effectiveness of DLNS in finding good solutions and tight upper bounds in both problems with and without hard constraints.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/cp/HoangF0PZ18</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Hoang, Khoi D. and Fioretto, Ferdinando and Yeoh, William and Pontelli, Enrico and Zivan, Roie}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{A Large Neighboring Search Schema for Multi-agent Optimization}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{International Conference on Principles and Practice of Constraint Programming}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{688--706}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Springer}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2018}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+</ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+
+</div>
+
+
+          </article>
+
+        </div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Ferdinando  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+Last updated: August 30, 2023.
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  
+</body>
+</html>

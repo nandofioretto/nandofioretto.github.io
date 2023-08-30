@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>goal recognition and design | Ferdinando  Fioretto</title>
+    <meta name="author" content="Ferdinando  Fioretto">
+    <meta name="description" content="">
+    <meta name="keywords" content="Ferdinando Fioretto, AI, ML, Optimization, differential privacy, fairness, trustworthy, university of virginia">
+</head>
+<body>
+<p>
+'
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://nandofioretto.github.io/projects/goal-recognition/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  
+
+  <!-- Body -->
+  </p>
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Ferdinando </span>Fioretto</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">home</a>
+              </li>
+              
+
+
+              <!-- Other pages -->
+              <!-- External links -->
+              <li class="nav-item">
+                <a class="nav-link" href="https://yeoh-lab.wustl.edu" rel="external nofollow noopener" target="_blank">research
+                </a>
+              </li>                            
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <!-- External links -->
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.cse.wustl.edu/~wyeoh/William%20Yeoh%20-%20CV.pdf" rel="external nofollow noopener" target="_blank">cv
+                </a>
+              </li>                            
+              <li class="nav-item ">
+                <a class="nav-link" href="/teaching/">teaching</a>
+              </li>                            
+              <li class="nav-item ">
+                <a class="nav-link" href="/contact/">contact</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- page.html -->
+        <div class="post">
+
+          <header class="post-header">
+            <h1 class="post-title">goal recognition and design</h1>
+            <p class="post-description"></p>
+          </header>
+
+          <article>
+            <p><img style="float: left; margin: 5px 10px 5px 0px; width: 240px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="/assets/img/project-grd.jpg">
+In goal recognition problems, the goal is to identify the goal of an observed agent as quickly as possible before they reach their goal. This problem can be applied to a number of applications ranging from software personal assistants and robots that anticipate the needs of humans; intelligent tutoring systems that recognize sources of confusion or misunderstanding in students through their interactions with the system; and security applications that recognize terrorists plans.</p>
+
+<p>In goal recognition design problems, the objective is to identify the best ways to modify the underlying environment of the agents in such a way that they are forced to reveal their goals as early as possible. This problem is typically applicable in the same goal recognition applications as long as the underlying environment can be modified. For example, in intelligent tutoring systems, it is possible to modify the sequence or type of questions asked so that students’ misunderstanding can be identified sooner. Similarly, in security applications, it may be possible to block some paths so that an attacker’s plan can be recognized earlier. To learn more, please see our <a href="https://www.youtube.com/watch?v=_17faWBmF14" target="_blank" rel="external nofollow noopener">tutorial on goal recognition design</a>, which we gave at ICAPS 2019. Slides available <a href="/assets/pdf/tutorial-icaps19-grd" target="_blank">here</a>.</p>
+
+<p>Our current research is on both the algorithmic back-end, where the goal is to enrich the models so as to better capture more realistic problem characteristics and develop efficient algorithms to solve them, as well as the user interface front-end, where the goal is to develop visualization interfaces that allow our methods to be adapted to specific applications and evaluated with human users.</p>
+
+<h2>sponsors</h2>
+
+<p></p>
+
+<p><img style="float: left; margin: 0px 10px 0px 0px;" src="/assets/img/jpmc.jpg" width="50px">
+<a href="https://www.jpmorgan.com/technology/artificial-intelligence/research-awards/faculty-research-awards-2022" rel="external nofollow noopener" target="_blank">Improving Client Experience Through Goal Recognition and Explainable Assistance in Adaptive Systems</a>.
+J.P. Morgan Chase Bank (2022 – 2023).</p>
+
+<p><img style="float: left; margin: 0px 10px 0px 0px;" src="/assets/img/boeing.png" width="50px">
+<a href="#">Integrated Computational and Cognitive Workflows for Improved Security and Usability</a>. <br>
+Boeing (2019).</p>
+
+<p><img style="float: left; margin: 0px 10px 0px 0px;" src="/assets/img/nsf.png" width="50px">
+<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1550662" rel="external nofollow noopener" target="_blank">CAREER: Decentralized Constraint-based Optimization for Multi-Agent Planning and Coordination</a>.
+National Science Foundation (2016 – 2021).<br></p>
+<font size="1"><br></font>
+
+<h3>selected publications</h3>
+
+<p></p>
+
+<div class="publications">
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">AAAI</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:conf/aaai/Wayllace022" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Stochastic Goal Recognition Design Problems with Suboptimal Agents</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://www.cwayllace.com/" rel="external nofollow noopener" target="_blank">Christabel Wayllace</a>, and <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In AAAI Conference on Artificial Intelligence</em>, 2022
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/aaai-Wayllace022.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Goal Recognition Design (GRD) problems identify the minimum number of environmental modifications aiming to force an interacting agent to reveal its goal as early as possible. Researchers proposed several extensions to the original model, some of them handling stochastic agent action outcomes. While this generalization is useful, it assumes optimal acting agents, which limits its applicability. This paper presents the Suboptimal Stochastic GRD model, where we consider boundedly rational agents that, due to limited resources, might follow a suboptimal policy. Inspired by theories on human behavior asserting that humans are (close to) optimal when making perceptual decisions, we assume the chosen policy has at most u suboptimal actions. Our contribution includes (i) Extending the stochastic goal recognition design framework by supporting suboptimal agents in cases where an observer has either full or partial observability; (ii) Presenting methods to evaluate the ambiguity of the model under these assumptions; and (iii) Evaluating our approach on a range of benchmark applications.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/aaai/Wayllace022</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Wayllace, Christabel and Yeoh, William}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Stochastic Goal Recognition Design Problems with Suboptimal Agents}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{{AAAI} Conference on Artificial Intelligence}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{9953--9961}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">ECAI</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:conf/ecai/WayllaceKGK0Z20" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Accounting for Observer’s Partial Observability in Stochastic Goal
+                  Recognition Design</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://www.cwayllace.com/" rel="external nofollow noopener" target="_blank">Christabel Wayllace</a>, <a href="https://sarahkeren.wixsite.com/sarahkeren-academics" rel="external nofollow noopener" target="_blank">Sarah Keren</a>, <a href="https://scholar.google.com/citations?user=APs1p2oAAAAJ" rel="external nofollow noopener" target="_blank">Avigdor Gal</a>, and
+          <span class="more-authors" title="click to view 3 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '3 more authors' ? 'Erez Karpas, William Yeoh, Shlomo Zilberstein' : '3 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">3 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In European Conference on Artificial Intelligence</em>, 2020
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/ecai-WayllaceKGK0Z20.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Motivated by security applications, where agent intentions are unknown, actions may have stochastic outcomes, and an observer may have an obfuscated view due to low sensor resolution, we introduce partially-observable states and unobservable actions into a stochastic goal recognition design framework. The proposed model is accompanied by a method for calculating the expected maximal number of steps before the goal of an agent is revealed and a new sensor refinement modification that can be applied to enhance goal recognition. A preliminary empirical evaluation on a range of benchmark applications shows the effectiveness of our approach.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/ecai/WayllaceKGK0Z20</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Wayllace, Christabel and Keren, Sarah and Gal, Avigdor and Karpas, Erez and Yeoh, William and Zilberstein, Shlomo}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Accounting for Observer's Partial Observability in Stochastic Goal
+                    Recognition Design}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{European Conference on Artificial Intelligence}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{2394--2401}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography">
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">IJCAI</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:conf/ijcai/WayllaceH017" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">New Metrics and Algorithms for Stochastic Goal Recognition Design
+                  Problems</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://www.cwayllace.com/" rel="external nofollow noopener" target="_blank">Christabel Wayllace</a>, <a href="https://www.linkedin.com/in/ping-hou-ba54aa17/" rel="external nofollow noopener" target="_blank">Ping Hou</a>, and <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In International Joint Conference on Artificial Intelligence</em>, 2017
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/ijcai-WayllaceH017.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Goal Recognition Design (GRD) problems involve identifying the best ways to modify the underlying environment that agents operate in, typically by making a subset of feasible actions infeasible, in such a way that agents are forced to reveal their goals as early as possible. The Stochastic GRD (S-GRD) model is an important extension that introduced stochasticity to the outcome of agent actions. Unfortunately, the worst-case distinctiveness (wcd) metric proposed for S-GRDs has a formal definition that is inconsistent with its intuitive definition, which is the maximal number of actions an agent can take, in the expectation, before its goal is revealed. In this paper, we make the following contributions: (1) We propose a new wcd metric, called all-goals wcd (wcdag), that remedies this inconsistency; (2) We introduce a new metric, called expected-case distinctiveness (ecd), that weighs the possible goals based on their likelihood of being the true goal; (3) We provide theoretical results comparing these different metrics as well as the complexity of computing them optimally; and (4) We describe new efficient algorithms to compute the wcdag and ecd values.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/ijcai/WayllaceH017</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Wayllace, Christabel and Hou, Ping and Yeoh, William}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{New Metrics and Algorithms for Stochastic Goal Recognition Design
+                    Problems}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{International Joint Conference on Artificial Intelligence}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{4455--4462}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2017}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">GameSec</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:conf/gamesec/AngCJY17" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Game-Theoretic Goal Recognition Models with Applications to Security
+                  Domains</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Samuel Ang, <a href="https://cse.unl.edu/~hchan/" rel="external nofollow noopener" target="_blank">Hau Chan</a>, Albert Xin Jiang, and
+          <span class="more-authors" title="click to view 1 more author" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '1 more author' ? 'William Yeoh' : '1 more author';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">1 more author</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In International Conference on Decision and Game Theory for Security</em>, 2017
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/gamesec-AngCJY17.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Motivated by the goal recognition (GR) and goal recognition design (GRD) problems in the artificial intelligence (AI) planning domain, we introduce and study two natural variants of the GR and GRD problems with strategic agents, respectively. More specifically, we consider game-theoretic (GT) scenarios where a malicious adversary aims to damage some target in an (physical or virtual) environment monitored by a defender. The adversary must take a sequence of actions in order to attack the intended target. In the GTGR and GTGRD settings, the defender attempts to identify the adversary?s intended target while observing the adversary?s available actions so that he/she can strengthens the target?s defense against the attack. In addition, in the GTGRD setting, the defender can alter the environment (e.g., adding roadblocks) in order to better distinguish the goal/target of the adversary.
+
+We propose to model GTGR and GTGRD settings as zero-sum stochastic games with incomplete information about the adversary?s intended target. The games are played on graphs where vertices represents states and edges are adversary?s actions. For the GTGR setting, we show that if the defender is restricted to playing only stationary strategies, the problem of computing optimal strategies (for both defender and adversary) can be formulated and represented compactly as a linear program. For the GTGRD setting, where the defender can choose K edges to block at the start of the game, we formulate the problem of computing optimal strategies as a mixed integer program, and present a heuristic algorithm based on LP duality and greedy methods. Experiments show that our heuristic algorithm achieves good performance (i.e., close to defender?s optimal value) with better scalability compared to the mixed-integer programming approach.
+
+In contrast with our research, existing work, especially on GRD problems, has focused almost exclusively on decision-theoretic paradigms, where the adversary chooses its actions without taking into account the fact that they may be observed by the defender. As such an assumption is unrealistic in GT scenarios, our proposed models and algorithms fill a significant gap in the literature.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/gamesec/AngCJY17</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Ang, Samuel and Chan, Hau and Jiang, Albert Xin and Yeoh, William}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Game-Theoretic Goal Recognition Models with Applications to Security
+                    Domains}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{International Conference on Decision and Game Theory for Security}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{256--272}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2017}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+</ol>
+
+  <ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">IJCAI</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:conf/ijcai/WayllaceH0S16" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Goal Recognition Design with Stochastic Agent Action Outcomes</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://www.cwayllace.com/" rel="external nofollow noopener" target="_blank">Christabel Wayllace</a>, <a href="https://www.linkedin.com/in/ping-hou-ba54aa17/" rel="external nofollow noopener" target="_blank">Ping Hou</a>, <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>, and
+          <span class="more-authors" title="click to view 1 more author" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '1 more author' ? 'Tran Cao Son' : '1 more author';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">1 more author</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In International Joint Conference on Artificial Intelligence</em>, 2016
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/ijcai-WayllaceH0S16.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Goal Recognition Design (GRD) problems involve identifying the best ways to modify the underlying environment that the agents operate in, typically by making a subset of feasible actions infeasible, in such a way that agents are forced to reveal their goals as early as possible. Thus far, existing work assumes that the outcomes of the actions of the agents are deterministic, which might be unrealistic in real-world problems. For example, wheel slippage in robots cause the outcomes of their movements to be stochastic. In this paper, we generalize the GRD problem to Stochastic GRD (S-GRD) problems, which handle stochastic action outcomes. We also generalize the worst-case distinctiveness (wcd) measure, which measures the goodness of a solution, to take stochasticity into account. Finally, we introduce Markov decision process (MDP) based algorithms to compute the wcd and minimize it by making up to k actions infeasible.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/ijcai/WayllaceH0S16</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Wayllace, Christabel and Hou, Ping and Yeoh, William and Son, Tran Cao}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Goal Recognition Design with Stochastic Agent Action Outcomes}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{International Joint Conference on Artificial Intelligence}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{3279--3285}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2016}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+  <ol class="bibliography"></ol>
+
+
+</div>
+
+          </article>
+
+        </div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Ferdinando  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+Last updated: August 30, 2023.
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  
+</body>
+</html>

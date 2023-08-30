@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ferdinando  Fioretto</title>
+    <meta name="author" content="Ferdinando  Fioretto">
+    <meta name="description" content="">
+    <meta name="keywords" content="Ferdinando Fioretto, AI, ML, Optimization, differential privacy, fairness, trustworthy, university of virginia">
+</head>
+<body>
+<p>
+'
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://nandofioretto.github.io/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  
+
+  <!-- Body -->
+  </p>
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/">home<span class="sr-only">(current)</span></a>
+              </li>
+              
+
+
+              <!-- Other pages -->
+              <!-- External links -->
+              <li class="nav-item">
+                <a class="nav-link" href="https://yeoh-lab.wustl.edu" rel="external nofollow noopener" target="_blank">research
+                </a>
+              </li>                            
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <!-- External links -->
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.cse.wustl.edu/~wyeoh/William%20Yeoh%20-%20CV.pdf" rel="external nofollow noopener" target="_blank">cv
+                </a>
+              </li>                            
+              <li class="nav-item ">
+                <a class="nav-link" href="/teaching/">teaching</a>
+              </li>                            
+              <li class="nav-item ">
+                <a class="nav-link" href="/contact/">contact</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- about.html -->
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">
+           <span class="font-weight-bold">Ferdinando</span>  Fioretto
+          </h1>
+          <p class="desc"></p>
+        </header>
+
+        <article>
+          <div class="profile float-right">
+
+              <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/profile-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/profile-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/profile-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/profile.jpg" class="img-fluid z-depth-1 rounded" width="auto" height="auto" alt="profile.jpg" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+          </div>
+
+          <div class="clearfix">
+            <p>I am an associate professor in computer science and engineering at Washington University in St. Louis, where I lead the <a href="http://yeoh-lab.wustl.edu/" rel="external nofollow noopener" target="_blank">YODA Lab</a>. I also direct the <a href="https://datasciences.wustl.edu/" rel="external nofollow noopener" target="_blank">Division of Computational and Data Sciences</a>, a new inter-disciplinary PhD program spanning the Computer Science and Engineering department, the Brown School of Social Work and Public Health, and the Political Science and Psychology and Brain Sciences departments in the College of Arts and Sciences.</p>
+
+<p>Prior to this, I was an assistant professor in the Department of Computer Science at New Mexico State University; a research scientist in the Living Analytics Research Center at Singapore Management University; and a post-doctoral research associate with <a href="http://rbr.cs.umass.edu/~shlomo/" rel="external nofollow noopener" target="_blank">Shlomo Zilberstein</a> in the Department of Computer Science at the University of Massachusetts at Amherst.</p>
+
+<p>I received my Ph.D. and M.S. in Computer Science from the University of Southern California, supervised by <a href="http://idm-lab.org/" rel="external nofollow noopener" target="_blank">Sven Koenig</a>, and my M.S. and B.S.E. in Mechanical Engineering and Applied Mechanics from the University of Pennsylvania, supervised by <a href="http://alliance.seas.upenn.edu/~kumar/wiki/" rel="external nofollow noopener" target="_blank">Vijay Kumar</a>.</p>
+
+<!--
+Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+
+Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+-->
+
+          </div>
+
+          <!-- News -->
+          <h2><a href="/news/" style="color: inherit;">recent news</a></h2>          <div class="news">
+            <div style="max-height: 100vw">
+              
+              <table class="news">
+              
+                <tr>
+                  <th scope="row">Jul 2023:</th>
+                  <td>
+                    Received an <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2244165" rel="external nofollow noopener" target="_blank">NSF grant</a> to <a href="https://ai-access.wustl.edu" rel="external nofollow noopener" target="_blank">train graduate students working in the intersection of AI and environmental social science</a>!
+
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">May 2023:</th>
+                  <td>
+                    Served as a program co-chair of <a href="https://aamas2023.soton.ac.uk/" rel="external nofollow noopener" target="_blank">AAMAS 2023</a>. Submit your autonomous agent and multiagent papers!
+
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Mar 2023:</th>
+                  <td>
+                    Received an <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2232055" rel="external nofollow noopener" target="_blank">NSF grant</a> to work on <a href="/projects/xaip/" target="_blank">fair and explainable scheduling</a>!
+Read more about it in this <a href="https://engineering.wustl.edu/news/2023/AI-assistance-in-pretrial-scheduling-could-provide-justice-for-all.html" rel="external nofollow noopener" target="_blank">WashU news article</a>.
+
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Feb 2023:</th>
+                  <td>
+                    ICAPS paper on <a href="../assets/pdf/icaps-KumarV023.pdf">fairness in ridesharing</a> accepted.
+
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Nov 2022:</th>
+                  <td>
+                    Received a <a href="https://www.jpmorgan.com/technology/artificial-intelligence/research-awards/faculty-research-awards-2022" rel="external nofollow noopener" target="_blank">J.P. Morgan Chase faculty research award</a> to work on <a href="/projects/goal-recognition/" target="_blank">goal recognition</a> and <a href="/projects/xaip/" target="_blank">explainable AI</a>! 
+Read more about it in this <a href="https://engineering.wustl.edu/news/2023/Three-computer-science-faculty-win-AI-research-awards.html" rel="external nofollow noopener" target="_blank">WashU news article</a>.
+
+                  </td>
+                </tr>
+              </table>
+              
+              
+            
+            
+            </div>
+          </div>
+
+          <!-- Latest posts -->
+          
+
+          <!-- Selected papers -->
+          <h2><a href="/publications/" style="color: inherit;">selected publications</a></h2>
+          <div class="publications">
+            <ol class="bibliography">
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">AIJ</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:journals/ai/HernandezYBZSKS23" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Simple and Efficient Bi-Objective Search Algorithms via Fast Dominance Checks</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://scholar.google.com/citations?user=dNsBXU8AAAAJ" rel="external nofollow noopener" target="_blank">Carlos Hernández</a>, <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>, <a href="https://scholar.google.ca/citations?user=7S6RcTYAAAAJ" rel="external nofollow noopener" target="_blank">Jorge A. Baier</a>, and
+          <span class="more-authors" title="click to view 4 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '4 more authors' ? 'Han Zhang, Luis Suazo, Sven Koenig, Oren Salzman' : '4 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">4 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>Artificial Intelligence</em>, 2023
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/ai-HernandezYBZSKS23.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Many interesting search problems can be formulated as bi-objective search problems, that is, search problems where two kinds of costs have to be minimized, for example, travel distance and time for transportation problems. Instead of looking for a single optimal path, we compute a Pareto-optimal frontier in bi-objective search, which is a set of paths in which no two paths dominate each other. Bi-objective search algorithms perform dominance checks each time a new path is discovered. Thus, the efficiency of these checks is key to performance. In this article, we propose algorithms for two kinds of bi-objective search problems. First, we consider the problem of computing the Pareto-optimal frontier of the paths that connect a given start state with a given goal state. We propose Bi-Objective A* (BOA*), a heuristic search algorithm based on A*, for this problem. Second, we consider the problem of computing one Pareto-optimal frontier for each state s of the search graph, which contains the paths that connect a given start state with s. We propose Bi-Objective Dijkstra (BOD), which is based on BOA*, for this problem. A common feature of BOA* and BOD is that all dominance checks are performed in constant time, unlike the dominance checks of previous algorithms. We show in our experimental evaluation that both BOA* and BOD are substantially faster than state-of-the-art bi-objective search algorithms.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">DBLP:journals/ai/HernandezYBZSKS23</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Hern{\'{a}}ndez, Carlos and Yeoh, William and Baier, Jorge A. and Zhang, Han and Suazo, Luis and Koenig, Sven and Salzman, Oren}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Simple and Efficient Bi-Objective Search Algorithms via Fast Dominance Checks}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Artificial Intelligence}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{314}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{103807}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">JAIR</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:journals/jair/RachmutZ022" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Communication-Aware Local Search for Distributed Constraint Optimization</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Ben Rachmut, <a href="https://tzin.bgu.ac.il/~zivanr/" rel="external nofollow noopener" target="_blank">Roie Zivan</a>, and <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>Journal of Artificial Intelligence Research</em>, 2022
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/jair-RachmutZ022.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Most studies investigating models and algorithms for distributed constraint optimization problems (DCOPs) assume that messages arrive instantaneously and are never lost. Specifically, distributed local search DCOP algorithms, have been designed as synchronous algorithms (i.e., they perform in synchronous iterations in which each agent exchanges messages with all its neighbors), despite running in asynchronous environments. This is true also for an anytime mechanism that reports the best solution explored during the run of synchronous distributed local search algorithms. Thus, when the assumption of perfect communication is relaxed, the properties that were established for the state-of-the-art local search algorithms and the anytime mechanism may not necessarily apply.
+  
+In this work, we address this limitation by: (1) Proposing a Communication-Aware DCOP model (CA-DCOP) that can represent scenarios with different communication disturbances; (2) Investigating the performance of existing local search DCOP algorithms, specifically Distributed Stochastic Algorithm (DSA) and Maximum Gain Messages (MGM), in the presence of message latency and message loss; (3) Proposing a latency-aware monotonic distributed local search DCOP algorithm; and (4) Proposing an asynchronous anytime framework for reporting the best solution explored by non-monotonic asynchronous local search DCOP algorithms. Our empirical results demonstrate that imperfect communication has a positive effect on distributed local search algorithms due to increased exploration. Furthermore, the asynchronous anytime framework we proposed allows one to benefit from algorithms with inherent explorative heuristics.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">DBLP:journals/jair/RachmutZ022</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Rachmut, Ben and Zivan, Roie and Yeoh, William}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Communication-Aware Local Search for Distributed Constraint Optimization}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Journal of Artificial Intelligence Research}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{75}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{637--675}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">JAIR</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:journals/jair/VasileiouYSKCM22" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">A Logic-Based Explanation Generation Framework for Classical and Hybrid Planning Problems</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://thestlucas.com/" rel="external nofollow noopener" target="_blank">Stylianos Loukas Vasileiou</a>, <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>, <a href="https://www.cs.nmsu.edu/~tson/" rel="external nofollow noopener" target="_blank">Tran Cao Son</a>, and
+          <span class="more-authors" title="click to view 3 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '3 more authors' ? 'Ashwin Kumar, Michael Cashmore, Daniele Magazzeni' : '3 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">3 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>Journal of Artificial Intelligence Research</em>, 2022
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/jair-VasileiouYSKCM22.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>In human-aware planning systems, a planning agent might need to explain its plan to a human user when that plan appears to be non-feasible or sub-optimal. A popular approach, called model reconciliation, has been proposed as a way to bring the model of the human user closer to the agent?s model. To do so, the agent provides an explanation that can be used to update the model of human such that the agent?s plan is feasible or optimal to the human user. Existing approaches to solve this problem have been based on automated planning methods and have been limited to classical planning problems only.
+
+In this paper, we approach the model reconciliation problem from a different perspective, that of knowledge representation and reasoning, and demonstrate that our approach can be applied not only to classical planning problems but also hybrid systems planning problems with durative actions and events/processes. In particular, we propose a logicbased framework for explanation generation, where given a knowledge base KBa (of an agent) and a knowledge base KBh (of a human user), each encoding their knowledge of a planning problem, and that KBa entails a query q (e.g., that a proposed plan of the agent is valid), the goal is to identify an explanation  ⊆KBa such that when it is used to update KBh, then the updated KBh also entails q. More specifically, we make the following contributions in this paper: (1) We formally define the notion of logic-based explanations in the context of model reconciliation problems; (2) We introduce a number of cost functions that can be used to reflect preferences between explanations; (3) We present algorithms to compute explanations for both classical planning and hybrid systems planning problems; and (4) We empirically evaluate their performance on such problems. Our empirical results demonstrate that, on classical planning problems, our approach is faster than the state of the art when the explanations are long or when the size of the knowledge base is small (e.g., the plans to be explained are short). They also demonstrate that our approach is efficient for hybrid systems planning problems.
+
+Finally, we evaluate the real-world efficacy of explanations generated by our algorithms through a controlled human user study, where we develop a proof-of-concept visualization system and use it as a medium for explanation communication.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">DBLP:journals/jair/VasileiouYSKCM22</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Vasileiou, Stylianos Loukas and Yeoh, William and Son, Tran Cao and Kumar, Ashwin and Cashmore, Michael and Magazzeni, Daniele}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{A Logic-Based Explanation Generation Framework for Classical and Hybrid Planning Problems}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Journal of Artificial Intelligence Research}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{73}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{1473--1534}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-1 abbr"><abbr class="badge">ICAPS</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="DBLP:conf/icaps/KumarV023" class="col-sm-10">
+        <!-- Title -->
+        <div class="title">Using Simple Incentives to Improve Two-Sided Fairness in Ridesharing Systems</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://sites.wustl.edu/ashwinkumar/" rel="external nofollow noopener" target="_blank">Ashwin Kumar</a>, <a href="https://vorobeychik.com/" rel="external nofollow noopener" target="_blank">Yevgeniy Vorobeychik</a>, and <a href="https://wyeoh.github.io/" rel="external nofollow noopener" target="_blank">William Yeoh</a>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In International Conference on Automated Planning and Scheduling</em>, 2023
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Awards -->
+          <div class="award">
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="/assets/pdf/icaps-KumarV023.pdf" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>State-of-the-art order dispatching algorithms for ridesharing batch passenger requests and allocate them to a fleet of vehicles in a centralized manner, optimizing over the estimated values of each passenger-vehicle matching using integer linear programming (ILP). Using good estimates of future values, such ILP-based approaches are able to significantly increase the service rates (percentage of requests served) for a fixed fleet of vehicles. However, such approaches that focus solely on maximizing efficiency can lead to disparities for both drivers (e.g., income inequality) and passengers (e.g., inequality of service for different groups). Existing approaches that consider fairness only do it for naive assignment policies, require extensive training, or look at only single-sided fairness. We propose a simple incentive-based fairness scheme that can be implemented online as a part of this ILP formulation that allows us to improve fairness over a variety of fairness metrics. Deriving from a lens of variance minimization, we describe how these fairness incentives can be formulated for two distinct use cases for passenger groups and driver fairness. We show that under mild conditions, our approach can guarantee an improvement in the chosen metric for the worst-off individual. We also show empirically that our Simple Incentives approach significantly outperforms prior art, despite requiring no retraining; indeed, it often leads to a large improvement over the state-of-the-art fairness-aware approach in both overall service rate and fairness.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DBLP:conf/icaps/KumarV023</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kumar, Ashwin and Vorobeychik, Yevgeniy and Yeoh, William}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Using Simple Incentives to Improve Two-Sided Fairness in Ridesharing Systems}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{International Conference on Automated Planning and Scheduling}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+</ol>
+          </div>
+
+
+          <!-- Social -->
+        </article>
+
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Ferdinando  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+Last updated: August 30, 2023.
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  
+</body>
+</html>
