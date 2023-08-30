@@ -1,8 +1,0 @@
-@inproceedings{Fioretto:AAAI-20,
-	title="Predicting AC Optimal Power Flows: Combining Deep Learning and Lagrangian Dual Methods",
-	author="Ferdinando Fioretto and Terrence W.K.~Mak and Pascal {Van Hentenryck}",
-	booktitle = "Proceedings of the {AAAI} Conference on Artificial Intelligence ({AAAI})",
-	pages = "",
-	year = "2020",
-	url = ""
-}

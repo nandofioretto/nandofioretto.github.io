@@ -1,8 +1,0 @@
-@inproceedings{fioretto:CP-16,
-  author    = "Ferdinando Fioretto and William Yeoh and Enrico Pontelli",
-  title     = "A Dynamic Programming-based {MCMC} Framework for Solving {DCOP}s with {GPU}s",
-  booktitle = "Proceedings of the International Conference on Principles and Practice of Constraint Programming {(CP)}",
-  year      = "2016",
-  pages     = "813--831",
-  url       = "http://dx.doi.org/10.1007/978-3-319-44953-1_51"
-}

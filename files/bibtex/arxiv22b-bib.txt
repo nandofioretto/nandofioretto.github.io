@@ -1,8 +1,0 @@
-@misc{fioretto:arxiv22b,
-      title={Differential Privacy and Fairness in Decisions and Learning Tasks: A Survey}, 
-      author={Ferdinando Fioretto and Cuong Tran and Pascal Van Hentenryck and Keyu Zhu},
-      year={2022},
-      eprint={2202.08187},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}

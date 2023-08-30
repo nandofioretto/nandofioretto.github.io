@@ -1,8 +1,0 @@
-@misc{chatzos:20_dlopf,
-    title={High-Fidelity Machine Learning Approximations of Large-Scale Optimal Power Flow},
-    author={Minas Chatzos and Ferdinando Fioretto and Terrence W. K. Mak and Pascal Van Hentenryck},
-    year={2020},
-    eprint={2006.16356},
-    archivePrefix={arXiv},
-    primaryClass={eess.SP}
-}

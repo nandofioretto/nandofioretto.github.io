@@ -1,6 +1,0 @@
-@inproceedings{fioretto:WCB-14,
-  author    = "Federico Campeotto and Alessandro Dal Pal{\`{u}} and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli",
-  title     = "Experimenting with FIASCO for protein structure prediction",
-  booktitle = "Proceedings of the Workshop on Constraint-Based-Methods for Bioinformatics {(WCB)}",
-  year      = "2014"
-}

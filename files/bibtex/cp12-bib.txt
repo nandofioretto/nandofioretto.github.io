@@ -1,8 +1,0 @@
-@inproceedings{fioretto:CP-12,
-  author    = "Federico Campeotto and Alessandro Dal Pal{\`{u}} and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli",
-  title     = "A Filtering Technique for Fragment Assembly-Based Proteins Loop Modeling with Constraints",
-  booktitle = "Proceedings of the International Conference on Principles and Practice of Constraint Programming {(CP)}",
-  pages     = "850--866",
-  year      = "2012",
-  url       = "http://dx.doi.org/10.1007/978-3-642-33558-7_61"
-} 

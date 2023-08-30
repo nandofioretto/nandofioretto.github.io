@@ -1,8 +1,0 @@
-@inproceedings{fioretto:AAMAS-17c,
-    author    = "Khoi D. Hoang and Ping Hou and Ferdinando Fioretto and Makoto Yokoo and William Yeoh and Roie Zivan",
-    title     = "Infinite-Horizon Proactive Dynamic {DCOPs}",
-    booktitle = "Proceedings of the International Joint Conference on Autonomous Agents and Multiagent Systems {(AAMAS)}",
-    year      = "2017",
-    pages     = "212--220",
-    url       = "http://dl.acm.org/citation.cfm?id=3091160"
-}

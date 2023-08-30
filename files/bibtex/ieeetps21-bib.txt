@@ -1,9 +1,0 @@
-@ARTICLE{Dvorkin:TSG21,
-  author={Dvorkin, Vladimir and Fioretto, Ferdinando and Van Hentenryck, Pascal and Pinson, Pierre and Kazempour, Jalal},
-  journal={IEEE Transactions on Power Systems}, 
-  title={Differentially Private Optimal Power Flow for Distribution Grids}, 
-  year={2021},
-  volume={36},
-  number={3},
-  pages={2186-2196},
-  doi={10.1109/TPWRS.2020.3031314}}

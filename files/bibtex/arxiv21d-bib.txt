@@ -1,8 +1,0 @@
-@misc{Nagar:2021,
-      title={A Privacy-Preserving and Trustable Multi-agent Learning Framework}, 
-      author={Anudit Nagar and Cuong Tran and Ferdinando Fioretto},
-      year={2021},
-      eprint={2106.01242},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}

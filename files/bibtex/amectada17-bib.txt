@@ -1,9 +1,0 @@
-@article{fioretto:amectada-17,
-  author 	= "Porag Chowdhury and Russell Y. Folk and Ferdinando Fioretto and Christopher Kiekintveld and William Yeoh",
-  title		= "Investigation of Learning Strategies for the {SPOT} Broker in {Power TAC}",
-  journal	= "Agent-Mediated Electronic Commerce. Designing Trading Strategies and Mechanisms for Electronic Markets ({AMEC/TADA})", 
-  volume	= "271",
-  pages		= "96--111",
-  year		= "2017",
-  publisher	= "Springer"
-}

@@ -1,8 +1,0 @@
-@misc{Dvorkin:2020,
-    title={Differentially Private Optimal Power Flow for Distribution Grids},
-    author={Vladimir Dvorkin and Ferdinando Fioretto and Pascal Van Hentenryck and Jalal Kazempour and Pierre Pinson},
-    year={2020},
-    eprint={2004.03921},
-    archivePrefix={arXiv},
-    primaryClass={math.OC}
-}

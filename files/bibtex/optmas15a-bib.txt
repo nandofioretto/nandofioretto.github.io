@@ -1,6 +1,0 @@
-@inproceedings{fioretto:OPTMAS-15a,
-  author    = "Ferdinando Fioretto and Tiep Le and William Yeoh and Enrico Pontelli and Tran Cao Son",
-  title     = "Improving {DPOP} with Branch Consistency for Solving Distributed Constraint Optimization Problems",
-  booktitle = "Proceeding of the International Workshop on Optimisation in Multi-Agent Systems {(OPTMAS)}",
-  year      = "2015"
-}

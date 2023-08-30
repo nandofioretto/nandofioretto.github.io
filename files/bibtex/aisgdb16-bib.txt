@@ -1,7 +1,0 @@
-@inproceedings{fioretto:AISGSB-16,
-  author    = "Khoi Hoang and Ferdinando Fioretto and Ping Hou and Makoto Yokoo and William Yeoh and Roie Zivan",
-  title     = "Proactive Dynamic {DCOP}s",
-  booktitle = "Proceedings of the {AAAI} Workshop on {AI} for Smart Grids and Smart Buildings ({AISGSB})",
-  year      = "2016",
-  url       = "http://www.aaai.org/ocs/index.php/WS/AAAIW16/paper/view/12593"
-}

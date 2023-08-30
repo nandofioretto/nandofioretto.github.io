@@ -1,6 +1,0 @@
-@inproceedings{fioretto:PARSEARCHOPT-14,
-  author    = "Federico Campeotto and Alessandro Dal Pal{\`{u}} and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli",
-  title     = "Towards a GPU-Based Parallel Constraint Solver",
-  booktitle = "Proceedings of the Workshop on Parallel Methods for Search & Optimization {(ParSearchOpt)}",
-  year      = "2014"
-}

@@ -1,8 +1,0 @@
-@misc{tran:20_fairdp,
-    title={Differentially Private and Fair Deep Learning: A Lagrangian Dual Approach},
-    author={Cuong Tran and Ferdinando Fioretto and Pascal Van Hentenryck},
-    year={2020},
-    eprint={2009.12562},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
-}

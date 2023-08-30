@@ -1,8 +1,0 @@
-@misc{zhu:20_postdp,
-    title={Bias and Variance of Post-processing in Differential Privacy},
-    author={Keyu Zhu and Pascal {Van Hentenryck} and Ferdinando Fioretto},
-    year={2020},
-    eprint={2010.04327},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
-}

@@ -1,9 +1,0 @@
-@misc{Fioretto:ArXiv20a,
-    title="Bilevel Optimization for Differentially Private Optimization",
-    author="Ferdinando Fioretto and Terrence {W.K. Mak} and Pascal {Van Hentenryck}",
-    year="2020",
-    eprint="2001.09508",
-    archivePrefix="arXiv",
-    primaryClass="math.OC"
-    secondaryClass="cs.AI,cs.CR"
-}

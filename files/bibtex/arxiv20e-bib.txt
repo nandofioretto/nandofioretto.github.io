@@ -1,8 +1,0 @@
-@misc{Dvorkin2020b,
-    title={Differentially Private Convex Optimization with Feasibility Guarantees},
-    author={Vladimir Dvorkin and Ferdinando Fioretto and Pascal Van Hentenryck and Jalal Kazempour and Pierre Pinson},
-    year={2020},
-    eprint={2006.12338},
-    archivePrefix={arXiv},
-    primaryClass={cs.CR}
-}

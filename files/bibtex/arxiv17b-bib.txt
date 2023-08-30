@@ -1,9 +1,0 @@
-@article{fioretto:arXiv-17b,
-    author    = "Ferdinando Fioretto and Agostino Dovier and William Yeoh and Enrico Pontelli and Roie Zivan",
-    title     = "Solving {DCOP}s with Distributed Large Neighborhood Search",
-    year      = "2017",
-    archivePrefix = "arXiv",
-    eprint    = "1702.06915",
-    primaryClass = "cs.AI",
-    url       = "https://arxiv.org/abs/1702.06915"
-}

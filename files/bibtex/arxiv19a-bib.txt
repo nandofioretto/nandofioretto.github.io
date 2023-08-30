@@ -1,9 +1,0 @@
-@article{fioretto:arXiv-19a,
-    author    = "Ferdinando Fioretto, {Terrence W.K.} Mak, Pascal {Van Hentenryck}",
-    title     = "Differential Privacy for Power Grid Obfuscation",
-    archivePrefix = "arXiv",
-    eprint    = "1901.06949",
-    primaryClass = "cs.AI",
-    year      = "2019",
-    url    = "https://arxiv.org/abs/1901.06949"
-}

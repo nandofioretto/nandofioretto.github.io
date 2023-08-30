@@ -1,9 +1,0 @@
-@article{fioretto:arXiv-16b,
-   author  		= "Ferdinando Fioretto and Enrico Pontelli and William Yeoh and Rina Detcher",
-   title   		= "Accelerating Exact and Approximate Inference for (Distributed) Discrete Optimization with GPUs",
-   year    		= "2016",
-   archivePrefix= "arXiv",
-   eprint 		= "1608.05288",
-   primaryClass = "cs.AI",
-   url			= "http://arxiv.org/abs/1608.05288"
-}

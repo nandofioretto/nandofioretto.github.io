@@ -1,7 +1,0 @@
-@article{Fioretto:ijcai-20a,
-  author="Ferdinando Fioretto and Lesia Mitridati and Pascal {Van Hentenryck}",
-  title="Differential Privacy for Stackelberg Games",
-  booktitle = "Proceedings of the International Joint Conference on Artificial Intelligence ({IJCAI})",
-  pages     = "TBA",
-  year      = "2020"
-}

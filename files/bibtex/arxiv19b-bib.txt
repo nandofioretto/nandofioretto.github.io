@@ -1,9 +1,0 @@
-@article{Fioretto:arXiv-19b,
-  author    = {Ferdinando Fioretto and
-               Terrence W. K. Mak and
-               Pascal Van Hentenryck},
-  title     = {Privacy-Preserving Obfuscation of Critical Infrastructure Networks},
-  journal   = {CoRR},
-  volume    = {abs/1905.09778},
-  year      = {2019}
-}

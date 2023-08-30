@@ -1,8 +1,0 @@
-@inproceedings{fioretto:AAMAS-17b,
-    author    = “Ferdinando Fioretto and William Yeoh and Enrico Pontelli and Ye Ma and Satishkumar Ranade”,
-    title     = "A Distributed Constraint Optimization ({DCOP}) Approach to the Economic Dispatch with Demand Response",
-    booktitle = "Proceedings of the International Joint Conference on Autonomous Agents and Multiagent Systems {(AAMAS)}",
-    year      = "2017",
-    pages     = "999--1007",
-    url       = "http://dl.acm.org/citation.cfm?id=3091267"
-}

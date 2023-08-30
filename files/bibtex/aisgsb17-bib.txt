@@ -1,6 +1,0 @@
-@inproceedings{fioretto:AISGSB-17,
-  author    = "Ferdinando Fioretto and William Yeoh and Enrico Pontelli",
-  title     = "A Multiagent System Approach to Scheduling Devices in Smart Homes",
-  booktitle = "Proceedings of the {AAAI} Workshop on {AI} for Smart Grids and Smart Buildings ({AISGSB})”,
-  year      = "2017"
-}

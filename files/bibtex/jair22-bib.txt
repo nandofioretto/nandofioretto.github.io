@@ -1,8 +1,0 @@
-@article{Hoang:JAIR22,
-  title="Proactive Dynamic Distributed Constraint Optimization Problems",
-  author="Khoi D. Hoang, Ferdinando Fioretto, Ping Hou, William Yeoh, Makoto Yokoo, Roie Zivan",
-  journal="Journal of Artificial Intelligence Research",
-  volume="73",
-  pages="",
-  year="2022"
-}

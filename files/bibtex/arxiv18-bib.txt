@@ -1,9 +1,0 @@
-@article{fioretto:arXiv-18,
-    author    = "Ferdinando Fioretto, Pascal {Van Hentenryck}",
-    title     = "Differential Private Stream Processing of Energy Consumption",
-    year      = "2018",
-    archivePrefix = "arXiv",
-    eprint    = "1808.01949",
-    primaryClass = "cs.CR",
-    url    = "https://arxiv.org/abs/1808.01949"
-}

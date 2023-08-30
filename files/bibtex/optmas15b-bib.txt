@@ -1,6 +1,0 @@
-@inproceedings{fioretto:OPTMAS-15b,
-  author    = "Ferdinando Fioretto and Federico Campeotto and Agostino Dovier and William Yeoh and Enrico Pontelli",
-  title     = "Large Neighborhood Search with Quality Guarantees for Distributed Constraint Optimization Problems",
-  booktitle = "Proceeding of the International Workshop on Optimisation in Multi-Agent Systems {(OPTMAS)}",
-  year      = "2015"
-}

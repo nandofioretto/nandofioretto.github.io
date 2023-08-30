@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# Set up autograder files
-
-cp -r /autograder/submission/myAgents.py /autograder/source/code/myAgents.py
-
-cd /autograder/source/code
-
-python3.6 autograder.py

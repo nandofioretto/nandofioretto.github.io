@@ -1,8 +1,0 @@
-@inproceedings{fioretto:AAAI-16,
- author     = "Ferdinando Fioretto and William Yeoh and Enrico Pontelli",
-  title     = "Multi-Variable Agents Decomposition for {DCOP}s",
-  booktitle = "Proceedings of the {AAAI} Conference on Artificial Intelligence ({AAAI})",
-  pages     = "2480--2486",
-  year      = "2016",
-  url       = "http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12093"
-}

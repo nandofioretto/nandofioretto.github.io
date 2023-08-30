@@ -1,6 +1,0 @@
-@inproceedings{fioretto:MPREF-16,
-  author    = "Atena M. Tabakhi and Ferdinando Fioretto and William Yeoh",
-  title     = "A Preliminary Study on Preference Elicitation in {DCOP}s for Scheduling Devices in Smart Buildings",
-  booktitle = "Proceedings of the International Workshop on Advances in Preference Handling {(MPREF)}",
-  year      = "2016"
-}

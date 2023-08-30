@@ -1,8 +1,0 @@
-@misc{kaur:2022,
-      title={Deadwooding: Robust Global Pruning for Deep Neural Networks}, 
-      author={Sawinder Kaur and Ferdinando Fioretto and Asif Salekin},
-      year={2022},
-      eprint={2202.05226},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}

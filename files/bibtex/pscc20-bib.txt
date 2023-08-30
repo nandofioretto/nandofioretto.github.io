@@ -1,8 +1,0 @@
-@ inproceedings{Fioretto:PSCC20,
-    title="Privacy-Preserving Obfuscation for Distributed Power Systems",
-    author="Terrence W.K. Mak, Ferdinando Fioretto and Pascal {Van Hentenryck}",
-    year="2020",
-    booktitle ="Power Systems Computation Conference",
-    pages="",
-    year="2020"
-}

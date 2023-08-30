@@ -1,7 +1,0 @@
-@inproceedings{fioretto:AAMAS-19,
-  author    = "Ferdinando Fioretto and Pascal {Van Hentenryck}",
-  title     = "Privacy-Preserving Federated Data Sharing",
-  booktitle = "Proceedings of the International Joint Conference on Autonomous Agents and Multiagent Systems {(AAMAS)}",
-  year      = "2019",
-  pages     = "638--646"
-}
