@@ -1,0 +1,53 @@
+<!-- _includes/people.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  {% if people.redirect -%}
+  <a href="{{ people.redirect }}">
+    {%- else -%}
+    <a href="{{ people.url | relative_url }}">
+      {%- endif %}
+      <div class="card hoverable">
+        {%- if people.img %}
+        {%- include figure.html
+          path=people.img
+          alt="people thumbnail" -%}
+        {%- endif %}
+        <div class="card-body">
+          <h5 class="card-title font-weight-light ">{{ people.title }}</h5>
+          {% if people.description != blank -%}
+          <h6 class="card-text font-weight-light">{{ people.description }}</h6>
+          {%- endif %}
+          {% if people.job != blank -%}
+          <p class="card-text font-weight-light">First job: <i>{{ people.job }}</i></p>
+          {%- endif %}
+          {% if people.research != blank -%}
+          <p class="card-text font-weight-light">Research area: {{ people.research }}</p>
+          {%- endif %}
+          {% if people.dissertation-title != blank -%}
+          <p class="card-text font-weight-light"><a href="{{ people.dissertation-url }}" target="_blank">Dissertation: {{ people.dissertation-title }}</a></p>
+          {%- endif %}
+          {% if people.thesis-title != blank -%}
+          <p class="card-text font-weight-light"><a href="{{ people.thesis-url }}" target="_blank">Thesis: {{ people.thesis-title }}</a></p>
+          {%- endif %}
+          {% if people.project-title != blank -%}
+          <p class="card-text font-weight-light">Project: {{ people.project-title }}</p>
+          {%- endif %}
+          {%- if people.github -%}
+          <div class="row ml-1 mr-1 p-0">
+            <div class="github-icon">
+              <div class="icon" data-toggle="tooltip" title="Code Repository">
+                <a href="{{ people.github }}"><i class="fab fa-github gh-icon"></i></a>
+              </div>
+              {%- if people.github_stars -%}
+              <span class="stars" data-toggle="tooltip" title="GitHub Stars">
+                <i class="fas fa-star"></i>
+                <span id="{{ people.github_stars }}-stars"></span>
+              </span>
+              {%- endif %}
+            </div>
+          </div>
+          {%- endif %}
+        </div>
+      </div>
+    </a>
+</div>
