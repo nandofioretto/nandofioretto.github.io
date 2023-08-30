@@ -1,0 +1,100 @@
+# Journals
+"AIJ":
+  url: https://www.sciencedirect.com/journal/artificial-intelligence
+  color: "#B9770E"
+
+"Constraints":
+  url: https://www.springer.com/journal/10601
+  color: "#B9770E"
+
+"JAIR":
+  url: https://www.jair.org/index.php/jair
+  color: "#B9770E"
+
+"EPSR":
+  url: https://www.sciencedirect.com/journal/electric-power-systems-research
+  color: "#B9770E"
+
+"TPWRS":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=59
+  color: "#B9770E"
+
+"IEEE TPWRS":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=59
+  color: "#B9770E"
+
+"TSG":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411
+  color: "#B9770E"
+
+"IEEE TSG":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5165411
+  color: "#B9770E"
+
+"IA":
+  url: https://content.iospress.com/journals/intelligenza-artificiale/17/1
+  color: "#B9770E"
+
+TOMACS:
+  url: https://dl.acm.org/journal/tomacs
+  color: "#B9770E"
+  
+# Conferences
+"AAMAS":
+    color: "#2874A6"
+
+"AAAI":
+    color: "#2874A6"
+
+"CP":
+    color: "#2874A6"
+
+"CPAIOR":
+    color: "#2874A6"
+
+"CMSB":
+    color: "#2874A6"
+
+"ECAI":
+    color: "#2874A6"
+
+"ECML":
+    color: "#2874A6"
+
+"IJCAI":
+    color: "#2874A6"
+
+"ISAIM":
+  color: "#2874A6"
+
+"ISGT":
+  color: "#2874A6"
+
+"NeurIPS":
+    color: "#2874A6"
+
+"PMAPS":
+  color: "#2874A6"
+
+"PRIMA":
+  color: "#2874A6"
+
+"PADL":
+  color: "#2874A6"
+
+"PSCC":
+  color: "#2874A6"
+
+"WWW":
+  color: "#2874A6"
+
+
+# Workshops
+"WCB":
+    color: "#17A589"
+
+"PPAI":
+    color: "#17A589"
+
+"TPDP":
+    color: "#17A589"

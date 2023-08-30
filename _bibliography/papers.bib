@@ -1,0 +1,1535 @@
+# There are several custom bibtex keywords that you can use to affect how the entries are displayed on the webpage:
+#
+# abbr: Adds an abbreviation to the left of the entry. You can add links to these by creating a venue.yaml-file in the _data folder and adding entries that match.
+# abstract: Adds an "Abs" button that expands a hidden text field when clicked to show the abstract text
+# arxiv: Adds a link to the Arxiv website (Note: only add the arxiv identifier here - the link is generated automatically)
+# bibtex_show: Adds a "Bib" button that expands a hidden text field with the full bibliography entry
+# html: Inserts an "HTML" button redirecting to the user-specified link
+# pdf: Adds a "PDF" button redirecting to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
+# supp: Adds a "Supp" button to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
+# blog: Adds a "Blog" button redirecting to the specified link
+# code: Adds a "Code" button redirecting to the specified link
+# poster: Adds a "Poster" button redirecting to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
+# slides: Adds a "Slides" button redirecting to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
+# website: Adds a "Website" button redirecting to the specified link
+# altmetric: Adds an Altmetric badge (Note: if DOI is provided just use true, otherwise only add the altmetric identifier here - the link is generated automatically)
+# dimensions: Adds a Dimensions badge (Note: if DOI or PMID is provided just use true, otherwise only add the Dimensions' identifier here - the link is generated automatically)
+# alsoin
+# alsoinyear
+# award
+# You can implement your own buttons by editing the bib.html file.
+# conferences
+@String{AAAI  = "AAAI Conference on Artificial Intelligence" }
+@String{AAMAS = "International Conference on Autonomous Agents and Multiagent Systems" }
+@String{ADT   = "Algorithmic Decision Theory {(ADT)}" }
+@String{CP    = "International Conference on Principles and Practice of Constraint Programming" }
+@String{CPAIOR = "Integration of Constraint Programming, Artificial Intelligence, and Operations Research"}
+@String{ECAI  = "European Conference on Artificial Intelligence" }
+@String{ECML  = "European Conference on Machine Learning" }
+@String{HCI   = "International Conference on Human Computer Interaction" }
+@String{IAT   = "International Conference on Intelligent Agent Technology" }
+@String{ICLP  = "International Conference on Logic Programming" }
+@String{ICMAS = "International Conference on Multi-Agent Systems" }
+@String{ICAART= "International Conference on Agents and Artificial Intelligence" }
+@String{IJCAI = "International Joint Conference on Artificial Intelligence" }
+@String{ICML =  "International Conference on Machine Learning" }
+@String{ISIAM = "International Symposium on Artificial Intelligence and Mathematics"}
+@String{NeurIPS  = "Advances in Neural Information Processing Systems" }
+@String{PRIMA = "Principles and Practice of Multi-Agent Systems" }
+@String{PAAMS = "Advances in Practical Applications of Heterogeneous Multi-Agent Systems" }
+@String{WWW   = "The {ACM} Web Conference"}
+@String{PMAPS =  "International Conference on Probabilistic Methods Applied to Power Systems"}
+
+# journals
+@String{AIJ = "Artificial Intelligence Journal" }
+@String{AImagazine = "AI Magazine" }
+@String{Constraints = "Constraints" }
+@String{ComputerJ = "Computer Journal" }
+@String{ComputerCom = "Computer Communications" }
+@String{JAIR = "Journal of Artificial Intelligence Research" }
+@String{ESA = "Expert Systems with Applications" }
+@String{TOPLAS = "ACM Transactions on Programming Languages and systems" }
+@String{JAAMAS = "Journal of Autonomous Agents and Multi-Agent Systems" }
+@String{TPWRS  = "IEEE Transactions on Power Systems"}
+@String{TSG    = "IEEE Transactions on Smart Grids"}
+
+@string{WCB = {Proceedings of the Workshop on Constraint-Based-Methods for Bioinformatics}}
+
+
+#################
+# 2023
+#################
+
+@article{MBF:epsr23,
+  author = {Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
+  title = {Gradient-enhanced physics-informed neural networks for power systems operational support},
+  journal = {Electric Power Systems Research},
+  volume = {223},
+  pages = {109551},
+  year = {2023},
+  issn = {0378-7796},
+  doi = {https://doi.org/10.1016/j.epsr.2023.109551},
+  url = {https://www.sciencedirect.com/science/article/pii/S0378779623004406},
+  abstract = {The application of deep learning methods to speed up the challenging power system problems has recently shown very encouraging results. However, power system dynamics are not snapshot, steady-state operations. These dynamics must be considered to ensure that the optimal solutions provided by these models adhere to practical constraints to avoid frequency fluctuations and grid instabilities. Unfortunately, dynamic system models based on ordinary or partial differential equations are frequently unsuitable for direct application in control or state estimates due to their high computational costs. To address these challenges, this paper introduces a machine learning method to approximate the behavior of power systems dynamics in near real-time. The proposed framework is based on gradient-enhanced physics-informed neural networks (gPINNs) and encodes the underlying physical laws governing power systems. A key characteristic of the proposed gPINN is its ability to train without the need of generating expensive training data. The paper illustrates the potential of the proposed approach in both forward and inverse problems in a single-machine infinite bus system and a three-bus power network for predicting rotor angles and frequency, and uncertain parameters such as inertia and damping to showcase its potential for a range of power systems applications. The model exhibited high accuracy in predicting the variables, achieving a range of 0.533–4.092 and an average L2 relative error improvement of up to 13.30× compared to the PINN model. The computational performance of the proposed gPINN model was compared to a conventional solver, revealing a remarkable speed-up of 31 to 171 times faster in solving differential–algebraic systems of equations in power systems.},
+  bibtex_show={true},
+  abbr = {EPSR},
+}
+
+@inproceedings{TZFvH:ijcai23,
+  author       = {Cuong Tran and Keyu Zhu and Ferdinando Fioretto and Pascal Van Hentenryck},
+  title        = {{SF-PATE:} Scalable, Fair, and Private Aggregation of Teacher Ensembles},
+  booktitle    = IJCAI,
+  publisher    = {ijcai.org},
+  pages        = {501--509},
+  year         = {2023},
+  url          = {https://doi.org/10.24963/ijcai.2023/56},
+  doi          = {10.24963/ijcai.2023/56},
+  abbr         = {IJCAI},
+  bibtex_show  = {true},
+  arxiv        = {2204.05157},
+  abstract     = {A critical concern in data-driven processes is to build models whose outcomes do not discriminate against some demographic groups, including gender, ethnicity, or age. To ensure non-discrimination in learning tasks, knowledge of the group attributes is essential. However, in practice, these attributes may not be available due to legal and ethical requirements. To address this challenge, this paper studies a model that protects the privacy of the individuals' sensitive information while also allowing it to learn non-discriminatory predictors. A key characteristic of the proposed model is to enable the adoption of off-the-selves and non-private fair models to create a privacy-preserving and fair model. The paper analyzes the relation between accuracy, privacy, and fairness, and the experimental evaluation illustrates the benefits of the proposed models on several prediction tasks. In particular, this proposal is the first to allow both scalable and accurate training of private and fair models for very large neural networks.}
+}
+
+@inproceedings{TF:ijcai23,
+  author       = {Cuong Tran and Ferdinando Fioretto},
+  title        = {On the Fairness Impacts of Private Ensembles Models},
+  booktitle    = IJCAI,
+  publisher    = {ijcai.org},
+  pages        = {510--518},
+  year         = {2023},
+  url          = {https://doi.org/10.24963/ijcai.2023/57},
+  doi          = {10.24963/ijcai.2023/57},
+  abbr         = {IJCAI},
+  alsoin       = {PPAI},
+  alsoinyear   = {2022},
+  bibtex_show  = {true},
+  arxiv        = {2109.08630},
+  selected     = {true},
+  abstract     = {The Private Aggregation of Teacher Ensembles (PATE) is a machine learning framework that enables the creation of private models through the combination of multiple "teacher" models and a "student" model. The student model learns to predict an output based on the voting of the teachers, and the resulting model satisfies differential privacy. PATE has been shown to be effective in creating private models in semi-supervised settings or when protecting data labels is a priority. This paper explores whether the use of PATE can result in unfairness, and demonstrates that it can lead to accuracy disparities among groups of individuals. The paper also analyzes the algorithmic and data properties that contribute to these disproportionate impacts, why these aspects are affecting different groups disproportionately, and offers recommendations for mitigating these effects.}
+}
+
+@inproceedings{KVF:ijcai23,
+  author       = {James Kotary and Vincenzo Di Vito and Ferdinando Fioretto},
+  title        = {Differentiable Model Selection for Ensemble Learning},
+  booktitle    = IJCAI,
+  publisher    = {ijcai.org},
+  pages        = {1954--1962},
+  year         = {2023},
+  url          = {https://doi.org/10.24963/ijcai.2023/217},
+  doi          = {10.24963/ijcai.2023/217},
+  abbr         = {IJCAI},
+  bibtex_show  = {true},
+  abstract     = {Model selection is a strategy aimed at creating accurate and robust models by identifying the optimal model for classifying any particular input sample. This paper proposes a novel framework for differentiable selection of groups of models by integrating machine learning and combinatorial optimization. The framework is tailored for ensemble learning with a strategy that learns to combine the predictions of appropriately selected pre-trained ensemble models. It does so by modeling the ensemble learning task as a differentiable selection program trained end-to-end over a pretrained ensemble to optimize task performance. The proposed framework demonstrates its versatility and effectiveness, outperforming conventional and advanced consensus rules across a variety of classification tasks.}
+}
+
+@inproceedings{KDF:ijcai23,
+  author       = {James Kotary and My H. Dinh and Ferdinando Fioretto},
+  title        = {Backpropagation of Unrolled Solvers with Folded Optimization},
+  booktitle    = IJCAI,
+  publisher    = {ijcai.org},
+  pages        = {1963--1970},
+  year         = {2023},
+  url          = {https://doi.org/10.24963/ijcai.2023/218},
+  doi          = {10.24963/ijcai.2023/218},
+  abbr         = {IJCAI},
+  bibtex_show  = {true},
+  arxiv        = {2301.12047},
+  selected     = {true},
+  abstract     = {The integration of constrained optimization models as components in deep networks has led to promising advances on many specialized learning tasks. A central challenge in this setting is backpropagation through the solution of an optimization problem, which typically lacks a closed form. One typical strategy is algorithm unrolling, which relies on automatic differentiation through the operations of an iterative solver. While flexible and general, unrolling can encounter accuracy and efficiency issues in practice. These issues can be avoided by analytical differentiation of the optimization, but current frameworks impose rigid requirements on the optimization problem's form. This paper provides theoretical insights into the backward pass of unrolled optimization, leading to a system for generating efficiently solvable analytical models of backpropagation. Additionally, it proposes a unifying view of unrolling and analytical differentiation through optimization mappings. Experiments over various model-based learning tasks demonstrate the advantages of the approach both computationally and in terms of enhanced expressiveness.}
+}
+
+@inproceedings{KVF:aamas23,
+  author       = {James Kotary and Vincenzo Di Vito and Ferdinando Fioretto},
+  title        = {End-to-End Optimization and Learning for Multiagent Ensembles},
+  booktitle    = AAMAS,
+  publisher    = {{ACM}},
+  pages        = {2613--2615},
+  year         = {2023},
+  url          = {https://dl.acm.org/doi/10.5555/3545946.3599019},
+  doi          = {10.5555/3545946.3599019},
+  abbr         = {AAMAS},
+  bibtex_show  = {true},
+  arxiv        = {2211.00251},
+  abstract     = {Ensemble learning is an important class of algorithms aiming at creating accurate machine learning models by combining predictions from individual agents. A key challenge for the design of these models is to create effective rules to combine individual predictions for any particular input sample. This paper proposes a unique integration of constrained optimization and learning to derive specialized consensus rules. The paper shows how to derive the ensemble learning task as end-to-end training of a discrete subset selection module. Results over standard benchmarks demonstrate an ability to substantially outperform conventional consensus rules in a variety of settings.}
+}
+
+@inproceedings{DFMB:isgt23,
+  author      = {My H. Dinh and Ferdinando Fioretto and Mostafa Mohammadian and Kyri Baker},
+  title       = {An Analysis of the Reliability of AC Optimal Power Flow Deep Learning Proxies},
+  booktitle   = {IEEE PES Innovative Smart Grid Technologies},
+  publisher   = {},
+  pages       = {},
+  year        = {2023},
+  url         = {https://ieee-isgt-latam.org},
+  doi         = {},
+  abbr        = {ISGT},
+  bibtex_show = {true},
+  arxiv       = {2111.11168},
+  abstract    = {Optimal Power Flow (OPF) is a fundamental problem in power systems. It is computationally challenging and a recent line of research has proposed the use of Deep Neural Networks (DNNs) to find OPF approximations at vastly reduced runtimes when compared to those obtained by classical optimization methods. While these works show encouraging results in terms of accuracy and runtime, little is known on why these models can predict OPF solutions accurately, as well as about their robustness. This paper provides a step forward to address this knowledge gap. The paper connects the volatility of the outputs of the generators to the ability of a learning model to approximate them, it sheds light on the characteristics affecting the DNN models to learn good predictors, and it proposes a new model that exploits the observations made by this paper to produce accurate and robust OPF predictions.}
+}
+
+@article{ZFvHDT:23,
+  author       = {Keyu Zhu and Ferdinando Fioretto and Pascal Van Hentenryck and Saswat Das and Christine Task},
+  title        = {Privacy and Bias Analysis of Disclosure Avoidance Systems},
+  journal      = {CoRR},
+  volume       = {abs/2301.12204},
+  year         = {2023},
+  doi          = {10.48550/arXiv.2301.12204},
+  arxiv        = {2301.12204},
+  abbr         = {ArXiv},
+  bibtex_show  = {true},
+  abstract     = {Disclosure avoidance (DA) systems are used to safeguard the confidentiality of data while allowing it to be analyzed and disseminated for analytic purposes. These methods, e.g., cell suppression, swapping, and k-anonymity, are commonly applied and may have significant societal and economic implications. However, a formal analysis of their privacy and bias guarantees has been lacking. This paper presents a framework that addresses this gap: it proposes differentially private versions of these mechanisms and derives their privacy bounds. In addition, the paper compares their performance with traditional differential privacy mechanisms in terms of accuracy and fairness on US Census data release and classification tasks. The results show that, contrary to popular beliefs, traditional differential privacy techniques may be superior in terms of accuracy and fairness to differential private counterparts of widely used DA mechanisms.}
+}
+
+@article{DF:23,
+  author       = {My H. Dinh and Ferdinando Fioretto},
+  title        = {Context-Aware Differential Privacy for Language Modeling},
+  journal      = {CoRR},
+  volume       = {abs/2301.12288},
+  year         = {2023},
+  doi          = {10.48550/arXiv.2301.12288},
+  arxiv        = {2301.12288},
+  abbr         = {ArXiv},
+  bibtex_show  = {true},
+  abstract     = {The remarkable ability of language models (LMs) has also brought challenges at the interface of AI and security. A critical challenge pertains to how much information these models retain and leak about the training data. This is particularly urgent as the typical development of LMs relies on huge, often highly sensitive data, such as emails and chat logs. To contrast this shortcoming, this paper introduces Context-Aware Differentially Private Language Model (CADP-LM) , a privacy-preserving LM framework that relies on two key insights: First, it utilizes the notion of \emph{context} to define and audit the potentially sensitive information. Second, it adopts the notion of Differential Privacy to protect sensitive information and characterize the privacy leakage. A unique characteristic of CADP-LM is its ability to target the protection of sensitive sentences and contexts only, providing a highly accurate private model. Experiments on a variety of datasets and settings demonstrate these strengths of CADP-LM.}
+}
+
+@article{TFKTP:23,
+  author       = {Khang Tran and Ferdinando Fioretto and Issa Khalil and My T. Thai and NhatHai Phan},
+  title        = {FairDP: Certified Fairness with Differential Privacy},
+  journal      = {CoRR},
+  volume       = {abs/2305.16474},
+  year         = {2023},
+  doi          = {10.48550/arXiv.2305.16474},
+  eprinttype    = {arXiv},
+  arxiv       = {2305.16474},
+  abbr         = {ArXiv},
+  bibtex_show  = {true},
+  abstract     = {This paper introduces FairDP, a novel mechanism designed to simultaneously ensure differential privacy (DP) and fairness. FairDP operates by independently training models for distinct individual groups, using group-specific clipping terms to assess and bound the disparate impacts of DP. Throughout the training process, the mechanism progressively integrates knowledge from group models to formulate a comprehensive model that balances privacy, utility, and fairness in downstream tasks. Extensive theoretical and empirical analyses validate the efficacy of FairDP, demonstrating improved trade-offs between model utility, privacy, and fairness compared with existing methods.}
+}
+
+@article{TF:23,
+  author       = {Cuong Tran and Ferdinando Fioretto},
+  title        = {Data Minimization at Inference Time},
+  journal      = {CoRR},
+  volume       = {abs/2305.17593},
+  year         = {2023},
+  doi          = {10.48550/arXiv.2305.17593},
+  arxiv        = {2305.17593},
+  abbr         = {ArXiv},
+  bibtex_show  = {true},
+  selected     = {true},
+  abstract     = {In domains with high stakes such as law, recruitment, and healthcare, learning models frequently rely on sensitive user data for inference, necessitating the complete set of features. This not only poses significant privacy risks for individuals but also demands substantial human effort from organizations to verify information accuracy. This paper asks whether it is necessary to use \emph{all} input features for accurate predictions at inference time. The paper demonstrates that, in a personalized setting, individuals may only need to disclose a small subset of their features without compromising decision-making accuracy. The paper also provides an efficient sequential algorithm to determine the appropriate attributes for each individual to provide. Evaluations across various learning tasks show that individuals can potentially report as little as 10\% of their information while maintaining the same accuracy level as a model that employs the full set of user information.}
+}
+
+@article{MKBMBTF:23,
+  author       = {Jayanta Mandi and James Kotary and Senne Berden and Maxime Mulamba and Victor Bucarey and Tias Guns and Ferdinando Fioretto},
+  title        = {Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities},
+  journal      = {CoRR},
+  volume       = {abs/2307.13565},
+  year         = {2023},
+  doi          = {10.48550/arXiv.2307.13565},
+  arxiv        = {2307.13565},
+  abbr         = {ArXiv},
+  bibtex_show  = {true},
+  selected     = {true},
+  abstract     =  {Decision-focused learning (DFL) is an emerging paradigm in machine learning which trains a model to optimize decisions, integrating prediction and optimization in an end-to-end system. This paradigm holds the promise to revolutionize decision-making in many real-world applications which operate under uncertainty, where the estimation of unknown parameters within these decision models often becomes a substantial roadblock. This paper presents a comprehensive review of DFL. It provides an in-depth analysis of the various techniques devised to integrate machine learning and optimization models, introduces a taxonomy of DFL methods distinguished by their unique characteristics, and conducts an extensive empirical evaluation of these methods proposing suitable benchmark dataset and tasks for DFL. Finally, the study provides valuable insights into current and potential future avenues in DFL research.}
+}
+
+@article{DF:23,
+  author      = {Vladimir Dvorkin and Ferdinando Fioretto},
+  title       = {Price-Aware Deep Learning for Electricity Markets},
+  journal     = {CoRR},
+  volume      = {abs/2308.01436},
+  year        = {2023},
+  doi         = {10.48550/arXiv.2308.01436},
+  arxiv       = {2308.01436},
+  abbr        = {ArXiv},
+  bibtex_show = {true},
+  abstract    = {While deep learning gradually penetrates operational planning, its inherent prediction errors may significantly affect electricity prices. This letter examines how prediction errors propagate into electricity prices, revealing notable pricing errors and their spatial disparity in congested power systems. To improve fairness, we propose to embed electricity market-clearing optimization as a deep learning layer. Differentiating through this layer allows for balancing between prediction and pricing errors, as oppose to minimizing prediction errors alone. This layer implicitly optimizes fairness and controls the spatial distribution of price errors across the system. We showcase the price-aware deep learning in the nexus of wind power forecasting and short-term electricity market clearing.}
+}
+
+#################
+# 2022
+#################
+
+@article{HFHYY:jairZ22,
+  author       = {Khoi D. Hoang and Ferdinando Fioretto and Ping Hou and William Yeoh and Makoto Yokoo and Roie Zivan},
+  title        = {Proactive Dynamic Distributed Constraint Optimization Problems},
+  journal      = JAIR,
+  volume       = {74},
+  pages        = {179--225},
+  year         = {2022},
+  url          = {https://doi.org/10.1613/jair.1.13499},
+  doi          = {10.1613/jair.1.13499},
+  abbr         = {JAIR},
+  bibtex_show  = {true},
+  abstract     = {The Distributed Constraint Optimization Problem (DCOP) formulation is a powerful tool for modeling multi-agent coordination problems. To solve DCOPs in a dynamic environment, Dynamic DCOPs (D-DCOPs) have been proposed to model the inherent dynamism present in many coordination problems. D-DCOPs solve a sequence of static problems by reacting to changes in the environment as the agents observe them. Such reactive approaches ignore knowledge about future changes of the problem. To overcome this limitation, we introduce Proactive Dynamic DCOPs (PD-DCOPs), a novel formalism to model D-DCOPs in the presence of exogenous uncertainty. In contrast to reactive approaches, PD-DCOPs are able to explicitly model possible changes of the problem and take such information into account when solving the dynamically changing problem in a proactive manner. The additional expressivity of this formalism allows it to model a wider variety of distributed optimization problems. Our work presents both theoretical and practical contributions that advance current dynamic DCOP models: (i) We introduce Proactive Dynamic DCOPs (PD-DCOPs), which explicitly model how the DCOP will change over time; (ii) We develop exact and heuristic algorithms to solve PD-DCOPs in a proactive manner; (iii) We provide theoretical results about the complexity of this new class of DCOPs; and (iv) We empirically evaluate both proactive and reactive algorithms to determine the trade-offs between the two classes. The final contribution is important as our results are the first that identify the characteristics of the problems that the two classes of algorithms excel in.}
+}
+
+@inproceedings{TFKN:neurips22,
+  author      = {Cuong Tran and Ferdinando Fioretto and Jung-Eun Kim and Rakshit Naidu},
+  booktitle   = NeurIPS,
+  title       = {Pruning has a disparate impact on model accuracy},
+  year        = {2022},
+  volume      = {35},
+  pages       = {},
+  url         = {https://openreview.net/forum?id=11nMVZK0WYM},
+  publisher   = {Curran Associates, Inc.},
+  arxiv       = {2205.13574},
+  bibtex_show = {true},
+  abbr        = {NeurIPS},
+  selected     = {true},
+  award       = {Spotlight Presentation},
+  abstract    = {Network pruning is a widely-used compression technique that is able to significantly scale down overparameterized models with minimal loss of accuracy. This paper shows that pruning may create or exacerbate disparate impacts. The paper sheds light on the factors to cause such disparities, suggesting differences in gradient norms and distance to decision boundary across groups to be responsible for this critical issue. It analyzes these factors in detail, providing both theoretical and empirical support, and proposes a simple, yet effective, solution that mitigates the disparate impacts caused by pruning.}
+}
+
+@inproceedings{KFH:aaai22,
+  author       = {James Kotary and Ferdinando Fioretto and Pascal Van Hentenryck},
+  title        = {Fast Approximations for Job Shop Scheduling: {A} Lagrangian Dual Deep Learning Method},
+  booktitle    = AAAI,
+  publisher    = {{AAAI} Press},
+  pages        = {7239--7246},
+  year         = {2022},
+  url          = {https://ojs.aaai.org/index.php/AAAI/article/view/20685},
+  arxiv        = {2110.06365},
+  abbr         = {AAAI},
+  bibtex_show  = {true},
+  abstract     = {The Jobs Shop Scheduling problem (JSP) is a canonical combinatorial optimization problem that is routinely solved for a variety of industrial purposes. It models the optimal scheduling of multiple sequences of tasks, each under a fixed order of operations, in which individual tasks require exclusive access to a predetermined resource for a specified processing time. The problem is NP-hard and computationally challenging even for medium-sized instances. Motivated by the increased stochasticity in production chains, this paper explores a deep learning approach to deliver efficient and accurate approximations to the JSP. In particular, this paper proposes the design of a deep neural network architecture to exploit the problem structure, its integration with Lagrangian duality to capture the problem constraints, and a post-processing optimization, to guarantee solution feasibility. The resulting method, called JSP-DNN, is evaluated on hard JSP instances from the JSPLIB benchmark library and is shown to produce JSP approximations of high quality at negligible computational costs.}
+}
+
+@inproceedings{ZFH:ijcai22,
+  author       = {Keyu Zhu and Ferdinando Fioretto and Pascal Van Hentenryck},
+  title        = {Post-processing of Differentially Private Data: {A} Fairness Perspective},
+  booktitle    = IJCAI,
+  publisher    = {ijcai.org},
+  pages        = {4029--4035},
+  year         = {2022},
+  url          = {https://doi.org/10.24963/ijcai.2022/559},
+  doi          = {10.24963/ijcai.2022/559},
+  arxiv        = {2201.09425},
+  abbr         = {IJCAI},
+  bibtex_show  = {true},
+  selected     = {true},
+  abstract     = {Post-processing immunity is a fundamental property of differential privacy: it enables arbitrary data-independent transformations to differentially private outputs without affecting their privacy guarantees. Post-processing is routinely applied in data-release applications, including census data, which are then used to make allocations with substantial societal impacts. This paper shows that post-processing causes disparate impacts on individuals or groups and analyzes two critical settings: the release of differentially private datasets and the use of such private datasets for downstream decisions, such as the allocation of funds informed by US Census data. In the first setting, the paper proposes tight bounds on the unfairness for traditional post-processing mechanisms, giving a unique tool to decision makers to quantify the disparate impacts introduced by their release. In the second setting, this paper proposes a novel post-processing mechanism that is (approximately) optimal under different fairness metrics, either reducing fairness issues substantially or reducing the cost of privacy. The theoretical analysis is complemented with numerical simulations on Census data.}
+}
+
+@inproceedings{FHZ:ijcai22,
+  author       = {Ferdinando Fioretto and Cuong Tran and Pascal Van Hentenryck and Keyu Zhu},
+  title        = {Differential Privacy and Fairness in Decisions and Learning Tasks: {A} Survey},
+  booktitle    = IJCAI,
+  publisher    = {ijcai.org},
+  pages        = {5470--5477},
+  year         = {2022},
+  url          = {https://doi.org/10.24963/ijcai.2022/766},
+  doi          = {10.24963/ijcai.2022/766},
+  arxiv        = {2202.08187},
+  abbr         = {IJCAI},
+  bibtex_show  = {true},
+  selected     = {true},
+  abstract     = {This paper surveys the recent work in the intersection of differential privacy (DP) and fairness. It focuses on surveying the work observing that DP systems may exacerbate bias and disparate impacts for different groups of individuals. The survey reviews the conditions under which privacy and fairness may be aligned or contrasting goals, analyzes how and why DP exacerbates bias and unfairness in decision problems and learning tasks, and reviews the available solutions to mitigate the fairness issues arising in DP systems. The survey provides a unified understanding of the main challenges and potential risks arising when deploying privacy-preserving machine learning or decisions making tasks under a fairness lens.}
+}
+
+@inproceedings{F:ijcai22,
+  author       = {Ferdinando Fioretto},
+  title        = {Integrating Machine Learning and Optimization to Boost Decision Making},
+  booktitle    = IJCAI,
+  publisher    = {ijcai.org},
+  pages        = {5808--5812},
+  year         = {2022},
+  url          = {https://doi.org/10.24963/ijcai.2022/815},
+  doi          = {10.24963/ijcai.2022/815},
+  abbr         = {IJCAI},
+  bibtex_show  = {true},
+  selected     = {true},
+  award        = {Early Career Spotlight},
+  abstract     = {This paper presents a conceptual review of our recent advancements in the integration of machine learning and optimization. It focuses on describing new hybrid machine learning and optimization methods to predict fast, approximate, solutions to combinatorial problems and to enable structural logical inference.}
+}
+
+@inproceedings{KFHZ:WWW22,
+  author       = {James Kotary and Ferdinando Fioretto and Pascal Van Hentenryck and Ziwei Zhu},
+  title        = {End-to-End Learning for Fair Ranking Systems},
+  booktitle    = WWW,
+  publisher    = {{ACM}},
+  pages        = {3520--3530},
+  year         = {2022},
+  url          = {https://doi.org/10.1145/3485447.3512247},
+  doi          = {10.1145/3485447.3512247},
+  abbr         = {WWW},
+  arxiv        = {2111.10723},
+  bibtex_show  = {true},
+  selected     = {true},
+  abstract     = {The learning-to-rank problem aims at ranking items to maximize exposure of those most relevant to a user query. A desirable property of such ranking systems is to guarantee some notion of fairness among specified item groups. While fairness has recently been considered in the context of learning-to-rank systems, current methods cannot provide guarantees on the fairness of the predicted rankings. This paper addresses this gap and introduces Smart Predict and Optimize for Fair Ranking (SPOFR), an integrated optimization and learning framework for fairness-constrained learning to rank. The end-to-end SPOFR framework includes a constrained optimization sub-model and produces ranking policies that are guaranteed to satisfy fairness constraints, while allowing for fine control of the fairness-utility tradeoff. SPOFR is shown to significantly improve on current state-of-the-art fair learning-to-rank systems with respect to established performance metrics.}
+}
+
+@inproceedings{MRHF:pmaps22,
+  author    = {Lesia Mitridati and Emma Romei and Gabriela Hug and Ferdinando Fioretto},
+  title     = {Differentially-Private Heat and Electricity Markets Coordination},
+  booktitle = PMAPS,
+  year      = {2022},
+  pages     = {1-6},
+  doi       = {10.1109/PMAPS53380.2022.9810564},
+  abbr         = {PMAPS},
+  bibtex_show  = {true},
+  abstract     = {Sector coordination between heat and electricity systems has been identified has an energy-efficient and cost-effective way to transition towards a more sustainable energy system. However, the coordination of sequential markets relies on the exchange of sensitive information between the market operators, namely time series of consumers' loads. To address the privacy concerns arising from this exchange, this paper introduces a novel privacy-preserving Stackelberg mechanism (w-PPSM) which generates differentially-private data streams with high fidelity. The proposed w-PPSM enforces the feasibility and fidelity of the privacy-preserving data with respect to the original problem through a post-processing phase in order to achieve a close-to-optimal coordination between the markets. Multiple numerical simulations in a realistic energy system demonstrate the effectiveness of the w-PPSM, which achieves up to two orders of magnitude reduction in the cost of privacy compared to a traditional differentially-private mechanism.}
+}
+
+@inproceedings{MBDF:pmaps22,
+  author       = {Mostafa Mohammadian and Kyri Baker and My H. Dinh and Ferdinando Fioretto},
+  title        = {Learning Solutions for Intertemporal Power Systems Optimization with Recurrent Neural Networks},
+  booktitle    = PMAPS,
+  year         = {2022},
+  pages        = {1-6},
+  doi          = {10.1109/PMAPS53380.2022.9810638},
+  abbr         = {PMAPS},
+  bibtex_show  = {true},
+  abstract     = {Learning mappings between system loading and optimal dispatch solutions has been a recent topic of interest in the power systems and machine learning communities. However, previous works have ignored practical power system constraints such as generator ramp limits and other intertemporal requirements. Additionally, optimal power flow runs are not performed independently of previous timesteps - in most cases, an OPF solution representing the current state of the system is heavily related to the OPF solution from previous timesteps. In this paper, we train a recurrent neural network, which embeds natural relationships between timesteps, to predict the optimal solution of convex power systems optimization problems with intertemporal constraints. In contrast to traditional forecasting methods, the computational benefits from this technique can allow operators to rapidly simulate forecasts of system operation and corresponding optimal solutions to provide a more comprehensive view of future system states.}
+}
+
+@article{TZFvH:22,
+  author       = {Cuong Tran and Keyu Zhu and Ferdinando Fioretto and Pascal Van Hentenryck},
+  title        = {Fairness Increases Adversarial Vulnerability},
+  journal      = {CoRR},
+  volume       = {abs/2211.11835},
+  year         = {2022},
+  url          = {https://doi.org/10.48550/arXiv.2211.11835},
+  doi          = {10.48550/arXiv.2211.11835},
+  arxiv       = {2211.11835},
+  abbr        = {ArXiv},
+  bibtex_show = {true},
+  selected     = {false},
+  abstract     = {The remarkable performance of deep learning models and their applications in consequential domains (e.g., facial recognition) introduces important challenges at the intersection of equity and security. Fairness and robustness are two desired notions often required in learning models. Fairness ensures that models do not disproportionately harm (or benefit) some groups over others, while robustness measures the models' resilience against small input perturbations.
+This paper shows the existence of a dichotomy between fairness and robustness, and analyzes when achieving fairness decreases the model robustness to adversarial samples. The reported analysis sheds light on the factors causing such contrasting behavior, suggesting that distance to the decision boundary across groups as a key explainer for this behavior. Extensive experiments on non-linear models and different architectures validate the theoretical findings in multiple vision domains. Finally, the paper proposes a simple, yet effective, solution to construct models achieving good tradeoffs between fairness and robustness.}
+}
+
+@article{DFvHPK:22,
+  author       = {Vladimir Dvorkin and Ferdinando Fioretto and Pascal Van Hentenryck and Pierre Pinson and Jalal Kazempour},
+  title        = {Privacy-Preserving Convex Optimization: When Differential Privacy Meets Stochastic Programming},
+  journal      = {CoRR},
+  volume       = {abs/2006.12338},
+  year         = {2022},
+  url          = {https://arxiv.org/abs/2006.12338},
+  abbr         = {ArXiv},
+  arxiv        = {2209.14152},
+  bibtex_show = {true},
+  abstract     = {Convex optimization finds many real-life applications, where - optimized on real data - optimization results may expose private data attributes (e.g., individual health records, commercial information, etc.), thus leading to privacy breaches. To avoid these breaches and formally guarantee privacy to optimization data owners, we develop a new privacy-preserving perturbation strategy for convex optimization programs by combining stochastic (chance-constrained) programming and differential privacy. Unlike standard noise-additive strategies, which perturb either optimization data or optimization results, we express the optimization variables as functions of the random perturbation using linear decision rules; we then optimize these rules to accommodate the perturbation within the problem's feasible region by enforcing chance constraints. This way, the perturbation is feasible and makes different, yet adjacent in the sense of a given distance function, optimization datasets statistically similar in randomized optimization results, thereby enabling probabilistic differential privacy guarantees. The chance-constrained optimization additionally internalizes the conditional value-at-risk measure to model the tolerance towards the worst-case realizations of the optimality loss with respect to the non-private solution. We demonstrate the privacy properties of our perturbation strategy analytically and through optimization and machine learning applications.}
+}
+
+@article{MBF:22,
+  author       = {Mostafa Mohammadian and Kyri Baker and Ferdinando Fioretto},
+  title        = {Gradient-Enhanced Physics-Informed Neural Networks for Power Systems Operational Support},
+  journal      = {CoRR},
+  volume       = {abs/2206.10579},
+  year         = {2022},
+  url          = {https://doi.org/10.48550/arXiv.2206.10579},
+  doi          = {10.48550/arXiv.2206.10579},
+  abbr        = {ArXiv},
+  arxiv       = {2206.10579},
+  bibtex_show = {true},
+  abstract    = {The application of deep learning methods to speed up the resolution of challenging power flow problems has recently shown very encouraging results. However, power system dynamics are not snap-shot, steady-state operations. These dynamics must be considered to ensure that the optimal solutions provided by these models adhere to practical dynamical constraints, avoiding frequency fluctuations and grid instabilities. Unfortunately, dynamic system models based on ordinary or partial differential equations are frequently unsuitable for direct application in control or state estimates due to their high computational costs. To address these challenges, this paper introduces a machine learning method to approximate the behavior of power systems dynamics in near real time. The proposed framework is based on gradient-enhanced physics-informed neural networks (gPINNs) and encodes the underlying physical laws governing power systems. A key characteristic of the proposed gPINN is its ability to train without the need of generating expensive training data. The paper illustrates the potential of the proposed approach in both forward and inverse problems in a single-machine infinite bus system for predicting rotor angles and frequency, and uncertain parameters such as inertia and damping to showcase its potential for a range of power systems applications.}
+}
+
+@article{KFS:22,
+  author       = {Sawinder Kaur and Ferdinando Fioretto and Asif Salekin},
+  title        = {Deadwooding: Robust Global Pruning for Deep Neural Networks},
+  journal      = {CoRR},
+  volume       = {abs/2202.05226},
+  year         = {2022},
+  url          = {https://arxiv.org/abs/2202.05226},
+  abbr         = {ArXiv},
+  arxiv        = {2202.05226},
+  bibtex_show  = {true},
+  abstract     = {The ability of Deep Neural Networks to approximate highly complex functions is key to their success. This benefit, however, comes at the expense of a large model size, which challenges its deployment in resource-constrained environments. Pruning is an effective technique used to limit this issue, but often comes at the cost of reduced accuracy and adversarial robustness. This paper addresses these shortcomings and introduces Deadwooding, a novel global pruning technique that exploits a Lagrangian Dual method to encourage model sparsity while retaining accuracy and ensuring robustness. The resulting model is shown to significantly outperform the state-of-the-art studies in measures of robustness and accuracy.}
+}
+
+#################
+# 2021
+#################
+
+@article{FvHZ:AIJ21,
+	title        = {Differential Privacy of Hierarchical Census Data: An Optimization Approach},
+	author       = {Ferdinando Fioretto and Pascal {Van Hentenryck} and Keyu Zhu},
+	journal      = AIJ,
+  volume       = {296},
+  pages        = {103475},
+  year         = {2021},
+  url          = {https://doi.org/10.1016/j.artint.2021.103475},
+  doi          = {10.1016/j.artint.2021.103475},
+  arxiv        = {2006.15673},
+  abbr         = {AIJ},
+  bibtex_show  = {true},
+  selected     = {true},
+  award        = {Invited in the IJCAI-21 Journal Track},
+  abstract     = {This paper is motivated by applications of a Census Bureau interested in releasing aggregate socio-economic data about a large population without revealing sensitive information about any individual. The released information can be the number of individuals living alone, the number of cars they own, or their salary brackets. Recent events have identified some of the privacy challenges faced by these organizations [1]. To address them, this paper presents a novel differential-privacy mechanism for releasing hierarchical counts of individuals. The counts are reported at multiple granularities (e.g., the national, state, and county levels) and must be consistent across all levels. The core of the mechanism is an optimization model that redistributes the noise introduced to achieve differential privacy in order to meet the consistency constraints between the hierarchical levels. The key technical contribution of the paper shows that this optimization problem can be solved in polynomial time by exploiting the structure of its cost functions. Experimental results on very large, real datasets show that the proposed mechanism provides improvements of up to two orders of magnitude in terms of computational efficiency and accuracy with respect to other state-of-the-art techniques.}
+}
+
+@article{DFvHPK:tpwrs21,
+  author       = {Vladimir Dvorkin and Ferdinando Fioretto and Pascal {Van Hentenryck} and Pierre Pinson and Jalal Kazempour},
+  title        = {Differentially Private Optimal Power Flow for Distribution Grids},
+  journal      = TPWRS,
+  year         = {2021},
+  volume       = {36},
+  number       = {3},
+  pages        = {2186--2196},
+  doi          = {10.1109/TPWRS.2020.3031314},
+  url          = {https://ieeexplore.ieee.org/document/9226144},
+  abbr         = {TPWRS},
+  bibtex_show  = {true},
+  selected     = {true},
+  award        = {2022 TPWRS Best Paper Award},
+  abstract     = {Although distribution grid customers are obliged to share their consumption data with distribution system operators (DSOs), a possible leakage of this data is often disregarded in operational routines of DSOs. This paper introduces a privacy-preserving optimal power flow (OPF) mechanism for distribution grids that secures customer privacy from unauthorised access to OPF solutions, e.g., current and voltage measurements. The mechanism is based on the framework of differential privacy that allows to control the participation risks of individuals in a dataset by applying a carefully calibrated noise to the output of a computation. Unlike existing private mechanisms, this mechanism does not apply the noise to the optimization parameters or its result. Instead, it optimizes OPF variables as affine functions of the random noise, which weakens the correlation between the grid loads and OPF variables. To ensure feasibility of the randomized OPF solution, the mechanism makes use of chance constraints enforced on the grid limits. The mechanism is further extended to control the optimality loss induced by the random noise, as well as the variance of OPF variables. The paper shows that the differentially private OPF solution does not leak customer loads up to specified parameters.}
+}
+
+@inproceedings{TMF:neurips21,
+  author      = {Cuong Tran and My Dinh and Ferdinando Fioretto},
+  title       = {Differentially Private Empirical Risk Minimization under the Fairness Lens},
+  booktitle   = NeurIPS,
+  publisher   = {Curran Associates, Inc.},
+  year        = {2021},
+  volume      = {34},
+  pages       = {27555--27565},
+  arxiv       = {2106.02674},
+  url         = {https://openreview.net/forum?id=7EFdodSWee4},
+  bibtex_show = {true},
+  abbr        = {NeurIPS},
+  selected     = {true},
+  abstract    = {Differential Privacy (DP) is an important privacy-enhancing technology for private machine learning systems. It allows to measure and bound the risk associated with an individual participation in a computation. However, it was recently observed that DP learning systems may exacerbate bias and unfairness for different groups of individuals. This paper builds on these important observations and sheds light on the causes of the disparate impacts arising in the problem of differentially private empirical risk minimization. It focuses on the accuracy disparity arising among groups of individuals in two well-studied DP learning methods: output perturbation and differentially private stochastic gradient descent. The paper analyzes which data and model properties are responsible for the disproportionate impacts, why these aspects are affecting different groups disproportionately and proposes guidelines to mitigate these effects. The proposed approach is evaluated on several datasets and settings.}
+}
+
+@inproceedings{KFvH:neurips21,
+  author      = {James Kotary and Ferdinando Fioretto and Pascal {Van Hentenryck}},
+  title       = {Learning Hard Optimization Problems: A Data Generation Perspective},
+  booktitle   = NeurIPS,
+  publisher   = {Curran Associates, Inc.},
+  year        = {2021},
+  volume      = {34},
+  pages       = {24981--24992},
+  url         = {https://openreview.net/forum?id=2zO2lb7ykMD},
+  arxiv       = {2106.02601},
+  bibtex_show = {true},
+  abbr        = {NeurIPS},
+  abstract    = {Optimization problems are ubiquitous in our societies and are present in almost every segment of the economy. Most of these optimization problems are NP-hard and computationally demanding, often requiring approximate solutions for large-scale instances. Machine learning frameworks that learn to approximate solutions to such hard optimization problems are a potentially promising avenue to address these difficulties, particularly when many closely related problem instances must be solved repeatedly. Supervised learning frameworks can train a model using the outputs of pre-solved instances. However, when the outputs are themselves approximations, when the optimization problem has symmetric solutions, and/or when the solver uses randomization, solutions to closely related instances may exhibit large differences and the learning task can become inherently more difficult. This paper demonstrates this critical challenge, connects the volatility of the training data to the ability of a model to approximate it, and proposes a method for producing (exact or approximate) solutions to optimization problems that are more amenable to supervised learning tasks. The effectiveness of the method is tested on hard non-linear nonconvex and discrete combinatorial problems.}
+}
+
+@inproceedings{TFvH:aaai21,
+  author       = {Cuong Tran and Ferdinando Fioretto and Pascal {Van Hentenryck}},
+  title        = {Differentially Private and Fair Deep Learning: {A} Lagrangian Dual Approach},
+  booktitle    = AAAI,
+  publisher    = {{AAAI} Press},
+  pages        = {9932--9939},
+  year         = {2021},
+  url          = {https://ojs.aaai.org/index.php/AAAI/article/view/17193},
+  bibtex_show  = {true},
+  abbr         = {AAAI},
+  arxiv        = {2009.12562},
+  alsoin       = {PPAI},
+  alsoinyear   = {2021},
+  selected     = {true},
+  abstract     = {A critical concern in data-driven decision making is to build models whose outcomes do not discriminate against some demographic groups, including gender, ethnicity, or age. To ensure non-discrimination in learning tasks, knowledge of the sensitive attributes is essential, while, in practice, these attributes may not be available due to legal and ethical requirements. To address this challenge, this paper studies a model that protects the privacy of the individuals’ sensitive information while also allowing it to learn non-discriminatory predictors. The method relies on the notion of differential privacy and the use of Lagrangian duality to design neural networks that can accommodate fairness constraints while guaranteeing the privacy of sensitive attributes. The paper analyses the tension between accuracy, privacy, and fairness and the experimental evaluation illustrates the benefits of the proposed model on several prediction tasks.}
+}
+
+@inproceedings{ZHF:aaai21,
+  author       = {Keyu Zhu and Pascal Van Hentenryck and Ferdinando Fioretto},
+  title        = {Bias and Variance of Post-processing in Differential Privacy},
+  booktitle    = AAAI,
+  pages        = {11177--11184},
+  publisher    = {{AAAI} Press},
+  year         = {2021},
+  url          = {https://ojs.aaai.org/index.php/AAAI/article/view/17333},
+  bibtex_show  = {true},
+  abbr         = {AAAI},
+  selected     = {true},
+  arxiv        = {2010.04327},
+  abstract     = {Post-processing immunity is a fundamental property of differential privacy: it enables the application of arbitrary data-independent transformations to the results of differentially private outputs without affecting their privacy guarantees. When query outputs must satisfy domain constraints, post-processing can be used to project them back onto the feasibility region. Moreover, when the feasible region is convex, a widely adopted class of post-processing steps is also guaranteed to improve accuracy. Post-processing has been applied successfully in many applications including census data, energy systems, and mobility. However, its effects on the noise distribution is poorly understood: It is often argued that post-processing may introduce bias and increase variance. This paper takes a first step towards understanding the properties of post-processing. It considers the release of census data and examines, both empirically and theoretically, the behavior of a widely adopted class of post-processing functions.}
+}
+
+@inproceedings{TFHY:ijcai21,
+  author       = {Cuong Tran and Ferdinando Fioretto and Pascal {Van Hentenryck} and Zhiyan Yao},
+  title        = {Decision Making with Differential Privacy under a Fairness Lens},
+  booktitle    = IJCAI,
+  publisher    = {ijcai.org},
+  pages        = {560--566},
+  year         = {2021},
+  url          = {https://doi.org/10.24963/ijcai.2021/78},
+  doi          = {10.24963/ijcai.2021/78},
+  bibtex_show  = {true},
+  abbr         = {IJCAI},
+  award        = {2022 Caspar Bowden PET award},
+  arxiv        = {2105.07513},
+  alsoin       = {TPDP},
+  alsoinyear    = {2021},
+  selected     = {true},
+  abstract     = {Agencies, such as the U.S. Census Bureau, release data sets and statistics about groups of individuals that are used as input to a number of critical decision processes. To conform to privacy and confidentiality requirements, these agencies are often required to release privacy-preserving versions of the data. This paper studies the release of differentially private data sets and analyzes their impact on some critical resource allocation tasks under a fairness perspective. {The paper shows that, when the decisions take as input differentially private data}, the noise added to achieve privacy disproportionately impacts some groups over others. The paper analyzes the reasons for these disproportionate impacts and proposes guidelines to mitigate these effects. The proposed approaches are evaluated on critical decision problems that use differentially private census data.}
+}
+
+@inproceedings{KFHW:ijcai21,
+  author       = {James Kotary and Ferdinando Fioretto and Pascal {Van Hentenryck} and Bryan Wilder},
+  title        = {End-to-End Constrained Optimization Learning: {A} Survey},
+  booktitle    = IJCAI,
+  publisher    = {ijcai.org},
+  pages        = {4475--4482},
+  year         = {2021},
+  url          = {https://doi.org/10.24963/ijcai.2021/610},
+  doi          = {10.24963/ijcai.2021/610},
+  bibtex_show  = {true},
+  abbr         = {IJCAI},
+  arxiv        = {2103.16378},
+  selected     = {true},
+  abstract     = {This paper surveys the recent attempts at leveraging machine learning to solve constrained optimization problems. It focuses on surveying the work on integrating combinatorial solvers and optimization methods with machine learning architectures. These approaches hold the promise to develop new hybrid machine learning and optimization methods to predict fast, approximate, solutions to combinatorial problems and to enable structural logical inference. This paper presents a conceptual review of the recent advancements in this emerging area.}
+}
+
+@inproceedings{NTF:aamas21,
+  author       = {Anudit Nagar and Cuong Tran and Ferdinando Fioretto},
+  title        = {Privacy-Preserving and Accountable Multi-agent Learning},
+  booktitle    = AAMAS,
+  publisher    = {{ACM}},
+  pages        = {1605--1606},
+  year         = {2021},
+  url          = {https://www.ifaamas.org/Proceedings/aamas2021/pdfs/p1605.pdf},
+  doi          = {10.5555/3463952.3464174},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  arxiv        = {2106.01242},
+  abstract     = {Distributed multi-agent learning enables agents to cooperatively train a model without requiring to share their datasets. While this setting ensures some level of privacy, it has been shown that, even when data is not directly shared, the training process is vulnerable to privacy attacks including data reconstruction and model inversion attacks. Additionally, malicious agents that train on inverted labels or random data, may arbitrarily weaken the accuracy of the global model. This paper addresses these challenges and presents Privacy-preserving and Accountable Distributed Learning (PA-DL), a fully decentralized framework that relies on Differential Privacy to guarantee strong privacy protection of the agents data, and Ethereum smart contracts to ensure accountability.}
+}
+
+@inproceedings{F:cp21,
+  author       = {Ferdinando Fioretto},
+  title        = {Constrained-Based Differential Privacy (Invited Talk)},
+  booktitle    = CP,
+  series       = {LIPIcs},
+  volume       = {210},
+  pages        = {2:1--2:1},
+  publisher    = {Schloss Dagstuhl},
+  year         = {2021},
+  url          = {https://doi.org/10.4230/LIPIcs.CP.2021.2},
+  doi          = {10.4230/LIPIcs.CP.2021.2},
+  bibtex_show  = {true},
+  abbr         = {CP}
+}
+
+@article{MFvH:21,
+  author       = {Terrence W. K. Mak and Ferdinando Fioretto and Pascal {Van Hentenryck}},
+  title        = {Load Embeddings for Scalable {AC-OPF} Learning},
+  journal      = {CoRR},
+  volume       = {abs/2101.03973},
+  year         = {2021},
+  url          = {https://arxiv.org/abs/2101.03973},
+  abbr         = {ArXiv},
+  eprint       = {2101.03973},
+  bibtex_show  = {true},
+  abstract     = {The AC Optimal Power Flow (AC-OPF) problem is a core building block in electrical transmission system. It seeks the most economical active and reactive generation dispatch to meet demands while satisfying transmission operational limits. It is often solved repeatedly, especially in regions with large penetration of wind farms to avoid violating operational and physical limits. Recent work has shown that deep learning techniques have huge potential in providing accurate approximations of AC-OPF solutions. However, deep learning approaches often suffer from scalability issues, especially when applied to real life power grids. This paper focuses on the scalability limitation and proposes a load compression embedding scheme to reduce training model sizes using a 3-step approach. The approach is evaluated experimentally on large-scale test cases from the PGLib, and produces an order of magnitude improvements in training convergence and prediction accuracy.}
+}
+
+@article{TDBF:21,
+  author       = {Cuong Tran and My H. Dinh and Kyle Beiter and Ferdinando Fioretto},
+  title        = {A Fairness Analysis on Private Aggregation of Teacher Ensembles},
+  journal      = {CoRR},
+  volume       = {abs/2109.08630},
+  year         = {2021},
+  url          = {https://arxiv.org/abs/2109.08630},
+  abbr         = {ArXiv},
+  arxiv       = {2109.08630},
+  bibtex_show  = {true},
+  abstract     = {The Private Aggregation of Teacher Ensembles (PATE) is an important private machine learning framework. It combines multiple learning models used as teachers for a student model that learns to predict an output chosen by noisy voting among the teachers. The resulting model satisfies differential privacy and has been shown effective in learning high-quality private models in semisupervised settings or when one wishes to protect the data labels.
+  This paper asks whether this privacy-preserving framework introduces or exacerbates bias and unfairness and shows that PATE can introduce accuracy disparity among individuals and groups of individuals. The paper analyzes which algorithmic and data properties are responsible for the disproportionate impacts, why these aspects are affecting different groups disproportionately, and proposes guidelines to mitigate these effects. The proposed approach is evaluated on several datasets and settings.}
+}
+
+@article{DBLP:journals/corr/abs-2111-11168,
+  author       = {My H. Dinh and Ferdinando Fioretto and Mostafa Mohammadian and Kyri Baker},
+  title        = {Towards Understanding the Unreasonable Effectiveness of Learning {AC-OPF} Solutions},
+  journal      = {CoRR},
+  volume       = {abs/2111.11168},
+  year         = {2021},
+  url          = {https://arxiv.org/abs/2111.11168},
+  abbr         = {ArXiv},
+  arxiv       = {2111.11168},
+  bibtex_show  = {true},
+  abstract    = {Optimal Power Flow (OPF) is a fundamental problem in power systems. It is computationally challenging and a recent line of research has proposed the use of Deep Neural Networks (DNNs) to find OPF approximations at vastly reduced runtimes when compared to those obtained by classical optimization methods. While these works show encouraging results in terms of accuracy and runtime, little is known on why these models can predict OPF solutions accurately, as well as about their robustness. This paper provides a step forward to address this knowledge gap. The paper connects the volatility of the outputs of the generators to the ability of a learning model to approximate them, it sheds light on the characteristics affecting the DNN models to learn good predictors, and it proposes a new model that exploits the observations made by this paper to produce accurate and robust OPF predictions.}
+}
+
+
+#################
+# 2020
+#################
+
+@article{DBLP:journals/aim/BangBBCCCCCDDEF20,
+  author       = {Grace Bang and
+                  Guy Barash and
+                  Ryan Beal and
+                  Jacques Cal{\`{\i}} and
+                  Mauricio Castillo{-}Effen and
+                  Xin Cynthia Chen and
+                  Niyati Chhaya and
+                  Rachel Cummings and
+                  Rohan Dhoopar and
+                  Sebastijan Dumancic and
+                  Hu{\'{a}}scar Espinoza and
+                  Eitan Farchi and
+                  Ferdinando Fioretto and
+                  Raquel Fuentetaja and
+                  Christopher William Geib and
+                  Odd Erik Gundersen and
+                  Jos{\'{e}} Hern{\'{a}}ndez{-}Orallo and
+                  Xiaowei Huang and
+                  Kokil Jaidka and
+                  Sarah Keren and
+                  Seokhwan Kim and
+                  Michel Galley and
+                  Xiaomo Liu and
+                  Tyler Lu and
+                  Zhiqiang Ma and
+                  Richard Mallah and
+                  John A. McDermid and
+                  Martin Michalowski and
+                  Reuth Mirsky and
+                  Se{\'{a}}n {\'{O}} h{\'{E}}igeartaigh and
+                  Deepak Ramachandran and
+                  Javier Segovia Aguas and
+                  Onn Shehory and
+                  Arash Shaban{-}Nejad and
+                  Vered Shwartz and
+                  Siddharth Srivastava and
+                  Kartik Talamadupula and
+                  Jian Tang and
+                  Pascal Van Hentenryck and
+                  Dell Zhang and
+                  Jian Zhang},
+  title        = {The Association for the Advancement of Artificial Intelligence 2020 Workshop Program},
+  journal      = {{AI} Magazine},
+  volume       = {41},
+  number       = {4},
+  pages        = {100--114},
+  year         = {2020},
+  url          = {https://doi.org/10.1609/aimag.v41i4.7398},
+  doi          = {10.1609/aimag.v41i4.7398},
+  bibtex_show  = {true},
+  abbr         = {{AI} Mag.}
+}
+
+@article{FMH:tsg20,
+  author       = {Ferdinando Fioretto and Terrence W. K. Mak and Pascal {Van Hentenryck}},
+  title        = {Differential Privacy for Power Grid Obfuscation},
+  journal      = TSG,
+  volume       = {11},
+  number       = {2},
+  pages        = {1356--1366},
+  year         = {2020},
+  url          = {https://doi.org/10.1109/TSG.2019.2936712},
+  doi          = {10.1109/TSG.2019.2936712},
+  bibtex_show  = {true},
+  abbr         = {TSG},
+  arxiv        = {1901.06949},
+  selected     = {true},
+  abstract     = {The availability of high-fidelity energy networks brings significant value to academic and commercial research. However, such releases also raise fundamental concerns related to privacy and security as they can reveal sensitive commercial information and expose system vulnerabilities. This paper investigates how to release the data for power networks where the parameters of transmission lines and transformers are obfuscated. It does so by using the framework of Differential Privacy (DP), that provides strong privacy guarantees and has attracted significant attention in recent years. Unfortunately, simple DP mechanisms often result in AC-infeasible networks. To address these concerns, this paper presents a novel differentially private mechanism that guarantees AC-feasibility and largely preserves the fidelity of the obfuscated power network. Experimental results also show that the obfuscation significantly reduces the potential damage of an attack carried by exploiting the released dataset.}
+}
+
+ continue from here
+@article{Mak:TPS20,
+  author		=	{Mak, Terrence W. K. and Fioretto, Ferdinando and Shi, Lyndon and Van Hentenryck, Pascal},
+  journal		= TPWRS,
+  title 		= {Privacy-Preserving Power System Obfuscation: A Bilevel Optimization Approach},
+  year		  = {2020},
+  volume		= {35},
+  number		= {2},
+  pages			= {1627-1637},
+  doi 			= {10.1109/TPWRS.2019.2945069},
+  abbr      = {TPWRS},
+  award     = {2021 TPWRS Best Paper Award},
+  selected     = {true},
+  abstract  = {This paper considers the problem of releasing optimal power flow (OPF) test cases that preserve the privacy of customers (loads) using the notion of Differential Privacy. It is motivated by the observation that traditional differential privacy algorithms are not suitable for releasing privacy preserving OPF test cases: The added noise fundamentally changes the nature of the underlying optimization and often leads to test cases with no solutions. To remedy this limitation, the paper introduces the OPF Load Indistinguishability (OLI) problem, which guarantees load privacy while satisfying the OPF constraints and remaining close to the optimal dispatch cost. The paper introduces an exact mechanism, based on bilevel optimization, as well as three mechanisms that approximate the OLI problem accurately. These mechanisms enjoy desirable theoretical properties, and the computational experiments show that they produce orders of magnitude improvements over standard approaches on an extensive collection of test cases.}
+}
+
+@inproceedings{FMH:aaai20,
+  author       = {Ferdinando Fioretto and Terrence W. K. Mak and Pascal Van Hentenryck},
+  title        = {Predicting {AC} Optimal Power Flows: Combining Deep Learning and Lagrangian Dual Methods},
+  booktitle    = AAAI,
+  pages        = {630--637},
+  publisher    = {{AAAI} Press},
+  year         = {2020},
+  url          = {https://ojs.aaai.org/index.php/AAAI/article/view/5403},
+  bibtex_show  = {true},
+  abbr         = {AAAI},
+  arxiv        = {1909.10461},
+  selected     = {true},
+  abstract     = {The Optimal Power Flow (OPF) problem is a fundamental building block for the optimization of electrical power systems. It is nonlinear and nonconvex and computes the generator setpoints for power and voltage, given a set of load demands. It is often solved repeatedly under various conditions, either in real-time or in large-scale studies. This need is further exacerbated by the increasing stochasticity of power systems due to renewable energy sources in front and behind the meter. To address these challenges, this paper presents a deep learning approach to the OPF. The learning model exploits the information available in the similar states of the system (which is commonly available in practical applications), as well as a dual Lagrangian method to satisfy the physical and engineering constraints present in the OPF. The proposed model is evaluated on a large collection of realistic medium-sized power systems. The experimental results show that its predictions are highly accurate with average errors as low as 0.2%. Additionally, the proposed approach is shown to improve the accuracy of the widely adopted linear DC approximation by at least two orders of magnitude.}
+}
+
+@inproceedings{FMH:ijcai20,
+  author       = {Ferdinando Fioretto and Lesia Mitridati and Pascal {Van Hentenryck}},
+  title        = {Differential Privacy for Stackelberg Games},
+  booktitle    = IJCAI,
+  pages        = {3480--3486},
+  publisher    = {ijcai.org},
+  year         = {2020},
+  url          = {https://doi.org/10.24963/ijcai.2020/481},
+  doi          = {10.24963/ijcai.2020/481},
+  bibtex_show  = {true},
+  abbr         = {IJCAI},
+  arxiv        = {2002.00944},
+  abstract     = {This paper introduces a differentially private (DP) mechanism to protect the information exchanged during the coordination of sequential and interdependent markets. This coordination represents a classic Stackelberg game and relies on the exchange of sensitive information between the system agents. The paper is motivated by the observation that the perturbation introduced by traditional DP mechanisms fundamentally changes the underlying optimization problem and even leads to unsatisfiable instances. To remedy such limitation, the paper introduces the Privacy-Preserving Stackelberg Mechanism (PPSM), a framework that enforces the notions of feasibility and fidelity of the privacy-preserving information to the original problem objective. PPSM complies with the notion of differential privacy and ensures that the outcomes of the privacy-preserving coordination mechanism are close-to-optimality for each agent. Experimental results on several gas and electricity market benchmarks based on a real case study demonstrate the effectiveness of the approach.}
+}
+
+@inproceedings{FvH:IJCAI20,
+  author       = {Ferdinando Fioretto and Pascal Van Hentenryck},
+  title        = {OptStream: Releasing Time Series Privately (Extended Abstract)},
+  booktitle    = IJCAI,
+  pages        = {5135--5139},
+  publisher    = {ijcai.org},
+  year         = {2020},
+  url          = {https://doi.org/10.24963/ijcai.2020/722},
+  doi          = {10.24963/ijcai.2020/722},
+  bibtex_show  = {true},
+  abbr         = {IJCAI},
+  arxiv        = {1808.01949},
+  abstract     = {Many applications of machine learning and optimization operate on data streams. While these datasets are fundamental to fuel decision-making algorithms, often they contain sensitive information about individuals, and their usage poses significant privacy risks. Motivated by an application in energy systems, this paper presents OptStream, a novel algorithm for releasing differentially private data streams under the w-event model of privacy. OptStream is a 4-step procedure consisting of sampling, perturbation, reconstruction, and post-processing modules. First, the sampling module selects a small set of points to access in each period of interest. Then, the perturbation module adds noise to the sampled data points to guarantee privacy. Next, the reconstruction module reassembles non-sampled data points from the perturbed sample points. Finally, the post-processing module uses convex optimization over the privacy-preserving output of the previous modules, as well as the privacy-preserving answers of additional queries on the data stream, to improve accuracy by redistributing the added noise. OptStream is evaluated on a test case involving the release of a real data stream from the largest European transmission operator. Experimental results show that OptStream may not only improve the accuracy of state-of-the-art methods by at least one order of magnitude but also supports accurate load forecasting on the privacy-preserving data.},
+  note         = {Appeared in JAIR 2019}
+}
+
+@inproceedings{FvHMTBL:ecml20,
+  author       = {Ferdinando Fioretto and Pascal {Van Hentenryck} and Terrence W. K. Mak and Cuong Tran and Federico Baldo and Michele Lombardi},
+  title        = {Lagrangian Duality for Constrained Deep Learning},
+  booktitle    = ECML,
+  series       = {Lecture Notes in Computer Science},
+  volume       = {12461},
+  pages        = {118--135},
+  publisher    = {Springer},
+  year         = {2020},
+  url          = {https://doi.org/10.1007/978-3-030-67670-4\_8},
+  doi          = {10.1007/978-3-030-67670-4\_8},
+  bibtex_show  = {true},
+  abbr         = {ECML},
+  arxiv        = {2001.09394},
+  abstract     = {This paper explores the potential of Lagrangian duality for learning applications that feature complex constraints. Such constraints arise in many science and engineering domains, where the task amounts to learning optimization problems which must be solved repeatedly and include hard physical and operational constraints. The paper also considers applications where the learning task must enforce constraints on the predictor itself, either because they are natural properties of the function to learn or because it is desirable from a societal standpoint to impose them. This paper demonstrates experimentally that Lagrangian duality brings significant benefits for these applications. In energy domains, the combination of Lagrangian duality and deep learning can be used to obtain state-of-the-art results to predict optimal power flows, in energy systems, and optimal compressor settings, in gas networks. In transprecision computing, Lagrangian duality can complement deep learning to impose monotonicity constraints on the predictor without sacrificing accuracy. Finally, Lagrangian duality can be used to enforce fairness constraints on a predictor and obtain state-of-the-art results when minimizing disparate treatments.}
+}
+
+@article{MFvH:pscc20,
+  author =      {Terrence W.K. Mak and Ferdinando Fioretto and Pascal {Van Hentenryck}},
+  title =       {Privacy-preserving obfuscation for distributed power systems},
+  journal =     {Electric Power Systems Research},
+  volume =      {189},
+  pages =       {106718},
+  year =        {2020},
+  issn =        {0378-7796},
+  doi =         {https://doi.org/10.1016/j.epsr.2020.106718},
+  abbr    =     {PSCC},
+  bibtex_show = {true},
+  arxiv       = {1910.04250},
+  url =         {https://www.sciencedirect.com/science/article/pii/S0378779620305216},
+  abstract    = {This paper considers the problem of releasing privacy-preserving load data of a decentralized operated power system. The paper focuses on data used to solve Optimal Power Flow (OPF) problems and proposes a distributed algorithm that complies with the notion of Differential Privacy, a strong privacy framework used to bound the risk of re-identification. The problem is challenging since the application of traditional differential privacy mechanisms to the load data fundamentally  changes the nature of the underlying optimization problem and often leads to severe feasibility issues. The proposed differentially private distributed algorithm is based on the Alternating Direction Method of Multipliers (ADMM) and guarantees that the released privacy-preserving data retains high fidelity and satisfies the AC power flow constraints. Experimental results on a variety of OPF benchmarks demonstrate the effectiveness of the approach.}
+}
+
+@inproceedings{TYF:prima20,
+  author       = {Atena M. Tabakhi and William Yeoh and Ferdinando Fioretto},
+  title        = {The Smart Appliance Scheduling Problem: {A} Bayesian Optimization Approach},
+  booktitle    = PRIMA,
+  series       = {Lecture Notes in Computer Science},
+  volume       = {12568},
+  pages        = {100--115},
+  publisher    = {Springer},
+  year         = {2020},
+  url          = {https://link.springer.com/chapter/10.1007/978-3-030-69322-0_7},
+  doi          = {10.1007/978-3-030-69322-0\_7},
+  bibtex_show  = {true},
+  abbr         = {PRIMA},
+  abstract     = {Daily energy demand peaks induce high greenhouse gas emissions and are deleterious to the power grid operations. The autonomous and coordinated control of smart appliances in residential buildings represents an effective solution to reduce peak demands. This coordination problem is challenging as it involves, not only, scheduling devices to minimize energy peaks, but also to comply with user’ preferences. Prior work assumed these preferences to be fully specified and known a priori, which is, however, unrealistic. To remedy this limitation, this paper introduces a Bayesian optimization approach for smart appliance scheduling when the users’ satisfaction with a schedule must be elicited, and thus considered expensive to evaluate. The paper presents a set of ad-hoc energy-cost based acquisition functions to drive the Bayesian optimization problem to find schedules that maximize the user’s satisfaction. The experimental results demonstrate the effectiveness of the proposed energy-cost based acquisition functions which improve the algorithm’s performance up to 26%.}
+}
+
+@article{FMvH:20,
+  author       = {Ferdinando Fioretto and Terrence W. K. Mak and Pascal Van Hentenryck},
+  title        = {Bilevel Optimization for Differentially Private Optimization},
+  journal      = {CoRR},
+  volume       = {abs/2001.09508},
+  year         = {2020},
+  abbr         = {ArXiv},
+  arxiv        = {2001.09508},
+  bibtex_show  = {true},
+  abstract    = {This paper studies how to apply differential privacy to constrained optimization problems whose inputs are sensitive. This task raises significant challenges since random perturbations of the input data often render the constrained optimization problem infeasible or change significantly the nature of its optimal solutions. To address this difficulty, this paper proposes a bilevel optimization model that can be used as a post-processing step: It redistributes the noise introduced by a differentially private mechanism optimally while restoring feasibility and near-optimality. The paper shows that, under a natural assumption, this bilevel model can be solved efficiently for real-life large-scale nonlinear nonconvex optimization problems with sensitive customer data. The experimental results demonstrate the accuracy of the privacy-preserving mechanism and showcases significant benefits compared to standard approaches.}
+}
+
+@article{DFvHKP:20a,
+  author       = {Vladimir Dvorkin and Ferdinando Fioretto and Pascal Van Hentenryck and Jalal Kazempour and Pierre Pinson},
+  title        = {Differentially Private Optimal Power Flow for Distribution Grids},
+  journal      = {CoRR},
+  volume       = {abs/2004.03921},
+  year         = {2020},
+  abbr         = {ArXiv},
+  arxiv       = {2004.03921},
+  bibtex_show  = {true},
+  abstract     = {Although distribution grid customers are obliged to share their consumption data with distribution system operators (DSOs), a possible leakage of this data is often disregarded in operational routines of DSOs. This paper introduces a privacy-preserving optimal power flow (OPF) mechanism for distribution grids that secures customer privacy from unauthorised access to OPF solutions, e.g., current and voltage measurements. The mechanism is based on the framework of differential privacy that allows to control the participation risks of individuals in a dataset by applying a carefully calibrated noise to the output of a computation. Unlike existing private mechanisms, this mechanism does not apply the noise to the optimization parameters or its result. Instead, it optimizes OPF variables as affine functions of the random noise, which weakens the correlation between the grid loads and OPF variables. To ensure feasibility of the randomized OPF solution, the mechanism makes use of chance constraints enforced on the grid limits. The mechanism is further extended to control the optimality loss induced by the random noise, as well as the variance of OPF variables. The paper shows that the differentially private OPF solution does not leak customer loads up to specified parameters.}
+}
+
+@article{DFvHKP:20b,
+  author       = {Vladimir Dvorkin and Ferdinando Fioretto and Pascal Van Hentenryck and Jalal Kazempour and Pierre Pinson},
+  title        = {Differentially Private Convex Optimization with Feasibility Guarantees},
+  journal      = {CoRR},
+  volume       = {abs/2006.12338},
+  year         = {2020},
+  url          = {https://arxiv.org/abs/2006.12338},
+  abbr        = {ArXiv},
+  arxiv       = {2006.12338},
+  bibtex_show  = {true},
+  abstract     = {This paper develops a novel differentially private framework to solve convex optimization problems with sensitive optimization data and complex physical or operational constraints. Unlike standard noise-additive algorithms, that act primarily on the problem data, objective or solution, and disregard the problem constraints, this framework requires the optimization variables to be a function of the noise and exploits a chance-constrained problem reformulation with formal feasibility guarantees. The noise is calibrated to provide differential privacy for identity and linear queries on the optimization solution. For many applications, including resource allocation problems, the proposed framework provides a trade-off between the expected optimality loss and the variance of optimization results.}
+}
+
+
+@article{CFMvH:20,
+  author       = {Minas Chatzos and Ferdinando Fioretto and Terrence W. K. Mak and Pascal Van Hentenryck},
+  title        = {High-Fidelity Machine Learning Approximations of Large-Scale Optimal Power Flow},
+  journal      = {CoRR},
+  volume       = {abs/2006.16356},
+  year         = {2020},
+  url          = {https://arxiv.org/abs/2006.16356},
+  abbr         = {ArXiv},
+  arxiv        = {2006.16356},
+  bibtex_show  = {true},
+  abstract     = {The AC Optimal Power Flow (AC-OPF) is a key building block in many power system applications. It determines generator setpoints at minimal cost that meet the power demands while satisfying the underlying physical and operational constraints. It is non-convex and NP-hard, and computationally challenging for large-scale power systems. Motivated by the increased stochasticity in generation schedules and increasing penetration of renewable sources, this paper explores a deep learning approach to deliver highly efficient and accurate approximations to the AC-OPF. In particular, the paper proposes an integration of deep neural networks and Lagrangian duality to capture the physical and operational constraints. The resulting model, called OPF-DNN, is evaluated on real case studies from the French transmission system, with up to 3,400 buses and 4,500 lines. Computational results show that OPF-DNN produces highly accurate AC-OPF approximations whose costs are within 0.01% of optimality. OPF-DNN generates, in milliseconds, solutions that capture the problem constraints with high fidelity.}
+}
+
+
+
+#################
+# 2019
+#################
+
+
+@article{FvH:jair19,
+  author       = {Ferdinando Fioretto and Pascal Van Hentenryck},
+  title        = {OptStream: Releasing Time Series Privately},
+  journal      = JAIR,
+  volume       = {65},
+  pages        = {423--456},
+  year         = {2019},
+  url          = {https://doi.org/10.1613/jair.1.11583},
+  doi          = {10.1613/jair.1.11583},
+  bibtex_show  = {true},
+  abbr         = {JAIR},
+  selected     = {true},
+  abstract     = {Many applications of machine learning and optimization operate on data streams. While these datasets are fundamental to fuel decision-making algorithms, often they contain sensitive information about individuals, and their usage poses significant privacy risks. Motivated by an application in energy systems, this paper presents OptStream, a novel algorithm for releasing differentially private data streams under the w-event model of privacy. OptStream is a 4-step procedure consisting of sampling, perturbation, reconstruction, and post-processing modules. First, the sampling module selects a small set of points to access in each period of interest. Then, the perturbation module adds noise to the sampled data points to guarantee privacy. Next, the reconstruction module re-assembles non-sampled data points from the perturbed sample points. Finally, the post-processing module uses convex optimization over the privacy-preserving output of the previous modules, as well as the privacy-preserving answers of additional queries on the data stream, to improve accuracy by redistributing the added noise. OptStream is evaluated on a test case involving the release of a real data stream from the largest European transmission operator. Experimental results show that OptStream may not only improve the accuracy of state-of-the-art methods by at least one order of magnitude but also supports accurate load forecasting on the privacy-preserving data.}
+}
+
+@article{FDP:ia19,
+  title       = {Distributed multi-agent optimization for smart grids and home automation},
+  author      = {Fioretto, Ferdinando and Dovier, Agostino and Pontelli, Enrico},
+  journal     = {Intelligenza Artificial},
+  doi         = {10.3233/IA-18003},
+  volume      = {12},
+  number      = {2},
+  pages       = {67--87},
+  year        = {2019},
+  bibtex_show = {true},
+  abbr        = {IA},
+  award       = {Best AI*IA Dissertation in AI},
+  abstract    = {Distributed Constraint Optimization Problems (DCOPs) have emerged as one of the prominent multi-agent architectures to govern the agents’ autonomous behavior in a cooperative multi-agent system (MAS) where several agents coordinate with each other to optimize a global cost function taking into account their local preferences. They represent a powerful approach to the description and resolution of many practical problems. However, typical MAS applications are characterized by complex dynamics and interactions among a large number of entities, which translate into hard combinatorial problems, posing significant challenges from a computational and coordination standpoints. This paper reviews two methods to promote a hierarchical parallel model for solving DCOPs, with the aim of improving the performance of the DCOP algorithm. The first is a Multi-Variable Agent (MVA) DCOP decomposition, which exploits co-locality of an agent’s variables allowing the adoption of efficient centralized techniques to solve the subproblem of an agent. The second is the use of Graphics Processing Units (GPUs) to speed up a class of DCOP algorithms. Finally, exploiting these hierarchical parallel model, the paper presents two critical applications of DCOPs for demand response (DR) program in smart grids. The Multi-agent Economic Dispatch with Demand Response (EDDR), which provides an integrated approach to the economic dispatch and the DR model for power systems, and the Smart Home Device Scheduling (SHDS) problem, that formalizes the device scheduling and coordination problem across multiple smart homes to reduce energy peaks.}
+}
+
+
+@inproceedings{FvH:aamas19,
+  author       = {Ferdinando Fioretto and Pascal Van Hentenryck},
+  title        = {Privacy-Preserving Federated Data Sharing},
+  booktitle    = AAMAS,
+  pages        = {638--646},
+  publisher    = {International Foundation for Autonomous Agents and Multiagent Systems},
+  year         = {2019},
+  url          = {http://dl.acm.org/citation.cfm?id=3331750},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = {Consider a set of agents with sensitive datasets who are interested in the same prediction task and would like to share their datasets without revealing private information. For instance, the agents may be medical centers with their own historical databases and the task may be the diagnosis of a rare form of a disease. This paper investigates whether sharing privacy-preserving versions of these datasets may improve the agent predictions. It proposes a Privacy-preserving Federated Data Sharing (PFDS) protocol that each agent can run locally to produce a privacy-preserving version of its original dataset. The PFDS protocol is evaluated on several standard prediction tasks and experimental results demonstrate the potential of sharing privacy- preserving datasets to produce accurate predictors.}
+}
+
+@inproceedings{FvH:cp19,
+  author       = {Ferdinando Fioretto and Pascal Van Hentenryck},
+  title        = {Differential Privacy of Hierarchical Census Data: An Optimization Approach},
+  booktitle    = CP,
+  series       = {Lecture Notes in Computer Science},
+  volume       = {11802},
+  pages        = {639--655},
+  publisher    = {Springer},
+  year         = {2019},
+  url          = {https://doi.org/10.1007/978-3-030-30048-7\_37},
+  doi          = {10.1007/978-3-030-30048-7\_37},
+  bibtex_show  = {true},
+  abbr         = {CP},
+  award        = {Invited to Constraint journal - selected paper},
+  abstract     = {This paper is motivated by applications of a Census Bureau interested in releasing aggregate socio-economic data about a large population without revealing sensitive information. The released information can be the number of individuals living alone, the number of cars they own, or their salary brackets. Recent events have identified some of the privacy challenges faced by these organizations. To address them, this paper presents a novel differential-privacy mechanism for releasing hierarchical counts of individuals satisfying a given property. The counts are reported at multiple granularities (e.g., the national, state, and county levels) and must be consistent across levels. The core of the mechanism is an optimization model that redistributes the noise introduced to attain privacy in order to meet the consistency constraints between the hierarchical levels. The key technical contribution of the paper shows that this optimization problem can be solved in polynomial time by exploiting the structure of its cost functions. Experimental results on very large, real datasets show that the proposed mechanism provides improvements up to two orders of magnitude in terms of computational efficiency and accuracy with respect to other state-of-the-art techniques.}
+
+}
+
+@inproceedings{FMvH:ijcai19,
+  author       = {Ferdinando Fioretto and Terrence W. K. Mak and Pascal Van Hentenryck},
+  editor       = {Sarit Kraus},
+  title        = {Privacy-Preserving Obfuscation of Critical Infrastructure Networks},
+  booktitle    = IJCAI,
+  pages        = {1086--1092},
+  publisher    = {ijcai.org},
+  year         = {2019},
+  url          = {https://doi.org/10.24963/ijcai.2019/152},
+  doi          = {10.24963/ijcai.2019/152},
+  bibtex_show  = {true},
+  abbr         = {IJCAI},
+  arxiv        = {1905.09778},
+  abstract     = {The paper studies how to release data about a critical infrastructure network (e.g., a power network or a transportation network) without disclosing sensitive information that can be exploited by malevolent agents, while preserving the realism of the network. It proposes a novel obfuscation mechanism that combines several privacy-preserving building blocks with a bi-level optimization model to significantly improve accuracy. The obfuscation is evaluated for both realism and privacy properties on real energy and transportation networks. Experimental results show the obfuscation mechanism substantially reduces the potential damage of an attack exploiting the released data to harm the real network.}
+}
+
+@article{FLvH:19,
+  author       = {Ferdinando Fioretto and Lesia Mitridati and Pascal Van Hentenryck},
+  title        = {{PPSM:} {A} Privacy-Preserving Stackelberg Mechanism: Privacy Guarantees for the Coordination of Sequential Electricity and Gas Markets},
+  journal      = {CoRR},
+  volume       = {abs/1911.10178},
+  year         = {2019},
+  url          = {http://arxiv.org/abs/1911.10178},
+  abbr         = {ArXiv},
+  arxiv        = {1911.10178},
+  bibtex_show  = {true},
+  abstract     = {This paper introduces a differentially private mechanism to protect the information exchanged during the coordination of the sequential market-clearing of electricity and natural gas systems. The coordination between these sequential and interdependent markets represents a classic Stackelberg game and relies on the exchange of sensitive information between the system agents, including the supply and demand bids in each market or the characteristics of the systems. The paper is motivated by the observation that traditional differential privacy mechanisms are unsuitable for the problem of interest: The perturbation introduced by these mechanisms fundamentally changes the underlying optimization problem and even leads to unsatisfiable instances. To remedy such limitation, the paper introduces the Privacy-Preserving Stackelberg Mechanism (PPSM), a framework that enforces the notions of consistency and fidelity of the privacy-preserving information to the original problem objective. The PPSM has strong properties: It complies with the notion of differential privacy and ensures that the outcomes of the privacy-preserving coordination mechanisms are close-to-optimality for each agent. The fidelity property is analyzed by providing theoretical guarantees on the cost of privacy of PPSM and experimental results on several gas and electricity market benchmarks based on a real case study demonstrate the effectiveness of the approach.}
+}
+
+
+#################
+# 2018
+#################
+
+@article{FPY:jair18,
+  author       = {Ferdinando Fioretto and
+                  Enrico Pontelli and
+                  William Yeoh},
+  title        = {Distributed Constraint Optimization Problems and Applications: {A} Survey},
+  journal      = JAIR,
+  volume       = {61},
+  pages        = {623--698},
+  year         = {2018},
+  url          = {https://doi.org/10.1613/jair.5565},
+  doi          = {10.1613/jair.5565},
+  bibtex_show  = {true},
+  abbr         = {JAIR},
+  abstract     = {The field of Multi-Agent System (MAS) is an active area of research within Artificial Intelligence, with an increasingly important impact in industrial and other real-world applications. Within a MAS, autonomous agents interact to pursue personal interests and/or to achieve common objectives. Distributed Constraint Optimization Problems (DCOPs) have emerged as one of the prominent agent architectures to govern the agents’ autonomous behavior, where both algorithms and communication models are driven by the structure of the specific problem. During the last decade, several extensions to the DCOP model have enabled them to support MAS in complex, real-time, and uncertain environments. This survey aims at providing an overview of the DCOP model, giving a classification of its multiple extensions and addressing both resolution methods and applications that find a natural mapping within each class of DCOPs. The proposed classification suggests several future perspectives for DCOP extensions, and identifies challenges in the design of efficient resolution algorithms, possibly through the adaptation of strategies from different areas.}
+}
+
+@article{FPYD:constraints18,
+  author       = {Ferdinando Fioretto and Enrico Pontelli and William Yeoh and Rina Dechter},
+  title        = {Accelerating exact and approximate inference for (distributed) discrete optimization with GPUs},
+  journal      = {Constraints - An International Journal},
+  volume       = {23},
+  number       = {1},
+  pages        = {1--43},
+  year         = {2018},
+  url          = {https://doi.org/10.1007/s10601-017-9274-1},
+  doi          = {10.1007/s10601-017-9274-1},
+  bibtex_show  = {true},
+  abbr         = {Constraints},
+  arxiv        = {1608.05288},
+  abstract     = {Discrete optimization is a central problem in artificial intelligence. The optimization of the aggregated cost of a network of cost functions arises in a variety of problems including Weighted Constraint Programs (WCSPs), Distributed Constraint Optimization (DCOP), as well as optimization in stochastic variants such as the tasks of finding the most probable explanation (MPE) in belief networks. Inference-based algorithms are powerful techniques for solving discrete optimization problems, which can be used independently or in combination with other techniques. However, their applicability is often limited by their compute intensive nature and their space requirements. This paper proposes the design and implementation of a novel inference-based technique, which exploits modern massively parallel architectures, such as those found in Graphical Processing Units (GPUs), to speed up the resolution of exact and approximated inference-based algorithms for discrete optimization. The paper studies the proposed algorithm in both centralized and distributed optimization contexts. The paper demonstrates that the use of GPUs provides significant advantages in terms of runtime and scalability, achieving up to two orders of magnitude in speedups and showing a considerable reduction in execution time (up to 345 times faster) with respect to a sequential version.}
+}
+
+@article{FY:aimatters18,
+  author       = {Ferdinando Fioretto and William Yeoh},
+  title        = {{AI} buzzwords explained: distributed constraint optimization problems},
+  journal      = {{AI} Matters},
+  volume       = {3},
+  number       = {4},
+  pages        = {8--13},
+  year         = {2018},
+  url          = {https://doi.org/10.1145/3175502.3175506},
+  doi          = {10.1145/3175502.3175506},
+  bibtex_show  = {true},
+  abbr         = {AI Matters}
+}
+
+@article{FP:tpc18,
+  author       = {Ferdinando Fioretto and Enrico Pontelli},
+  title        = {Past and present (and future) of parallel and distributed computation in (constraint) logic programming},
+  journal      = {Theory Pract. Log. Program.},
+  volume       = {18},
+  number       = {5-6},
+  pages        = {722--724},
+  year         = {2018},
+  url          = {https://doi.org/10.1017/S1471068418000406},
+  doi          = {10.1017/S1471068418000406},
+  bibtex_show  = {true},
+  abbr         = {TPLP}
+}
+
+@inproceedings{FLvH:aamas18,
+  author       = {Ferdinando Fioretto and Chansoo Lee and Pascal Van Hentenryck},
+  title        = {Constrained-Based Differential Privacy for Mobility Services},
+  booktitle    = AAMAS,
+  pages        = {1405--1413},
+  publisher    = {International Foundation for Autonomous Agents and Multiagent Systems Richland, SC, {USA} / {ACM}},
+  year         = {2018},
+  url          = {http://dl.acm.org/citation.cfm?id=3237910},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = {Ubiquitous mobile and wireless communication systems have the potential to revolutionize transportation systems, making accurate mobility traces and activity-based patterns available to optimize their design and operations. It also poses significant privacy risks, potentially revealing highly sensitive personal information. This paper studies the use of differential privacy to release mobility data that can be used for smart transportation systems. It shows that existing approaches do not provide the desired fidelity for practical uses. To remedy this critical limitation, the paper proposes the idea of optimization-based differential privacy that casts the production of a private dataset as an optimization problem that minimizes the impact of added Laplacian noise on the algorithmic task at hand. When applied to a city-level multi-modal transit system, experimental results show that the design and operations of the transportation system have similar performance measures when optimized over the real and private datasets. The results also indicate that optimization-based differential privacy may improve the accuracy of state-of-art privacy methods by an order of magnitude.}
+}
+
+@inproceedings{HFWPZ:cp18,
+  author       = {Khoi D. Hoang and Ferdinando Fioretto and William Yeoh and Enrico Pontelli and Roie Zivan},
+  title        = {A Large Neighboring Search Schema for Multi-agent Optimization},
+  booktitle    = CP,
+  series       = {Lecture Notes in Computer Science},
+  volume       = {11008},
+  pages        = {688--706},
+  publisher    = {Springer},
+  year         = {2018},
+  url          = {https://doi.org/10.1007/978-3-319-98334-9\_44},
+  doi          = {10.1007/978-3-319-98334-9\_44},
+  bibtex_show  = {true},
+  abbr         = {CP},
+  abstract     = {The Distributed Constraint Optimization Problem (DCOP) is an elegant paradigm for modeling and solving multi-agent problems which are distributed in nature, and where agents cooperate to optimize a global objective within the confines of localized communication. Since solving DCOPs optimally is NP-hard, recent effort in the development of DCOP algorithms has focused on incomplete methods. Unfortunately, many of such proposals do not provide quality guarantees or provide a loose quality assessment. Thus, this paper proposes the Distributed Large Neighborhood Search (DLNS), a novel iterative local search framework to solve DCOPs, which provides guarantees on solution quality refining lower and upper bounds in an iterative process. Our experimental analysis of DCOP benchmarks on several important classes of graphs illustrates the effectiveness of DLNS in finding good solutions and tight upper bounds in both problems with and without hard constraints.}
+}
+
+@inproceedings{FvH:cpaior18,
+  author       = {Ferdinando Fioretto and Pascal Van Hentenryck},
+  title        = {Constrained-Based Differential Privacy: Releasing Optimal Power Flow
+                  Benchmarks Privately - Releasing Optimal Power Flow Benchmarks Privately},
+  booktitle    = CPAIOR,
+  series       = {Lecture Notes in Computer Science},
+  volume       = {10848},
+  pages        = {215--231},
+  publisher    = {Springer},
+  year         = {2018},
+  url          = {https://doi.org/10.1007/978-3-319-93031-2\_15},
+  doi          = {10.1007/978-3-319-93031-2\_15},
+  bibtex_show  = {true},
+  abbr         = {CPAIOR},
+  abstract     = {This paper considers the problem of releasing optimal power flow benchmarks that maintain the privacy of customers (loads) using the notion of Differential Privacy. It is motivated by the observation that traditional differential-privacy mechanisms are not accurate enough: The dded noise fundamentally changes the nature of the underlying optimization and often leads to test cases with no solution. To remedy this limitation, the paper introduces the framework of Constraint-Based Differential Privacy (CBDP) that leverages the post-processing immunity of differential privacy to improve the accuracy of traditional mechanisms. More precisely, CBDP solves an optimization problem to satisfies the problem-specific constraints by redistributing the noise. The paper shows that CBDP enjoys desirable theoretical properties and produces orders of magnitude improvements on the largest set of test cases available.}
+
+}
+
+@inproceedings{FKK:isiam18,
+  author       = {Ferdinando Fioretto and Hong Xu and Sven Koenig and T. K. Satish Kumar},
+  title        = {Constraint Composite Graph-Based Lifted Message Passing for Distributed
+                  Constraint Optimization Problems},
+  booktitle    = {International Symposium on Artificial Intelligence and Mathematics,
+                  {ISAIM} 2018, Fort Lauderdale, Florida, USA, January 3-5, 2018},
+  year         = {2018},
+  url          = {http://isaim2018.cs.virginia.edu/papers/ISAIM2018\_Fioretto\_etal.pdf},
+  bibtex_show  = {true},
+  abbr         = {ISAIM},
+  abstract     = { The Distributed Constraint Optimization Problem (DCOP) offers a powerful approach for the description and resolution of cooperative multi-agent problems. In this model, a group of agents coordinates their actions to optimize a global objective function, taking into account their local preferences. In the majority of DCOP algorithms, agents operate on three main graphical representations of the problem: (a) the constraint graph, (b) the pseudo-tree, or (c) the factor graph. In this paper, we introduce the Constraint Composite Graph (CCG) for DCOPs, an alternative graphical representation on which agents can coordinate their assignments to solve the distributed problem suboptimally. By leveraging this repre- sentation, agents are able to reduce the size of the problem. We propose a novel variant of Max-Sum–a popular DCOP incomplete algorithm–called CCG-Max-Sum, which is applied to CCGs. We also demonstrate the efficiency and effective- ness of CCG-Max-Sum on DCOP benchmarks based on several network topologies.}
+}
+
+@inproceedings{FHKK:prima18,
+  author       = {Ferdinando Fioretto and Hong Xu and Sven Koenig and T. K. Satish Kumar},
+  title        = {Solving Multiagent Constraint Optimization Problems on the Constraint Composite Graph},
+  booktitle    = PRIMA,
+  series       = {Lecture Notes in Computer Science},
+  volume       = {11224},
+  pages        = {106--122},
+  publisher    = {Springer},
+  year         = {2018},
+  url          = {https://doi.org/10.1007/978-3-030-03098-8\_7},
+  doi          = {10.1007/978-3-030-03098-8\_7},
+  bibtex_show  = {true},
+  abbr         = {PRIMA},
+  abstract     = {We introduce the Constraint Composite Graph (CCG) for Distributed Constraint Optimization Problems (DCOPs), a popular paradigm used for the description and resolution of cooperative multi-agent problems. The CCG is a novel graphical representation of DCOPs on which agents can coordinate their assignments to solve the distributed problem suboptimally. By leveraging this representation, agents are able to reduce the size of the problem. We propose a novel variant of Max- Sum—a popular DCOP incomplete algorithm—called CCG-Max-Sum, which is applied to CCGs, and demonstrate its efficiency and effectiveness on DCOP benchmarks based on several network topologies.}
+}
+
+
+#################
+# 2017
+#################
+
+@article{fioretto:amectada-17,
+  author 	= "Porag Chowdhury and Russell Y. Folk and Ferdinando Fioretto and Christopher Kiekintveld and William Yeoh",
+  title		= "Investigation of Learning Strategies for the {SPOT} Broker in {Power TAC}",
+  journal	= "Agent-Mediated Electronic Commerce. Designing Trading Strategies and Mechanisms for Electronic Markets ({AMEC/TADA})",
+  volume	= "271",
+  pages		= "96--111",
+  year		= "2017",
+  publisher	= "Springer",
+  abbr      = {AMEC},
+  abstract = {The Power TAC simulation emphasizes the strategic problems that broker agents face in managing the economics of a smart grid. The brokers must make trades in multiple markets and, to be successful, brokers must make many good predictions about future supply, demand, and prices in the wholesale and tariff markets. In this paper, we investigate the feasibility of using learning strategies to improve the performance of our broker, SPOT. Specifically, we investigate the use of decision trees and neural networks to predict the clearing price in the wholesale market and the use of reinforcement learning to learn good strategies for pricing our tariffs in the tariff market. Our preliminary results show that our learning strategies are promising ways to improve the performance of the agent for future competitions.}
+}
+
+@inproceedings{KF0P:aamas17,
+  author       = {William Kluegel and Muhammad A. Iqbal and Ferdinando Fioretto and William Yeoh and Enrico Pontelli},
+  title        = {A Realistic Dataset for the Smart Home Device Scheduling Problem for DCOPs},
+  booktitle    = {{AAMAS} 2017 Workshops, Visionary Papers, Revised Selected Papers},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {10643},
+  pages        = {125--142},
+  publisher    = {Springer},
+  year         = {2017},
+  url          = {https://doi.org/10.1007/978-3-319-71679-4\_9},
+  doi          = {10.1007/978-3-319-71679-4\_9},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  award        = {Visionary Workshop Paper Award},
+  abstract     = {The field of Distributed Constraint Optimization has gained momentum in recent years thanks to its ability to address various applications related to multi-agent cooperation. While techniques for solving Distributed Constraint Optimization Problems (DCOPs) are abundant and have matured substantially since the field inception, the number of DCOP realistic applications available to assess the performance of DCOP algorithms is lagging behind. To contrast this background we (i) introduce the Smart Home Device Scheduling (SHDS) problem, which describe the problem of coordinating smart devices schedules across multiple homes as a multi-agent system, (ii) detail the physical models adopted to simulate smart sensors, smart actuators, and homes' environments, and (iii) introduce a DCOP realistic benchmark for SHDS problems.}
+}
+
+@inproceedings{HHF0ZY:aamas17,
+  author       = {Khoi D. Hoang and Ping Hou and Ferdinando Fioretto and William Yeoh and Roie Zivan and Makoto Yokoo},
+  title        = {Infinite-Horizon Proactive Dynamic DCOPs},
+  booktitle    = AAMAS,
+  pages        = {212--220},
+  publisher    = {{ACM}},
+  year         = {2017},
+  url          = {http://dl.acm.org/citation.cfm?id=3091160},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = {The Distributed Constraint Optimization Problem (DCOP) formulation is a powerful tool for modeling multi-agent coordination problems. Researchers have recently extended this model to Proactive Dynamic DCOPs (PD-DCOPs) to capture the inherent dynamism present in many coordination problems. The PD-DCOP formulation is a finite-horizon model that assumes a finite horizon is known a priori. It ignores changes to the problem after the horizon and is thus not guaranteed to find optimal solutions for infinite-horizon problems, which often occur in the real world. Therefore, we (i) propose the Infinite-Horizon PD-DCOP (IPD- DCOP) model, which extends PD-DCOPs to handle infinite horizons; (ii) exploit the convergence properties of Markov chains to determine the optimal solution to the problem after it has converged; (iii) propose three distributed greedy algorithms to solve IPD-DCOPs; (iv) provide theoretical quality guarantees on the new model; and (v) empirically evaluate both proactive and reactive algorithms to determine the tradeoffs between the two classes. The final contribution is important as, thus far, researchers have exclusively evaluated the two classes of algorithms in isolation. As a result, it is difficult to identify the characteristics of problems that they excel in. Our results are the first in this important direction.}
+}
+
+@inproceedings{F0P:aamas17,
+  author       = {Ferdinando Fioretto and William Yeoh and Enrico Pontelli},
+  title        = {A Multiagent System Approach to Scheduling Devices in Smart Homes},
+  booktitle    = AAMAS,
+  pages        = {981--989},
+  publisher    = {{ACM}},
+  year         = {2017},
+  url          = {http://dl.acm.org/citation.cfm?id=3091265},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = {Demand-side management (DSM) in the smart grid allows customers to make autonomous decisions on their energy consumption, helping energy providers to reduce the energy peaks in load demand. The automated scheduling of smart devices in residential and commercial buildings plays a key role in DSM. Due to data privacy and user autonomy, such an approach is best implemented through distributed multi-agent systems. This paper makes the following contributions: (i) It introduces the Smart Home Device Scheduling (SHDS) problem, which formalizes the device scheduling and coordination problem across multiple smart homes as a multi-agent system; (ii) It describes a mapping of this problem to a distributed constraint optimization problem; (iii) It proposes a distributed algorithm for the SHDS problem; and (iv) It presents empirical results from a physically distributed system of Raspberry Pis, each capable of controlling smart devices through hardware interfaces, as well as larger scale synthetic experiments.}
+}
+
+@inproceedings{F0PMR:aamas17,
+  author       = {Ferdinando Fioretto and William Yeoh and Enrico Pontelli and Ye Ma and Satishkumar J. Ranade},
+  title        = {A Distributed Constraint Optimization {(DCOP)} Approach to the Economic Dispatch with Demand Response},
+  booktitle    = AAMAS,
+  pages        = {999--1007},
+  publisher    = {{ACM}},
+  year         = {2017},
+  url          = {http://dl.acm.org/citation.cfm?id=3091267},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = { With the growing complexity of the current power grid, there is an increasing need for intelligent operations coordinating energy supply and demand. A key feature of the smart grid vision is that intelligent mechanisms will coordinate the production, transmission, and consumption of energy in a distributed and reliable way. Economic Dispatch (ED) and Demand Response (DR) are two key problems that need to be solved to achieve this vision. In traditional operations, ED and DR are implemented separately, despite the strong inter-dependencies between these two problems. Therefore, we propose an integrated approach to solve the ED and DR problems that simultaneously maximizes the benefits of customers and minimizes the generation costs, and introduce an effective multi-agent-based algorithm, based on Distributed Constraint Optimization Problems (DCOPs), acting on direct control of both generators and dispatchable loads. To cope with the high complexity of the problem, our solution employs General Purpose Graphical Processing Units (GPGPUs) to speed up the computational runtime. We empirically evaluate the proposed algorithms on standard IEEE bus systems and test the stability of the proposed solution with a state-of-the-art power system simulator on the IEEE 30-bus system.}
+}
+
+@inproceedings{TLFY:cp17,
+  author       = {Atena M. Tabakhi and Tiep Le and Ferdinando Fioretto and William Yeoh},
+  title        = {Preference Elicitation for DCOPs},
+  booktitle    = CP,
+  series       = {Lecture Notes in Computer Science},
+  volume       = {10416},
+  pages        = {278--296},
+  publisher    = {Springer},
+  year         = {2017},
+  url          = {https://doi.org/10.1007/978-3-319-66158-2\_18},
+  doi          = {10.1007/978-3-319-66158-2\_18},
+  bibtex_show  = {true},
+  abbr         = {CP},
+  abstract     = {Distributed Constraint Optimization Problems (DCOPs) offer a powerful approach for the description and resolution of cooperative multi-agent problems. In this model, a group of agents coordinate their actions to optimize a global objective function, taking into account their preferences or constraints. A core limitation of this model is the assumption that the preferences of all agents or the costs of all constraints are specified a priori. Unfortunately, this assumption does not hold in a number of application domains where preferences or constraints must be elicited from the users. One of such domains is the Smart Home Device Scheduling (SHDS) problem. Motivated by this limitation, we make the following contributions in this paper: (1) We propose a general model for preference elicitation in DCOPs; (2) We propose several heuristics to elicit preferences in DCOPs; and (3) We empirically evaluate the effect of these heuristics on random binary DCOPs as well as SHDS problems.}
+}
+
+@article{FDP0Z:17,
+  author       = {Ferdinando Fioretto and Agostino Dovier and Enrico Pontelli and William Yeoh and Roie Zivan},
+  title        = {Solving DCOPs with Distributed Large Neighborhood Search},
+  journal      = {CoRR},
+  volume       = {abs/1702.06915},
+  year         = {2017},
+  url          = {http://arxiv.org/abs/1702.06915},
+  abbr         = {ArXiv},
+  arxiv        = {1702.06915},
+  bibtex_show  = {true},
+  abstract     = {The field of Distributed Constraint Optimization has gained momentum in recent years, thanks to its ability to address various applications related to multi-agent cooperation. Nevertheless, solving Distributed Constraint Optimization Problems (DCOPs) optimally is NP-hard. Therefore, in large-scale, complex applications, incomplete DCOP algorithms are necessary. Current incomplete DCOP algorithms suffer of one or more of the following limitations: they (a) find local minima without providing quality guarantees; (b) provide loose quality assessment; or (c) are unable to benefit from the structure of the problem, such as domain-dependent knowledge and hard constraints. Therefore, capitalizing on strategies from the centralized constraint solving community, we propose a Distributed Large Neighborhood Search (D-LNS) framework to solve DCOPs. The proposed framework (with its novel repair phase) provides guarantees on solution quality, refining upper and lower bounds during the iterative process, and can exploit domain-dependent structures. Our experimental results show that D-LNS outperforms other incomplete DCOP algorithms on both structured and unstructured problem instances.}
+}
+
+
+
+#################
+# 2016
+#################
+
+@phdthesis{DBLP:phd/it/Fioretto16,
+  author       = {Ferdinando Fioretto},
+  title        = {Exploiting the Structure of Distributed Constraint Optimization Problems},
+  school       = {University of Udine, Italy},
+  year         = {2016},
+  url          = {https://opac.bncf.firenze.sbn.it/bncf-prod/resource?uri=TD16020931},
+  bibtex_show  = {true},
+  abbr         = {PhD Thesis}
+}
+
+@inproceedings{CFFK0:tada16,
+  author       = {Moinul Morshed Porag Chowdhury and Russell Y. Folk and Ferdinando Fioretto and Christopher Kiekintveld and William Yeoh},
+  title        = {Investigation of Learning Strategies for the {SPOT} Broker in Power {TAC}},
+  booktitle    = {Agent-Mediated Electronic Commerce. Designing Trading Strategies and
+                  Mechanisms for Electronic Markets - {AMEC/TADA}
+                  Revised Selected Papers},
+  series       = {Lecture Notes in Business Information Processing},
+  volume       = {271},
+  pages        = {96--111},
+  publisher    = {Springer},
+  year         = {2016},
+  url          = {https://doi.org/10.1007/978-3-319-54229-4\_7},
+  doi          = {10.1007/978-3-319-54229-4\_7},
+  bibtex_show  = {true},
+  abbr         = {AMEC/TADA}
+}
+
+@inproceedings{F0P:aaai16,
+  author       = {Ferdinando Fioretto and William Yeoh and Enrico Pontelli},
+  title        = {Multi-Variable Agents Decomposition for DCOPs},
+  booktitle    = AAAI,
+  pages        = {2480--2486},
+  publisher    = {{AAAI} Press},
+  year         = {2016},
+  url          = {http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12093},
+  bibtex_show  = {true},
+  abbr         = {AAAI},
+  abstract     = {The application of DCOP models to large problems faces two main limitations: (i) Modeling limitations, as each agent can handle only a single variable of the problem; and (ii) Resolution limitations, as current approaches do not exploit the local problem structure within each agent. This paper proposes a novel Multi-Variable Agent (MVA) DCOP decomposition technique, which: (i) Exploits the co-locality of each agent's variables, allowing us to adopt efficient centralized techniques within each agent; (ii) Enables the use of hierarchical parallel models and proposes the use of GPUs; and (iii) Reduces the amount of computation and communication required in several classes of DCOP algorithms.}
+}
+
+@inproceedings{HFHY0Z:aamas16,
+  author       = {Khoi D. Hoang and Ferdinando Fioretto and Ping Hou and Makoto Yokoo and William Yeoh and Roie Zivan},
+  title        = {Proactive Dynamic Distributed Constraint Optimization},
+  booktitle    = AAMAS,
+  pages        = {597--605},
+  publisher    = {{ACM}},
+  year         = {2016},
+  url          = {http://dl.acm.org/citation.cfm?id=2937013},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = {Current approaches that model dynamism in DCOPs solve a sequence of static problems, reacting to changes in the environment as the agents observe them. Such approaches thus ignore possible predictions on future changes. To overcome this limitation, we introduce Proactive Dynamic DCOPs (PD-DCOPs), a novel formalism to model dynamic DCOPs in the presence of exogenous uncertainty. In contrast to reactive approaches, PD-DCOPs are able to explicitly model the possible changes to the problem, and take such information into account proactively, when solving the dynamically changing problem. The additional expressivity of this formalism allows it to model a wider variety of distributed optimization problems. Our work presents both theoretical and practical contributions that advance current dynamic DCOP models: (i) we introduce the PD-DCOP model, which explicitly captures dynamic changes of the DCOP over time; (ii) we discuss the complexity of this new class of DCOPs; and (iii) we develop both exact and approximation algorithms with quality guarantees to solve PD-DCOPs proactively.}
+}
+
+@inproceedings{LeF0SP:aamas16,
+  author       = {Tiep Le and Ferdinando Fioretto and William Yeoh and Tran Cao Son and Enrico Pontelli},
+  title        = {ER-DCOPs: {A} Framework for Distributed Constraint Optimization with Uncertainty in Constraint Utilities},
+  booktitle    = AAMAS,
+  pages        = {606--614},
+  publisher    = {{ACM}},
+  year         = {2016},
+  url          = {http://dl.acm.org/citation.cfm?id=2937014},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = {Distributed Constraint Optimization Problems (DCOPs) have been used to model a number of multi-agent coordination problems. In DCOPs, agents are assumed to have complete information about the utility of their possible actions. However, in many real-world applications, such utilities are stochastic due to the presence of exogenous events that are beyond the direct control of the agents. This paper addresses this issue by extending the standard DCOP model to Expected Regret DCOP (ER-DCOP) for DCOP applications with uncertainty in constraint utilities. Different from other approaches, ER-DCOPs aim at minimizing the overall expected regret of the problem. The paper proposes the ER-DPOP algorithm for solving ER-DCOPs, which is complete and requires a linear number of messages with respect to the number of agents in the problem. We further present two implementations of ER-DPOP---GPU- and ASP-based implementations---that orthogonally exploit the problem structure and present their evaluations on random networks and power network problems.}
+}
+
+@inproceedings{F0P:cp16,
+  author       = {Ferdinando Fioretto and William Yeoh and Enrico Pontelli},
+  title        = {A Dynamic Programming-Based {MCMC} Framework for Solving DCOPs with GPUs},
+  booktitle    = CP,
+  series       = {Lecture Notes in Computer Science},
+  volume       = {9892},
+  pages        = {813--831},
+  publisher    = {Springer},
+  year         = {2016},
+  url          = {https://doi.org/10.1007/978-3-319-44953-1\_51},
+  doi          = {10.1007/978-3-319-44953-1\_51},
+  bibtex_show  = {true},
+  abbr         = {CP},
+  abstract     = {The field of Distributed Constraint Optimization (DCOP) has gained momentum in recent years, thanks to its ability to address various applications related to multi-agent coordination. Nevertheless, solving DCOPs is computationally challenging. Thus, in large scale, complex applications, incomplete DCOP algorithms are necessary. Recently, researchers have introduced a promising class of incomplete DCOP algorithms, based on sampling. However, this paradigm requires a multitude of samples to ensure convergence. This paper exploits the property that sampling is amenable to parallelization, and introduces a general framework, called Distributed MCMC (DMCMC), that is based on a dynamic programming procedure and uses Markov Chain Monte Carlo (MCMC) sampling algorithms to solve DCOPs. Additionally, DMCMC harnesses the parallel computing power of Graphical Processing Units (GPUs) to speed-up the sampling process. The experimental results show that DMCMC can find good solutions up to two order of magnitude faster than other incomplete DCOP algorithms.}
+}
+
+@inproceedings{DBLP:conf/aaai/HoangFHY0Z16,
+  author       = {Khoi D. Hoang and Ferdinando Fioretto and Ping Hou and Makoto Yokoo and William Yeoh and Roie Zivan},
+  title        = {Proactive Dynamic DCOPs},
+  booktitle    = {{AI} for Smart Grids and Smart Buildings, Papers from the 2016 {AAAI}
+                  Workshop, Phoenix, Arizona, USA, February 12, 2016},
+  series       = {{AAAI} Technical Report},
+  volume       = {{WS-16-04}},
+  publisher    = {{AAAI} Press},
+  year         = {2016},
+  url          = {http://www.aaai.org/ocs/index.php/WS/AAAIW16/paper/view/12593},
+  bibtex_show  = {true},
+  abbr         = {AISGSB}
+}
+
+
+#################
+# 2015
+#################
+
+@article{FDP:tomacs15,
+  author       = {Ferdinando Fioretto and Agostino Dovier and Enrico Pontelli},
+  title        = {Constrained Community-Based Gene Regulatory Network Inference},
+  journal      = {{ACM} Transaction on Modeling and Computer Simulation},
+  volume       = {25},
+  number       = {2},
+  pages        = {11:1--11:26},
+  year         = {2015},
+  url          = {https://doi.org/10.1145/2688909},
+  doi          = {10.1145/2688909},
+  bibtex_show  = {true},
+  abbr         = {TOMACS},
+  abstract     = {The problem of gene regulatory network inference is a major concern of systems biology. In recent years, a novel methodology has gained momentum, called community network approach. Community networks integrate predictions from individual methods in a “metapredictor,” in order to compose the advantages of different methods and soften individual limitations. This article proposes a novel methodology to integrate prediction ensembles using constraint programming, a declarative modeling and problem solving paradigm. Constraint programming naturally allows the modeling of dependencies among components of the problem as constraints, facilitating the integration and use of different forms of knowledge. The new paradigm, referred to as constrained community network, uses constraints to capture properties of the regulatory networks (e.g., topological properties) and to guide the integration of knowledge derived from different families of network predictions. The article experimentally shows the potential of this approach: The addition of biological constraints can offer significant improvements in prediction accuracy.}
+}
+
+@inproceedings{F:aaai15,
+  author       = {Ferdinando Fioretto},
+  title        = {Exploiting the Structure of Distributed Constraint Optimization Problems},
+  booktitle    = AAAI,
+  pages        = {4233},
+  publisher    = {{AAAI} Press},
+  year         = {2015},
+  url          = {http://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9293},
+  bibtex_show  = {true},
+  abbr         = {AAAI},
+  abstract     = {In the proposed thesis, we study Distributed Constraint Optimization Problems (DCOPs), which are problems where several agents coordinate with each other to optimize a global cost function. The use of DCOPs has gained momentum, due to their capability of addressing complex and naturally distributed problems. A majority of the work in DCOP addresses the resolution problem by detaching the model from the resolution process, where they assume that each agent controls exclusively one variable of the problem (Burke et al. 2006). This assumption often is not reflected in the model specifications, and may lead to inefficient communication requirements. Another limitation of current DCOP resolution methods is their inability to capitalize on the presence of structural information, which may allow incoherent/unnecessary data to reticulate among the agents (Yokoo 2001). The purpose of the proposed dissertation is to study how to adapt and integrate insights gained from centralized solving techniques in order to enhance DCOP performance and scalability, enabling their use for the resolution of real-world complex problems. To do so, we hypothesize that one can exploit the DCOP structure in both problem modeling and problem resolution phases.}
+}
+
+@inproceedings{DBLP:conf/atal/Fioretto0P15,
+  author       = {Ferdinando Fioretto and William Yeoh and Enrico Pontelli},
+  title        = {Multi-Variable Agents Decomposition for DCOPs to Exploit Multi-Level Parallelism},
+  booktitle    = AAMAS,
+  pages        = {1823--1824},
+  publisher    = {{ACM}},
+  year         = {2015},
+  url          = {http://dl.acm.org/citation.cfm?id=2773455},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = {Current DCOP algorithms suffer from a major limiting assumption---each agent can handle only a single variable of the problem---which limits their scalability. This paper proposes a novel Multi-Variable Agent (MVA) DCOP decomposition, which: (i) Exploits co-locality of an agent's variables, allowing us to adopt efficient centralized techniques; (ii) Enables the use of hierarchical parallel models, such us those based on GPGPUs; and (iii) Empirically reduces the amount of communication required in several classes of DCOP algorithms. Experimental results show that our MVA decomposition outperforms non-decomposed DCOP algorithms, in terms of network load and scalability.}
+}
+
+@inproceedings{FCDP0:aamas15,
+  author       = {Ferdinando Fioretto and Federico Campeotto and Agostino Dovier and Enrico Pontelli and William Yeoh},
+  title        = {Large Neighborhood Search with Quality Guarantees for Distributed Constraint Optimization Problems},
+  booktitle    = AAMAS,
+  pages        = {1835--1836},
+  publisher    = {{ACM}},
+  year         = {2015},
+  url          = {http://dl.acm.org/citation.cfm?id=2773461},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = {This paper proposes Distributed Large Neighborhood Search (D-LNS), an incomplete DCOP algorithm that builds on the strengths of centralized LNS. D-LNS: (i) is anytime; (ii) provides guarantees on solution quality (upper and lower bounds); and (iii) can learn online the best neighborhood to explore. Experimental results show that D-LNS outperforms other incomplete DCOP algorithms in random and scale-free network instances.}
+}
+
+@inproceedings{F:aamas15,
+  author       = {Ferdinando Fioretto},
+  title        = {Exploiting the Structure of Distributed Constraint Optimization Problems},
+  booktitle    = AAMAS,
+  pages        = {2007--2008},
+  publisher    = {{ACM}},
+  year         = {2015},
+  url          = {http://dl.acm.org/citation.cfm?id=2773549},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = {In the proposed thesis, we study Distributed Constraint Optimization Problems (DCOPs), which are problems where several agents coordinate with each other to optimize a global cost function. The use of DCOPs has gained momentum, due to their capability of addressing complex and naturally distributed problems. A majority of the work in DCOP addresses the resolution problem by detaching the model from the resolution process, where they assume that each agent controls exclusively one variable of the problem (Burke et al. 2006). This assumption often is not reflected in the model specifications, and may lead to inefficient communication requirements. Another limitation of current DCOP resolution methods is their inability to capitalize on the presence of structural information, which may allow incoherent/unnecessary data to reticulate among the agents (Yokoo 2001). The purpose of the proposed dissertation is to study how to adapt and integrate insights gained from centralized solving techniques in order to enhance DCOP performance and scalability, enabling their use for the resolution of real-world complex problems. To do so, we hypothesize that one can exploit the DCOP structure in both problem modeling and problem resolution phases.}
+}
+
+@inproceedings{FLP0S:cp15,
+  author       = {Ferdinando Fioretto and Tiep Le and Enrico Pontelli and William Yeoh and Tran Cao Son},
+  editor       = {Gilles Pesant},
+  title        = {Exploiting GPUs in Solving (Distributed) Constraint Optimization Problems with Dynamic Programming},
+  booktitle    = CP,
+  series       = {Lecture Notes in Computer Science},
+  volume       = {9255},
+  pages        = {121--139},
+  publisher    = {Springer},
+  year         = {2015},
+  url          = {https://doi.org/10.1007/978-3-319-23219-5\_9},
+  doi          = {10.1007/978-3-319-23219-5\_9},
+  bibtex_show  = {true},
+  abbr         = {CP},
+  abstract     = {This paper proposes the design and implementation of a dynamic programming based algorithm for (distributed) constraint optimization, which exploits modern massively parallel architectures, such as those found in modern Graphical Processing Units (GPUs). The paper studies the proposed algorithm in both centralized and distributed optimization contexts. The experimental analysis, performed on unstructured and structured graphs, shows the advantages of employing GPUs, resulting in enhanced performances and scalability.}
+}
+
+#################
+# 2014
+#################
+
+@inproceedings{FCF0P:aamas14,
+  author       = {Ferdinando Fioretto and Federico Campeotto and Luca Da Rin Fioretto and William Yeoh and Enrico Pontelli},
+  title        = {{GD-GIBBS:} a GPU-based sampling algorithm for solving distributed constraint optimization problems},
+  booktitle    = {AAMAS},
+  pages        = {1339--1340},
+  publisher    = {{IFAAMAS/ACM}},
+  year         = {2014},
+  url          = {http://dl.acm.org/citation.cfm?id=2617462},
+  bibtex_show  = {true},
+  abbr         = {AAMAS},
+  abstract     = {Researchers have recently introduced a promising new class of Distributed Constraint Optimization Problem (DCOP) algorithms that is based on sampling. This paradigm is very amenable to parallelization since sampling algorithms require a lot of samples to ensure convergence, and the sampling process can be designed to be executed in parallel. This paper presents GPU-based D-Gibbs (GD-Gibbs), which extends the Distributed Gibbs (D-Gibbs) sampling algorithm and harnesses the power of parallel computation of GPUs to solve DCOPs. Experimental results show that GD-Gibbs is faster than several other benchmark algorithms on a distributed meeting scheduling problem.}
+}
+
+@inproceedings{FLYPS:cp14,
+  author       = {Ferdinando Fioretto and Tiep Le and William Yeoh and Enrico Pontelli and Tran Cao Son},
+  title        = {Improving {DPOP} with Branch Consistency for Solving Distributed Constraint Optimization Problems},
+  booktitle    = {CP},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {8656},
+  pages        = {307--323},
+  publisher    = {Springer},
+  year         = {2014},
+  url          = {https://doi.org/10.1007/978-3-319-10428-7\_24},
+  doi          = {10.1007/978-3-319-10428-7\_24},
+  bibtex_show  = {true},
+  abbr         = {CP},
+  abstract     = {The DCOP model has gained momentum in recent years thanks to its ability to capture problems that are naturally distributed and cannot be realistically addressed in a centralized manner. Dynamic programming based techniques have been recognized to be among the most effective techniques for building complete DCOP solvers (e.g., DPOP). Unfortunately, they also suffer from a widely recognized drawback: their messages are exponential in size. Another limitation is that most current DCOP algorithms do not actively exploit hard constraints, which are common in many real problems. This paper addresses these two limitations by introducing an algorithm, called BrC-DPOP, that exploits arc consistency and a form of consistency that applies to paths in pseudo-trees to reduce the size of the messages. Experimental results shows that BrC-DPOP uses messages that are up to one order of magnitude smaller than DPOP, and that it can scale up well, being able to solve problems that its counterpart can not.}
+}
+
+@inproceedings{CDFP:ecai14,
+  author       = {Federico Campeotto and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli},
+  title        = {A {GPU} Implementation of Large Neighborhood Search for Solving Constraint Optimization Problems},
+  booktitle    = ECAI,
+  series       = {Frontiers in Artificial Intelligence and Applications},
+  volume       = {263},
+  pages        = {189--194},
+  publisher    = {{IOS} Press},
+  year         = {2014},
+  url          = {https://doi.org/10.3233/978-1-61499-419-0-189},
+  doi          = {10.3233/978-1-61499-419-0-189},
+  bibtex_show  = {true},
+  abbr         = {ECAI},
+  abstract     = {Constraint programming has gained prominence as an effective and declarative paradigm for modeling and solving complex combinatorial problems. Techniques based on local search have proved practical to solve real-world problems, providing a good compromise between optimality and efficiency. In spite of the natural presence of concurrency, there has been relatively limited effort to use novel massively parallel architectures, such as those found in modern Graphical Processing Units (GPUs), to speedup local search techniques in constraint programming. This paper describes a novel framework which exploits parallelism from a popular local search method (the Large Neighborhood Search method), using GPUs.}
+}
+
+@inproceedings{CPDF:padlP14,
+  author       = {Federico Campeotto and Alessandro Dal Pal{\`{u}} and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli},
+  title        = {Exploring the Use of GPUs in Constraint Solving},
+  booktitle    = {Practical Aspects of Declarative Languages},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {8324},
+  pages        = {152--167},
+  publisher    = {Springer},
+  year         = {2014},
+  url          = {https://doi.org/10.1007/978-3-319-04132-2\_11},
+  doi          = {10.1007/978-3-319-04132-2\_11},
+  bibtex_show  = {true},
+  abbr         = {PADL},
+  abstract     = {This paper presents an experimental study aimed at assessing the feasibility of parallelizing constraint propagation—with particular focus on arc-consistency—using Graphical Processing Units (GPUs). GPUs support a form of data parallelism that appears to be suitable to the type of processing required to cycle through constraints and domain values during consistency checking and propagation. The paper illustrates an implementation of a constraint solver capable of hybrid propagations (i.e., alternating CPU and GPU), and demonstrates the potential for competitiveness against sequential implementations.}
+}
+
+
+#################
+# 2013
+#################
+
+@article{fioretto:JAIR-13,
+author    = {Federico Campeotto and Alessandro Dal Pal{\`{u}} and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli},
+title     = {A Constraint Solver for Flexible Protein Model},
+journal   = JAIR,
+volume    = {48},
+pages     = {953--1000},
+year      = {2013},
+url       = {https://doi.org/10.1613/jair.4193},
+doi       = {10.1613/jair.4193},
+abbr      = {JAIR},
+abstract  = {his paper proposes the formalization and implementation of a novel class of constraints aimed at modeling problems related to placement of multi-body systems in the 3-dimensional space. Each multi-body is a system composed of body elements, connected by joint relationships and constrained by geometric properties. The emphasis of this investigation is the use of multi-body systems to model native conformations of protein structures---where each body represents an entity of the protein (e.g., an amino acid, a small peptide) and the geometric constraints are related to the spatial properties of the composing atoms. The paper explores the use of the proposed class of constraints to support a variety of different structural analysis of proteins, such as loop modeling and structure prediction. The declarative nature of a constraint-based encoding provides elaboration tolerance and the ability to make use of any additional knowledge in the analysis studies. The filtering capabilities of the proposed constraints also allow to control the number of representative solutions that are withdrawn from the conformational space of the protein, by means of criteria driven by uniform distribution sampling principles. In this scenario it is possible to select the desired degree of precision and/or number of solutions. The filtering component automatically excludes configurations that violate the spatial and geometric properties of the composing multi-body system. The paper illustrates the implementation of a constraint solver based on the multi-body perspective and its empirical evaluation on protein structure analysis problems.}
+}
+
+@inproceedings{fioretto:CMSB-13,
+author    = {Ferdinando Fioretto and Enrico Pontelli},
+title     = {Constraint Programming in Community-Based Gene Regulatory Network Inference},
+booktitle = {Computational Methods in Systems Biology},
+pages     = {135--149},
+year      = {2013},
+url       = {https://doi.org/10.1007/978-3-642-40708-6\_11},
+doi       = {10.1007/978-3-642-40708-6\_11},
+abbr      = {CMSB},
+award     = {Best Paper Award},
+abstract  = {Gene Regulatory Network (GRN) inference is a major objective of Systems Biology. The complexity of biological systems and the lack of adequate data have posed many challenges to the inference problem. Community networks integrate predictions from individual methods in a “meta predictor”, in order to compose the advantages of different methods and soften individual limitations. This paper proposes a novel methodology to integrate prediction ensembles using Constraint Programming, a declarative modeling paradigm, which allows the formulation of dependencies among components of the problem, enabling the integration of diverse forms of knowledge. The paper experimentally shows the potential of this method: the addition of biological constraints can offer improvements in the prediction accuracy, and the method shows promising results in assessing biological hypothesis using constraints.}
+}
+
+
+#################
+# 2012
+################
+
+@inproceedings{CPDFP:cp12,
+  author    = {Federico Campeotto and Alessandro Dal Pal{\`{u}} and Agostino Dovier and Ferdinando Fioretto and Enrico Pontelli},
+  title     = {A Filtering Technique for Fragment Assembly-Based Proteins Loop Modeling with Constraints},
+  booktitle = CP,
+  pages     = {850--866},
+  year      = {2012},
+  url       = {http://dx.doi.org/10.1007/978-3-642-33558-7_61},
+  doi       = {10.1007/978-3-642-33558-7_61},
+  abbr      = {CP},
+  bibtex_show={true},
+  abstract  = {Methods to predict the structure of a protein often rely on the knowledge of macro sub-structures and their exact or approximated relative positions in space. The parts connecting these sub-structures are called loops and, in general, they are characterized by a high degree of freedom. The modeling of loops is a critical problem in predicting protein conformations that are biologically realistic. This paper introduces a class of constraints that models a general multi-body system; we present a proof of NP-completeness and provide filtering techniques, inspired by inverse kinematics, that can drastically reduce the search space of potential conformations. The paper shows the application of the constraint in solving the protein loop modeling problem, based on fragments assembly.},
+  alsoin    = {WCB},
+  alsoinyear = {2012}
+}
