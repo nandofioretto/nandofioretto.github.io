@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  5 OCT 2023 13:13
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  11 OCT 2023 17:09
  restricted system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
@@ -89,66 +89,92 @@ Package babel Info: Non-standard hyphenation setup on input line 118.
 \l@dutch=\language21
 \l@ukenglish=\language22
 \l@usenglishmax=\language23
-\l@esperanto=\language243/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks18
-\inpenc@posthook=\toks19
-))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2023-02-22 L3 programming layer (loader) 
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count268
-\l__pdf_internal_box=\box51
-))
-Package: xparse 2023-02-02 L3 Experimental document command parser
+\l@esperanto=\language24
+\l@estonian=\language25
+\l@ethiopic=\language26
+\l@farsi=\language27
+\l@finnish=\language28
+\l@schoolfinnish=\language29
+\l@french=\language30
+\l@friulan=\language31
+\l@galician=\language32
+\l@georgian=\language33
+\l@german=\language34
+\l@ngerman=\language35
+\l@swissgerman=\language36
+\l@greek=\language37
+\l@monogreek=\language38
+\l@hungarian=\language39
+\l@icelandic=\language40
+\l@assamese=\language41
+\l@bengali=\language42
+\l@gujarati=\language43
+\l@hindi=\language44
+\l@kannada=\language45
+\l@malayalam=\language46
+\l@marathi=\language47
+\l@oriya=\language48
+\l@pali=\language49
+\l@panjabi=\language50
+\l@tamil=\language51
+\l@telugu=\language52
+\l@indonesian=\language53
+\l@interlingua=\language54
+\l@irish=\language55
+\l@italian=\language56
+\l@kurmanji=\language57
+\l@classiclatin=\language58
+\l@latin=\language59
+\l@liturgicallatin=\language60
+\l@latvian=\language61
+\l@lithuanian=\language62
+\l@macedonian=\language63
+\l@mongolian=\language64
+\l@mongolianlmc=\language65
+\l@bokmal=\language66
+\l@nynorsk=\language67
+\l@occitan=\language68
+\l@piedmontese=\language69
+\l@polish=\language70
+\l@portuguese=\language71
+\l@romanian=\language72
+\l@romansh=\language73
+\l@russian=\language74
+\l@sanskrit=\language75
+\l@serbian=\language76
+\l@serbianc=\language77
+\l@slovak=\language78
+\l@slovenian=\language79
+\l@spanish=\language80
+\l@swedish=\language81
+\l@thai=\language82
+\l@turkish=\language83
+\l@turkmen=\language84
+\l@ukrainian=\language85
+\l@uppersorbian=\language86
+\l@welsh=\language87
+\babelcatcodetablenum=\catcodetable12
+\bbl@pattcodes=\catcodetable13
 )
-Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\babel@savecnt=\count191
+\U@D=\dimen140
+\l@unhyphenated=\language88
 
-/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty:45: Fatal Pa
-ckage fontspec Error: The fontspec package requires either XeTeX or
-(fontspec)                      LuaTeX.
-(fontspec)                      
-(fontspec)                      You must change your typesetting engine to,
-(fontspec)                      e.g., "xelatex" or "lualatex" instead of
-(fontspec)                      "latex" or "pdflatex".
-
-Type <return> to continue.
- ...                                              
-                                                  
-l.45 \msg_fatal:nn {fontspec} {cannot-use-pdftex}
-                                                 
-? 
-/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty:45: Emergenc
-y stop.
- ...                                              
-                                                  
-l.45 \msg_fatal:nn {fontspec} {cannot-use-pdftex}
-                                                 
-
-LaTeX does not know anything more about this error, sorry.
-
-Try typing <return> to proceed.
-If that doesn't work, type X <return> to quit.
-
-This is a fatal error: LaTeX will abort.
-
-
- 
-Here is how much of TeX's memory you used:
- 2515 strings out of 476025
- 46738 string characters out of 5790017
- 1849388 words of memory out of 5000000
- 22989 multiletter control sequences out of 15000+600000
- 512287 words of font info for 32 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 87i,0n,91p,299b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
-/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty:45:  ==> Fat
-al error occurred, no output PDF file produced!
-o: Hyphen rules for 'acadian' set to \l@french
+(/usr/local/texlive/2023/texmf-dist/tex/generic/babel/luababel.def
+\bbl@attr@locale=\attribute4
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language22). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language22). Reported on input line 108.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2023/03/08 v3.5q French support from the babel system
+Package babel Info: Hyphen rules for 'acadian' set to \l@french
 (babel)             (\language30). Reported on input line 91.
 Package babel Info: Hyphen rules for 'canadien' set to \l@french
 (babel)             (\language30). Reported on input line 92.
@@ -1449,24 +1475,19 @@ Overfull \hbox (5.28076pt too wide) in alignment at lines 24--49
  [][] 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 99--101
-
- []
-
-[12]) (./section_talks.tex
+[11] [12]) (./section_talks.tex
 
 LaTeX Font Warning: Font shape `TU/FontAwesome(0)/m/it' undefined
-(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 83.
+(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 87.
 
 [13]
 
 LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/b/it' undefined
 (Font)              using `TU/SourceSansPro-Light(0)/b/n' instead on input line
- 135.
+ 139.
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 173.
+Package hyperref Warning: Suppressing link with empty target on input line 177.
 
 
 ) (./section_projects.tex
@@ -1542,10 +1563,10 @@ Package rerunfilecheck Info: File `cvFioretto.out' has not changed.
 Here is how much of LuaTeX's memory you used:
  33259 strings out of 478285
  477253,1977958 words of node,token memory allocated
- 4370 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 172 glue, 4 kern, 1 penalty, 2 glyph, 1124 attribut
-e, 76 glue_spec, 162 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:3,2:23691,3:2039,4:1104,5:6073,6:879,7:39400,8:9,9:5886,10:12,
+ 4393 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 173 glue, 4 kern, 1 penalty, 2 glyph, 1131 attribut
+e, 76 glue_spec, 163 attribute_list, 2 write, 1 pdf_action nodes
+   avail lists: 1:3,2:23683,3:2039,4:1104,5:6073,6:879,7:39399,8:9,9:5886,10:12,
 11:3400
  52102 multiletter control sequences out of 65536+600000
  54 fonts using 8319175 bytes
@@ -1560,7 +1581,7 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (18 pages, 128644 bytes).
+Output written on cvFioretto.pdf (18 pages, 128939 bytes).
 
 PDF statistics: 496 PDF objects out of 1000 (max. 8388607)
  456 compressed objects within 5 object streams
