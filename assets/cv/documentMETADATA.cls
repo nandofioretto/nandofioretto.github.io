@@ -400,9 +400,9 @@
 % }
 
 
-% \newcommand\confentryShort[5]{
-%   \cvtag{#1} & #2. \link{#5}{\title{#3}}. {#4}. \press{#5}{}\\
-% }
+\newcommand\confentryShort[5]{
+  \cvtag{#1} & #2. \link{#5}{\title{#3}}. {#4}. \press{#5}{}\\
+}
 
 \newcommand\journalentry[5]{
   \textbf{#1}.& #2.\\ 
