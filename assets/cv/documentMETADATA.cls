@@ -669,6 +669,7 @@
 \definecolor{awcol}{rgb}{0.58,0.00,0.70}
 \newcommand{\awardText}[1]{\textbf{\textcolor{purple}{#1}}}
 
+\def\procACL{\emph{Proceedings of the} \venue{Annual Meeting of the Association for Computational Linguistics (ACL)}}
 \def\procWWW{\emph{Proceedings of the} \venue{ACM Web Conferences (WWW)}}
 \def\procNeurIPS{\emph{Proceedings of the} \venue{Conference on Neural Information Processing Systems (NeurIPS)}}
 \def\procAAMAS{\emph{Proceedings of the} \venue{International Conference on Autonomous Agents and  Multiagent Systems (AAMAS)}}
@@ -676,7 +677,9 @@
 \def\procIJCAI{\emph{Proceedings of the} \venue{International Joint Conference on Artificial Intelligence (IJCAI)}}
 \def\procCP{\emph{Proceedings of the} \venue{International Conference on Principles and Practice of  Constraint Programming (CP)}}
 \def\procECAI{\emph{Proceedings of the} \venue{European Conference of Artificial Intelligence (ECAI)}}
+\def\procFAccT{\emph{Proceedings of the} \venue{ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)}}
 \def\procISIAM{\venue{International Symposium on Artificial Intelligence and Mathematics (ISAIM)}}
+\def\procICML{\emph{Proceedings of the} \venue{International Conference on Machine Learning (ICML)}}
 \def\procCPAIOR{\emph{Proceedings of the} \venue{International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research (CPAIOR)}}
 \def\procPADL{\emph{Proceedings of the} \venue{Practical Aspects of Declarative Languages (PADL)}}
 \def\procPRIMA{\emph{Proceedings of the} \venue{International Conference on Principles and Practice of Multi-Agent Systems (PRIMA)}}
@@ -684,7 +687,8 @@
 \def\procCMSB{\emph{Proceedings of the} \venue{Computational Methods in System Biology (CMSB)}}
 \def\procPSCC{\emph{Proceedings of the} \venue{Power Systems Computation Conference (PSCC)}}
 \def\procECML{\emph{Proceedings of the} \venue{European Conference on Machine Learning (ECML)}}
-\def\procNeurIPS{\emph{Proceedings of the} \venue{Conference on Neural Information Processing Systems (NeurIPS)}}
+%\def\procNeurIPS{\emph{Proceedings of the} \venue{Conference on Neural Information Processing Systems (NeurIPS)}}
+\def\procUAI{\emph{Proceedings of the} \venue{Conference of Uncertainty on Artificial Intelligence (UAI)}}
 \def\JAIR{\venue{Journal of Artificial Intelligence Research (JAIR)}}
 \def\AIJ{\venue{Artificial Intelligence Journal (AIJ)}}
 \def\TSG{\venue{IEEE Transactions on Smart Grids}}
