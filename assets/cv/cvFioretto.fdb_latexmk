@@ -1,4 +1,5 @@
 # Fdb version 4
+<<<<<<< Updated upstream
 ["lualatex"] 1710250089 "cvFioretto.tex" "cvFioretto.pdf" "cvFioretto" 1710250091 0
   "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/fontawesome.luc" 1693837368 65327 80c4489364a18b3634d72e129cee78e6 ""
   "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1693837368 128410 e8b61c2a5e330cd0816cabbb13af398a ""
@@ -27,11 +28,17 @@
   "/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf" 1496785618 7008 9ff5fdcc865b01beca2b0fe4a46231d4 ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf" 1678396172 66539 d9390ea5d212512734e040c6780653bc ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/frenchb.lua" 1678396172 12134 3d3d22d66197a8ad6d18d9e57e0765bf ""
+=======
+["pdflatex"] 1709749140 "cvFioretto.tex" "cvFioretto.pdf" "cvFioretto" 1709749141 2
+  "/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf" 1496785618 7008 9ff5fdcc865b01beca2b0fe4a46231d4 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf" 1678396172 66539 d9390ea5d212512734e040c6780653bc ""
+>>>>>>> Stashed changes
   "/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty" 1676321701 151363 1f5971af3ef874d432e8fb43e0edb71d ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-en.ini" 1661803479 3966 caeee5a9e5771d4446aa1ca9015ba1b2 ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex" 1498512262 336 ed676b5e7dfd862bc78d634f6a973f37 ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-fr.ini" 1661803479 4250 a2f817bda0df06df543d55698ea94f77 ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex" 1498512262 336 f27942ba034bde85aef544115290ec5d ""
+<<<<<<< Updated upstream
   "/usr/local/texlive/2023/texmf-dist/tex/generic/babel/luababel.def" 1676321701 66656 bededf525d36185e64c6ecdc27cf409e ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -278,5 +285,30 @@
   "cvFioretto.aux"
   "cvFioretto.log"
   "cvFioretto.out"
+=======
+  "/usr/local/texlive/2023/texmf-dist/tex/generic/babel/txtbabel.def" 1674507072 6927 64b53e78feab932ab94f892bb5a5facf ""
+  "/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
+  "/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
+  "/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty" 1572645307 488 4565444a3e75e59cb2702dc42e18f482 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls" 1667332637 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty" 1654720880 5048 84b05796b49b69e2d4257d537721c960 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo" 1667332637 8448 c33a4e1cb35cee9b33c2b21033b73e39 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty" 1137109962 1360 df2086bf924b14b72d6121fe9502fcdb ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty" 1642282977 1656 7e824878bad4df5a3e8bba4e463d9126 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty" 1654720880 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1673989714 30429 213676d4c7327a21d91ddaed900e7b81 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty" 1677186603 6107 5cfea8a675c58918b8c04be10261e48c ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1675461949 6812 3c152a1c8d562d7b7291c4839b61a5c3 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty" 1290186129 6248 ceeaee07c710940f3ede6f9cc8a61680 ""
+  "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
+  "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1690430822 7883453 400893335b08086b746d890babcc3ffa ""
+  "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
+  "cvFioretto.aux" 1709749140 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "cvFioretto.tex" 1707151268 1683 574f1e6dc87fb1e90c71050254c880ca ""
+  "documentMETADATA.cls" 1707151268 20704 9f6bc59f26500d18ee9af6c2f83f971f ""
+  (generated)
+  "cvFioretto.aux"
+  "cvFioretto.log"
+>>>>>>> Stashed changes
   "cvFioretto.pdf"
   (rewritten before read)
