@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  12 MAR 2024 09:28
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  19 MAR 2024 09:36
  restricted system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
@@ -42,23 +41,12 @@ Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'. L3 programm
 ing layer <2023-02-22>
 Inserting `tracingstacklevels' in `input_level_string'. (./documentMETADATA.cls
 
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.27)  6 MAR 2024 13:19
-entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**cvFioretto.tex
-(./cvFioretto.tex
-LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22> (./documentMETADATA.cls
->>>>>>> Stashed changes
 Document Class: documentMETADATA 2018/07/19 v1.9.2 'YAAC: Another Awesome CV' C
 lass
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
-<<<<<<< Updated upstream
 luaotfload | db : Font names database loaded from /Users/nandofioretto/Library/t
 exlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \c@part=\count183
@@ -175,50 +163,18 @@ Package babel Info: Non-standard hyphenation setup on input line 118.
 (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/luababel.def
 \bbl@attr@locale=\attribute4
 )
-=======
-)
-\c@part=\count185
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
-\c@figure=\count191
-\c@table=\count192
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
-)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2023/02/13 3.86 The Babel package
-\babel@savecnt=\count193
-\U@D=\dimen141
-\l@unhyphenated=\language87
-
-(/usr/local/texlive/2023/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count194
-
->>>>>>> Stashed changes
 (/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-<<<<<<< Updated upstream
 (babel)             (\language22). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language22). Reported on input line 108.
-=======
-(babel)             (\language21). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language21). Reported on input line 108.
->>>>>>> Stashed changes
 )
 (/usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf
 Language: french 2023/03/08 v3.5q French support from the babel system
 Package babel Info: Hyphen rules for 'acadian' set to \l@french
-<<<<<<< Updated upstream
 (babel)             (\language30). Reported on input line 91.
 Package babel Info: Hyphen rules for 'canadien' set to \l@french
 (babel)             (\language30). Reported on input line 92.
@@ -255,33 +211,6 @@ tex UTF-8 French hyphenation patterns
 tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/hyph-utf8/patterns/quote/hyph-q
 uote-fr.tex))))
-=======
-(babel)             (\language29). Reported on input line 91.
-Package babel Info: Hyphen rules for 'canadien' set to \l@french
-(babel)             (\language29). Reported on input line 92.
-\FB@nonchar=\count195
-Package babel Info: Making : an active character on input line 395.
-Package babel Info: Making ; an active character on input line 396.
-Package babel Info: Making ! an active character on input line 397.
-Package babel Info: Making ? an active character on input line 398.
-\FBguill@level=\count196
-\FBold@everypar=\toks16
-\FB@Mht=\dimen142
-\mc@charclass=\count197
-\mc@charfam=\count198
-\mc@charslot=\count199
-\std@mcc=\count266
-\dec@mcc=\count267
-\FB@parskip=\dimen143
-\listindentFB=\dimen144
-\descindentFB=\dimen145
-\labelindentFB=\dimen146
-\labelwidthFB=\dimen147
-\leftmarginFB=\dimen148
-\parindentFFN=\dimen149
-\FBfnindent=\dimen150
-))
->>>>>>> Stashed changes
 (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-french.te
 x
 Package babel Info: Importing font and identification data for french
@@ -308,7 +237,6 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 )
-<<<<<<< Updated upstream
 (/usr/local/texlive/2023/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
 Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
 
@@ -357,33 +285,20 @@ Now handling font encoding OMX ...
 ... no UTF-8 mapping file for font encoding OMX
 Now handling font encoding U ...
 ... no UTF-8 mapping file for font encoding U
-=======
-(/usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks18
-\inpenc@posthook=\toks19
->>>>>>> Stashed changes
 ))
 (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2023-02-22 L3 programming layer (loader) 
 
-<<<<<<< Updated upstream
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
 File: l3backend-luatex.def 2023-01-16 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count266
-=======
-(/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count268
->>>>>>> Stashed changes
 \l__pdf_internal_box=\box51
 ))
 Package: xparse 2023-02-02 L3 Experimental document command parser
 )
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
-<<<<<<< Updated upstream
 Lua module: fontspec 2022/01/15 2.8a Font selection for XeLaTeX and LuaLaTeX (/
 usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaT
@@ -1475,36 +1390,45 @@ Overfull \hbox (5.28076pt too wide) in alignment at lines 40--73
 ) (./section_honors_awards.tex [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./sec
-tion_pubs_compact.tex
-
-Package hyperref Warning: Suppressing link with empty target on input line 981.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 981.
+tion_publications.tex [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
+[]|
+ []
 
 
-[2] [3] [4] [5] [6] [7] [8] [9]) (./section_teaching_mentoring.tex
+Overfull \hbox (7.74097pt too wide) in paragraph at lines 675--675
+[]$\OMS/cmsy/m/n/10 $\TU/SourceSansPro-Light(0)/b/n/10 2014[]| 
+ []
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 733.
+
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 733.
+
+
+[4] [5] [6] [7] [8] [9] [10]) (./section_teaching_mentoring.tex
 Overfull \hbox (5.28076pt too wide) in alignment at lines 24--49
  [][] 
  []
 
-[10] [11]) (./section_talks.tex [12]
+[11]) (./section_talks.tex [12]
 
 LaTeX Font Warning: Font shape `TU/FontAwesome(0)/m/it' undefined
-(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 95.
-
-
-LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/b/it' undefined
-(Font)              using `TU/SourceSansPro-Light(0)/b/n' instead on input line
- 147.
+(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 104.
 
 [13]
 
-Package hyperref Warning: Suppressing link with empty target on input line 185.
+LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/b/it' undefined
+(Font)              using `TU/SourceSansPro-Light(0)/b/n' instead on input line
+ 156.
 
 
-) (./section_projects.tex
+Package hyperref Warning: Suppressing link with empty target on input line 194.
+
+
+[14]) (./section_projects.tex
 Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
  []
@@ -1534,7 +1458,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--59
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 69--69
 
  []
@@ -1570,7 +1494,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--115
 
  []
 
-) (./section_service.tex [15] [16] [17]) [18] (./cvFioretto.aux)
+[15]) (./section_service.tex [16] [17] [18]) [19] (./cvFioretto.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1579,14 +1503,14 @@ Package rerunfilecheck Info: File `cvFioretto.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33258 strings out of 478285
- 596539,1977958 words of node,token memory allocated
- 4354 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 172 glue, 4 kern, 1 penalty, 2 glyph, 1117 attribut
-e, 76 glue_spec, 161 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:7,2:48723,3:2428,4:1312,5:6331,6:1141,7:43241,8:8,9:6918,10:27
-,11:3550
- 52104 multiletter control sequences out of 65536+600000
+ 33269 strings out of 478285
+ 596577,1977958 words of node,token memory allocated
+ 4423 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 175 glue, 4 kern, 1 penalty, 2 glyph, 1138 attribut
+e, 76 glue_spec, 164 attribute_list, 2 write, 1 pdf_action nodes
+   avail lists: 1:6,2:25003,3:2155,4:1202,5:6177,6:932,7:40322,8:8,9:6339,10:27,
+11:3443
+ 52109 multiletter control sequences out of 65536+600000
  54 fonts using 8319175 bytes
  115i,12n,111p,1198b,887s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1599,52 +1523,10 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (18 pages, 127648 bytes).
+Output written on cvFioretto.pdf (19 pages, 129887 bytes).
 
-PDF statistics: 506 PDF objects out of 1000 (max. 8388607)
- 466 compressed objects within 5 object streams
- 40 named destinations out of 1000 (max. 131072)
+PDF statistics: 514 PDF objects out of 1000 (max. 8388607)
+ 473 compressed objects within 5 object streams
+ 46 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 
-=======
-
-! Fatal Package fontspec Error: The fontspec package requires either XeTeX or
-(fontspec)                      LuaTeX.
-(fontspec)                      
-(fontspec)                      You must change your typesetting engine to,
-(fontspec)                      e.g., "xelatex" or "lualatex" instead of
-(fontspec)                      "latex" or "pdflatex".
-
-Type <return> to continue.
- ...                                              
-                                                  
-l.45 \msg_fatal:nn {fontspec} {cannot-use-pdftex}
-                                                 
-
-LaTeX does not know anything more about this error, sorry.
-
-Try typing <return> to proceed.
-If that doesn't work, type X <return> to quit.
-
-This is a fatal error: LaTeX will abort.
-
-
-
-! Emergency stop.
-<read *> 
-         
-l.45 \msg_fatal:nn {fontspec} {cannot-use-pdftex}
-                                                 
-*** (cannot \read from terminal in nonstop modes)
-
- 
-Here is how much of TeX's memory you used:
- 2514 strings out of 476025
- 46359 string characters out of 5790017
- 1849388 words of memory out of 5000000
- 22989 multiletter control sequences out of 15000+600000
- 512287 words of font info for 32 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 87i,0n,91p,299b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
->>>>>>> Stashed changes
