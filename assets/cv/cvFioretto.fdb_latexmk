@@ -1,12 +1,12 @@
 # Fdb version 4
-["lualatex"] 1710855411 "cvFioretto.tex" "cvFioretto.pdf" "cvFioretto" 1710855413 0
+["lualatex"] 1711546090 "cvFioretto.tex" "cvFioretto.pdf" "cvFioretto" 1711546092 0
   "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/fontawesome.luc" 1693837368 65327 80c4489364a18b3634d72e129cee78e6 ""
   "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1693837368 128410 e8b61c2a5e330cd0816cabbb13af398a ""
   "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1693837368 127327 0c22a2c7faa4e80fd8c3443dc8dd3208 ""
   "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/sourcesanspro-light.luc" 1693837369 541086 b6a8c26e1c1b381e9afd9513076626ed ""
   "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/sourcesanspro-lightit.luc" 1693837370 186095 90a433da25d3a2fb78762d1b848a7e97 ""
   "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/sourcesanspro-regular.luc" 1693837370 581035 b88c55cb7da07c5aa3cd5a2e08478348 ""
-  "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1710855412 304 3c1bc67db60cfb6742446df01db9ade0 "lualatex"
+  "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1711546091 304 3c1bc67db60cfb6742446df01db9ade0 "lualatex"
   "/Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1704298075 365497 76e6be88ebe5bfafb4f73bb894c67ee0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/opentype/public/fontawesome/FontAwesome.otf" 1465747999 132548 9f6ff7d7cfd6f76d7a9c242bdd48c144 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -258,8 +258,8 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1692811945 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/tex/generic/config/language.dat" 1678822458 6627 dc320a7c13e00300e5a0f696ef4294be ""
   "/usr/local/texlive/2023/texmf-var/web2c/luahbtex/lualatex.fmt" 1692811872 11880171 0ba79405efe88cdb6a60e748c3d4e673 ""
-  "cvFioretto.aux" 1710855413 3124 d7c8307241ddce5d6f2515f7a6fd647b "lualatex"
-  "cvFioretto.out" 1710855413 1291 1ca215c8f54038799fcfb278b3b9f402 "lualatex"
+  "cvFioretto.aux" 1711546092 3124 d7c8307241ddce5d6f2515f7a6fd647b "lualatex"
+  "cvFioretto.out" 1711546092 1291 1ca215c8f54038799fcfb278b3b9f402 "lualatex"
   "cvFioretto.tex" 1710853996 1702 6e66462072bdc85dbcd6de7126d9a52d ""
   "documentMETADATA.cls" 1707012062 21154 4583b8863304007f74bd9385e560bfb2 ""
   "fonts/SourceSansPro-Light.otf" 1690430560 226032 779f3bf41b852b5582d41cd866ca3ddc ""
@@ -269,7 +269,7 @@
   "section_honors_awards.tex" 1708094986 10709 924e34a7c52c032eb0b7d9e0a30137fb ""
   "section_projects.tex" 1707678071 4718 d5f4122ab8dbdb0b0ea6ad120ec05f51 ""
   "section_publications.tex" 1710855402 38577 82919b66debdc04d048d09bf11a50e04 ""
-  "section_service.tex" 1707779527 11530 d7b39d64e1bd3377fae32cf68bb56674 ""
+  "section_service.tex" 1711546089 11601 17e1b75f2f02ec1d50e4e12326f9c39b ""
   "section_talks.tex" 1710854088 11958 bda7df1b464749bd0d4bd5af07a98ea9 ""
   "section_teaching_mentoring.tex" 1707007394 8094 937a5ef563ba4a0bb51069b9f47c4d76 ""
   (generated)
