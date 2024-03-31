@@ -62,7 +62,7 @@
 \RequirePackage{url,parskip} 	    % other packages for formatting
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \RequirePackage{fullpage}
-\RequirePackage[margin=0.85in]{geometry}
+\RequirePackage[left=20mm, right=20mm,top=20mm,bottom=20mm]{geometry}
 \RequirePackage{fontawesome}
 \RequirePackage{hyperref}
 \RequirePackage{titlesec}
@@ -76,6 +76,8 @@
 \RequirePackage{xparse}
 \RequirePackage{multirow}
 \RequirePackage{multicol}
+\setlength{\LTleft}{-20pt}
+
 \DeclareUnicodeCharacter{00E9}{\'{e}}
 % Define default accent colors
 \definecolor{basecolor}{HTML}{000066}       %BLUE
@@ -127,16 +129,16 @@
 %\font\fb=''[cmr10]''                      % for use with \LaTeX command
 
 % Setup CV sections
-\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{6pt}{6pt}
-\titlespacing{\subsection}{0pt}{6pt}{6pt}
-\titlespacing{\subsubsection}{0pt}{6pt}{2pt}
+\titleformat{\section}{\Large\raggedright}{}{-2mm}{}[\titlerule]
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titlespacing{\subsection}{0pt}{4pt}{0pt}
+\titlespacing{\subsubsection}{-20pt}{4pt}{-2pt}
 
 % Configure list
 % \setlist[itemize,1]{label=\faAngleRight, nosep, leftmargin=2em} 
 % \setlist[itemize,2]{label=\faAngleRight, nosep, leftmargin=1.5em} 
-\setlist[itemize,1]{label=\faAngleRight,  leftmargin=2em} 
-\setlist[itemize,2]{label=\faAngleRight,  leftmargin=1.5em} 
+\setlist[itemize,1]{label=\faAngleRight,  leftmargin=1em} 
+\setlist[itemize,2]{label=\faAngleRight,  leftmargin=0.5em} 
 
 % Setup Array : new column type
 \newcolumntype{R}[1]{>{\hfill}m{#1}}
@@ -182,7 +184,7 @@
 
 \newcommand\link[2]{{\color{linkcolor}\href{#1}{#2}}}
 \newcommand\important[1]{\textbf #1}
-\newcommand\nemph[1]{{\color{accentcolor}\textbf{#1}}}
+\newcommand\nemph[1]{{\color{accentcolor}\em{#1}}}
 \newcommand{\student}[1]{\mbox{\small\textcolor{symbolcolor}{\faUser}}~#1}
 \newcommand{\venue}[1]{{\scshape \bf{\color{black}{#1}}}}
 \renewcommand{\title}[1]{{\em ``#1''}}
@@ -329,7 +331,7 @@
 }
 
 % Resume part title definition
-\newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace \textsc{#1}}{#1}}}
+\newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace \textsc{#1}}{#1}}\medskip}
 \newcommand\yearTitle[1]{\subsection*{\texorpdfstring{\color{accentcolor}\hspace*{0.75em}\textsc{#1}}{#1}}
 \vspace{-0.0em}}
 \newcommand\subsectionTitle[1]{\subsubsection*{\texorpdfstring{\color{accentcolor}\hspace*{2em}\textsc{#1}}{#1}}
@@ -364,88 +366,36 @@
   \vspace*{-1em}
 }
 
-
-% Render a pubentry in the scolarship environment
-% Usage: \scholarshipentry{<date>}{<description>}
-% \newcommand\journalentry[5]{
-%   \cvtag{#1} & #2. \link{#5}{\title{#3}}. {#4}. \press{#5}{}\\[0.5em]
-% }
-% \newcommand\journalentryAwd[7]{
-%   \cvtag{#1} & #2.
-%              \link{#5}{\title{#3}}.
-%              {#4}. \press{#5}{}\\
-%   \faTrophy  & {\awardText{#6} #7.}\\[0.5em]
-% }
-
-
-% \newcommand\confentry[6]{
-%   \cvtag{#1} & #2.
-%              \link{#5}{\title{#3}}.
-%              {#4}. \press{#5}{}\\
-%              & Acceptance Rate: {#6}. \\[0.5em]
-% }
-
-% \newcommand\confentryAwd[8]{
-%   \cvtag{#1} & #2.
-%              \link{#5}{\title{#3}}.
-%              {#4}. \press{#5}{}\\
-%              & Acceptance Rate: {#6}. \\
-%   \faTrophy  & {\awardText{#7} #8.}\\[0.5em]
-% }
-
-% \newcommand\wsentry[5]{
-%   \cvtag{#1} & #2.
-%              \link{#5}{\title{#3}}.
-%              {#4}. \press{#5}{}\\[0.5em]
-% }
-
-
 \newcommand\confentryShort[5]{
-  \cvtag{#1} & #2. \link{#5}{\title{#3}}. {#4}. \press{#5}{}\\
+  \cvtag{#1} & #2. \link{#5}{\title{#3}}. {#4}.\\
 }
 
 \newcommand\journalentry[5]{
-  \textbf{#1}.& #2.\\ 
-              & \link{#5}{\title{#3}}.\\ 
-              & {#4}. \press{#5}{}\\[0.5em]
+  \textbf{#1}.& #2. \link{#5}{\title{#3}}. {#4}.\\[0.5em]
 }
 \newcommand\journalentryAwd[7]{
-  \textbf{#1}. & #2. \\ 
-  \faTrophy    & \link{#5}{\title{#3}}.\\ 
-               & {#4}. \press{#5}{}\\
-               & {\awardText{#6} #7.}\\[0.5em]
+  \textbf{#1} & #2. \link{#5}{\title{#3}}. {#4}.\\
+  \faTrophy   & {\awardText{#6} #7.}\\[0.5em]
 }
 \newcommand\confentry[6]{
-  \textbf{#1}. & #2. \\
-               & \link{#5}{\title{#3}}. \\
-               & {#4}. \press{#5}{}\\[0.5em]
+  \textbf{#1}. & #2. \link{#5}{\title{#3}}. {#4}.\\[0.5em]
                %& Acceptance Rate: {#6}. \\[0.5em]
 }
 \newcommand\confentryAwd[8]{
-  \textbf{#1}. & #2. \\
-  \faTrophy    & \link{#5}{\title{#3}}. \\
-               & {#4}. \press{#5}{}\\
-               % & Acceptance Rate: {#6}. \\
-               & {\awardText{#7} #8.}\\[0.5em]
+  \textbf{#1}. & #2. \link{#5}{\title{#3}}. {#4}. \\
+                 % & Acceptance Rate: {#6}. \\
+  \faTrophy  & {\awardText{#7} #8.}\\[0.5em]
 }
 \newcommand\wsentry[5]{
-  \textbf{#1}. & #2. \\
-             & \link{#5}{\title{#3}}.\\
-             & {#4}. \press{#5}{}\\[0.5em]
+  \textbf{#1}. & #2. \link{#5}{\title{#3}}. {#4}. \\[0.5em]
 }
 \newcommand\wsentryAwd[6]{
-  \textbf{#1}. & #2. \\
-  \faTrophy   & \link{#5}{\title{#3}}.\\
-             & {#4}. \press{#5}{}\\
-             & {\awardText{#6}.}\\[0.5em]
+  \textbf{#1}. & #2. \link{#5}{\title{#3}}. {#4}. \\
+  \faTrophy.   & {\awardText{#6}.}\\[0.5em]
 }
 
-% \newcommand\confentryShort[5]{
-%   \cvtag{#1} & #2. \link{#5}{\title{#3}}. {#4}. \press{#5}{}\\
-% }
-
 \newenvironment{awards}{%
-  \begin{longtable}{R{1cm}p{\rightcolumnlength}}
+  \begin{longtable}{R{2cm}p{\rightcolumnlength}}
 }{%
   \end{longtable}
    \vspace*{-1em}
@@ -489,13 +439,12 @@
   \textbf{#1}    & \foreach \x in {1,...,5}{{\color{accentcolor!80} \ifnumgreater{\x}{#2}{\faCircleThin}{\faCircle}}\enspace } \\
 }
 
-
 % Define the 'experiences' environment
 \newenvironment{experiences}{%
   \begin{longtable}{R{\leftcolumn}|E}
 }{%
   \end{longtable}
-  \vspace*{-1em}
+  \vspace*{-0.0em}
 }
 
 % Render an experience in the experiences environment
