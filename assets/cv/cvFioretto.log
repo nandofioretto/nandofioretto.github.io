@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  3 APR 2024 10:18
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  24 APR 2024 15:26
  restricted system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
@@ -1391,24 +1391,24 @@ ht(0)/b/n/10 Fer-di-
 
 LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/b/it' undefined
 (Font)              using `TU/SourceSansPro-Light(0)/b/n' instead on input line
- 441.
+ 439.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 684--684
+Underfull \hbox (badness 10000) in paragraph at lines 682--682
 []|
  []
 
 
-Overfull \hbox (6.34094pt too wide) in paragraph at lines 684--684
+Overfull \hbox (6.34094pt too wide) in paragraph at lines 682--682
 []$\OMS/cmsy/m/n/10 $\TU/SourceSansPro-Light(0)/m/it/10 2014[]| 
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 742.
+Package hyperref Warning: Suppressing link with empty target on input line 740.
 
 
 [3] [4] [5] [6] [7]
-Underfull \hbox (badness 3260) in paragraph at lines 961--961
+Underfull \hbox (badness 3260) in paragraph at lines 959--959
 []|[] \TU/SourceSansPro-Light(0)/m/n/10 My H. Dinh, \TU/SourceSansPro-Light(0)/
 b/it/10 Fer-di-nando Fio-retto\TU/SourceSansPro-Light(0)/m/n/10 . [][]\TU/Sourc
 eSansPro-Light(0)/m/it/10 ``Context-Aware Dif-fe-ren-tial Pri-vacy for Lan-guage
@@ -1431,74 +1431,83 @@ Package hyperref Warning: Suppressing link with empty target on input line 153.
 
 
 ) (./section_projects.tex
+
+Package hyperref Warning: Suppressing link with empty target on input line 19.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--70
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
 
  []
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 79.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 79--79
 
  []
 
+
+Package hyperref Warning: Suppressing link with empty target on input line 88.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+
+ []
+
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
 
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 101.
+Package hyperref Warning: Suppressing link with empty target on input line 110.
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--125
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
 
  []
 
@@ -1512,12 +1521,12 @@ Package rerunfilecheck Info: File `cvFioretto.out' has not changed.
 
 Here is how much of LuaTeX's memory you used:
  33264 strings out of 478285
- 477247,1977958 words of node,token memory allocated
- 6629 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 181 glue, 4 kern, 1 penalty, 2 glyph, 1838 attribut
-e, 76 glue_spec, 264 attribute_list, 2 write, 95 pdf_action nodes
-   avail lists: 1:4,2:14475,3:1153,4:762,5:6573,6:329,7:39262,8:9,9:2998,10:11,1
-1:3683
+ 477230,1977958 words of node,token memory allocated
+ 6675 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 183 glue, 4 kern, 1 penalty, 2 glyph, 1852 attribut
+e, 76 glue_spec, 266 attribute_list, 2 write, 95 pdf_action nodes
+   avail lists: 1:4,2:14483,3:1177,4:768,5:6608,6:331,7:39509,8:9,9:3016,10:11,1
+1:3717
  52108 multiletter control sequences out of 65536+600000
  54 fonts using 8319175 bytes
  115i,12n,111p,1198b,887s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1531,7 +1540,7 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (16 pages, 133922 bytes).
+Output written on cvFioretto.pdf (16 pages, 134261 bytes).
 
 PDF statistics: 473 PDF objects out of 1000 (max. 8388607)
  435 compressed objects within 5 object streams
