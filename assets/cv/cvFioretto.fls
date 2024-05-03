@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 PWD /Users/nandofioretto/Dropbox/Research/Repos/flab.github.io/assets/cv
 INPUT /usr/local/texlive/2023/texmf-var/web2c/luahbtex/lualatex.fmt
 INPUT ./cvFioretto.tex
@@ -62,39 +61,11 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.lua
 INPUT ./documentMETADATA.cls
 INPUT ./documentMETADATA.cls
 INPUT ./documentMETADATA.cls
-=======
-PWD /Users/ferdinandofloretto/Repos/nandofioretto.github.io/assets/cv
-INPUT /usr/local/texlive/2023/texmf.cnf
-INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT cvFioretto.tex
-OUTPUT cvFioretto.log
-INPUT ./documentMETADATA.cls
-INPUT ./documentMETADATA.cls
-INPUT documentMETADATA.cls
-INPUT ./documentMETADATA.cls
-INPUT ./documentMETADATA.cls
-INPUT ./documentMETADATA.cls
-INPUT ./documentMETADATA.cls
-INPUT ./documentMETADATA.cls
-INPUT documentMETADATA.cls
-INPUT ./documentMETADATA.cls
-INPUT documentMETADATA.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
->>>>>>> Stashed changes
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
-<<<<<<< Updated upstream
 INPUT /Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz
 INPUT /Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
@@ -103,104 +74,35 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/luababel.def
 INPUT /usr/local/texlive/2023/texmf-var/tex/generic/config/language.dat
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/luababel.def
-=======
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/txtbabel.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf
->>>>>>> Stashed changes
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf
-<<<<<<< Updated upstream
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/frenchb.lua
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-fr.tex
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-fr.tex
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/hyph-utf8/patterns/quote/hyph-quote-fr.tex
-=======
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex
->>>>>>> Stashed changes
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-fr.ini
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
-<<<<<<< Updated upstream
-=======
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
->>>>>>> Stashed changes
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-en.ini
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
-<<<<<<< Updated upstream
-=======
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
->>>>>>> Stashed changes
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
-<<<<<<< Updated upstream
-=======
-INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
->>>>>>> Stashed changes
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-<<<<<<< Updated upstream
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
@@ -221,56 +123,12 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/t1enc.dfu
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/t1enc.dfu
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1enc.dfu
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1enc.dfu
-=======
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
->>>>>>> Stashed changes
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-<<<<<<< Updated upstream
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -658,8 +516,8 @@ INPUT ./section_honors_awards.tex
 OUTPUT /Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.lua
 OUTPUT /Users/nandofioretto/Library/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc
 INPUT /usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT ./section_pubs_compact.tex
-INPUT ./section_pubs_compact.tex
+INPUT ./section_publications.tex
+INPUT ./section_publications.tex
 INPUT ./section_teaching_mentoring.tex
 INPUT ./section_teaching_mentoring.tex
 INPUT ./section_talks.tex
@@ -673,35 +531,3 @@ INPUT ./cvFioretto.out
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-=======
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
->>>>>>> Stashed changes
