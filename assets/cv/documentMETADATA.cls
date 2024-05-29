@@ -183,6 +183,7 @@
 \newcommand{\linkSymbol}{\faHome}
 
 \newcommand\link[2]{{\color{linkcolor}\href{#1}{#2}}}
+\newcommand\blink[2]{{\href{#1}{#2}}}
 \newcommand\important[1]{\textbf #1}
 \newcommand\nemph[1]{{\color{accentcolor}\em{#1}}}
 \newcommand{\student}[1]{\mbox{\small\textcolor{symbolcolor}{\faUser}}~#1}
@@ -367,30 +368,30 @@
 }
 
 \newcommand\confentryShort[5]{
-  \cvtag{#1} & #2. \link{#5}{\title{#3}}. {#4}.\\
+  \cvtag{#1} & #2. \blink{#5}{\title{#3}}. {#4}.\\
 }
 
 \newcommand\journalentry[5]{
-  \textbf{#1}.& #2. \link{#5}{\title{#3}}. {#4}.\\[0.5em]
+  \textbf{#1}.& #2. \blink{#5}{\title{#3}}. {#4}.\\[0.5em]
 }
 \newcommand\journalentryAwd[7]{
-  \textbf{#1} & #2. \link{#5}{\title{#3}}. {#4}.\\
+  \textbf{#1} & #2. \blink{#5}{\title{#3}}. {#4}.\\
   \faTrophy   & {\awardText{#6} #7.}\\[0.5em]
 }
 \newcommand\confentry[6]{
-  \textbf{#1}. & #2. \link{#5}{\title{#3}}. {#4}.\\[0.5em]
-               %& Acceptance Rate: {#6}. \\[0.5em]
+  \textbf{#1}. & #2. \blink{#5}{\title{#3}}. {#4}.\\[0.5em]
+               & Acceptance Rate: {#6}. \\[0.5em]
 }
 \newcommand\confentryAwd[8]{
-  \textbf{#1}. & #2. \link{#5}{\title{#3}}. {#4}. \\
-                 % & Acceptance Rate: {#6}. \\
+  \textbf{#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\
+              & Acceptance Rate: {#6}. \\
   \faTrophy  & {\awardText{#7} #8.}\\[0.5em]
 }
 \newcommand\wsentry[5]{
-  \textbf{#1}. & #2. \link{#5}{\title{#3}}. {#4}. \\[0.5em]
+  \textbf{#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\[0.5em]
 }
 \newcommand\wsentryAwd[6]{
-  \textbf{#1}. & #2. \link{#5}{\title{#3}}. {#4}. \\
+  \textbf{#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\
   \faTrophy.   & {\awardText{#6}.}\\[0.5em]
 }
 
