@@ -186,7 +186,7 @@
 \newcommand\blink[2]{{\href{#1}{#2}}}
 \newcommand\important[1]{\textbf #1}
 \newcommand\nemph[1]{{\color{accentcolor}\em{#1}}}
-\newcommand{\student}[1]{\mbox{\small\textcolor{symbolcolor}{\faUser}}~#1}
+\newcommand{\student}[1]{\mbox{\footnotesize\textcolor{symbolcolor}{$^\text{\faUser}$}}#1}
 \newcommand{\venue}[1]{{\scshape \bf{\color{black}{#1}}}}
 \renewcommand{\title}[1]{{\em ``#1''}}
 
