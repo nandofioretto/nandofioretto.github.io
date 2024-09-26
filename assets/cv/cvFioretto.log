@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  21 SEP 2024 14:50
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  26 SEP 2024 12:07
  restricted system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
@@ -1434,20 +1434,20 @@ Overfull \hbox (5.69046pt too wide) in paragraph at lines 111--112
 
 LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/b/it' undefined
 (Font)              using `TU/SourceSansPro-Light(0)/b/n' instead on input line
- 326.
+ 333.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--493
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
 []|
  []
 
 
-Overfull \hbox (6.34094pt too wide) in paragraph at lines 493--493
+Overfull \hbox (6.34094pt too wide) in paragraph at lines 500--500
 []$\OMS/cmsy/m/n/10 $\TU/SourceSansPro-Light(0)/m/it/10 2016[]| 
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 627.
+Package hyperref Warning: Suppressing link with empty target on input line 634.
 
 
 [3] [4] [5] [6] [7] [8] [9] [10]
@@ -1573,12 +1573,12 @@ Package rerunfilecheck Info: File `cvFioretto.out' has not changed.
 
 Here is how much of LuaTeX's memory you used:
  33280 strings out of 478285
- 596582,1977958 words of node,token memory allocated
- 8761 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 271 glue, 4 kern, 1 penalty, 2 glyph, 2482 attribut
-e, 76 glue_spec, 356 attribute_list, 2 write, 100 pdf_action nodes
-   avail lists: 1:5,2:19259,3:1844,4:572,5:8279,6:597,7:47134,8:8,9:5343,10:18,1
-1:4211
+ 596575,1977958 words of node,token memory allocated
+ 8806 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 272 glue, 4 kern, 1 penalty, 2 glyph, 2496 attribut
+e, 76 glue_spec, 358 attribute_list, 2 write, 101 pdf_action nodes
+   avail lists: 1:5,2:19531,3:1868,4:580,5:8391,6:605,7:47728,8:8,9:5413,10:18,1
+1:4267
  52121 multiletter control sequences out of 65536+600000
  66 fonts using 9445143 bytes
  115i,12n,111p,1198b,887s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1592,10 +1592,10 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (19 pages, 145792 bytes).
+Output written on cvFioretto.pdf (19 pages, 145926 bytes).
 
-PDF statistics: 510 PDF objects out of 1000 (max. 8388607)
- 469 compressed objects within 5 object streams
+PDF statistics: 511 PDF objects out of 1000 (max. 8388607)
+ 470 compressed objects within 5 object streams
  45 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 
