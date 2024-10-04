@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  26 SEP 2024 12:07
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  4 OCT 2024 17:48
  restricted system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
@@ -1450,8 +1450,13 @@ Overfull \hbox (6.34094pt too wide) in paragraph at lines 500--500
 Package hyperref Warning: Suppressing link with empty target on input line 634.
 
 
-[3] [4] [5] [6] [7] [8] [9] [10]
-Underfull \hbox (badness 5711) in paragraph at lines 1040--1040
+[3] [4] [5] [6] [7] [8] [9]
+
+Package hyperref Warning: Suppressing link with empty target on input line 975.
+
+
+[10]
+Underfull \hbox (badness 5711) in paragraph at lines 1054--1054
 []|[]\TU/SourceSansPro-Light(0)/m/n/10 My H. Dinh, \TU/SourceSansPro-Light(0)/b
 /it/10 Fer-di-nando Fio-retto\TU/SourceSansPro-Light(0)/m/n/10 . []\TU/SourceSa
 nsPro-Light(0)/m/it/10 ``Context-Aware Dif-fe-ren-tial Pri-vacy for Lan-guage Mo
@@ -1461,19 +1466,19 @@ it/10 CoRR
 
 ) (./section_teaching_mentoring.tex [11] [12]) (./section_talks.tex
 
-Package hyperref Warning: Suppressing link with empty target on input line 40.
+Package hyperref Warning: Suppressing link with empty target on input line 48.
 
 [13]
 
 LaTeX Font Warning: Font shape `TU/FontAwesome(0)/m/it' undefined
-(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 111.
+(Font)              using `TU/FontAwesome(0)/m/n' instead on input line 119.
 
 [14]
 
-Package hyperref Warning: Suppressing link with empty target on input line 181.
+Package hyperref Warning: Suppressing link with empty target on input line 189.
 
 
-) (./section_projects.tex
+) [15] (./section_projects.tex
 
 Package hyperref Warning: Suppressing link with empty target on input line 18.
 
@@ -1488,82 +1493,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--27
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--39
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--70
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
 
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 87.
+Package hyperref Warning: Suppressing link with empty target on input line 83.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
 
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 108.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 116.
+Package hyperref Warning: Suppressing link with empty target on input line 104.
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--116
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--123
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
+Package hyperref Warning: Suppressing link with empty target on input line 111.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--139
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 
  []
 
-) (./section_service.tex [16] [17] [18]) [19] (./cvFioretto.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+
+ []
+
+[16]) (./section_service.tex [17] [18] [19]) [20] (./cvFioretto.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1572,12 +1577,12 @@ Package rerunfilecheck Info: File `cvFioretto.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33280 strings out of 478285
+ 33281 strings out of 478285
  596575,1977958 words of node,token memory allocated
- 8806 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 272 glue, 4 kern, 1 penalty, 2 glyph, 2496 attribut
-e, 76 glue_spec, 358 attribute_list, 2 write, 101 pdf_action nodes
-   avail lists: 1:5,2:19531,3:1868,4:580,5:8391,6:605,7:47728,8:8,9:5413,10:18,1
+ 8874 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 274 glue, 4 kern, 1 penalty, 2 glyph, 2517 attribut
+e, 76 glue_spec, 361 attribute_list, 2 write, 102 pdf_action nodes
+   avail lists: 1:5,2:19507,3:1868,4:580,5:8391,6:604,7:47726,8:8,9:5413,10:18,1
 1:4267
  52121 multiletter control sequences out of 65536+600000
  66 fonts using 9445143 bytes
@@ -1592,10 +1597,10 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (19 pages, 145926 bytes).
+Output written on cvFioretto.pdf (20 pages, 147501 bytes).
 
-PDF statistics: 511 PDF objects out of 1000 (max. 8388607)
- 470 compressed objects within 5 object streams
- 45 named destinations out of 1000 (max. 131072)
+PDF statistics: 518 PDF objects out of 1000 (max. 8388607)
+ 476 compressed objects within 5 object streams
+ 46 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 
