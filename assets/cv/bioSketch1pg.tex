@@ -7,7 +7,7 @@
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 
-\documentclass[localFont,alternative]{documentMETADATA}
+\documentclass[localFont,alternative]{metadataShortBio}
 \usepackage{datetime}
 \usepackage{amsmath}
 \newdateformat{monthyeardate}{%
@@ -96,57 +96,74 @@ Charlottesville, VA 22904 - U.S.A.}\\
 \sectionTitle{Most Closely Related Products}{}%{\faBook}
 \vspace{-6pt}
 
+{
 \begin{pubs}
+	
 	\confentryShort
-  {1} %{IJCAI}
+	{1}
+	{Jacob K Christopher, Michael Cardei, Brian R Bartoldson, Bhavya Kailkhura, and {\bf Ferdinando Fioretto}}
+	{Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion}
+	{ENLP at {\textbf{NeurIPS}, 2024}}
+	{https://arxiv.org/abs/2408.05636}
+
+	\confentryShort
+	{2}
+	{Jacob K Christopher, Stephen Baek, and {\bf Ferdinando Fioretto}}
+	{Constrained Synthesis with Projected Diffusion Models}
+	{\textbf{NeurIPS}, 2024}
+	{https://arxiv.org/abs/2402.03559}
+
+	\confentryShort
+  {3} %{IJCAI}
 	{Sree Nelaturu, Kanna Ravichandran, Cuong Tran, Sara Hooker, and {\bf Ferdinando Fioretto}}
 	{On The Fairness Impacts of Hardware Selection in Machine Learning}
   {\textbf{ICML}, 2024}
 	{https://arxiv.org/abs/2312.03886}
 
 	\confentryShort
-	{2}
-	{{Cuong Tran} and {\bf Ferdinando Fioretto}}
-	{Finding $\epsilon$ and $\delta$ of Traditional Disclosure Control Systems}
-	{\textbf{AAAI}, 2024}
-	{https://arxiv.org/abs/2301.12204}
-
-	\confentryShort
-	{3}
+	{4}
 	{{Cuong Tran} and {\bf Ferdinando Fioretto}}
 	{Data Minimization at Inference Time}
 	{\textbf{NeurIPS}, 2023}
 	{https://arxiv.org/abs/2305.17593}
 
-	% \confentryShort
-	% {3}
-	% {{Cuong Tran}, {\bf Ferdinando Fioretto}, Jung-Eun Kim, {Rakshit Naidu}}
-	% {Pruning has a disparate impact on model accuracy}
-	% {\textbf{NeurIPS}, 2022}
-	% {http://arxiv.org/abs/2205.13574}
-
-	\confentryShort
-	{4} %{NeurIPS}
-	{{Cuong Tran}, {My H. Dinh}, {\bf Ferdinando Fioretto}}
-	{Differentially Private Deep Learning under the Fairness Lens}
-	{\textbf{NeurIPS}, 2021}
-	{https://arxiv.org/pdf/2106.02674.pdf}
-
 	\confentryShort
 	{5}
-	{Prakhar Ganesh, {Cuong Tran}, Reza Shokri, {\bf Ferdinando Fioretto}}
-	{The Data Minimization principle in Machine Learning}
-	{\textbf{NeurIPS}, 2024 (under review)}
-	{}
+	{{Cuong Tran}, {\bf Ferdinando Fioretto}, Jung-Eun Kim, {Rakshit Naidu}}
+	{Pruning has a disparate impact on model accuracy}
+	{\textbf{NeurIPS}, 2022}
+	{http://arxiv.org/abs/2205.13574}
 
 	\confentryShort
-	{6}%{ArXiv}
-	{{My H. Dinh}, {\bf Ferdinando Fioretto}}
-	{Context-Aware Differential Privacy for Language Modeling}
-	{\textbf{NeurIPS}, 2024 (under review)}
-	{https://arxiv.org/abs/2301.12288}
+	{6}
+	{James Kotary, Vincenzo Di Vito, and {\bf Ferdinando Fioretto}}
+	{Differentiable Model Selection for Ensemble Learning}
+	{\textbf{IJCAI}, 2023}
+	{https://www.ijcai.org/proceedings/2023/217}
+
+	% \confentryShort
+	% {4} %{NeurIPS}
+	% {{Cuong Tran}, {My H. Dinh}, {\bf Ferdinando Fioretto}}
+	% {Differentially Private Deep Learning under the Fairness Lens}
+	% {\textbf{NeurIPS}, 2021}
+	% {https://arxiv.org/pdf/2106.02674.pdf}
+
+	% \confentryShort
+	% {5}
+	% {Prakhar Ganesh, {Cuong Tran}, Reza Shokri, {\bf Ferdinando Fioretto}}
+	% {The Data Minimization principle in Machine Learning}
+	% {\textbf{NeurIPS}, 2024 (under review)}
+	% {}
+
+	% \confentryShort
+	% {6}%{ArXiv}
+	% {{My H. Dinh}, {\bf Ferdinando Fioretto}}
+	% {Context-Aware Differential Privacy for Language Modeling}
+	% {\textbf{NeurIPS}, 2024 (under review)}
+	% {https://arxiv.org/abs/2301.12288}
 
 \end{pubs}
+}
 
 \vspace{-2pt}
 \sectionTitle{Selected Honors and Awards}{}%{\faMortarBoard}
@@ -242,7 +259,7 @@ Charlottesville, VA 22904 - U.S.A.}\\
 
 \sectionTitle{Selected Synergistic Activities}{}%{\faBook}
 
-  \begin{itemize}
+  \begin{itemize}[leftmargin=0.4cm]
     \item {\bf Conference co-chair}:  
     {International Conference on Principles and Practice of Constraint Programming (CP)}  \hfill{2022}
     %{\em with Roie Zivan}
@@ -252,15 +269,16 @@ Charlottesville, VA 22904 - U.S.A.}\\
     % \hfill{2022}
 
     \item {\bf Workshop co-organizer}: \\
-    {Algorithmic Fairness through the Lens of Causality and Privacy, (at NeurIPS)} \hfill{2022, 2023}\\
-    {Workshop on Machine Learning for Operational Research, (at AAAI)}   \hfill{2022, 2024}\\
+    {Algorithmic Fairness through the Lens of Causality and Privacy, (at NeurIPS)} \hfill{2022 -- 2024}\\
+    {Workshop on Machine Learning for Operational Research, (at AAAI)}   \hfill{2022 -- 2024}\\
     {Workshop on Optimization and Learning in Multi-Agent Systems, at AAMAS} \hfill{2018--2022}\\
-    {Workshop on Privacy Preserving Artificial Intelligence, (at AAAI)}   \hfill{2020--2024}
+    {Workshop on Privacy Preserving Artificial Intelligence, (at AAAI)}   \hfill{2020--2025}
     
     \item {\bf Senior Program Committee/Area Chair}: \\
     AAAI Conference on Artificial Intelligence (AAAI) \hfill {2020 -- 2024}\\
 		ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT) \hfill {2023 -- 2024}\\
-    Conference on Neural Information Processing Systems (NeurIPS) \hfill {2024}\\
+    Conference on Neural Information Processing Systems (NeurIPS) \hfill{2023 -- 2024}\\
+    International Conference on Machine Learning (ICML) \hfill {2023 -- 2024}\\
     International Joint Conference on Artificial Intelligence (IJCAI) \hfill {2021 -- 2024}\\
     European Conference on Machine Learning (ECML) \hfill{2023 -- 2024}
   % \item {\bf Track Chair}: 
