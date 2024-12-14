@@ -1,14 +1,14 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.7.27)  26 NOV 2024 18:29
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  13 NOV 2024 14:44
  restricted system commands enabled.
-**bioSketch-DARPA.tex
-(./bioSketch-DARPA.tex
+**bioSketch1pg.tex
+(./bioSketch1pg.tex
 LaTeX2e <2022-11-01> patch level 1
 Lua module: luaotfload 2022-10-03 3.23 Lua based OpenType font support
 Lua module: lualibs 2022-10-04 2.75 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2022-10-04 2.75 ConTeXt Lua libraries -- extended c
 ollection.
-luaotfload | conf : Root cache directory is "/Users/ferdinandofloretto/Library/t
-exlive/2023/texmf-var/luatex-cache/generic/names".
+luaotfload | conf : Root cache directory is "/Users/nandofioretto/Library/texliv
+e/2023/texmf-var/luatex-cache/generic/names".
 luaotfload | init : Loading fontloader "fontloader-2022-10-03.lua" from kpse-res
 olved path "/usr/local/texlive/2023/texmf-dist/tex/luatex/luaotfload/fontloader-
 2022-10-03.lua".
@@ -19,8 +19,8 @@ Inserting `luaotfload.node_processor' in `hpack_filter'.
 Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
 Inserting `luaotfload.define_font' in `define_font'.
 Lua-only attribute luaotfload_color_attribute = 2
-luaotfload | conf : Root cache directory is "/Users/ferdinandofloretto/Library/t
-exlive/2023/texmf-var/luatex-cache/generic/names".
+luaotfload | conf : Root cache directory is "/Users/nandofioretto/Library/texliv
+e/2023/texmf-var/luatex-cache/generic/names".
 Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
 Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
 Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
@@ -39,7 +39,11 @@ Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
 Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'. L3 programm
 ing layer <2023-02-22>
-Inserting `tracingstacklevels' in `input_level_string'. (./documentMETADATA.cls
+Inserting `tracingstacklevels' in `input_level_string'. (./metadataShortBio.cls
+
+
+LaTeX Warning: You have requested document class `metadataShortBio',
+               but the document class provides `documentMETADATA'.
 
 Document Class: documentMETADATA 2018/07/19 v1.9.2 'YAAC: Another Awesome CV' C
 lass
@@ -47,8 +51,8 @@ lass
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from /Users/ferdinandofloretto/Libr
-ary/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
+luaotfload | db : Font names database loaded from /Users/nandofioretto/Library/t
+exlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \c@part=\count183
 \c@section=\count184
 \c@subsection=\count185
@@ -396,8 +400,8 @@ Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-ge
 neric.tex)
-luaotfload | cache : Lookup cache loaded from /Users/ferdinandofloretto/Library/
-texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
+luaotfload | cache : Lookup cache loaded from /Users/nandofioretto/Library/texli
+ve/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
 luaotfload | aux : font no 18 (nil) defines no feature for script latn
 luaotfload | aux : font no 18 (nil) defines no feature for script dflt
 
@@ -1205,143 +1209,131 @@ LaTeX Info: Redefining \Relbar on input line 971.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-(/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen301
-\lightrulewidth=\dimen302
-\cmidrulewidth=\dimen303
-\belowrulesep=\dimen304
-\belowbottomsep=\dimen305
-\aboverulesep=\dimen306
-\abovetopsep=\dimen307
-\cmidrulesep=\dimen308
-\cmidrulekern=\dimen309
-\defaultaddspace=\dimen310
-\@cmidla=\count373
-\@cmidlb=\count374
-\@aboverulesep=\dimen311
-\@belowrulesep=\dimen312
-\@thisruleclass=\count375
-\@lastruleclass=\count376
-\@thisrulewidth=\dimen313
-)
-(./bioSketch-DARPA.aux)
-\openout1 = bioSketch-DARPA.aux
+(./bioSketch1pg.aux)
+\openout1 = bioSketch1pg.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-7.
+5.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 37.
+(french.ldf)             reported on input line 35.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 37.
-LaTeX Info: Redefining \up on input line 37.
+(french.ldf)             reported on input line 35.
+LaTeX Info: Redefining \up on input line 35.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 37.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 37.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 37.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 37.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 37.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 37.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 37.
-LaTeX Font Info:    Redeclaring math accent \check on input line 37.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 37.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 37.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 37.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 37.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 37.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 35.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 35.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 35.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 35.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 35.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 35.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 35.
+LaTeX Font Info:    Redeclaring math accent \check on input line 35.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 35.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 35.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 35.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 35.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 37.
+(Font)              `operators' in the math version `normal' on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/SourceSansPro-Light(0)/m/n on input 
-line 37.
+line 35.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 37.
+(Font)              `operators' in the math version `bold' on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/SourceSansPro-Light(0)/m/n on input
- line 37.
+ line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/SourceSansPro-Light(0)/m/n --> TU/SourceSansPro-Ligh
-t(0)/m/n on input line 37.
+t(0)/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/SourceSansPro-Light(0)/m/it on inpu
-t line 37.
+t line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/SourceSansPro-Light(0)/b/n on input
- line 37.
+ line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 37.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 37.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/SourceSansPro-Light(0)/m/n --> TU/SourceSansPro-Ligh
-t(0)/b/n on input line 37.
+t(0)/b/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/SourceSansPro-Light(0)/b/it on inp
-ut line 37.
+ut line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 37.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 37.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 35.
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count377
-\scratchdimen=\dimen314
+\scratchcounter=\count373
+\scratchdimen=\dimen301
 \scratchbox=\box128
-\nofMPsegments=\count378
-\nofMParguments=\count379
+\nofMPsegments=\count374
+\nofMParguments=\count375
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count380
-\MPscratchDim=\dimen315
-\MPnumerator=\count381
-\makeMPintoPDFobject=\count382
+\MPscratchCnt=\count376
+\MPscratchDim=\dimen302
+\MPnumerator=\count377
+\makeMPintoPDFobject=\count378
 \everyMPtoPDFconversion=\toks51
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -1381,87 +1373,51 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 37.
-(./bioSketch-DARPA.out) (./bioSketch-DARPA.out)
+Package hyperref Info: Link coloring OFF on input line 35.
+(./bioSketch1pg.out) (./bioSketch1pg.out)
 \@outlinefile=\write4
 
-\openout4 = bioSketch-DARPA.out
+\openout4 = bioSketch1pg.out
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
 
-LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/m/scit' undefined
-(Font)              using `TU/SourceSansPro-Light(0)/m/it' instead on input lin
-e 195.
+Package hyperref Warning: Suppressing link with empty target on input line 192.
 
-
-Underfull \hbox (badness 8151) in paragraph at lines 231--232
-[]|\TU/SourceSansPro-Light(0)/m/n/10 My H. Dinh, \TU/SourceSansPro-Light(0)/b/n
-/10 Fer-di-nando Fio-retto\TU/SourceSansPro-Light(0)/m/n/10 . []\TU/SourceSansP
-ro-Light(0)/m/it/10 ``Context-Aware Dif-fe-ren-tial Pri-vacy for Lan-guage Mo-de
--ling''[]\TU/SourceSansPro-Light(0)/m/n/10 . \TU/SourceSansPro-Light(0)/b/n/10 
-CoRR
- []
 
 
 LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/m/scit' undefined
 (Font)              using `TU/SourceSansPro-Light(0)/m/it' instead on input lin
-e 340.
+e 301.
 
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 358--361
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--363
-
- []
-
-
-LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/m/scit' undefined
-(Font)              using `TU/SourceSansPro-Light(0)/m/it' instead on input lin
-e 426.
-
-[2]
-
-LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/m/scit' undefined
-(Font)              using `TU/SourceSansPro-Light(0)/m/it' instead on input lin
-e 446.
-
-[3]
-
-LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/m/scit' undefined
-(Font)              using `TU/SourceSansPro-Light(0)/m/it' instead on input lin
-e 446.
-
-[4] (./bioSketch-DARPA.aux)
-Package rerunfilecheck Info: File `bioSketch-DARPA.out' has not changed.
-(rerunfilecheck)             Checksum: 137B7FBEE4CC8DCCAD3F9D50FDCCE6F7;1132.
+(./bioSketch1pg.aux)
+Package rerunfilecheck Info: File `bioSketch1pg.out' has not changed.
+(rerunfilecheck)             Checksum: FCB6DE72605C6C5E476A0E3E3CD7DF5E;813.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33186 strings out of 478285
- 244345,1977958 words of node,token memory allocated
- 1388 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 20 glue, 4 kern, 1 penalty, 2 glyph, 249 attribute,
- 78 glue_spec, 37 attribute_list, 2 write, 13 pdf_action nodes
-   avail lists: 1:6,2:15516,3:2114,4:306,5:2536,6:288,7:16252,8:2,9:2424,10:12,1
-1:1409
- 52092 multiletter control sequences out of 65536+600000
+ 33110 strings out of 478285
+ 156364,1977958 words of node,token memory allocated
+ 883 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 9 glue, 4 kern, 1 penalty, 2 glyph, 95 attribute, 7
+6 glue_spec, 15 attribute_list, 2 write, 2 pdf_action nodes
+   avail lists: 1:6,2:5343,3:837,4:264,5:1993,6:226,7:12860,8:2,9:1643,10:11,11:
+1062
+ 52022 multiletter control sequences out of 65536+600000
  51 fonts using 7385391 bytes
- 115i,12n,111p,1203b,844s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,11n,111p,1200b,350s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <./fonts/SourceSansPro-LightIt.otf></usr/local/texlive/2023/texmf-dist/fonts/ope
 ntype/public/fontawesome/FontAwesome.otf><./fonts/SourceSansPro-Regular.otf><./f
 onts/SourceSansPro-Light.otf>
-Output written on bioSketch-DARPA.pdf (4 pages, 38668 bytes).
+Output written on bioSketch1pg.pdf (1 page, 26283 bytes).
 
-PDF statistics: 140 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
- 15 named destinations out of 1000 (max. 131072)
- 64 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 85 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 131072)
+ 48 words of extra memory for PDF output out of 10000 (max. 100000000)
 

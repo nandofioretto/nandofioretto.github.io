@@ -361,14 +361,14 @@
 % Define the 'scholarship' environment
 \newenvironment{pubs}{%
 %  \begin{longtable}{R{\leftcolumn} p{\rightcolumnlength}}
-  \begin{longtable}{R{0.7cm} p{15.5cm}}
+  \begin{longtable}{R{1.0cm} p{16.5cm}}
 }{%
   \end{longtable}
   \vspace*{-1em}
 }
 
 \newcommand\confentryShort[5]{
-  \cvtag{#1} & #2. \blink{#5}{\title{#3}}. {#4}.\\
+  {#1.} & #2. \blink{#5}{\title{#3}}. {#4}.\\
 }
 
 \newcommand\journalentry[5]{
