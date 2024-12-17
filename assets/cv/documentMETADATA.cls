@@ -392,7 +392,7 @@
 }
 \newcommand\wsentryAwd[6]{
   \textbf{#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\
-  \faTrophy.   & {\awardText{#6}.}\\[0.5em]
+  \faTrophy   & {\awardText{#6}.}\\[0.5em]
 }
 
 \newenvironment{awards}{%
