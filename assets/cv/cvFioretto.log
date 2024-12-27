@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  17 DEC 2024 10:12
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  27 DEC 2024 12:31
  restricted system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
@@ -1377,60 +1377,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-(./section_experience.tex) (./section_honors_awards.tex
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 15--16
-[]|[]| 
- []
+(./section_experience.tex) (./section_honors_awards.tex [1
 
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 25--31
-[]|[]| 
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 40--41
-[]|[]| 
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 49--50
-[]|[]| 
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 57--58
-[]|[]| 
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 68--69
-[]|[]| 
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 82--83
-[]|[]| 
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 92--93
-[]|[]| 
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 100--101
-[]|[]| 
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 111--112
-[]|[]| 
- []
-
-[1
-
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
-(./section_publications.tex [2]
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./sec
+tion_publications.tex
 
 Package hyperref Warning: Suppressing link with empty target on input line 47.
 
@@ -1444,21 +1394,46 @@ LaTeX Font Warning: Font shape `TU/SourceSansPro-Light(0)/b/it' undefined
  388.
 
 
+Underfull \hbox (badness 1867) in paragraph at lines 502--502
+[]|\TU/SourceSansPro-Light(0)/m/n/10 Khoi Hoang, \TU/SourceSansPro-Light(0)/b/i
+t/10 Fer-di-nando Fio-retto\TU/SourceSansPro-Light(0)/m/n/10 , William Yeoh, En-
+rico Pon-telli, Roie Zi-van. []\TU/SourceSansPro-Light(0)/m/it/10 ``A Large Neig
+h-bo-ring Search
+ []
+
+
 Package hyperref Warning: Suppressing link with empty target on input line 689.
 
 
 
-Overfull \hbox (21.43921pt too wide) in alignment at lines 28--690
+Overfull \hbox (1.52237pt too wide) in alignment at lines 28--690
 [][] 
  []
 
-[3] [4] [5] [6] [7]
-Overfull \hbox (21.43921pt too wide) in alignment at lines 694--801
+[2] [3] [4] [5]
+Underfull \hbox (badness 1024) in paragraph at lines 800--800
+[]|\TU/SourceSansPro-Light(0)/m/n/10 ($\OML/cmm/m/it/10 $\TU/SourceSansPro-Lig
+ht(0)/m/n/10 -$\OML/cmm/m/it/10 $\TU/SourceSansPro-Light(0)/m/n/10 )[][][] Fe-d
+e-rico Cam-peotto, Ales-san-dro Dal Palù, Agos-tino Do-vier, \TU/SourceSansPro
+-Light(0)/b/it/10 Fer-di-nando Fio-retto\TU/SourceSansPro-Light(0)/m/n/10 , En-r
+ico Pon-telli. []\TU/SourceSansPro-Light(0)/m/it/10 ``A
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 800--800
+\TU/SourceSansPro-Light(0)/m/it/10 Constraint Sol-ver for Flexible Pro-tein Mo-d
+els''[]\TU/SourceSansPro-Light(0)/m/n/10 . []\TU/SourceSansPro-Light(0)/b/it/10
+ Jour-nal of Ar-ti-fi-cial In-tel-li-gence Re-search (JAIR)[]\TU/SourceSansPro-
+Light(0)/m/n/10 , 48, pages
+ []
+
+
+Overfull \hbox (1.52237pt too wide) in alignment at lines 694--801
 [][] 
  []
 
-[8]
-Overfull \hbox (21.43921pt too wide) in alignment at lines 804--842
+[6]
+Overfull \hbox (1.52237pt too wide) in alignment at lines 804--842
 [][] 
  []
 
@@ -1467,137 +1442,66 @@ Package hyperref Warning: Suppressing link with empty target on input line 853.
 
 
 
+Underfull \hbox (badness 1496) in paragraph at lines 862--862
+[]|[]\TU/SourceSansPro-Light(0)/m/n/10 Vin-cenzo Di Vito, Mos-tafa Mo-ham-ma-dia
+n, Kyri Ba-ker, \TU/SourceSansPro-Light(0)/b/it/10 Fer-di-nando Fio-retto\TU/So
+urceSansPro-Light(0)/m/n/10 . []\TU/SourceSansPro-Light(0)/m/it/10 ``OPF-Net : 
+Real-Time Sta-bi-lity
+ []
+
+
 Package hyperref Warning: Suppressing link with empty target on input line 869.
 
 
 
-Overfull \hbox (21.43921pt too wide) in alignment at lines 846--1065
-[][] 
- []
-
-[9] [10]
-Overfull \hbox (21.43921pt too wide) in alignment at lines 1069--1148
-[][] 
+Underfull \hbox (badness 2326) in paragraph at lines 911--911
+[]|\TU/SourceSansPro-Light(0)/m/n/10 Vla-di-mir Dvor-kin, \TU/SourceSansPro-Lig
+ht(0)/b/it/10 Fer-di-nando Fio-retto\TU/SourceSansPro-Light(0)/m/n/10 , Pas-cal Van Hen-ten-ryck, Pierre Pin-son, Ja-lal Ka-zem-pour. []\TU/SourceSansPro-Light(0)/m/it/10 ``Privacy-
  []
 
 
-Overfull \hbox (21.43921pt too wide) in alignment at lines 1154--1247
+Overfull \hbox (1.52237pt too wide) in alignment at lines 846--1065
 [][] 
  []
 
-[11]) (./section_teaching_mentoring.tex [12]) (./section_talks.tex [13]
+[7] [8]
+Underfull \hbox (badness 1496) in paragraph at lines 1084--1084
+[]|[]\TU/SourceSansPro-Light(0)/m/n/10 Vin-cenzo Di Vito, Mos-tafa Mo-ham-ma-dia
+n, Kyri Ba-ker, \TU/SourceSansPro-Light(0)/b/it/10 Fer-di-nando Fio-retto\TU/So
+urceSansPro-Light(0)/m/n/10 . []\TU/SourceSansPro-Light(0)/m/it/10 ``OPF-Net : 
+Real-Time Sta-bi-lity
+ []
+
+
+Overfull \hbox (1.52237pt too wide) in alignment at lines 1069--1157
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1170
+[]|[]\TU/SourceSansPro-Light(0)/m/n/10 My H. Dinh, \TU/SourceSansPro-Light(0)/b
+/it/10 Fer-di-nando Fio-retto\TU/SourceSansPro-Light(0)/m/n/10 . []\TU/SourceSa
+nsPro-Light(0)/m/it/10 ``Context-Aware Dif-fe-ren-tial Pri-vacy for Lan-guage Mo
+-de-ling''[]\TU/SourceSansPro-Light(0)/m/n/10 . []\TU/SourceSansPro-Light(0)/b/
+it/10 CoRR
+ []
+
+
+Overfull \hbox (1.52237pt too wide) in alignment at lines 1163--1256
+[][] 
+ []
+
+[9]) (./section_teaching_mentoring.tex [10]) (./section_talks.tex [11]
 
 Package hyperref Warning: Suppressing link with empty target on input line 48.
 
-[14]
+[12]
 
 Package hyperref Warning: Suppressing link with empty target on input line 189.
 
 
-[15]) [16] (./section_projects.tex
-
-Package hyperref Warning: Suppressing link with empty target on input line 18.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
-
- []
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 26.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
-
- []
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 91.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-
- []
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 112.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--112
-
- []
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 119.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
-
- []
-
-[17]) (./section_service.tex [18] [19] [20]) [21] (./cvFioretto.aux)
+[13]) (./section_projects.tex [14]) (./section_service.tex [15] [16] [17])
+[18] (./cvFioretto.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1606,16 +1510,16 @@ Package rerunfilecheck Info: File `cvFioretto.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33288 strings out of 478285
- 596575,1977958 words of node,token memory allocated
- 9128 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 286 glue, 4 kern, 1 penalty, 2 glyph, 2594 attribut
-e, 76 glue_spec, 372 attribute_list, 2 write, 101 pdf_action nodes
-   avail lists: 1:6,2:21371,3:2002,4:656,5:8987,6:662,7:51463,8:9,9:5865,10:18,1
-1:4591
- 52127 multiletter control sequences out of 65536+600000
+ 33237 strings out of 478285
+ 596536,1977958 words of node,token memory allocated
+ 9565 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 295 glue, 4 kern, 1 penalty, 2 glyph, 2734 attribut
+e, 76 glue_spec, 392 attribute_list, 2 write, 110 pdf_action nodes
+   avail lists: 1:6,2:16667,3:1470,4:656,5:9021,6:359,7:49975,8:8,9:3728,10:12,1
+1:4610
+ 52082 multiletter control sequences out of 65536+600000
  69 fonts using 9858447 bytes
- 115i,12n,111p,1198b,887s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,11n,111p,1198b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.2'
 
@@ -1626,10 +1530,10 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (21 pages, 152023 bytes).
+Output written on cvFioretto.pdf (18 pages, 146341 bytes).
 
-PDF statistics: 535 PDF objects out of 1000 (max. 8388607)
- 492 compressed objects within 5 object streams
- 47 named destinations out of 1000 (max. 131072)
+PDF statistics: 515 PDF objects out of 1000 (max. 8388607)
+ 475 compressed objects within 5 object streams
+ 41 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 

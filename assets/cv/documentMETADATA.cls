@@ -332,7 +332,7 @@
 }
 
 % Resume part title definition
-\newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace \textsc{#1}}{#1}}\medskip}
+\newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace \textsc{#1}}{#1}}}
 \newcommand\yearTitle[1]{\subsection*{\texorpdfstring{\color{accentcolor}\hspace*{0.75em}\textsc{#1}}{#1}}
 \vspace{-0.0em}}
 \newcommand\subsectionTitle[1]{\subsubsection*{\texorpdfstring{\color{accentcolor}\hspace*{2em}\textsc{#1}}{#1}}
@@ -360,40 +360,53 @@
 
 % Define the 'scholarship' environment
 \newenvironment{pubs}{%
-%  \begin{longtable}{R{\leftcolumn} p{\rightcolumnlength}}
-  \begin{longtable}{R{1.0cm} p{16.5cm}}
+  %\begin{longtable}{R{\leftcolumn} p{\rightcolumnlength}}
+  \begin{longtable}{R{1.0cm} p{15.8cm}}
 }{%
   \end{longtable}
   \vspace*{-1em}
 }
 
 \newcommand\confentryShort[5]{
-  {#1.} & #2. \blink{#5}{\title{#3}}. {#4}.\\
+  {c#1.} & #2. \blink{#5}{\title{#3}}. {#4}.\\
 }
 
 \newcommand\journalentry[5]{
-  \textbf{#1}.& #2. \blink{#5}{\title{#3}}. {#4}.\\[0.5em]
+  \textbf{j#1}.& #2. \blink{#5}{\title{#3}}. {#4}.\\[0.5em]
 }
 \newcommand\journalentryAwd[7]{
-  \textbf{#1} & #2. \blink{#5}{\title{#3}}. {#4}.\\
+  \textbf{j#1} & #2. \blink{#5}{\title{#3}}. {#4}.\\
   \faTrophy   & {\awardText{#6} #7.}\\[0.5em]
 }
 \newcommand\confentry[6]{
-  \textbf{#1}. & #2. \blink{#5}{\title{#3}}. {#4}.\\[0.5em]
-               & Acceptance Rate: {#6}. \\[0.5em]
+  \textbf{c#1}. & #2. \blink{#5}{\title{#3}}. {#4}. %\\[0.5em]
+                % & 
+               Acceptance Rate: {#6}. \\[0.5em]
 }
 \newcommand\confentryAwd[8]{
-  \textbf{#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\
-              & Acceptance Rate: {#6}. \\
+  \textbf{c#1}. & #2. \blink{#5}{\title{#3}}. {#4}. %\\ & 
+                 Acceptance Rate: {#6}. \\
   \faTrophy  & {\awardText{#7} #8.}\\[0.5em]
 }
+
 \newcommand\wsentry[5]{
-  \textbf{#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\[0.5em]
+  \textbf{w#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\[0.5em]
 }
+
+\newcommand\wsentryAR[6]{
+  \textbf{w#1}. & #2. \blink{#5}{\title{#3}}. {#4}. Acceptance Rate: {#6}.\\[0.5em]
+}
+
 \newcommand\wsentryAwd[6]{
-  \textbf{#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\
+  \textbf{w#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\
   \faTrophy   & {\awardText{#6}.}\\[0.5em]
 }
+
+\newcommand\wsentryAwdAR[7]{
+  \textbf{w#1}. & #2. \blink{#5}{\title{#3}}. {#4}. Acceptance Rate: {#6}.\\
+  \faTrophy   & {\awardText{#7}.}\\[0.5em]
+}
+
 
 \newenvironment{awards}{%
   \begin{longtable}{R{2cm}p{\rightcolumnlength}}
@@ -401,7 +414,6 @@
   \end{longtable}
    \vspace*{-1em}
 }
-
 
 \newcommand*{\press}[2]{
   \link{#1}{\mbox{\textcolor{symbolcolor}{\faExternalLink}}~#2}
@@ -465,10 +477,8 @@
   }
 
 \newcommand\job[6]{
-  \textbf{#2}    & \textbf{#3}, \textit{#4}, #5             \\*
-  \textbf{#1}    & \begin{minipage}[t]{\rightcolumnlength}
-                     \textsc{#6}
-                   \end{minipage}\\  
+  \textbf{#2}    & \textbf{#3}, \textit{#4}, #5             \\
+  \textbf{#1}    & \textsc{#6} \\
   }
 
 
@@ -496,7 +506,7 @@
                  & \footnotesize{\foreach \n in {#9}{\cvtag{\n}}} 	\\
   }
 
-\newcommand\emptySeparator{\multicolumn{2}{c}{}\\[-0.5em]}
+\newcommand\emptySeparator{\multicolumn{2}{c}{}\\[-10pt]}
 
 % Define the 'projects' environment
 \newenvironment{projects}{%
