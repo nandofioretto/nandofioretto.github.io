@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reponsilble AI | Ferdinando (Nando)  Fioretto</title>
+    <meta name="author" content="Ferdinando (Nando)  Fioretto">
+    <meta name="description" content="">
+    <meta name="keywords" content="Ferdinando Fioretto, AI, ML, Optimization, differential privacy, fairness, trustworthy, university of virginia">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/teaching/raisp25/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Ferdinando (Nando) </span>Fioretto</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/awards/">awards</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/group/">group</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/teaching/">teaching</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/bio/">bio</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/assets/cv/cvFioretto.pdf">cv</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <h1 id="responsible-ai-privacy-fairness-and-robustness-seminar-spring-25">Responsible AI: Privacy, Fairness, and Robustness Seminar (Spring 25)</h1>
+
+<h2 id="course-description">Course Description</h2>
+
+<p>This seminar-style course delves into the ethical dimensions of Artificial Intelligence (AI), with a particular focus on the intersectionality of privacy, fairness, and robustness. The course is structured around reading, discussing, and critically analyzing seminal and state-of-the-art papers in the field. Participants will engage in intellectual discourse to understand the challenges, methodologies, and emerging trends related to responsible AI. The course is designed for graduate students with good ML, stats, and optimization background.</p>
+
+<h2 id="course-objectives">Course Objectives</h2>
+
+<ul>
+  <li>Critically assess and discuss the literature on privacy, fairness, and robustness in AI.</li>
+  <li>Identify challenges and propose potential solutions for responsible AI.</li>
+  <li>Foster interdisciplinary discussions to explore the ethical dimensions of AI.</li>
+  <li>Engage in a deep intellectual exploration of the field through paper discussions and presentations.</li>
+</ul>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>Basic understanding of machine learning.</li>
+  <li>Basic understanding of optimization.</li>
+</ul>
+
+<h2 id="syllabus">Syllabus</h2>
+
+<p>This is a tentative calendar and it is subject to change.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Topic</th>
+      <th>Subtopic</th>
+      <th>Papers</th>
+      <th>Presenting</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mon Jan 13</td>
+      <td>NO CLASS</td>
+      <td>Syllabus review and class intro</td>
+      <td><a href="../raisp24_files/lec01.pdf">class slides</a></td>
+      <td>on your own</td>
+    </tr>
+    <tr>
+      <td>Wed Jan 15</td>
+      <td>Intro to class</td>
+      <td>Safety and Alignment</td>
+      <td><a href="../raisp24_files/lec02.pdf">class slides</a></td>
+      <td>Fioretto</td>
+    </tr>
+    <tr>
+      <td>Mon Jan 20</td>
+      <td>NO CLASS</td>
+      <td>(MLK Holiday)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Wed Jan 22</td>
+      <td>Intro to class</td>
+      <td>Privacy (settings and attacks)</td>
+      <td><a href="../raisp24_files/lect-3-and-4.pdf">class slides</a></td>
+      <td>Fioretto</td>
+    </tr>
+    <tr>
+      <td>Mon Jan 27</td>
+      <td>Intro to class</td>
+      <td>Privacy (cont)</td>
+      <td><a href="../raisp24_files/lect-3-and-4.pdf">class slides</a></td>
+      <td>Fioretto</td>
+    </tr>
+    <tr>
+      <td>Wed Jan 29</td>
+      <td>Intro to class</td>
+      <td>Privacy and Fairness</td>
+      <td><a href="../raisp24_files/lec05.pdf">class slides</a></td>
+      <td>Fioretto</td>
+    </tr>
+    <tr>
+      <td>Mon Feb 3</td>
+      <td>Fairness</td>
+      <td>Intro and bias sources</td>
+      <td>[<a href="#r1">1</a>] – [<a href="#r4">4</a>]</td>
+      <td>Group 1</td>
+    </tr>
+    <tr>
+      <td>Wed Feb 5*</td>
+      <td>NO CLASS</td>
+      <td>(DOE meeting)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mon Feb 10</td>
+      <td>Fairness</td>
+      <td>Statistical measures</td>
+      <td>[<a href="#r5">5</a>] – [<a href="#r8">8</a>]</td>
+      <td>Group 2</td>
+    </tr>
+    <tr>
+      <td>Wed Feb 12</td>
+      <td>Fairness</td>
+      <td>Tradeoffs</td>
+      <td>[<a href="#r9">9</a>] – [<a href="#r12">12</a>]</td>
+      <td>Group 3</td>
+    </tr>
+    <tr>
+      <td>Mon Feb 17</td>
+      <td>Fairness</td>
+      <td>LLMs: Toxicy and Bias</td>
+      <td>[<a href="#r13">13</a>] – [<a href="#r16">16</a>]</td>
+      <td>Group 4</td>
+    </tr>
+    <tr>
+      <td>Wed Feb 20</td>
+      <td>Fairness</td>
+      <td>LLMs: Fairness</td>
+      <td>[<a href="#r17">17</a>] – [<a href="#r19">19</a>]</td>
+      <td>Group 5</td>
+    </tr>
+    <tr>
+      <td>Mon Feb 24</td>
+      <td>Fairness</td>
+      <td>Policy aspects</td>
+      <td>[<a href="#r20">20</a>] – [<a href="#r22">22</a>]</td>
+      <td>Group 6</td>
+    </tr>
+    <tr>
+      <td>Wed Feb 26</td>
+      <td>Safety</td>
+      <td>Distribution shift</td>
+      <td>[<a href="#r23">23</a>] –  [<a href="#r25">25</a>]</td>
+      <td>Group 7</td>
+    </tr>
+    <tr>
+      <td>Mon Mar 3</td>
+      <td>No class</td>
+      <td>(AAAI)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Wed Mar 5</td>
+      <td>Safety</td>
+      <td>Poisoning</td>
+      <td>[<a href="#r26">26</a>] – [<a href="#r29">29</a>]</td>
+      <td>Group 1</td>
+    </tr>
+    <tr>
+      <td>Wed Mar 12</td>
+      <td>NO CLASS</td>
+      <td>(Spring break)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mon Mar 10</td>
+      <td>NO CLASS</td>
+      <td>(Spring break)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mon Mar 17</td>
+      <td>Safety</td>
+      <td>Adversarial Robustness</td>
+      <td>[<a href="#r30">30</a>] – [<a href="#r34">34</a>]</td>
+      <td>Group 2</td>
+    </tr>
+    <tr>
+      <td>Wed Mar 19</td>
+      <td>Safety</td>
+      <td>Adversarial Robustness</td>
+      <td>[<a href="#r35">35</a>] – [<a href="#r39">39</a>]</td>
+      <td>Group 3</td>
+    </tr>
+    <tr>
+      <td>Mon Mar 24</td>
+      <td>Safety</td>
+      <td>LLMs: Prompt injection</td>
+      <td>[<a href="#r40">40</a>] – [<a href="#r45">45</a>]</td>
+      <td>Group 4</td>
+    </tr>
+    <tr>
+      <td>Wed Mar 26</td>
+      <td>Safety</td>
+      <td>LLMs: Jailbreaking</td>
+      <td>[<a href="#r46">46</a>] – [<a href="#r50">50</a>]</td>
+      <td>Group 5</td>
+    </tr>
+    <tr>
+      <td>Mon Mar 31</td>
+      <td>Privacy</td>
+      <td>Differential Privacy</td>
+      <td>[<a href="#r51">51</a>] – [<a href="#r55">55</a>]</td>
+      <td>Group 6</td>
+    </tr>
+    <tr>
+      <td>Wed Apr 2</td>
+      <td>Privacy</td>
+      <td>Differential Privacy 2</td>
+      <td>[<a href="#r56">56</a>] – [<a href="#r58">58</a>]</td>
+      <td>Group 7</td>
+    </tr>
+    <tr>
+      <td>Mon Apr 7</td>
+      <td>Privacy</td>
+      <td>Differentially Private ML</td>
+      <td>[<a href="#r59">59</a>] – [<a href="#r61">61</a>]</td>
+      <td>Group 1</td>
+    </tr>
+    <tr>
+      <td>Wed Apr 9</td>
+      <td>Privacy</td>
+      <td>Auditing and Membership inference</td>
+      <td>[<a href="#r62">62</a>] – [<a href="#r65">65</a>]</td>
+      <td>Group 2</td>
+    </tr>
+    <tr>
+      <td>Mon Apr 14</td>
+      <td>Privacy</td>
+      <td>Privacy and Fairness</td>
+      <td>[<a href="#r66">66</a>] – [<a href="#r69">69</a>]</td>
+      <td>Group 3</td>
+    </tr>
+    <tr>
+      <td>Wed Apr 16</td>
+      <td>Privacy</td>
+      <td>LLMs: Privacy in LLMs</td>
+      <td>[<a href="#r70">70</a>] – [<a href="#r73">73</a>]</td>
+      <td>Group 4</td>
+    </tr>
+    <tr>
+      <td>Mon Apr 21</td>
+      <td>Evaluation</td>
+      <td>Model cards</td>
+      <td>[<a href="#r74">74</a>] – [<a href="#r77">77</a>]</td>
+      <td>Group 5</td>
+    </tr>
+    <tr>
+      <td>Wed Apr 24</td>
+      <td>Evaluation</td>
+      <td>LLMs: evaluation</td>
+      <td>[<a href="#r78">78</a>] – [<a href="#r82">82</a>]</td>
+      <td>Group 6</td>
+    </tr>
+    <tr>
+      <td>Mon Apr 28</td>
+      <td>Unlearning</td>
+      <td>Unlearning 1</td>
+      <td>[<a href="#r83">83</a>] – [<a href="#r86">86</a>]</td>
+      <td>Group 7</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- | ghoast day  | Unlearning      | LLMs: Targeted unlearning          | [[87](#r87)] -- [[90](#r90)] | Group 4           -->
+
+<p><br></p>
+<h3 id="bibliography">Bibliography</h3>
+
+<!-- Fairnes: Definitions  -->
+<ul>
+  <li>
+<a id="r1">[1].</a> <a href="https://fairmlbook.org/introduction.html" rel="external nofollow noopener" target="_blank">Fairness and Machine Learning, Ch 1</a>. S. Barocas, M. Hardt, A. Narayanan, 2023</li>
+  <li>
+<a id="r2">[2].</a> <a href="https://obamawhitehouse.archives.gov/sites/default/files/microsites/ostp/2016_0504_data_discrimination.pdf" rel="external nofollow noopener" target="_blank">Big Data: A Report on Algorithmic Systems, Opportunity, and Civil Rights</a>. The White House, 2016</li>
+  <li>
+<a id="r3">[3].</a> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899" rel="external nofollow noopener" target="_blank">Big Data’s Disparate Impact</a>. S. Barocas, A. Selbst, 2014</li>
+  <li>
+<a id="r4">[4].</a> <a href="https://www.science.org/doi/10.1126/science.aal4230" rel="external nofollow noopener" target="_blank">Semantics derived automatically from language corpora contain human-like biases</a> A. Caliskan, J.J. Bryson, A. Narayanan, 2017</li>
+</ul>
+
+<!-- Fairness: Statistical Meausres -->
+<ul>
+  <li>
+<a id="r5">[5].</a> <a href="https://fairmlbook.org/classification.html" rel="external nofollow noopener" target="_blank">Fairness and Machine Learning, Ch 3</a>. S. Barocas, M. Hardt, A. Narayanan, 2023</li>
+  <li>
+<a id="r6">[6].</a> <a href="https://arxiv.org/abs/1104.3913" rel="external nofollow noopener" target="_blank">Fairness Through Awareness</a>. C. Dwork, M. Hardt, T. Pitassi, O. Reingold, R. Zemel, 2011</li>
+  <li>
+<a id="r7">[7].</a> <a href="https://www.cs.toronto.edu/~toni/Papers/icml-final.pdf" rel="external nofollow noopener" target="_blank">Learning Fair Representations</a>. R. Zemel, Y Wu, K. Swersky, T. Pitassi, C Dwork, 2013</li>
+  <li>
+<a id="r8">[8].</a> <a href="https://arxiv.org/abs/1610.02413" rel="external nofollow noopener" target="_blank">Equality of Opportunity in Supervised Learning</a>. M. Hardt, E. Price, N. Srebro, 2016</li>
+</ul>
+
+<!-- Fairness: Tradeoffs -->
+<ul>
+  <li>
+<a id="r9">[9].</a>  <a href="https://arxiv.org/abs/1610.07524" rel="external nofollow noopener" target="_blank">Fair prediction with disparate impact: A study of bias in recidivism prediction instruments</a>. A. Chouldechova, 2016</li>
+  <li>
+<a id="r10">[10].</a> <a href="https://arxiv.org/abs/1701.08230" rel="external nofollow noopener" target="_blank">Algorithmic decision making and the cost of fairness</a>. S. Corbett-Davies, E. Pierson, A. Feller, S. Goel, A. Huq, 2017</li>
+  <li>
+<a id="r11">[11].</a> <a href="https://arxiv.org/abs/1609.05807" rel="external nofollow noopener" target="_blank">Inherent Trade-Offs in the Fair Determination of Risk Scores</a>. J. Kleinberg, S. Mullainathan, M. Raghavan, 2017</li>
+  <li>
+<a id="r12">[12].</a> <a href="https://arxiv.org/abs/1609.07236" rel="external nofollow noopener" target="_blank">On the (im)possibility of fairness</a>. S.A. Friedler, C. Scheidegger, S. Venkatasubramanian, 2017</li>
+</ul>
+
+<!-- Fairness: Bias and Toxicity in LLMs  -->
+<ul>
+  <li>
+<a id="r13">[13].</a> <a href="https://dl.acm.org/doi/pdf/10.1145/3442188.3445922" rel="external nofollow noopener" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?</a>. E.M. Bender, T. Gebru, A. McMillan-Major, S. Shmitchell, 2021.</li>
+  <li>
+<a id="r14">[14].</a> <a href="https://arxiv.org/abs/" rel="external nofollow noopener" target="_blank">RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models</a>. S. Gehman, S. Gururangan, M. Sap, Y. Choi, N.A. Smith, 2020</li>
+  <li>
+<a id="r15">[15].</a> <a href="https://arxiv.org/abs/2205.01068" rel="external nofollow noopener" target="_blank">OPT: Open Pre-trained Transformer Language Models</a>. Zhang et al., 2022</li>
+  <li>
+<a id="r16">[16].</a> <a href="https://aclanthology.org/2021.acl-long.416/" rel="external nofollow noopener" target="_blank">StereoSet: Measuring stereotypical bias in pretrained language models</a>. M. Nadeem, A. Bethke, S. Reddy, 2021</li>
+</ul>
+
+<!-- Fairness: Fairness in LLMs  -->
+<ul>
+  <li>
+<a id="r17">[17].</a> <a href="https://arxiv.org/pdf/2201.10474.pdf" rel="external nofollow noopener" target="_blank">Whose Language Counts as High Quality? Measuring Language Ideologies in Text Data Selection</a>. S. Gururangan et al., 2022</li>
+  <li>
+<a id="r18">[18].</a> <a href="https://aclanthology.org/2020.acl-main.486/" rel="external nofollow noopener" target="_blank">Social Bias Frames: Reasoning about Social and Power Implications of Language</a>. M. Sap, S. Gabriel, L. Qin, D. Jurafsky, N.A. Smith, Y. Choi, 2020.</li>
+  <li>
+<a id="r19">[19].</a> <a href="https://arxiv.org/abs/2309.00770" rel="external nofollow noopener" target="_blank">Bias and Fairness in Large Language Models: A Survey</a>. I.O. Gallegos et al. 2023</li>
+</ul>
+
+<!-- Fairness: Policy aspects -->
+<ul>
+  <li>
+<a id="r20">[20].</a> <a href="https://fairmlbook.org/legal.html" rel="external nofollow noopener" target="_blank">Fairness and Machine Learning, Ch 6</a>. S. Barocas, M. Hardt, A. Narayanan, 2023</li>
+  <li>
+<a id="r21">[21].</a> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899" rel="external nofollow noopener" target="_blank">Big Data’s Disparate Impact</a>. S. Barocas, A.D. Selbst, 2016</li>
+  <li>
+<a id="r22">[22].</a> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3024938" rel="external nofollow noopener" target="_blank">How Copyright Law Can Fix Artificial Intelligence’s Implicit Bias Problem</a>. A. Levendowski, 2022</li>
+</ul>
+
+<!-- Distribution shift -->
+<ul>
+  <li>
+<a id="r23">[23].</a> <a href="https://arxiv.org/abs/1810.11953" rel="external nofollow noopener" target="_blank">Failing Loudly: An Empirical Study of Methods for Detecting Dataset Shift</a> S. Rabanser et al, 2018</li>
+  <li>
+<a id="r24">[24].</a> <a href="https://arxiv.org/abs/2106.07998" rel="external nofollow noopener" target="_blank">Revisiting the Calibration of Modern Neural Networks</a>. Minderer et al., 2021</li>
+  <li>
+<a id="r25">[25].</a> <a href="https://arxiv.org/abs/1907.00208" rel="external nofollow noopener" target="_blank">Deep Gamblers: Learning to Abstain with Portfolio Theory</a>. Ziyin et al., 2019</li>
+</ul>
+
+<!-- Poisoning attacks -->
+<ul>
+  <li>
+<a id="r26">[26].</a> <a href="https://arxiv.org/abs/1206.6389" rel="external nofollow noopener" target="_blank">Poisoning attacks against support vector machines</a>. Biggio et al. 2012
+<!-- This paper is a cornerstone in the study of poisoning attacks, particularly against support vector machines (SVMs). It provides a thorough analysis of the attack strategies and their implications, offering foundational insights into the vulnerabilities of machine learning models. -->
+</li>
+  <li>
+<a id="r27">[27].</a> <a href="https://arxiv.org/abs/1804.00308" rel="external nofollow noopener" target="_blank">Manipulating machine learning: Poisoning attacks and countermeasures for regression learning</a>. Jagielski et al. 2018
+<!-- This paper extends the concept of poisoning attacks to regression models, which are widely used in various applications. It not only explores the attack methodologies but also discusses countermeasures, making it a critical read for understanding both sides of the coin. -->
+</li>
+  <li>
+<a id="r28">[28].</a> <a href="https://arxiv.org/abs/1706.03691" rel="external nofollow noopener" target="_blank">Certified defenses for data poisoning attacks</a>. Steinhardt et al. 2017
+<!-- This work proposes certified defenses against data poisoning attacks, offering a novel perspective on how to protect machine learning models. It is pivotal for understanding the defense mechanisms that can be put in place to ensure the integrity of machine learning systems. -->
+</li>
+  <li>
+<a id="r29">[29].</a> <a href="https://arxiv.org/abs/1804.00792" rel="external nofollow noopener" target="_blank">Poison frogs! Targeted clean-label poisoning attacks on neural networks</a>. Shafahi et al. 2018
+<!-- This paper introduces a sophisticated form of poisoning attack that is hard to detect, known as the "clean-label" poisoning attack. It's essential for comprehending the evolving nature of poisoning attacks and the challenges they pose to defense mechanisms. -->
+</li>
+</ul>
+
+<!-- Adversarial Examples -->
+<ul>
+  <li>
+<a id="r30">[30].</a> <a href="https://arxiv.org/abs/1312.6199" rel="external nofollow noopener" target="_blank">Intriguing properties of neural networks</a>. Szegedy et al. 2013</li>
+  <li>
+<a id="r31">[31].</a> <a href="https://arxiv.org/abs/1412.6572" rel="external nofollow noopener" target="_blank">Explaining and Harnessing Adversarial Examples</a>. Goodfellow et al. 2014</li>
+  <li>
+<a id="r32">[32].</a> <a href="https://arxiv.org/abs/1608.04644" rel="external nofollow noopener" target="_blank">Towards Evaluating the Robustness of Neural Networks</a>. Carlini and Wagner. 2017</li>
+  <li>
+<a id="r33">[33].</a> <a href="https://arxiv.org/abs/1607.02533" rel="external nofollow noopener" target="_blank">Adversarial examples in the physical world</a>. Kurakin et al. 2018</li>
+  <li>
+<a id="r34">[34].</a> <a href="https://arxiv.org/abs/1905.02175" rel="external nofollow noopener" target="_blank">Adversarial Examples Are Not Bugs, They Are Features</a>. Ilyas et al. 2019</li>
+</ul>
+
+<!-- Adversarial Exampless: Defenses -->
+<ul>
+  <li>
+<a id="r35">[35].</a> <a href="https://arxiv.org/abs/1711.00851" rel="external nofollow noopener" target="_blank">Provable defenses against adversarial examples via the convex outer adversarial polytope</a> Wong and Kolter, 2017</li>
+  <li>
+<a id="r36">[36].</a> <a href="https://proceedings.neurips.cc/paper_files/paper/2018/file/358f9e7be09177c17d0d17ff73584307-" rel="external nofollow noopener" target="_blank">Scaling provable adversarial defenses</a> Wong et al. 2018</li>
+  <li>
+<a id="r37">[37].</a> <a href="https://arxiv.org/abs/1706.06083" rel="external nofollow noopener" target="_blank">Towards Deep Learning Models Resistant to Adversarial Attacks</a>. Madry et al. 2018</li>
+  <li>
+<a id="r38">[38].</a> <a href="https://arxiv.org/abs/1511.04508" rel="external nofollow noopener" target="_blank">Distillation as a Defense to Adversarial Perturbations against Deep Neural Networks</a>. Papernot et al. 2016</li>
+  <li>
+<a id="r39">[39].</a> <a href="https://arxiv.org/abs/1901.08573" rel="external nofollow noopener" target="_blank">Theoretically Principled Trade-off between Robustness and Accuracy</a>.  Zhang et al. 2019</li>
+</ul>
+
+<!-- LLMs: injection -->
+<ul>
+  <li>
+<a id="r40">[40].</a> <a href="https://arxiv.org/abs/1908.07125" rel="external nofollow noopener" target="_blank">Universal Adversarial Triggers for Attacking and Analyzing NLP</a>. Wallace et al. 2019</li>
+  <li>
+<a id="r41">[41].</a> <a href="https://arxiv.org/abs/2005.14165" rel="external nofollow noopener" target="_blank">Language Models are Few-Shot Learners</a>. Browns et al. 2020 
+<!-- Although not exclusively about prompt injection, this paper by OpenAI introduces GPT-3 and demonstrates the power of carefully designed prompts in guiding the model to perform a wide range of tasks without task-specific training data, laying the groundwork for understanding the potential of prompt engineering in LLMs.  -->
+</li>
+  <li>
+<a id="r42">[42].</a> <a href="https://arxiv.org/abs/1911.12543" rel="external nofollow noopener" target="_blank">How Can We Know What Language Models Know?</a> Jiang. 2020</li>
+  <li>
+<a id="r43">[43].</a> <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" rel="external nofollow noopener" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?</a>. Bender et al., 2021</li>
+  <li>
+<a id="r44">[44].</a> <a href="https://arxiv.org/abs/2306.05499" rel="external nofollow noopener" target="_blank">Prompt Injection attack against LLM-integrated Applications</a>. Liu et al, 2023</li>
+  <li>
+<a id="r45">[45].</a> <a href="https://developer.nvidia.com/blog/securing-llm-systems-against-prompt-injection/" rel="external nofollow noopener" target="_blank">Nvidia Blog - securing against prompt injection attacks</a>. 2023
+<!-- A survey  on prompt injection attacks in LLMs -->
+</li>
+</ul>
+
+<!-- Jailbreaking -->
+<ul>
+  <li>
+<a id="r46">[46].</a> <a href="https://arxiv.org/abs/2307.15043" rel="external nofollow noopener" target="_blank">Universal and Transferable Adversarial Attacks on Aligned Language Models</a> Zou et al. 2023</li>
+  <li>
+<a id="r46">[47].</a> <a href="https://arxiv.org/abs/2307.10719" rel="external nofollow noopener" target="_blank">LLM Censorship: A Machine Learning Challenge or a Computer Security Problem?</a> Glukhov et al. 2023</li>
+  <li>
+<a id="r46">[48].</a> <a href="https://arxiv.org/abs/2308.03825" rel="external nofollow noopener" target="_blank">“Do Anything Now”: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models</a> Shen et al. 2023</li>
+  <li>
+<a id="r46">[49].</a> <a href="https://arxiv.org/abs/2306.13213" rel="external nofollow noopener" target="_blank">Visual Adversarial Examples Jailbreak Aligned Large Language Models</a> Qi et al. 2023</li>
+  <li>
+<a id="r46">[50].</a> <a href="https://arxiv.org/abs/2402.14020" rel="external nofollow noopener" target="_blank">Coercing LLMs to do and reveal (almost) anything</a> Geiping et al. 2024</li>
+</ul>
+
+<!-- DP -->
+<ul>
+  <li>
+<a id="r51">[51].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 2 to 4 (notes)</a> by Gautam Kamath.</li>
+  <li>
+<a id="r52">[52].</a> <a href="https://ecommons.cornell.edu/items/046034b9-9365-436b-88aa-e8c3fae94b7c" rel="external nofollow noopener" target="_blank">Understanding Database Reconstruction Attacks on Public Data</a> by S Garfinkel, JM Abowd, C Martindale.</li>
+  <li>
+<a id="r53">[53].</a> <a href="https://www.pnas.org/doi/10.1073/pnas.2300976120" rel="external nofollow noopener" target="_blank">  Database reconstruction does compromise confidentiality</a> by SA Keller and JM Abowd.</li>
+  <li>
+<a id="r54">[54].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections 2, 3.1, 3.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.</li>
+  <li>
+<a id="r55">[55].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)</li>
+</ul>
+
+<!-- DP -->
+<ul>
+  <li>
+<a id="r56">[56].</a> <a href="http://www.gautamkamath.com/courses/CS860-fa2022-files/" rel="external nofollow noopener" target="_blank">Lectures 5 to 8 (notes)</a> by Gautam Kamath.</li>
+  <li>
+<a id="r57">[57].</a> <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf" rel="external nofollow noopener" target="_blank">Sections  3.3, 3.4, 10.1-10.2 of the Algorithmic Foundations of Differential Privacy</a> by Cynthia Dwork and Aaron Roth.</li>
+  <li>
+    <p><a id="r58">[58].</a> <a href="https://programming-dp.com/cover.html" rel="external nofollow noopener" target="_blank">Programming Differential Privacy</a> Joseph P. Near and Chiké Abuah (additional resources)</p>
+  </li>
+  <li>
+<a id="r59">[59].</a> <a href="https://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf" rel="external nofollow noopener" target="_blank">Differentially Private Empirical Risk Minimization</a>. Chaudhuri et al 2011.</li>
+  <li>
+<a id="r60">[60].</a> <a href="https://arxiv.org/abs/1607.00133" rel="external nofollow noopener" target="_blank">Deep Learning with Differential Privacy</a>. Abadi et al, 2016</li>
+  <li>
+<a id="r61">[61].</a> <a href="https://arxiv.org/abs/1610.05755" rel="external nofollow noopener" target="_blank">Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data</a>. Papernot et al, 2016</li>
+</ul>
+
+<!-- Membership inference -->
+<ul>
+  <li>
+<a id="r62">[62].</a> <a href="https://arxiv.org/abs/1610.05820" rel="external nofollow noopener" target="_blank">Membership Inference Attacks against Machine Learning Models</a> Shokri et al. 2017</li>
+  <li>
+<a id="r63">[63].</a> <a href="https://arxiv.org/abs/2112.03570" rel="external nofollow noopener" target="_blank">Membership Inference Attacks From First Principles</a> Carlini et al. 2021</li>
+  <li>
+<a id="r64">[64].</a> <a href="https://arxiv.org/abs/1802.08232" rel="external nofollow noopener" target="_blank">The Secret Sharer: Evaluating and Testing Unintended Memorization in Neural Networks</a> Carlini et al. 2018</li>
+  <li>
+    <p><a id="r65">[65].</a> <a href="https://arxiv.org/abs/2006.07709" rel="external nofollow noopener" target="_blank">Auditing Differentially Private Machine Learning: How Private is Private SGD?</a>  Jagielski et al 2020</p>
+  </li>
+  <li>
+<a id="r66">[66].</a> <a href="https://arxiv.org/abs/2202.08187" rel="external nofollow noopener" target="_blank">Differential Privacy and Fairness in Decisions and Learning Tasks: A Survey</a> Fioretto et al, 2022.</li>
+  <li>
+<a id="r67">[67].</a> <a href='https://rachelcummings.com/wp-c&lt;a%20id="r65"&gt;[65].&lt;/a&gt;%20ontent/uploads/2019/03/FairPrivate.pdf' rel="external nofollow noopener" target="_blank">On the Compatibility of Privacy and Fairness</a> Cummings et al. 2019</li>
+  <li>
+<a id="r68">[68].</a> <a href="https://arxiv.org/abs/1905.12101" rel="external nofollow noopener" target="_blank">Differential Privacy Has Disparate Impact on Model Accuracy</a> Bagdasaryan 2019</li>
+  <li>
+    <p><a id="r69">[69].</a> <a href="https://arxiv.org/abs/2106.02674" rel="external nofollow noopener" target="_blank">Differentially Private Empirical Risk Minimization under the Fairness Lens</a> Tran et al 2021</p>
+  </li>
+  <li>
+<a id="r70">[70].</a> <a href="https://arxiv.org/abs/2311.17035" rel="external nofollow noopener" target="_blank">Scalable Extraction of Training Data from (Production) Language Models</a> Nasar et al 2023.</li>
+  <li>
+<a id="r71">[71].</a> <a href="https://arxiv.org/abs/2310.17884?context=cs" rel="external nofollow noopener" target="_blank">Can LLMs Keep a Secret? Testing Privacy Implications of Language Models via Contextual Integrity Theory</a> Mireshghallah 2023</li>
+  <li>
+<a id="r72">[72].</a> <a href="https://arxiv.org/abs/2310.07298v1" rel="external nofollow noopener" target="_blank">Beyond Memorization: Violating Privacy Via Inference with Large Language Models</a> Staab et al 2023</li>
+  <li>
+    <p><a id="r73">[73].</a> <a href="https://arxiv.org/pdf/2312.06717.pdf" rel="external nofollow noopener" target="_blank">Privacy issues in Large Language Models: A Survey</a>. Sections 3,4, and 5. Neel 2024.</p>
+  </li>
+  <li>
+<a id="r74">[74]</a> <a href="1810.03993">Model Cards for Model Reporting</a> Mitchell et al. 2018.</li>
+  <li>
+<a id="r75">[75]</a> <a href="https://arxiv.org/abs/1803.09010" rel="external nofollow noopener" target="_blank">Datasheets for Datasets</a> Gebru et al. 2018.</li>
+  <li>
+<a id="r76">[76]</a> <a href="https://arxiv.org/abs/2106.15590" rel="external nofollow noopener" target="_blank">The Values Encoded in Machine Learning Research</a> Birhane, 2021.</li>
+  <li>
+<a id="r77">[77]</a> <a href="https://dl.acm.org/doi/abs/10.1145/3531146.3533231" rel="external nofollow noopener" target="_blank">Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI</a> Pushkarna, 2022</li>
+</ul>
+
+<!-- Evaluation: https://fairmlbook.org/testing.html -->
+<ul>
+  <li>
+<a id="r78">[78]</a> <a href="https://arxiv.org/abs/2108.07258" rel="external nofollow noopener" target="_blank">On the Opportunities and Risks of Foundation Models</a> Bommasani et al. 2022.</li>
+  <li>
+<a id="r79">[79]</a> <a href="https://arxiv.org/abs/2307.03109" rel="external nofollow noopener" target="_blank">A Survey on Evaluation of Large Language Models</a> Chang et al, 2024.</li>
+  <li>
+<a id="r80">[80]</a> <a href="https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/working-with-llms/eval-metrics" rel="external nofollow noopener" target="_blank">Defining and understanding LLM evaluation metrics
+</a> Microsoft Blog, 2024.</li>
+  <li>
+<a id="r81">[81]</a> <a href="https://arxiv.org/abs/2306.11698" rel="external nofollow noopener" target="_blank">DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models</a> Wang et al, 2023.</li>
+  <li>
+    <p><a id="r82">[82]</a> <a href="https://arxiv.org/pdf/2403.15447.pdf" rel="external nofollow noopener" target="_blank">Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression</a> Hong et al, 2024</p>
+  </li>
+  <li>
+<a id="r83">[83]</a> <a href="https://royalsocietypublishing.org/doi/full/10.1098/rsta.2018.0083" rel="external nofollow noopener" target="_blank">Algorithms that remember: model inversion attacks and data protection law</a> Veale et al. 2018</li>
+  <li>
+<a id="r84">[84]</a> <a href="https://arxiv.org/abs/1912.03817" rel="external nofollow noopener" target="_blank">Machine Unlearning</a> Bourtoule et al. 2019</li>
+  <li>
+<a id="r85">[85]</a> <a href="https://arxiv.org/abs/1911.03030" rel="external nofollow noopener" target="_blank">Certified Data Removal from Machine Learning Models</a> Guo et al. 2019</li>
+  <li>
+    <p><a id="r86">[86]</a> <a href="https://dl.acm.org/doi/10.1145/3603620" rel="external nofollow noopener" target="_blank">Machine Unlearning: A Survey</a> Xu et al. 2023.</p>
+  </li>
+  <li>
+<a id="r87">[87]</a> <a href="https://aclanthology.org/2023.acl-long.805/" rel="external nofollow noopener" target="_blank">Knowledge Unlearning for Mitigating Privacy Risks in Language Models</a> Jang et al. 2023</li>
+  <li>
+<a id="r88">[88]</a> <a href="https://arxiv.org/pdf/2402.08787v2.pdf" rel="external nofollow noopener" target="_blank">Rethinking Machine Unlearning for Large Language Models</a> Liu et al. 2024</li>
+  <li>
+<a id="r89">[89]</a> <a href="https://locuslab.github.io/tofu/" rel="external nofollow noopener" target="_blank">TOFU: A Task of Fictitious Unlearning for LLMs</a> Maini et al. 2024</li>
+  <li>
+<a id="r90">[90]</a> <a href="https://arxiv.org/abs/2403.03218" rel="external nofollow noopener" target="_blank">The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning</a> Li et al. 2024
+<!-- - <a id="r87">[]</a>[Who's Harry Potter? Approximate Unlearning in LLMs](https://arxiv.org/pdf/2310.02238.pdf) -->
+</li>
+</ul>
+
+<h2 id="assessment">Assessment</h2>
+
+<p>Each group will be assessed through the following activities:</p>
+
+<ul>
+  <li>Paper Summaries (blogging): 33.3%</li>
+  <li>Presentation: 33.3%</li>
+  <li>Discussion Lead: 33.3%</li>
+</ul>
+
+<h5 id="1-paper-summaries-blogging--333">1. Paper Summaries (Blogging) – 33.3%</h5>
+
+<p><strong>Objective:</strong> To develop the ability to critically analyze and summarize AI research papers in a clear and accessible manner.</p>
+
+<p><strong>Expectations:</strong></p>
+<ul>
+  <li>Each group will reivew all paper from the provided list, and they may propose additional ones for approval.</li>
+  <li>Summaries should be written in Markdown format (supporting images and formulas) and committed to the course’s <a href="https://github.com/uva-responsibleai/fall-24" rel="external nofollow noopener" target="_blank">GitHub repository</a>.</li>
+  <li>The summary should include the following sections: Introduction and Motivations, Methods, Key Findings, and Critical Analysis.</li>
+  <li>The Critical Analysis section should evaluate the strengths, weaknesses, potential biases, and ethical considerations of the paper.</li>
+  <li>Summaries must be submitted <strong>four days</strong> prior to the presentation for review and potential feedback.</li>
+</ul>
+
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+  <li>Clarity and coherence of the written summary.</li>
+  <li>Depth of critical analysis and understanding of the paper’s content.</li>
+  <li>Proper use of formatting and adherence to submission guidelines.</li>
+  <li>Timeliness of submission.</li>
+</ul>
+
+<h5 id="2-presentation--333">2. Presentation – 33.3%</h5>
+
+<p><strong>Objective:</strong> To enhance students’ ability to communicate complex AI concepts and engage in public speaking.</p>
+
+<p><strong>Expectations:</strong></p>
+<ul>
+  <li>45-minute presentation per group.</li>
+  <li>Presentations can include slides, code demonstrations, videos, or other creative methods.</li>
+  <li>The presentation should cover the key aspects of the paper, including its contribution to responsible AI.</li>
+  <li>A critical evaluation of the paper is essential, including discussing its limitations and implications.</li>
+  <li>Preparation of thought-provoking questions to stimulate audience engagement.</li>
+</ul>
+
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+  <li>Effectiveness of communication and presentation skills.</li>
+  <li>Accuracy and depth of content presented.</li>
+  <li>Creativity and engagement in the presentation method.</li>
+  <li>Ability to provoke thoughtful discussion through prepared questions.</li>
+</ul>
+
+<h5 id="3-discussion-lead--333">3. Discussion Lead – 33.3%</h5>
+
+<p><strong>Objective:</strong> To cultivate skills in leading intellectual discourse and fostering collaborative learning.</p>
+
+<p><strong>Expectations:</strong></p>
+<ul>
+  <li>30-minute discussion session following the presentation.</li>
+  <li>Groups should prepare and facilitate a discussion based on their presentation.</li>
+  <li>Use of supplementary materials (e.g., videos, code snippets) to enrich the discussion is encouraged.</li>
+  <li>The discussion should engage the audience (with active questions), encouraging diverse viewpoints and deeper understanding of the topic.</li>
+</ul>
+
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+  <li>Ability to foster an inclusive and constructive discussion.</li>
+  <li>Relevance and depth of prepared questions and discussion points.</li>
+  <li>Engagement level of the audience during the discussion.</li>
+  <li>Use of supplementary materials to enhance understanding.</li>
+</ul>
+
+<h3 id="general-notes">General Notes:</h3>
+<ul>
+  <li>All group members are expected to contribute equally to each component, but two to three members are expected to lead one of the three components.</li>
+  <li>Peer evaluation within groups may be used to ensure fair contribution.</li>
+</ul>
+
+<h2 id="recommended-reading">Recommended Reading</h2>
+
+<ul>
+  <li>A curated list of papers will be provided at the start of the course.</li>
+</ul>
+
+<h2 id="groups">Groups</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>Members</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Group 1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Group 2</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Group 3</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Group 4</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Group 5</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Group 6</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Group 7</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="instructor">Instructor</h2>
+
+<p>Ferdinando Fioretto
+Assistant Professor in Computer Science
+University of Virgina</p>
+
+<hr>
+
+<p>This syllabus is subject to changes to meet the learning needs of the course participants.</p>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2024 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+Last updated: December 31, 2024.
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
