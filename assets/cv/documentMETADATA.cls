@@ -630,8 +630,12 @@
 \newcommand{\awardText}[1]{\textbf{\textcolor{purple}{#1}}}
 
 \def\procACL{\emph{Proceedings of the} \venue{Annual Meeting of the Association for Computational Linguistics (ACL)}}
+\def\procNAACL{\emph{Proceedings of the} \venue{Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL)}}
 \def\procWWW{\emph{Proceedings of the} \venue{ACM Web Conferences (WWW)}}
 \def\procNeurIPS{\emph{Proceedings of the} \venue{Conference on Neural Information Processing Systems (NeurIPS)}}
+\def\procICML{\emph{Proceedings of the} \venue{International Conference on Machine Learning (ICML)}}
+\def\procICLR{\emph{Proceedings of the} \venue{International Conference on Learning Representations (ICLR)}}
+\def\procAISTATS{\emph{Proceedings of the} \venue{International Conference on Artificial Intelligence and Statistics (AISTATS)}}
 \def\procAAMAS{\emph{Proceedings of the} \venue{International Conference on Autonomous Agents and  Multiagent Systems (AAMAS)}}
 \def\procAAAI{\emph{Proceedings of the} \venue{AAAI Conference on Artificial Intelligence (AAAI)}}
 \def\procIJCAI{\emph{Proceedings of the} \venue{International Joint Conference on Artificial Intelligence (IJCAI)}}
@@ -639,7 +643,6 @@
 \def\procECAI{\emph{Proceedings of the} \venue{European Conference of Artificial Intelligence (ECAI)}}
 \def\procFAccT{\emph{Proceedings of the} \venue{ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)}}
 \def\procISIAM{\venue{International Symposium on Artificial Intelligence and Mathematics (ISAIM)}}
-\def\procICML{\emph{Proceedings of the} \venue{International Conference on Machine Learning (ICML)}}
 \def\procCPAIOR{\emph{Proceedings of the} \venue{International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research (CPAIOR)}}
 \def\procPADL{\emph{Proceedings of the} \venue{Practical Aspects of Declarative Languages (PADL)}}
 \def\procPRIMA{\emph{Proceedings of the} \venue{International Conference on Principles and Practice of Multi-Agent Systems (PRIMA)}}
