@@ -1,5 +1,5 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.8.23)  6 MAR 2025 09:22
- restricted system commands enabled.
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.7.27)  1 APR 2025 20:46
+ system commands enabled.
 **cvFioretto.tex
 (./cvFioretto.tex
 LaTeX2e <2022-11-01> patch level 1
@@ -7,8 +7,8 @@ Lua module: luaotfload 2022-10-03 3.23 Lua based OpenType font support
 Lua module: lualibs 2022-10-04 2.75 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2022-10-04 2.75 ConTeXt Lua libraries -- extended c
 ollection.
-luaotfload | conf : Root cache directory is "/Users/nandofioretto/Library/texliv
-e/2023/texmf-var/luatex-cache/generic/names".
+luaotfload | conf : Root cache directory is "/Users/ferdinandofloretto/Library/t
+exlive/2023/texmf-var/luatex-cache/generic/names".
 luaotfload | init : Loading fontloader "fontloader-2022-10-03.lua" from kpse-res
 olved path "/usr/local/texlive/2023/texmf-dist/tex/luatex/luaotfload/fontloader-
 2022-10-03.lua".
@@ -19,8 +19,8 @@ Inserting `luaotfload.node_processor' in `hpack_filter'.
 Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
 Inserting `luaotfload.define_font' in `define_font'.
 Lua-only attribute luaotfload_color_attribute = 2
-luaotfload | conf : Root cache directory is "/Users/nandofioretto/Library/texliv
-e/2023/texmf-var/luatex-cache/generic/names".
+luaotfload | conf : Root cache directory is "/Users/ferdinandofloretto/Library/t
+exlive/2023/texmf-var/luatex-cache/generic/names".
 Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
 Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
 Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
@@ -47,8 +47,8 @@ lass
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from /Users/nandofioretto/Library/t
-exlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
+luaotfload | db : Font names database loaded from /Users/ferdinandofloretto/Libr
+ary/texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \c@part=\count183
 \c@section=\count184
 \c@subsection=\count185
@@ -396,8 +396,8 @@ Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-ge
 neric.tex)
-luaotfload | cache : Lookup cache loaded from /Users/nandofioretto/Library/texli
-ve/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
+luaotfload | cache : Lookup cache loaded from /Users/ferdinandofloretto/Library/
+texlive/2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
 luaotfload | aux : font no 18 (nil) defines no feature for script latn
 luaotfload | aux : font no 18 (nil) defines no feature for script dflt
 
@@ -1462,7 +1462,7 @@ Overfull \hbox (1.52237pt too wide) in alignment at lines 862--1099
  []
 
 [7] [8]
-Underfull \hbox (badness 1237) in paragraph at lines 1117--1117
+Underfull \hbox (badness 1237) in paragraph at lines 1130--1130
 []|[]\TU/SourceSansPro-Light(0)/m/n/10 Ste-fano Zam-pini, []Ja-cob K Chris-to-ph
 er, Luca Oneto, Da-vide An-guita, \TU/SourceSansPro-Light(0)/b/it/10 Fer-di-nand
 o Fio-retto\TU/SourceSansPro-Light(0)/m/n/10 . []\TU/SourceSansPro-Light(0)/m/i
@@ -1470,7 +1470,7 @@ t/10 ``Training-Free
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 1139--1139
+Underfull \hbox (badness 1496) in paragraph at lines 1152--1152
 []|[]\TU/SourceSansPro-Light(0)/m/n/10 Vin-cenzo Di Vito, Mos-tafa Mo-ham-ma-dia
 n, Kyri Ba-ker, \TU/SourceSansPro-Light(0)/b/it/10 Fer-di-nando Fio-retto\TU/So
 urceSansPro-Light(0)/m/n/10 . []\TU/SourceSansPro-Light(0)/m/it/10 ``OPF-Net : 
@@ -1478,12 +1478,12 @@ Real-Time Sta-bi-lity
  []
 
 
-Overfull \hbox (1.52237pt too wide) in alignment at lines 1103--1178
+Overfull \hbox (1.52237pt too wide) in alignment at lines 1103--1191
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1192--1192
+Underfull \hbox (badness 10000) in paragraph at lines 1205--1205
 []|[]\TU/SourceSansPro-Light(0)/m/n/10 My H. Dinh, \TU/SourceSansPro-Light(0)/b
 /it/10 Fer-di-nando Fio-retto\TU/SourceSansPro-Light(0)/m/n/10 . []\TU/SourceSa
 nsPro-Light(0)/m/it/10 ``Context-Aware Dif-fe-ren-tial Pri-vacy for Lan-guage Mo
@@ -1492,11 +1492,11 @@ it/10 CoRR
  []
 
 
-Overfull \hbox (1.52237pt too wide) in alignment at lines 1185--1271
+Overfull \hbox (1.52237pt too wide) in alignment at lines 1198--1284
 [][] 
  []
 
-) (./section_teaching_mentoring.tex [9] [10] [11]) (./section_talks.tex
+[9]) (./section_teaching_mentoring.tex [10] [11]) (./section_talks.tex
 
 Package hyperref Warning: Suppressing link with empty target on input line 56.
 
@@ -1516,12 +1516,12 @@ Package rerunfilecheck Info: File `cvFioretto.out' has not changed.
 
 Here is how much of LuaTeX's memory you used:
  33241 strings out of 478285
- 596529,1977958 words of node,token memory allocated
- 10183 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 319 glue, 4 kern, 1 penalty, 2 glyph, 2923 attribut
-e, 76 glue_spec, 419 attribute_list, 2 write, 113 pdf_action nodes
-   avail lists: 1:6,2:15779,3:1439,4:584,5:9323,6:331,7:51074,8:9,9:3484,10:12,1
-1:4769
+ 596550,1977958 words of node,token memory allocated
+ 10113 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 315 glue, 4 kern, 1 penalty, 2 glyph, 2902 attribut
+e, 76 glue_spec, 416 attribute_list, 2 write, 114 pdf_action nodes
+   avail lists: 1:8,2:16027,3:1449,4:588,5:9353,6:335,7:51261,8:8,9:3514,10:11,1
+1:4785
  52086 multiletter control sequences out of 65536+600000
  69 fonts using 9858447 bytes
  115i,11n,111p,1198b,495s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1535,10 +1535,10 @@ onts/SourceSansPro-Light.otf></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on cvFioretto.pdf (18 pages, 149440 bytes).
+Output written on cvFioretto.pdf (18 pages, 150521 bytes).
 
-PDF statistics: 523 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
+PDF statistics: 529 PDF objects out of 1000 (max. 8388607)
+ 489 compressed objects within 5 object streams
  41 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 
