@@ -2,15 +2,63 @@
 %Section: Scholarships and additional info
 \sectionTitle{Publications}{}%{\faBook}
 
+
+\newcounter{nC}  % conferences 
+\newcounter{nJ}  % journals 
+\newcounter{nW}  % workshops
+\newcounter{nBc}  % book chapters
+\newcounter{nB} % books
+\newcounter{nP} % preprints
+\newcounter{nE} % editorials
+
+\setcounter{nC}{78}  % conferences 
+\setcounter{nJ}{15}  % journals 
+\setcounter{nW}{33}  % workshops
+\setcounter{nBc}{5}  % book chapters
+\setcounter{nE}{4}  % editorials
+\setcounter{nB}{2}  % books
+\setcounter{nP}{20}  % preprints
+
+% macro to print revcntr-1 without altering revcntr
+\newcommand{\realcount}[1]{%
+  \number\numexpr\value{#1}-1\relax%
+}
+% 2) a macro that steps the counter down by one
+%    and then expands to its raw numeric value
+\newcommand{\decvalue}[1]{%
+  \addtocounter{#1}{-1}%    decrement
+  \number\value{#1}%         return the number
+}
+
+\newcounter{tabc}
+\setcounter{tabc}{77}
+% macro to decrement, anchor, and label
+\newcommand{\labelc}[1]{%
+  \addtocounter{tabc}{-1}% subtract one
+  \phantomsection       % create a hyperlink anchor
+  \label{#1}%           % attach the label
+}
+
+\newcounter{tabw}
+\setcounter{tabw}{33}
+% macro to decrement, anchor, and label
+\newcommand{\labelw}[1]{%
+  \addtocounter{tabw}{-1}% subtract one
+  \phantomsection       % create a hyperlink anchor
+  \label{#1}%           % attach the label
+}
+
+
+
 \smallskip
 \begin{keywords}
 \keywordsentry{\textbf{Summary}:}
-{			 \faAngleRight~ \nemph{77} Conference papers
-\hspace{4pt} \faAngleRight~ \nemph{14} Journals articles
-\hspace{4pt} \faAngleRight~ \nemph{2} Book chapters
-\hspace{4pt} \faAngleRight~ \nemph{3} Editorial articles
-		 \\& \faAngleRight~ \nemph{31} Workshop papers
-\hspace{4pt} \faAngleRight~ \nemph{20+} Preprints
+{			 \faAngleRight~ \nemph{\realcount{nC}} Conference papers$^{\dagger}$
+\hspace{4pt} \faAngleRight~ \nemph{\realcount{nJ}} Journals articles
+\hspace{4pt} \faAngleRight~ \nemph{\realcount{nW}} Workshop papers$^{\dagger}$
+\hspace{4pt} \faAngleRight~ \nemph{\realcount{nE}} Editorial articles
+		 \\& \faAngleRight~ \nemph{\realcount{nBc}} Book chapters
+\hspace{4pt} \faAngleRight~ \nemph{\realcount{nP}} Preprints
 }
 \keywordsentry{\textbf{Total citations}:}
 {\citNo \hspace{8pt} 
@@ -21,23 +69,47 @@
 \end{keywords}
 %\includegraphics[height=30pt]{scholar-cit.png}
 
-Names of students I supervise(d) are prepended with symbol \student{}.
-
+{\hspace{10pt}
+$^{\dagger}$: In highly competitive venues. 
+\begin{itemize}[left=10pt]
+\item Names of students I supervise(d) are appended with symbol \student{}.
+\item In computer science publications, author order usually follows contribution, where students are first authors and faculty advisors are listed last to reflect their supervisory role. 
+\item When the symbol [$\nicefrac{\alpha}{\beta}$] is used, authors are ordered alphabetically. 
+\item When the symbol [$c$] is used, author ordered follows contribution, regardless of their advisor or seniority role. 
+\item Award winning papers are highlighted with symbol \color{purple}{\faTrophy}. 
+\end{itemize}
+}
 
 \subsectionTitle{Rigorously Peer Reviewed Conferences}
-\begin{pubs}
 
+\smallskip
+{\it In computer science, conference proceedings serve as the primary outlet for disseminating significant research contributions.
+%Top conferences in my field are, NeurIPS, ICML, ICLR, AAAI, IJCAI, FAccT,  
+}
+
+\begin{pubs}
+\labelc{NeuS:25}
+\confentryAwd
+	{} 
+	{\student{Jacob K.~Christopher}, \student{Michael Cardei}, \student{Jinhao Liang}, {\bf Ferdinando Fioretto}}
+	{Neuro-symbolic Generative Diffusion Models for Physically Grounded, Robust, and Safe Generation}
+	{\venue{International Conference on Neuro-symbolic Systems (NeuS)}, 2025}
+	{~}
+	{TBA} % 3,682 of 11,500 
+	{[Oral]}{(rates to TBA)}
+	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\nemph{2025}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
-
+\labelc{FAccT:25}
 \confentry
-	{78}
+	{1}
 	{Prakhar Ganesh, \student{Cuong Tran}, Reza Shokri, {\bf Ferdinando Fioretto}}
 	{The Data Minimization Principle in Machine Learning}
 	{\procFAccT, 2025}
 	{https://arxiv.org/abs/2405.19471}
 	{26.8\%} % 812 submissions
 
+\labelc{ICLR:25}
 \confentryAwd
 	{77}
 	{\student{Vincenzo Di Vito}, Mostafa Mohammadian, Kyri Baker, {\bf Ferdinando Fioretto}}
@@ -45,25 +117,30 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{\procICLR, 2025}
 	{https://arxiv.org/abs/2410.01786}
 	{32.02\%} % 3,682 of 11,500 
-	{[Spotlight]}{(5.1\% of the accepted papers / 0.01\% of all submitted papers.)}
+	{[Spotlight]}{(5.1\% of the accepted papers / 0.01\% of all submitted papers)}
 
+\labelc{NACCL:25}
 \confentryAwd
 	{76}
 	{\student{Jacob K.~Christopher}, \student{Michael Cardei}, Brian R Bartoldson, Bhavya Kailkhura, {\bf Ferdinando Fioretto}}
 	{Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion}
 	{\procNAACL, 2025}
 	{https://arxiv.org/abs/2408.05636}
-	{26\%}
-	{[oral]}{(22\% of the accepted papers / 0.9\% of all submitted papers.)}
+	{26.0\%}
+	{[oral]}{(22\% of the accepted papers / 0.9\% of all submitted papers)}
+&	\hspace{4pt} \faAngleRight\, Also appeared in [w\ref{ENLSP:24}] at \venue{NeurIPS}, 2024.
+	\hspace{4pt} {[{\bf Accepted Rate}: 29.0\%].}\\[0.5em]
 
+\labelc{AISTATS:25}
 \confentry
 	{75}
-	{{\bf Ferdinando Fioretto}, Diptangshu Sen, Juba Ziani}
+	{[$\nicefrac{\alpha}{\beta}$] {\bf Ferdinando Fioretto}, Diptangshu Sen, Juba Ziani}
 	{Differentially Private Data Release on Graphs: Inefficiencies and Unfairness}
 	{\procAISTATS, 2025}
 	{https://arxiv.org/abs/2408.05246}
 	{31.3\%} %583/1861  
 
+\labelc{AAAI:25}
 \confentryAwd
 	{74}
 	{\student{Joonhyuk Ko}, Juba Ziani, \student{Saswat Das}, Matt Williams, {\bf Ferdinando Fioretto}}
@@ -71,19 +148,23 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{\procAAAI, 2025}
 	{https://arxiv.org/abs/2408.08471}
 	{19\%} % 89/469 (23)
-	{[Oral]}{(5\% of the accepted papers.)}
+	{[Oral]}{(5\% of the accepted papers / 1.9\% of all submitted papers)}
+&	\hspace{4pt} \faAngleRight\, Also appeared in [w\ref{PPAI:25}] at \venue{AAAI}, 2024. 
+	\hspace{4pt} \textcolor{purple}{\faTrophy {\bf [Oral]}} (7.6\% of the accepted papers).\\[0.5em]
 
+\labelc{SaTML:25}
 \confentry
 	{73}
+	{[$c$] Khang Tran, {\bf Ferdinando Fioretto}, Issa Khalil, My T.~Thai, NhatHai Phan}
 	{FairDP: Certified Fairness with Differential Privacy}
-	{Khang Tran, {\bf Ferdinando Fioretto}, Issa Khalil, My T.~Thai, NhatHai Phan}
-	{In \venue{IEEE Secure and Trustworthy Machine Learning Conference (SaTML 2025)}, 2025}
+	{\venue{IEEE Secure and Trustworthy Machine Learning Conference (SaTML)}, 2025}
 	{https://arxiv.org/abs/2305.16474}
 	{29.4\%}% 53/180
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\nemph{2024}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
 
+\labelc{NeurIPS:24}
 \confentry
 	{72}
 	{\student{Jacob K.~Christopher}, Stephen Baek, {\bf Ferdinando Fioretto}}
@@ -91,41 +172,29 @@ Names of students I supervise(d) are prepended with symbol \student{}.
   	{\procNeurIPS, 2024}
 	{https://arxiv.org/abs/2402.03559}
 	{25.8\%}
+&	\hspace{4pt} \faAngleRight\, Also appeared in [w\ref{AI4Mat:24}] at \venue{NeurIPS}, 2024. 
+	\hspace{4pt} \textcolor{purple}{\faTrophy {\bf [Oral]}} (6\% of the accepted papers (39\% acceptance rate)).\\[0.5em]
 	% Also appeared in the AI+ORMS 2025 Bridge program and several other workshops.
 
-\confentryAwd
-	{71}
-	{\student{Jacob K.~Christopher}, Stephen Baek, {\bf Ferdinando Fioretto}}
-  	{Physics-Aware Generative Diffusion Models for Micro-structure Material Design}
-  	{\venue{AI 4 Material science, at NeurIPS}, 2024}
-	{https://arxiv.org/abs/2402.03559}
-	{39\%}
-	{[Oral]}{(6\% of the accepted papers.)}
-
-\confentry
-	{70}
-	{\student{Jacob K.~Christopher}, \student{Michael Cardei}, Brian R Bartoldson, Bhavya Kailkhura, {\bf Ferdinando Fioretto}}
-	{Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion}
-	{\venue{Efficient Natural Language and Speech Processing (ENLSP), at NeurIPS}, 2024}
-	{https://arxiv.org/abs/2408.0563605246}
-	{29\%}
-
+\labelc{CDC:24}
 \confentry
 	{69}
-	{Ethan King, \student{James Kotary}, {\bf Ferdinando Fioretto}, Jan Drgona}
+	{[$c$] Ethan King, \student{James Kotary}, {\bf Ferdinando Fioretto}, Jan Drgona}
 	{Metric Learning to Accelerate Convergence of Operator Splitting Methods for Differentiable Parametric Programming}
 	{\venue{63rd IEEE Conference on Decision and Control (CDC)}, 2024}
 	{https://arxiv.org/abs/2404.00882}
 	{56.7\%}
 
+\labelc{ECAI:24}
 \confentry
 	{68}
-	{\student{James Kotary}, \student{Vincenzo Di Vito}, \student{Jacob K.~Christopher}, Pascal Van Hentenryck, Ferdinando Fioretto}
+	{\student{James Kotary}, \student{Vincenzo Di Vito}, \student{Jacob K.~Christopher}, Pascal Van Hentenryck, {\bf Ferdinando Fioretto}}
 	{Predict-Then-Optimize by Proxy: Learning Joint Models of Prediction and Optimization}
   	{\procECAI, 2024}
   	{https://arxiv.org/2311.13087}
   	{23.3\%} % 2,344 submissions and accepted 547
 
+\labelc{ICML:24a}
 \confentry
 	{67}
 	{\student{Sree Harsha Nelaturu}, \student{Nishaanth Kanna Ravichandran}, \student{Cuong Tran}, Sara Hooker, and {\bf Ferdinando Fioretto}}
@@ -134,6 +203,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://arxiv.org/abs/2312.03886}
 	{27.5\%}
 
+\labelc{ICML:24b}
 \confentry
 	{66}
 	{\student{Saswat Das}, Marco Romanelli, {\bf Ferdinando Fioretto}}
@@ -142,6 +212,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://arxiv.org/abs/2402.03629}
 	{27.5\%}
 
+\labelc{UAI:24}
 \confentry
 	{65}
 	{\student{My H.~Dinh}, \student{James Kotary}, {\bf Ferdinando Fioretto}}
@@ -150,6 +221,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://arxiv.org/abs/2402.07772}
 	{27.0\%}
 
+\labelc{IJCAI:24}
 \confentry
 	{64}%{ArXiv}
 	{\student{Cuong Tran}, Keyu Zhu, Pascal Van Hentenryck, {\bf Ferdinando Fioretto}}
@@ -158,6 +230,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://arxiv.org/abs/2211.11835}
 	{13.9\%}
 
+\labelc{FAccT:24}
 \confentry
 	{63}
 	{\student{My H.~Dinh}, \student{James Kotary}, {\bf Ferdinando Fioretto}}
@@ -166,33 +239,29 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://arxiv.org/abs/2402.05252}
 	{24.3\%}
 
+\labelc{AAAI:24}
 \confentry
 	{62}
-	{{\bf Ferdinando Fioretto}, Keyu Zhu, Pascal Van Hentenryck, \student{Saswat Das}, Christine Task}
+	{[c] {\bf Ferdinando Fioretto}, Keyu Zhu, Pascal Van Hentenryck, \student{Saswat Das}, Christine Task}
   	{Finding $\epsilon$ and $\delta$ of Traditional Disclosure Control Systems}
 	{\procAAAI, 2024}
 	{https://arxiv.org/abs/2301.12204}
 	{23.75\%}
 
+\labelc{ICML:24c}
 \confentry
 	{61}
 	{\student{My H.~Dinh}, \student{James Kotary}, {\bf Ferdinando Fioretto}}
 	{Differentiable Approximations of Fair OWA Optimization}
-	{\venue{Workshop on Differentiable Almost Everything, at ICML}, 2024}
+	{\venue{Differentiable Almost Everything, at ICML}, 2024}
 	{https://arxiv.org/abs/2402.07772}
 	{27.0\%}
 
-\confentry
-	{60}
-	{{\bf Ferdinando Fioretto}}
-	{The Data Minimization Principle in Machine Learning}
-	{\venue{Workshop on Generative AI and Law, at ICML}, 2024}
-	{https://arxiv.org/abs/2405.19471}
-	{~30.0\%}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\nemph{2023}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
 
+\labelc{NeurIPS:23a}
 \confentry
 	{60}
 	{\student{Cuong Tran} and {\bf Ferdinando Fioretto}}
@@ -201,6 +270,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://arxiv.org/abs/2305.17593}
 	{23.0\%}
 
+\labelc{NeurIPS:23b}
 \confentry
 	{59}
  	{Vladimir Dvorkin and {\bf Ferdinando Fioretto}}
@@ -209,6 +279,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
   	{https://arXiv.org/abs/2308.01436}
   	{35.0\%}
 
+\labelc{IJCAI:23a}
 \confentry 
 	{58} %{IJCAI}
 	{\student{James Kotary}, \student{My H.~Dinh}, {\bf Ferdinando Fioretto}}
@@ -217,6 +288,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://arxiv.org/abs/2301.12047}
 	{15.0\%}
 
+\labelc{IJCAI:23b}
 \confentry
     {57} %{IJCAI}
 	{\student{James Kotary}, \student{Vincenzo Di Vito}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
@@ -225,6 +297,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://arxiv.org/abs/2204.05157}
     {15.0\%}
 
+\labelc{IJCAI:23c}
 \confentry
     {56} %{IJCAI}
 	{\student{James Kotary}, \student{Vincenzo Di Vito}, {\bf Ferdinando Fioretto}}
@@ -233,6 +306,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{http://arxiv.org/abs/2211.00251}
     {15.0\%}
 
+\labelc{IJCAI:23d}
 \confentry
     {55} %{IJCAI}
 	{\student{Cuong Tran}, {\bf Ferdinando Fioretto}}
@@ -241,22 +315,25 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{http://arxiv.org/abs/2109.08630}
     {15.0\%}
 
+\labelc{PES:23a}
 \confentry
 	{54} %{PES}
-	{Terrence W.K. Mak, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
+	{[c] Terrence W.K. Mak, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
 	{Load Encoding for Learning AC-OPF}
 	{Proceedings of the \venue{IEEE PES General Meeting (PES)}, 2023}
 	{https://arxiv.org/abs/2101.03973}
-	{N/A}
+	{Unknown}
 
+\labelc{PES:23b}
 \confentry
 	{53}
-	{\student{My H.~Dinh}, {\bf Ferdinando Fioretto}, Mostafa Mohammadian, and Kyri Baker}
+	{[c] \student{My H.~Dinh}, {\bf Ferdinando Fioretto}, Mostafa Mohammadian, and Kyri Baker}
 	{An Analysis of the Reliability of AC Optimal Power Flow Deep Learning Proxies}
 	{\venue{IEEE PES Innovative Smart Grid Technologies}, 2023}
 	{https://arxiv.org/abs/2111.11168}
 	{unknown}
 
+\labelc{AAMAS:23}
 \confentry
     {52} %{AAMAS}
 	{\student{James Kotary}, \student{Vincenzo Di Vito}, {\bf Ferdinando Fioretto}}
@@ -268,6 +345,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\nemph{2022}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
 
+\labelc{NeurIPS:22}
 \confentryAwd
 	{51} %{NeurIPS}
 	{\student{Cuong Tran}, {\bf Ferdinando Fioretto}, Jung-Eun Kim, \student{Rakshit Naidu}}
@@ -278,23 +356,26 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{[Spotlight]}
 	{($\sim$3\% of all paper submissions (10,411, in 2022).)}
 
-	\confentry
+\labelc{IJCAI:22a}
+\confentry
 	{50} %{IJCAI}
-	{Keyu Zhu, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
+	{[c] Keyu Zhu, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
 	{Post-processing of Differentially Private Data: A Fairness Perspective}
 	{\procIJCAI, 2022}
 	{http://arxiv.org/abs/2202.09425}	
 	{15.0\%}
 
-	\confentry
+\labelc{IJCAI:22b}
+\confentry
 	{49} %{IJCAI}
-	{{\bf Ferdinando Fioretto}, \student{Cuong Tran}, Keyu Zhu, Pascal Van Hentenryck}
+	{[c] {\bf Ferdinando Fioretto}, \student{Cuong Tran}, Keyu Zhu, Pascal Van Hentenryck}
 	{Differential Privacy and Fairness in Decisions and Learning Tasks: A Survey}
 	{\procIJCAI, 2022}
 	{http://arxiv.org/abs/2202.08187}	
 	{18.0\% (survey track)}
 
-	\confentryAwd
+\labelc{IJCAI:22c}
+\confentryAwd
 	{48} %{IJCAI}
 	{{\bf Ferdinando Fioretto}}
 	{Integrating Machine Learning and Optimization to Boost Decision Making}
@@ -304,42 +385,47 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{[Early Career Spotlight]}
 	{(Accompanying paper.)}
 
-	\confentry
+\labelc{WWW:22}
+\confentry
 	{47} %{WWW}
-	{\student{James Kotary}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, Ziwei Zhu}
+	{[c] \student{James Kotary}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, Ziwei Zhu}
 	{End-to-end Learning for Fair Ranking Systems}
 	{\procWWW, 2022}
 	{http://arxiv.org/abs/2111.10723}	
 	{17.0\%}
-	
-	\confentry
+
+\labelc{AAAI:22}	
+\confentry
 	{46} %{AAAI} 
-	{\student{James Kotary}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
+	{[c] \student{James Kotary}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
 	{Fast Approximations for Job Shop Scheduling: A Lagrangian Dual Deep Learning Method}
 	{\procAAAI, 2022}
 	{http://arxiv.org/abs/2110.06365}
 	{15.0\%}
 
-	\confentry
+\labelc{PMAPS:22a}
+\confentry
 	{45} %{PMAPS}
 	{Lesia Mitridati, Emma Romei, Gabriela Hug, {\bf Ferdinando Fioretto}}
 	{Differentially-Private Heat and Electricity Markets Coordination}
 	{\procPMAPS, 2022}
 	{https://arxiv.org/abs/2201.10634}
-	{N/A}
+	{Unknown}
 
-	\confentry
+\labelc{PMAPS:22b}
+\confentry
 	{44} %{PMAPS}
-	{Mostafa Mohammadian, Kyri Baker, \student{My H.~Dinh}, {\bf Ferdinando Fioretto}}
+	{[c] Mostafa Mohammadian, Kyri Baker, \student{My H.~Dinh}, {\bf Ferdinando Fioretto}}
 	{Learning Solutions for Intertemporal Power Systems Optimization with Recurrent Neural Networks}
 	{\procPMAPS, 2022}
 	{https://ieeexplore.ieee.org/document/9810638}
-	{N/A}
+	{Unknown}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\nemph{2021}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
 
-	\confentry 
+\labelc{NeurIPS:21a}
+\confentry 
 	{43} %{NeurIPS}
 	{\student{Cuong Tran}, \student{My H.~Dinh}, {\bf Ferdinando Fioretto}}
 	{Differentially Private Deep Learning under the Fairness Lens}
@@ -347,17 +433,19 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://arxiv.org/pdf/2106.02674.pdf}
 	{26.0\%} % 9122
 
-	\confentry 
+\labelc{NeurIPS:21b}
+\confentry 
 	{42} %{NeurIPS}
-	{\student{James Kotary}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
+	{\student{James Kotary}, [c] {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
 	{Learning Hard Optimization Problems: A Data Generation Perspective}
 	{\procNeurIPS, 2021}
 	{https://arxiv.org/pdf/2106.02674.pdf}
 	{26.0\%} % 9122
 
-	\confentryAwd 
+\labelc{IJCAI:21a}
+\confentryAwd 
 	{41} %{IJCAI}
-	{\student{Cuong Tran}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, \student{Zhiyan Yao}}
+	{[c] \student{Cuong Tran}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, \student{Zhiyan Yao}}
 	{Decision Making with Differential Privacy under the Fairness Lens}
 	{\procIJCAI, 560--566, 2021}
 	{https://www.ijcai.org/proceedings/2021/78}
@@ -365,15 +453,17 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{[Winner of the 2022 Caspar Bowden PET Award]}
 	{(Selected among all papers about Privacy Enhancing Technologies published in international conferences between 2020--2022.)}
 
-	\confentry 
+\labelc{IJCAI:21b}
+\confentry 
 	{40} %{IJCAI}
-	{\student{James Kotary}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, Bryan Wilder}
+	{[c] \student{James Kotary}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, Bryan Wilder}
 	{End-to-End Constrained Optimization Learning: A Survey}
 	{\procIJCAI, 4475--4482, 2021}
 	{https://www.ijcai.org/proceedings/2021/610}
 	{30.1\%}
 
-	\confentry 
+\labelc{AAAI:21a}
+\confentry 
 	{39} %{AAAI}
 	{Keyu Zhu, Pascal Van Hentenryck, {\bf Ferdinando Fioretto}}
 	{Bias and Variance of Post-processing in Differential Privacy}
@@ -381,15 +471,17 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://ojs.aaai.org/index.php/AAAI/article/view/17333}
     {21.0\%} %  7,911/1,692
 
-	\confentry 
+\labelc{AAAI:21b}
+\confentry 
 	{38} %{AAAI}
-	{\student{Cuong Tran}, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
+	{\student{Cuong Tran}, [c] {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
 	{Differentially Private and Fair Deep Learning: A Lagrangian Dual Approach}
 	{\procAAAI, 9932--9939, 2021}
 	{https://ojs.aaai.org/index.php/AAAI/article/view/17193}
     {21.0\%} %  7,911/1,692
 
-    \confentry
+\labelc{AAMAS:21}
+\confentry
     {37} %{AAMAS}
     {\student{Anudit Nagar}, \student{Cuong Tran}, {\bf Ferdinando Fioretto}}
     {A Privacy-Preserving and Accountable Multi-agent Learning Framework}
@@ -397,41 +489,46 @@ Names of students I supervise(d) are prepended with symbol \student{}.
     {https://dl.acm.org/doi/10.5555/3463952.3464174}
     {40.0\%}
 
-	\confentry
+\labelc{CP:21}
+\confentry
 	{36} %{CP}
 	{\bf Ferdinando Fioretto}
 	{Constrained-based Differential Privacy}
 	{\procCP, 1868--8969, 2021}
 	{https://drops.dagstuhl.de/opus/volltexte/2021/15293/}
 	{Invited}
-	
-	\confentry 
+
+\labelc{PowerTech:21}	
+\confentry 
 	{35} %{PowerTech}
-	{Vladimir~Dvorkin, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, Jalal~Kazempour, Pierre~Pinson}
+	{[c] Vladimir~Dvorkin, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, Jalal~Kazempour, Pierre~Pinson}
 	{Differentially Private Optimal Power Flow for Distribution Grids}
 	{\venue{IEEE PowerTech}, 2021}
 	{https://ieeexplore.ieee.org/document/9226144}
-	{N/A} %4,204/587
+	{Unknown} %4,204/587
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\nemph{2020}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
-	\confentry
+\labelc{ECML:20}	
+\confentry
 		{34} %{ECML}
-		{{\bf Ferdinando Fioretto}, Pascal Van Hentenryck, Terrence W.K. Mak, \student{Cuong Tran}, Federico Baldo, Michele Lombardi} 
+		{[c] {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, Terrence W.K. Mak, \student{Cuong Tran}, Federico Baldo, Michele Lombardi} 
 		{A Lagrangian Dual Framework for Deep Neural Networks with Constraints}
 		{\procECML, 18--135, 2020}
 		{https://arxiv.org/abs/2001.09394}
 		{19.0\%}
 
+\labelc{IJCAI:20a}	
 	\confentry
 		{33} %{IJCAI}
-		{{\bf Ferdinando Fioretto}, Lesia Mitridati, Pascal Van Hentenryck}
+		{[c] {\bf Ferdinando Fioretto}, Lesia Mitridati, Pascal Van Hentenryck}
 		{Differential Privacy Stackebelg Games}
 		{\procIJCAI, 3480--3486, 2020}
 		{https://www.ijcai.org/proceedings/2020/0481.pdf}
 	    {12.6\%}
 
-	\confentryAwd
+\labelc{IJCAI:20b}	
+\confentryAwd
 		{32} %{IJCAI}
 		{{\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
 		{OptStream: Releasing Time Series Privately}
@@ -440,22 +537,25 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{[Invited to the IJCAI journal track]}
 		{(selected papers only.)}{}
 	
+\labelc{PSCC:20}	
 	\confentry
 		{31} %{PSCC}
-		{Terrence W.K.~Mak, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
+		{[c] Terrence W.K.~Mak, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
 		{Privacy-Preserving Obfuscation for Distributed Power Systems}
 		{\procPSCC, 2020}
 		{https://arxiv.org/abs/1910.04250}
 	    {20.5\%} %  7,737/1591
 
-	\confentry
-		{30} %{AAAI}
+\labelc{AAAI:20}	
+\confentry
+		{AAAI:20} %{AAAI}
 		{{\bf Ferdinando Fioretto}, Terrence W.K.~Mak, Pascal Van Hentenryck}
 		{Predicting AC Optimal Power Flows: Combining Deep Learning and Lagrangian Dual Methods}
 	  	{\procAAAI, pages 630--637, 2020}
 	  	{https://ojs.aaai.org//index.php/AAAI/article/view/5403}
 	    {20.6\%} %  7,737/1591
 
+\labelc{PRIMA:20}	
 	\confentry
 		{29} %{PRIMA}
 	    {Atena Tabakhi, William Yeoh, {\bf Ferdinando Fioretto}}
@@ -466,6 +566,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\nemph{2019}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
+\labelc{AAMAS:19}	
 	\confentry
 		{28} %{AAMAS}
 		{{\bf Ferdinando Fioretto}, Pascal Van~Hentenryck}
@@ -474,6 +575,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	  	{https://dl.acm.org/doi/abs/10.5555/3306127.3331750}
 		{24.0\%} % 189/781
 
+\labelc{IJCAI:19}
 	\confentry
 		{27} %{IJCAI}
 		{{\bf Ferdinando Fioretto}, Terrence W.K.~Mak, Pascal Van Hentenryck}
@@ -482,6 +584,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	  	{https://www.ijcai.org/proceedings/2019/0152.pdf}
 	    {17.9\%} %  4,752/850
 
+\labelc{CP:19}
 	\confentryAwd
 		{26} %{CP}
 		{{\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
@@ -495,7 +598,8 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\nemph{2018}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
-	\confentry 
+\labelc{PRIMA:18}	
+\confentry 
 		{25} %{PRIMA}
 		{{\bf Ferdinando Fioretto}, Hong Xu, Sven Koenig, TK Satish Kumar}
 	 	{Solving Multiagent Constraint Optimization Problems on the Constraint Composite Graph}
@@ -503,6 +607,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://link.springer.com/chapter/10.1007/978-3-030-03098-8\_7}
 	    {26.2\%} % 27/103
 
+\labelc{AAMAS:18}
 	\confentry
 		{24} %{AAMAS}
 	  	{{\bf Ferdinando Fioretto}, Chansoo Lee, Pascal Van Hentenryck}
@@ -511,6 +616,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	  	{https://dl.acm.org/doi/abs/10.5555/3237383.3237910}
 	    {25.2\%} % 151/597
 
+\labelc{CP:18}
 	\confentry 
 		{23} %{CP}
 		{Khoi Hoang, {\bf Ferdinando Fioretto}, William Yeoh, Enrico Pontelli, Roie Zivan}
@@ -519,6 +625,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://link.springer.com/chapter/10.1007/978-3-319-98334-9\_44}
 	    {33.0\%} % 3/9 (in this track)
 
+\labelc{CPAIOR:18}
 	\confentry 
 		{22} %{CPAIOR}
 		{{\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
@@ -527,17 +634,19 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://link.springer.com/chapter/10.1007/978-3-319-93031-2\_15}
 	    {48.0\%}
 
+\labelc{ISIAM:18}
 	\confentry
 		{21} %{ISIAM}
 		{{\bf Ferdinando Fioretto}, Hong Xu, Sven Koenig, TK Satish Kumar}
 		{Constraint Composite Graph-Based Lifted Message Passing for Distributed Constraint Optimization Problems}
 		{\procISIAM, 2018}
 		{https://speakerdeck.com/xuphys/constraint-composite-graph-based-lifted-message-passing-for-distributed-constraint-optimization-problems}
-		{N/A}
+		{Unknown}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\nemph{2017}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
-	\confentry 
+\labelc{AAMAS:17a}
+\confentry 
 		{20} %{AAMAS}
 		{{\bf Ferdinando Fioretto}, William Yeoh, Enrico Pontelli, Ye Ma, Satishkumar J.~Ranade}
 		{A Distributed Constraint Optimization (DCOP) Approach to the Economic Dispatch with Demand Response}
@@ -545,6 +654,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://dl.acm.org/doi/10.5555/3091125.3091267}
 		{24.9\%}%{\it 137/550 = 25\%}.
 
+\labelc{AAMAS:17b}
 	\confentry 
 		{19} %{AAMAS}
 		{{\bf Ferdinando Fioretto},  William Yeoh, Enrico Pontelli}
@@ -553,6 +663,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://dl.acm.org/doi/10.5555/3091125.3091265}
 		{24.9\%}%{\it 137/550 = 25\%}
 
+\labelc{AAMAS:17c}
 	\confentry
 		{18} %{AAMAS} 
 		{Khoi Hoang, Ping Hou, {\bf Ferdinando Fioretto}, Makoto Yokoo, William Yeoh, Roie Zivan}
@@ -561,6 +672,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://dl.acm.org/doi/10.5555/3091125.3091160}
 		{24.9\%}%{\it 137/550 = 25\%}.
 
+\labelc{CP:17}
 	\confentry 
 		{17} %{CP}
 		{Atena M.~Tabakhi, Tiep Le, {\bf Ferdinando Fioretto}, William Yeoh}
@@ -571,7 +683,8 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\nemph{$\leq$2016}}& \nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
-	\confentry 
+\labelc{AAMAS:16a}
+\confentry 
 		{16} %{AAMAS}
 		{Khoi Hoang, {\bf Ferdinando Fioretto}, Ping Hou, Makoto Yokoo, William Yeoh, Roie Zivan}
 		{Proactive Dynamic Distributed Constraint Optimization Problems} 
@@ -579,7 +692,8 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://www.ifaamas.org/Proceedings/aamas2019/pdfs/p2411.pdf}
 		{24.9\%}%{\it 137/550 = 25\%}.
 
-	\confentry 
+\labelc{AAMAS:16b}
+\confentry 
 		{15} %{AAMAS}
 		{Tiep Le, {\bf Ferdinando Fioretto}, William Yeoh, Enrico Pontelli, Tran Cao Son} 
 		{ER-DCOPs: A Framework for Distributed Constraint Optimization Problems With Uncertainty} 
@@ -587,7 +701,8 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://dl.acm.org/doi/10.5555/2936924.2937014}
 		{24.9\%}%{\it 137/550 = 25\%}.
 
-	\confentry 
+\labelc{AAAI:16}
+\confentry 
 		{14} %{AAAI}
 		{{\bf Ferdinando Fioretto}, William Yeoh, Enrico Pontelli}
 		{Multi-Variable Agent Decompositions for DCOPs}
@@ -595,7 +710,8 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://dl.acm.org/doi/10.5555/3016100.3016246}
 		{25.7\%}%{\it 549/2132 = 26\%}.
 
-	\confentry
+\labelc{CP:16}
+\confentry
 		{13} %{CP} 
 		{{\bf Ferdinando Fioretto}, William Yeoh, Enrico Pontelli}
 		{A Dynamic Programming-Based MCMC Framework for Solving DCOPs with GPUs}
@@ -605,7 +721,8 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%{\nemph{2015}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
-	\confentry
+\labelc{CP:15}
+\confentry
 		{12} %{CP}
 		{{\bf Ferdinando Fioretto}, Tiep Le, Enrico Pontelli, William Yeoh, Tran Cao Son}
 		{Exploiting GPUs in Solving (Distributed) Constraint Optimization Problems with Dynamic Programming}
@@ -613,7 +730,8 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://dl.acm.org/doi/10.5555/3102787.3102797}
 		{48.7\%}%{\it  39/80 = 49\%}.
 
-	\confentry
+\labelc{AAMAS:15a}
+\confentry
 		{11} %{AAMAS}
 		{{\bf Ferdinando Fioretto}, Federico Campeotto, Agostino Dovier, Enrico Pontelli, William Yeoh}
 		{Large Neighborhood Search with Quality Guarantees for Distributed Constraint Optimization Problems}
@@ -621,7 +739,8 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://dl.acm.org/doi/10.5555/2772879.2773461}
 		{46.0\%}
 
-	\confentry
+\labelc{AAMAS:15b}
+\confentry
 		{10} %{AAMAS}
 		{{\bf Ferdinando Fioretto}, William Yeoh, Enrico Pontelli}
 		{Multi-Variable Agents Decomposition for DCOPs to Exploit Multi-Level Parallelism}
@@ -629,24 +748,27 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://dl.acm.org/doi/10.5555/2772879.2773455}
 		{46.0\%}
 
-	\confentry
+\labelc{AAMAS:15c}
+\confentry
 		{9} %{AAMAS}
 		{{\bf Ferdinando Fioretto}}
 		{Exploiting the Structure of Distributed Constraint Optimization Problems} 
 		{\procAAMAS, pages 2007--2008, 2015}
 		{https://dl.acm.org/doi/10.5555/2772879.2773549}
-		{N/A}
+		{Unknown}
 
-	\confentry
+\labelc{AAAI:15}
+\confentry
 		{8} %{AAAI}
 		{{\bf Ferdinando Fioretto}} 
 		{Exploiting the Structure of Distributed Constraint Optimization Problems}
 		{\procAAAI,  pages 4233--4234, 2015}
 		{https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9293}
-		{N/A}
+		{Unknown}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%{\nemph{$\leq$2014}}&\nemph{\rule{0.5\linewidth}{0.5pt}}\\[1em]
+\labelc{ECAI:14}
 	\confentry 
 		{7} %{ECAI}
 		{($\alpha$-$\beta$) 
@@ -656,6 +778,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://dl.acm.org/doi/10.5555/3006652.3006685}
 		{28.0\%}
 
+\labelc{CP:14}
 	\confentry
 		{6} %{CP}
 		{{\bf Ferdinando Fioretto}, Tiep Le, William Yeoh, Enrico Pontelli, Tran Cao Son}
@@ -663,7 +786,8 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{\procCP, pages 307--323, 2014}
 		{https://link.springer.com/chapter/10.1007\%2F978-3-319-10428-7\_24}
 		{49.8\%}
-		
+
+\labelc{PADL:14}
 	\confentry
 		{5} %{PADL}
 		{($\alpha$-$\beta$) 
@@ -673,6 +797,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://link.springer.com/chapter/10.1007\%2F978-3-319-04132-2\_11}
 		{55.0\%}
 
+\labelc{AAMAS:14}
 	\confentry 
 		{4} %{AAMAS}
 		{{\bf Ferdinando Fioretto}, Federico Campeotto, Luca Da Rin Fioretto, William Yeoh, Enrico Pontelli} 
@@ -680,7 +805,8 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{\procAAMAS, pages 1339--1340, 2014}
 		{https://dl.acm.org/doi/10.5555/2615731.2617462}
 		{46.0\%}
-	
+
+\labelc{CMSB:13}
 	\confentryAwd
 		{3} %{CMSB}
 		{{\bf Ferdinando Fioretto}, Enrico Pontelli} 
@@ -690,6 +816,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{55.0\%}
 		{[Best Student Paper Award]}{}
 
+\labelc{CP:12}
 	\confentry 
 		{2} %{CP}
 		{($\alpha$-$\beta$) 
@@ -699,127 +826,155 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 		{https://link.springer.com/chapter/10.1007\%2F978-3-642-33558-7\_61}
 		{36.0\%}
 
+\labelc{Neurscience:11}
 	\confentry
 		{1} % {Neuroscience}
 		{Michael R. Best, {\bf Ferdinando Fioretto}, Alessandro Dal Pal\`{u}, Enrico Pontelli, Tran Son, TuShun R. Powers, Elba E. Serrano}
 		{The role of secondary and tertiary structure prediction in determining the function of novel genes found in Xenopus Leavis}
-		{\venue{Neuroscience}, 2011, (518.20/ZZ45)}{}
-		{N/A}
+		{\venue{Neuroscience}, 2011, (518.20/ZZ45)}{~}
+		{Unknown}
 \end{pubs}
 
 
 \subsectionTitle{Journals}
 \begin{pubs}
-\journalentry
+\journalentryIF
 	{14}
 	{Jayanta Mandi, \student{James Kotary}, Senne Berden, Maxime Mulamba, Victor Bucarey, Tias Guns, {\bf Ferdinando Fioretto}} 
 	{Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities}
 	{\JAIR, (81), pages 1623--1701, 2024}
 	{https://arxiv.org/abs/2307.13565}
+	{2.441}
 
-	\journalentry
+	\journalentryIF
 	{13}
 	{Mostafa Mohammadian, Kyri Baker, \textbf{Ferdinando Fioretto}}
 	{Gradient-Enhanced Physics-Informed Neural Networks for Power Systems Operational Support}
 	{Electric Power Systems Research (223), pages 109551, 2023}
 	{https://www.sciencedirect.com/science/article/abs/pii/S0378779623004406}
+	{3.3}
 
-	\journalentry
+	\journalentryIF
 	{12} %{JAIR}
 	{Khoi D.~Hoang, \textbf{Ferdinando Fioretto}, Ping Hou, William Yeoh, Makoto Yokoo, Roie Zivan}
 	{Proactive Dynamic Distributed Constraint Optimization Problems}
 	{\JAIR, (73), pages 179-225, 2022}
 	{https://www.jair.org/index.php/jair/article/view/13499}
+	{2.441}
 
-	\journalentry
+	\journalentryIF
 	{11} %{AIJ}
 	{\textbf{Ferdinando Fioretto}, Pascal Van Hentenryck, Keyu Zhu}
 	{Differential Privacy of Hierarchical Census Data: An Optimization Approach}
 	{\AIJ, (296), pages 103475, 2021}
 	{https://www.sciencedirect.com/science/article/pii/S0004370221000266}
+	{14.05}
 
-	\journalentryAwd
+	\journalentryIFAwd
 	{10} %{IEEE-TPS}
 	{Vladimir Dvorkin, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, Pierre Pinson, Jalal Kazempour}
 	{Differentially Private Optimal Power Flow for Distribution Grids}
 	{\TPS, 36(3), pages 2186--2196, 2021}
 	{https://ieeexplore.ieee.org/document/9226144}
+	{6.5}
 	{[Best IEEE TPS paper award]}
 	{(Given to 8 out of all TPS papers published in 2019--2021.)}
-
-	\journalentry
+	
+	\journalentryIF
 	{9} %{IEEE-TSG} 
 	{{\bf Ferdinando Fioretto}, Terrence W.K.~Mak, Pascal Van Hentenryck}
 	{Differential Privacy for Power Grid Obfuscation}
 	{\TSG, 11(2), pages 1356--1366, 2020}
 	{https://ieeexplore.ieee.org/document/8809257}
+	{8.6}
 
-	\journalentryAwd
+	\journalentryIFAwd
 	{8}	%{IEEE-TPS}
 	{Terrence W.K.~Mak, {\bf Ferdinando Fioretto}, \student{Lyndon Shi}, Pascal Van Hentenryck}
 	{Privacy-Preserving Power System Obfuscation: A Bilevel Optimization Approach}
 	{\TPS, 35(2), pages 1627--1637, 2020}
 	{https://ieeexplore.ieee.org/document/8854890}
+	{6.5}
 	{[Best IEEE TPS paper award]}
 	{Given to 7 out of all TPS papers published in 2018--2020).}
 
-	\journalentryAwd
+	\journalentryIFAwd
 	{7}	%{JAIR}
 	{{\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
 	{OptStream: Releasing Time Series Privately}
 	{\JAIR, (65) pages 423--456, 2019}
 	{https://www.jair.org/index.php/jair/article/view/11583}
+	{2.441}
 	{[Invited to IJCAI 2020 journal track]}
 	{}
-
-	\journalentryAwd
+	
+	\journalentryIFAwd
 	{6}	%{IA}
 	{{\bf Ferdinando Fioretto}, Agostino Dovier, Enrico Pontelli}
 	{Distributed Multi-Agent Optimization for Smart Grids and Home Automation}
 	{\venue{Intelligenza Artificiale (IA)},  12 (2), pages: 67--87, 2019}
 	{https://content.iospress.com/articles/intelligenza-artificiale/ia180037}
+	{1.9}
 	{[Best 2018 Thesis in Artificial Intelligence (AI*IA)]}
 	{(Accompanying paper.)}
 
-	\journalentry
+	\journalentryIF
 	{5}	%{JAIR}
 	{{\bf Ferdinando Fioretto}, Enrico Pontelli, William Yeoh}
 	{Distributed Constraint Optimization Problems and Applications: A Survey}
 	{\JAIR, 61, pages 623--698, 2018} 
 	{https://arxiv.org/abs/1602.06347}
+	{2.441}
 
-	\journalentry 
+
+	\journalentry
 	{4}	%{AI Matters}
 	{{\bf Ferdinando Fioretto}, William Yeoh}
 	{AI Buzzwords Explained: Distributed Constraint Optimization Problems}
 	{\venue{AI Matters}, 3 (4), pages 8--13, 2018}
 	{https://sigai.acm.org/static/aimatters/3-4/AIMatters-3-4-04-Fioretto.pdf}
+	
 
-	\journalentry 
+	\journalentryIF
 	{3}	%{Constraints}
 	{{\bf Ferdinando Fioretto}, Enrico Pontelli, William Yeoh, Rina Dechter}
 	{Accelerating Exact and Approximate Inference for (Distributed) Discrete Optimization with GPUs}
 	{\venue{Constraints}, 23 (1), pages 1--43, 2018}
 	{https://link.springer.com/article/10.1007/s10601-017-9274-1}
+	{1.8}
 
-	\journalentry 
+	\journalentryIF
 	{2}	%{TOMACS}
 	{{\bf Ferdinando Fioretto}, Agostino Dovier, Enrico Pontelli}
 	{Constrained Community-based Gene Regulatory Network Inference}
 	{\venue{ACM Transactions on Modeling and Computer Simulation (TOMACS)}, 25 (2), pages 11:1--11:26, 2015}
 	{https://dl.acm.org/doi/10.1145/2688909}
+	{1.38}
 
-	\journalentry
+	\journalentryIF
 	{1}	%{JAIR}
 	{($\alpha$-$\beta$)\footnote{Author list is order alphabetically.} 
 		Federico Campeotto, Alessandro Dal Pal\`{u}, Agostino Dovier,  {\bf Ferdinando Fioretto}, Enrico Pontelli}
 	{A Constraint Solver for Flexible Protein Models}
 	{\JAIR, 48, pages 953--1000, 2013}
 	{https://www.jair.org/index.php/jair/article/view/10856}
+	{2.441}
 \end{pubs}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{nJ}{8}
 \subsectionTitle{Book Chapters and Editorial Articles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{pubs}
+
+\journalentry
+	{7}
+	{Raed Al Kontar, Tianbao Yang, {\bf Ferdinando Fioretto}, and Farzad Yousefian}
+	{Editorial: Federated Distributed Learning and Analytics}
+	{{\bf IISE Transactions}, 2025}
+	{https://www.tandfonline.com/doi/full/10.1080/24725854.2025.2479047?}
+
 \journalentry
 	{6} %{AI Mag.}
 	{{\bf Ferdinando Fioretto}, Pascal Van Hentenryck, and Juba Ziani}
@@ -867,36 +1022,40 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 \end{pubs}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsectionTitle{Peer Reviewed Workshops}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{pubs}
 
+\labelw{PPAI:25}
 \wsentryAwd
 	{31} 
 	{\student{Joonhyuk Ko}, Juba Ziani, \student{Saswat Das}, Matt Williams, {\bf Ferdinando Fioretto}}
 	{Fairness Issues and Mitigations in (Differentially Private) Socio-demographic Data Processes}
 	{\venue{AAAI Workshop on Privacy Preserving Artificial Intelligence  (PPAI)--at AAAI}, 2025}
 	{https://arxiv.org/abs/2408.08471}
-	{[Oral]}%{(11\% of the submitted papers.)}
+	{[Oral]}{(11\% of the submitted papers.)}
 	% Also appeared in the AI+ORMS 2025 Bridge program as an oral!
 
+\labelw{colorai:25}
 \wsentryAwd
 	{30}
 	{Low-rank finetuning for LLMs: A fairness perspective}
 	{\student{Saswat Das}, Marco Romanelli, \student{Cuong Tran}, \student{Zarreen Reza}, Bhavya Kailkhura,  {\bf Ferdinando Fioretto}}
 	{{\venue AAAI CoLoRAI Workshop}, 2025}
 	{https://arxiv.org/abs/2405.18572}
-	{[Best paper award]}
+	{[Best paper award]}{}
 
-
+\labelw{AIORDM:25a}
 \wsentryAwd
 	{29} 
 	{\student{Jinhao Liang}, \student{Jacob Christopher}, Sven Koenig, {\bf Ferdinando Fioretto}}
 	{Multi-Agent Path Finding in Continuous Spaces with Projected Diffusion Models}
 	{\venue{Combining AI and OR/MS for Better Trustworthy Decision Making, at AAAI}, 2025}
 	{}
-	{[Oral]}
-	% Also appeared in the AI+ORMS 2025 Bridge program as an oral!
-
+	{[Oral]}{}
+	
+\labelw{ExpAI:25}
 \wsentry
 	{28}
 	{\student{Vincenzo Di Vito}, Mostafa Mohammadian, Kyri Baker, {\bf Ferdinando Fioretto}}
@@ -904,20 +1063,35 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{\venue{AAAI Bridge on Explainable AI, Energy and Critical Infrastructure Systems}, 2025}
 	{https://arxiv.org/abs/2410.19157}
 
+\labelw{AI4Mat:24}
+\wsentryAwdAR
+	{29}
+	{\student{Jacob K.~Christopher}, Stephen Baek, {\bf Ferdinando Fioretto}}
+  	{Physics-Aware Generative Diffusion Models for Micro-structure Material Design}
+  	{\venue{AI 4 Material science, at NeurIPS}, 2024}
+	{https://arxiv.org/abs/2402.03559}
+	{39\%}
+	{[Oral]}{(6\% of the accepted papers.)}
+
+\labelw{ENLSP:24}
+\wsentryAR
+	{28}
+	{\student{Jacob K.~Christopher}, \student{Michael Cardei}, Brian R Bartoldson, Bhavya Kailkhura, {\bf Ferdinando Fioretto}}
+	{Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion}
+	{\venue{Efficient Natural Language and Speech Processing (ENLSP), at NeurIPS}, 2024}
+	{https://arxiv.org/abs/2408.0563605246}
+	{29\%}
+
+\labelw{ELLIS:24}
 \wsentry
 	{27}
 	{\student{Jacob K.~Christopher}, Stephen Baek, {\bf Ferdinando Fioretto}}
 	{Physics-Aware Diffusion Models for Micro-structure Material Design}
 	{\venue{ELLIS ML for Molecules and Materials in the Era of LLMs Workshop, 2024}}
-	{}
+	{~}
 
-\wsentry
-	{26}
-	{\student{Jacob K.~Christopher}, Michael Cardei, Brian R Bartoldson, Bhavya Kailkhura, {\bf Ferdinando Fioretto}}
-	{Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion}
-	{\venue{Efficient Natural Language and Speech Processing (ENLSP) workshop -- at NeurIPS}, 2024}
-	{https://arxiv.org/abs/2408.0563605246}
 
+\labelw{MLPS:24}
 \wsentry
  	{25}
 	{\student{Jacob K.~Christopher}, Stephen Baek, {\bf Ferdinando Fioretto}}
@@ -925,27 +1099,34 @@ Names of students I supervise(d) are prepended with symbol \student{}.
   	{\venue{Machine Learning and the Physical Sciences Workshop -- at NeurIPS}, 2024}
 	{https://arxiv.org/abs/2402.03559}
 
-\wsentry
+\labelw{RegML:24}
+\wsentryAR
 	{24}
 	{Prakhar Ganesh, \student{Cuong Tran}, Reza Shokri, {\bf Ferdinando Fioretto}}
 	{The Data Minimization Principle in Machine Learning}
 	{\venue{Workshop on Regulatory ML -- at NeurIPS}, 2024}
 	{https://arxiv.org/abs/2405.19471}
+	{\~30.0\%}
 
-\wsentry
+\labelw{DAE:24}
+\wsentryAR
 	{23}
 	{\student{My H.~Dinh}, \student{James Kotary}, {\bf Ferdinando Fioretto}}
 	{Differentiable Approximations of Fair OWA Optimization}
 	{\venue{Workshop on Differentiable Almost Everything -- at ICML}, 2024}
 	{https://arxiv.org/abs/2402.07772}
+	{27\%}
 
-\wsentry
+\labelw{GenLaw:24}
+\wsentryAR
 	{22}
 	{{\bf Ferdinando Fioretto}}
 	{The Data Minimization Principle in Machine Learning}
 	{\venue{Workshop on Generative AI and Law -- at ICML}, 2024}
 	{https://arxiv.org/abs/2405.19471}
+	{\~30.0\%}
 
+\labelw{cAI:23}
 \wsentry 
 	{21}%{ArXiv}
 	{Vladimir Dvorkin, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck, Pierre Pinson, Jalal Kazempour}
@@ -953,39 +1134,40 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{\venue{Workshop on Climate Change AI -- at NeurIPS}, 2023}
 	{http://arxiv.org/abs/2209.14152}
 
-
-	\wsentryAwd
+\labelw{PPAI:22}
+\wsentryAwd
 	{20} %{PPAI}
 	{\student{Cuong Tran}, \student{My H.~Dinh}, {\bf Ferdinando Fioretto}}
 	{A Fairness Analysis on Private Aggregation of Teacher Ensembles}
-	{\venue{AAAI Workshop on Privacy Preserving Artificial Intelligence 
-		(PPAI)--at AAAI}, 2022}
+	{\venue{AAAI Workshop on Privacy Preserving Artificial Intelligence (PPAI)--at AAAI}, 2022}
 	{http://arxiv.org/abs/2109.08630}
-	{Spotlight Paper}
+	{Spotlight}{(15\% of the accepted papers)}
 	
-	\wsentry
+\labelw{TPDP:21}
+\wsentry
 	{19} %{TPDP}
 	{\student{Cuong Tran}, {\bf Ferdinando Fioretto}}
 	{Decision Making with Differential Privacy under the Fairness Lens}
 	{\venue{Theory and Practice of Differential Privacy (TPDP) -- at ICML}, 2021}
 	{https://tpdp.journalprivacyconfidentiality.org/2021/}
- 	
-	\wsentry
+ 
+\labelw{OptMAS:21}
+\wsentry
 	{18} %{OptLMAS}
 	{\student{Anudit Nagar}, \student{Cuong Tran}, {\bf Ferdinando Fioretto}}
 	{A Privacy-Preserving and Accountable Multi-agent Learning Framework}
-	{\venue{International Workshop on Learning and Optimization 
- 		   in Multi-Agent Systems (OPTLearnMAS)--at AAMAS}, 2021}
+	{\venue{International Workshop on Learning and Optimization in Multi-Agent Systems (OPTLearnMAS)--at AAMAS}, 2021}
 	{https://optlearnmas21.github.io/}
 
-	\wsentry
+\labelw{PPAI:21}
+\wsentry
 	{17} %{PPAI}
 	{\student{Cuong Tran}, {\bf Ferdinando Fioretto}, Pascal Van~Hentenryck}
 	{Differentially Private and Fair Deep Learning: A Lagrangian Dual Approach}
-	{\venue{AAAI Workshop on Privacy Preserving Artificial Intelligence 
-		(PPAI)--at AAAI}, 2021}
+	{\venue{AAAI Workshop on Privacy Preserving Artificial Intelligence (PPAI)--at AAAI}, 2021}
 	{https://arxiv.org/abs/2009.12562}
 
+\labelw{INFORMS:20a}
 \wsentry 
 	{16} %{INFORMS}
 	{{\bf Ferdinando Fioretto}, \student{Cuong Tran}, Pascal Van Hentenryck}
@@ -993,6 +1175,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{\venue{INFORMS}, 2020}
 	{http://meetings2.informs.org/wordpress/annual2020/}
 
+\labelw{INFORMS:20b}
 \wsentry 
 	{15} %{INFORMS}
 	{Lesia Mitridati, {\bf Ferdinando Fioretto}, Pascal Van Hentenryck}
@@ -1000,15 +1183,15 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{\venue{INFORMS}, 2020}
 	{http://meetings2.informs.org/wordpress/annual2020/}
 
-
+\labelw{OptMAS:19}
 \wsentry 
 	{14} %{OptMAS}
 	{Khoi Hoang, {\bf Ferdinando Fioretto}, William Yeoh, Enrico Pontelli, Roie Zivan}
 	{A Large Neighboring Search Schema for Multi-Agent Optimization} 
-	{\venue{International Workshop on Optimization 
- 		   in Multi-Agent Systems (OPTMAS)--at AAMAS}, 2019}
+	{\venue{International Workshop on Optimization in Multi-Agent Systems (OPTMAS)--at AAMAS}, 2019}
 	{https://www2.isye.gatech.edu/~fferdinando3/cfp/OPTMAS19/}
 
+\labelw{OptMAS:18}
 \wsentry
 	{13} %{OptMAS}
 	{{\bf Ferdinando Fioretto}, Hong Xu, Sven Koenig, TK Satish Kumar}
@@ -1017,6 +1200,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	(OptMAS)--at AAMAS}, 2018}
 	{~}
 
+\labelw{OptMAS:17}
 \wsentry
 	{12} %{OptMAS}	
 	{William Kluegel, Muhammad Aamir Iqbal, {\bf Ferdinando Fioretto}, William Yeoh, Enrico Pontelli}
@@ -1025,6 +1209,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	2017}
 	{~}	
 
+\labelw{AISGSB:17}
 \wsentry
 	{11} %{AISGSB}
 	{{\bf Ferdinando Fioretto},  William Yeoh, Enrico Pontelli}
@@ -1032,21 +1217,23 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{\venue{Workshop on AI for Smart Grids and Smart Buildings (AISGSB)--at AAAI}, 2017}
 	{~}
 
-	\wsentry
+\labelw{MPREF:16}
+\wsentry
 	{10} %{MPREF} 
 	{Atena M.~Tabakhi, {\bf Ferdinando Fioretto}, William Yeoh}
 	{A Preliminary Study on Preference Elicitation in DCOPs for Scheduling Devices in Smart Buildings}
 	{\venue{10th Workshop on Advances in Preference Handling (MPREF)--at IJCAI}, 2016}
 	{~}
 
+\labelw{TAD:16}
 \wsentry 
 	{9} %{TADA}
 	{Porag Chowdhury, Russell Y. Folk, {\bf Ferdinando Fioretto}, Christopher Kiekintveld, William Yeoh}
 	{Investigation of Learning Strategies for the SPOT Broker in Power TAC}
-  	{\venue{International Workshop on Agent Mediated Electronic Commerce and Trading Agents Design and Analysis
-	(AMEC/TADA)--at AAMAS}, 2016}
+  	{\venue{International Workshop on Agent Mediated Electronic Commerce and Trading Agents Design and Analysis (AMEC/TADA)--at AAMAS}, 2016}
 	{~}
 
+\labelw{AISGSB:16}
 \wsentry 
 	{8} %{AISGSB}
 	{Khoi Hoang, {\bf Ferdinando Fioretto}, Ping Hou, Makoto Yokoo, William Yeoh, Roie Zivan}
@@ -1054,6 +1241,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{\venue{Workshop on AI for Smart Grids and Smart Buildings (AISGSB)--at AAAI}, 2016}
 	{~}	
 
+\labelw{OptMAS:15a}
 \wsentry
 	{7} %{OptMAS} 
 	{{\bf Ferdinando Fioretto}, Federico Campeotto, Agostino Dovier, Enrico Pontelli, William Yeoh}
@@ -1061,6 +1249,7 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{In \venue{International Workshop on Optimization in Multi-Agent Systems (OptMAS)-- at AAMAS}, 2015}
 	{~}
 
+\labelw{OptMAS:15b}
 \wsentry 
 	{6} %{OptMAS}
 	{{\bf Ferdinando Fioretto}, Tiep Le, William Yeoh, Enrico Pontelli, Tran Cao Son}
@@ -1068,21 +1257,23 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{In \venue{International Workshop on Optimization in Multi-Agent Systems (OptMAS)-- at AAMAS}, 2015}
 	{~}
 
+\labelw{WCB:14}
 \wsentry 
 	{5} %{WCB}
-	{($\alpha$-$\beta$) 
-	Federico Campeotto, Alessandro Dal Pal\`{u}, Agostino Dovier, {\bf Ferdinando Fioretto}, Enrico Pontelli} 
+	{[$\nicefrac{\alpha}{\beta}$] Federico Campeotto, Alessandro Dal Pal\`{u}, Agostino Dovier, {\bf Ferdinando Fioretto}, Enrico Pontelli} 
   	{Experimenting with FIASCO for protein structure prediction}
 	{\venue{Workshop on Constraint Based Methods for Bioinformatics (WCB)--at CP}, 2014}
 	{~}
 
+\labelw{ParSearchOpt:14}
 \wsentry 
 	{4} %{ParSeachOpt}
-	{($\alpha$-$\beta$) Federico Campeotto, Alessandro Dal Pal\`{u}, Agostino Dovier, {\bf Ferdinando Fioretto}, Enrico Pontelli}
+	{[$\nicefrac{\alpha}{\beta}$] Federico Campeotto, Alessandro Dal Pal\`{u}, Agostino Dovier, {\bf Ferdinando Fioretto}, Enrico Pontelli}
 	{Towards a complete constraint solver on GPU}
 	{In \venue{Workshop on Parallel Methods for Search \& Optimization (ParSearchOpt)--at ECAI}, 2014}
 	{~}
 
+\labelw{WCB:13}
 \wsentry 
 	{3} %{WCB}
 	{{\bf Ferdinando Fioretto}, Enrico Pontelli}
@@ -1090,32 +1281,43 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{\venue{Workshop on Constraint Based Methods for Bioinformatics (WCB)--at CP}, 2013}
 	{~} 
 
+\labelw{WCB:12}
 \wsentry
 	{2} %{WCB} 
-	{($\alpha$-$\beta$) 
-	Federico Campeotto, Alessandro Dal Pal\`{u}, Agostino Dovier, {\bf Ferdinando Fioretto}, Enrico Pontelli}
+	{[$\nicefrac{\alpha}{\beta}$] Federico Campeotto, Alessandro Dal Pal\`{u}, Agostino Dovier, {\bf Ferdinando Fioretto}, Enrico Pontelli}
 	{Protein Loop Modelling via Constraints and Fragment Assembly}
 	{\venue{Workshop on Constraint Based Methods for Bioinformatics (WCB)--at CP}, 2012}
 	{~} 
 
+\labelw{WCB:11}
 \wsentry 
 	{1} %{WCB}
-	{($\alpha$-$\beta$) 
-	Michael R. Best, Kabi Bhattarai, Federico Campeotto, Alessandro Dal Pal\`{u}, Hung Dang, Agostino Dovier, {\bf Ferdinando Fioretto}, Federico Fogolari, Tiep Le, Enrico Pontelli}
-		{Introducing FIASCO: Fragment-based Interactive Assembly for protein Structure prediction with COnstraints}
- 	 {\venue{Workshop on Constraint Based Methods for  Bioinformatics (WCB)--at CP}, 2011}
+	{[$\nicefrac{\alpha}{\beta}$] Michael R. Best, Kabi Bhattarai, Federico Campeotto, Alessandro Dal Pal\`{u}, Hung Dang, Agostino Dovier, {\bf Ferdinando Fioretto}, Federico Fogolari, Tiep Le, Enrico Pontelli}
+	{Introducing FIASCO: Fragment-based Interactive Assembly for protein Structure prediction with COnstraints}
+ 	{\venue{Workshop on Constraint Based Methods for  Bioinformatics (WCB)--at CP}, 2011}
   	{~}
 \end{pubs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{nW}{12}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsectionTitle{Pre-prints and In-press}
 \begin{pubs}
 \wsentry
 	{11}
 	{\student{Michael Cardei}, \student{Jacob K Christopher}, Thomas Hartvigsen, Brian R. Bartoldson, Bhavya Kailkhura, and Ferdinando Fioretto}
 	{Constrained Language Generation with Discrete Diffusion Models}
-	{\venue{TBD}, 2025}
+	{\venue{NeurIPS} (under review), 2025}
 	{https://arxiv.org/abs/2503.09790}
+
+\wsentry
+	{8}
+	{\student{Stefano Zampini}, \student{Jacob K Christopher}, Luca Oneto, Davide Anguita, {\bf Ferdinando Fioretto}}
+	{Training-Free Constrained Generation With Stable Diffusion Models}
+	{\venue{NeurIPS} (under review), 2025}
+	{https://arxiv.org/}
 
 \wsentry
 	{10}
@@ -1132,19 +1334,11 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{https://arxiv.org/}
 
 \wsentry
-	{8}
-	{\student{Stefano Zampini}, \student{Jacob K Christopher}, Luca Oneto, Davide Anguita, {\bf Ferdinando Fioretto}}
-	{Training-Free Constrained Generation With Stable Diffusion Models}
-	{\venue{ICML} (under review), 2025}
-	{https://arxiv.org/}
-
-\wsentry
 	{7}
 	{Prince Zizhuang Wang, \student{Jinhao Liang}, Shuyi Chen, {\bf Ferdinando Fioretto}, Shixiang Zhu}
 	{Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making}
 	{\venue{ICML} (under review), 2025}
 	{https://arxiv.org/}
-
 
 \wsentry
 	{6}
@@ -1193,6 +1387,10 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 
 \end{pubs}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{nW}{13}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------
 %	Conference: Archieved Papers
@@ -1274,14 +1472,16 @@ Names of students I supervise(d) are prepended with symbol \student{}.
 	{2}%{ArXiv} 
 	{{\bf Ferdinando Fioretto}, Terrence W.K.~Mak, Pascal Van Hentenryck}
 	{Predicting AC Optimal Power Flows: Combining Deep Learning and Lagrangian Dual Methods}
-	{\venue{CoRR abs}/1909.10461, 2019 ({\bf extended AAAI-20 version})}
+	{\venue{CoRR abs}/1909.10461, 2019 ({\bf extended AAAI-20 version}: c\ref{AAAI:20})}
 	{https://arxiv.org/abs/1909.10461}
 
 \wsentry
 	{1}%{ArXiv} 
 	{{\bf Ferdinando Fioretto}, Terrence W. K. Mak, Pascal Van Hentenryck}
 	{Privacy-Preserving Obfuscation of Critical Infrastructure Networks} 
-	{\venue{CoRR abs}/1905.09778, 2019 ({\bf extended IJCAI-19 version})}
+	{\venue{CoRR abs}/1905.09778, 2019 ({\bf extended IJCAI-19 version}: c\ref{IJCAI:19})}
 	{https://arxiv.org/abs/1905.09778}
 
 \end{pubs}
+
+

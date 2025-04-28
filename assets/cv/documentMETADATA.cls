@@ -1,26 +1,5 @@
-%% Copyright 2016 Christophe Roger
-%
-% Author: 
-% Christophe Roger (Darwiin)
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either version 1.3c
-% of this license or (at your option) any later version.
-% The latest version of this license is in
-%   http://www.latex-project.org/lppl.txt
-% and version 1.3 or later is part of all distributions of LaTeX
-% version 2005/12/01 or later.
-%
-% This work has the LPPL maintenance status `maintained'.
-% 
-% The Current Maintainer of this work is M. C. Roger.
-%
-% This work consists of the files awesome-source-cv.cls 
-
 \ProvidesClass{documentMETADATA}[2018/07/19  v1.9.2 'YAAC: Another Awesome CV' Class]
-
 \LoadClass[letterpaper]{article}
-
 \newif\if@showLinks   \@showLinksfalse
 
 \DeclareOption{green}{
@@ -129,7 +108,7 @@
 %\font\fb=''[cmr10]''                      % for use with \LaTeX command
 
 % Setup CV sections
-\titleformat{\section}{\Large\raggedright}{}{-2mm}{}[\titlerule]
+\titleformat{\section}{\Large\raggedright}{}{-12pt}{}[\titlerule]
 \titlespacing{\section}{0pt}{0pt}{0pt}
 \titlespacing{\subsection}{0pt}{4pt}{0pt}
 \titlespacing{\subsubsection}{-20pt}{4pt}{-2pt}
@@ -186,9 +165,9 @@
 \newcommand\blink[2]{{\href{#1}{#2}}}
 \newcommand\important[1]{\textbf #1}
 \newcommand\nemph[1]{{\color{accentcolor}\em{#1}}}
-\newcommand{\student}[1]{\mbox{\footnotesize\textcolor{symbolcolor}{$^\text{\faUser}$}}#1}
+\newcommand{\student}[1]{#1\mbox{\footnotesize\textcolor{symbolcolor}{$^\text{\faUser}$}}}
 \newcommand{\venue}[1]{{\scshape \bf{\color{black}{#1}}}}
-\renewcommand{\title}[1]{{\em ``#1''}}
+\renewcommand{\title}[1]{{\bf #1}}
 
 
 % Create a tag
@@ -308,7 +287,7 @@
     }{
       \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}
     }
-    \user{\@firstname}{\@lastname}\\
+    \user{\@firstname}{\@lastname}\\[2pt]
     \resumetitle{\@tagline}
     \smallskip\\
     \small{\@socialinfo}
@@ -332,11 +311,9 @@
 }
 
 % Resume part title definition
-\newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace \textsc{#1}}{#1}}}
-\newcommand\yearTitle[1]{\subsection*{\texorpdfstring{\color{accentcolor}\hspace*{0.75em}\textsc{#1}}{#1}}
-\vspace{-0.0em}}
-\newcommand\subsectionTitle[1]{\subsubsection*{\texorpdfstring{\color{accentcolor}\hspace*{2em}\textsc{#1}}{#1}}
-\vspace{0.0em}}
+\newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace {#1}}{#1}}}
+\newcommand\yearTitle[1]{\subsection*{\texorpdfstring{\color{accentcolor}\hspace*{0.75em}\textsc{#1}}{#1}} \vspace{-0.0em}}
+\newcommand\subsectionTitle[1]{\subsubsection*{\texorpdfstring{\color{accentcolor}\hspace*{2em}\textsc{#1}}{#1}}\vspace{0.0em}}
 
 % Define the 'keywords' environment
 \newenvironment{keywords}{%
@@ -375,41 +352,95 @@
   {c#1.} & #2. \blink{#5}{\title{#3}}. {#4}. {\awardText{[#6]}.}\\
 }
 
+%%%%%%%%%%%%%%%%%%
+%% journals
+%%%%%%%%%%%%%%%%%%
 \newcommand\journalentry[5]{
-  \textbf{j#1}.& #2. \blink{#5}{\title{#3}}. {#4}.\\[0.5em]
+  \textbf{[\decvalue{nJ}]} & \blink{#5}{\title{#3}}.~~~[\link{#5}{\footnotesize{\faLink}}] \\
+               &  #2. \\ 
+               & {#4}.\\[0.5em]
 }
 \newcommand\journalentryAwd[7]{
-  \textbf{j#1} & #2. \blink{#5}{\title{#3}}. {#4}.\\
-  \faTrophy   & {\awardText{#6} #7.}\\[0.5em]
-}
-\newcommand\confentry[6]{
-  \textbf{c#1}. & #2. \blink{#5}{\title{#3}}. {#4}. %\\[0.5em]
-                % & 
-               Acceptance Rate: {#6}. \\[0.5em]
-}
-\newcommand\confentryAwd[8]{
-  \textbf{c#1}. & #2. \blink{#5}{\title{#3}}. {#4}. %\\ & 
-                 Acceptance Rate: {#6}. \\
-  \faTrophy  & {\awardText{#7} #8.}\\[0.5em]
+  \textbf{[\decvalue{nJ}]} & \blink{#5}{\title{#3}}.~~~[\link{#5}{\footnotesize{\faLink}}]\\
+  &  #2. \\ 
+  \color{purple}{\faTrophy} & {#4}.\\
+  & {\awardText{#6} #7.}\\[0.5em]
 }
 
+\newcommand\journalentryIF[6]{
+  \textbf{[\decvalue{nJ}]} & \blink{#5}{\title{#3}}.~~~[\link{#5}{\footnotesize{\faLink}}] \\
+               &  #2. \\ 
+               & {#4}.\\
+               & [{\bf Impact Factor}: {#6]}. \\[0.5em]
+}
+\newcommand\journalentryIFAwd[8]{
+  \textbf{[\decvalue{nJ}]} & \blink{#5}{\title{#3}}.~~~[\link{#5}{\footnotesize{\faLink}}]\\
+  &  #2. \\ 
+  & [{\bf Impact Factor}: {#6]}. \\[0.5em]
+  \color{purple}{\faTrophy} & {#4}.\\
+  & {\awardText{#7} #8.}\\[0.5em]
+}
+
+%%%%%%%%%%%%%%%%%%
+%% conferences
+%%%%%%%%%%%%%%%%%%
+\newcommand\confentry[6]{
+  %\textbf{[#1]} 
+  \textbf{[\decvalue{nC}]} & \blink{#5}{\title{#3}}.~~~[\link{#5}{\footnotesize{\faLink}}] \\
+               &  #2. \\ 
+               & {#4}.\\
+               & [{\bf Acceptance Rate}: {#6]}. \\[0.5em]
+}
+
+\newcommand\confentryAwd[8]{
+  %\textbf{[#1]} 
+  \textbf{[\decvalue{nC}]} & \blink{#5}{\title{#3}}.~~~[\link{#5}{\footnotesize{\faLink}}]\\
+  &  #2. \\ 
+  \color{purple}{\faTrophy} & {#4}.\\
+  & [{\bf Acceptance Rate}: {#6]}. \\
+  & {\awardText{#7} #8.}\\[0.5em]
+}
+
+%%%%%%%%%%%%%%%%%%
+%% workshops
+%%%%%%%%%%%%%%%%%%
 \newcommand\wsentry[5]{
-  \textbf{w#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\[0.5em]
+  %\textbf{[\label{w#1}{#1}]} 
+  \textbf{[\decvalue{nW}]}
+  & \blink{#5}{\title{#3}}.~~~[\link{#5}{\footnotesize{\faLink}}] \\
+               &  #2. \\ 
+               & {#4}.\\[0.5em]
 }
 
 \newcommand\wsentryAR[6]{
-  \textbf{w#1}. & #2. \blink{#5}{\title{#3}}. {#4}. Acceptance Rate: {#6}.\\[0.5em]
+  %\textbf{[\label{w#1}{#1}]} 
+  \textbf{[\decvalue{nW}]}
+  & \blink{#5}{\title{#3}}.~~~[\link{#5}{\footnotesize{\faLink}}] \\
+               &  #2. \\ 
+               & {#4}.\\
+               & [{\bf Acceptance Rate}: {#6]}. \\[0.5em]
 }
 
-\newcommand\wsentryAwd[6]{
-  \textbf{w#1}. & #2. \blink{#5}{\title{#3}}. {#4}. \\
-  \faTrophy   & {\awardText{#6}.}\\[0.5em]
+\newcommand\wsentryAwd[7]{
+  %\textbf{[\label{w#1}{#1}]} 
+  \textbf{[\decvalue{nW}]}
+  & \blink{#5}{\title{#3}}.~~~[\link{#5}{\footnotesize{\faLink}}]\\
+  &  #2. \\ 
+  \color{purple}{\faTrophy} & {#4}.\\
+  & {\awardText{#6} #7.}\\[0.5em]
 }
 
-\newcommand\wsentryAwdAR[7]{
-  \textbf{w#1}. & #2. \blink{#5}{\title{#3}}. {#4}. Acceptance Rate: {#6}.\\
-  \faTrophy   & {\awardText{#7}.}\\[0.5em]
+\newcommand\wsentryAwdAR[8]{
+  %\textbf{[\label{w#1}{#1}]} 
+  \textbf{[\decvalue{nW}]}
+  & \blink{#5}{\title{#3}}.~~~[\link{#5}{\footnotesize{\faLink}}]\\
+  &  #2. \\ 
+  \color{purple}{\faTrophy} & {#4}.\\
+  & [{\bf Acceptance Rate}: {#6]}. \\
+  & {\awardText{#7} #8.}\\[0.5em]
 }
+
+
 
 
 \newenvironment{awards}{%
@@ -435,9 +466,9 @@
 
 \newcommand\awardentryD[6]{
   #1    &  \textbf{#2},  #3.\hspace{0.1em}\press{#4}{#5}\\%[1.2em]
-        & \begin{minipage}[t]{14.8cm}
+        & \begin{minipage}[t]{15.6cm}
           \begin{itemize}
-          \item \textcolor{darkGrey}{#6}\vspace{0.3em}
+          \item \textcolor{darkGrey}{#6}\vspace{0.4em}
           \end{itemize}
           \end{minipage}\\
 }
@@ -458,20 +489,9 @@
 
 % Define the 'experiences' environment
 \newenvironment{experiences}{%
-  \begin{longtable}{R{\leftcolumn}|E}
-}{%
-  \end{longtable}
-  \vspace*{-0.0em}
-}
+  \begin{longtable}{R{\leftcolumn}|E}}{%
+  \end{longtable} \vspace*{0.0em}}
 
-% Render an experience in the experiences environment
-% Usage: 
-% \experience
-%  {<End date>}      {<Title>}{<Enterprise>}{<Country>}
-%  {<Start date}     {
-%                      <Experience description (Could be a list)>
-%                    }
-%                    {<Technology list>}
 \newcommand\experience[7]{
   \textbf{#1}    & \textbf{#2, \textsc{#3}, #4}             \\*
   \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
@@ -481,7 +501,7 @@
   }
 
 \newcommand\job[6]{
-  \textbf{#2}    & \textbf{#3}, \textit{#4}, #5             \\
+  \textbf{#2}    & \textbf{#3}, \textit{#4}, #5\\
   \textbf{#1}    & \textsc{#6} \\
   }
 
@@ -510,7 +530,7 @@
                  & \footnotesize{\foreach \n in {#9}{\cvtag{\n}}} 	\\
   }
 
-\newcommand\emptySeparator{\multicolumn{2}{c}{}\\[-10pt]}
+\newcommand\emptySeparator{\multicolumn{2}{c}{}\\[-5pt]}
 
 % Define the 'projects' environment
 \newenvironment{projects}{%
@@ -633,31 +653,31 @@
 \definecolor{awcol}{rgb}{0.58,0.00,0.70}
 \newcommand{\awardText}[1]{\textbf{\textcolor{purple}{#1}}}
 
-\def\procACL{\emph{Proceedings of the} \venue{Annual Meeting of the Association for Computational Linguistics (ACL)}}
-\def\procNAACL{\emph{Proceedings of the} \venue{Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL)}}
-\def\procWWW{\emph{Proceedings of the} \venue{ACM Web Conferences (WWW)}}
-\def\procNeurIPS{\emph{Proceedings of the} \venue{Conference on Neural Information Processing Systems (NeurIPS)}}
-\def\procICML{\emph{Proceedings of the} \venue{International Conference on Machine Learning (ICML)}}
-\def\procICLR{\emph{Proceedings of the} \venue{International Conference on Learning Representations (ICLR)}}
-\def\procAISTATS{\emph{Proceedings of the} \venue{International Conference on Artificial Intelligence and Statistics (AISTATS)}}
-\def\procAAMAS{\emph{Proceedings of the} \venue{International Conference on Autonomous Agents and  Multiagent Systems (AAMAS)}}
-\def\procAAAI{\emph{Proceedings of the} \venue{AAAI Conference on Artificial Intelligence (AAAI)}}
-\def\procIJCAI{\emph{Proceedings of the} \venue{International Joint Conference on Artificial Intelligence (IJCAI)}}
-\def\procCP{\emph{Proceedings of the} \venue{International Conference on Principles and Practice of  Constraint Programming (CP)}}
-\def\procECAI{\emph{Proceedings of the} \venue{European Conference of Artificial Intelligence (ECAI)}}
-\def\procFAccT{\emph{Proceedings of the} \venue{ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)}}
+\def\procACL{\venue{Association for Computational Linguistics (ACL)}}
+\def\procNAACL{\venue{Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL)}}
+\def\procWWW{\venue{ACM Web Conferences (WWW)}}
+\def\procNeurIPS{\venue{Conference on Neural Information Processing Systems (NeurIPS)}}
+\def\procICML{\venue{International Conference on Machine Learning (ICML)}}
+\def\procICLR{\venue{International Conference on Learning Representations (ICLR)}}
+\def\procAISTATS{\venue{International Conference on Artificial Intelligence and Statistics (AISTATS)}}
+\def\procAAMAS{\venue{International Conference on Autonomous Agents and  Multiagent Systems (AAMAS)}}
+\def\procAAAI{\venue{AAAI Conference on Artificial Intelligence (AAAI)}}
+\def\procIJCAI{\venue{International Joint Conference on Artificial Intelligence (IJCAI)}}
+\def\procCP{\venue{International Conference on Principles and Practice of  Constraint Programming (CP)}}
+\def\procECAI{\venue{European Conference of Artificial Intelligence (ECAI)}}
+\def\procFAccT{\venue{ACM Conference on Fairness, Accountability, and Transparency (FAccT)}}
 \def\procISIAM{\venue{International Symposium on Artificial Intelligence and Mathematics (ISAIM)}}
-\def\procCPAIOR{\emph{Proceedings of the} \venue{International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research (CPAIOR)}}
-\def\procPADL{\emph{Proceedings of the} \venue{Practical Aspects of Declarative Languages (PADL)}}
-\def\procPRIMA{\emph{Proceedings of the} \venue{International Conference on Principles and Practice of Multi-Agent Systems (PRIMA)}}
-\def\procPSCC{\emph{Proceedings of the} \venue{Power Systems Computation Conference}}
-\def\procCMSB{\emph{Proceedings of the} \venue{Computational Methods in System Biology (CMSB)}}
-\def\procPSCC{\emph{Proceedings of the} \venue{Power Systems Computation Conference (PSCC)}}
-\def\procECML{\emph{Proceedings of the} \venue{European Conference on Machine Learning (ECML)}}
-%\def\procNeurIPS{\emph{Proceedings of the} \venue{Conference on Neural Information Processing Systems (NeurIPS)}}
-\def\procUAI{\emph{Proceedings of the} \venue{Conference of Uncertainty on Artificial Intelligence (UAI)}}
+\def\procCPAIOR{\venue{International Conference on the Integration of Constraint Programming, Artificial Intelligence, and Operations Research (CPAIOR)}}
+\def\procPADL{\venue{Practical Aspects of Declarative Languages (PADL)}}
+\def\procPRIMA{\venue{International Conference on Principles and Practice of Multi-Agent Systems (PRIMA)}}
+\def\procPSCC{\venue{Power Systems Computation Conference}}
+\def\procCMSB{\venue{Computational Methods in System Biology (CMSB)}}
+\def\procPSCC{\venue{Power Systems Computation Conference (PSCC)}}
+\def\procECML{\venue{European Conference on Machine Learning (ECML)}}
+%\def\procNeurIPS{\venue{Conference on Neural Information Processing Systems (NeurIPS)}}
+\def\procUAI{\venue{Conference of Uncertainty on Artificial Intelligence (UAI)}}
 \def\JAIR{\venue{Journal of Artificial Intelligence Research (JAIR)}}
 \def\AIJ{\venue{Artificial Intelligence Journal (AIJ)}}
 \def\TSG{\venue{IEEE Transactions on Smart Grids}}
 \def\TPS{\venue{IEEE Transactions on Power Systems}}
-\def\procPMAPS{\emph{Proceedings of the} \venue{International Conference on Probabilistic Methods Applied to Power Systems (PMAPS)}}
+\def\procPMAPS{\venue{International Conference on Probabilistic Methods Applied to Power Systems (PMAPS)}}
