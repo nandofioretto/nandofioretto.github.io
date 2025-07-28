@@ -345,11 +345,11 @@
 }
 
 \newcommand\confentryShort[5]{
-  {c#1.} & #2. \blink{#5}{\title{#3}}. {#4}.\\
+  {#1.} & #2. \blink{#5}{\title{#3}}. {#4}.\\
 }
 
 \newcommand\confentryShortAwd[6]{
-  {c#1.} & #2. \blink{#5}{\title{#3}}. {#4}. {\awardText{[#6]}.}\\
+  {#1.} & #2. \blink{#5}{\title{#3}}. {#4}. {\awardText{[#6]}.}\\
 }
 
 %%%%%%%%%%%%%%%%%%
