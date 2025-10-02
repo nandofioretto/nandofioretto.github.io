@@ -139,12 +139,574 @@
 <!-- _layouts/bib.html -->
       <div class="row">
         <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:25i" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Chance-constrained Flow Matching for High-Fidelity Constraint-aware Generation</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Jinhao Liang, Yixuan Sun, Anirban Samaddar, Sandeep Madireddy, and <em>Ferdinando Fioretto</em>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2025
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2509.25157" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Generative models excel at synthesizing high-fidelity samples from complex data distributions, but they often violate hard constraints arising from physical laws or task specifications. A common remedy is to project intermediate samples onto the feasible set; however, repeated projection can distort the learned distribution and induce a mismatch with the data manifold. Thus, recent multi-stage procedures attempt to defer projection to clean samples during sampling, but they increase algorithmic complexity and accumulate errors across steps. This paper addresses these challenges by proposing a novel training-free method, Chance-constrained Flow Matching (CCFM), that integrates stochastic optimization into the sampling process, enabling effective enforcement of hard constraints while maintaining high-fidelity sample generation. Importantly, CCFM guarantees feasibility in the same manner as conventional repeated projection, yet, despite operating directly on noisy intermediate samples, it is theoretically equivalent to projecting onto the feasible set defined by clean samples. This yields a sampler that mitigates distributional distortion. Empirical experiments show that CCFM outperforms current state-of-the-art constrained generative models in modeling complex physical systems governed by partial differential equations and molecular docking problems, delivering higher feasibility and fidelity.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25i</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Chance-constrained Flow Matching for High-Fidelity Constraint-aware Generation}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Liang, Jinhao and Sun, Yixuan and Samaddar, Anirban and Madireddy, Sandeep and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2509.25157}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2509.25157}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:25h" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Learning to Solve Optimization Problems Constrained with Partial Differential Equations</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Yusuf Guven, Vincenzo Di Vito, and <em>Ferdinando Fioretto</em>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2025
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2509.24573" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Partial differential equation (PDE)-constrained optimization arises in many scientific and engineering domains, such as energy systems, fluid dynamics and material design. In these problems, the decision variables (e.g., control inputs or design parameters) are tightly coupled with the PDE state variables, and the feasible set is implicitly defined by the governing PDE constraints. This coupling makes the problems computationally demanding, as it requires handling high dimensional discretization and dynamic constraints. To address these challenges, this paper introduces a learning-based framework that integrates a dynamic predictor with an optimization surrogate. The dynamic predictor, a novel time-discrete Neural Operator (Lu et al.), efficiently approximate system trajectories governed by PDE dynamics, while the optimization surrogate leverages proxy optimizer techniques (Kotary et al.) to approximate the associated optimal decisions. This dual-network design enables real-time approximation of optimal strategies while explicitly capturing the coupling between decisions and PDE dynamics. We validate the proposed approach on benchmark PDE-constrained optimization tasks inlacing Burgers’ equation, heat equation and voltage regulation, and demonstrate that it achieves solution quality comparable to classical control-based algorithms, such as the Direct Method and Model Predictive Control (MPC), while providing up to four orders of magnitude improvement in computational speed.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25h</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Learning to Solve Optimization Problems Constrained with Partial Differential Equations}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Guven, Yusuf and Vito, Vincenzo Di and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2509.24573}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2509.24573}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:25g" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Beyond Jailbreaking: Auditing Contextual Privacy in LLM Agents</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Saswat Das, Jameson Sandler, and <em>Ferdinando Fioretto</em>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2025
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2506.10171" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Large Language Model agents have begun to appear as personal assistants, customer service bots, and clinical aides. While these applications deliver substantial operational benefits, they also require continuous access to sensitive data, which increases the likelihood of unauthorized disclosures. This study proposes an auditing framework for conversational privacy that quantifies and audits these risks. The proposed Conversational Manipulation for Privacy Leakage (CMPL) framework, is an iterative probing strategy designed to stress-test agents that enforce strict privacy directives. Rather than focusing solely on a single disclosure event, CMPL simulates realistic multi-turn interactions to systematically uncover latent vulnerabilities. Our evaluation on diverse domains, data modalities, and safety configurations demonstrate the auditing framework’s ability to reveal privacy risks that are not deterred by existing single-turn defenses. In addition to introducing CMPL as a diagnostic tool, the paper delivers (1) an auditing procedure grounded in quantifiable risk metrics and (2) an open benchmark for evaluation of conversational privacy across agent implementations.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25g</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Beyond Jailbreaking: Auditing Contextual Privacy in LLM Agents}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Das, Saswat and Sandler, Jameson and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2506.10171}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2506.10171}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:25f" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Discrete-Guided Diffusion for Scalable and Safe Multi-Robot Motion Planning</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Jinhao Liang, Sven Koenig, and <em>Ferdinando Fioretto</em>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2025
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2508.20095" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Multi-Robot Motion Planning (MRMP) involves generating collision-free trajectories for multiple robots operating in a shared continuous workspace. While discrete multi-agent path finding (MAPF) methods are broadly adopted due to their scalability, their coarse discretization severely limits trajectory quality. In contrast, continuous optimization-based planners offer higher-quality paths but suffer from the curse of dimensionality, resulting in poor scalability with respect to the number of robots. This paper tackles the limitations of these two approaches by introducing a novel framework that integrates discrete MAPF solvers with constrained generative diffusion models. The resulting framework, called Discrete-Guided Diffusion (DGD), has three key characteristics: (1) it decomposes the original nonconvex MRMP problem into tractable subproblems with convex configuration spaces, (2) it combines discrete MAPF solutions with constrained optimization techniques to guide diffusion models capture complex spatiotemporal dependencies among robots, and (3) it incorporates a lightweight constraint repair mechanism to ensure trajectory feasibility. The proposed method sets a new state-of-the-art performance in large-scale, complex environments, scaling to 100 robots while achieving planning efficiency and high success rates.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25f</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Discrete-Guided Diffusion for Scalable and Safe Multi-Robot Motion Planning}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Liang, Jinhao and Koenig, Sven and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2508.20095}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2508.20095}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:25e" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Stability-Constrained AC Optimal Power Flow–A Gaussian Process-Based Approach</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Vincenzo Di Vito, Kaarthik Sundar, <em>Ferdinando Fioretto</em>, and Deepjyoti Deka</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2025
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2507.23094" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25e</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Stability-Constrained AC Optimal Power Flow--A Gaussian Process-Based Approach}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Vito, Vincenzo Di and Sundar, Kaarthik and Fioretto, Ferdinando and Deka, Deepjyoti}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.23094}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.23094}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:25d" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">SoK: Data Minimization in Machine Learning</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Robin Staab, Nikola Jovanović, Kimberly Mai, Prakhar Ganesh, Martin Vechev, <em>Ferdinando Fioretto</em>, and Matthew Jagielski</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2025
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2508.10836" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Data minimization (DM) describes the principle of collecting only the data strictly necessary for a given task. It is a foundational principle across major data protection regulations like GDPR and CPRA. Violations of this principle have substantial real-world consequences, with regulatory actions resulting in fines reaching hundreds of millions of dollars. Notably, the relevance of data minimization is particularly pronounced in machine learning (ML) applications, which typically rely on large datasets, resulting in an emerging research area known as Data Minimization in Machine Learning (DMML). At the same time, existing work on other ML privacy and security topics often addresses concerns relevant to DMML without explicitly acknowledging the connection. This disconnect leads to confusion among practitioners, complicating their efforts to implement DM principles and interpret the terminology, metrics, and evaluation criteria used across different research communities. To address this gap, our work introduces a comprehensive framework for DMML, including a unified data pipeline, adversaries, and points of minimization. This framework allows us to systematically review the literature on data minimization and DM-adjacent methodologies, for the first time presenting a structured overview designed to help practitioners and researchers effectively apply DM principles. Our work facilitates a unified DM-centric understanding and broader adoption of data minimization strategies in AI/ML.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25d</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{SoK: Data Minimization in Machine Learning}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Staab, Robin and Jovanović, Nikola and Mai, Kimberly and Ganesh, Prakhar and Vechev, Martin and Fioretto, Ferdinando and Jagielski, Matthew}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2508.10836}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2508.10836}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:25c" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        James Kotary, Himanshu Sharma, Ethan King, Draguna Vrabie, <em>Ferdinando Fioretto</em>, and Jan Drgona</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2025
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2507.09050" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Learning to Optimize (L2O) is a subfield of machine learning (ML) in which ML models are trained to solve parametric optimization problems. The general goal is to learn a fast approximator of solutions to constrained optimization problems, as a function of their defining parameters. Prior L2O methods focus almost entirely on single-level programs, in contrast to the bilevel programs, whose constraints are themselves expressed in terms of optimization subproblems. Bilevel programs have numerous important use cases but are notoriously difficult to solve, particularly under stringent time demands. This paper proposes a framework for learning to solve a broad class of challenging bilevel optimization problems, by leveraging modern techniques for differentiation through optimization problems. The framework is illustrated on an array of synthetic bilevel programs, as well as challenging control system co-design problems, showing how neural networks can be trained as efficient approximators of parametric bilevel optimization.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25c</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kotary, James and Sharma, Himanshu and King, Ethan and Vrabie, Draguna and Fioretto, Ferdinando and Drgona, Jan}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.09050}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.09050}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:25b" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Stability-Constrained AC Optimal Power Flow – A Gaussian Process-Based</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Vincenzo Di Vito, Kaarthik Sundar, <em>Ferdinando Fioretto</em>, and Deepjyoti Deka</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2025
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2507.23094" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25b</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Stability-Constrained AC Optimal Power Flow -- A Gaussian Process-Based}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Vito, Vincenzo Di and Sundar, Kaarthik and Fioretto, Ferdinando and Deka, Deepjyoti}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.23094}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.23094}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:25a" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Prince Zizhuang Wang, Jinhao Liang, Shuyi Chen, <em>Ferdinando Fioretto</em>, and Shixiang Zhu</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2025
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2502.05468" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Decision-focused learning (DFL) integrates predictive models with downstream optimization, directly training machine learning models to minimize decision errors. While DFL has been shown to provide substantial advantages when compared to a counterpart that treats the predictive and prescriptive models separately, it has also been shown to struggle in high-dimensional and risk-sensitive settings, limiting its applicability in real-world settings. To address this limitation, this paper introduces decision-focused generative learning (Gen-DFL), a novel framework that leverages generative models to adaptively model uncertainty and improve decision quality. Instead of relying on fixed uncertainty sets, Gen-DFL learns a structured representation of the optimization parameters and samples from the tail regions of the learned distribution to enhance robustness against worst-case scenarios. This approach mitigates over-conservatism while capturing complex dependencies in the parameter space. The paper shows, theoretically, that Gen-DFL achieves improved worst-case performance bounds compared to traditional DFL. Empirically, it evaluates Gen-DFL on various scheduling and logistics problems, demonstrating its strong performance against existing DFL methods.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25a</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Wang, Prince Zizhuang and Liang, Jinhao and Chen, Shuyi and Fioretto, Ferdinando and Zhu, Shixiang}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2502.05468}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2502.05468}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
 <abbr class="badge">Book</abbr><!--
           -->
 </div>
 
         <!-- Entry bib key -->
-        <div id="fioretto2025differential" class="col-sm-8">
+        <div id="fioretto:DP_book25" class="col-sm-8">
         <!-- Title -->
         <div class="title">Differential Privacy in Artificial Intelligence: From Theory to Practice</div>
         <!-- Author -->
@@ -191,7 +753,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
           </div>
 <!-- Hidden bibtex block -->
           <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@book</span><span class="p">{</span><span class="nl">fioretto2025differential</span><span class="p">,</span>
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@book</span><span class="p">{</span><span class="nl">fioretto:DP_book25</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Differential Privacy in Artificial Intelligence: From Theory to Practice}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Fioretto, Ferdinando and Hentenryck, Pascal Van and others}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
@@ -262,6 +824,72 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1080/24725854.2025.2479047}</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{ https://doi.org/10.1080/24725854.2025.2479047}</span><span class="p">,</span>
   <span class="na">eprint</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1080/24725854.2025.2479047}</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge">Book-Ch</abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:DP_book_ch1" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Differential Privacy: Overview and Fundamental Techniques</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <em>Ferdinando Fioretto</em>, Pascal Van Hentenryck, and Juba Ziani</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In Differential Privacy in Artificial Intelligence: From Theory to Practice</em>, 2025
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="https://www.nowpublishers.com/article/Chapter/9781638284765?cId=978-1-63828-477-2.ch1" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Online</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>This chapter is meant to be part of the book "Differential Privacy in Artificial Intelligence: From Theory to Practice" and provides an introduction to Differential Privacy. It starts by illustrating various attempts to protect data privacy, emphasizing where and why they failed, and providing the key desiderata of a robust privacy definition. It then defines the key actors, tasks, and scopes that make up the domain of privacy-preserving data analysis. Following that, it formalizes the definition of Differential Privacy and its inherent properties, including composition, post-processing immunity, and group privacy. The chapter also reviews the basic techniques and mechanisms commonly used to implement Differential Privacy in its pure and approximate forms.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@incollection</span><span class="p">{</span><span class="nl">Fioretto:DP_book_ch1</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Differential Privacy: Overview and Fundamental Techniques}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Fioretto, Ferdinando and Hentenryck, Pascal Van and Ziani, Juba}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Differential Privacy in Artificial Intelligence: From Theory to Practice}</span><span class="p">,</span>
+  <span class="na">editor</span> <span class="p">=</span> <span class="s">{Fioretto, Ferdinando and Hentenryck, Pascal Van}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Now Publishers, Inc.}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2411.04710}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{1-41}</span><span class="p">,</span>
+  <span class="na">chapter</span> <span class="p">=</span> <span class="s">{1}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.nowpublishers.com/article/Chapter/9781638284765?cId=978-1-63828-477-2.ch1}</span>
 <span class="p">}</span></code></pre></figure>
           </div>
         </div>
@@ -1164,508 +1792,261 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
         </div>
       </div>
 </li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:25j" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Discrete-Guided Diffusion for Scalable and Safe Multi-Robot Motion Planning</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Jinhao Liang, Sven Koenig, and <em>Ferdinando Fioretto</em>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2025
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2508.20095" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Multi-Robot Motion Planning (MRMP) involves generating collision-free trajectories for multiple robots operating in a shared continuous workspace. While discrete multi-agent path finding (MAPF) methods are broadly adopted due to their scalability, their coarse discretization severely limits trajectory quality. In contrast, continuous optimization-based planners offer higher-quality paths but suffer from the curse of dimensionality, resulting in poor scalability with respect to the number of robots. This paper tackles the limitations of these two approaches by introducing a novel framework that integrates discrete MAPF solvers with constrained generative diffusion models. The resulting framework, called Discrete-Guided Diffusion (DGD), has three key characteristics: (1) it decomposes the original nonconvex MRMP problem into tractable subproblems with convex configuration spaces, (2) it combines discrete MAPF solutions with constrained optimization techniques to guide diffusion models capture complex spatiotemporal dependencies among robots, and (3) it incorporates a lightweight constraint repair mechanism to ensure trajectory feasibility. The proposed method sets a new state-of-the-art performance in large-scale, complex environments, scaling to 100 robots while achieving planning efficiency and high success rates.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25j</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Discrete-Guided Diffusion for Scalable and Safe Multi-Robot Motion Planning}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Liang, Jinhao and Koenig, Sven and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2508.20095}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2508.20095}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:25i" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Stability-Constrained AC Optimal Power Flow–A Gaussian Process-Based Approach</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Vincenzo Di Vito, Kaarthik Sundar, <em>Ferdinando Fioretto</em>, and Deepjyoti Deka</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2025
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2507.23094" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25i</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Stability-Constrained AC Optimal Power Flow--A Gaussian Process-Based Approach}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Vito, Vincenzo Di and Sundar, Kaarthik and Fioretto, Ferdinando and Deka, Deepjyoti}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.23094}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.23094}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:25h" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">SoK: Data Minimization in Machine Learning</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Robin Staab, Nikola Jovanović, Kimberly Mai, Prakhar Ganesh, Martin Vechev, <em>Ferdinando Fioretto</em>, and Matthew Jagielski</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2025
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2508.10836" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Data minimization (DM) describes the principle of collecting only the data strictly necessary for a given task. It is a foundational principle across major data protection regulations like GDPR and CPRA. Violations of this principle have substantial real-world consequences, with regulatory actions resulting in fines reaching hundreds of millions of dollars. Notably, the relevance of data minimization is particularly pronounced in machine learning (ML) applications, which typically rely on large datasets, resulting in an emerging research area known as Data Minimization in Machine Learning (DMML). At the same time, existing work on other ML privacy and security topics often addresses concerns relevant to DMML without explicitly acknowledging the connection. This disconnect leads to confusion among practitioners, complicating their efforts to implement DM principles and interpret the terminology, metrics, and evaluation criteria used across different research communities. To address this gap, our work introduces a comprehensive framework for DMML, including a unified data pipeline, adversaries, and points of minimization. This framework allows us to systematically review the literature on data minimization and DM-adjacent methodologies, for the first time presenting a structured overview designed to help practitioners and researchers effectively apply DM principles. Our work facilitates a unified DM-centric understanding and broader adoption of data minimization strategies in AI/ML.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25h</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{SoK: Data Minimization in Machine Learning}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Staab, Robin and Jovanović, Nikola and Mai, Kimberly and Ganesh, Prakhar and Vechev, Martin and Fioretto, Ferdinando and Jagielski, Matthew}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2508.10836}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2508.10836}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:25g" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        James Kotary, Himanshu Sharma, Ethan King, Draguna Vrabie, <em>Ferdinando Fioretto</em>, and Jan Drgona</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2025
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2507.09050" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Learning to Optimize (L2O) is a subfield of machine learning (ML) in which ML models are trained to solve parametric optimization problems. The general goal is to learn a fast approximator of solutions to constrained optimization problems, as a function of their defining parameters. Prior L2O methods focus almost entirely on single-level programs, in contrast to the bilevel programs, whose constraints are themselves expressed in terms of optimization subproblems. Bilevel programs have numerous important use cases but are notoriously difficult to solve, particularly under stringent time demands. This paper proposes a framework for learning to solve a broad class of challenging bilevel optimization problems, by leveraging modern techniques for differentiation through optimization problems. The framework is illustrated on an array of synthetic bilevel programs, as well as challenging control system co-design problems, showing how neural networks can be trained as efficient approximators of parametric bilevel optimization.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25g</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kotary, James and Sharma, Himanshu and King, Ethan and Vrabie, Draguna and Fioretto, Ferdinando and Drgona, Jan}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.09050}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.09050}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:25f" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Stability-Constrained AC Optimal Power Flow – A Gaussian Process-Based</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Vincenzo Di Vito, Kaarthik Sundar, <em>Ferdinando Fioretto</em>, and Deepjyoti Deka</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2025
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2507.23094" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25f</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Stability-Constrained AC Optimal Power Flow -- A Gaussian Process-Based}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Vito, Vincenzo Di and Sundar, Kaarthik and Fioretto, Ferdinando and Deka, Deepjyoti}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.23094}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.23094}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:25e" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Disclosure Audits for LLM Agents</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Saswat Das, Jameson Sandler, and <em>Ferdinando Fioretto</em>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2025
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2506.10171" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Large Language Model agents have begun to appear as personal assistants, customer service bots, and clinical aides. While these applications deliver substantial operational benefits, they also require continuous access to sensitive data, which increases the likelihood of unauthorized disclosures. This study proposes an auditing framework for conversational privacy that quantifies and audits these risks. The proposed Conversational Manipulation for Privacy Leakage (CMPL) framework, is an iterative probing strategy designed to stress-test agents that enforce strict privacy directives. Rather than focusing solely on a single disclosure event, CMPL simulates realistic multi-turn interactions to systematically uncover latent vulnerabilities. Our evaluation on diverse domains, data modalities, and safety configurations demonstrate the auditing framework’s ability to reveal privacy risks that are not deterred by existing single-turn defenses. In addition to introducing CMPL as a diagnostic tool, the paper delivers (1) an auditing procedure grounded in quantifiable risk metrics and (2) an open benchmark for evaluation of conversational privacy across agent implementations.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25e</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Disclosure Audits for LLM Agents}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Das, Saswat and Sandler, Jameson and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2506.10171}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2506.10171}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:25b" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Prince Zizhuang Wang, Jinhao Liang, Shuyi Chen, <em>Ferdinando Fioretto</em>, and Shixiang Zhu</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2025
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2502.05468" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Decision-focused learning (DFL) integrates predictive models with downstream optimization, directly training machine learning models to minimize decision errors. While DFL has been shown to provide substantial advantages when compared to a counterpart that treats the predictive and prescriptive models separately, it has also been shown to struggle in high-dimensional and risk-sensitive settings, limiting its applicability in real-world settings. To address this limitation, this paper introduces decision-focused generative learning (Gen-DFL), a novel framework that leverages generative models to adaptively model uncertainty and improve decision quality. Instead of relying on fixed uncertainty sets, Gen-DFL learns a structured representation of the optimization parameters and samples from the tail regions of the learned distribution to enhance robustness against worst-case scenarios. This approach mitigates over-conservatism while capturing complex dependencies in the parameter space. The paper shows, theoretically, that Gen-DFL achieves improved worst-case performance bounds compared to traditional DFL. Empirically, it evaluates Gen-DFL on various scheduling and logistics problems, demonstrating its strong performance against existing DFL methods.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25b</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Wang, Prince Zizhuang and Liang, Jinhao and Chen, Shuyi and Fioretto, Ferdinando and Zhu, Shixiang}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2502.05468}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2502.05468}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:25a" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Simultaneous Multi-Robot Motion Planning with Projected Diffusion Models</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Jinhao Liang, Jacob K Christopher, Sven Koenig, and <em>Ferdinando Fioretto</em>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2025
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2502.03607" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Recent advances in diffusion models hold significant potential in robotics, enabling the generation of diverse and smooth trajectories directly from raw representations of the environment. Despite this promise, applying diffusion models to motion planning remains challenging due to their difficulty in enforcing critical constraints, such as collision avoidance and kinematic feasibility. These limitations become even more pronounced in Multi-Robot Motion Planning (MRMP), where multiple robots must coordinate in shared spaces. To address this challenge, this work proposes Simultaneous MRMP Diffusion (SMD), a novel approach integrating constrained optimization into the diffusion sampling process to produce collision-free, kinematically feasible trajectories. Additionally, the paper introduces a comprehensive MRMP benchmark to evaluate trajectory planning algorithms across scenarios with varying robot densities, obstacle complexities, and motion constraints. Experimental results show SMD consistently outperforms classical and learning-based motion planners, achieving higher success rates and efficiency in complex multi-robot environments.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25a</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Simultaneous Multi-Robot Motion Planning with Projected Diffusion Models}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Liang, Jinhao and Christopher, Jacob K and Koenig, Sven and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2502.03607}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2502.03607}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
 </ol>
 <h2 class="bibliography">2024</h2>
 <ol class="bibliography">
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:24k" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Learning to Optimize meets Neural-ODE: Real-Time, Stability-Constrained AC OPF</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Vincenzo Di Vito, Mostafa Mohammadian, Kyri Baker, and <em>Ferdinando Fioretto</em>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2024
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2410.19157" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF’s physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 57-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:24k</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Learning to Optimize meets Neural-ODE: Real-Time, Stability-Constrained AC OPF}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Vito, Vincenzo Di and Mohammadian, Mostafa and Baker, Kyri and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2410.19157}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2410.19157}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:24j" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">End-to-End Optimization and Learning of Fair Court Schedules</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        My H. Dinh, James Kotary, Lauryn P. Gouldin, William Yeoh, and <em>Ferdinando Fioretto</em>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2024
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2410.17415" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Criminal courts across the United States handle millions of cases every year, and the scheduling of those cases must accommodate a diverse set of constraints, including the preferences and availability of courts, prosecutors, and defense teams. When criminal court schedules are formed, defendants’ scheduling preferences often take the least priority, although defendants may face significant consequences (including arrest or detention) for missed court dates. Additionally, studies indicate that defendants’ nonappearances impose costs on the courts and other system stakeholders. To address these issues, courts and commentators have begun to recognize that pretrial outcomes for defendants and for the system would be improved with greater attention to court processes, including court scheduling practices. There is thus a need for fair criminal court pretrial scheduling systems that account for defendants’ preferences and availability, but the collection of such data poses logistical challenges. Furthermore, optimizing schedules fairly across various parties’ preferences is a complex optimization problem, even when such data is available. In an effort to construct such a fair scheduling system under data uncertainty, this paper proposes a joint optimization and learning framework that combines machine learning models trained end-to-end with efficient matching algorithms. This framework aims to produce court scheduling schedules that optimize a principled measure of fairness, balancing the availability and preferences of all parties.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:24j</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{End-to-End Optimization and Learning of Fair Court Schedules}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Dinh, My H. and Kotary, James and Gouldin, Lauryn P. and Yeoh, William and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2410.17415}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2410.17415}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:24c" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Learning Constrained Optimization with Deep Augmented Lagrangian Methods</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        James Kotary, and <em>Ferdinando Fioretto</em>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2024
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2403.03454" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Learning to Optimize (LtO) is a problem setting in which a machine learning (ML) model is trained to emulate a constrained optimization solver. Learning to produce optimal and feasible solutions subject to complex constraints is a difficult task, but is often made possible by restricting the input space to a limited distribution of related problems. Most LtO methods focus on directly learning solutions to the primal problem, and applying correction schemes or loss function penalties to encourage feasibility. This paper proposes an alternative approach, in which the ML model is trained instead to predict dual solution estimates directly, from which primal estimates are constructed to form dual-feasible solution pairs. This enables an end-to-end training scheme is which the dual objective is maximized as a loss function, and solution estimates iterate toward primal feasibility, emulating a Dual Ascent method. First it is shown that the poor convergence properties of classical Dual Ascent are reflected in poor convergence of the proposed training scheme. Then, by incorporating techniques from practical Augmented Lagrangian methods, we show how the training scheme can be improved to learn highly accurate constrained optimization solvers, for both convex and nonconvex problems.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:24c</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Learning Constrained Optimization with Deep Augmented Lagrangian Methods}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kotary, James and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2403.03454}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2403.03454}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:24a" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Analyzing and Enhancing the Backward-Pass Convergence of Unrolled Optimization</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        James Kotary, Jacob Christopher, My H Dinh, and <em>Ferdinando Fioretto</em>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>CoRR</em>, 2024
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="http://arxiv.org/abs/2312.17394" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>The integration of constrained optimization models as components in deep networks has led to promising advances on many specialized learning tasks. A central challenge in this setting is backpropagation through the solution of an optimization problem, which often lacks a closed form. One typical strategy is algorithm unrolling, which relies on automatic differentiation through the entire chain of operations executed by an iterative optimization solver. This paper provides theoretical insights into the backward pass of unrolled optimization, showing that it is asymptotically equivalent to the solution of a linear system by a particular iterative method. Several practical pitfalls of unrolling are demonstrated in light of these insights, and a system called Folded Optimization is proposed to construct more efficient backpropagation rules from unrolled solver implementations. Experiments over various end-to-end optimization and learning tasks demonstrate the advantages of this system both computationally, and in terms of flexibility over various optimization problem forms.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:24a</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Analyzing and Enhancing the Backward-Pass Convergence of Unrolled Optimization}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kotary, James and Christopher, Jacob and Dinh, My H and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2312.17394}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2312.17394}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
@@ -2501,383 +2882,6 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{2508--2517}</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{doi.acm.org?doi=3630106.3661932}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:24l" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Differential Privacy Overview and Fundamental Techniques</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        <em>Ferdinando Fioretto</em>, Pascal Van Hentenryck, and Juba Ziani</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2024
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2411.04710" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>This chapter is meant to be part of the book "Differential Privacy in Artificial Intelligence: From Theory to Practice" and provides an introduction to Differential Privacy. It starts by illustrating various attempts to protect data privacy, emphasizing where and why they failed, and providing the key desiderata of a robust privacy definition. It then defines the key actors, tasks, and scopes that make up the domain of privacy-preserving data analysis. Following that, it formalizes the definition of Differential Privacy and its inherent properties, including composition, post-processing immunity, and group privacy. The chapter also reviews the basic techniques and mechanisms commonly used to implement Differential Privacy in its pure and approximate forms.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:24l</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Differential Privacy Overview and Fundamental Techniques}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Fioretto, Ferdinando and Hentenryck, Pascal Van and Ziani, Juba}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2411.04710}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2411.04710}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:24k" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Learning to Optimize meets Neural-ODE: Real-Time, Stability-Constrained AC OPF</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Vincenzo Di Vito, Mostafa Mohammadian, Kyri Baker, and <em>Ferdinando Fioretto</em>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2024
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2410.19157" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF’s physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 57-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:24k</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Learning to Optimize meets Neural-ODE: Real-Time, Stability-Constrained AC OPF}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Vito, Vincenzo Di and Mohammadian, Mostafa and Baker, Kyri and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2410.19157}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2410.19157}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:24j" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">End-to-End Optimization and Learning of Fair Court Schedules</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        My H. Dinh, James Kotary, Lauryn P. Gouldin, William Yeoh, and <em>Ferdinando Fioretto</em>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2024
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2410.17415" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Criminal courts across the United States handle millions of cases every year, and the scheduling of those cases must accommodate a diverse set of constraints, including the preferences and availability of courts, prosecutors, and defense teams. When criminal court schedules are formed, defendants’ scheduling preferences often take the least priority, although defendants may face significant consequences (including arrest or detention) for missed court dates. Additionally, studies indicate that defendants’ nonappearances impose costs on the courts and other system stakeholders. To address these issues, courts and commentators have begun to recognize that pretrial outcomes for defendants and for the system would be improved with greater attention to court processes, including court scheduling practices. There is thus a need for fair criminal court pretrial scheduling systems that account for defendants’ preferences and availability, but the collection of such data poses logistical challenges. Furthermore, optimizing schedules fairly across various parties’ preferences is a complex optimization problem, even when such data is available. In an effort to construct such a fair scheduling system under data uncertainty, this paper proposes a joint optimization and learning framework that combines machine learning models trained end-to-end with efficient matching algorithms. This framework aims to produce court scheduling schedules that optimize a principled measure of fairness, balancing the availability and preferences of all parties.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:24j</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{End-to-End Optimization and Learning of Fair Court Schedules}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Dinh, My H. and Kotary, James and Gouldin, Lauryn P. and Yeoh, William and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2410.17415}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2410.17415}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:24e" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">The Data Minimization Principle in Machine Learning</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Prakhar Ganesh, Cuong Tran, Reza Shokri, and <em>Ferdinando Fioretto</em>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2024
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2405.19471" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>The principle of data minimization aims to reduce the amount of data collected, processed or retained to minimize the potential for misuse, unauthorized access, or data breaches. Rooted in privacy-by-design principles, data minimization has been endorsed by various global data protection regulations. However, its practical implementation remains a challenge due to the lack of a rigorous formulation. This paper addresses this gap and introduces an optimization framework for data minimization based on its legal definitions. It then adapts several optimization algorithms to perform data minimization and conducts a comprehensive evaluation in terms of their compliance with minimization objectives as well as their impact on user privacy. Our analysis underscores the mismatch between the privacy expectations of data minimization and the actual privacy benefits, emphasizing the need for approaches that account for multiple facets of real-world privacy risks.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:24e</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{The Data Minimization Principle in Machine Learning}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Ganesh, Prakhar and Tran, Cuong and Shokri, Reza and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2405.19471}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2405.19471}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:24c" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Learning Constrained Optimization with Deep Augmented Lagrangian Methods</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        James Kotary, and <em>Ferdinando Fioretto</em>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2024
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2403.03454" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Learning to Optimize (LtO) is a problem setting in which a machine learning (ML) model is trained to emulate a constrained optimization solver. Learning to produce optimal and feasible solutions subject to complex constraints is a difficult task, but is often made possible by restricting the input space to a limited distribution of related problems. Most LtO methods focus on directly learning solutions to the primal problem, and applying correction schemes or loss function penalties to encourage feasibility. This paper proposes an alternative approach, in which the ML model is trained instead to predict dual solution estimates directly, from which primal estimates are constructed to form dual-feasible solution pairs. This enables an end-to-end training scheme is which the dual objective is maximized as a loss function, and solution estimates iterate toward primal feasibility, emulating a Dual Ascent method. First it is shown that the poor convergence properties of classical Dual Ascent are reflected in poor convergence of the proposed training scheme. Then, by incorporating techniques from practical Augmented Lagrangian methods, we show how the training scheme can be improved to learn highly accurate constrained optimization solvers, for both convex and nonconvex problems.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:24c</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Learning Constrained Optimization with Deep Augmented Lagrangian Methods}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kotary, James and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2403.03454}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2403.03454}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="Fioretto:24a" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Analyzing and Enhancing the Backward-Pass Convergence of Unrolled Optimization</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        James Kotary, Jacob Christopher, My H Dinh, and <em>Ferdinando Fioretto</em>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2024
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="http://arxiv.org/abs/2312.17394" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>The integration of constrained optimization models as components in deep networks has led to promising advances on many specialized learning tasks. A central challenge in this setting is backpropagation through the solution of an optimization problem, which often lacks a closed form. One typical strategy is algorithm unrolling, which relies on automatic differentiation through the entire chain of operations executed by an iterative optimization solver. This paper provides theoretical insights into the backward pass of unrolled optimization, showing that it is asymptotically equivalent to the solution of a linear system by a particular iterative method. Several practical pitfalls of unrolling are demonstrated in light of these insights, and a system called Folded Optimization is proposed to construct more efficient backpropagation rules from unrolled solver implementations. Experiments over various end-to-end optimization and learning tasks demonstrate the advantages of this system both computationally, and in terms of flexibility over various optimization problem forms.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:24a</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Analyzing and Enhancing the Backward-Pass Convergence of Unrolled Optimization}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kotary, James and Christopher, Jacob and Dinh, My H and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2312.17394}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2312.17394}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
           </div>
         </div>
@@ -4134,68 +4138,6 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 
         <!-- Entry bib key -->
-        <div id="DFvHPK:22" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Privacy-Preserving Convex Optimization: When Differential Privacy Meets Stochastic Programming</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Vladimir Dvorkin, <em>Ferdinando Fioretto</em>, Pascal Van Hentenryck, Pierre Pinson, and Jalal Kazempour</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2022
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="https://arxiv.org/abs/2006.12338" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Online</a>
-            <a href="http://arxiv.org/abs/2209.14152" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Convex optimization finds many real-life applications, where - optimized on real data - optimization results may expose private data attributes (e.g., individual health records, commercial information, etc.), thus leading to privacy breaches. To avoid these breaches and formally guarantee privacy to optimization data owners, we develop a new privacy-preserving perturbation strategy for convex optimization programs by combining stochastic (chance-constrained) programming and differential privacy. Unlike standard noise-additive strategies, which perturb either optimization data or optimization results, we express the optimization variables as functions of the random perturbation using linear decision rules; we then optimize these rules to accommodate the perturbation within the problem’s feasible region by enforcing chance constraints. This way, the perturbation is feasible and makes different, yet adjacent in the sense of a given distance function, optimization datasets statistically similar in randomized optimization results, thereby enabling probabilistic differential privacy guarantees. The chance-constrained optimization additionally internalizes the conditional value-at-risk measure to model the tolerance towards the worst-case realizations of the optimality loss with respect to the non-private solution. We demonstrate the privacy properties of our perturbation strategy analytically and through optimization and machine learning applications.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">DFvHPK:22</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Dvorkin, Vladimir and Fioretto, Ferdinando and Hentenryck, Pascal Van and Pinson, Pierre and Kazempour, Jalal}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Privacy-Preserving Convex Optimization: When Differential Privacy Meets Stochastic Programming}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2006.12338}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
         <div id="KFS:22" class="col-sm-8">
         <!-- Title -->
         <div class="title">Deadwooding: Robust Global Pruning for Deep Neural Networks</div>
@@ -4252,6 +4194,67 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </ol>
 <h2 class="bibliography">2021</h2>
 <ol class="bibliography">
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr">
+<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
+          -->
+</div>
+
+        <!-- Entry bib key -->
+        <div id="Fioretto:PES23" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Load Embeddings for Scalable AC-OPF Learning</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Terrence W. K. Mak, <em>Ferdinando Fioretto</em>, and Pascal Van Hentenryck</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In IEEE Power &amp; Energy Society (PES) General Meeting</em>, 2021
+        </div>
+        <!-- <div class="periodical">
+          
+        </div> -->
+
+        <div>
+        </div>
+
+        <div>
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="https://arxiv.org/abs/2101.03973" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Online</a>
+          </div>
+          
+          <div class="badges">
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>The AC Optimal Power Flow (AC-OPF) problem is a core building block in electrical transmission system. It seeks the most economical active and reactive generation dispatch to meet demands while satisfying transmission operational limits. It is often solved repeatedly, especially in regions with large penetration of wind farms to avoid violating operational and physical limits. Recent work has shown that deep learning techniques have huge potential in providing accurate approximations of AC-OPF solutions. However, deep learning approaches often suffer from scalability issues, especially when applied to real life power grids. This paper focuses on the scalability limitation and proposes a load compression embedding scheme to reduce training model sizes using a 3-step approach. The approach is evaluated experimentally on large-scale test cases from the PGLib, and produces an order of magnitude improvements in training convergence and prediction accuracy.</p>
+          </div>
+<!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Fioretto:PES23</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Mak, Terrence W. K. and Fioretto, Ferdinando and {Van Hentenryck}, Pascal}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Load Embeddings for Scalable {AC-OPF} Learning}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{IEEE Power \&amp; Energy Society (PES) General Meeting}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
+  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{2101.03973}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
@@ -4906,68 +4909,6 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.4230/LIPIcs.CP.2021.2}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.4230/LIPIcs.CP.2021.2}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-<abbr class="badge" style="background-color:#808080"><a href="">ArXiv</a></abbr><!--
-          -->
-</div>
-
-        <!-- Entry bib key -->
-        <div id="MFvH:21" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Load Embeddings for Scalable AC-OPF Learning</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Terrence W. K. Mak, <em>Ferdinando Fioretto</em>, and Pascal Van Hentenryck</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>CoRR</em>, 2021
-        </div>
-        <!-- <div class="periodical">
-          
-        </div> -->
-
-        <div>
-        </div>
-
-        <div>
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="https://arxiv.org/abs/2101.03973" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Online</a>
-          </div>
-          
-          <div class="badges">
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>The AC Optimal Power Flow (AC-OPF) problem is a core building block in electrical transmission system. It seeks the most economical active and reactive generation dispatch to meet demands while satisfying transmission operational limits. It is often solved repeatedly, especially in regions with large penetration of wind farms to avoid violating operational and physical limits. Recent work has shown that deep learning techniques have huge potential in providing accurate approximations of AC-OPF solutions. However, deep learning approaches often suffer from scalability issues, especially when applied to real life power grids. This paper focuses on the scalability limitation and proposes a load compression embedding scheme to reduce training model sizes using a 3-step approach. The approach is evaluated experimentally on large-scale test cases from the PGLib, and produces an order of magnitude improvements in training convergence and prediction accuracy.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">MFvH:21</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Mak, Terrence W. K. and Fioretto, Ferdinando and {Van Hentenryck}, Pascal}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Load Embeddings for Scalable {AC-OPF} Learning}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2101.03973}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
-  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{2101.03973}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
           </div>
         </div>
@@ -8241,7 +8182,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2025 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: September 29, 2025.
+Last updated: October 02, 2025.
       </div>
     </footer>
 
