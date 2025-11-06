@@ -127,6 +127,7 @@ body.sticky-bottom-footer {
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
+p,
 h1,
 h2,
 h3,
@@ -955,6 +956,9 @@ footer.sticky-bottom {
 .publications-archive ol.bibliography > li .pub-badges {
   margin-top: 0rem;
   grid-column: 1/-1;
+}
+.publications-archive ol.bibliography > li .pub-section {
+  grid-column: 2;
 }
 .publications-archive ol.bibliography > li .hidden {
   display: none;
