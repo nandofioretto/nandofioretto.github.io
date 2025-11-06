@@ -1,12 +1,14 @@
 $(document).ready(function() {
   // add toggle functionality to abstract and bibtex buttons
   $('a.abstract').click(function() {
-    $(this).parent().parent().find(".abstract.hidden").toggleClass('open');
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass('open');
+    const entry = $(this).closest('.pub-item');
+    entry.find('.abstract.hidden').toggleClass('open');
+    entry.find('.bibtex.hidden.open').toggleClass('open');
   });
   $('a.bibtex').click(function() {
-    $(this).parent().parent().find(".bibtex.hidden").toggleClass('open');
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass('open');
+    const entry = $(this).closest('.pub-item');
+    entry.find('.bibtex.hidden').toggleClass('open');
+    entry.find('.abstract.hidden.open').toggleClass('open');
   });
   $('a').removeClass('waves-effect waves-light');
 
@@ -46,4 +48,3 @@ $(document).ready(function() {
     }
   });
 });
-
