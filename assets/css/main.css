@@ -127,7 +127,6 @@ body.sticky-bottom-footer {
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
-p,
 h1,
 h2,
 h3,
@@ -562,96 +561,26 @@ footer.sticky-bottom {
   border-color: rgba(30, 64, 175, 0.4);
   background: rgba(30, 64, 175, 0.14);
 }
-.awards-compact .award-entry__badge[data-badge=award] {
-  --badge-bg: rgba(251, 191, 36, 0.18);
-  --badge-color: #b45309;
-}
-.awards-compact .award-entry__badge[data-badge=recognition] {
-  --badge-bg: rgba(124, 58, 237, 0.16);
-  --badge-color: #5b21b6;
-}
-.awards-compact .award-entry__badge[data-badge=grant] {
-  --badge-bg: rgba(16, 185, 129, 0.16);
-  --badge-color: #047857;
-}
 .awards-compact .award-entry__badge[data-badge=best-paper] {
   --badge-bg: rgba(239, 68, 68, 0.16);
   --badge-color: #b91c1c;
 }
-.awards-compact .award-entry__badge[data-badge=fellowship] {
-  --badge-bg: rgba(13, 148, 136, 0.16);
-  --badge-color: #0f766e;
+.awards-compact .award-entry[data-category=best-paper] {
+  --award-marker-rgb: 185, 28, 28;
 }
-.awards-compact .award-entry__badge[data-badge=faculty] {
-  --badge-bg: rgba(217, 119, 6, 0.16);
-  --badge-color: #b45309;
+.awards-compact .award-entry[data-category=service] {
+  --award-marker-rgb: 67, 56, 202;
+}
+.awards-compact .award-entry__badge[data-badge=research] {
+  --badge-bg: rgba(16, 185, 129, 0.16);
+  --badge-color: #047857;
 }
 .awards-compact .award-entry__badge[data-badge=service] {
   --badge-bg: rgba(79, 70, 229, 0.16);
   --badge-color: #4338ca;
 }
-.awards-compact .award-entry__badge[data-badge=spotlight] {
-  --badge-bg: rgba(236, 72, 153, 0.18);
-  --badge-color: #be185d;
-}
-.awards-compact .award-entry__badge[data-badge=nomination] {
-  --badge-bg: rgba(56, 189, 248, 0.18);
-  --badge-color: #0369a1;
-}
-.awards-compact .award-entry__badge[data-badge=challenge] {
-  --badge-bg: rgba(59, 130, 246, 0.18);
-  --badge-color: #1d4ed8;
-}
-.awards-compact .award-entry__badge[data-badge=dissertation] {
-  --badge-bg: rgba(99, 102, 241, 0.18);
-  --badge-color: #3730a3;
-}
-.awards-compact .award-entry__badge[data-badge=student] {
-  --badge-bg: rgba(250, 204, 21, 0.18);
-  --badge-color: #a16207;
-}
-.awards-compact .award-entry__badge[data-badge=career] {
-  --badge-bg: rgba(236, 72, 153, 0.2);
-  --badge-color: #831843;
-}
-.awards-compact .award-entry[data-category=award] {
-  --award-marker-rgb: 180, 83, 9;
-}
-.awards-compact .award-entry[data-category=recognition] {
-  --award-marker-rgb: 91, 33, 182;
-}
-.awards-compact .award-entry[data-category=grant] {
+.awards-compact .award-entry[data-category=research] {
   --award-marker-rgb: 4, 120, 87;
-}
-.awards-compact .award-entry[data-category=best-paper] {
-  --award-marker-rgb: 185, 28, 28;
-}
-.awards-compact .award-entry[data-category=fellowship] {
-  --award-marker-rgb: 15, 118, 110;
-}
-.awards-compact .award-entry[data-category=faculty] {
-  --award-marker-rgb: 180, 83, 9;
-}
-.awards-compact .award-entry[data-category=service] {
-  --award-marker-rgb: 67, 56, 202;
-}
-.awards-compact .award-entry[data-category=spotlight] {
-  --award-marker-rgb: 190, 24, 93;
-}
-.awards-compact .award-entry[data-category=nomination] {
-  --award-marker-rgb: 3, 105, 161;
-}
-.awards-compact .award-entry[data-category=challenge] {
-  --award-marker-rgb: 29, 78, 216;
-}
-.awards-compact .award-entry[data-category=dissertation] {
-  --award-marker-rgb: 55, 48, 163;
-}
-.awards-compact .award-entry[data-category=student] {
-  --award-marker-rgb: 161, 98, 7;
-}
-.awards-compact .award-entry[data-category=career] {
-  --award-marker-rgb: 131, 24, 67;
 }
 
 @media (max-width: 640px) {
@@ -671,7 +600,7 @@ footer.sticky-bottom {
     left: 0.45rem;
   }
   .awards-compact .award-entry__badge {
-    justify-self: flex-start;
+    justify-self: start;
     margin-top: 0.1rem;
   }
 }
@@ -791,8 +720,8 @@ footer.sticky-bottom {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.6rem;
-  padding: 1.05rem 1rem 1.2rem;
+  gap: 0rem;
+  padding: 0.2rem 1rem 0.2rem;
   height: 100%;
 }
 .projects .group-card .group-card__avatar {
@@ -806,7 +735,7 @@ footer.sticky-bottom {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.35rem;
+  gap: 0rem;
   padding: 0;
   width: 100%;
 }
@@ -814,7 +743,7 @@ footer.sticky-bottom {
   font-size: 1.05rem;
   font-weight: 600;
   margin: 0;
-  min-height: 2.3rem;
+  min-height: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
