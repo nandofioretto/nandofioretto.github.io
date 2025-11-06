@@ -833,7 +833,7 @@ footer.sticky-bottom {
   justify-content: center;
   background: rgba(30, 64, 175, 0.1);
   color: var(--global-theme-color);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 1;
   padding: 4px 10px 3px;
@@ -871,15 +871,15 @@ footer.sticky-bottom {
   background: rgba(236, 72, 153, 0.9);
   color: #fff;
   letter-spacing: 0.08em;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.85;
   padding: 4px 10px 3px;
   text-transform: none;
   white-space: nowrap;
 }
 .publications-archive ol.bibliography > li .pub-authors {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--global-text-color-light);
   line-height: 1;
   grid-column: 1/-1;
@@ -913,7 +913,7 @@ footer.sticky-bottom {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.84rem;
+  font-size: 1rem;
   color: var(--global-text-color-light);
   grid-column: 1/-1;
 }
