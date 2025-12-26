@@ -1217,6 +1217,7 @@ footer.sticky-bottom {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  margin-bottom: 0.35rem;
 }
 .publications-archive ol.bibliography > li .pub-line {
   display: grid;
@@ -1314,6 +1315,12 @@ footer.sticky-bottom {
   font-size: 1rem;
   color: var(--global-text-color-light);
   grid-column: 1/-1;
+}
+.publications-archive ol.bibliography > li .pub-alsoin {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: -0.35rem;
 }
 .publications-archive ol.bibliography > li .pub-venue {
   color: var(--global-text-color);
