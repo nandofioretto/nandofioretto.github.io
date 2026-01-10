@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Constrained-Aware Generative AI | Ferdinando (Nando)  Fioretto</title>
+    <meta name="author" content="Ferdinando (Nando)  Fioretto">
+    <meta name="description" content="">
+    <meta name="keywords" content="Ferdinando Fioretto, AI, ML, Optimization, differential privacy, fairness, trustworthy, university of virginia">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/teaching/constrgenAI/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Ferdinando (Nando) </span>Fioretto</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/awards/">awards</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/group/">group</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/teaching/">teaching</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/bio/">bio</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/assets/cv/cvFioretto.pdf">cv</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <h1 id="constrained-aware-generative-ai"><strong>Constrained-Aware Generative AI</strong></h1>
+
+<h4 id="computer-science-department-university-of-virginia">Computer Science department, University of Virginia</h4>
+
+<ul>
+  <li>
+<strong>Course number</strong>: CS 6501-005</li>
+  <li>
+<strong>Term</strong>: Spring, 2026</li>
+  <li>
+<strong>Meeting time and location:</strong> TuTh 9:30AM - 10:45AM, Rice Hall 340</li>
+  <li>
+<strong>Instructor:</strong> <strong>Ferdinando Fioretto</strong>, <a href="fioretto@virginia.edu">Email</a>, Office: Rice Hall 307, Office hours: Fridays 3:30PM</li>
+  <li>
+<strong>Teaching staff:</strong> Michael Cardei, <a href="ntr2rm@virginia.edu">Email</a>, Office hours:</li>
+</ul>
+
+<!-- **Course website and LMS:** [URL] -->
+
+<hr>
+
+<h2 id="course-description">Course description</h2>
+
+<p>Generative AI systems are increasingly deployed in settings where correctness is defined by explicit constraints and verifiable properties: physical feasibility in robotics, structural validity in proteins and materials, syntactic and semantic correctness in code, and safety and policy compliance in language. 
+This course develops the algorithmic and mathematical foundations of constrained-aware generative AI. The central question is how to turn powerful probabilistic generators into reliable components for scientific and engineering workflows, where outputs must satisfy hard or verifiable requirements such as physical laws, discrete structure rules, safety specifications, and system-level constraints (for example, feasibility of a robot trajectory, validity of a molecular graph, or compliance with a policy).</p>
+
+<p>Students will learn the algorithmic foundations of likelihood-based modeling, latent-variable methods, autoregressive Transformers, diffusion models, and flow matching, and then connect these models to optimization and control mechanisms such as projection and proximal steps, constrained decoding, differentiable optimization layers, and reinforcement learning for alignment. A short optimization bootcamp is included to support students who have had a first machine learning course but limited exposure to convex optimization.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Students are expected to have completed a first graduate-level machine learning course (or equivalent). Familiarity with linear algebra, probability, and gradient-based optimization in ML is assumed. Some degree of knowledge on convex optimization is desirable. We will introduce optimization first as an operational tool (projection, penalties, prox), then formalized (duality, KKT, splitting), and finally used for differentiable layers and alignment.</p>
+
+<h2 id="learning-objectives">Learning objectives</h2>
+
+<p>By the end of the course, students should be able to:</p>
+
+<ol>
+  <li>Formalize constraint-aware generation as approximate inference, sampling, or optimization under hard and soft constraints.</li>
+  <li>Derive and interpret core objectives for generative modeling, including maximum likelihood, ELBO-based objectives, and diffusion and flow-based training objectives.</li>
+  <li>Explain and implement constraint enforcement mechanisms.</li>
+  <li>Use core optimization concepts to analyze modern constrained generation algorithms.</li>
+  <li>Critically evaluate constraint-aware generative systems using appropriate metrics for validity, constraint satisfaction, robustness, and generalization of constraints.</li>
+</ol>
+
+<h2 id="course-structure">Course structure</h2>
+
+<p>The course is organized as follows:</p>
+
+<ul>
+  <li>The first 4 weeks will be instructor-led lectures to establish a shared technical language</li>
+  <li>Weeks 5 to 7 will feature short invited-lecture focused on scientific and engineering case studies</li>
+  <li>Weeks 8 to 14 are run as a “research-based lab”: each lecture begins with a short instructor “theory injection” followed by student paper presentations and structured discussion.</li>
+</ul>
+
+<p>A recurring course template is the constrained target distribution:</p>
+
+\[\text{sample} x \sim p_\theta(x | c) \quad \text{subject to} \quad x \in \mathcal{C}\ \text{(hard)}
+  \text{or} \, g(x)\le 0\ \text{(soft)},\]
+
+<p>where constraints may be symbolic (grammars, automata, SAT/SMT), geometric (equivariance, manifolds, SE(3)), physical (PDEs, energy minimization, stability), or preference-based (toxicity, helpfulness). Each paper and method in the course will be analyzed by (i) how it represents constraints, (ii) where constraints enter (training, architecture, inference, post-processing), and (iii) how it performs constrained inference.</p>
+
+<h2 id="course-schedule"><strong>Course Schedule</strong></h2>
+
+<h3 id="part-1-instructor-led-bootcamp">Part 1: Instructor-led bootcamp</h3>
+
+<p>Symbols [R] denotes ``required’’ reading.</p>
+
+<h5 id="l1-course-overview-and-taxonomy-of-constraints"><strong>L1: Course overview and taxonomy of constraints</strong></h5>
+
+<p><strong>Tuesday, January 13, 2026</strong></p>
+
+<p>We will review why constraints matter in generative AI: validity, safety, and controllability.
+Then define constrained-aware generation by specifying a target distribution that blends a base model with constraint terms, for example</p>
+
+\[\pi(x \mid c)\ \propto\ p_\theta(x \mid c)\,\exp(-\lambda \phi(x,c))\,\mathbf{1}\{x \in \mathcal{C}(c)\}.\]
+
+<p>Every method in the course chooses where to implement \(\phi\) or \(\mathcal{C}\) (training, architecture, inference, post-processing), and how to approximate sampling or optimization under \(\pi\).</p>
+
+<p><strong>Suggested readings</strong>:</p>
+<ul>
+  <li>Christopher, Baek, Fioretto, <a href="https://arxiv.org/abs/2402.03559" rel="external nofollow noopener" target="_blank">Constrained Synthesis with Projected Diffusion Models</a> (NeurIPS 2024) [R].</li>
+  <li>Mandi et al., <a href="https://arxiv.org/abs/2307.13565" rel="external nofollow noopener" target="_blank">Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities</a> (JAIR 2024).</li>
+  <li>R: LeCun, Chopra, Hadsell (2006). <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-06.pdf" rel="external nofollow noopener" target="_blank">A Tutorial on Energy-Based Learning</a>. (Chapter in Predicting Structured Data).</li>
+  <li>Hyvarinen (2005). <a href="https://jmlr.org/papers/volume6/hyvarinen05a/hyvarinen05a.pdf" rel="external nofollow noopener" target="_blank">Estimation of Non-Normalized Statistical Models by Score Matching</a>. JMLR.</li>
+  <li>O: Blei, Kucukelbir, McAuliffe (2017). <a href="https://arxiv.org/pdf/1601.00670" rel="external nofollow noopener" target="_blank">Variational Inference: A Review for Statisticians</a>. JASA.</li>
+  <li>Bubeck (2015). <a href="https://arxiv.org/pdf/1405.4980" rel="external nofollow noopener" target="_blank">Convex Optimization: Algorithms and Complexity</a>. Foundations and Trends in Machine Learning.</li>
+</ul>
+
+<h5 id="l2-likelihood-and-latent-variable-modeling-for-control"><strong>L2: Likelihood and latent-variable modeling for control</strong></h5>
+
+<p><strong>Thursday, January 15, 2026</strong></p>
+
+<p>We will review maximum likelihood, conditional modeling, ELBO for latent-variable models. The goal is to approach approximate inference because later we will need to ``add constraints’’ within this framework.</p>
+
+<p><strong>Suggested readings</strong>:</p>
+
+<ul>
+  <li>Rezende, Mohamed, Wierstra (2014). <a href="https://arxiv.org/abs/1401.4082" rel="external nofollow noopener" target="_blank">Stochastic Backpropagation and Approximate Inference in Deep Generative Models</a>. ICML [R].</li>
+  <li>O: Burda, Grosse, Salakhutdinov (2015). <a href="https://arxiv.org/abs/1509.00519" rel="external nofollow noopener" target="_blank">Importance Weighted Autoencoders</a>. ICLR.</li>
+  <li>Ranganath, Gerrish, Blei (2014). <a href="https://arxiv.org/abs/1401.0118" rel="external nofollow noopener" target="_blank">Black Box Variational Inference</a>. AISTATS.</li>
+</ul>
+
+<h5 id="l3-vaes-and-gans"><strong>L3: VAEs and GANs</strong></h5>
+
+<p><strong>Tuesday, January 20, 2026</strong></p>
+
+<p>We will cover conditional VAEs, structured priors, and posterior regularization as early ``weak control’’ strategies. Then GANs as implicit control, and why feasibility constraints are awkward without explicit likelihood. This will give us the necessary context for why iterative refinement methods are so attractive for constraints.</p>
+
+<p><strong>Suggested readings</strong>:</p>
+<ul>
+  <li>R: Kingma, Welling (2013). <a href="https://arxiv.org/abs/1312.6114" rel="external nofollow noopener" target="_blank">Auto-Encoding Variational Bayes</a>. [R]</li>
+  <li>R: Goodfellow et al. (2014). <a href="https://arxiv.org/abs/1406.2661" rel="external nofollow noopener" target="_blank">Generative Adversarial Nets</a>. NeurIPS. [R]</li>
+  <li>Arjovsky, Chintala, Bottou (2017). <a href="https://arxiv.org/abs/1701.07875" rel="external nofollow noopener" target="_blank">Wasserstein GAN</a>. ICML.</li>
+  <li>O: Gulrajani et al. (2017). <a href="https://arxiv.org/abs/1704.00028" rel="external nofollow noopener" target="_blank">Improved Training of Wasserstein GANs</a>. NeurIPS.</li>
+  <li>Nowozin, Cseke, Tomioka (2016). <a href="https://arxiv.org/abs/1606.00709" rel="external nofollow noopener" target="_blank">f-GAN: Training Generative Neural Samplers using Variational Divergence Minimization</a>. NeurIPS.</li>
+</ul>
+
+<h5 id="l4-autoregressive-transformers-and-decoding"><strong>L4: Autoregressive Transformers and decoding</strong></h5>
+
+<p><strong>Thursday, January 22, 2026</strong></p>
+
+<p>We will review transformers, factorization, and basic sampling. Then decoding methods (beam search, top-p, reranking). We will also cover constrained decoding via grammars or finite-state constraints as the first concrete example of ``generation as search subject to constraints’’.</p>
+
+<p><strong>Suggested readings</strong>:</p>
+<ul>
+  <li>R: Vaswani et al. (2017). <a href="https://arxiv.org/abs/1706.03762" rel="external nofollow noopener" target="_blank">Attention Is All You Need</a>. NeurIPS. [R]</li>
+  <li>Brown et al. (2020). <a href="https://arxiv.org/abs/2005.14165" rel="external nofollow noopener" target="_blank">Language Models are Few-Shot Learners</a>. NeurIPS [R].</li>
+  <li>R: Holtzman et al. (2019). <a href="https://arxiv.org/abs/1904.09751" rel="external nofollow noopener" target="_blank">The Curious Case of Neural Text Degeneration</a>. ICLR [R].</li>
+  <li>O: Hokamp, Liu (2017). <a href="https://arxiv.org/abs/1704.07138" rel="external nofollow noopener" target="_blank">Lexically Constrained Decoding for Sequence Generation using Grid Beam Search</a>. ACL [R].</li>
+  <li>Post, Vilar (2018). <a href="https://arxiv.org/abs/1804.06609" rel="external nofollow noopener" target="_blank">Fast Lexically Constrained Decoding with Dynamic Beam Allocation</a>. NAACL.</li>
+  <li>Li et al. (2022). <a href="https://arxiv.org/abs/2210.15097" rel="external nofollow noopener" target="_blank">Contrastive Decoding: Open-ended Text Generation as Optimization</a>. ACL.</li>
+  <li>O: Radford et al. (2019). <a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf" rel="external nofollow noopener" target="_blank">Language Models are Unsupervised Multitask Learners</a> (GPT-2 technical report).</li>
+  <li>Devlin et al. (2019). <a href="https://arxiv.org/abs/1810.04805" rel="external nofollow noopener" target="_blank">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a>. NAACL.</li>
+</ul>
+
+<!-- Pretraining objectives, scaling laws, and data/compute tradeoffs -->
+<ul>
+  <li>R: Kaplan et al. (2020). <a href="https://arxiv.org/abs/2001.08361" rel="external nofollow noopener" target="_blank">Scaling Laws for Neural Language Models</a>.</li>
+  <li>Hoffmann et al. (2022). <a href="https://arxiv.org/abs/2203.15556" rel="external nofollow noopener" target="_blank">Training Compute-Optimal Large Language Models (Chinchilla)</a>.</li>
+  <li>O: Touvron et al. (2023). <a href="https://arxiv.org/abs/2302.13971" rel="external nofollow noopener" target="_blank">LLaMA: Open and Efficient Foundation Language Models</a>.</li>
+  <li>Wei et al. (2022). <a href="https://arxiv.org/abs/2206.07682" rel="external nofollow noopener" target="_blank">Emergent Abilities of Large Language Models</a>.</li>
+</ul>
+
+<h5 id="l5-architectures-for-control"><strong>L5: Architectures for control</strong></h5>
+
+<p><strong>January 27, 2026</strong></p>
+
+<p>This lecture will review the recent progress on geometric deep learning, equivariance, and inductive biases.</p>
+
+<p><strong>Suggested readings</strong>:</p>
+<ul>
+  <li>R: Bronstein et al. (2021). <a href="https://arxiv.org/abs/2104.13478" rel="external nofollow noopener" target="_blank">Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges</a>.</li>
+  <li>Satorras, Hoogeboom, Welling (2021). <a href="https://arxiv.org/abs/2102.09844" rel="external nofollow noopener" target="_blank">E(n) Equivariant Graph Neural Networks</a>. ICML.</li>
+  <li>O: Fuchs et al. (2020). <a href="https://arxiv.org/abs/2006.10503" rel="external nofollow noopener" target="_blank">SE(3)-Transformers: 3D Roto-Translation Equivariant Attention Networks</a>. NeurIPS.</li>
+  <li>Thomas et al. (2018). <a href="https://arxiv.org/abs/1802.08219" rel="external nofollow noopener" target="_blank">Tensor Field Networks: Rotation- and Translation-Equivariant Neural Networks for 3D Point Clouds</a>.</li>
+</ul>
+
+<h5 id="l6-optimization-essentials"><strong>L6: Optimization essentials</strong></h5>
+
+<p><strong>Thursday, January 29, 2026</strong></p>
+
+<p>We will cover constraint sets, projections, why projections solve a least-squares problem, and what a penalty method is. We will introduce proximal operators for nonsmooth penalties and review duality.</p>
+
+<ul>
+  <li>R: Boyd, Vandenberghe (2004). <a href="https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf" rel="external nofollow noopener" target="_blank">Convex Optimization</a>. Cambridge University Press. (Chapters 2-5).</li>
+  <li>R: Parikh, Boyd (2014). <a href="https://web.stanford.edu/~boyd/papers/pdf/prox_algs.pdf" rel="external nofollow noopener" target="_blank">Proximal Algorithms</a>. Foundations and Trends in Optimization.</li>
+  <li>Boyd et al. (2011). <a href="https://web.stanford.edu/~boyd/papers/pdf/admm_distr_stats.pdf" rel="external nofollow noopener" target="_blank">Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers</a>. Foundations and Trends in Machine Learning.</li>
+  <li>O: Beck, Teboulle (2009). <a href="https://www.ceremade.dauphine.fr/~carlier/FISTA" rel="external nofollow noopener" target="_blank">A Fast Iterative Shrinkage-Thresholding Algorithm for Linear Inverse Problems</a> (FISTA). SIAM J. Imaging Sciences.</li>
+  <li>Combettes, Pesquet (2011). <a href="https://arxiv.org/abs/0912.3522" rel="external nofollow noopener" target="_blank">Proximal Splitting Methods in Signal Processing</a>.</li>
+  <li>Mandi et al., <a href="https://arxiv.org/abs/2307.13565" rel="external nofollow noopener" target="_blank">Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities</a> (JAIR 2024).</li>
+</ul>
+
+<h5 id="l7-diffusion-models-and-guidance"><strong>L7: Diffusion models and Guidance</strong></h5>
+
+<p><strong>Tuesday, February 3, 2026</strong></p>
+
+<p>We will cover DDPM objective and the conceptual score view. The emphasis will be algorithmic: the reverse process is a sequence of updates, so it has natural insertion points for constraint forces, projection, or repair.</p>
+
+<ul>
+  <li>R: Ho, Jain, Abbeel (2020). <a href="https://arxiv.org/abs/2006.11239" rel="external nofollow noopener" target="_blank">Denoising Diffusion Probabilistic Models</a>. NeurIPS. [R]</li>
+  <li>Song et al. (2021). <a href="https://arxiv.org/abs/2011.13456" rel="external nofollow noopener" target="_blank">Score-Based Generative Modeling through Stochastic Differential Equations</a>. ICLR. [R]</li>
+  <li>O: Nichol, Dhariwal (2021). <a href="https://arxiv.org/abs/2102.09672" rel="external nofollow noopener" target="_blank">Improved Denoising Diffusion Probabilistic Models</a>. ICML.</li>
+  <li>Sohl-Dickstein et al. (2015). <a href="https://arxiv.org/abs/1503.03585" rel="external nofollow noopener" target="_blank">Deep Unsupervised Learning using Nonequilibrium Thermodynamics</a>. ICML.
+<!-- Conditional diffusion and guidance: classifier guidance, classifier-free guidance, and constraint energy shaping -->
+</li>
+  <li>Ho, Salimans (2022). <a href="https://arxiv.org/abs/2207.12598" rel="external nofollow noopener" target="_blank">Classifier-Free Diffusion Guidance</a>.</li>
+  <li>O: Song et al. (2020). <a href="https://arxiv.org/abs/2010.02502" rel="external nofollow noopener" target="_blank">Denoising Diffusion Implicit Models (DDIM)</a>. ICLR.</li>
+  <li>Kawar et al. (2022). <a href="https://arxiv.org/abs/2201.11793" rel="external nofollow noopener" target="_blank">Denoising Diffusion Restoration Models (DDRM)</a>. NeurIPS.</li>
+</ul>
+
+<h5 id="l8-flow-matching-and-rectified-flows"><strong>L8: Flow matching and rectified flows</strong></h5>
+
+<p><strong>Thursday, February 5, 2026</strong></p>
+
+<p>Flow matching as learning a vector field; rectified flows as simplified transport. The point is that ODE form makes constraint injection feel like adding a control term, and it motivates later splitting methods.</p>
+
+<ul>
+  <li>R: Lipman et al. (2022). <a href="https://arxiv.org/abs/2210.02747" rel="external nofollow noopener" target="_blank">Flow Matching for Generative Modeling</a>. [R]</li>
+  <li>Liu, Gong, Liu (2022). <a href="https://arxiv.org/abs/2209.03003" rel="external nofollow noopener" target="_blank">Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow</a>.</li>
+  <li>O: Miller et al. (2024). <a href="https://arxiv.org/abs/2406.04713" rel="external nofollow noopener" target="_blank">FlowMM: Generating Materials with Riemannian Flow Matching</a>. ICML.</li>
+  <li>Chen et al. (2018). <a href="https://arxiv.org/abs/1806.07366" rel="external nofollow noopener" target="_blank">Neural Ordinary Differential Equations</a>. NeurIPS.</li>
+</ul>
+
+<h5 id="l9-discrete-diffusion-models"><strong>L9: Discrete diffusion models.</strong></h5>
+
+<p><strong>Tuesday, February 10, 2026</strong></p>
+
+<p>Masked or denoising diffusion for tokens, joint distribution control versus AR conditionals, and how constraints can act as (i) constrained unmasking policies, (ii) constrained decoding on intermediate representations, or (iii) projection onto probability simplices with constraints. This sets up your lab phase on discrete constraints without needing duality yet.</p>
+
+<ul>
+  <li>R: Austin et al. (2021). <a href="https://arxiv.org/abs/2107.03006" rel="external nofollow noopener" target="_blank">Structured Denoising Diffusion Models in Discrete State-Spaces (D3PM)</a>. NeurIPS. [R]</li>
+  <li>Lou, Meng, Ermon (2023). <a href="https://arxiv.org/abs/2310.16834" rel="external nofollow noopener" target="_blank">Discrete Diffusion Modeling by Estimating the Ratios of the Data Distribution (SEDD)</a>. [R]</li>
+  <li>O: Hoogeboom et al. (2021). <a href="https://arxiv.org/abs/2102.05379" rel="external nofollow noopener" target="_blank">Argmax Flows and Multinomial Diffusion: Learning Categorical Distributions</a>. NeurIPS.</li>
+  <li>Simple and Effective Masked Diffusion Language Models (MDLM). <a href="https://arxiv.org/abs/2406.07524" rel="external nofollow noopener" target="_blank">arXiv:2406.07524</a>. [R]
+<!-- Constraints -->
+</li>
+  <li>R: Cardei et al. (2025). Constrained Language Generation with Discrete Diffusion Models. arXiv:2503.09790. [R]</li>
+  <li>R: Cardei et al. (2025). <a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">Constrained Language Generation with Discrete Diffusion Models</a>. [R]</li>
+  <li>Post, Vilar (2018). <a href="https://arxiv.org/abs/1804.06609" rel="external nofollow noopener" target="_blank">Fast Lexically Constrained Decoding with Dynamic Beam Allocation</a>. NAACL.</li>
+  <li>O: Schiff et al. (2025). <a href="https://arxiv.org/abs/2412.10193" rel="external nofollow noopener" target="_blank">Simple Guidance Mechanisms for Discrete Diffusion Models</a>. ICLR.</li>
+  <li>Arriola et al. (2025). <a href="https://arxiv.org/abs/2503.09573" rel="external nofollow noopener" target="_blank">Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models</a>.</li>
+</ul>
+
+<h5 id="l10-preliminary-projects-and-teams"><strong>L10: Preliminary Projects and Teams.</strong></h5>
+
+<p><strong>Thursday, February 12, 2026</strong></p>
+
+<p>We will use this time to discuss and refine project ideas proposed by various teams.</p>
+
+<p>Teams are required to:</p>
+
+<ul>
+  <li>
+<strong>Form a team (2–4 students)</strong> and choose a tentative project direction.</li>
+  <li>
+<strong>Prepare a short in-class pitch</strong> (5 minutes + 2 minutes Q&amp;A). Bring 2–4 slides.</li>
+  <li>
+<strong>Submit a one-page project intent</strong> (PDF) within 48 hours after class. It should include:
+    <ul>
+      <li>the <strong>task/domain</strong> (e.g., language, molecules, robotics, materials, code),</li>
+      <li>the <strong>constraint(s)</strong> (hard and/or soft) and how they are represented,</li>
+      <li>the <strong>verification or measurement</strong> procedure for constraint satisfaction,</li>
+      <li>a <strong>baseline generator</strong> you will reproduce (with a citation),</li>
+      <li>the <strong>constraint-aware mechanism</strong> you plan to implement (projection/prox, constrained decoding, reranking/verifier, differentiable layer, RL/alignment, etc.),</li>
+      <li>
+<strong>data and compute needs</strong> (dataset or simulator; expected runtime),</li>
+      <li>an <strong>evaluation plan</strong> (validity/feasibility rate, violation magnitude, quality/diversity, and at least one ablation),</li>
+      <li>key risks and a <strong>fallback plan</strong>.
+<!-- - **Schedule one 15-minute check-in** with the instructor/TA during the following week to lock scope and feasibility. -->
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="part-2-invited-lectures"><strong>Part 2: Invited lectures</strong></h3>
+
+<h5 id="l11-generative-ai-for-protein-design"><strong>L11: Generative AI for Protein Design</strong></h5>
+
+<p><strong>Thursday, February 12, 2026</strong></p>
+
+<ul>
+  <li>
+<strong>Invited Speaker</strong>: <a href="https://chem.rutgers.edu/people/faculty/faculty-details/164-khare-sagar-d" rel="external nofollow noopener" target="_blank">Sagar Khare</a> - Rutgers University</li>
+  <li>
+<strong>Talk title</strong>: TBA</li>
+  <li>
+<strong>Talk abstract</strong>: TBA</li>
+</ul>
+
+<h5 id="l12-generative-ai-for-weather-prediction"><strong>L12: Generative AI for Weather Prediction</strong></h5>
+
+<p><strong>Tuesday, February 17, 2026</strong></p>
+
+<ul>
+  <li>
+<strong>Invited Speaker</strong>: James E. Warner - NASA</li>
+  <li>
+<strong>Talk title</strong>: TBA</li>
+  <li>
+<strong>Talk abstract</strong>: TBA</li>
+</ul>
+
+<h5 id="l13-generative-ai-for-material-science"><strong>L13: Generative AI for Material Science</strong></h5>
+
+<p><strong>Tuesday, February 19, 2026</strong></p>
+
+<ul>
+  <li>
+<strong>Invited Speaker</strong>: Amir Ziabari - ORNL</li>
+  <li>
+<strong>Talk title</strong>: TBA</li>
+  <li>
+<strong>Talk abstract</strong>: TBA</li>
+</ul>
+
+<h5 id="l14-generative-ai-for-tba"><strong>L14: Generative AI for TBA</strong></h5>
+
+<p><strong>Tuesday, February 24, 2026</strong></p>
+
+<ul>
+  <li>
+<strong>Invited Speaker</strong>: TBA</li>
+  <li>
+<strong>Talk title</strong>: TBA</li>
+  <li>
+<strong>Talk abstract</strong>: TBA</li>
+</ul>
+
+<h5 id="l15-generative-ai-for-robotics"><strong>L15: Generative AI for Robotics</strong></h5>
+
+<p><strong>Tuesday, February 26, 2026</strong></p>
+
+<ul>
+  <li>
+<strong>Invited Speaker</strong>: Nicola Bezzo - University of Virginia</li>
+  <li>
+<strong>Talk title</strong>: TBA</li>
+  <li>
+<strong>Talk abstract</strong>: TBA</li>
+</ul>
+
+<h3 id="part-3-research-based-lab-proposed--will-be-subject-to-change">Part 3: Research-based lab (Proposed – will be subject to change)</h3>
+
+<p>Each lab lecture begins with a short micro-lecture followed by two student paper presentations and discussion.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Class</strong></th>
+      <th><strong>Date</strong></th>
+      <th><strong>Notes</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>—</td>
+      <td><em>Spring Recess</em></td>
+      <td>February 28 - March 8</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Tuesday, March 10, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Thursday, March 12, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Tuesday, March 17, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Thursday, March 19, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Tuesday, March 24, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Thursday, March 26, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Tuesday, March 31, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Thursday, April 2, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Tuesday, April 7, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Thursday, April 9, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Tuesday, April 14, 2026</td>
+      <td>Paper &amp; Group TBD1</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>Thursday, April 16, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>Tuesday, April 21, 2026</td>
+      <td>Paper &amp; Group TBD</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>Thursday, April 23, 2026</td>
+      <td>Final project presentations</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>Tuesday, April 28, 2026</td>
+      <td>Final project presentations</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- 
+**W7 - L13. Micro-lecture: optimization essentials for constrained generation.** 
+Constraint sets, projections, penalties, and proximal operators as reusable primitives.
+
+**W7 - L14. Micro-lecture: Lagrangians and duality for constraint enforcement.** 
+Dual variables as constraint pressures; interpreting soft penalties.
+
+**W8 - L15. Micro-lecture: splitting methods.** Proximal gradient, Douglas–Rachford intuition, ADMM as “prior step plus constraint step.”
+
+**W8 - L16. Micro-lecture: constrained sampling and energy shaping.** Guidance as adding energy terms; proxy constraints and pitfalls.
+
+**W10 - L19. Micro-lecture: differentiable optimization layers.** Implicit differentiation through KKT systems; sensitivity analysis. Core: OptNet; Differentiable Convex Optimization Layers (CVXPYLayers).
+
+**W10 - L15 Geometry and equivariance for constraints. SO(3)/SE(3) intuition, invariances, why this is “architecture-level constraint enforcement.”
+
+<!-- **W10 - L20. Micro-lecture: practical differentiation through solvers.** Approximate solves, nonsmoothness, stability, and implementation patterns. -->
+<!-- 
+**W11 - L20. Micro-lecture: constrained decoding beyond the basics.** Grammar constraints, lexical constraints, reranking, verifier-in-the-loop generation. Grid Beam Search.
+
+**W11 - L21. Micro-lecture: search and verification inside generation.** Classical search, repair loops, and executable constraints, compilers, theorem provers, simulators.
+
+**W12 - L22. Micro-lecture: RL for control and alignment.** KL-regularized RL and reward modeling as soft constraints. InstructGPT?
+
+**W12 - L23. Micro-lecture: preference optimization and constraint tradeoffs.** Direct preference optimization as a practical alignment mechanism. DPO.
+
+**W13 - L24. Micro-lecture: zeroth-order and simulator-only constraints.** Bandit feedback, evolutionary strategies, sample efficiency, and robustness. -->
+<!-- 
+**W13 - L26. Micro-lecture: evaluation and stress testing for constraint satisfaction.** Validity rates, constraint violation magnitudes, diversity under constraints, proxy hacking, distribution shift. -->
+
+<!-- **W14 - L25. Final project presentations I.**
+
+**W14 - L26. Final project presentations II and course synthesis.** -->
+
+<hr>
+
+<h2 id="assessment-and-grading"><strong>Assessment and grading</strong></h2>
+
+<h5 id="paper-presentation--400">Paper Presentation – 40.0%</h5>
+
+<p><strong>Objective:</strong> To enhance students’ ability to communicate complex AI concepts and engage in public speaking.</p>
+
+<p><strong>Expectations:</strong></p>
+<ul>
+  <li>45-minute presentation per group.</li>
+  <li>Presentations can include slides, code demonstrations, videos, or other creative methods.</li>
+  <li>The presentation should cover the key aspects of the paper, including its contribution to responsible AI.</li>
+  <li>A critical evaluation of the paper is essential, including discussing its limitations and implications.</li>
+  <li>Preparation of thought-provoking questions to stimulate audience engagement.</li>
+</ul>
+
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+  <li>Effectiveness of communication and presentation skills.</li>
+  <li>Accuracy and depth of content presented.</li>
+  <li>Creativity and engagement in the presentation method.</li>
+  <li>Ability to provoke thoughtful discussion through prepared questions.</li>
+</ul>
+
+<h5 id="final-project---60">Final Project - 60%</h5>
+
+<p>(proposal + milestones + report + presentation)</p>
+
+<p>The final project is the main deliverable and should include a reproducible baseline and a constraint-aware extension.</p>
+
+<p><strong>Objective:</strong> To design, implement, and evaluate a constraint-aware generative system that is technically sound, empirically validated, and reproducible.</p>
+
+<p><strong>Expectations:</strong></p>
+<ul>
+  <li>Define a clear <strong>task/domain</strong> and one or more explicit <strong>constraints</strong> (hard and/or soft), including how constraints are represented and verified.</li>
+  <li>Reproduce a <strong>baseline generator</strong> (e.g., autoregressive, diffusion, flow matching) with a documented training/inference pipeline.</li>
+  <li>Implement a <strong>constraint-aware method</strong> (e.g., projection/prox steps, constrained decoding, reranking/verifier-in-the-loop, differentiable optimization layer, or alignment/RL-style objective).</li>
+  <li>Use appropriate <strong>constraint-satisfaction metrics</strong> (e.g., validity/feasibility rate, violation magnitude) alongside <strong>quality/diversity</strong> metrics.</li>
+  <li>Provide a short <strong>written report</strong> that describes the method, experimental setup, ablations, and main findings, plus a clear description of limitations/failure modes.</li>
+  <li>Provide a <strong>reproducibility package</strong> (code, instructions, and configs) sufficient for another student to run core experiments and regenerate the main plots/tables.</li>
+</ul>
+
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+  <li>Problem formulation quality (clarity of constraints, verification procedure, and evaluation metrics).</li>
+  <li>Technical quality of the approach (correctness, soundness of the constraint mechanism, and connection to course concepts).</li>
+  <li>Empirical rigor (baseline strength, ablations, and robustness/stress tests for constraints).</li>
+  <li>Results and analysis (interpretability of outcomes, error analysis, and discussion of tradeoffs).</li>
+  <li>Reproducibility (clean code organization, documentation, and ability to rerun key results).</li>
+  <li>Presentation quality (clarity, structure, and ability to answer questions).</li>
+</ul>
+
+<hr>
+
+<h2 id="course-policies-summary"><strong>Course policies (summary)</strong></h2>
+
+<p><strong>Collaboration:</strong> Discussion is encouraged. Submitted work must be written independently unless an assignment explicitly permits collaboration.</p>
+
+<p><strong>Late policy:</strong> TBA</p>
+
+<p><strong>Academic integrity:</strong> TBA</p>
+
+<p><strong>Accessibility:</strong> TBA</p>
+
+<p><strong>Use of generative AI tools:</strong> Permitted for brainstorming, debugging, and editing with attribution, unless a specific assignment forbids it. Students are responsible for correctness and for documenting tool use.</p>
+
+<!-- # **Reading plan**
+
+Diffusion models: DDPM; score-based SDE unification.
+
+Flow methods: Flow Matching; Rectified Flow.
+
+Discrete diffusion: D3PM.
+
+Constrained decoding: Grid Beam Search.
+
+Robotics: Diffusion Policy; Diffuser.
+
+Differentiable optimization: OptNet; Differentiable Convex Optimization Layers.
+
+Alignment: InstructGPT; DPO.
+
+Geometry: Geometric Deep Learning survey.
+
+## **Application anchors (for invited and lab discussions)**
+
+Proteins: RFdiffusion.
+
+Docking: DiffDock.
+
+Materials: CDVAE; DiffCSP; MatterGen. -->
+
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2026 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+Last updated: January 10, 2026.
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
