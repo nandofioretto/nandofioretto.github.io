@@ -150,7 +150,7 @@
           <p>Extreme hazard events such as wildfires and hurricanes increasingly threaten power systems, causing widespread outages and disrupting critical services. To mitigate these risks, grid operators must act proactively—pre-positioning crews and resources or scheduling hardening activities—guided by forecasts that directly support operational objectives. Traditionally, utilities and agencies have followed a predict-then-optimize paradigm: first generating impact forecasts, then using them to inform response planning. However, this two-step approach inherently separates forecasting from decision-making, overlooking how forecast errors propagate into downstream actions and often producing misaligned or suboptimal plans. We address this gap with predict-all-then-optimize-globally (PATOG), a framework that unifies outage prediction with globally optimized interventions. At its core, our global-decision-focused (GDF) Neural ODE model jointly captures outage dynamics and optimizes pre-event resilience strategies in a decision-aware manner. Unlike conventional methods, our approach ensures spatially and temporally coherent decisions, enhancing both predictive accuracy and operational efficiency. Evaluations on synthetic and real-world data show that GDF reduces decision regret by up to 75% compared to two-stage baselines, enabling more effective proactive planning.</p>
         </div>
 <div class="bibtex hidden pub-section">
-          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Foprettp:tsg26</span><span class="p">,</span>
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:tsg26</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Chen, Shuyi and Fioretto, Ferdinando and Qiu, Feng and Zhu, Shixiang}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Global-Decision-Focused Neural ODEs for Proactive Grid Resilience Management}</span><span class="p">,</span>
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{IEEE Transactions on Smart Grids}</span><span class="p">,</span>
@@ -256,276 +256,57 @@
   </div>
 </div>
 </li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2026</span><div class="pub-main">
+      <div class="pub-header">
+        <strong class="pub-title"><a href="https://arxiv.org/abs/2601.14660" rel="external nofollow noopener" target="_blank">NeuroFilter: Privacy Guardrails for Conversational LLM Agents</a></strong>
+</div>
+<div class="pub-authors">Saswat Das, and <strong class="self-author">Ferdinando Fioretto</strong>
+</div>
+<div class="pub-info">
+        <span class="pub-venue"><em>CoRR</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2601.14660" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
+</div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>This work addresses the computational challenge of enforcing privacy for agentic Large Language Models (LLMs), where privacy is governed by the
+      contextual integrity framework. Indeed, existing defenses rely on LLM-mediated
+      checking stages that add substantial latency and cost, and that can be
+      undermined in multi-turn interactions through manipulation or benign-looking
+      conversational scaffolding. Contrasting this background, this paper makes a key
+      observation: internal representations associated with privacy-violating intent
+      can be separated from benign requests using linear structure. Using this
+      insight, the paper proposes NeuroFilter, a guardrail framework that
+      operationalizes contextual integrity by mapping norm violations to simple
+      directions in the model’s activation space, enabling detection even when
+      semantic filters are bypassed. The proposed filter is also extended to capture
+      threats arising during long conversations using the concept of activation
+      velocity, which measures cumulative drift in internal representations across
+      turns. A comprehensive evaluation across over 150,000 interactions and covering
+      models from 7B to 70B parameters, illustrates the strong performance of
+      NeuroFilter in detecting privacy attacks while maintaining zero false positives
+      on benign prompts, all while reducing the computational inference cost by
+      several orders of magnitude when compared to LLM-based agentic privacy
+      defenses.</p>
+        </div>
+<div class="bibtex hidden pub-section">
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:26a</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{NeuroFilter: Privacy Guardrails for Conversational LLM Agents}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Das, Saswat and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2601.14660}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2601.14660}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
 </ol>
 <h2 class="bibliography">2025</h2>
 <ol class="bibliography">
-<li>
-<!-- _layouts/bib.html --><div class="pub-item">
-  <div class="pub-line">
-<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
-      <div class="pub-header">
-        <strong class="pub-title"><a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding</a></strong>
-</div>
-<div class="pub-authors">Jameson Sandler, Jacob K Christopher, Thomas Hartvigsen, and <strong class="self-author">Ferdinando Fioretto</strong>
-</div>
-<div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2511.00606" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
-</div>
-<div class="pub-badges"></div>
-<div class="abstract hidden pub-section">
-          <p>Speculative decoding has become the standard approach for accelerating Large Language Model (LLM) inference. It exploits a lossless draft-then-verify procedure to circumvent the latency of autoregressive decoding, achieving impressive speed-ups. Yet, current speculative decoding approaches remain limited by two fundamental bottlenecks: (1) the autoregressive dependency during drafting which limits parallelism, and (2) frequent rejections of draft tokens caused by misalignment between the draft and verify models. This paper proposes SpecDiff-2, a novel framework to jointly address these two bottlenecks. It leverages discrete diffusion as a non-autoregressive drafter to address bottleneck (1) and develops novel techniques to calibrate discrete diffusion drafters with autoregressive verifiers, addressing bottleneck (2). Experimental results across a comprehensive benchmark suite show that SpecDiff-2 achieves a new state-of-the-art across reasoning, coding, and mathematical benchmarks, improving tokens-per-second by up to an average of +55% over previous baselines and obtaining up to 5.5x average speed-up over standard decoding, without any loss of accuracy.</p>
-        </div>
-<div class="bibtex hidden pub-section">
-          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25l</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sandler, Jameson and Christopher, Jacob K and Hartvigsen, Thomas and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2511.00606}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2511.00606}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-        </div>
-    </div>
-  </div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html --><div class="pub-item">
-  <div class="pub-line">
-<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">bioRxiv 2025</span><div class="pub-main">
-      <div class="pub-header">
-        <strong class="pub-title"><a href="https://www.biorxiv.org/content/early/2025/10/15/2025.10.15.682365" rel="external nofollow noopener" target="_blank">Constrained Diffusion for Protein Design with Hard Structural Constraints</a></strong>
-</div>
-<div class="pub-authors">Jacob K Christopher, Austin Seamann, Jingyi Cui, Sagar Khare, and <strong class="self-author">Ferdinando Fioretto</strong>
-</div>
-<div class="pub-info">
-        <span class="pub-venue"><em>bioRxiv</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a href="https://www.biorxiv.org/content/early/2025/10/15/2025.10.15.682365" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2510.14989" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
-</div>
-<div class="pub-badges"></div>
-<div class="abstract hidden pub-section">
-          <p>Diffusion models offer a powerful means of capturing the manifold of realistic protein structures, enabling rapid design for protein engineering tasks. However, existing approaches observe critical failure modes when precise constraints are necessary for functional design. To this end, we present a constrained diffusion framework for structure-guided protein design, ensuring strict adherence to functional requirements while maintaining precise stereochemical and geometric feasibility. The approach integrates proximal feasibility updates with ADMM decomposition into the generative process, scaling effectively to the complex constraint sets of this domain. We evaluate on challenging protein design tasks, including motif scaffolding and vacancy-constrained pocket design, while introducing a novel curated benchmark dataset for motif scaffolding in the PDZ domain. Our approach achieves state-of-the-art, providing perfect satisfaction of bonding and geometric constraints with no degradation in structural diversity.Competing Interest StatementThe authors have declared no competing interest.</p>
-        </div>
-    </div>
-  </div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html --><div class="pub-item">
-  <div class="pub-line">
-<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
-      <div class="pub-header">
-        <strong class="pub-title"><a href="https://arxiv.org/abs/2509.25157" rel="external nofollow noopener" target="_blank">Chance-constrained Flow Matching for High-Fidelity Constraint-aware Generation</a></strong>
-</div>
-<div class="pub-authors">Jinhao Liang, Yixuan Sun, Anirban Samaddar, Sandeep Madireddy, and <strong class="self-author">Ferdinando Fioretto</strong>
-</div>
-<div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2509.25157" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
-</div>
-<div class="pub-info">
-          <span class="pub-alsoin"> 
-            <!--  <span class="pub-link-sep light-sep"></span> -->Also appeared in:
-              <a href="https://constrained-opt-ml.github.io" rel="external nofollow noopener" target="_blank">COML Workshop (NeurIPS 2025)</a></span>
-        </div>
-<div class="pub-badges"></div>
-<div class="abstract hidden pub-section">
-          <p>Generative models excel at synthesizing high-fidelity samples from complex data distributions, but they often violate hard constraints arising from physical laws or task specifications. A common remedy is to project intermediate samples onto the feasible set; however, repeated projection can distort the learned distribution and induce a mismatch with the data manifold. Thus, recent multi-stage procedures attempt to defer projection to clean samples during sampling, but they increase algorithmic complexity and accumulate errors across steps. This paper addresses these challenges by proposing a novel training-free method, Chance-constrained Flow Matching (CCFM), that integrates stochastic optimization into the sampling process, enabling effective enforcement of hard constraints while maintaining high-fidelity sample generation. Importantly, CCFM guarantees feasibility in the same manner as conventional repeated projection, yet, despite operating directly on noisy intermediate samples, it is theoretically equivalent to projecting onto the feasible set defined by clean samples. This yields a sampler that mitigates distributional distortion. Empirical experiments show that CCFM outperforms current state-of-the-art constrained generative models in modeling complex physical systems governed by partial differential equations and molecular docking problems, delivering higher feasibility and fidelity.</p>
-        </div>
-<div class="bibtex hidden pub-section">
-          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25j</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Chance-constrained Flow Matching for High-Fidelity Constraint-aware Generation}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Liang, Jinhao and Sun, Yixuan and Samaddar, Anirban and Madireddy, Sandeep and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2509.25157}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2509.25157}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-        </div>
-    </div>
-  </div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html --><div class="pub-item">
-  <div class="pub-line">
-<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
-      <div class="pub-header">
-        <strong class="pub-title"><a href="https://arxiv.org/abs/2509.24573" rel="external nofollow noopener" target="_blank">Learning to Solve Optimization Problems Constrained with Partial Differential Equations</a></strong>
-</div>
-<div class="pub-authors">Yusuf Guven, Vincenzo Di Vito, and <strong class="self-author">Ferdinando Fioretto</strong>
-</div>
-<div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2509.24573" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
-</div>
-<div class="pub-badges"></div>
-<div class="abstract hidden pub-section">
-          <p>Partial differential equation (PDE)-constrained optimization arises in many scientific and engineering domains, such as energy systems, fluid dynamics and material design. In these problems, the decision variables (e.g., control inputs or design parameters) are tightly coupled with the PDE state variables, and the feasible set is implicitly defined by the governing PDE constraints. This coupling makes the problems computationally demanding, as it requires handling high dimensional discretization and dynamic constraints. To address these challenges, this paper introduces a learning-based framework that integrates a dynamic predictor with an optimization surrogate. The dynamic predictor, a novel time-discrete Neural Operator (Lu et al.), efficiently approximate system trajectories governed by PDE dynamics, while the optimization surrogate leverages proxy optimizer techniques (Kotary et al.) to approximate the associated optimal decisions. This dual-network design enables real-time approximation of optimal strategies while explicitly capturing the coupling between decisions and PDE dynamics. We validate the proposed approach on benchmark PDE-constrained optimization tasks inlacing Burgers’ equation, heat equation and voltage regulation, and demonstrate that it achieves solution quality comparable to classical control-based algorithms, such as the Direct Method and Model Predictive Control (MPC), while providing up to four orders of magnitude improvement in computational speed.</p>
-        </div>
-<div class="bibtex hidden pub-section">
-          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25i</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Learning to Solve Optimization Problems Constrained with Partial Differential Equations}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Guven, Yusuf and Vito, Vincenzo Di and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2509.24573}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2509.24573}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-        </div>
-    </div>
-  </div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html --><div class="pub-item">
-  <div class="pub-line">
-<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
-      <div class="pub-header">
-        <strong class="pub-title"><a href="https://arxiv.org/abs/2510.02128" rel="external nofollow noopener" target="_blank">The Disparate Impacts of Speculative Decoding</a></strong>
-</div>
-<div class="pub-authors">Jameson Sandler, Ahmet Üstün, Marco Romanelli, Sara Hooker, and <strong class="self-author">Ferdinando Fioretto</strong>
-</div>
-<div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2510.02128" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
-</div>
-<div class="pub-badges"></div>
-<div class="abstract hidden pub-section">
-          <p>The practice of speculative decoding, whereby inference is probabilistically supported by a smaller, cheaper, “drafter” model, has become a standard technique for systematically reducing the decoding time of large language models. This paper conducts an analysis of speculative decoding through the lens of its potential disparate speed-up rates across tasks. Crucially, the paper shows that speed-up gained from speculative decoding is not uniformly distributed across tasks, consistently diminishing for under-fit, and often underrepresented tasks. To better understand this phenomenon, we derive an analysis to quantify this observed “unfairness” and draw attention to the factors that motivate such disparate speed-ups to emerge. Further, guided by these insights, the paper proposes a mitigation strategy designed to reduce speed-up disparities and validates the approach across several model pairs, revealing on average a 12% improvement in our fairness metric.</p>
-        </div>
-<div class="bibtex hidden pub-section">
-          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25h</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{The Disparate Impacts of Speculative Decoding}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sandler, Jameson and Üstün, Ahmet and Romanelli, Marco and Hooker, Sara and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2510.02128}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2510.02128}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-        </div>
-    </div>
-  </div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html --><div class="pub-item">
-  <div class="pub-line">
-<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
-      <div class="pub-header">
-        <strong class="pub-title"><a href="https://arxiv.org/abs/2506.10171" rel="external nofollow noopener" target="_blank">Beyond Jailbreaking: Auditing Contextual Privacy in LLM Agents</a></strong>
-</div>
-<div class="pub-authors">Saswat Das, Jameson Sandler, and <strong class="self-author">Ferdinando Fioretto</strong>
-</div>
-<div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2506.10171" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
-</div>
-<div class="pub-info">
-          <span class="pub-alsoin"> 
-            <!--  <span class="pub-link-sep light-sep"></span> -->Also appeared in:
-              <a href="https://workshop-multi-turn-interaction.github.io" rel="external nofollow noopener" target="_blank">MTI-LLM Workshop (NeurIPS 2025)</a></span>
-        </div>
-<div class="pub-badges"></div>
-<div class="abstract hidden pub-section">
-          <p>Large Language Model agents have begun to appear as personal assistants, customer service bots, and clinical aides. While these applications deliver substantial operational benefits, they also require continuous access to sensitive data, which increases the likelihood of unauthorized disclosures. This study proposes an auditing framework for conversational privacy that quantifies and audits these risks. The proposed Conversational Manipulation for Privacy Leakage (CMPL) framework, is an iterative probing strategy designed to stress-test agents that enforce strict privacy directives. Rather than focusing solely on a single disclosure event, CMPL simulates realistic multi-turn interactions to systematically uncover latent vulnerabilities. Our evaluation on diverse domains, data modalities, and safety configurations demonstrate the auditing framework’s ability to reveal privacy risks that are not deterred by existing single-turn defenses. In addition to introducing CMPL as a diagnostic tool, the paper delivers (1) an auditing procedure grounded in quantifiable risk metrics and (2) an open benchmark for evaluation of conversational privacy across agent implementations.</p>
-        </div>
-<div class="bibtex hidden pub-section">
-          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25g</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Beyond Jailbreaking: Auditing Contextual Privacy in LLM Agents}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Das, Saswat and Sandler, Jameson and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2506.10171}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2506.10171}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-        </div>
-    </div>
-  </div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html --><div class="pub-item">
-  <div class="pub-line">
-<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
-      <div class="pub-header">
-        <strong class="pub-title"><a href="https://arxiv.org/abs/2507.09050" rel="external nofollow noopener" target="_blank">A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints</a></strong>
-</div>
-<div class="pub-authors">James Kotary, Himanshu Sharma, Ethan King, Draguna Vrabie, <strong class="self-author">Ferdinando Fioretto</strong>, and Jan Drgona</div>
-<div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2507.09050" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
-</div>
-<div class="pub-badges"></div>
-<div class="abstract hidden pub-section">
-          <p>Learning to Optimize (L2O) is a subfield of machine learning (ML) in which ML models are trained to solve parametric optimization problems. The general goal is to learn a fast approximator of solutions to constrained optimization problems, as a function of their defining parameters. Prior L2O methods focus almost entirely on single-level programs, in contrast to the bilevel programs, whose constraints are themselves expressed in terms of optimization subproblems. Bilevel programs have numerous important use cases but are notoriously difficult to solve, particularly under stringent time demands. This paper proposes a framework for learning to solve a broad class of challenging bilevel optimization problems, by leveraging modern techniques for differentiation through optimization problems. The framework is illustrated on an array of synthetic bilevel programs, as well as challenging control system co-design problems, showing how neural networks can be trained as efficient approximators of parametric bilevel optimization.</p>
-        </div>
-<div class="bibtex hidden pub-section">
-          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25c</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kotary, James and Sharma, Himanshu and King, Ethan and Vrabie, Draguna and Fioretto, Ferdinando and Drgona, Jan}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.09050}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.09050}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-        </div>
-    </div>
-  </div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html --><div class="pub-item">
-  <div class="pub-line">
-<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
-      <div class="pub-header">
-        <strong class="pub-title"><a href="https://arxiv.org/abs/2507.23094" rel="external nofollow noopener" target="_blank">Stability-Constrained AC Optimal Power Flow – A Gaussian Process-Based</a></strong>
-</div>
-<div class="pub-authors">Vincenzo Di Vito, Kaarthik Sundar, <strong class="self-author">Ferdinando Fioretto</strong>, and Deepjyoti Deka</div>
-<div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2507.23094" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
-</div>
-<div class="pub-badges"></div>
-<div class="abstract hidden pub-section">
-          <p>The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.</p>
-        </div>
-<div class="bibtex hidden pub-section">
-          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25b</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Stability-Constrained AC Optimal Power Flow -- A Gaussian Process-Based}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Vito, Vincenzo Di and Sundar, Kaarthik and Fioretto, Ferdinando and Deka, Deepjyoti}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.23094}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.23094}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-        </div>
-    </div>
-  </div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html --><div class="pub-item">
-  <div class="pub-line">
-<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
-      <div class="pub-header">
-        <strong class="pub-title"><a href="https://arxiv.org/abs/2502.05468" rel="external nofollow noopener" target="_blank">Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making</a></strong>
-</div>
-<div class="pub-authors">Prince Zizhuang Wang, Jinhao Liang, Shuyi Chen, <strong class="self-author">Ferdinando Fioretto</strong>, and Shixiang Zhu</div>
-<div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2502.05468" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
-</div>
-<div class="pub-badges"></div>
-<div class="abstract hidden pub-section">
-          <p>Decision-focused learning (DFL) integrates predictive models with downstream optimization, directly training machine learning models to minimize decision errors. While DFL has been shown to provide substantial advantages when compared to a counterpart that treats the predictive and prescriptive models separately, it has also been shown to struggle in high-dimensional and risk-sensitive settings, limiting its applicability in real-world settings. To address this limitation, this paper introduces decision-focused generative learning (Gen-DFL), a novel framework that leverages generative models to adaptively model uncertainty and improve decision quality. Instead of relying on fixed uncertainty sets, Gen-DFL learns a structured representation of the optimization parameters and samples from the tail regions of the learned distribution to enhance robustness against worst-case scenarios. This approach mitigates over-conservatism while capturing complex dependencies in the parameter space. The paper shows, theoretically, that Gen-DFL achieves improved worst-case performance bounds compared to traditional DFL. Empirically, it evaluates Gen-DFL on various scheduling and logistics problems, demonstrating its strong performance against existing DFL methods.</p>
-        </div>
-<div class="bibtex hidden pub-section">
-          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25a</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Wang, Prince Zizhuang and Liang, Jinhao and Chen, Shuyi and Fioretto, Ferdinando and Zhu, Shixiang}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2502.05468}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2502.05468}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-        </div>
-    </div>
-  </div>
-</div>
-</li>
 <li>
 <!-- _layouts/bib.html --><div class="pub-item">
   <div class="pub-line">
@@ -1112,6 +893,273 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
   <span class="na">volume</span> <span class="p">=</span> <span class="s">{1}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
+      <div class="pub-header">
+        <strong class="pub-title"><a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding</a></strong>
+</div>
+<div class="pub-authors">Jameson Sandler, Jacob K Christopher, Thomas Hartvigsen, and <strong class="self-author">Ferdinando Fioretto</strong>
+</div>
+<div class="pub-info">
+        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2511.00606" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
+</div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>Speculative decoding has become the standard approach for accelerating Large Language Model (LLM) inference. It exploits a lossless draft-then-verify procedure to circumvent the latency of autoregressive decoding, achieving impressive speed-ups. Yet, current speculative decoding approaches remain limited by two fundamental bottlenecks: (1) the autoregressive dependency during drafting which limits parallelism, and (2) frequent rejections of draft tokens caused by misalignment between the draft and verify models. This paper proposes SpecDiff-2, a novel framework to jointly address these two bottlenecks. It leverages discrete diffusion as a non-autoregressive drafter to address bottleneck (1) and develops novel techniques to calibrate discrete diffusion drafters with autoregressive verifiers, addressing bottleneck (2). Experimental results across a comprehensive benchmark suite show that SpecDiff-2 achieves a new state-of-the-art across reasoning, coding, and mathematical benchmarks, improving tokens-per-second by up to an average of +55% over previous baselines and obtaining up to 5.5x average speed-up over standard decoding, without any loss of accuracy.</p>
+        </div>
+<div class="bibtex hidden pub-section">
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25l</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sandler, Jameson and Christopher, Jacob K and Hartvigsen, Thomas and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2511.00606}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2511.00606}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">bioRxiv 2025</span><div class="pub-main">
+      <div class="pub-header">
+        <strong class="pub-title"><a href="https://www.biorxiv.org/content/early/2025/10/15/2025.10.15.682365" rel="external nofollow noopener" target="_blank">Constrained Diffusion for Protein Design with Hard Structural Constraints</a></strong>
+</div>
+<div class="pub-authors">Jacob K Christopher, Austin Seamann, Jingyi Cui, Sagar Khare, and <strong class="self-author">Ferdinando Fioretto</strong>
+</div>
+<div class="pub-info">
+        <span class="pub-venue"><em>bioRxiv</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a href="https://www.biorxiv.org/content/early/2025/10/15/2025.10.15.682365" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2510.14989" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
+</div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>Diffusion models offer a powerful means of capturing the manifold of realistic protein structures, enabling rapid design for protein engineering tasks. However, existing approaches observe critical failure modes when precise constraints are necessary for functional design. To this end, we present a constrained diffusion framework for structure-guided protein design, ensuring strict adherence to functional requirements while maintaining precise stereochemical and geometric feasibility. The approach integrates proximal feasibility updates with ADMM decomposition into the generative process, scaling effectively to the complex constraint sets of this domain. We evaluate on challenging protein design tasks, including motif scaffolding and vacancy-constrained pocket design, while introducing a novel curated benchmark dataset for motif scaffolding in the PDZ domain. Our approach achieves state-of-the-art, providing perfect satisfaction of bonding and geometric constraints with no degradation in structural diversity.Competing Interest StatementThe authors have declared no competing interest.</p>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
+      <div class="pub-header">
+        <strong class="pub-title"><a href="https://arxiv.org/abs/2509.25157" rel="external nofollow noopener" target="_blank">Chance-constrained Flow Matching for High-Fidelity Constraint-aware Generation</a></strong>
+</div>
+<div class="pub-authors">Jinhao Liang, Yixuan Sun, Anirban Samaddar, Sandeep Madireddy, and <strong class="self-author">Ferdinando Fioretto</strong>
+</div>
+<div class="pub-info">
+        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2509.25157" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
+</div>
+<div class="pub-info">
+          <span class="pub-alsoin"> 
+            <!--  <span class="pub-link-sep light-sep"></span> -->Also appeared in:
+              <a href="https://constrained-opt-ml.github.io" rel="external nofollow noopener" target="_blank">COML Workshop (NeurIPS 2025)</a></span>
+        </div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>Generative models excel at synthesizing high-fidelity samples from complex data distributions, but they often violate hard constraints arising from physical laws or task specifications. A common remedy is to project intermediate samples onto the feasible set; however, repeated projection can distort the learned distribution and induce a mismatch with the data manifold. Thus, recent multi-stage procedures attempt to defer projection to clean samples during sampling, but they increase algorithmic complexity and accumulate errors across steps. This paper addresses these challenges by proposing a novel training-free method, Chance-constrained Flow Matching (CCFM), that integrates stochastic optimization into the sampling process, enabling effective enforcement of hard constraints while maintaining high-fidelity sample generation. Importantly, CCFM guarantees feasibility in the same manner as conventional repeated projection, yet, despite operating directly on noisy intermediate samples, it is theoretically equivalent to projecting onto the feasible set defined by clean samples. This yields a sampler that mitigates distributional distortion. Empirical experiments show that CCFM outperforms current state-of-the-art constrained generative models in modeling complex physical systems governed by partial differential equations and molecular docking problems, delivering higher feasibility and fidelity.</p>
+        </div>
+<div class="bibtex hidden pub-section">
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25j</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Chance-constrained Flow Matching for High-Fidelity Constraint-aware Generation}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Liang, Jinhao and Sun, Yixuan and Samaddar, Anirban and Madireddy, Sandeep and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2509.25157}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2509.25157}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
+      <div class="pub-header">
+        <strong class="pub-title"><a href="https://arxiv.org/abs/2509.24573" rel="external nofollow noopener" target="_blank">Learning to Solve Optimization Problems Constrained with Partial Differential Equations</a></strong>
+</div>
+<div class="pub-authors">Yusuf Guven, Vincenzo Di Vito, and <strong class="self-author">Ferdinando Fioretto</strong>
+</div>
+<div class="pub-info">
+        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2509.24573" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
+</div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>Partial differential equation (PDE)-constrained optimization arises in many scientific and engineering domains, such as energy systems, fluid dynamics and material design. In these problems, the decision variables (e.g., control inputs or design parameters) are tightly coupled with the PDE state variables, and the feasible set is implicitly defined by the governing PDE constraints. This coupling makes the problems computationally demanding, as it requires handling high dimensional discretization and dynamic constraints. To address these challenges, this paper introduces a learning-based framework that integrates a dynamic predictor with an optimization surrogate. The dynamic predictor, a novel time-discrete Neural Operator (Lu et al.), efficiently approximate system trajectories governed by PDE dynamics, while the optimization surrogate leverages proxy optimizer techniques (Kotary et al.) to approximate the associated optimal decisions. This dual-network design enables real-time approximation of optimal strategies while explicitly capturing the coupling between decisions and PDE dynamics. We validate the proposed approach on benchmark PDE-constrained optimization tasks inlacing Burgers’ equation, heat equation and voltage regulation, and demonstrate that it achieves solution quality comparable to classical control-based algorithms, such as the Direct Method and Model Predictive Control (MPC), while providing up to four orders of magnitude improvement in computational speed.</p>
+        </div>
+<div class="bibtex hidden pub-section">
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25i</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Learning to Solve Optimization Problems Constrained with Partial Differential Equations}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Guven, Yusuf and Vito, Vincenzo Di and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2509.24573}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2509.24573}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
+      <div class="pub-header">
+        <strong class="pub-title"><a href="https://arxiv.org/abs/2510.02128" rel="external nofollow noopener" target="_blank">The Disparate Impacts of Speculative Decoding</a></strong>
+</div>
+<div class="pub-authors">Jameson Sandler, Ahmet Üstün, Marco Romanelli, Sara Hooker, and <strong class="self-author">Ferdinando Fioretto</strong>
+</div>
+<div class="pub-info">
+        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2510.02128" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
+</div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>The practice of speculative decoding, whereby inference is probabilistically supported by a smaller, cheaper, “drafter” model, has become a standard technique for systematically reducing the decoding time of large language models. This paper conducts an analysis of speculative decoding through the lens of its potential disparate speed-up rates across tasks. Crucially, the paper shows that speed-up gained from speculative decoding is not uniformly distributed across tasks, consistently diminishing for under-fit, and often underrepresented tasks. To better understand this phenomenon, we derive an analysis to quantify this observed “unfairness” and draw attention to the factors that motivate such disparate speed-ups to emerge. Further, guided by these insights, the paper proposes a mitigation strategy designed to reduce speed-up disparities and validates the approach across several model pairs, revealing on average a 12% improvement in our fairness metric.</p>
+        </div>
+<div class="bibtex hidden pub-section">
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25h</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{The Disparate Impacts of Speculative Decoding}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sandler, Jameson and Üstün, Ahmet and Romanelli, Marco and Hooker, Sara and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2510.02128}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2510.02128}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
+      <div class="pub-header">
+        <strong class="pub-title"><a href="https://arxiv.org/abs/2506.10171" rel="external nofollow noopener" target="_blank">Beyond Jailbreaking: Auditing Contextual Privacy in LLM Agents</a></strong>
+</div>
+<div class="pub-authors">Saswat Das, Jameson Sandler, and <strong class="self-author">Ferdinando Fioretto</strong>
+</div>
+<div class="pub-info">
+        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2506.10171" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
+</div>
+<div class="pub-info">
+          <span class="pub-alsoin"> 
+            <!--  <span class="pub-link-sep light-sep"></span> -->Also appeared in:
+              <a href="https://workshop-multi-turn-interaction.github.io" rel="external nofollow noopener" target="_blank">MTI-LLM Workshop (NeurIPS 2025)</a></span>
+        </div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>Large Language Model agents have begun to appear as personal assistants, customer service bots, and clinical aides. While these applications deliver substantial operational benefits, they also require continuous access to sensitive data, which increases the likelihood of unauthorized disclosures. This study proposes an auditing framework for conversational privacy that quantifies and audits these risks. The proposed Conversational Manipulation for Privacy Leakage (CMPL) framework, is an iterative probing strategy designed to stress-test agents that enforce strict privacy directives. Rather than focusing solely on a single disclosure event, CMPL simulates realistic multi-turn interactions to systematically uncover latent vulnerabilities. Our evaluation on diverse domains, data modalities, and safety configurations demonstrate the auditing framework’s ability to reveal privacy risks that are not deterred by existing single-turn defenses. In addition to introducing CMPL as a diagnostic tool, the paper delivers (1) an auditing procedure grounded in quantifiable risk metrics and (2) an open benchmark for evaluation of conversational privacy across agent implementations.</p>
+        </div>
+<div class="bibtex hidden pub-section">
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25g</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Beyond Jailbreaking: Auditing Contextual Privacy in LLM Agents}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Das, Saswat and Sandler, Jameson and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2506.10171}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2506.10171}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
+      <div class="pub-header">
+        <strong class="pub-title"><a href="https://arxiv.org/abs/2507.09050" rel="external nofollow noopener" target="_blank">A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints</a></strong>
+</div>
+<div class="pub-authors">James Kotary, Himanshu Sharma, Ethan King, Draguna Vrabie, <strong class="self-author">Ferdinando Fioretto</strong>, and Jan Drgona</div>
+<div class="pub-info">
+        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2507.09050" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
+</div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>Learning to Optimize (L2O) is a subfield of machine learning (ML) in which ML models are trained to solve parametric optimization problems. The general goal is to learn a fast approximator of solutions to constrained optimization problems, as a function of their defining parameters. Prior L2O methods focus almost entirely on single-level programs, in contrast to the bilevel programs, whose constraints are themselves expressed in terms of optimization subproblems. Bilevel programs have numerous important use cases but are notoriously difficult to solve, particularly under stringent time demands. This paper proposes a framework for learning to solve a broad class of challenging bilevel optimization problems, by leveraging modern techniques for differentiation through optimization problems. The framework is illustrated on an array of synthetic bilevel programs, as well as challenging control system co-design problems, showing how neural networks can be trained as efficient approximators of parametric bilevel optimization.</p>
+        </div>
+<div class="bibtex hidden pub-section">
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25c</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{A Method for Learning to Solve Parametric Bilevel Optimization with Coupling Constraints}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kotary, James and Sharma, Himanshu and King, Ethan and Vrabie, Draguna and Fioretto, Ferdinando and Drgona, Jan}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.09050}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.09050}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
+      <div class="pub-header">
+        <strong class="pub-title"><a href="https://arxiv.org/abs/2507.23094" rel="external nofollow noopener" target="_blank">Stability-Constrained AC Optimal Power Flow – A Gaussian Process-Based</a></strong>
+</div>
+<div class="pub-authors">Vincenzo Di Vito, Kaarthik Sundar, <strong class="self-author">Ferdinando Fioretto</strong>, and Deepjyoti Deka</div>
+<div class="pub-info">
+        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2507.23094" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
+</div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>The Alternating Current Optimal Power Flow (ACOPF) problem is a core task in power system operations, aimed at determining cost-effective generation dispatch while satisfying physical and operational constraints. However, conventional ACOPF formulations rely on steady-state models and neglect the dynamic behavior of generators, which can lead to operating points that are economically optimal but dynamically unstable. This paper proposes a novel, data-driven approach to incorporate generator dynamics into the ACOPF using Gaussian Process (GP) models. Specifically, it introduces an exponential surrogate function to characterize the stability of solutions to the differential equations governing synchronous generator dynamics. The exponent, which indicates whether system trajectories decay (stable) or grow (unstable), is learned as a function of the bus voltage using GP regression. Crucially, the framework enables probabilistic stability assessment to be integrated directly into the optimization process. The resulting dynamics-aware ACOPF formulation identifies operating points that satisfy both operational safety and dynamic stability criteria. Numerical experiments on the IEEE 39-bus, 57-bus, and 118-bus systems demonstrate that the proposed method efficiently captures generator dynamics using limited training data, leading to more reliable and robust decisions across a wide range of operating conditions.</p>
+        </div>
+<div class="bibtex hidden pub-section">
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25b</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Stability-Constrained AC Optimal Power Flow -- A Gaussian Process-Based}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Vito, Vincenzo Di and Sundar, Kaarthik and Fioretto, Ferdinando and Deka, Deepjyoti}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.23094}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.23094}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2025</span><div class="pub-main">
+      <div class="pub-header">
+        <strong class="pub-title"><a href="https://arxiv.org/abs/2502.05468" rel="external nofollow noopener" target="_blank">Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making</a></strong>
+</div>
+<div class="pub-authors">Prince Zizhuang Wang, Jinhao Liang, Shuyi Chen, <strong class="self-author">Ferdinando Fioretto</strong>, and Shixiang Zhu</div>
+<div class="pub-info">
+        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2502.05468" class="pub-link" rel="external nofollow noopener" target="_blank">arXiv</a></span>
+</div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>Decision-focused learning (DFL) integrates predictive models with downstream optimization, directly training machine learning models to minimize decision errors. While DFL has been shown to provide substantial advantages when compared to a counterpart that treats the predictive and prescriptive models separately, it has also been shown to struggle in high-dimensional and risk-sensitive settings, limiting its applicability in real-world settings. To address this limitation, this paper introduces decision-focused generative learning (Gen-DFL), a novel framework that leverages generative models to adaptively model uncertainty and improve decision quality. Instead of relying on fixed uncertainty sets, Gen-DFL learns a structured representation of the optimization parameters and samples from the tail regions of the learned distribution to enhance robustness against worst-case scenarios. This approach mitigates over-conservatism while capturing complex dependencies in the parameter space. The paper shows, theoretically, that Gen-DFL achieves improved worst-case performance bounds compared to traditional DFL. Empirically, it evaluates Gen-DFL on various scheduling and logistics problems, demonstrating its strong performance against existing DFL methods.</p>
+        </div>
+<div class="bibtex hidden pub-section">
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:25a</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Gen-DFL: Decision-Focused Generative Learning for Robust Decision Making}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Wang, Prince Zizhuang and Liang, Jinhao and Chen, Shuyi and Fioretto, Ferdinando and Zhu, Shixiang}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{CoRR}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2502.05468}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2502.05468}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
         </div>
     </div>
@@ -4244,7 +4292,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2026 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: January 21, 2026.
+Last updated: January 22, 2026.
       </div>
     </footer>
 
