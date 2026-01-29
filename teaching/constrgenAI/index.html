@@ -144,7 +144,7 @@
 
 <h2 id="course-description">Course description</h2>
 
-<p>Generative AI systems are increasingly deployed in settings where correctness is defined by explicit constraints and verifiable properties: physical feasibility in robotics, structural validity in proteins and materials, syntactic and semantic correctness in code, and safety and policy compliance in language. 
+<p>Generative AI systems are increasingly deployed in settings where correctness is defined by explicit constraints and verifiable properties: physical feasibility in robotics, structural validity in proteins and materials, syntactic and semantic correctness in code, and safety and policy compliance in language.
 This course develops the algorithmic and mathematical foundations of constrained-aware generative AI. The central question is how to turn powerful probabilistic generators into reliable components for scientific and engineering workflows, where outputs must satisfy hard or verifiable requirements such as physical laws, discrete structure rules, safety specifications, and system-level constraints (for example, feasibility of a robot trajectory, validity of a molecular graph, or compliance with a policy).</p>
 
 <p>Students will learn the algorithmic foundations of likelihood-based modeling, latent-variable methods, autoregressive Transformers, diffusion models, and flow matching, and then connect these models to optimization and control mechanisms such as projection and proximal steps, constrained decoding, differentiable optimization layers, and reinforcement learning for alignment. A short optimization bootcamp is included to support students who have had a first machine learning course but limited exposure to convex optimization.</p>
@@ -233,7 +233,7 @@ Then define constrained-aware generation by specifying a target distribution tha
 
 <p><strong><a href="../constrGenAI26_files/lecture3_notes.pdf">Lecture notes</a></strong></p>
 
-<p>We will cover conditional VAEs, structured priors, and posterior regularization as early ``weak control’’ strategies. Then GANs as implicit control, and why feasibility constraints are awkward without explicit likelihood. This will give us the necessary context for why iterative refinement methods are so attractive for constraints.</p>
+<p>We will cover conditional VAEs, structured priors, and posterior regularization as early ‘‘weak control’’ strategies. Then GANs as implicit control, and why feasibility constraints are awkward without explicit likelihood. This will give us the necessary context for why iterative refinement methods are so attractive for constraints.</p>
 
 <p><strong>Suggested readings</strong>:</p>
 <ul>
@@ -250,7 +250,7 @@ Then define constrained-aware generation by specifying a target distribution tha
 
 <p><strong><a href="../constrGenAI26_files/lecture4_notes.pdf">Lecture notes</a></strong></p>
 
-<p>We will review transformers, factorization, and basic sampling. Then decoding methods (beam search, top-p, reranking). We will also cover constrained decoding via grammars or finite-state constraints as the first concrete example of ``generation as search subject to constraints’’.</p>
+<p>We will review transformers, factorization, and basic sampling. Then decoding methods (beam search, top-p, reranking). We will also cover constrained decoding via grammars or finite-state constraints as the first concrete example of ‘‘generation as search subject to constraints’’.</p>
 
 <p><strong>Suggested readings</strong>:</p>
 <ul>
@@ -276,6 +276,8 @@ Then define constrained-aware generation by specifying a target distribution tha
 
 <p><strong>January 27, 2026</strong></p>
 
+<p><strong><a href="../constrGenAI26_files/lecture5_notes.pdf">Lecture notes</a></strong></p>
+
 <p>This lecture will review the recent progress on geometric deep learning, equivariance, and inductive biases.</p>
 
 <p><strong>Suggested readings</strong>:</p>
@@ -289,6 +291,8 @@ Then define constrained-aware generation by specifying a target distribution tha
 <h5 id="l6-optimization-essentials"><strong>L6: Optimization essentials</strong></h5>
 
 <p><strong>Thursday, January 29, 2026</strong></p>
+
+<p><strong><a href="../constrGenAI26_files/lecture6_notes.pdf">Lecture notes</a></strong></p>
 
 <p>We will cover constraint sets, projections, why projections solve a least-squares problem, and what a penalty method is. We will introduce proximal operators for nonsmooth penalties and review duality.</p>
 
@@ -533,11 +537,11 @@ Then define constrained-aware generation by specifying a target distribution tha
   </tbody>
 </table>
 
-<!-- 
-**W7 - L13. Micro-lecture: optimization essentials for constrained generation.** 
+<!--
+**W7 - L13. Micro-lecture: optimization essentials for constrained generation.**
 Constraint sets, projections, penalties, and proximal operators as reusable primitives.
 
-**W7 - L14. Micro-lecture: Lagrangians and duality for constraint enforcement.** 
+**W7 - L14. Micro-lecture: Lagrangians and duality for constraint enforcement.**
 Dual variables as constraint pressures; interpreting soft penalties.
 
 **W8 - L15. Micro-lecture: splitting methods.** Proximal gradient, Douglas–Rachford intuition, ADMM as “prior step plus constraint step.”
@@ -549,7 +553,7 @@ Dual variables as constraint pressures; interpreting soft penalties.
 **W10 - L15 Geometry and equivariance for constraints. SO(3)/SE(3) intuition, invariances, why this is “architecture-level constraint enforcement.”
 
 <!-- **W10 - L20. Micro-lecture: practical differentiation through solvers.** Approximate solves, nonsmoothness, stability, and implementation patterns. -->
-<!-- 
+<!--
 **W11 - L20. Micro-lecture: constrained decoding beyond the basics.** Grammar constraints, lexical constraints, reranking, verifier-in-the-loop generation. Grid Beam Search.
 
 **W11 - L21. Micro-lecture: search and verification inside generation.** Classical search, repair loops, and executable constraints, compilers, theorem provers, simulators.
@@ -559,7 +563,7 @@ Dual variables as constraint pressures; interpreting soft penalties.
 **W12 - L23. Micro-lecture: preference optimization and constraint tradeoffs.** Direct preference optimization as a practical alignment mechanism. DPO.
 
 **W13 - L24. Micro-lecture: zeroth-order and simulator-only constraints.** Bandit feedback, evolutionary strategies, sample efficiency, and robustness. -->
-<!-- 
+<!--
 **W13 - L26. Micro-lecture: evaluation and stress testing for constraint satisfaction.** Validity rates, constraint violation magnitudes, diversity under constraints, proxy hacking, distribution shift. -->
 
 <!-- **W14 - L25. Final project presentations I.**
@@ -659,7 +663,6 @@ Docking: DiffDock.
 
 Materials: CDVAE; DiffCSP; MatterGen. -->
 
-
       
     </div>
 
@@ -667,7 +670,7 @@ Materials: CDVAE; DiffCSP; MatterGen. -->
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2026 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: January 22, 2026.
+Last updated: January 29, 2026.
       </div>
     </footer>
 
