@@ -197,6 +197,68 @@ blockquote {
   text-align: center;
 }
 
+.project-figure {
+  max-width: 720px;
+  margin: 1.25rem auto 0;
+  text-align: center;
+}
+
+.project-figure figure {
+  margin: 0;
+}
+
+.project-figure__img {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 16px;
+  border: 1px solid var(--global-divider-color);
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.12);
+}
+
+.project-figure--float-left,
+.project-figure--float-right {
+  max-width: 46%;
+}
+
+.project-figure--float-left {
+  float: left;
+  margin: 0.25rem 1.5rem 0.75rem 0;
+}
+
+.project-figure--float-right {
+  float: right;
+  margin: 0.25rem 0 0.75rem 1.5rem;
+}
+
+.project-figure--float-left .project-figure__img,
+.project-figure--float-right .project-figure__img {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .project-figure--float-left,
+  .project-figure--float-right {
+    float: none;
+    max-width: 100%;
+    margin: 1.25rem auto 0;
+  }
+}
+.takeaways-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.takeaway-card {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.04), rgba(15, 23, 42, 0.02));
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+  color: var(--global-text-color);
+}
+
 .card {
   background-color: var(--global-card-bg-color);
 }
