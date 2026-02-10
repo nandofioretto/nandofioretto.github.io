@@ -202,27 +202,175 @@ See <a href="projects/projects-Summer25">this page</a> for current projects avai
 
           <!-- Sponsors -->
           <div class="clearfix">
-          <h2>Research sponsors</h2>
-          Our group is grateful for the generous support from our sponsors:<div align="center">
-    <table style="border: none;">
-        <tr style="border: none;">
-            <td style="padding-right: 15px; border: none;"><img src="assets/img/NSF-logo.png" height="70pt"></td>
-            <td style="padding-right: 15px; border: none;"><img src="assets/img/darpa-logo.png" height="50pt"></td>
-            <td style="padding-right: 5px; border: none;"><img src="assets/img/amazon-logo.png" height="35pt"></td>
-            <td style="padding-right: 5px; border: none;"><img src="assets/img/google-logo.png" height="35pt"></td>
-            <td style="padding-right: 5px; border: none;"><img src="assets/img/cohere-logo.png" height="40pt"></td>
-            <td style="padding-right: 5px; border: none;"><img src="assets/img/nvidia-logo.png" height="25pt"></td>
-            <td style="padding-right: 5px; border: none;"><img src="assets/img/4va-logo.png" height="30pt"></td>
-            <td style="padding-right: 5px; border: none;"><img src="assets/img/uva-logo.jpg" height="60pt"></td>
-        </tr>
-    </table>
-</div>
+          <h3 class="group__title">Research sponsors</h3>
+          Our group is grateful for the generous support from our sponsors:<section class="sponsors-band" aria-label="Sponsors">
+    <div class="sponsors-inner">
+        <div class="sponsors-grid">
+            <div class="sponsor-item sponsor-lg">
+                <img src="assets/img/NSF-logo.png" alt="NSF" loading="lazy" decoding="async">
+            </div>
+            <div class="sponsor-item">
+                <img src="assets/img/darpa-logo.png" alt="DARPA" loading="lazy" decoding="async">
+            </div>
+            <div class="sponsor-item">
+                <img src="assets/img/onr-logo.png" alt="ONR" loading="lazy" decoding="async">
+            </div>
+            <div class="sponsor-item sponsor-sm">
+                <img src="assets/img/amazon-logo.png" alt="Amazon" loading="lazy" decoding="async">
+            </div>
+            <div class="sponsor-item sponsor-sm">
+                <img src="assets/img/google-logo.png" alt="Google" loading="lazy" decoding="async">
+            </div>
+            <div class="sponsor-item sponsor-sm">
+                <img src="assets/img/nvidia-logo.png" alt="NVIDIA" loading="lazy" decoding="async">
+            </div>
+            <div class="sponsor-item">
+                <img src="assets/img/cohere-logo.png" alt="Cohere" loading="lazy" decoding="async">
+            </div>
+            <div class="sponsor-item sponsor-sm">
+                <img src="assets/img/4va-logo.png" alt="4-VA" loading="lazy" decoding="async">
+            </div>
+            <div class="sponsor-item sponsor-lg">
+                <img src="assets/img/uva-logo.jpg" alt="University of Virginia" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </div>
+</section>
 
+<style>
+    .sponsors-band {
+        --sponsor-bg: rgba(15, 23, 42, 0.04);
+        --sponsor-border: rgba(15, 23, 42, 0.12);
+        --sponsor-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+        --sponsor-text: rgba(15, 23, 42, 0.6);
+        margin: 0.5rem auto 2rem;
+    }
+
+    .sponsors-inner {
+        border: 1px solid var(--sponsor-border);
+        background: linear-gradient(135deg, var(--sponsor-bg), rgba(15, 23, 42, 0.02));
+        border-radius: 18px; 
+        padding: 0.5rem 1.5rem 0.5rem;
+        box-shadow: var(--sponsor-shadow);
+    }
+
+    .sponsors-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.25rem 1.5rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .sponsor-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 64px;
+        padding: 0.5rem 0.25rem;
+        color: var(--sponsor-text);
+    }
+
+    .sponsor-item img {
+        max-width: 100%;
+        max-height: 64px;
+        filter: grayscale(100%);
+        opacity: 0.78;
+        transition: filter 180ms ease, opacity 180ms ease, transform 180ms ease;
+    }
+
+    .sponsor-item img:hover,
+    .sponsor-item img:focus {
+        filter: none;
+        opacity: 1;
+        transform: translateY(-2px);
+    }
+
+    .sponsor-lg img {
+        max-height: 72px;
+    }
+
+    .sponsor-sm img {
+        max-height: 44px;
+    }
+
+    @media (max-width: 720px) {
+        .sponsors-inner {
+            padding: 1.25rem 1rem 1rem;
+            border-radius: 14px;
+        }
+
+        .sponsors-grid {
+            gap: 1rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .sponsor-item img {
+            transition: none;
+        }
+    }
+</style>
+
+          </div>
+
+          <!-- Highlighted work -->
+          <div class="clearfix">
+            <h3 class="group__title">Highlighted work</h3>
+            A few recent projects that reflect our current directions and collaborations.<!-- _includes/highlighted_projects.html --><section class="highlight-grid" aria-label="Highlighted projects"><article class="highlight-card">
+      <div class="highlight-media">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/dp-book-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/dp-book-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/dp-book-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/dp-book.png" class="highlight-img" width="auto" height="auto" alt="Differential Privacy in Artificial Intelligence Book" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</div>
+      <div class="highlight-body">
+        <h3 class="highlight-title">Differential Privacy in Artificial Intelligence Book</h3>
+        <p class="highlight-text">The most comprehensive and up-to-date resource on differential privacy for AI.</p>
+        <a class="highlight-link" href="/projects/1_project/">Learn more</a>
+      </div>
+    </article><article class="highlight-card">
+      <div class="highlight-media">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/3.jpg" class="highlight-img" width="auto" height="auto" alt="Speculative Decoding with Discrete Diffusion" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</div>
+      <div class="highlight-body">
+        <h3 class="highlight-title">Speculative Decoding with Discrete Diffusion</h3>
+        <p class="highlight-text">Faster LLM inference via SpecDiff and SpecDiff-2.</p>
+        <a class="highlight-link" href="/projects/2_project/">Learn more</a>
+      </div>
+    </article></section>
+<a href="/highlights/">View all highlighted work →</a>
           </div>
 
           <!-- News -->
           <br>
-          <div>
+          <div class="clearfix">
           <!-- <h2><a href="/news/" style="color: inherit;">News</a></h2> --><!-- _includes/news.html -->
 <div class="news-compact">
   <!-- Check if this is the main news page or a limited preview -->
@@ -231,7 +379,7 @@ See <a href="projects/projects-Summer25">this page</a> for current projects avai
     <section class="news-group">
       <header class="news-group__header">
         
-          <h3>Recent News</h3>
+          <h3 class="group__title">Recent News</h3>
           <span class="news-group__count">38 total</span>
         
       </header>
@@ -549,6 +697,7 @@ Congratulations to  <a href="https://jacobchristopher.github.io" rel="external n
 </div>
 
           </div>
+          
           <br>
           <!-- Selected papers -->
           
@@ -563,7 +712,7 @@ Congratulations to  <a href="https://jacobchristopher.github.io" rel="external n
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2026 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: February 05, 2026.
+Last updated: February 09, 2026.
       </div>
     </footer>
 
