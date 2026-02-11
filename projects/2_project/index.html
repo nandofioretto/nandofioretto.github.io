@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SpecDiff-2 Scaling Diffusion Drafter Alignment | Ferdinando (Nando)  Fioretto</title>
+    <title>Massively Speeding up LLM inference with Speculative Diffusion Decoding | Ferdinando (Nando)  Fioretto</title>
     <meta name="author" content="Ferdinando (Nando)  Fioretto">
     <meta name="description" content="Faster LLM inference with discrete diffusion drafting and alignment.">
     <meta name="keywords" content="Ferdinando Fioretto, AI, ML, Optimization, differential privacy, fairness, trustworthy, university of virginia">
@@ -125,22 +125,25 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">SpecDiff-2 Scaling Diffusion Drafter Alignment</h1>
+            <h1 class="post-title">Massively Speeding up LLM inference with Speculative Diffusion Decoding</h1>
             <p class="post-description">Faster LLM inference with discrete diffusion drafting and alignment.</p>
           </header>
 
           <article>
-            <!-- ## SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding
+            <h2 id="problem-statement-and-motivation">Problem Statement and Motivation</h2>
 
-**November 1, 2025**
+<p>Modern Large Language Models (LLMs) are marvels of reasoning, yet they suffer from a persistent architectural bottleneck: they are “autoregressive.” Every word generated is the result of a sequential dependency chain where the model must finalize token n before it can even begin to calculate token n+1. This “one-token-at-a-time” pace creates a significant latency tax, making high-reasoning models feel sluggish and limiting the depth of “thinking” an AI can perform within a fixed time budget.</p>
 
-**Jameson Sandler, Jacob K. Christopher, Thomas Hartvigsen, Nando Fioretto** -->
+<p>To circumvent this, Leviathan et al. introduced <strong>Speculative Decoding</strong> (<a href="https://arxiv.org/abs/2211.17192" rel="external nofollow noopener" target="_blank">Leviathan et al., 2023</a>), a technique that uses a small “drafter” model to guess several tokens ahead, which a larger “verifier” model then checks in parallel. If the drafter is accurate, the system leaps forward; if not, it restarts. However, existing approaches face two critical bottlenecks:</p>
 
-<h3 id="summary">Summary</h3>
+<ul>
+  <li>
+<strong>Autoregressive Dependency in Drafting</strong>: Most drafter models are themselves autoregressive, generating tokens sequentially and limiting the parallelism benefits. This sequential dependency adds latency to the drafting process, especially for longer draft sequences.</li>
+  <li>
+<strong>Drafter-Verifier Misalignment</strong>: When the drafter’s proposals don’t align well with the verifier’s preferences, many tokens get rejected, requiring regeneration and negating potential speed gains. This misalignment is particularly problematic when using diffusion-based drafters, as they learn joint distributions that can be miscalibrated with autoregressive verifiers.</li>
+</ul>
 
-<p>SpecDiff is a framework that accelerates Large Language Model inference by using non-autoregressive discrete diffusion models for draft generation, combined with novel train-time and test-time alignment strategies.</p>
-
-<p>The method achieves an average 4.22x speed-up over vanilla autoregressive decoding and a 55% increase in tokens-per-second compared to prior speculative decoding baselines, all while maintaining the verifier model’s original accuracy.</p>
+<p>Two works from RAISELab, <strong>SpecDiff</strong> (<a href="https://arxiv.org/abs/2408.05636" rel="external nofollow noopener" target="_blank">Christopher et al., 2025</a>) and <strong>SpecDiff-2</strong> (<a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">Sandler et al., 2025</a>), have addressed these bottlenecks with a fundamental new methodology. The idea is to replace sequential drafters with discrete diffusion models which generate tokens in parallel, allowing decoupling generation speed from sequence length. The work also introduces novel alignment mechanisms to improve acceptance rates.</p>
 
 <h3 id="takeaways">Takeaways</h3>
 
@@ -151,38 +154,18 @@
     <div class="takeaway-card">Position-wise marginals enable low-cost draft self-selection at test time.</div>
 </div>
 
-<h3 id="table-of-contents">Table of contents</h3>
-
-<ul>
-  <li><a href="#overview">Overview</a></li>
-  <li><a href="#problem-statement-and-motivation">Problem statement and motivation</a></li>
-  <li><a href="#methodology">Methodology</a></li>
-  <li><a href="#key-results-and-performance">Key results and performance</a></li>
-  <li><a href="#acceleration-compute-paradigm">Acceleration-compute paradigm</a></li>
-  <li><a href="#ablation-studies-and-analysis">Ablation studies and analysis</a></li>
-  <li><a href="#significance-and-impact">Significance and impact</a></li>
-  <li><a href="#relevant-citations">Relevant citations</a></li>
-</ul>
-
-<h2 id="overview">Overview</h2>
-
-<p>SpecDiff-2 addresses a critical challenge in large language model (LLM) inference: achieving
-faster text generation without sacrificing accuracy. The framework combines discrete diffusion
-models for parallel draft generation with specialized alignment techniques to significantly
-accelerate LLM inference through speculative decoding.</p>
-
-<div class="project-figure project-figure--float-left">
+<div class="project-figure">
     <figure>
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/specdiff2-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/specdiff2-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/specdiff2-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/specdiff-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/specdiff-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/specdiff-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/projects/specdiff2.jpeg" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="SpecDiff-2 speed-ups across verifier models" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/projects/specdiff.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="SpecDiff speed-ups across verifier models" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -190,29 +173,49 @@ accelerate LLM inference through speculative decoding.</p>
 
 
 <div class="caption">
-    <strong>Figure 1</strong>: SpecDiff-2 achieves superior speed-ups compared to existing speculative decoding
-    methods across different verifier models, with improvements of over 30% compared to EAGLE-2.
+    <strong>Figure 1</strong>: SpecDiff replaces the autoregressive drafter with a non-autoregressive diffusion model. Instead of generating tokens sequentially, a diffusion drafter generates an entire block of draft tokens simultaneously. This is achieved by starting with ``masked'' tokens and denoising them into a coherent sequence in a small, fixed number of steps.
 </div>
 </div>
 
-<h2 id="problem-statement-and-motivation">Problem Statement and Motivation</h2>
+<h3 id="parallelizing-the-thinker">Parallelizing the “Thinker”</h3>
 
-<p>Current LLM inference is inherently slow due to the autoregressive nature of text generation, where tokens are produced sequentially one at a time. Speculative decoding has emerged as a promising solution, using a smaller “drafter” model to propose multiple tokens in parallel, which are then verified by a larger “verifier” model. However, existing approaches face two critical bottlenecks:</p>
+<p>The core innovation of <a href="https://arxiv.org/abs/2408.05636" rel="external nofollow noopener" target="_blank">SpecDiff</a> (<a href="https://arxiv.org/abs/2408.05636" rel="external nofollow noopener" target="_blank">Christopher et al., 2025</a>), which was presented at <strong>NAACL 2025</strong>, is the move from sequential to parallel drafting. In a traditional setup, generating a draft of 32 tokens requires 32 sequential passes through the drafter. SpecDiff replaces this with a discrete diffusion model that generates the entire block of tokens simultaneously through global denoising.</p>
 
-<ul>
-  <li>
-<strong>Autoregressive Dependency in Drafting</strong>: Most drafter models are themselves autoregressive, generating tokens sequentially and limiting the parallelism benefits. This sequential dependency adds latency to the drafting process, especially for longer draft sequences.</li>
-  <li>
-<strong>Drafter-Verifier Misalignment</strong>: When the drafter’s proposals don’t align well with the verifier’s preferences, many tokens get rejected, requiring regeneration and negating potential speed gains. This misalignment is particularly problematic when using diffusion-based drafters, as they learn joint distributions that can be miscalibrated with autoregressive verifiers.</li>
-</ul>
+<p>For the reader, the “so what” here lies in the relationship between \(T\) (diffusion steps) and \(\gamma\) (the draft window size). In autoregressive models, latency scales linearly with \(\gamma\). In SpecDiff, latency is tied to the number of diffusion steps (\(T\)), which can be as low as 1 or 2 steps. This allows the system to scale \(\gamma\) to 32 tokens or more without a linear time penalty. As shown in SpecDiff, modern diffusion models can require 32x fewer function evaluations than autoregressive models to produce text (<a href="https://arxiv.org/abs/2408.05636" rel="external nofollow noopener" target="_blank">Christopher et al., 2025</a>).</p>
 
-<p>SpecDiff-2 tackles both bottlenecks simultaneously through a unified framework that leverages discrete diffusion models for parallel drafting and introduces novel alignment mechanisms to improve acceptance rates.</p>
+<p>This architecture led to a staggering 7.2x speedup on the OpenWebText benchmark (using GPT-NEO) and up to 5.45x on summarization tasks, proving that “global thinking” is inherently faster than “local guessing” (<a href="https://arxiv.org/abs/2408.05636" rel="external nofollow noopener" target="_blank">Christopher et al., 2025</a>).</p>
 
-<h2 id="methodology">Methodology</h2>
+<h3 id="the-alignment-bottleneck-the-size-paradox">The Alignment Bottleneck: The Size Paradox</h3>
+
+<p>While SpecDiff-1 solved the speed problem, it exposed a second challenge: Misalignment. Diffusion models look at global patterns (joint distributions), while autoregressive verifiers look at local prefix-conditional probabilities. If the drafter’s “global” vision doesn’t align with the verifier’s “local” logic, the verifier rejects the draft, and speed gains evaporate.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bottleneck</th>
+      <th>Technical Driver</th>
+      <th>Consequence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Drafter Latency</strong></td>
+      <td>Sequential dependency of AR drafters.</td>
+      <td>Drafting takes too long relative to verification.</td>
+    </tr>
+    <tr>
+      <td><strong>Drafter-Verifier Alignment</strong></td>
+      <td>Statistical divergence between global denoising and local conditionals.</td>
+      <td>Frequent rejections force the model back into slow sequential mode.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This leads to a paradox addressed in <a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">SpecDiff-2</a> (<a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">Sandler et al., 2025</a>). Traditionally, drafters are tiny (e.g., 80M parameters) to remain faster than the verifier. But SpecDiff-2 uses a 7B parameter drafter (like DiffuLLaMA) to accelerate a 70B model. In an autoregressive world, a 7B drafter would be too slow to be useful. Because diffusion is parallel, we can use “Large Drafters” that are more intelligent and better aligned without sacrificing the speed advantage.</p>
 
 <h3 id="discrete-diffusion-for-parallel-drafting">Discrete diffusion for parallel drafting</h3>
 
-<p>SpecDiff-2 employs Masked-Discrete Diffusion Models (MDMs) as drafters to eliminate autoregressive dependencies. Unlike traditional autoregressive models, diffusion models generate text by iteratively refining corrupted sequences over a fixed number of denoising steps. Critically, each denoising step updates all token positions in parallel.</p>
+<p>SpecDiff-2 employs Masked-Discrete Diffusion Models (MDMs) as drafters to eliminate autoregressive dependencies (<a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">Sandler et al., 2025</a>). Unlike traditional autoregressive models, diffusion models generate text by iteratively refining corrupted sequences over a fixed number of denoising steps. Critically, each denoising step updates all token positions in parallel.</p>
 
 <p>The process works by extending a prefix \(s\) with \(\gamma\) masked tokens [MASK], then using a single denoising step to generate a joint proposal:</p>
 
@@ -284,7 +287,7 @@ which directly improves throughput.</p>
 accepted streaks instead of only the first few tokens. The result is a drafter that is
 better calibrated to the verifier across the entire draft horizon.</p>
 
-<p><strong>Test-time self-selection acceptance.</strong> Position-wise marginals allow sampling \(K\) joint drafts from a single denoising pass. Candidates are ranked using a streak-oriented verifier score. Because diffusion updates all positions in parallel, multiple candidate drafts can be generated with minimal overhead, and the highest-scoring draft is selected for verification to maximize expected committed tokens.</p>
+<p><strong>Test-time self-selection acceptance.</strong> Position-wise marginals allow sampling \(K\) joint drafts from a single denoising pass. Candidates are ranked using a streak-oriented verifier score. Because diffusion updates all positions in parallel, multiple candidate drafts can be generated with minimal overhead, and the highest-scoring draft is selected for verification to maximize expected committed tokens (<a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">Sandler et al., 2025</a>).</p>
 
 \[ext{Score}(x^{(k)}) = \sum_{i=1}^{\gamma} \prod_{j=1}^{i} P(x^{(k)}_j \mid s_{&lt;j})\]
 
@@ -292,14 +295,38 @@ better calibrated to the verifier across the entire draft horizon.</p>
 
 <h2 id="key-results-and-performance">Key Results and Performance</h2>
 
-<p>SpecDiff-2 demonstrates significant improvements across multiple benchmarks and metrics:</p>
+<div class="project-figure project-figure--float-right">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/specdiff2-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/specdiff2-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/specdiff2-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/specdiff2.jpeg" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="SpecDiff-2 speed-ups across verifier models" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+
+<div class="caption">
+    <strong>Figure 2</strong>: SpecDiff-2 achieves superior speed-ups compared to existing speculative decoding
+    methods across different verifier models, with improvements of over 30% compared to EAGLE-2.
+</div>
+</div>
+
+<p>SpecDiff-2 demonstrates significant improvements across multiple benchmarks and metrics (<a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">Sandler et al., 2025</a>):</p>
 
 <ul>
   <li>
-    <p><strong>Speed-up Performance</strong>: The method achieves an average 4.22x speed-up across all tested settings, representing over 30% improvement compared to EAGLE-2. On specialized tasks like code generation, speed-ups reach 5.51x compared to vanilla autoregressive generation.</p>
+    <p><strong>Speed-up Performance</strong>: The method achieves an average 4.22x speed-up across all tested settings, representing over 30% improvement compared to EAGLE-2 (<a href="https://arxiv.org/abs/2406.16858" rel="external nofollow noopener" target="_blank">Li et al., 2024</a>). On specialized tasks like code generation, speed-ups reach 5.51x compared to vanilla autoregressive generation.</p>
   </li>
   <li>
-    <p><strong>Accepted streak length</strong>: SpecDiff-2 produces substantially longer accepted sequences. For example, with Qwen2.5-72B at temperature 0, it achieves 5.98 tokens per draft on average compared to EAGLE-2’s 4.41 tokens.</p>
+    <p><strong>Accepted streak length</strong>: SpecDiff-2 produces substantially longer accepted sequences. For example, with Qwen2.5-72B at temperature 0, it achieves 5.98 tokens per draft on average compared to EAGLE-2’s 4.41 tokens (<a href="https://arxiv.org/abs/2406.16858" rel="external nofollow noopener" target="_blank">Li et al., 2024</a>).</p>
   </li>
   <li>
     <p><strong>Scaling Properties</strong>: The self-selection mechanism shows smooth test-time scaling, with increasing the number of parallel drafts from 1 to 8 yielding up to 20% additional throughput, particularly effective at higher drafter temperatures where draft diversity is greater.</p>
@@ -332,7 +359,7 @@ better calibrated to the verifier across the entire draft horizon.</p>
 
 <h2 id="acceleration-compute-paradigm">Acceleration-Compute Paradigm</h2>
 
-<p>A significant contribution is introducing “acceleration-compute” as a new scaling dimension for LLMs. The research demonstrates that faster inference directly translates to higher accuracy on complex reasoning tasks within fixed wall-time budgets. On Math500 with Chain-of-Thought prompting, SpecDiff-2 achieves a +63% boost in accuracy over vanilla models and +11% increase over unaligned SpecDiff within a 15-second reasoning budget.
+<p>A significant contribution is introducing “acceleration-compute” as a new scaling dimension for LLMs. The research demonstrates that faster inference directly translates to higher accuracy on complex reasoning tasks within fixed wall-time budgets. On Math500 with Chain-of-Thought prompting, SpecDiff-2 achieves a +63% boost in accuracy over vanilla models and +11% increase over unaligned SpecDiff within a 15-second reasoning budget (<a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">Sandler et al., 2025</a>).
 This paradigm shift suggests that optimizing for throughput isn’t just about speed—it’s about improving the effective intelligence of LLMs within practical time constraints by enabling more reasoning steps.</p>
 
 <div class="project-figure">
@@ -361,9 +388,9 @@ This paradigm shift suggests that optimizing for throughput isn’t just about s
 
 <h2 id="ablation-studies-and-analysis">Ablation Studies and Analysis</h2>
 
-<p><strong>Individual Component Analysis</strong>: Ablations reveal that streak-distillation alone provides substantial gains, with approximately +30% speed-up improvement over base diffusion drafters. The combination of both alignment mechanisms results in 40-50% performance improvement over unaligned SpecDiff.</p>
+<p><strong>Individual Component Analysis</strong>: Ablations reveal that streak-distillation alone provides substantial gains, with approximately +30% speed-up improvement over base diffusion drafters. The combination of both alignment mechanisms results in 40-50% performance improvement over unaligned SpecDiff (<a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">Sandler et al., 2025</a>).</p>
 
-<p><strong>Position-wise Acceptance Analysis</strong>: The research includes detailed analysis showing how acceptance rates degrade with distance from the prefix. Streak-distillation significantly improves this degradation pattern compared to standard autoregressive distillation, maintaining higher acceptance rates throughout the draft window.</p>
+<p><strong>Position-wise Acceptance Analysis</strong>: The research includes detailed analysis showing how acceptance rates degrade with distance from the prefix. Streak-distillation significantly improves this degradation pattern compared to standard autoregressive distillation, maintaining higher acceptance rates throughout the draft window (<a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">Sandler et al., 2025</a>). Related distillation-based alignment approaches include DistillSpec (<a href="https://arxiv.org/abs/2310.08461" rel="external nofollow noopener" target="_blank">Zhou et al., 2023</a>).</p>
 
 <div class="project-figure">
     <figure>
@@ -395,11 +422,11 @@ This paradigm shift suggests that optimizing for throughput isn’t just about s
 
 <ul>
   <li>
-<strong>Architectural Innovation</strong>: The work expands the design space for speculative decoding by demonstrating the superiority of discrete diffusion models over traditional autoregressive drafters, opening new research directions for non-autoregressive generation methods.</li>
+<strong>Architectural Innovation</strong>: The work expands the design space for speculative decoding by demonstrating the superiority of discrete diffusion models over traditional autoregressive drafters, opening new research directions for non-autoregressive generation methods (<a href="https://arxiv.org/abs/2408.05636" rel="external nofollow noopener" target="_blank">Christopher et al., 2025</a>; <a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">Sandler et al., 2025</a>).</li>
   <li>
 <strong>Practical Deployment Benefits</strong>: The significant speed improvements without accuracy loss enable more responsive user applications, reduced computational costs, and feasibility of real-time LLM systems. The ability to generate more tokens within fixed time budgets allows for deeper reasoning capabilities.</li>
   <li>
-<strong>Research Paradigm</strong>: The introduction of “acceleration-compute” as a scaling factor provides a new lens for understanding LLM performance optimization, suggesting that inference efficiency improvements can directly enhance problem-solving capabilities rather than just reducing latency.</li>
+<strong>Research Paradigm</strong>: The introduction of “acceleration-compute” as a scaling factor provides a new lens for understanding LLM performance optimization, suggesting that inference efficiency improvements can directly enhance problem-solving capabilities rather than just reducing latency (<a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">Sandler et al., 2025</a>).</li>
 </ul>
 
 <p>The comprehensive approach of jointly addressing both drafting latency and alignment challenges through specialized techniques tailored for diffusion models represents a significant advancement in making powerful LLMs more practical and accessible for real-world applications.</p>
@@ -407,25 +434,11 @@ This paradigm shift suggests that optimizing for throughput isn’t just about s
 <h2 id="relevant-citations">Relevant citations</h2>
 
 <ul>
-  <li>Leviathan, Y., Kalman, M., and Matias, Y. <strong>Fast inference from transformers via speculative decoding.</strong> ICML 2023.</li>
-</ul>
-
-<p>This paper is foundational as it introduces the speculative decoding paradigm, the core “draft-then-verify” framework that SpecDiff-2 is built upon. It defines the lossless acceptance rule that is central to the paper’s method and the entire field of speculative decoding acceleration.</p>
-
-<ul>
-  <li>Christopher, J. K., Bartoldson, B. R., Ben-Nun, T., Cardei, M., Kailkhura, B., and Fioretto, F. 
-<strong>Speculative diffusion decoding: Accelerating language generation through diffusion.</strong> NAACL 2025</li>
-</ul>
-
-<p>This work, referred to as SpecDiff, is the direct predecessor to the presented paper, SpecDiff-2. It introduced the novel concept of using a non-autoregressive diffusion language model as a drafter, which is the central mechanism that SpecDiff-2 enhances with its new alignment techniques.</p>
-
-<ul>
-  <li>
-    <p>Li, Y., Wei, F., Zhang, C., and Zhang, H. <strong>Eagle-2: Faster inference of language models with dynamic draft trees</strong>. arXiv preprint arXiv:2406.16858, 2024.</p>
-  </li>
-  <li>
-    <p>Zhou, Y., Lyu, K., Rawat, A. S., Menon, A. K., Ros-tamizadeh, A., Kumar, S., Kagy, J.-F., and Agarwal, R. <strong>Distillspec: Improving speculative decoding via knowledge distillation</strong>. arXiv preprint arXiv:2310.08461, 2023.</p>
-  </li>
+  <li>Leviathan, Y., Kalman, M., and Matias, Y. (2023). Fast inference from transformers via speculative decoding. ICML 2023. https://arxiv.org/abs/2211.17192</li>
+  <li>Christopher, J. K., Bartoldson, B. R., Ben-Nun, T., Cardei, M., Kailkhura, B., and Fioretto, F. (2025). Speculative diffusion decoding: Accelerating language generation through diffusion. NAACL 2025. https://arxiv.org/abs/2408.05636</li>
+  <li>Sandler, J., Christopher, J. K., Hartvigsen, T., and Fioretto, F. (2025). SpecDiff-2: Scaling diffusion drafter alignment for faster speculative decoding. arXiv:2511.00606. https://arxiv.org/abs/2511.00606</li>
+  <li>Li, Y., Wei, F., Zhang, C., and Zhang, H. (2024). EAGLE-2: Faster inference of language models with dynamic draft trees. arXiv:2406.16858. https://arxiv.org/abs/2406.16858</li>
+  <li>Zhou, Y., Lyu, K., Rawat, A. S., Menon, A. K., Rostamizadeh, A., Kumar, S., Kagy, J.-F., and Agarwal, R. (2023). DistillSpec: Improving speculative decoding via knowledge distillation. arXiv:2310.08461. https://arxiv.org/abs/2310.08461</li>
 </ul>
 
           </article><div id="giscus_thread" style="max-width: 1060px; margin: 0 auto;">
@@ -465,7 +478,7 @@ This paradigm shift suggests that optimizing for throughput isn’t just about s
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2026 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: February 10, 2026.
+Last updated: February 11, 2026.
       </div>
     </footer>
 
