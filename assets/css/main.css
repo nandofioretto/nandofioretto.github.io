@@ -93,6 +93,15 @@ html[data-theme=dark] .repo-img-dark {
 /******************************************************************************
  * Content
  ******************************************************************************/
+html {
+  font-size: 17px;
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 16px;
+  }
+}
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
@@ -111,7 +120,7 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: 1060px;
+  max-width: 1140px;
 }
 
 .profile img {
@@ -1221,6 +1230,72 @@ footer.sticky-bottom {
   font-size: 0.83rem;
   margin: 0;
   text-align: center;
+}
+.projects .visiting-group-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  column-count: 2;
+  column-gap: 2rem;
+}
+.projects .former-group-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.projects .former-group-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-bottom: 1.15rem;
+}
+.projects .former-group-list__media {
+  flex: 0 0 auto;
+}
+.projects .former-group-list__media-link {
+  display: block;
+}
+.projects .former-group-list__media figure {
+  margin: 0;
+}
+.projects .former-group-list__avatar {
+  width: 84px !important;
+  height: 84px !important;
+  object-fit: cover;
+}
+.projects .former-group-list__content {
+  min-width: 0;
+}
+.projects .former-group-list__name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+.projects .former-group-list__meta {
+  display: block;
+}
+.projects .visiting-group-list__item {
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+.projects .visiting-group-list__name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+.projects .visiting-group-list__meta {
+  display: block;
+}
+@media (max-width: 576px) {
+  .projects .visiting-group-list {
+    column-count: 1;
+  }
+  .projects .former-group-list__item {
+    gap: 0.75rem;
+  }
+  .projects .former-group-list__avatar {
+    width: 72px !important;
+    height: 72px !important;
+  }
 }
 .projects h2.category {
   color: var(--global-divider-color);
