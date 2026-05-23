@@ -10,6 +10,12 @@ $(document).ready(function() {
     entry.find('.bibtex.hidden').toggleClass('open');
     entry.find('.abstract.hidden.open').toggleClass('open');
   });
+  // clicking the paper title toggles the abstract
+  $('.pub-title.has-abstract').click(function() {
+    const entry = $(this).closest('.pub-item');
+    entry.find('.abstract.hidden').toggleClass('open');
+    entry.find('.bibtex.hidden.open').toggleClass('open');
+  });
   $('a').removeClass('waves-effect waves-light');
 
   // bootstrap-toc
