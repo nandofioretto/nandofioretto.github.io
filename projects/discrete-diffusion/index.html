@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Constrained Discrete Diffusion for Language, Chemistry, and Code | Ferdinando (Nando)  Fioretto</title>
+    <meta name="author" content="Ferdinando (Nando)  Fioretto">
+    <meta name="description" content="Enforcing hard constraints on tokens, molecules, and programs — training-free, inside the denoising loop.">
+    <meta name="keywords" content="Ferdinando Fioretto, AI, ML, Optimization, differential privacy, fairness, trustworthy, university of virginia">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://nandofioretto.github.io/projects/discrete-diffusion/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Ferdinando (Nando) </span>Fioretto</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/awards/">awards</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/group/">group</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/teaching/">teaching</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/bio/">bio</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/assets/cv/cvFioretto.pdf">cv</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- page.html -->
+        <div class="post">
+
+          <header class="post-header">
+            <h1 class="post-title">Constrained Discrete Diffusion for Language, Chemistry, and Code</h1>
+            <p class="post-description">Enforcing hard constraints on tokens, molecules, and programs — training-free, inside the denoising loop.</p>
+          </header>
+
+          <article>
+            <div class="discrete-diffusion-page">
+
+  <h2 id="problem-statement-and-motivation">Problem Statement and Motivation</h2>
+
+  <p>Discrete sequences — tokens in natural language, SMILES strings in chemistry, source code in programming — hold immense potential for scientific and engineering discovery. Yet deploying large language models and discrete generative models in these high-stakes domains exposes a fundamental gap: <strong>the outputs of these models routinely violate critical constraints</strong>, whether toxicity guidelines, chemical validity rules, functional correctness requirements, or security properties.</p>
+
+  <div class="project-figure">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/discrete-diffusion/dllm_architecture-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/discrete-diffusion/dllm_architecture-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/discrete-diffusion/dllm_architecture-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/discrete-diffusion/dllm_architecture.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Discrete diffusion language models: forward masking and backward denoising" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 1</strong>: Discrete diffusion language models define a forward <em>masking</em> process that progressively corrupts a token sequence into noise, and a learned backward <em>denoising</em> process that reconstructs it. Unlike autoregressive models, the entire sequence is available at each denoising step — creating a natural intervention point for constraint enforcement. (Architecture following <a href="https://arxiv.org/abs/2406.07524" target="_blank" rel="external nofollow noopener">Sahoo et al., 2024</a>.)
+</div>
+</div>
+
+  <p>Autoregressive models generate text left-to-right and are structurally constrained by this causal factorization: it is impossible to verify non-local properties (e.g., “does this molecule contain an aldehyde fragment?” or “does this code compile?”) until generation is complete, when corrections are expensive or impossible. Discrete diffusion models break this bottleneck. Because they expose the <strong>full, partially denoised sequence</strong> at every reverse step, they offer something autoregressive models cannot: a global program or sequence state that can be inspected, scored, and corrected <em>before</em> committing to any final token.</p>
+
+  <p>Our work turns this structural advantage into a rigorous constraint-enforcement machinery — <strong>without retraining the underlying model</strong>.</p>
+
+  <h3 id="key-takeaways">Key Takeaways</h3>
+
+  <div class="takeaways-grid">
+    <div class="takeaway-card">Discrete diffusion exposes the full token sequence at every denoising step — a natural intervention point for enforcing non-local constraints that autoregressive models cannot natively handle.</div>
+    <div class="takeaway-card">Constraints are enforced via a KL-minimizing proximal projection on the probability simplex — a training-free operation that steers token logits toward feasibility at each reverse step.</div>
+    <div class="takeaway-card">The framework handles heterogeneous constraint types: toxicity filters, chemical valency rules, novelty requirements, syntactic correctness, and program-level security properties.</div>
+    <div class="takeaway-card">Applications span natural language safety, drug-discovery molecular generation, symbolic reasoning, and secure code synthesis — consistently outperforming both autoregressive and unconstrained discrete diffusion baselines.</div>
+</div>
+
+  <h2 id="the-framework-projecting-token-distributions-onto-the-feasible-set">The Framework: Projecting Token Distributions onto the Feasible Set</h2>
+
+  <p>Standard masked diffusion models (MDMs) operate over sequences of \(L\) tokens drawn from a vocabulary \(\mathcal{V}\). Each position \(\ell\) in the sequence \(x_t \in \mathbb{R}^{L \times \lvert\mathcal{V}\rvert}\) holds a probability distribution over vocabulary items. The forward process corrupts tokens by progressively replacing them with a special <code class="language-plaintext highlighter-rouge">[MASK]</code> token. The learned reverse process — a transformer network — predicts clean-state logits and iteratively unmasks the sequence.</p>
+
+  <div class="project-figure">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/discrete-diffusion/cdd_framework-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/discrete-diffusion/cdd_framework-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/discrete-diffusion/cdd_framework-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/discrete-diffusion/cdd_framework.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Constrained-aware discrete diffusion: KL proximal projection on token logits" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 2</strong>: At each reverse step, the model's predicted token distribution <em>x<sub>t</sub></em> is projected onto the constraint-feasible region by solving a KL-minimization problem over the probability simplex. The constraint is enforced at the <em>argmax</em> level — on the most likely token at each position — ensuring that the final decoded sequence satisfies the user-specified rules. Toxic or invalid tokens are gated out before they can be committed.
+</div>
+</div>
+
+  <p><strong>Constrained Discrete Diffusion (CDD)</strong> (<a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">Cardei et al., NeurIPS 2025</a>) adapts the constrained diffusion principle to this discrete setting. At each reverse step \(t\), instead of directly sampling from the unconstrained model prediction, CDD solves a local proximal problem over the probability simplex:</p>
+
+\[\text{prox}_{\mathcal{C}}(x_t) = \min_{y} \; \mathrm{KL}(y \,\|\, x_t) \quad \text{s.t.} \quad \arg\max(y) \to \mathcal{C}\]
+
+  <p>Here \(y \in \Delta^{\lvert\mathcal{V}\rvert}\) is the projected distribution and \(\mathcal{C}\) encodes the constraint on the most-likely decoded token. This ensures two things simultaneously: <strong>(1)</strong> the projection stays close to the model’s intended distribution (preserving fluency), and <strong>(2)</strong> the sequence that would result from greedily decoding the projected logits satisfies the constraint — <strong>at the sequence level, not just position by position</strong>.</p>
+
+  <p>Because the KL proximal step requires no gradient through model weights and no retraining, CDD is a <strong>training-free, plug-and-play wrapper</strong> for any masked diffusion backbone.</p>
+
+  <h3 id="handling-non-differentiable-constraints-neuro-symbolic-diffusion">Handling Non-Differentiable Constraints: Neuro-Symbolic Diffusion</h3>
+
+  <p>Many real-world constraints involve non-differentiable checkers — SMARTS substructure filters in chemistry, compiler parse trees in code, or formal logic evaluators in reasoning. Our <strong>Neuro-Symbolic Diffusion (NSD)</strong> framework (<a href="https://arxiv.org/abs/2506.01121" rel="external nofollow noopener" target="_blank">Christopher et al., NeuS 2025</a>, <strong>DARPA Disruptive Idea Award</strong>) extends this principle by interleaving diffusion steps with symbolic optimization, enabling certifiably consistent generation under arbitrary functional and logic constraints — for both continuous and discrete domains.</p>
+
+  <p><strong>Search-Augmented Masked Diffusion (SearchDiff)</strong> (<a href="https://arxiv.org/abs/2602.02727" rel="external nofollow noopener" target="_blank">Ta et al., 2026</a>) takes a complementary approach: rather than projecting logits, it introduces a <strong>tree search at each denoising step</strong> that optimizes over the model’s predicted proposal set under user-specified property satisfaction, yielding a modified reverse transition that steers sampling toward probable and feasible solutions.</p>
+
+  <h2 id="application-1-natural-language-safety--toxicity-mitigation-and-lexical-constraints">Application 1: Natural Language Safety — Toxicity Mitigation and Lexical Constraints</h2>
+
+  <p>The most direct application is enforcing content-safety constraints on text generation. Large language models trained on internet-scale data can generate harmful, toxic, or factually incorrect content. CDD addresses this by treating toxicity and lexical rules as hard constraints on the token sequence.</p>
+
+  <p>At each reverse step, the KL-proximal projection gates out tokens whose presence would increase the probability of toxic continuations (evaluated by a classifier) or violate counting/lexical rules (e.g., “do not include the word ‘kill’ in the output”). Key results from (<a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">Cardei et al., 2025</a>):</p>
+
+  <ul>
+    <li>
+<strong>Zero constraint violations</strong> on toxicity mitigation across all threshold levels (ω = 0.25, 0.50, 0.75), versus <strong>33.2%, 21.6%, and 13.1%</strong> violation rates for GPT-2 — and <strong>17–32%</strong> for MDLM and UDLM discrete diffusion baselines.</li>
+    <li>
+<strong>Zero violations</strong> on character-level and sequence-level lexical constraints, versus <strong>54.5%</strong> and <strong>97.5%</strong> for MDLM without constraint enforcement.</li>
+    <li>
+<strong>Minimal computational overhead</strong> compared to post-hoc alternatives: PPLM incurs an <strong>85× slowdown</strong>, FUDGE a <strong>134–143× slowdown</strong>; CDD adds negligible cost over standard discrete diffusion sampling.</li>
+  </ul>
+
+  <p>Crucially, constraint satisfaction is achieved while <strong>preserving semantic coherence and fluency</strong> — perplexity remains competitive with unconstrained generation, as CDD only departs from the model’s intent by the minimum required to satisfy constraints.</p>
+
+  <h2 id="application-2-molecular-generation-for-drug-discovery">Application 2: Molecular Generation for Drug Discovery</h2>
+
+  <div class="project-figure project-figure--float-right">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/discrete-diffusion/molgen_task-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/discrete-diffusion/molgen_task-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/discrete-diffusion/molgen_task-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/discrete-diffusion/molgen_task.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Molecular generation with novelty and toxicity constraints on SMILES" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 3</strong>: Generating molecules in SMILES format requires simultaneously enforcing novelty (the molecule must not appear in the training set) and toxicity-avoidance (BRENK substructure filters for aldehyde flags, three-membered heterocycles, and other reactive fragments). CDD enforces these constraints directly on the denoising trajectory rather than via post-hoc filtering.
+</div>
+</div>
+
+  <p>Chemical molecule generation is a natural discrete-diffusion application: SMILES strings are sequential, token-based representations of molecular structure. Generating valid drug candidates requires satisfying multiple simultaneous constraints — novelty (the molecule must not be in the training set), toxicity avoidance (substructure filters from medicinal chemistry), and chemical validity (SMILES grammar rules).</p>
+
+  <p>Our <strong>CDD for Molecular Generation</strong> (<a href="https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf" rel="external nofollow noopener" target="_blank">Cardei et al., AI4D3 NeurIPS 2025</a>, <strong>Best Paper Award</strong>) applies the KL proximal projection to enforce five BRENK substructure filters — ruling out aldehydes, three-membered heterocycles, and other toxicity-linked fragments — jointly with novelty constraints, all within a single training-free inference procedure.</p>
+
+  <div style="clear:both"></div>
+
+  <div class="project-figure">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/discrete-diffusion/molecular_design-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/discrete-diffusion/molecular_design-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/discrete-diffusion/molecular_design-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/discrete-diffusion/molecular_design.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Molecular design results: valid, novel, and non-toxic molecule generation" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 4</strong>: Molecule generation results comparing autoregressive (AR), unconstrained masked diffusion (MDLM, UDLM), and CDD with BRENK filters. CDD-based methods produce drastically more novel and non-toxic candidates while reducing constraint violations to zero — without any model retraining.
+</div>
+</div>
+
+  <p>Quantitative results from the molecule generation benchmark:</p>
+
+  <div class="project-table-card">
+  <div class="project-table-card__header">
+    <div>
+      <span class="project-table-eyebrow">Molecule generation benchmark</span>
+      <h4>Novel and non-toxic molecule discovery</h4>
+    </div>
+    <span class="project-table-legend">Higher is better for discovery; lower is better for violations.</span>
+  </div>
+  <div class="project-table-scroll">
+    <table class="project-table project-table--metrics">
+      <thead>
+        <tr>
+          <th scope="col">Model</th>
+          <th scope="col">Novel <span class="metric-direction metric-direction--up">↑</span>
+</th>
+          <th scope="col">Novel &amp; non-toxic <span class="metric-direction metric-direction--up">↑</span>
+</th>
+          <th scope="col">Novelty violations <span class="metric-direction metric-direction--down">↓</span>
+</th>
+          <th scope="col">BRENK violations <span class="metric-direction metric-direction--down">↓</span>
+</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" data-label="Model">AR</th>
+          <td data-label="Novel">10.3 ± 2.3</td>
+          <td data-label="Novel &amp; non-toxic">5.3 ± 1.4</td>
+          <td data-label="Novelty violations">99.0%</td>
+          <td data-label="BRENK violations">40.2%</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Model">MDLM</th>
+          <td data-label="Novel">260.7 ± 16.4</td>
+          <td data-label="Novel &amp; non-toxic">108.0 ± 9.7</td>
+          <td data-label="Novelty violations">53.9%</td>
+          <td data-label="BRENK violations">35.3%</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Model">UDLM</th>
+          <td data-label="Novel">279.7 ± 22.7</td>
+          <td data-label="Novel &amp; non-toxic">132.3 ± 3.7</td>
+          <td data-label="Novelty violations">70.8%</td>
+          <td data-label="BRENK violations">38.1%</td>
+        </tr>
+        <tr class="project-table__highlight">
+          <th scope="row" data-label="Model">CDD + BRENK <span class="table-note">ours</span>
+</th>
+          <td data-label="Novel"><strong>451.7 ± 19.5</strong></td>
+          <td data-label="Novel &amp; non-toxic"><strong>392.0 ± 16.7</strong></td>
+          <td data-label="Novelty violations">51.2%</td>
+          <td data-label="BRENK violations"><strong>0.0%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <p>By combining novelty enforcement with BRENK filters, our method produces <strong>392 novel non-toxic molecules</strong> per evaluation run — versus <strong>108 for MDLM</strong> and <strong>5 for autoregressive generation</strong> — while reducing BRENK violations to exactly zero.</p>
+
+  <h2 id="search-augmented-discrete-diffusion">Search-Augmented Discrete Diffusion</h2>
+
+  <div class="project-figure">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/discrete-diffusion/search_augmented-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/discrete-diffusion/search_augmented-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/discrete-diffusion/search_augmented-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/discrete-diffusion/search_augmented.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="SearchDiff: tree search augments the denoising process for constrained generation" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 5</strong>: SearchDiff integrates informed tree search into the reverse denoising process. At each step, the model's predicted token distribution defines a proposal set; search optimizes over this set under user-defined property constraints, yielding a modified reverse transition that steers sampling toward probable <em>and</em> feasible completions.
+</div>
+</div>
+
+  <p>Projection-based methods like CDD work well when constraint satisfaction can be efficiently evaluated and projected locally. But some constraints require evaluating global sequence properties — protein secondary structure, symbolic logic satisfiability, or pass/fail test suite execution — where local projections are insufficient.</p>
+
+  <p><strong>SearchDiff</strong> (<a href="https://arxiv.org/abs/2602.02727" rel="external nofollow noopener" target="_blank">Ta et al., 2026</a>) addresses this by replacing the projection step with a <strong>search procedure</strong>: at each denoising step, the model’s prediction defines a proposal set of high-probability candidate tokens, and a search algorithm (informed by the constraint evaluator) selects the candidate that best satisfies the target property while remaining within the model’s distribution. This yields a modified reverse transition that <strong>steers sampling toward probable and feasible solutions</strong>.</p>
+
+  <div class="project-figure">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/discrete-diffusion/blackbox_evaluators-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/discrete-diffusion/blackbox_evaluators-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/discrete-diffusion/blackbox_evaluators-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/discrete-diffusion/blackbox_evaluators.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Discrete diffusion enables blackbox constraint evaluators at every step" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 6</strong>: A key advantage of discrete diffusion over autoregressive generation: because the <em>full</em> candidate sequence is available at every reverse step, any blackbox evaluator — a protein structure predictor, a logic solver, a test harness — can score the entire sequence and return a constraint signal, which SearchDiff uses to guide the next denoising step.
+</div>
+</div>
+
+  <p>A key structural advantage exploited by SearchDiff is that discrete diffusion makes the <strong>full candidate sequence accessible at every step</strong>, even early in generation. This allows arbitrary blackbox evaluators — protein structure predictors, formal logic solvers, test suite harnesses, financial risk models — to score and critique a draft output at intermediate steps, enabling much earlier constraint correction than is possible with autoregressive decoding.</p>
+
+  <p>Across biological design (protein sequence) and symbolic reasoning benchmarks, SearchDiff <strong>substantially improves constraint satisfaction and property adherence</strong>, consistently outperforming both unconstrained discrete diffusion and autoregressive baselines.</p>
+
+  <h2 id="application-3-constrained-code-generation">Application 3: Constrained Code Generation</h2>
+
+  <div class="project-figure">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/discrete-diffusion/code_gen_results-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/discrete-diffusion/code_gen_results-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/discrete-diffusion/code_gen_results-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/discrete-diffusion/code_gen_results.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Constrained code generation results: functional correctness, security, and syntax" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 7</strong>: Results for constrained code generation across functional correctness, security, and syntax benchmarks. CDC (Constrained Diffusion for Code) consistently improves constraint satisfaction over both discrete diffusion and autoregressive baselines, using <em>less</em> corrective computation and more localized edits to the token sequence.
+</div>
+</div>
+
+  <p>Code generation imposes among the most demanding constraint combinations: programs must be syntactically valid, functionally correct with respect to a specification, and free of security vulnerabilities — simultaneously. Autoregressive code models (e.g., Codex, DeepSeek-Coder) frequently produce outputs that pass one criterion while failing another, because left-to-right generation cannot “look ahead” and globally reason about program structure.</p>
+
+  <p><strong>Constrained Diffusion for Code (CDC)</strong> (<a href="https://arxiv.org/abs/2605.16829" rel="external nofollow noopener" target="_blank">Shao et al., 2026</a>) applies the discrete diffusion constraint-enforcement principle to this domain. At each denoising step, CDC combines <strong>mathematical optimization with static program analysis</strong> to identify constraint-relevant regions of the intermediate program state — the specific tokens that, if modified, would most improve constraint satisfaction — and locally adjusts the denoising trajectory toward feasible programs.</p>
+
+  <p>CDC provides:</p>
+
+  <ul>
+    <li>
+<strong>Functional correctness</strong>: Enforcing that programs pass unit tests by guiding generation toward syntactically and semantically consistent completions.</li>
+    <li>
+<strong>Security constraints</strong>: Ruling out code patterns (e.g., unsafe buffer operations, SQL injection vulnerabilities) via rule-based program analysis applied at each step.</li>
+    <li>
+<strong>Syntax validity</strong>: Grounding token predictions in parse-tree structure, eliminating syntactically invalid intermediate states before they propagate.</li>
+  </ul>
+
+  <p>Across all three constraint categories, CDC <strong>consistently outperforms both discrete diffusion and autoregressive baselines</strong> — with <strong>less corrective computation</strong> (more localized edits) than post-hoc repair methods.</p>
+
+  <h2 id="improving-the-backbone-self-conditioned-masked-diffusion">Improving the Backbone: Self-Conditioned Masked Diffusion</h2>
+
+  <p>Constraint enforcement quality depends directly on the quality of the underlying discrete diffusion backbone — how accurately the model predicts clean-state logits from partially masked inputs. A key limitation of standard MDMs is that masked positions are inferred from scratch at each step, discarding useful intermediate predictions.</p>
+
+  <p><strong>Simple Self-Conditioning Adaptation for Masked Diffusion Models (SCMDM)</strong> (<a href="https://arxiv.org/abs/2604.26985" rel="external nofollow noopener" target="_blank">Cardei et al., 2026</a>) addresses this with a simple but effective <strong>post-training adaptation</strong>: each denoising step is conditioned on the model’s own previous clean-state predictions. This allows still-masked positions to accumulate refinement signal across steps, without introducing a recurrent latent pathway or requiring retraining from scratch.</p>
+
+  <p>SCMDM achieves <strong>nearly a 50% reduction in generative perplexity</strong> on language modeling benchmarks (42.89 → 23.72 on OWT), alongside strong improvements in molecular generation and genomic distribution modeling — with no additional denoiser evaluations at inference time. Better backbone predictions translate directly into higher-quality starting points for CDD’s constraint projection steps.</p>
+
+  <h2 id="key-results">Key Results</h2>
+
+  <div class="project-table-card project-table-card--results">
+  <div class="project-table-card__header">
+    <div>
+      <span class="project-table-eyebrow">Summary across domains</span>
+      <h4>Where constrained discrete diffusion helps</h4>
+    </div>
+    <span class="project-table-legend">Use this as the fast-reading map for the page.</span>
+  </div>
+  <div class="project-table-scroll">
+    <table class="project-table project-table--results">
+      <thead>
+        <tr>
+          <th scope="col">Domain</th>
+          <th scope="col">Method</th>
+          <th scope="col">Result to remember</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Toxicity mitigation</span></th>
+          <td data-label="Method">CDD <a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">NeurIPS 2025</a>
+</td>
+          <td data-label="Result">0% violations at all thresholds vs. 13–33% for GPT-2 and 17–32% for MDLM/UDLM.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Lexical constraints</span></th>
+          <td data-label="Method">CDD <a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">NeurIPS 2025</a>
+</td>
+          <td data-label="Result">0% violations on counting and lexical constraints vs. 54.5–97.5% for MDLM.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Molecular generation</span></th>
+          <td data-label="Method">CDD + BRENK <a href="https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf" rel="external nofollow noopener" target="_blank">AI4D3 2025</a>
+</td>
+          <td data-label="Result">392 novel non-toxic molecules vs. 108 for MDLM, with 0% BRENK violations.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Symbolic reasoning</span></th>
+          <td data-label="Method">SearchDiff <a href="https://arxiv.org/abs/2602.02727" rel="external nofollow noopener" target="_blank">2026</a>
+</td>
+          <td data-label="Result">Substantially improves satisfaction and outperforms autoregressive and discrete diffusion baselines.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Code generation</span></th>
+          <td data-label="Method">CDC <a href="https://arxiv.org/abs/2605.16829" rel="external nofollow noopener" target="_blank">2026</a>
+</td>
+          <td data-label="Result">Improves correctness, security, and syntax with less computation than post-hoc repair.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">MDM backbone</span></th>
+          <td data-label="Method">SCMDM <a href="https://arxiv.org/abs/2604.26985" rel="external nofollow noopener" target="_blank">2026</a>
+</td>
+          <td data-label="Result">About 50% perplexity reduction, from 42.89 to 23.72, with no extra inference cost.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Neuro-symbolic</span></th>
+          <td data-label="Method">NSD <a href="https://arxiv.org/abs/2506.01121" rel="external nofollow noopener" target="_blank">NeuS 2025</a>
+</td>
+          <td data-label="Result">Certifiable constraint satisfaction across continuous and discrete domains; DARPA Disruptive Idea.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <p>This body of work establishes a general principle: <strong>discrete diffusion is the right architecture for constrained sequence generation</strong>. The global token state at each step is not just a modeling choice — it is the mechanism that makes training-free, non-local constraint enforcement tractable. Autoregressive models, by design, cannot offer this.</p>
+
+  <h2 id="relevant-citations">Relevant Citations</h2>
+
+  <ul>
+    <li>Cardei, M., Christopher, J. K., Hartvigsen, T., Kailkhura, B., Fioretto, F. (2025). Constrained Discrete Diffusion. <em>NeurIPS 2025</em>. <a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">arXiv:2503.09790</a>
+</li>
+    <li>Cardei, M., Christopher, J. K., Hartvigsen, T., Kailkhura, B., Fioretto, F. (2025). Constrained Molecular Generation with Discrete Diffusion for Drug Discovery. <em>AI4D3 Workshop, NeurIPS 2025</em>. <strong>Best Paper Award</strong>. <a href="https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf" rel="external nofollow noopener" target="_blank">PDF</a>
+</li>
+    <li>Ta, H. B., Cardei, M., Velasquez, A., Fioretto, F. (2026). Search-Augmented Masked Diffusion Models for Constrained Generation. <a href="https://arxiv.org/abs/2602.02727" rel="external nofollow noopener" target="_blank">arXiv:2602.02727</a>
+</li>
+    <li>Shao, L., Cardei, M., Xie, Z., Fioretto, F., Wang, W. (2026). Constrained Code Generation with Discrete Diffusion. <a href="https://arxiv.org/abs/2605.16829" rel="external nofollow noopener" target="_blank">arXiv:2605.16829</a>
+</li>
+    <li>Cardei, M., Ta, H. B., Fioretto, F. (2026). Simple Self-Conditioning Adaptation for Masked Diffusion Models. <a href="https://arxiv.org/abs/2604.26985" rel="external nofollow noopener" target="_blank">arXiv:2604.26985</a>
+</li>
+    <li>Christopher, J. K., Cardei, M., Liang, J., Fioretto, F. (2025). Neuro-Symbolic Generative Diffusion Models for Physically Grounded, Robust, and Safe Generation. <em>NeuS 2025</em>. <strong>DARPA Disruptive Idea Award</strong>. <a href="https://arxiv.org/abs/2506.01121" rel="external nofollow noopener" target="_blank">arXiv:2506.01121</a>
+</li>
+    <li>Sahoo, S., et al. (2024). Simple and Effective Masked Diffusion Language Models. <em>NeurIPS 2024</em>. <a href="https://arxiv.org/abs/2406.07524" rel="external nofollow noopener" target="_blank">arXiv:2406.07524</a>
+</li>
+  </ul>
+
+</div>
+
+          </article><div id="giscus_thread" style="max-width: 1140px; margin: 0 auto;">
+  <script>
+    let giscusTheme = localStorage.getItem("theme");
+    let giscusAttributes = {
+        "src": "https://giscus.app/client.js",
+        "data-repo": "alshedivat/al-folio",
+        "data-repo-id": "MDEwOlJlcG9zaXRvcnk2MDAyNDM2NQ==",
+        "data-category": "Comments",
+        "data-category-id": "DIC_kwDOA5PmLc4CTBt6",
+        "data-mapping": "title",
+        "data-strict": "1",
+        "data-reactions-enabled": "1",
+        "data-emit-metadata": "0",
+        "data-input-position": "bottom",
+        "data-theme": giscusTheme,
+        "data-lang": "en",
+        "crossorigin": "anonymous",
+        "async": "",
+    };
+
+
+    let giscusScript = document.createElement("script");
+    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+    document.getElementById("giscus_thread").appendChild(giscusScript);
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://giscus.app/?ref_noscript" rel="external nofollow noopener" target="_blank">comments powered by giscus.</a>
+</noscript>
+</div>
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2026 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+Last updated: May 24, 2026.
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+  <script defer src="/assets/js/news-enhance.js"></script>
+
+    
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>

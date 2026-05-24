@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Constrained-aware Diffusion for Scientific Applications | Ferdinando (Nando)  Fioretto</title>
+    <title>Constraint-Aware Diffusion for Scientific Applications | Ferdinando (Nando)  Fioretto</title>
     <meta name="author" content="Ferdinando (Nando)  Fioretto">
-    <meta name="description" content="Constrained-aware Diffusion for Scientific Applications">
+    <meta name="description" content="Teaching diffusion models to obey physics, geometry, and safety constraints — without retraining.">
     <meta name="keywords" content="Ferdinando Fioretto, AI, ML, Optimization, differential privacy, fairness, trustworthy, university of virginia">
 
 
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/projects/constrained-aware-genAI/">
+    <link rel="canonical" href="https://nandofioretto.github.io/projects/constrained-aware-genAI/">
 
     <!-- Dark Mode -->
     
@@ -125,20 +125,65 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Constrained-aware Diffusion for Scientific Applications</h1>
-            <p class="post-description">Constrained-aware Diffusion for Scientific Applications</p>
+            <h1 class="post-title">Constraint-Aware Diffusion for Scientific Applications</h1>
+            <p class="post-description">Teaching diffusion models to obey physics, geometry, and safety constraints — without retraining.</p>
           </header>
 
           <article>
-            <h1 id="introduction">Introduction</h1>
+            <div class="constrained-aware-page">
 
-<p>Generative AI, particularly denoising probabilistic diffusion models, has demonstrated remarkable success in synthesizing high-dimensional data. Their application is rapidly expanding beyond image synthesis into mechanical engineering, automation, chemistry, and biology.</p>
+  <h2 id="problem-statement-and-motivation">Problem Statement and Motivation</h2>
 
-<p>However, a critical challenge limits their adoption in high-stakes scientific and engineering domains: <em>while these models produce statistically plausible outputs, they often fail to adhere to physical principles, conservation laws, or safety constraints</em>. Such violations result in suggested designs that may be impractical, mechanically unstable, or hazardous. Additionally, many scientific domains contend with sparse data and expensive data collection, demanding generalization to conditions never observed during training.</p>
+  <p>Generative AI — especially diffusion and flow-matching models — has achieved transformative performance across image synthesis, protein structure prediction, and materials design. Yet a critical gap limits their deployment in high-stakes scientific and engineering domains: <strong>these models generate statistically plausible outputs that routinely violate physical laws, geometric constraints, and safety specifications</strong>.</p>
 
-<p>To address these challenges, our group has developed a class of training-free, constraint-aware generative models that integrate constraints and symbolic rules directly into the generative process through a novel combination of differentiable optimization and diffusion. The key idea is to reinterpret reverse generation, as a sequential optimization problem in which feasibility can be imposed during sampling, rather than checked only after the sample is complete. This creates a training-free interface between generative modeling and constrained optimization, and it opens the door to an application of differentiable constrained optimization directly inside the sampling loop.</p>
+  <div class="project-figure">
+    <figure>
 
-<div class="project-figure">
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/Fig1-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/Fig1-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/Fig1-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/Fig1.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Standard vs. constrained diffusion" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 1</strong>: Standard diffusion trajectories diverge from the constraint manifold, producing outputs that may look realistic but violate physical requirements. Constrained diffusion <em>projects and adheres</em> to the manifold throughout generation — guaranteeing feasibility at every step.
+</div>
+</div>
+
+  <p>Consider the challenge. A diffusion model trained on protein structures generates smooth, realistic-looking backbones — but some violate bond-angle constraints critical for function. A trajectory-planning model produces elegant robot paths, but some pass through solid obstacles. A materials-discovery model proposes crystal lattices with impossible interatomic distances. The models <em>look</em> right, but <em>aren’t</em>.</p>
+
+  <p>This reflects a fundamental mismatch: diffusion models optimize for statistical faithfulness to training data, not constraint satisfaction. Retrofitting constraints post-hoc (filtering, rejection sampling) wastes computation and degrades diversity. Retraining massive foundational models with constraint-aware objectives is prohibitively expensive and domain-specific.</p>
+
+  <p>Our group addresses this from a fundamentally different angle: <strong>making constraint enforcement a native, training-free operation inside the diffusion sampling loop</strong>.</p>
+
+  <h3 id="key-takeaways">Key Takeaways</h3>
+
+  <div class="takeaways-grid">
+    <div class="takeaway-card">Constraints are enforced <em>training-free</em> by integrating projection and proximal steps directly into the reverse diffusion process.</div>
+    <div class="takeaway-card">The framework is plug-and-play: it wraps any pre-trained diffusion or flow-matching model without touching model weights.</div>
+    <div class="takeaway-card">Hard constraint satisfaction is provably guaranteed in convex settings and efficiently approximated for non-convex domains.</div>
+    <div class="takeaway-card">Applications span protein design, materials discovery, robotics and motion planning, and chemical molecule generation.</div>
+</div>
+
+  <h2 id="the-core-framework-diffusion-as-sequential-constrained-optimization">The Core Framework: Diffusion as Sequential Constrained Optimization</h2>
+
+  <p>To understand our approach, we first observe that the reverse diffusion process can be recast as a sequence of optimization steps. Denoising Diffusion Probabilistic Models define a forward process that corrupts data \(x_0 \sim p_{\text{data}}(x_0)\) into noise \(x_T\). The learned reverse process recovers data via Gradient Langevin Dynamics (GLD):</p>
+
+\[x_t \leftarrow x_t + \gamma_t \nabla_{x_t} \log p(x_t) + \sqrt{2\gamma_t}\,\epsilon\]
+
+  <p>As the variance schedule decreases toward \(t \to 0\), GLD transitions toward deterministic gradient ascent on the learned log-likelihood. This allows us to view each reverse step as solving a local optimization problem — and, critically, to <strong>augment each step with a feasibility projection</strong>:</p>
+
+\[\mathcal{P}_C(x_t) = \arg\min_{y \in C} \|y - x_t\|_2^2\]
+
+  <div class="project-figure">
     <figure>
 
   <picture>
@@ -149,163 +194,474 @@
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/projects/constrained-diffusion/obj_scheme.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Constrained diffusion" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/projects/constrained-diffusion/obj_scheme.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Iterative constraint enforcement in diffusion sampling" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
 </figure>
 
+<div class="caption">
+    <strong>Figure 2</strong>: Constraint-Aware Diffusion alternates between score-guided denoising steps (following the learned density) and constraint enforcement steps (projecting back into the feasible region). Applied iteratively across the entire Markov chain, this guarantees that the final sample lies within the specified feasible region.
+</div>
+</div>
+
+  <p>Our <strong>Constrained-Aware Diffusion Models (CADM)</strong> apply this projection at every step of the reverse Markov chain. The result is a formal guarantee: for convex constraint sets, the distance to the feasible region decreases at rate \(1 - 2\beta\gamma_t\) per step, reaching an \(\varepsilon\)-feasible sample in \(\mathcal{O}(\gamma_{\min}^{-1} \log(1/\varepsilon))\) steps — with no degradation of sample diversity.</p>
+
+  <h3 id="scaling-to-non-convex-and-latent-space-constraints">Scaling to Non-Convex and Latent-Space Constraints</h3>
+
+  <p>Scientific constraints are rarely convex. We address this through two extensions:</p>
+
+  <ul>
+    <li>
+      <p><strong>Augmented Lagrangians</strong>: For non-convex constraint sets, we introduce dual multipliers \(\lambda_j \geq 0\) and solve a local augmented problem at each step, enabling rapid inference without exact non-convex projections.</p>
+    </li>
+    <li>
+      <p><strong>Proximal updates in latent space</strong>: Stable Diffusion operates in a compressed latent space \(z_t\). Constraint evaluation (e.g., porosity, stress) requires decoding to pixel space. We construct a differentiable computational graph that evaluates \(g(\mathcal{D}(z_t))\) and propagates gradients back through the decoder:</p>
+    </li>
+  </ul>
+
+\[\text{prox}_\lambda(g(\mathcal{D}(z_t))) = \arg\min_{y} \left\{ g(\mathcal{D}(y)) + \frac{1}{2\lambda} \|\mathcal{D}(y) - \mathcal{D}(z_t)\|_2^2 \right\}\]
+
+  <ul>
+    <li>
+<strong>Simulators-in-the-loop</strong>: When constraint evaluators (e.g., Finite Element Analysis) are non-differentiable, we use calibrated Monte Carlo perturbations to estimate pseudo-gradients, enabling the diffusion model to adjust outputs until simulated constraints are met.</li>
+  </ul>
+
+  <h2 id="applications-across-scientific-domains">Applications Across Scientific Domains</h2>
+
+  <div class="project-figure">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/Fig2-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/Fig2-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/Fig2-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/Fig2.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Constrained generative AI across scientific domains" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
 
 <div class="caption">
-    <strong>Figure 1</strong>: Illustration of constraint-aware diffusion sampling, where iterative constraint-enforcement steps progressively steer denoising samples into the feasible region while preserving the underlying data distribution. 
+    <strong>Figure 3</strong>: Our constraint-aware generative framework has been applied across four scientific domains, each requiring strict adherence to domain-specific constraints: geometric and stability constraints in protein design, valency and chemical structure in molecular generation, thermodynamic constraints in materials discovery, and collision-free physical limits in robotics and control.
 </div>
 </div>
 
-<h2 id="1-foundational-methodology-diffusion-as-sequential-optimization">1. Foundational Methodology: Diffusion as Sequential Optimization</h2>
-<p>To understand our approach, we must first look at how standard diffusion operates. Denoising Diffusion Probabilistic Models define a forward stochastic process that progressively corrupts data $x_0 \sim p_{data}(x_0)$ into noise $x_T \sim p(x_T)$. This is often expressed as a stochastic differential equation (SDE) [cite]:</p>
+  <h3 id="protein-design-with-hard-structural-constraints">Protein Design with Hard Structural Constraints</h3>
 
-\[dx_t = -\frac{1}{2}\beta(t)x_t dt + \sqrt{\beta(t)}dB(t)\]
+  <p>Designing novel proteins requires strict adherence to geometric constraints — bond lengths, angles, and inter-residue distances — to ensure structural stability and functional affinity. Standard diffusion-based protein design tools (e.g., RFdiffusion) can hallucinate backbone geometries that fail costly downstream validation.</p>
 
-<p>where $\beta(t)$ defines an increasing noise schedule and $B(t)$ denotes a standard Brownian motion.</p>
+  <div class="project-figure project-figure--float-right">
+    <figure>
 
-<p>The reverse diffusion process recovers the original data via a time-reversed SDE. Since exact integration is intractable, it is discretized, and a neural network $s_\theta(x_t,t)$ is trained to approximate the score function $\nabla_{x_t}\log p(x_t)$. The reverse update is conventionally performed using Gradient Langevin Dynamics (GLD) [cite]:</p>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/Fig3-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/Fig3-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/Fig3-1400.webp"></source>
+    
 
-\[x_t \leftarrow x_t + \gamma_t s_\theta(x_t,t) + \sqrt{2\gamma_t}\epsilon\]
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/Fig3.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Protein motif scaffolding with hard geometric constraints" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-<h3 id="the-optimization-perspective-and-projection">The Optimization Perspective and Projection</h3>
-<p>As the variance schedule decreases toward $t \rightarrow 0$, GLD transitions toward deterministic gradient ascent. This allows us to view the reverse diffusion process as a sequence of optimization problems minimizing the negative log-likelihood of the data distribution at each time step.</p>
+  </picture>
 
-<p>When application requirements impose constraints, we can frame the generation procedure formally:</p>
+</figure>
 
-\[\text{Minimize} -\log p(x_t|x_0) \qquad \text{Subject to:} \;\; x_T, \dots, x_0 \in C\]
+<div class="caption">
+    <strong>Figure 4</strong>: Our constrained diffusion framework generates protein backbones that precisely preserve critical functional motifs (here: a binding pocket with a distance constraint of 3.2 Å) while freely designing the surrounding scaffold.
+</div>
+</div>
 
-<p>where $C$ defines the feasible region.</p>
+  <p>Our work (<a href="https://arxiv.org/abs/2510.14989" rel="external nofollow noopener" target="_blank">Christopher et al., ICLR 2026</a>) integrates proximal feasibility updates with ADMM decomposition into the RFdiffusion generative process, enforcing hard structural constraints while preserving geometric and stereochemical diversity. We introduce a curated benchmark for <strong>motif scaffolding in the PDZ domain</strong> and demonstrate:</p>
 
-<p>To account for these constraints, our Constrained-Aware Diffusion Models (CADM) introduce a projection operator [cite]:</p>
+  <ul>
+    <li>
+<strong>100% constraint satisfaction</strong> on bonding and geometric constraints — compared to <strong>0% for all three baselines</strong> (Standard RFdiffusion, Recentering, Constraint-Guided Diffusion) across nearly 100,000 generated samples.</li>
+    <li>
+<strong>97.8% usable samples</strong> on molecule encapsulation / pocket design — approximately <strong>4× the nearest baseline</strong> (24.2%).</li>
+    <li>
+<strong>21% viable designs</strong> on motif scaffolding overall, reaching <strong>83% for well-posed ligands</strong>, while baselines produced zero feasible designs.</li>
+  </ul>
 
-\[\mathcal{P}_C(x_t) = \text{arg}\min_{y \in C} ||y - x_t||_2^2\]
+  <p>The approach is the first to solve pocket-design problems at full backbone resolution with provable constraint adherence.</p>
 
-<p>By applying this projection iteratively throughout the Markov chain, we take a gradient step to minimize the negative log-likelihood while ensuring feasibility. Theorem 1 of our work proves that for convex sets, the distance to the feasible set decreases at a rate of $1 - 2\beta\gamma_t$ at each step, reaching an $\epsilon$-feasible set in $\mathcal{O}(\gamma_{min}^{-1}\log(1/\epsilon))$ steps while preserving data fidelity.</p>
+  <div class="project-figure project-figure--wide">
+    <figure>
 
-<h3 id="advanced-extensions-lagrangians-proximal-methods-and-flow-matching">Advanced Extensions: Lagrangians, Proximal Methods, and Flow Matching</h3>
-<p>Standard projections work well for simple convex geometries, but scientific constraints are often highly non-convex or hidden in latent spaces. We extend our framework through several advanced methods:
-Local Relaxations via Lagrangian Duality: For non-convex sets, we develop local relaxations based on the Augmented Lagrangian dual problem. By introducing multipliers $\lambda_j \ge 0$, we create an augmented projection objective that iteratively updates the sample and dual weights, allowing rapid inference without exact non-convex projections. * Latent Space Dynamics &amp; Proximal Methods: Stable Diffusion operates in a low-dimensional latent space $z_t$, making input-space constraint evaluation difficult. We construct a computational graph that evaluates constraint violations $g(\mathcal{D}(z_t))$ post-decoding and propagates gradients back to the latent representation. We update $z_t$ using a proximal step [cite]:</p>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/protein_design_slide-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/protein_design_slide-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/protein_design_slide-1400.webp"></source>
+    
 
-\[\text{prox}_\lambda(g(\mathcal{D}(z_t))) = \text{arg}\min_{y} \left\{ g(\mathcal{D}(y)) + \frac{1}{2\lambda} ||\mathcal{D}(y) - \mathcal{D}(z_t)||_2^2 \right\}\]
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/protein_design_slide.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Protein design comparison: RFdiffusion baselines and CADM" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-<p><strong>Flow-Matching Integration</strong>: We are extending CADM principles to flow-matching models, which transform a base noise distribution into a target distribution via a continuous-time velocity field $\frac{dx(t)}{dt} = v(x(t), t)$. By ensuring the velocity field keeps the sample trajectory within a specified feasible region, we can handle complex, probabilistic chance-constraints with highly efficient sampling.
-[cite]</p>
+  </picture>
 
-<h2 id="2-applications-across-scientific-domains">2. Applications Across Scientific Domains</h2>
-<p>Our framework operates entirely during the sampling phase, acting as a training-free, plug-and-play module that preserves the underlying model’s inductive biases. We have deployed these techniques across four primary areas. [cite+1]</p>
+</figure>
 
-<h4 id="protein-design-with-hard-structural-constraints">Protein Design with Hard Structural Constraints</h4>
-<p>Generating proteins requires strict adherence to geometric constraints (distances and angles) to ensure structural stability and substrate affinity.</p>
+<div class="caption">
+    <strong>Figure 5</strong>: Protein-design benchmark from the AI-SCORE presentation. CADM reaches 100% constraint satisfaction and produces usable structures where RFdiffusion baselines fail to satisfy the hard global constraints.
+</div>
+</div>
 
-<p>Using RFdiffusion as our frozen backbone network, we enforce geometry and binding constraints natively during the generative loop. [cite]</p>
+  <div style="clear:both"></div>
 
-<p>By integrating iterative refinement, we scaffold novel protein backbones while preserving complex functional motifs, which are later validated using AlphaFold 3.</p>
+  <h3 id="materials-discovery-constrained-generation-for-physical-properties">Materials Discovery: Constrained Generation for Physical Properties</h3>
 
-<h4 id="materials-discovery-and-simulators-in-the-loop">Materials Discovery and Simulators-in-the-Loop</h4>
-<p>Discovering structural materials often requires satisfying dynamic physical constraints, such as target porosity or specific stress-strain responses. [cite]</p>
+  <p>Discovering structural materials often requires satisfying dynamic physical constraints — target porosity, specific stress-strain responses, interatomic repulsion, or boundary conditions — that are expensive to verify computationally.</p>
 
-<p>Since large-scale simulators (like Finite Element Analysis) typically lack differentiability, standard backpropagation fails.</p>
+  <div class="project-figure">
+    <figure>
 
-<p>We bypass this using sensitivity analysis, applying calibrated Monte Carlo perturbations to inputs to estimate pseudo-gradients of complex, non-smooth simulator outputs. This allows the diffusion model to adjust the material’s micro-structure dynamically until the simulated physical constraints are met. [cite]</p>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/Fig4-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/Fig4-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/Fig4-1400.webp"></source>
+    
 
-<h4 id="neuro-symbolic-safety-in-robotics-and-control">Neuro-Symbolic Safety in Robotics and Control</h4>
-<p>Motion planning in autonomous systems requires finding collision-free paths governed by dynamic constraints, like ordinary differential equations (ODEs) for velocity and acceleration. [cite]</p>
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/Fig4.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Constrained diffusion relaxation for point defects" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-<p>Our neuro-symbolic approach ensures that trajectories respect these physical boundaries and logic rules.</p>
+  </picture>
 
-<p>Remarkably, because we explicitly encode the physics, the model can generalize out-of-distribution (e.g., generating valid motion trajectories under lunar gravity despite only being trained on Earth’s gravity).</p>
+</figure>
 
-<h4 id="constrained-discrete-diffusion-for-chemistry-and-drug-discovery">Constrained Discrete Diffusion for Chemistry and Drug Discovery</h4>
-<p>Chemical design is fundamentally discrete; generating molecules in SMILES format or as graphs requires selecting tokens from a finite vocabulary.</p>
+<div class="caption">
+    <strong>Figure 6</strong>: Constrained diffusion relaxation directly generates the stable, low-energy atomic configuration of a crystal with a point defect — bypassing thousands of DFT calculation steps.
+</div>
+</div>
 
-<p>We adapted the CADM principle to discrete diffusion models by defining projections over the probability simplex that minimize the Kullback-Leibler divergence between the original logits and the updated, feasible logits [cite].</p>
+  <div class="project-figure">
+    <figure>
 
-<p>Because the $\text{argmax}$ operator is non-differentiable, we use Gumbel-Softmax relaxations to sample soft token probabilities.</p>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/constrained_ai4mat-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/constrained_ai4mat-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/constrained_ai4mat-1400.webp"></source>
+    
 
-<p>This allows us to impose sequence-level constraints, such as BRENK substructure filters, ensuring near-perfect chemical validity while avoiding toxic substructures.</p>
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/constrained_ai4mat.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="ML surrogate-guided constraint enforcement in crystal denoising" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 7</strong>: At each denoising step, an ML surrogate evaluates constraint violations (repulsion, long-range forces, boundary, inter-atomic potentials) and feeds corrections back into the diffusion trajectory.
+</div>
+</div>
+
+  <p>Our work (<a href="https://arxiv.org/abs/2502.05625" rel="external nofollow noopener" target="_blank">Zampini et al., 2025</a>) evaluates the framework on three distinct materials-science benchmarks:</p>
+
+  <ul>
+    <li>
+<strong>Morphometric constraints</strong> (microstructure porosity): <strong>0% constraint violations</strong> with FID of 13.5, versus 68.4% violation rate for conditional diffusion — achieving strict constraint adherence while maintaining competitive generation quality.</li>
+    <li>
+<strong>Metamaterial inverse design</strong> (stress-strain response): <strong>MSE of 1.4 ± 0.6</strong>, a <strong>4.6× improvement</strong> over the specialized Bastek &amp; Kochmann baseline (MSE 6.4 ± 4.6), with only 5% invalid shapes versus 55% for conditional diffusion.</li>
+    <li>
+<strong>Copyright-safe generation</strong>: <strong>90% safety compliance</strong> versus 67% for conditional diffusion and 71% for projected diffusion, with an FID of 65.1 maintaining image quality.</li>
+  </ul>
+
+  <div class="project-figure project-figure--wide">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/metamaterials_results_slide-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/metamaterials_results_slide-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/metamaterials_results_slide-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/metamaterials_results_slide.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Mechanical meta-material inverse design results" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 8</strong>: Inverse design for mechanical meta-materials. The latent constrained method steers diffusion samples toward target stress-strain behavior while reducing physically invalid shapes to 5%.
+</div>
+</div>
+
+  <h3 id="robotics-and-multi-robot-motion-planning">Robotics and Multi-Robot Motion Planning</h3>
+
+  <p>Motion planning in autonomous systems requires finding collision-free trajectories governed by ODE dynamics for velocity, acceleration, and spatial bounds. Standard generative models that ignore these constraints produce trajectories that collide with obstacles or violate kinematic limits.</p>
+
+  <div class="project-figure">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/Fig5-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/Fig5-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/Fig5-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/Fig5.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Neuro-symbolic safe trajectory generation" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 9</strong>: Standard generative models produce unsafe trajectories that collide with obstacles. Our neuro-symbolic approach bakes physical boundaries and logic rules directly into the diffusion process, guaranteeing collision-free, physically grounded trajectories.
+</div>
+</div>
+
+  <p>We have addressed robotics planning through two complementary systems:</p>
+
+  <p><strong>SMD — Simultaneous Multi-Robot Motion Planning</strong> (<a href="https://arxiv.org/abs/2502.03607" rel="external nofollow noopener" target="_blank">Liang et al., 2025</a>) integrates constrained optimization into the diffusion sampling process to produce simultaneously collision-free, kinematically feasible trajectories. On dense maps with 9 robots, SMD achieves <strong>96% success</strong> — compared to just <strong>27% for the best baseline (MMD)</strong>, a <strong>3.6× improvement</strong>. In structured environments (corridor maps), SMD reaches <strong>100% success</strong> while all baselines score 0%. Evaluated across 4,000 test instances spanning six environment types.</p>
+
+  <p><strong>DGD — Discrete-Guided Diffusion</strong> (<a href="https://arxiv.org/abs/2508.20095" rel="external nofollow noopener" target="_blank">Liang et al., AAAI 2026</a>) couples discrete MAPF solvers with constrained generative diffusion, decomposing the nonconvex multi-robot planning problem into tractable convex subproblems. DGD achieves <strong>over 92% success</strong> across standard benchmarks, scales to <strong>100 robots</strong> in environments with 104 obstacles — a <strong>2.5× improvement in robot count</strong> over prior diffusion methods — and is <strong>20× faster</strong> than SMD on comparable settings (12.2s vs 254.3s).</p>
+
+  <div class="project-video-grid">
+  <div class="project-video-item">
+    <video autoplay="" muted="" loop="" playsinline="">
+      <source src="/assets/video/projects/constrained-diffusion/smd_baisc.mp4" type="video/mp4"></source>
+    </video>
+    <p class="project-video-label">Basic map</p>
+  </div>
+  <div class="project-video-item">
+    <video autoplay="" muted="" loop="" playsinline="">
+      <source src="/assets/video/projects/constrained-diffusion/smd_dense.mp4" type="video/mp4"></source>
+    </video>
+    <p class="project-video-label">Dense map</p>
+  </div>
+  <div class="project-video-item">
+    <video autoplay="" muted="" loop="" playsinline="">
+      <source src="/assets/video/projects/constrained-diffusion/smd_corridor.mp4" type="video/mp4"></source>
+    </video>
+    <p class="project-video-label">Corridor map</p>
+  </div>
+  <div class="project-video-item">
+    <video autoplay="" muted="" loop="" playsinline="">
+      <source src="/assets/video/projects/constrained-diffusion/smd_shelf.mp4" type="video/mp4"></source>
+    </video>
+    <p class="project-video-label">Shelf map</p>
+  </div>
+  <div class="project-video-item">
+    <video autoplay="" muted="" loop="" playsinline="">
+      <source src="/assets/video/projects/constrained-diffusion/smd_room.mp4" type="video/mp4"></source>
+    </video>
+    <p class="project-video-label">Room map</p>
+  </div>
+</div>
+  <div class="caption" style="margin-top:0.5rem">
+    <strong>Figure 10</strong>: SMD planning demonstrations across five environment types — basic, dense, corridor, shelf, and room — all generated with constraint-aware diffusion, achieving 96–100% success rates. See the <a href="https://multi-robot-constrained-diffusion.github.io" target="_blank" rel="external nofollow noopener">project page</a> and <a href="https://github.com/RAISELab-atUVA/Diffusion-MRMP" target="_blank" rel="external nofollow noopener">code</a>.
+</div>
+
+  <p>Notably, because we explicitly encode physics, these models can <strong>generalize out-of-distribution</strong>: generating valid trajectories under gravitational conditions never seen during training (e.g., lunar gravity).</p>
+
+  <h3 id="chemistry-constrained-discrete-diffusion-for-molecular-generation">Chemistry: Constrained Discrete Diffusion for Molecular Generation</h3>
+
+  <p>Chemical design is fundamentally discrete. Generating molecules in SMILES format requires selecting tokens from a finite vocabulary while satisfying valency rules, structural filters, and molecular property targets — simultaneously.</p>
+
+  <div class="project-figure">
+    <figure>
 
-<!-- 
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/Fig6-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/Fig6-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/Fig6-1400.webp"></source>
+    
 
-## Conclusion
-By recasting reverse diffusion as a sequential optimization problem, we can guarantee that generated outputs respect physical limits, spatial geometries, and chemical validity without retraining massive foundational models. -->
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/Fig6.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Step-by-step discrete diffusion for valid molecule generation" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-<!-- 
+  </picture>
 
-
-
-
-
-
-## 1. Foundational Methodology: Enforcing Hard Constraints in Generative Models
-
-*[Suggested Image 1: A conceptual diagram showing standard unconstrained diffusion trajectories missing a target constraint manifold, contrasted with our constrained diffusion trajectories cleanly landing exactly on the allowed manifold (e.g., a 2D or 3D geometric projection).]*
-
-Traditional diffusion models learn the data distribution by reversing a gradual noising process. However, injecting hard constraints post-hoc or during training is notoriously difficult. Our group has tackled this from multiple algorithmic angles:
-
-### Continuous and Projected Diffusion Models
-
-In **"Constrained Synthesis with Projected Diffusion Models,"** we introduced a mathematical framework to project the reverse diffusion steps directly onto a constraint manifold. Rather than hoping the model learns the constraint implicitly, we explicitly enforce it at each synthesis step. We expanded on this in **"Training-Free Constrained Generation With Stable Diffusion Models,"** demonstrating that you don't need to retrain massive foundational models from scratch. By applying our projection and optimization steps during the inference phase, we can guide pre-trained models like Stable Diffusion to respect complex constraints in a plug-and-play, training-free manner.
-
-### Discrete Data and Constraints
-
-While standard diffusion works well in continuous spaces (like images), many scientific problems (like text, graphs, and categorical features) are discrete. In **"Constrained Discrete Diffusion Models,"** we formulated a novel methodology that applies strict feasibility masks and modified transition matrices during the discrete noising/denoising process. This ensures that the generated discrete structures never violate predefined logical or structural rules.
-
-### Advancing to Flow Matching
-
-Diffusion models are a subset of continuous normalizing flows. In our recent work, **"Chance-constrained Flow Matching for High-Fidelity Constraint-aware Generation,"** we pushed the boundary further by integrating chance-constrained optimization into Flow Matching. This allows the model to handle probabilistic and highly complex constraints with unparalleled high fidelity, offering better simulation-free training and faster inference than traditional score-based diffusion.
-
----
-
-## 2. Applications of Constrained Generative Models
-
-With a strong methodological foundation in place, we have successfully deployed these models across multiple challenging domains.
-
-*[Suggested Image 2: A multi-panel collage showing the different applications: a 3D protein structure, a molecular graph, a crystal lattice with a defect, and a robot navigating a physically grounded environment. This serves as a visual table of contents for the sections below.]*
-
-### Protein Design
-
-**Relevant Paper:** *Constrained Diffusion for Protein Design with Hard Structural Constraints*
-
-*[Suggested Image 3: A 3D visualization of a protein backbone highlighting a preserved motif (e.g., the catalytic site) while the rest of the sequence is generated/inpainted around it.]*
-
-Designing novel proteins is critical for therapeutics and industrial enzymes. Often, scientists want to design a new protein around a known "active site" or structural motif. Using our constrained diffusion framework, we can strictly enforce hard structural constraints during the generative process. Our model successfully scaffolds novel protein backbones while perfectly preserving the complex geometry of desired functional motifs, massively reducing the failure rate of generated candidates in downstream folding validation.
-
-### Molecular Generation and Drug Discovery
-
-**Relevant Paper:** *Constrained Molecular Generation with Discrete Diffusion for Drug Discovery*
-
-*[Suggested Image 4: A generative trajectory of a molecular graph forming step-by-step using discrete diffusion, with visual indicators (like checkmarks) showing chemical validity (e.g., valency rules) being enforced at every step.]*
-
-Discovering a new drug is an exercise in satisfying multiple simultaneous constraints: the molecule must be chemically valid (respecting valency), synthesizable, and bind to a specific target. Leveraging our work in *Constrained Discrete Diffusion Models*, we designed a framework that builds molecular graphs natively in the discrete space. By enforcing chemical rules as hard constraints during the generation process, we achieve near-100% molecular validity while maintaining high diversity and binding affinity to drug targets.
-
-### Materials Science: Inorganic Solids and Point Defects
-
-**Relevant Paper:** *Constrained Diffusion for Accelerated Structure Relaxation of Inorganic Solids with Point Defects*
-
-*[Suggested Image 5: An illustration of a crystal lattice showing a point defect, with an arrow pointing to a relaxed, stable atomic structure predicted by the diffusion model.]*
-
-In clean energy and semiconductor research, understanding how inorganic solids behave when they have "point defects" (missing or substituted atoms) is crucial. Traditionally, determining the stable, relaxed structure of these defective materials requires computationally expensive Density Functional Theory (DFT) calculations. We developed a constrained diffusion model that drastically accelerates this structure relaxation process. By conditioning the diffusion process on the original lattice constraints and the physics of the defect, the model directly generates the relaxed structure, bypassing thousands of hours of standard computational simulations.
-
-### Safe Robotics and Cyber-Physical Systems
-
-**Relevant Paper:** *Neuro-symbolic Generative Diffusion Models for Physically Grounded, Robust, and Safe Generation*
-
-*[Suggested Image 6: An autonomous vehicle or robot arm trajectory simulation showing "unsafe" generated paths hitting an obstacle, contrasted with our neuro-symbolic model generating only "safe" paths that respect physical boundaries and logic rules.]*
-
-When deploying generative AI in physical systems, a hallucination or an physically impossible generation can result in catastrophic failure. To solve this, we combined the flexibility of neural generative models with the strict, undeniable logic of symbolic reasoning. Our Neuro-symbolic Generative Diffusion Models ensure that generated trajectories, control plans, or environment simulations are grounded in physical reality. By baking symbolic safety rules directly into the diffusion process, we guarantee robustness and safety—a critical step toward deploying generative AI in autonomous vehicles, robotics, and industrial control systems.
-
---- -->
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>The future of generative AI lies not just in creating <em>anything</em>, but in creating <em>exactly what we need</em>. By embedding constraints natively into continuous diffusion, discrete diffusion, and flow matching frameworks, our group is bridging the gap between theoretical machine learning and applied science. Whether we are discovering life-saving drugs, designing novel materials, or ensuring robots operate safely, constrained generation is the key to unlocking the next era of reliable, scientifically grounded AI.</p>
-
-<p><em>Interested in trying these models out? Code and pre-trained weights for the papers mentioned above are available on our lab’s GitHub page.</em></p>
+</figure>
+
+<div class="caption">
+    <strong>Figure 11</strong>: Constrained Discrete Diffusion enforces chemical valency constraints at every denoising step, building up a valid molecule token-by-token. Each intermediate state satisfies the constraint; the final molecule is guaranteed chemically valid.
+</div>
+</div>
+
+  <p>Our <strong>Constrained Discrete Diffusion (CDD)</strong> framework (<a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">Cardei et al., 2025</a>) adapts the CADM principle to discrete sequence spaces by defining projections over the probability simplex that minimize the KL divergence between original logits and feasibility-constrained logits. Key results:</p>
+
+  <ul>
+    <li>
+<strong>Zero constraint violations</strong> on toxicity mitigation across all threshold levels, versus 33.2%, 21.6%, and 13.1% for GPT-2 and 17–32% for MDLM/UDLM baselines.</li>
+    <li>
+<strong>Zero violations</strong> on counting and lexical constraints, versus 54.5% and 97.5% for unconstrained MDLM.</li>
+    <li>
+<strong>392 novel non-toxic molecules</strong> in the AI4D3 molecular-generation benchmark, versus 108 for MDLM and 5 for autoregressive generation.</li>
+    <li>Minimal computational overhead compared to PPLM (85× slowdown) and FUDGE (134–143× slowdown).</li>
+  </ul>
+
+  <p><strong>Extending to code and structured text</strong>: (<a href="https://arxiv.org/abs/2605.16829" rel="external nofollow noopener" target="_blank">Shao et al., 2026</a>) applies constrained discrete diffusion to code generation, enforcing syntactic and semantic constraints on program structure directly in the generation process.</p>
+
+  <h2 id="the-frontier-constraint-aware-flow-matching">The Frontier: Constraint-Aware Flow Matching</h2>
+
+  <p>Training-free constraint enforcement introduces a fundamental mismatch: the model is trained on unconstrained trajectories but evaluated on constrained ones, inducing distributional shift that can degrade sample quality. Our most recent work eliminates this gap.</p>
+
+  <p><strong>Constraint-Aware Flow Matching (CAFM)</strong> (<a href="https://arxiv.org/abs/2605.12754" rel="external nofollow noopener" target="_blank">Christopher et al., 2026</a>) proposes an <strong>end-to-end framework</strong> that explicitly incorporates constraint projections into the <em>training objective</em> of flow-matching models. By aligning the model’s learned velocity field with the constrained sampling procedure, CAFM eliminates distributional shift at its root, achieving higher constraint satisfaction rates and better sample quality than training-free methods — with strict per-sample feasibility guarantees.</p>
+
+  <div class="project-figure project-figure--wide">
+    <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/cafm_overview_slide-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/cafm_overview_slide-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/cafm_overview_slide-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/cafm_overview_slide.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="Constraint-aware flow matching overview" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<div class="caption">
+    <strong>Figure 12</strong>: The distribution-shift problem in post-hoc constraint correction. CAFM trains the velocity field to anticipate the constrained projection.
+</div>
+</div>
+
+  <p><strong>Search-Augmented Masked Diffusion (SearchDiff)</strong> (<a href="https://arxiv.org/abs/2602.02727" rel="external nofollow noopener" target="_blank">Ta et al., 2026</a>) takes a complementary approach for discrete domains: augmenting masked diffusion with tree search to explore the token space and find constraint-satisfying sequences, achieving superior performance on constrained generation benchmarks.</p>
+
+  <div class="project-figure-grid">
+  <div class="project-figure project-figure--grid-item">
+      <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/cafm_results_slide-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/cafm_results_slide-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/cafm_results_slide-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/cafm_results_slide.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="CAFM feasibility and accuracy results" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+  </div>
+  <div class="project-figure project-figure--grid-item">
+      <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/constrained-diffusion/cafm_coherence_slide-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/constrained-diffusion/cafm_coherence_slide-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/constrained-diffusion/cafm_coherence_slide-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/constrained-diffusion/cafm_coherence_slide.png" class="img-fluid rounded z-depth-1 project-figure__img" width="auto" height="auto" title="CAFM spatiotemporal coherence results" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+  </div>
+</div>
+  <div class="caption" style="margin-top:0.5rem">
+    <strong>Figure 13</strong>: Flow-matching results from the slide deck. CAFM reduces constraint violations by orders of magnitude while preserving accuracy and suppressing physically impossible high-variance structures.
+</div>
+
+  <h2 id="key-results">Key Results</h2>
+
+  <div class="project-table-card project-table-card--results">
+  <div class="project-table-card__header">
+    <div>
+      <span class="project-table-eyebrow">Summary across scientific domains</span>
+      <h4>What constraint-aware generative modeling changes</h4>
+    </div>
+    <span class="project-table-legend">Use this as the fast-reading map for the project.</span>
+  </div>
+  <div class="project-table-scroll">
+    <table class="project-table project-table--results">
+      <thead>
+        <tr>
+          <th scope="col">Domain</th>
+          <th scope="col">Method</th>
+          <th scope="col">Result to remember</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Protein design</span></th>
+          <td data-label="Method">CADM + ADMM <a href="https://arxiv.org/abs/2510.14989" rel="external nofollow noopener" target="_blank">ICLR 2026</a>
+</td>
+          <td data-label="Result">100% constraint satisfaction vs. 0% for all baselines; 97.8% usable samples, about 4× the nearest baseline.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Materials science</span></th>
+          <td data-label="Method">Latent constrained diffusion <a href="https://arxiv.org/abs/2502.05625" rel="external nofollow noopener" target="_blank">NeurIPS 2025</a>
+</td>
+          <td data-label="Result">4.6× improvement in stress-strain MSE; 0% morphometric violations vs. 68.4% for conditional diffusion.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Multi-robot planning</span></th>
+          <td data-label="Method">SMD <a href="https://arxiv.org/abs/2502.03607" rel="external nofollow noopener" target="_blank">ICML 2025</a>
+</td>
+          <td data-label="Result">96% success on dense maps vs. 27% for the best baseline; 100% vs. 0% in corridor maps.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Scalable planning</span></th>
+          <td data-label="Method">DGD <a href="https://arxiv.org/abs/2508.20095" rel="external nofollow noopener" target="_blank">AAAI 2026</a>
+</td>
+          <td data-label="Result">Scales to 100 robots, a 2.5× increase; 20× faster than SMD with 92%+ success across benchmarks.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Molecular generation</span></th>
+          <td data-label="Method">CDD <a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">2025</a>
+</td>
+          <td data-label="Result">0% toxicity and lexical violations; 392 novel non-toxic molecules vs. 108 for MDLM.</td>
+        </tr>
+        <tr>
+          <th scope="row" data-label="Domain"><span class="domain-pill">Flow matching</span></th>
+          <td data-label="Method">CAFM <a href="https://arxiv.org/abs/2605.12754" rel="external nofollow noopener" target="_blank">2026</a>
+</td>
+          <td data-label="Result">Eliminates the training-sampling distribution shift and improves the quality-satisfaction trade-off.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <p>Beyond individual results, this body of work establishes a general principle: <strong>constraint satisfaction can be treated as a first-class citizen in generative modeling</strong>, achieved through the integration of differentiable optimization into the generative process — rather than bolted on as post-processing.</p>
+
+  <h2 id="relevant-citations">Relevant Citations</h2>
+
+  <ul>
+    <li>Christopher, J. K., Seamann, A., Cui, J., Khare, S., Fioretto, F. (2026). Constrained Diffusion for Protein Design with Hard Structural Constraints. <em>ICLR 2026</em>. <a href="https://arxiv.org/abs/2510.14989" rel="external nofollow noopener" target="_blank">arXiv:2510.14989</a>
+</li>
+    <li>Zampini, S., Christopher, J. K., Oneto, L., Anguita, D., Fioretto, F. (2025). Training-Free Constrained Generation With Stable Diffusion Models. <em>NeurIPS 2025 Spotlight</em>. <a href="https://arxiv.org/abs/2502.05625" rel="external nofollow noopener" target="_blank">arXiv:2502.05625</a>
+</li>
+    <li>Cardei, M., Christopher, J. K., Hartvigsen, T., Kailkhura, B., Fioretto, F. (2025). Constrained Discrete Diffusion. <em>NeurIPS 2025</em>. <a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">arXiv:2503.09790</a>
+</li>
+    <li>Liang, J., Christopher, J. K., Koenig, S., Fioretto, F. (2025). Simultaneous Multi-Robot Motion Planning with Projected Diffusion Models. <em>ICML 2025</em>. <a href="https://arxiv.org/abs/2502.03607" rel="external nofollow noopener" target="_blank">arXiv:2502.03607</a>
+</li>
+    <li>Liang, J., Koenig, S., Fioretto, F. (2026). Discrete-Guided Diffusion for Scalable and Safe Multi-Robot Motion Planning. <em>AAAI 2026</em>. <a href="https://arxiv.org/abs/2508.20095" rel="external nofollow noopener" target="_blank">arXiv:2508.20095</a>
+</li>
+    <li>Christopher, J. K., Warner, J. E., Fioretto, F. (2026). Constraint-Aware Flow Matching: Decision Aligned End-to-End Training for Constrained Sampling. <a href="https://arxiv.org/abs/2605.12754" rel="external nofollow noopener" target="_blank">arXiv:2605.12754</a>
+</li>
+    <li>Ta, H. B., Cardei, M., Velasquez, A., Fioretto, F. (2026). Search-Augmented Masked Diffusion Models for Constrained Generation. <a href="https://arxiv.org/abs/2602.02727" rel="external nofollow noopener" target="_blank">arXiv:2602.02727</a>
+</li>
+    <li>Shao, L., Cardei, M., Xie, Z., Fioretto, F., Wang, W. (2026). Constrained Code Generation with Discrete Diffusion. <a href="https://arxiv.org/abs/2605.16829" rel="external nofollow noopener" target="_blank">arXiv:2605.16829</a>
+</li>
+  </ul>
+
+</div>
 
           </article><div id="giscus_thread" style="max-width: 1140px; margin: 0 auto;">
   <script>
@@ -344,7 +700,7 @@ When deploying generative AI in physical systems, a hallucination or an physical
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2026 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: May 23, 2026.
+Last updated: May 24, 2026.
       </div>
     </footer>
 
