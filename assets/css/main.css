@@ -689,6 +689,32 @@ blockquote {
   display: inline-block;
   margin: 0;
 }
+.profile .profile-social {
+  margin-top: 0.55rem;
+  text-align: center;
+}
+.profile .profile-social .contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.profile .profile-social .contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--global-text-color);
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.profile .profile-social .contact-icons a i::before {
+  color: currentColor;
+}
+.profile .profile-social .contact-icons a:hover {
+  color: var(--global-theme-color);
+  transform: translateY(-1px);
+}
 
 .profile.float-right {
   margin-left: 1rem;
@@ -705,6 +731,12 @@ blockquote {
   .profile .address p {
     font-size: 0.95rem;
     display: block;
+  }
+  .profile .profile-social {
+    text-align: left;
+  }
+  .profile .profile-social .contact-icons {
+    justify-content: flex-start;
   }
 }
 .post-description {

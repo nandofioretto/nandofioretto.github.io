@@ -13,7 +13,7 @@
     <title>publications | Ferdinando (Nando)  Fioretto</title>
     <meta name="author" content="Ferdinando (Nando)  Fioretto">
     <meta name="description" content="Papers grouped by year in reverse chronological order.">
-    <meta name="keywords" content="Ferdinando Fioretto, AI, ML, Optimization, differential privacy, fairness, trustworthy, university of virginia">
+    <meta name="keywords" content="Ferdinando Fioretto, foundational machine learning, generative AI, foundation models, controllable generative models, constrained AI, physics-informed machine learning, AI for science, AI for engineering, optimization, control, responsible AI, trustworthy AI, differential privacy, fairness, University of Virginia">
 
 
     <!-- Bootstrap & MDB -->
@@ -398,7 +398,7 @@
 <li>
 <!-- _layouts/bib.html --><div class="pub-item">
   <div class="pub-line">
-<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">SEGAN 2026</span><div class="pub-main">
+<span class="pub-badge" style="background-color: #99ccff; color: #1f2937 !important"><a href="https://www.sciencedirect.com/journal/sustainable-energy-grids-and-networks" style="color: #1f2937 !important;" rel="external nofollow noopener" target="_blank">SEGAN 2026</a></span><div class="pub-main">
       <div class="pub-header">
         <strong class="pub-title has-abstract"><span class="title-abstract-toggle">Stability-Constrained AC Optimal Power Flow – A Gaussian Process-Based</span></strong>
 </div>
@@ -418,6 +418,7 @@
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{Sustainable Energy, Grids and Networks}</span><span class="p">,</span>
   <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2507.23094}</span><span class="p">,</span>
   <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.48550/arXiv.2507.23094}</span><span class="p">,</span>
+  <span class="na">funding</span> <span class="p">=</span> <span class="s">{NSF-2345528, NSF-2401285, NSF-2334936}</span>
 <span class="p">}</span></code></pre></figure>
         </div>
     </div>
@@ -461,26 +462,29 @@
   <div class="pub-line">
 <span class="pub-badge" style="background-color: #99ccff; color: #1f2937 !important"><a href="https://www.sciencedirect.com/journal/electric-power-systems-research" style="color: #1f2937 !important;" rel="external nofollow noopener" target="_blank">EPSR 2026</a></span><div class="pub-main">
       <div class="pub-header">
-        <strong class="pub-title has-abstract"><span class="title-abstract-toggle">Learning to Optimize meets Neural-ODE: Real-Time, Stability-Constrained AC OPF</span></strong>
+        <strong class="pub-title has-abstract"><span class="title-abstract-toggle">Learning to optimize meets neural-ODE: Real-time, stability-constrained AC OPF</span></strong>
 </div>
 <div class="pub-authors">Vincenzo Di Vito, Mostafa Mohammadian, Kyri Baker, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Electric Power Systems Research</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2410.19157" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>Electric Power Systems Research</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.sciencedirect.com/science/article/pii/S0378779626003640" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2410.19157" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
-          <p>Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF’s physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 57-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.</p>
+          <p>Recent developments in applying machine learning to address Alternating Current Optimal Power Flow (AC OPF) problems have demonstrated significant potential in providing close to optimal solutions for generator dispatch in near real-time. While these learning to optimize (LtO) methods have demonstrated remarkable performance on steady-state operations, practical applications often demand compliance with dynamic constraints when used for fast-timescale optimization. This paper addresses this gap and develops a real-time stability-constrained OPF model (DynOPF-Net) that simultaneously addresses both optimality and dynamical stability within learning-assisted grid operations. The model is a unique integration of learning to optimize that learns a mapping from load conditions to OPF solutions, capturing the OPF’s physical and engineering constraints, with Neural Ordinary Differential Equations, capturing generator dynamics, enabling the inclusion of a subset of stability constraints. Numerical results on the WSCC 9-bus and IEEE 118-bus benchmark systems demonstrate that DynOPF-Net can produce highly accurate AC-OPF solutions while also ensuring system stability, contrasting the unstable results obtained by state-of-the-art LtO methods.</p>
         </div>
 <div class="bibtex hidden pub-section">
           <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Fioretto:epsr26</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Learning to Optimize meets Neural-ODE: Real-Time, Stability-Constrained AC OPF}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Vito, Vincenzo Di and Mohammadian, Mostafa and Baker, Kyri and Fioretto, Ferdinando}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Learning to optimize meets neural-ODE: Real-time, stability-constrained AC OPF}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Di Vito}, Vincenzo and Mohammadian, Mostafa and Baker, Kyri and Fioretto, Ferdinando}</span><span class="p">,</span>
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{Electric Power Systems Research}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
-  <span class="na">pages</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{258}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{113071}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{0378-7796}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1016/j.epsr.2026.113071}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.sciencedirect.com/science/article/pii/S0378779626003640}</span><span class="p">,</span>
+  <span class="na">funding</span> <span class="p">=</span> <span class="s">{NSF-2345528, NSF-2401285, NSF-2334936}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
         </div>
     </div>
@@ -496,7 +500,7 @@
 </div>
 <div class="pub-authors">Minseok Oh, Jihun Park, Jongmin Gim, Minwoo Choi, Kyoungmin Lee, <strong class="self-author">Ferdinando Fioretto</strong>, and Sunghoon Im</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Computer Vision and Pattern Recognition</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a></span>
+        <span class="pub-venue"><em>In Computer Vision and Pattern Recognition</em>, Jun 2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openaccess.thecvf.com/content/CVPR2026F/html/Oh_FREESTYLE_An_Anchor-Free_Mechanism_for_Training-Free_Style-Aligned_Image_Generation_CVPRF_2026_paper.html" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -506,9 +510,11 @@
           <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Fioretto:CVPR26</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Oh, Minseok and Park, Jihun and Gim, Jongmin and Choi, Minwoo and Lee, Kyoungmin and Fioretto, Ferdinando and Im, Sunghoon}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{FREESTYLE: An Anchor-Free Mechanism for Training-Free Style-Aligned Image Generation}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Computer Vision and Pattern Recognition}</span><span class="p">,</span>
-  <span class="na">funding</span> <span class="p">=</span> <span class="s">{NSF 2133169, NSF 2143706, NSF 2232054, DARPA HR0011252E005}</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="nv">jun</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{3779-3788}</span><span class="p">,</span>
+  <span class="na">funding</span> <span class="p">=</span> <span class="s">{NSF 2401285, NSF 2533631, NSF 2334936, DARPA HR0011252E005}</span>
 <span class="p">}</span></code></pre></figure>
         </div>
     </div>
@@ -525,7 +531,7 @@
 <div class="pub-authors">Jacob K Christopher, Austin Seamann, Jingyi Cui, Sagar Khare, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Learning Representations</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.biorxiv.org/content/early/2025/10/15/2025.10.15.682365" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2510.14989" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference on Learning Representations</em>, Jun 2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.biorxiv.org/content/early/2025/10/15/2025.10.15.682365" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2510.14989" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -556,7 +562,7 @@
 </div>
 <div class="pub-authors">Prince Zizhuang Wang, Jinhao Liang, Shuyi Chen, <strong class="self-author">Ferdinando Fioretto</strong>, and Shixiang Zhu</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Learning Representations</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2502.05468" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference on Learning Representations</em>, Jun 2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2502.05468" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -586,7 +592,7 @@
 <div class="pub-authors">Jameson Sandler, Jacob K Christopher, Thomas Hartvigsen, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Conference on Machine Learning and Systems</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2511.00606" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Conference on Machine Learning and Systems</em>, Jun 2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2511.00606" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -599,7 +605,7 @@
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Conference on Machine Learning and Systems}</span><span class="p">,</span>
   <span class="na">volume</span> <span class="p">=</span> <span class="s">{9}</span><span class="p">,</span>
-  <span class="na">funding</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">funding</span> <span class="p">=</span> <span class="s">{NVIDIA Academic Grant Program Award, NSF 2334448, NSF 2401285, NSF 2533631, DARPA HR0011252E005, UVA National Security Data &amp; Policy Institute, ODNI 2024-24070100001}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
         </div>
     </div>
@@ -615,7 +621,7 @@
 </div>
 <div class="pub-authors">James Kotary, Himanshu Sharma, Ethan King, Draguna Vrabie, <strong class="self-author">Ferdinando Fioretto</strong>, and Jan Drgona</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Annual Learning for Dynamics and Control Conference</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2507.09050" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Annual Learning for Dynamics and Control Conference</em>, Jun 2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2507.09050" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -644,7 +650,7 @@
 </div>
 <div class="pub-authors">Robin Staab, Nikola Jovanović, Kimberly Mai, Prakhar Ganesh, Martin Vechev, <strong class="self-author">Ferdinando Fioretto</strong>, and Matthew Jagielski</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In IEEE Secure and Trustworthy Machine Learning Conference</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2508.10836" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In IEEE Secure and Trustworthy Machine Learning Conference</em>, Jun 2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2508.10836" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -675,7 +681,7 @@
 <div class="pub-authors">Jinhao Liang, Sven Koenig, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2508.20095" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>, Jun 2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2508.20095" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -705,7 +711,7 @@
 </div>
 <div class="pub-authors">Prakhar Ganesh, Yash More, Marco Romanelli, <strong class="self-author">Ferdinando Fioretto</strong>, and Golnoosh Farnadi</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In PerFM Workshop - at AAAI</em>,  2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a></span>
+        <span class="pub-venue"><em>In PerFM Workshop - at AAAI</em>, Jun 2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -738,7 +744,7 @@
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Pascal Van Hentenryck, and  others</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Now Publishers, Inc.</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.nowpublishers.com/article/BookDetails/9781638284765" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>Now Publishers, Inc.</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.nowpublishers.com/article/BookDetails/9781638284765" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -776,7 +782,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Pascal Van Hentenryck, and Juba Ziani</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Differential Privacy in Artificial Intelligence: From Theory to Practice</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.nowpublishers.com/article/Chapter/9781638284765?cId=978-1-63828-477-2.ch1" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In Differential Privacy in Artificial Intelligence: From Theory to Practice</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.nowpublishers.com/article/Chapter/9781638284765?cId=978-1-63828-477-2.ch1" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -809,7 +815,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Raed Al Kontar, Tianbao Yang, <strong class="self-author">Ferdinando Fioretto</strong>, and Farzad Yousefian and</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>IISE Transactions</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1080/24725854.2025.2479047" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>IISE Transactions</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1080/24725854.2025.2479047" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="bibtex hidden pub-section">
@@ -841,7 +847,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Stefano Zampini, Jacob K Christopher, Luca Oneto, Davide Anguita, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/pdf/fe2309484ca87adfc6434f42e5b2fb59b6eaf125.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2502.05625" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/pdf/fe2309484ca87adfc6434f42e5b2fb59b6eaf125.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2502.05625" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -872,7 +878,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Michael Cardei, Jacob K Christopher, Thomas Hartvigsen, Bhavya Kailkhura, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/pdf/eb98757a94d8cafb436dc1e9329097a01d9c490b.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2503.09790" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/pdf/eb98757a94d8cafb436dc1e9329097a01d9c490b.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2503.09790" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -906,7 +912,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Vladimir Dvorkin, <strong class="self-author">Ferdinando Fioretto</strong>, Pascal Van Hentenryck, Pierre Pinson, and Jalal Kazempour</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In IEEE Conference on Decision and Control (CDC)</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2209.14152" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2209.14152" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In IEEE Conference on Decision and Control (CDC)</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2209.14152" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2209.14152" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -935,7 +941,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Jinhao Liang, Jacob Christopher, Sven Koenig, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Machine Learning</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2502.03607" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference on Machine Learning</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2502.03607" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -964,7 +970,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Jacob K. Christopher, Michael Cardei, Jinhao Liang, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Neuro-symbolic Systems (NeuS)</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2506.01121" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference on Neuro-symbolic Systems (NeuS)</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2506.01121" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -992,7 +998,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Prakhar Ganesh, Cuong Tran, and Reza Shokri</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2405.19471" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2405.19471" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -1024,7 +1030,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Vincenzo Di Vito, Mostafa Mohammadian, Kyri Baker, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Learning Representations</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2410.01786" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference on Learning Representations</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2410.01786" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1054,7 +1060,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Jacob K Christopher, Michael Cardei, Brian R Bartoldson, Bhavya Kailkhura, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2408.05636" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2408.05636" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -1088,7 +1094,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Diptangshu Sen, and Juba Ziani</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference for Artificial Intelligence and Statistics</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2408.05246" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference for Artificial Intelligence and Statistics</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2408.05246" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1118,7 +1124,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Joonhyuk Ko, Juba Ziani, Saswat Das, Matt Williams, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2408.08471" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2408.08471" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1147,7 +1153,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Khang Tran, <strong class="self-author">Ferdinando Fioretto</strong>, Issa Khalil, My T. Thai, and NhatHai Phan</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In IEEE Secure and Trustworthy Machine Learning Conference (SaTML 2025)</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2305.16474" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In IEEE Secure and Trustworthy Machine Learning Conference (SaTML 2025)</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2305.16474" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1177,7 +1183,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Michael Cardei, Jacob K Christopher, Thomas Hartvigsen, Bhavya Kailkhura, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In NeurIPS 2025 Workshop on AI Virtual Cells and Instruments: A New Era in Drug Discovery and Development</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In NeurIPS 2025 Workshop on AI Virtual Cells and Instruments: A New Era in Drug Discovery and Development</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1207,7 +1213,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Jingyi Cui, Jacob K Christopher, Ankita Biswas, Prasanna V. Balachandran, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AI for Accelerated Materials Design - NeurIPS</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/pdf?id=L3LYjJJoL5" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In AI for Accelerated Materials Design - NeurIPS</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/pdf?id=L3LYjJJoL5" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1237,7 +1243,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Saswat Das, Marco Romanelli, Cuong Tran, Bhavya Kailkhura, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI CoLoRAI Workshop</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2405.18572" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In AAAI CoLoRAI Workshop</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2405.18572" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1266,7 +1272,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Jinhao Liang, Jacob Christopher, Sven Koenig, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In The 6th International Workshop on Multi-Agent Path Finding, at AAAI</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2412.17993" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In The 6th International Workshop on Multi-Agent Path Finding, at AAAI</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2412.17993" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -1299,7 +1305,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Vincenzo Di Vito, Mostafa Mohammadian, Kyri Baker, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI 2025 Bridge on Explainable AI, Energy and Critical Infrastructure Systems</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2410.19157" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In AAAI 2025 Bridge on Explainable AI, Energy and Critical Infrastructure Systems</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2410.19157" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1329,7 +1335,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Jinhao Liang, Yixuan Sun, Anirban Samaddar, Sandeep Madireddy, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2509.25157" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2509.25157" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -1363,7 +1369,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Yusuf Guven, Vincenzo Di Vito, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2509.24573" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2509.24573" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1393,7 +1399,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Jameson Sandler, Ahmet Üstün, Marco Romanelli, Sara Hooker, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2510.02128" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2510.02128" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1423,7 +1429,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Saswat Das, Jameson Sandler, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2506.10171" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2025</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2506.10171" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -1461,7 +1467,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">My H. Dinh, James Kotary, Lauryn P. Gouldin, William Yeoh, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2410.17415" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2410.17415" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1491,7 +1497,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">James Kotary, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2403.03454" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2403.03454" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1521,7 +1527,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">James Kotary, Jacob Christopher, My H Dinh, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2312.17394" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2312.17394" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1551,7 +1557,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Jayanta Mandi, James Kotary, Senne Berden, Maxime Mulamba, Victor Bucarey, Tias Guns, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Journal of Artificial Intelligence Research</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2307.13565" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>Journal of Artificial Intelligence Research</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2307.13565" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1582,7 +1588,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Jacob K Christopher, Stephen Baek, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/a28af221f2f70be183afc16797a56b91-Abstract-Conference.html" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2402.03559" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/a28af221f2f70be183afc16797a56b91-Abstract-Conference.html" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2402.03559" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -1618,7 +1624,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Jacob K Christopher, Stephen Baek, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>AI 4 Material Science workshop, at NeurIPS</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://neurips.cc/virtual/2024/100112" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2402.03559" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>AI 4 Material Science workshop, at NeurIPS</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://neurips.cc/virtual/2024/100112" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2402.03559" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1649,7 +1655,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Prakhar Ganesh, Cuong Tran, and Reza Shokri</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In NeurIPS 2024 Workshop on Regulatory ML</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a></span>
+        <span class="pub-venue"><em>In NeurIPS 2024 Workshop on Regulatory ML</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -1687,7 +1693,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Ethan King, James Kotary, <strong class="self-author">Ferdinando Fioretto</strong>, and Jan Drgona</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In IEEE Conference on Decision and Control (CDC)</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2404.00882" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In IEEE Conference on Decision and Control (CDC)</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2404.00882" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1716,7 +1722,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">James Kotary, Vincenzo Di Vito, Jacob Christopher, Pascal Van Hentenryck, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In European Conference on Artificial Intelligence</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2311.13087" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In European Conference on Artificial Intelligence</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2311.13087" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1747,7 +1753,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Sree Harsha Nelaturu, Nishaanth Kanna Ravichandran, Cuong Tran, Sara Hooker, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Machine Learning</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2312.03886" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference on Machine Learning</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2312.03886" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1777,7 +1783,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Saswat Das, Marco Romanelli, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Machine Learning</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2402.03629" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference on Machine Learning</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2402.03629" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1807,7 +1813,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">My H. Dinh, James Kotary, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In ICML 2024 Workshop on Differentiable Almost Everything</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/forum?id=NBt4ZBOFth" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In ICML 2024 Workshop on Differentiable Almost Everything</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/forum?id=NBt4ZBOFth" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1836,7 +1842,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">My H. Dinh, James Kotary, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Conference on Uncertainty in Artificial Intelligence</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2402.07772" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Conference on Uncertainty in Artificial Intelligence</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2402.07772" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1866,7 +1872,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Cuong Tran, Keyu Zhu, Pascal Van Hentenryck, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.48550/arXiv.2211.11835" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2211.11835" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.48550/arXiv.2211.11835" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2211.11835" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1899,7 +1905,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Keyu Zhu, Pascal Van Hentenryck, Saswat Das, and Christine Task</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ojs.aaai.org/index.php/AAAI/article/view/30204" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2301.12204" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ojs.aaai.org/index.php/AAAI/article/view/30204" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2301.12204" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1931,7 +1937,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">My H. Dinh, James Kotary, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)</em>,  2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://facctconference.org/static/papers24/facct24-167.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2402.05252" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)</em>, Jun 2024</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://facctconference.org/static/papers24/facct24-167.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2402.05252" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1964,7 +1970,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Mostafa Mohammadian, Kyri Baker, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Electric Power Systems Research</em>,  2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1016/j.epsr.2023.109551" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>Electric Power Systems Research</em>, Jun 2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1016/j.epsr.2023.109551" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -1996,7 +2002,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Cuong Tran, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>,  2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/pdf?id=cZS5X3PLOR" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2305.17593" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>, Jun 2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/pdf?id=cZS5X3PLOR" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2305.17593" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2027,7 +2033,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Vladimir Dvorkin, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In NeurIPS 2023 Workshop: Tackling Climate Change with Machine Learning</em>,  2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.climatechange.ai/events/neurips2023" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2308.01436" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In NeurIPS 2023 Workshop: Tackling Climate Change with Machine Learning</em>, Jun 2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.climatechange.ai/events/neurips2023" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2308.01436" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2058,7 +2064,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Cuong Tran, Keyu Zhu, <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2023/56" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2204.05157" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2023/56" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2204.05157" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2090,7 +2096,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Cuong Tran, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2023/57" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2109.08630" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2023/57" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2109.08630" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -2127,7 +2133,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">James Kotary, Vincenzo Di Vito, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2023/217" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2023/217" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2159,7 +2165,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">James Kotary, My H. Dinh, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2023/218" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2301.12047" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2023/218" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2301.12047" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2191,7 +2197,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">James Kotary, Vincenzo Di Vito, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p2613.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2211.00251" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p2613.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2211.00251" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2220,7 +2226,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">My H. Dinh, <strong class="self-author">Ferdinando Fioretto</strong>, Mostafa Mohammadian, and Kyri Baker</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In IEEE PES Innovative Smart Grid Technologies</em>,  2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ieee-isgt-latam.org" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2111.11168" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In IEEE PES Innovative Smart Grid Technologies</em>, Jun 2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ieee-isgt-latam.org" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2111.11168" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2252,7 +2258,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">My H. Dinh, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2301.12288" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2023</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2301.12288" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2284,7 +2290,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Khoi D. Hoang, <strong class="self-author">Ferdinando Fioretto</strong>, Ping Hou, William Yeoh, Makoto Yokoo, and Roie Zivan</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Journal of Artificial Intelligence Research</em>,  2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1613/jair.1.13499" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>Journal of Artificial Intelligence Research</em>, Jun 2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1613/jair.1.13499" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2315,7 +2321,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Cuong Tran, <strong class="self-author">Ferdinando Fioretto</strong>, Jung-Eun Kim, and Rakshit Naidu</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>,  2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/forum?id=11nMVZK0WYM" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2205.13574" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>, Jun 2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/forum?id=11nMVZK0WYM" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2205.13574" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2346,7 +2352,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">James Kotary, <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>,  2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ojs.aaai.org/index.php/AAAI/article/view/20685" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2110.06365" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>, Jun 2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ojs.aaai.org/index.php/AAAI/article/view/20685" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2110.06365" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2376,7 +2382,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Keyu Zhu, <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2022/559" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2201.09425" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2022/559" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2201.09425" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2408,7 +2414,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Cuong Tran, Pascal Van Hentenryck, and Keyu Zhu</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2022/766" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2202.08187" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2022/766" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2202.08187" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2439,7 +2445,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors"><strong class="self-author">Ferdinando Fioretto</strong></div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2022/815" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2022/815" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2470,7 +2476,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">James Kotary, <strong class="self-author">Ferdinando Fioretto</strong>, Pascal Van Hentenryck, and Ziwei Zhu</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In The ACM Web Conference</em>,  2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1145/3485447.3512247" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2111.10723" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In The ACM Web Conference</em>, Jun 2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1145/3485447.3512247" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2111.10723" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2502,7 +2508,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Lesia Mitridati, Emma Romei, Gabriela Hug, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Probabilistic Methods Applied to Power Systems</em>,  2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a></span>
+        <span class="pub-venue"><em>In International Conference on Probabilistic Methods Applied to Power Systems</em>, Jun 2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2532,7 +2538,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Mostafa Mohammadian, Kyri Baker, My H. Dinh, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Probabilistic Methods Applied to Power Systems</em>,  2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a></span>
+        <span class="pub-venue"><em>In International Conference on Probabilistic Methods Applied to Power Systems</em>, Jun 2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2561,7 +2567,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Sawinder Kaur, <strong class="self-author">Ferdinando Fioretto</strong>, and Asif Salekin</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2202.05226" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2202.05226" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2022</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2202.05226" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2202.05226" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2592,7 +2598,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Terrence W. K. Mak, <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In IEEE Power &amp; Energy Society (PES) General Meeting</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2101.03973" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In IEEE Power &amp; Energy Society (PES) General Meeting</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2101.03973" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2621,7 +2627,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Pascal Van Hentenryck, and Keyu Zhu</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Artificial Intelligence Journal</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1016/j.artint.2021.103475" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2006.15673" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>Artificial Intelligence Journal</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1016/j.artint.2021.103475" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2006.15673" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2652,7 +2658,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Vladimir Dvorkin, <strong class="self-author">Ferdinando Fioretto</strong>, Pascal Van Hentenryck, Pierre Pinson, and Jalal Kazempour</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>IEEE Transactions on Power Systems</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ieeexplore.ieee.org/document/9226144" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2004.03921" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>IEEE Transactions on Power Systems</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ieeexplore.ieee.org/document/9226144" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2004.03921" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2685,7 +2691,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Cuong Tran, My H. Dinh, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/forum?id=7EFdodSWee4" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2106.02674" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/forum?id=7EFdodSWee4" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2106.02674" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2716,7 +2722,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">James Kotary, <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/forum?id=2zO2lb7ykMD" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2106.02601" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In Advances in Neural Information Processing Systems</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://openreview.net/forum?id=2zO2lb7ykMD" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2106.02601" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2747,7 +2753,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Cuong Tran, <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ojs.aaai.org/index.php/AAAI/article/view/17193" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2009.12562" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ojs.aaai.org/index.php/AAAI/article/view/17193" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2009.12562" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -2783,7 +2789,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Keyu Zhu, Pascal Van Hentenryck, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ojs.aaai.org/index.php/AAAI/article/view/17333" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2010.04327" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ojs.aaai.org/index.php/AAAI/article/view/17333" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2010.04327" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2813,7 +2819,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Cuong Tran, <strong class="self-author">Ferdinando Fioretto</strong>, Pascal Van Hentenryck, and Zhiyan Yao</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2021/78" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2105.07513" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2021/78" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2105.07513" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -2848,7 +2854,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">James Kotary, <strong class="self-author">Ferdinando Fioretto</strong>, Pascal Van Hentenryck, and Bryan Wilder</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2021/610" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2103.16378" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2021/610" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2103.16378" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2880,7 +2886,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Anudit Nagar, Cuong Tran, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2021/pdfs/p1605.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2106.01242" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2021/pdfs/p1605.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2106.01242" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -2909,7 +2915,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors"><strong class="self-author">Ferdinando Fioretto</strong></div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>,  2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.4230/LIPIcs.CP.2021.2" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>, Jun 2021</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.4230/LIPIcs.CP.2021.2" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="bibtex hidden pub-section">
@@ -2942,7 +2948,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Grace Bang, Guy Barash, Ryan Beal, Jacques Calı̀, Mauricio Castillo-Effen, Xin Cynthia Chen, Niyati Chhaya, Rachel Cummings, Rohan Dhoopar, Sebastijan Dumancic, Huáscar Espinoza, Eitan Farchi, <strong class="self-author">Ferdinando Fioretto</strong>, Raquel Fuentetaja, Christopher William Geib, Odd Erik Gundersen, José Hernández-Orallo, Xiaowei Huang, Kokil Jaidka, Sarah Keren, Seokhwan Kim, Michel Galley, Xiaomo Liu, Tyler Lu, Zhiqiang Ma, Richard Mallah, John A. McDermid, Martin Michalowski, Reuth Mirsky, Seán Ó hÉigeartaigh, Deepak Ramachandran, Javier Segovia Aguas, Onn Shehory, Arash Shaban-Nejad, Vered Shwartz, Siddharth Srivastava, Kartik Talamadupula, Jian Tang, Pascal Van Hentenryck, Dell Zhang, and Jian Zhang</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>AI Magazine</em>,  2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1609/aimag.v41i4.7398" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>AI Magazine</em>, Jun 2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1609/aimag.v41i4.7398" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="bibtex hidden pub-section">
@@ -2972,7 +2978,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Terrence W. K. Mak, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>IEEE Transactions on Smart Grids</em>,  2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1109/TSG.2019.2936712" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1901.06949" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>IEEE Transactions on Smart Grids</em>, Jun 2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1109/TSG.2019.2936712" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1901.06949" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3004,7 +3010,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Terrence W. K. Mak, <strong class="self-author">Ferdinando Fioretto</strong>, Lyndon Shi, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>IEEE Transactions on Power Systems</em>,  2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2001.09508" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>IEEE Transactions on Power Systems</em>, Jun 2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2001.09508" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3024,7 +3030,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Terrence W. K. Mak, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>,  2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ojs.aaai.org/index.php/AAAI/article/view/5403" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1909.10461" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>, Jun 2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://ojs.aaai.org/index.php/AAAI/article/view/5403" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1909.10461" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3055,7 +3061,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Lesia Mitridati, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2020/481" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2002.00944" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2020/481" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2002.00944" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3087,7 +3093,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2020</span><span class="pub-note-inline">Appeared in JAIR 2019</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2020/722" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1808.01949" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2020</span><span class="pub-note-inline">Appeared in JAIR 2019</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2020/722" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1808.01949" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3120,7 +3126,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Pascal Van Hentenryck, Terrence W. K. Mak, Cuong Tran, Federico Baldo, and Michele Lombardi</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In European Conference on Machine Learning</em>,  2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-030-67670-4_8" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2001.09394" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In European Conference on Machine Learning</em>, Jun 2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-030-67670-4_8" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2001.09394" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3153,7 +3159,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Terrence W.K. Mak, <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Electric Power Systems Research</em>,  2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.sciencedirect.com/science/article/pii/S0378779620305216" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1910.04250" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>Electric Power Systems Research</em>, Jun 2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.sciencedirect.com/science/article/pii/S0378779620305216" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1910.04250" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3186,7 +3192,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Atena M. Tabakhi, William Yeoh, and <strong class="self-author">Ferdinando Fioretto</strong>
 </div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Principles and Practice of Multi-Agent Systems</em>,  2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://link.springer.com/chapter/10.1007/978-3-030-69322-0_7" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In Principles and Practice of Multi-Agent Systems</em>, Jun 2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://link.springer.com/chapter/10.1007/978-3-030-69322-0_7" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3219,7 +3225,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Vladimir Dvorkin, <strong class="self-author">Ferdinando Fioretto</strong>, Pascal Van Hentenryck, Jalal Kazempour, and Pierre Pinson</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2006.12338" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2006.12338" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2006.12338" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2006.12338" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3247,7 +3253,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Minas Chatzos, <strong class="self-author">Ferdinando Fioretto</strong>, Terrence W. K. Mak, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>CoRR</em>,  2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2006.16356" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2006.16356" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>CoRR</em>, Jun 2020</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/abs/2006.16356" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/2006.16356" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3279,7 +3285,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Journal of Artificial Intelligence Research</em>,  2019</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1613/jair.1.11583" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>Journal of Artificial Intelligence Research</em>, Jun 2019</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1613/jair.1.11583" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3311,7 +3317,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2019</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2019/pdfs/p638.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2019</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2019/pdfs/p638.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3341,7 +3347,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>,  2019</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-030-30048-7_37" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>, Jun 2019</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-030-30048-7_37" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3375,7 +3381,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Terrence W. K. Mak, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>,  2019</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2019/152" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1905.09778" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Joint Conference on Artificial Intelligence</em>, Jun 2019</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.24963/ijcai.2019/152" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1905.09778" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3411,7 +3417,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Agostino Dovier, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Intelligenza Artificiale</em>,  2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://hdl.handle.net/11390/1144942" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>Intelligenza Artificiale</em>, Jun 2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://hdl.handle.net/11390/1144942" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3444,7 +3450,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Enrico Pontelli, and William Yeoh</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Journal of Artificial Intelligence Research</em>,  2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1613/jair.5565" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>Journal of Artificial Intelligence Research</em>, Jun 2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1613/jair.5565" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3476,7 +3482,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Enrico Pontelli, William Yeoh, and Rina Dechter</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Constraints - An International Journal</em>,  2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/s10601-017-9274-1" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1608.05288" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>Constraints - An International Journal</em>, Jun 2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/s10601-017-9274-1" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1608.05288" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3509,7 +3515,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, and William Yeoh</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>AI Matters</em>,  2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1145/3175502.3175506" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>AI Matters</em>, Jun 2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1145/3175502.3175506" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="bibtex hidden pub-section">
@@ -3539,7 +3545,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Theory Pract. Log. Program.</em>,  2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1017/S1471068418000406" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>Theory Pract. Log. Program.</em>, Jun 2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1017/S1471068418000406" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="bibtex hidden pub-section">
@@ -3569,7 +3575,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Chansoo Lee, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2018/pdfs/p1405.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2018/pdfs/p1405.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3598,7 +3604,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Khoi D. Hoang, <strong class="self-author">Ferdinando Fioretto</strong>, William Yeoh, Enrico Pontelli, and Roie Zivan</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>,  2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-98334-9_44" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1702.06915" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
+        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>, Jun 2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-98334-9_44" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a><span class="pub-link-sep">|</span><a href="https://arxiv.org/pdf/1702.06915" class="pub-link" rel="external nofollow noopener" target="_blank">PDF</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3633,7 +3639,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, and Pascal Van Hentenryck</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Integration of Constraint Programming, Artificial Intelligence, and Operations Research</em>,  2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-93031-2_15" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In Integration of Constraint Programming, Artificial Intelligence, and Operations Research</em>, Jun 2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-93031-2_15" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3670,7 +3676,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <strong class="self-author">Ferdinando Fioretto</strong>, Hong Xu, Sven Koenig, and T. K. Satish Kumar</div>
 <div class="pub-info">
         <span class="pub-venue"><em>In International Symposium on Artificial Intelligence and Mathematics,
-                  ISAIM 2018, Fort Lauderdale, Florida, USA, January 3-5, 2018</em>,  2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://files.hong.me/papers/fioretto2018.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+                  ISAIM 2018, Fort Lauderdale, Florida, USA, January 3-5, 2018</em>, Jun 2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://files.hong.me/papers/fioretto2018.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3700,7 +3706,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Hong Xu, Sven Koenig, and T. K. Satish Kumar</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Principles and Practice of Multi-Agent Systems</em>,  2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-030-03098-8_7" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In Principles and Practice of Multi-Agent Systems</em>, Jun 2018</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-030-03098-8_7" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3736,7 +3742,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Porag Chowdhury, Russell Y. Folk, <strong class="self-author">Ferdinando Fioretto</strong>, Christopher Kiekintveld, and William Yeoh</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Agent-Mediated Electronic Commerce. Designing Trading Strategies and Mechanisms for Electronic Markets (AMEC/TADA)</em>,  2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a></span>
+        <span class="pub-venue"><em>Agent-Mediated Electronic Commerce. Designing Trading Strategies and Mechanisms for Electronic Markets (AMEC/TADA)</em>, Jun 2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3755,7 +3761,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">William Kluegel, Muhammad A. Iqbal, <strong class="self-author">Ferdinando Fioretto</strong>, William Yeoh, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAMAS 2017 Workshops, Visionary Papers, Revised Selected Papers</em>,  2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-71679-4_9" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In AAMAS 2017 Workshops, Visionary Papers, Revised Selected Papers</em>, Jun 2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-71679-4_9" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3788,7 +3794,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Khoi D. Hoang, Ping Hou, <strong class="self-author">Ferdinando Fioretto</strong>, William Yeoh, Roie Zivan, and Makoto Yokoo</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2017/pdfs/p212.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2017/pdfs/p212.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3818,7 +3824,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, William Yeoh, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2017/pdfs/p981.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2017/pdfs/p981.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3848,7 +3854,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, William Yeoh, Enrico Pontelli, Ye Ma, and Satishkumar J. Ranade</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2017/pdfs/p999.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2017/pdfs/p999.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3877,7 +3883,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Atena M. Tabakhi, Tiep Le, <strong class="self-author">Ferdinando Fioretto</strong>, and William Yeoh</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>,  2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-66158-2_18" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>, Jun 2017</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-66158-2_18" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -3913,7 +3919,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors"><strong class="self-author">Ferdinando Fioretto</strong></div>
 <div class="pub-info">
-        <span class="pub-venue"><em>University of Udine, Italy</em>,  2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://hdl.handle.net/11390/1132725" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>University of Udine, Italy</em>, Jun 2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://hdl.handle.net/11390/1132725" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="bibtex hidden pub-section">
@@ -3940,7 +3946,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-info">
         <span class="pub-venue"><em>In Agent-Mediated Electronic Commerce. Designing Trading Strategies and
                   Mechanisms for Electronic Markets - AMEC/TADA
-                  Revised Selected Papers</em>,  2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-54229-4_7" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+                  Revised Selected Papers</em>, Jun 2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-54229-4_7" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="bibtex hidden pub-section">
@@ -3973,7 +3979,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, William Yeoh, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>,  2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12093" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>, Jun 2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12093" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4003,7 +4009,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Khoi D. Hoang, <strong class="self-author">Ferdinando Fioretto</strong>, Ping Hou, Makoto Yokoo, William Yeoh, and Roie Zivan</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2016/pdfs/p597.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2016/pdfs/p597.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4032,7 +4038,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Tiep Le, <strong class="self-author">Ferdinando Fioretto</strong>, William Yeoh, Tran Cao Son, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2016/pdfs/p606.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2016/pdfs/p606.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4062,7 +4068,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, William Yeoh, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>,  2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-44953-1_51" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>, Jun 2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-44953-1_51" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4096,7 +4102,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">Khoi D. Hoang, <strong class="self-author">Ferdinando Fioretto</strong>, Ping Hou, Makoto Yokoo, William Yeoh, and Roie Zivan</div>
 <div class="pub-info">
         <span class="pub-venue"><em>In AI for Smart Grids and Smart Buildings, Papers from the 2016 AAAI
-                  Workshop, Phoenix, Arizona, USA, February 12, 2016</em>,  2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://auld.aaai.org/Library/Workshops/ws16-04.php" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+                  Workshop, Phoenix, Arizona, USA, February 12, 2016</em>, Jun 2016</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://auld.aaai.org/Library/Workshops/ws16-04.php" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="bibtex hidden pub-section">
@@ -4129,7 +4135,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Agostino Dovier, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>ACM Transaction on Modeling and Computer Simulation</em>,  2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1145/2688909" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>ACM Transaction on Modeling and Computer Simulation</em>, Jun 2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1145/2688909" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4161,7 +4167,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors"><strong class="self-author">Ferdinando Fioretto</strong></div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>,  2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9293" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In AAAI Conference on Artificial Intelligence</em>, Jun 2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9293" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4192,7 +4198,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, William Yeoh, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2015/aamas/p1823.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2015/aamas/p1823.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4222,7 +4228,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Federico Campeotto, Agostino Dovier, Enrico Pontelli, and William Yeoh</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2015/aamas/p1835.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2015/aamas/p1835.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4251,7 +4257,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors"><strong class="self-author">Ferdinando Fioretto</strong></div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>,  2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2015/aamas/p2007.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Autonomous Agents and Multiagent Systems</em>, Jun 2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2015/aamas/p2007.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4281,7 +4287,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Tiep Le, Enrico Pontelli, William Yeoh, and Tran Cao Son</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>,  2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-23219-5_9" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>, Jun 2015</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-23219-5_9" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4319,7 +4325,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Federico Campeotto, Luca Da Rin Fioretto, William Yeoh, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In AAMAS</em>,  2014</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2014/aamas/p1339.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In AAMAS</em>, Jun 2014</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.ifaamas.org/Proceedings/aamas2014/aamas/p1339.pdf" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4349,7 +4355,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, Tiep Le, William Yeoh, Enrico Pontelli, and Tran Cao Son</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In CP</em>,  2014</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-10428-7_24" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In CP</em>, Jun 2014</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-10428-7_24" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4382,7 +4388,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Federico Campeotto, Agostino Dovier, <strong class="self-author">Ferdinando Fioretto</strong>, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In European Conference on Artificial Intelligence</em>,  2014</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.3233/978-1-61499-419-0-189" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In European Conference on Artificial Intelligence</em>, Jun 2014</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.3233/978-1-61499-419-0-189" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4415,7 +4421,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Federico Campeotto, Alessandro Dal Palù, Agostino Dovier, <strong class="self-author">Ferdinando Fioretto</strong>, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Practical Aspects of Declarative Languages</em>,  2014</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-04132-2_11" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In Practical Aspects of Declarative Languages</em>, Jun 2014</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-319-04132-2_11" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4451,7 +4457,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Federico Campeotto, Alessandro Dal Palù, Agostino Dovier, <strong class="self-author">Ferdinando Fioretto</strong>, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>Journal of Artificial Intelligence Research</em>,  2013</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1613/jair.4193" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>Journal of Artificial Intelligence Research</em>, Jun 2013</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1613/jair.4193" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4471,7 +4477,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 <div class="pub-authors">
 <strong class="self-author">Ferdinando Fioretto</strong>, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In Computational Methods in Systems Biology</em>,  2013</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-642-40708-6_11" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In Computational Methods in Systems Biology</em>, Jun 2013</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a href="https://doi.org/10.1007/978-3-642-40708-6_11" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-badges"></div>
 <div class="abstract hidden pub-section">
@@ -4492,7 +4498,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
 </div>
 <div class="pub-authors">Federico Campeotto, Alessandro Dal Palù, Agostino Dovier, <strong class="self-author">Ferdinando Fioretto</strong>, and Enrico Pontelli</div>
 <div class="pub-info">
-        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>,  2012</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="http://dx.doi.org/10.1007/978-3-642-33558-7_61" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
+        <span class="pub-venue"><em>In International Conference on Principles and Practice of Constraint Programming</em>, Jun 2012</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="http://dx.doi.org/10.1007/978-3-642-33558-7_61" class="pub-link" rel="external nofollow noopener" target="_blank">Online</a></span>
 </div>
 <div class="pub-info">
           <span class="pub-alsoin"> 
@@ -4530,7 +4536,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2026 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: May 28, 2026.
+Last updated: June 17, 2026.
       </div>
     </footer>
 
