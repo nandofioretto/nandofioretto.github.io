@@ -1602,6 +1602,69 @@ footer.sticky-bottom {
   margin-top: 0.5rem;
 }
 
+.sponsors-band {
+  --sponsor-bg: rgba(15, 23, 42, 0.04);
+  --sponsor-border: rgba(15, 23, 42, 0.12);
+  --sponsor-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+  --sponsor-text: rgba(15, 23, 42, 0.6);
+  margin: 0.5rem auto 2rem;
+}
+
+.sponsors-inner {
+  border: 1px solid var(--sponsor-border);
+  background: linear-gradient(135deg, var(--sponsor-bg), rgba(15, 23, 42, 0.02));
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  box-shadow: var(--sponsor-shadow);
+}
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.25rem 1.5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.sponsor-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 64px;
+  padding: 0.5rem 0.25rem;
+  color: var(--sponsor-text);
+}
+
+.sponsor-item img {
+  width: 118px;
+  height: 56px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.78;
+  transition: filter 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.sponsor-item img:hover,
+.sponsor-item img:focus {
+  filter: none;
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 720px) {
+  .sponsors-inner {
+    padding: 1.25rem 1rem 1rem;
+  }
+  .sponsors-grid {
+    gap: 1rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sponsor-item img {
+    transition: none;
+  }
+}
 .highlight-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1615,7 +1678,7 @@ footer.sticky-bottom {
   align-items: stretch;
   padding: 1.25rem;
   border: 1px solid var(--global-divider-color);
-  border-radius: 16px;
+  border-radius: 8px;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.04), rgba(15, 23, 42, 0.01));
   box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
 }
@@ -1642,14 +1705,14 @@ footer.sticky-bottom {
   height: auto;
   aspect-ratio: 4/3;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 6px;
   display: block;
 }
 
 .highlight-placeholder {
   width: 100%;
   aspect-ratio: 4/3;
-  border-radius: 14px;
+  border-radius: 6px;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.02));
 }
 
