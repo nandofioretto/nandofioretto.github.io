@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Constraint-Aware Generative AI for Science and Engineering | Ferdinando (Nando)  Fioretto</title>
+    <title>Constraint-Aware Generative AI — Preview | Ferdinando (Nando)  Fioretto</title>
     <meta name="author" content="Ferdinando (Nando)  Fioretto">
-    <meta name="description" content="How RAISE Lab makes generative models obey physics, geometry, logic, and safety requirements.">
+    <meta name="description" content="A research-area guide to generative models that obey scientific constraints.">
     <meta name="keywords" content="Ferdinando Fioretto, foundational machine learning, generative AI, foundation models, controllable generative models, constrained AI, physics-informed machine learning, AI for science, AI for engineering, optimization, control, responsible AI, trustworthy AI, differential privacy, fairness, University of Virginia">
 
 
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://nandofioretto.github.io/projects/constrained-aware-genAI/">
+    <link rel="canonical" href="https://nandofioretto.github.io/preview/constrained-aware-genai/">
 
     <!-- Dark Mode -->
     
@@ -121,25 +121,19 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- Long-form layout for RAISE Lab research-area explainers. -->
+        <!-- Review-only layout for long-form research-area explainers. -->
 <main class="research-area-preview">
   <div class="research-area-page">
 
   <header class="research-hero">
   <div class="research-hero__copy">
-    <div class="research-lab-brand">
-      <img src="/assets/img/projects/constrained-diffusion/raise-lab-logo.png" alt="RAISE Lab — Responsible AI for Science and Engineering">
-      <div>
-<strong>RAISE Lab</strong><span>Responsible AI for Science &amp; Engineering</span>
-</div>
-    </div>
-    <div class="research-kicker">Research area guide <span>·</span> University of Virginia</div>
+    <div class="research-kicker">Research area guide <span>·</span> Fioretto Lab</div>
     <h1>Constraint-aware<br>generative AI</h1>
     <p class="research-deck">How to make diffusion and flow-matching models obey physics, geometry, logic, and safety requirements—without giving up the diversity that makes generative models useful.</p>
     <div class="research-meta" aria-label="Article metadata">
-      <span>9 papers synthesized</span>
+      <span>8 projects synthesized</span>
       <span>4 application areas</span>
-      <span>~22 min read</span>
+      <span>~18 min read</span>
     </div>
     <div class="research-actions">
       <a class="research-button research-button--primary" href="#start-here">Start with the intuition</a>
@@ -175,14 +169,14 @@
   <div class="research-shell">
   <aside class="research-toc" aria-label="On this page">
     <div class="research-toc__title">On this page</div>
-    <a href="#start-here">Diffusion primer</a>
+    <a href="#start-here">The problem</a>
     <a href="#core-idea">Core idea</a>
     <a href="#research-landscape">Research landscape</a>
     <a href="#protein-design">Protein design</a>
     <a href="#materials">Materials</a>
     <a href="#robotics">Robotics</a>
     <a href="#chemistry">Chemistry &amp; code</a>
-    <a href="#current-work">Current work</a>
+    <a href="#frontier">The frontier</a>
     <a href="#limitations">Limits &amp; open questions</a>
     <a href="#papers">Papers</a>
   </aside>
@@ -193,66 +187,7 @@
 
         <div class="section-label">01 · Start here</div>
 
-        <h2 id="from-data-to-noiseand-back-again">From data to noise—and back again</h2>
-
-        <p>A diffusion model learns to generate by first studying how data is destroyed. Given a clean sample \(x_0 \sim p_{\mathrm{data}}\), the <strong>forward process</strong> adds a small amount of Gaussian noise at each step:</p>
-
-\[q(x_t \mid x_{t-1}) = \mathcal{N}\!\left(\sqrt{1-\beta_t}\,x_{t-1},\,\beta_t I\right).\]
-
-        <p>Writing \(\alpha_t = 1-\beta_t\) and \(\bar\alpha_t=\prod_{s=1}^{t}\alpha_s\) lets us jump directly to any noise level:</p>
-
-\[x_t = \sqrt{\bar\alpha_t}\,x_0 + \sqrt{1-\bar\alpha_t}\,\epsilon, \qquad \epsilon \sim \mathcal{N}(0,I).\]
-
-        <p>Early states retain most of the structure in \(x_0\); late states are almost indistinguishable from Gaussian noise. The generative problem is to learn the reverse direction: starting from \(x_T \sim \mathcal{N}(0,I)\), recover a sequence of progressively cleaner states until reaching a sample \(x_0\).</p>
-
-        <div class="diffusion-steps" aria-label="Forward noising and reverse denoising processes">
-  <div>
-<span>Forward process</span><strong>Data → noise</strong><small>A fixed variance schedule gradually erases structure.</small>
-</div>
-  <div class="diffusion-steps__arrow">⇄</div>
-  <div>
-<span>Learned reverse process</span><strong>Noise → data</strong><small>A neural score estimates which direction increases probability.</small>
-</div>
-</div>
-
-        <h3 id="score-based-denoising">Score-based denoising</h3>
-
-        <p>Rather than learning the normalized density \(p_t(x)\) itself, a score-based model learns its spatial gradient:</p>
-
-\[s_\theta(x_t,t) \approx \nabla_{x_t}\log p_t(x_t).\]
-
-        <p>The score is a vector field. At any noisy point \(x_t\), it points toward nearby configurations that have higher probability under the perturbed data distribution. During training, denoising score matching provides the target analytically because the conditional corruption kernel is Gaussian:</p>
-
-\[\nabla_{x_t}\log q(x_t\mid x_0)
-= -\frac{x_t-\sqrt{\bar\alpha_t}x_0}{1-\bar\alpha_t}
-= -\frac{\epsilon}{\sqrt{1-\bar\alpha_t}}.\]
-
-        <p>The network is therefore trained across noise levels to minimize a weighted objective of the form</p>
-
-\[\mathcal{L}_{\mathrm{score}}(\theta)=
-\mathbb{E}_{t,x_0,\epsilon}\!\left[
-\lambda(t)\left\|s_\theta(x_t,t)+\frac{\epsilon}{\sqrt{1-\bar\alpha_t}}\right\|_2^2
-\right].\]
-
-        <div class="plain-language">
-  <div class="plain-language__mark">What the score learns</div>
-  <p>The network does not memorize a single route from noise to data. It learns a direction field at every noise level: “from this corrupted point, move this way to become more typical of the data.”</p>
-</div>
-
-        <h3 id="sampling-with-langevin-dynamics">Sampling with Langevin dynamics</h3>
-
-        <p>Once the score is learned, we can sample by following that field while retaining controlled stochasticity. A discretized Langevin update at noise level \(t\) is</p>
-
-\[x_t^{k+1}=x_t^k+\gamma_t s_\theta(x_t^k,t)+\sqrt{2\gamma_t}\,\xi^k,
-\qquad \xi^k\sim\mathcal{N}(0,I).\]
-
-        <p>The <strong>score term</strong> moves the sample toward regions of higher learned density. The <strong>Gaussian term</strong> preserves exploration, preventing every trajectory from collapsing onto the same local mode. Sampling is annealed from large to small noise levels: the process explores broadly when \(t\) is large, then becomes increasingly precise as \(t\to0\) and the variance schedule shrinks.</p>
-
-        <p>In the small-noise limit, the stochastic term becomes negligible and Langevin dynamics approaches gradient ascent on \(\log p_t(x)\). Equivalently, denoising approximately minimizes the negative log-likelihood \(-\log p_t(x)\). This optimization view is the bridge to constraint-aware generation.</p>
-
-        <p class="paper-link">Score-based generative modeling · <a href="https://proceedings.neurips.cc/paper/2019/hash/3001ef257407d5a371a96dcd947c7d93-Abstract.html" rel="external nofollow noopener" target="_blank">Song &amp; Ermon, NeurIPS 2019 →</a></p>
-
-        <h3 id="why-a-realistic-sample-is-not-necessarily-a-valid-one">Why a realistic sample is not necessarily a valid one</h3>
+        <h2 id="a-realistic-sample-is-not-necessarily-a-valid-one">A realistic sample is not necessarily a valid one</h2>
 
         <p>Diffusion models are excellent at learning what their training data <em>looks like</em>. Scientific and engineering systems demand something stricter: every output may also need to satisfy equations, geometric relationships, safety margins, or logical rules.</p>
 
@@ -310,41 +245,17 @@
 
         <h2 id="turn-every-denoising-step-into-a-small-constrained-optimization-problem">Turn every denoising step into a small constrained optimization problem</h2>
 
-        <p>A diffusion model gradually transforms noise \(x_T\) into a structured sample \(x_0\). The key observation behind our constraint-aware foundation is that each reverse step already behaves like a stochastic optimization step.</p>
-
-        <p>Recall that the learned score</p>
-
-\[s_\theta(x_t,t) \approx \nabla_{x_t}\log p_t(x_t)\]
-
-        <p>points toward configurations with higher probability under the model’s distribution at noise level \(t\). A Langevin reverse update follows that direction while adding Gaussian noise:</p>
+        <p>A diffusion model gradually transforms noise \(x_T\) into a structured sample \(x_0\). One view of a reverse step is noisy ascent along the model’s learned score:</p>
 
 \[x_t \leftarrow x_t + \gamma_t \nabla_{x_t} \log p(x_t) + \sqrt{2\gamma_t}\,\epsilon.\]
 
-        <p>Because ascending \(\log p_t(x)\) is equivalent to descending the negative log-likelihood \(f_t(x)=-\log p_t(x)\), this is a <strong>noisy descent step on the model’s own generative objective</strong>. At each noise level, ordinary reverse diffusion can therefore be viewed as approximately solving</p>
+        <p>If valid outputs live in a set \(C\), we can pair that model step with a projection:</p>
 
-\[\min_x\; -\log p_t(x).\]
-
-        <p>The noise is important early in sampling because it lets trajectories explore multiple high-probability regions. As \(t\to0\) and the variance schedule shrinks, the stochastic term becomes smaller and the update approaches ordinary gradient descent on \(-\log p_t(x)\). This is what makes the connection to constrained optimization natural: we do not replace the diffusion objective—we restrict where its solution is allowed to live.</p>
-
-        <p>If scientifically valid outputs form a feasible set \(C\), the reverse step becomes</p>
-
-\[\min_{x\in C}\; -\log p_t(x).\]
-
-        <p>Projected optimization gives a direct way to implement this constrained step. First, let the score model take its usual noisy denoising update:</p>
-
-\[\widetilde{x}_t = x_t + \gamma_t s_\theta(x_t,t) + \sqrt{2\gamma_t}\,\epsilon.\]
-
-        <p>Then map that proposal to its nearest feasible point:</p>
-
-\[x_t^{+}=\mathcal{P}_C(\widetilde{x}_t),
-\qquad
-\mathcal{P}_C(z)=\arg\min_{y\in C}\lVert y-z\rVert_2^2.\]
-
-        <p>This produces an alternating process: the <strong>score step</strong> preserves alignment with the learned data distribution, while the <strong>projection step</strong> enforces the explicit scientific or engineering requirements. Crucially, projection is applied throughout the reverse chain—not once after generation. Each feasible iterate becomes the starting point for the next denoising step, so the model and the constraint operator progressively negotiate a sample that is both likely and valid.</p>
+\[\mathcal{P}_C(x_t) = \arg\min_{y \in C} \lVert y-x_t \rVert_2^2.\]
 
         <div class="plain-language">
   <div class="plain-language__mark">In plain language</div>
-  <p>The model says, “move this way to look more like the data.” The projection replies, “this is the nearest point that also obeys the rules.” Repeating that exchange lets the pretrained model supply realism while constrained optimization supplies feasibility.</p>
+  <p>The model says, “this direction looks more like the data.” The constraint operator replies, “this nearby point is valid.” Repeating that conversation lets the pretrained model supply realism while optimization supplies guarantees.</p>
 </div>
 
         <figure class="research-figure">
@@ -381,8 +292,6 @@
 
           </div>
 </details>
-
-        <p class="paper-link">Constraint-aware foundation · <a href="https://arxiv.org/abs/2402.03559" rel="external nofollow noopener" target="_blank">Christopher, Baek &amp; Fioretto, NeurIPS 2024 →</a></p>
 
       </section>
 
@@ -426,46 +335,20 @@
 
         <h2 id="protein-design-with-hard-structural-constraints">Protein design with hard structural constraints</h2>
 
-        <p class="section-standfirst">The challenge is not merely to generate a plausible protein backbone. It is to preserve the exact three-dimensional relationships that support molecular recognition while allowing the surrounding structure to change.</p>
+        <p class="section-standfirst">The challenge is not merely to generate a plausible backbone. It is to preserve the exact geometric relationships that make a functional motif work while allowing the surrounding scaffold to vary.</p>
 
-        <h3 id="why-pdz-domains-matter">Why PDZ domains matter</h3>
-
-        <p>Many proteins work not as isolated machines, but as parts of larger molecular assemblies. <strong>PDZ domains</strong>—named after the first proteins in which the shared domain was recognized: PSD-95, Discs large, and ZO-1—are small, modular protein-interaction domains that help organize such assemblies. They commonly recognize a short motif at the end of a partner protein, binding it through a groove in which the peptide forms β-sheet-like hydrogen-bond contacts with the PDZ domain.</p>
-
-        <p>In cells, PDZ-containing proteins act as molecular organizers. They help localize receptors, ion channels, adhesion proteins, and signaling molecules at the places where they are needed. PSD-95, for example, uses PDZ-mediated interactions to assemble and regulate protein complexes at neuronal synapses. The broader importance is not that every PDZ interaction is individually strong—many are modest-affinity and somewhat promiscuous—but that a modular domain can recruit the right partners into a larger, spatially organized signaling complex.</p>
-
-        <p>This modularity also makes PDZ domains useful test cases for protein engineering. One established strategy is to attach a second small domain that contacts portions of the peptide not recognized by the PDZ groove, creating an <strong>affinity clamp</strong> with a larger interaction surface and potentially improved specificity (<a href="https://doi.org/10.1016/j.jmb.2009.07.067" rel="external nofollow noopener" target="_blank">Huang et al., 2009</a>). Designing such a construct computationally is difficult: the added scaffold must make the intended cross-chain hydrogen bonds while preserving realistic local bond lengths, angles, and secondary structure throughout the new backbone.</p>
-
-        <h3 id="what-the-design-task-asks">What the design task asks</h3>
-
-        <p>Our benchmark begins with a resolved PDZ domain bound to its peptide motif. The task is <strong>not to redesign the natural PDZ interaction from scratch</strong>. Instead, the model must generate an additional domain, connected to the PDZ, that reaches the opposite face of the peptide and forms complementary β-sheet-like contacts. This requires satisfying local stereochemistry and global relationships between atoms on different chains at the same time.</p>
-
-        <p>The benchmark was built from experimentally resolved PDZ–peptide complexes in the Protein Data Bank. After structural curation and computational filtering, it contains <strong>31 design targets</strong>. Six include short or geometrically restrictive peptide ligands—particularly proline-containing cases—that make the requested backbone arrangement poorly posed. Keeping these difficult cases in the benchmark provides a more realistic measure of where the method succeeds and where the design specification itself leaves little room for a viable structure.</p>
-
-        <h3 id="what-we-found">What we found</h3>
-
-        <p>Our constrained RFdiffusion method combines proximal feasibility updates with ADMM decomposition. Across 31,000 generations from each of three baselines—93,000 baseline samples in total—none simultaneously satisfied all of the specified inter-chain bond-distance and angle constraints. The constrained method satisfied those encoded constraints in every generated sample.</p>
-
-        <p>Constraint satisfaction alone, however, is not the same as a successful protein design. A generated backbone was counted as <strong>usable</strong> only when it also passed structural-realism checks. Under that stricter measure, <strong>21% of generations were usable across the complete 31-target benchmark</strong>. For the subset with well-posed peptide geometries, the usable rate reached <strong>83%</strong>. The three baselines produced no usable samples under the same combined criteria.</p>
-
-        <p><strong>Figure 3</strong> summarizes this comparison and shows representative constrained backbones: the method preserves the requested contacts across the peptide while still producing candidates that pass the benchmark’s structural-realism checks.</p>
+        <p>Our constrained RFdiffusion work combines proximal feasibility updates with ADMM decomposition. On a benchmark for PDZ-domain motif scaffolding and pocket design, it achieved <strong>100% satisfaction of bonding and geometric constraints</strong>, compared with <strong>0% for three baselines</strong> across nearly 100,000 generated samples.</p>
 
         <div class="evidence-grid">
   <div>
-<span>Encoded constraints</span><strong>100%</strong><small>vs. 0% across 93,000 baseline samples</small>
+<span>Constraint satisfaction</span><strong>100%</strong><small>vs. 0% for all three baselines</small>
 </div>
   <div>
-<span>Usable designs</span><strong>21%</strong><small>across the complete 31-target benchmark</small>
+<span>Usable pocket designs</span><strong>97.8%</strong><small>about 4× the nearest baseline</small>
 </div>
   <div>
-<span>Well-posed ligands</span><strong>83%</strong><small>usable designs on the favorable subset</small>
+<span>Well-posed ligands</span><strong>83%</strong><small>viable motif-scaffolding designs</small>
 </div>
-</div>
-
-        <div class="research-callout">
-  <span class="research-callout__eyebrow">What these results show</span>
-  <strong>Constraint-aware sampling turns demanding geometric specifications that defeated the evaluated baselines into a meaningful pool of computational protein candidates.</strong>
-  <p>This is an important step toward making functional geometry a controllable part of generative protein design. The resulting backbones are promising starting points rather than finished proteins: expression, stability, binding affinity, specificity, and biological function still require experimental validation, and the 21% overall usability rate leaves clear room for improvement.</p>
 </div>
 
         <figure class="research-figure research-figure--bleed">
@@ -485,10 +368,8 @@
 
 </figure>
 
-  <figcaption><span>Figure 3</span> In the computational benchmark, constraint-aware RFdiffusion preserves the requested inter-chain geometry and yields structurally usable candidates where the evaluated baselines fail the combined global constraints.</figcaption>
+  <figcaption><span>Figure 3</span> Constraint-aware RFdiffusion preserves the required functional geometry and produces usable structures where unconstrained and guided baselines fail the global constraints.</figcaption>
 </figure>
-
-        <p>On a separate vacancy-constrained pocket-design benchmark, the same framework produced <strong>97.8% usable samples</strong>, compared with <strong>24.2% for the nearest baseline</strong>. That result supports the method’s applicability beyond PDZ scaffolding, but it measures a different geometric task and should not be conflated with the 21% overall PDZ result.</p>
 
         <p class="paper-link">Read the paper · <a href="https://arxiv.org/abs/2510.14989" rel="external nofollow noopener" target="_blank">Christopher et al., ICLR 2026 →</a></p>
 
@@ -502,25 +383,9 @@
 
         <h2 id="materials-discovery-with-properties-in-the-loop">Materials discovery with properties in the loop</h2>
 
-        <p class="section-standfirst">In materials design, a sample can look plausible while having the wrong porosity, mechanical response, or physical geometry. The constraint operator turns those measurable properties—and, when needed, an external simulator—into feedback during generation.</p>
+        <p class="section-standfirst">Material validity is often revealed only by an expensive evaluator: a stress–strain simulation, an energy model, or a structural surrogate. The constraint operator can turn that evaluator into feedback during sampling.</p>
 
-        <h3 id="why-material-structure-matters">Why material structure matters</h3>
-
-        <p>A material’s behavior depends not only on what it is made of, but also on how its internal structure is organized. Pore size and connectivity influence transport through a porous medium; in cellular metamaterials, the arrangement and thickness of the struts determine how the structure bends, buckles, and carries load. Small geometric changes can therefore produce large changes in the resulting physical response.</p>
-
-        <p>Generative models could help explore these large design spaces and augment datasets that are costly to obtain through high-resolution imaging, fabrication, or simulation. But visual realism is not enough. A generated microstructure may resemble the training data while missing the requested porosity, and a convincing cellular pattern may fail to reproduce a target stress–strain curve—or may not define a physically valid structure at all.</p>
-
-        <h3 id="what-the-design-task-asks-1">What the design task asks</h3>
-
-        <p>We study two complementary tasks. In <strong>porous-microstructure generation</strong>, the model must create an image at a prescribed porosity, including values that are sparsely represented in the data. Because porosity can be computed directly from the decoded image, the method can project each intermediate sample toward the required value. In <strong>mechanical-metamaterial inverse design</strong>, the input is instead a target nonlinear stress–strain response under compression. Here, the relevant property is evaluated by an external finite-element simulator, so the method uses simulator queries to estimate a useful correction and then applies it in the latent space of the diffusion model.</p>
-
-        <p>The common pattern is <strong>generate, evaluate, and correct</strong> without retraining the underlying diffusion model. <strong>Figure 4a</strong> illustrates this broader constraint-in-the-loop architecture in an atomistic setting, where a surrogate checks physical interactions during denoising. <strong>Figure 4b</strong> shows the mechanical-metamaterial experiment: as the latent sample is corrected, its simulated stress–strain curve moves toward the target and the geometry becomes physically valid.</p>
-
-        <h3 id="what-we-found-1">What we found</h3>
-
-        <p>For porous microstructures, conditional diffusion produced visually strong samples but missed the requested porosity by more than 10% in <strong>68.4%</strong> of cases. The constrained method reduced that violation rate to <strong>0%</strong>. Its Fréchet Inception Distance was <strong>13.5</strong>, compared with <strong>10.8</strong> for conditional diffusion, indicating a modest image-quality tradeoff in exchange for much more reliable property control.</p>
-
-        <p>For mechanical metamaterials, the constrained method reached a stress–strain mean-squared error of <strong>1.4 ± 0.6</strong>, compared with <strong>6.4 ± 4.6</strong> for a specialized inverse-design baseline and <strong>7.1 ± 4.5</strong> for conditional diffusion. Only <strong>5%</strong> of its outputs were judged physically invalid, versus <strong>20%</strong> and <strong>55%</strong> for those two baselines, respectively. These results show that simulator feedback can improve both response matching and geometric validity on this computational benchmark.</p>
+        <p>Across microstructure generation, mechanical metamaterial design, and safety-aware image generation, latent constrained diffusion improves feasibility without retraining the base model. The key move is to evaluate a property after decoding and propagate the resulting correction back to the latent sample.</p>
 
         <div class="research-figure-pair">
   <figure class="research-figure">
@@ -540,7 +405,7 @@
 
 </figure>
 
-    <figcaption><span>Figure 4a</span> The broader constraint-in-the-loop pattern for atomistic generation: a surrogate evaluates interactions and returns a correction during denoising.</figcaption>
+    <figcaption><span>Figure 4a</span> A learned surrogate checks physical requirements at every denoising step.</figcaption>
   </figure>
   <figure class="research-figure">
     <figure>
@@ -559,26 +424,20 @@
 
 </figure>
 
-    <figcaption><span>Figure 4b</span> Simulator-guided samples move toward the target stress–strain response; the final benchmark reports 5% physically invalid geometries.</figcaption>
+    <figcaption><span>Figure 4b</span> Samples move toward a target stress–strain response while invalid geometries fall to 5%.</figcaption>
   </figure>
 </div>
 
         <div class="evidence-grid">
   <div>
-<span>Porosity error &gt;10%</span><strong>0%</strong><small>vs. 68.4% for conditional diffusion</small>
+<span>Morphometric violations</span><strong>0%</strong><small>vs. 68.4% for conditional diffusion</small>
 </div>
   <div>
-<span>Stress–strain MSE</span><strong>1.4 ± 0.6</strong><small>4.6× lower than a specialized baseline</small>
+<span>Stress–strain MSE</span><strong>1.4 ± 0.6</strong><small>4.6× better than a specialized baseline</small>
 </div>
   <div>
-<span>Invalid geometries</span><strong>5%</strong><small>vs. 20% specialized and 55% conditional</small>
+<span>Safety compliance</span><strong>90%</strong><small>vs. 67% for conditional diffusion</small>
 </div>
-</div>
-
-        <div class="research-callout">
-  <span class="research-callout__eyebrow">What these results show</span>
-  <strong>Constraint-in-the-loop generation makes target material properties substantially more reliable while retaining competitive sample quality.</strong>
-  <p>The results demonstrate a practical way to use image measurements and finite-element feedback during generation, opening a larger and more controllable computational design space. The next step is experimental validation: fabrication constraints, defects, robustness to loading conditions, measured stress–strain behavior, and other application-specific properties remain outside these benchmarks. Simulator-guided sampling also introduces a meaningful computational cost.</p>
 </div>
 
         <p class="paper-link">Read the paper · <a href="https://arxiv.org/abs/2502.05625" rel="external nofollow noopener" target="_blank">Zampini et al., NeurIPS 2025 Spotlight →</a></p>
@@ -593,27 +452,9 @@
 
         <h2 id="safe-motion-planning-at-generative-speed">Safe motion planning at generative speed</h2>
 
-        <p class="section-standfirst">A multi-robot plan is feasible only if every robot reaches its goal without striking an obstacle or another robot—and does so along a trajectory that its motion limits can support.</p>
+        <p class="section-standfirst">A multi-robot plan must satisfy many coupled constraints at once: obstacles, inter-robot collisions, velocity and acceleration limits, and the dynamics connecting one state to the next.</p>
 
-        <h3 id="why-coordinated-motion-matters">Why coordinated motion matters</h3>
-
-        <p>Multi-robot motion planning appears wherever autonomous systems share space: warehouse fleets moving inventory, coordinated drones, autonomous vehicles, and robots operating in search-and-rescue settings. Planning each path independently is not enough. A route that is safe for one robot can block another, create a collision several seconds later, or produce a deadlock in a narrow corridor. The difficulty grows quickly because each additional robot adds a trajectory whose position must remain compatible with every other trajectory over time.</p>
-
-        <p>Classical grid-based multi-agent path finding scales well, but its coarse spatial and temporal discretization can produce paths that are difficult to execute smoothly. Continuous trajectory optimization offers finer motion, but the joint problem becomes high-dimensional and strongly non-convex as robots and obstacles are added. A generative model provides a learned prior over plausible paths; the central question is whether that prior can be converted into a coordinated, feasible plan.</p>
-
-        <h3 id="what-the-planning-task-asks">What the planning task asks</h3>
-
-        <p>Each robot is assigned a start and goal position in a shared two-dimensional workspace. The planner must produce all trajectories simultaneously while satisfying four coupled requirements: avoid static obstacles, maintain separation between robots at every time step, respect velocity and acceleration limits, and preserve the assigned start and goal states. Practical benchmark layouts include warehouse-like shelves, connected rooms, dense obstacle fields, and corridors where robots must negotiate passage rather than simply follow locally shortest routes.</p>
-
-        <p><strong>Simultaneous MRMP Diffusion (SMD)</strong> addresses the joint continuous problem directly. During reverse diffusion, it repeatedly corrects the full set of trajectories using an augmented-Lagrangian projection, so obstacle, kinematic, and inter-robot constraints influence generation before the paths are finalized. <strong>Discrete-Guided Diffusion (DGD)</strong> tackles the scaling bottleneck differently: a discrete multi-agent path-finding solution supplies a coordination schedule, the continuous workspace is decomposed into tractable regions, and constrained diffusion refines the motion within those regions. A lightweight repair step handles residual violations.</p>
-
-        <p>The animations in <strong>Figure 5</strong> make the constraint visible over time. They show that feasibility depends on the entire joint trajectory—particularly in corridors, shelves, and rooms—not merely on collision-free final positions.</p>
-
-        <h3 id="what-we-found-2">What we found</h3>
-
-        <p>On the SMD benchmark’s most difficult random setting—nine robots moving among 20 obstacles in a dense map—SMD solved <strong>96%</strong> of instances, compared with <strong>27.2%</strong> for the strongest prior multi-robot diffusion baseline. In the corridor task, SMD solved every instance while the evaluated baselines found no feasible trajectory. These results measure whether the generated plan is collision-free and satisfies the encoded motion constraints within the benchmark.</p>
-
-        <p>DGD extends the approach to larger problems. On the standard benchmark it achieved at least <strong>92% success</strong> in all but the two hardest 18-robot settings, where it still led at <strong>76%</strong>. On dense six-robot maps, DGD matched SMD’s 100% success while using <strong>4% of SMD’s runtime</strong>. The scalability study generated feasible plans for <strong>100 robots among 104 obstacles</strong>, compared with the 40-robot, obstacle-free scale reported for prior diffusion-based planning.</p>
+        <p><strong>SMD</strong> projects diffusion trajectories toward simultaneous feasibility. On dense nine-robot maps it reaches <strong>96% success</strong>, versus 27% for the best baseline. <strong>DGD</strong> adds guidance from a discrete multi-agent path-finding solver, decomposing a difficult non-convex problem into tractable subproblems and scaling to <strong>100 robots</strong>.</p>
 
         <div class="motion-reel" aria-label="Five looping multi-robot planning examples">
   <div>
@@ -632,24 +473,18 @@
 <video autoplay="" muted="" loop="" playsinline="" preload="metadata"><source src="/assets/video/projects/constrained-diffusion/smd_room.mp4" type="video/mp4"></source></video><span>Room</span>
 </div>
 </div>
-        <p class="research-caption"><span>Figure 5</span> Simulated multi-robot trajectories in five benchmark environments. The animation exposes coordination events and possible conflicts that a final frame would hide.</p>
+        <p class="research-caption"><span>Figure 5</span> Motion is the one place where animation materially improves understanding: feasibility is about an entire trajectory, not a single final frame.</p>
 
         <div class="evidence-grid">
   <div>
-<span>Dense-map success</span><strong>96%</strong><small>vs. 27.2% for the strongest prior baseline</small>
+<span>Dense-map success</span><strong>96%</strong><small>vs. 27% for the best baseline</small>
 </div>
   <div>
 <span>Maximum scale</span><strong>100 robots</strong><small>with 104 obstacles</small>
 </div>
   <div>
-<span>DGD runtime</span><strong>4%</strong><small>of SMD's time on dense six-robot maps</small>
+<span>DGD speedup</span><strong>20×</strong><small>over SMD on comparable settings</small>
 </div>
-</div>
-
-        <div class="research-callout">
-  <span class="research-callout__eyebrow">What these results show</span>
-  <strong>Constraint-aware diffusion can coordinate many robots in cluttered environments where prior generative planners frequently fail.</strong>
-  <p>The gains in feasibility and scale make diffusion-based planning a credible option for difficult coordination problems, especially when multiple valid trajectories may exist. Moving from simulation to physical deployment will require models of perception error, moving obstacles, tracking and control error, communication limits, and hardware dynamics. SMD's inference cost and consistency across DGD's decomposed regions also remain useful targets for improvement.</p>
 </div>
 
         <p class="paper-link">Read the papers · <a href="https://arxiv.org/abs/2502.03607" rel="external nofollow noopener" target="_blank">SMD, ICML 2025</a> · <a href="https://arxiv.org/abs/2508.20095" rel="external nofollow noopener" target="_blank">DGD, AAAI 2026 →</a></p>
@@ -666,27 +501,7 @@
 
         <p class="section-standfirst">In discrete diffusion, “move to the nearest feasible point” cannot mean nudging coordinates. It means changing probability mass over tokens without destroying the model's learned preferences.</p>
 
-        <h3 id="why-discrete-constraints-matter">Why discrete constraints matter</h3>
-
-        <p>Text, molecular strings, and source code are built from discrete symbols. A single misplaced token can reverse the meaning of a sentence, break a SMILES representation, or introduce a software vulnerability. Many important requirements are also global: a word may need to appear at a particular position, a molecular sequence must decode to a valid and previously unseen structure, and a program must behave correctly across an entire test suite. These constraints cannot always be enforced by choosing the most likely next token in isolation.</p>
-
-        <p>Masked diffusion offers a useful intervention point because it repeatedly predicts the <strong>whole sequence</strong> rather than committing permanently from left to right. Intermediate tokens can be reconsidered as the global structure becomes clearer. This makes discrete diffusion particularly well suited to constraints that depend on relationships between distant parts of a sequence.</p>
-
-        <h3 id="what-the-generation-task-asks">What the generation task asks</h3>
-
-        <p><strong><a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">Constrained Discrete Diffusion (CDD)</a></strong> operates on the probability distribution over tokens. At each reverse step, it finds a nearby distribution whose most likely decoded sequence satisfies the constraint, using KL divergence to remain close to the base model’s proposal. The same principle supports several types of evaluator: a toxicity classifier for controlled text, exact counting or positional rules for instruction following, and property or novelty checks for molecular SMILES.</p>
-
-        <p>The molecule sequence in <strong>Figure 6</strong> provides the intuition: constraint checks accompany generation instead of being applied only after a final candidate appears. In the actual sequence benchmarks, the projection acts on token probabilities and can encode properties such as synthetic accessibility, novelty, or the absence of selected BRENK structural alerts—not only local valency.</p>
-
-        <p>Code requires a richer version of this loop. <strong><a href="https://arxiv.org/abs/2605.16829" rel="external nofollow noopener" target="_blank">Constrained Diffusion for Code (CDC)</a></strong> decodes an intermediate program, evaluates functional or security requirements, identifies the token regions most responsible for a violation, and locally revises or remasks those regions. Differentiable surrogate feedback guides functional correctness, while static program analysis supplies concrete vulnerability information. This uses diffusion’s editable global state to repair a developing program before the final sample is committed.</p>
-
-        <h3 id="what-we-found-3">What we found</h3>
-
-        <p>Across the CDD text experiments, the constrained sampler produced <strong>0% violations</strong> at all evaluated toxicity thresholds and on both counting and positional lexical constraints. The corresponding unconstrained MDLM violated 54.5% of counting requirements and 97.5% of lexical requirements. This exact compliance came with task-dependent quality and computational tradeoffs; for example, constrained lexical generation improved the paper’s coherence score but had somewhat higher perplexity than unconstrained MDLM.</p>
-
-        <p>In the <strong><a href="https://ai4d3.github.io/2025/papers/18_Constrained_Molecular_Gener.pdf" rel="external nofollow noopener" target="_blank">molecular-generation extension</a></strong>, CDD generated an average of <strong>392 novel candidates that passed the encoded BRENK screens</strong>, compared with 108 for MDLM and 5 for an autoregressive baseline, while recording no BRENK-rule violations. These are useful filters for exploring chemical space, but they are not a complete assessment of toxicity, synthesizability, stability, or biological activity.</p>
-
-        <p>For code, CDC increased functional correctness with Dream-Coder 7B from <strong>34.1% to 65.2%</strong> on HumanEval-X C++ and from <strong>27.7% to 59.2%</strong> on MBPP-C++. It also raised syntax correctness from 67.1% to 79.2% and from 41.1% to 72.0% on those benchmarks. On CWEval, joint functional-and-security success increased from <strong>12.04% to 34.26%</strong>. <strong>Figure 7</strong> summarizes these improvements across functionality, syntax, and security tests.</p>
+        <p><strong>Constrained Discrete Diffusion (CDD)</strong> projects token probabilities onto a feasible region while minimizing KL divergence from the model’s original logits. This allows rules such as chemical valency, toxicity thresholds, token counts, or syntax to be enforced during generation.</p>
 
         <figure class="research-figure">
   <figure>
@@ -705,27 +520,7 @@
 
 </figure>
 
-  <figcaption><span>Figure 6</span> Conceptual view of checking molecular validity throughout generation. CDD implements this principle over discrete sequence probabilities and supports both local and sequence-level rules.</figcaption>
-</figure>
-
-        <figure class="research-figure research-figure--bleed">
-  <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/discrete-diffusion/code_gen_results-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/discrete-diffusion/code_gen_results-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/discrete-diffusion/code_gen_results-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/projects/discrete-diffusion/code_gen_results.png" class="research-figure__img" width="auto" height="auto" title="Constrained code generation results" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-  <figcaption><span>Figure 7</span> CDC improves benchmark pass rates for program functionality, syntax, and security across two seven-billion-parameter diffusion code models.</figcaption>
+  <figcaption><span>Figure 6</span> Constraint checks accompany the progressive unmasking process, so the final molecule respects the specified rules.</figcaption>
 </figure>
 
         <div class="evidence-grid">
@@ -733,32 +528,26 @@
 <span>Rule violations</span><strong>0%</strong><small>for toxicity, counting, and lexical tests</small>
 </div>
   <div>
-<span>BRENK-screened candidates</span><strong>392</strong><small>novel molecules vs. 108 for MDLM</small>
+<span>Novel safe molecules</span><strong>392</strong><small>vs. 108 for MDLM and 5 autoregressively</small>
 </div>
   <div>
-<span>Code functionality</span><strong>65.2%</strong><small>vs. 34.1% for the Dream-Coder base model</small>
+<span>Beyond chemistry</span><strong>Code</strong><small>syntax and semantic structure constraints</small>
 </div>
 </div>
 
-        <div class="research-callout">
-  <span class="research-callout__eyebrow">What these results show</span>
-  <strong>Intervening during denoising can materially improve rule adherence across language, molecular design, and code without retraining the base generator.</strong>
-  <p>This makes discrete diffusion a promising platform for applications where outputs must be both plausible and verifiably structured. The guarantees remain tied to the supplied evaluator: toxicity classifiers, molecular screens, tests, and static analyzers each cover only part of the real requirement. Constraint optimization also adds computation, so human review and domain-specific validation remain important for consequential uses.</p>
-</div>
-
-        <p class="paper-link">Explore the full research-area guide · <a href="/projects/discrete-diffusion/">Constrained Discrete Diffusion for Language, Chemistry, and Code →</a></p>
+        <p class="paper-link">Read the papers · <a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">CDD, NeurIPS 2025</a> · <a href="https://arxiv.org/abs/2605.16829" rel="external nofollow noopener" target="_blank">Constrained code generation, 2026 →</a></p>
 
       </section>
 
-<section class="research-section" id="current-work">
+<section class="research-section" id="frontier">
 
-        <div class="section-label">04 · Current and ongoing work</div>
+        <div class="section-label">04 · The frontier</div>
 
         <h2 id="from-correcting-a-pretrained-model-to-training-for-constraints">From correcting a pretrained model to training for constraints</h2>
 
         <p>Training-free guidance is flexible, but it creates a mismatch: the model learns unconstrained trajectories during training and encounters projected trajectories only at inference. Two newer directions attack that mismatch from opposite sides.</p>
 
-        <div class="current-work-grid">
+        <div class="frontier-grid">
   <div>
     <span>Continuous models</span>
     <h3>Constraint-Aware Flow Matching</h3>
@@ -790,7 +579,7 @@
 
 </figure>
 
-  <figcaption><span>Figure 8</span> CAFM aligns the learned velocity field with the constrained sampling path instead of correcting an unconstrained field only at inference.</figcaption>
+  <figcaption><span>Figure 7</span> CAFM aligns the learned velocity field with the constrained sampling path instead of correcting an unconstrained field only at inference.</figcaption>
 </figure>
 
       </section>
@@ -832,7 +621,6 @@
         <h2 id="follow-the-research-program">Follow the research program</h2>
 
         <div class="paper-list">
-  <a href="https://arxiv.org/abs/2402.03559" rel="external nofollow noopener" target="_blank"><span>NeurIPS 2024</span><strong>Constrained Synthesis with Projected Diffusion Models</strong><small>Christopher, Baek &amp; Fioretto</small></a>
   <a href="https://arxiv.org/abs/2510.14989" rel="external nofollow noopener" target="_blank"><span>ICLR 2026</span><strong>Constrained Diffusion for Protein Design with Hard Structural Constraints</strong><small>Christopher, Seamann, Cui, Khare &amp; Fioretto</small></a>
   <a href="https://arxiv.org/abs/2502.05625" rel="external nofollow noopener" target="_blank"><span>NeurIPS 2025 Spotlight</span><strong>Training-Free Constrained Generation With Stable Diffusion Models</strong><small>Zampini, Christopher, Oneto, Anguita &amp; Fioretto</small></a>
   <a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank"><span>NeurIPS 2025</span><strong>Constrained Discrete Diffusion</strong><small>Cardei, Christopher, Hartvigsen, Kailkhura &amp; Fioretto</small></a>
@@ -849,38 +637,8 @@
 </div>
 
 </div>
-<section class="research-comments" aria-label="Reactions and comments">
-      <div id="giscus_thread" style="max-width: 1140px; margin: 0 auto;">
-  <script>
-    let giscusTheme = localStorage.getItem("theme");
-    let giscusAttributes = {
-        "src": "https://giscus.app/client.js",
-        "data-repo": "alshedivat/al-folio",
-        "data-repo-id": "MDEwOlJlcG9zaXRvcnk2MDAyNDM2NQ==",
-        "data-category": "Comments",
-        "data-category-id": "DIC_kwDOA5PmLc4CTBt6",
-        "data-mapping": "specific",
-        "data-term": "Constraint-Aware Diffusion for Scientific Applications",
-        "data-strict": "0",
-        "data-reactions-enabled": "1",
-        "data-emit-metadata": "0",
-        "data-input-position": "bottom",
-        "data-theme": giscusTheme,
-        "data-lang": "en",
-        "crossorigin": "anonymous",
-        "async": "",
-    };
 
-
-    let giscusScript = document.createElement("script");
-    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
-    document.getElementById("giscus_thread").appendChild(giscusScript);
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://giscus.app/?ref_noscript" rel="external nofollow noopener" target="_blank">comments powered by giscus.</a>
-</noscript>
-</div>
-
-    </section></main>
+</main>
 
       
     </div>
