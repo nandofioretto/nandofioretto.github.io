@@ -79,6 +79,9 @@
 
               <!-- Other pages -->
               <li class="nav-item ">
+                <a class="nav-link" href="/research/">research</a>
+              </li>
+              <li class="nav-item ">
                 <a class="nav-link" href="/awards/">awards</a>
               </li>
               <li class="nav-item ">
@@ -122,7 +125,7 @@
     <div class="container mt-5">
       
         <!-- about.html -->
-      <div class="post">
+      <div class="post home-page">
         <header class="post-header">
           <h1 class="post-title">
            <span class="font-weight-bold">Ferdinando (Nando)</span>  Fioretto
@@ -169,32 +172,31 @@
 I lead the <a href="/group/">Responsible AI for Science and Engineering (RAISE)</a> group, where we develop foundational machine learning and generative AI methods that make models obey control objectives, hard constraints, safety requirements, and physical laws.
 Our work studies how to build controllable foundation models and constraint-aware generative models by connecting learning with optimization, control, and neuro-symbolic reasoning. My research has received several honors, including best paper awards at leading journals and AI/ML conferences, industry research awards, fellowships, and young investigator awards. See the <strong><a href="/awards/">awards page</a></strong> for more details.</p>
 
-<h3 class="group__title">Research</h3>
-
-<p>I work across three connected themes:</p>
-
-<p><strong>Foundational ML and Generative AI under Constraints</strong>: We develop the algorithmic foundations for predictive and generative models whose outputs are not only likely, but feasible, safe, and physically meaningful. This line of work builds on our earlier foundations for differentiable optimization, decision-focused learning, and learning-to-optimize systems, including Lagrangian methods for constrained deep learning (<a href="https://ojs.aaai.org/index.php/AAAI/article/view/5403" rel="external nofollow noopener" target="_blank">AAAI-20</a>, <a href="https://doi.org/10.1007/978-3-030-67670-4_8" rel="external nofollow noopener" target="_blank">ECML-20</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/20685" rel="external nofollow noopener" target="_blank">AAAI-22</a>), end-to-end prediction and optimization (<a href="https://doi.org/10.24963/ijcai.2022/815" rel="external nofollow noopener" target="_blank">IJCAI-22</a>, <a href="https://arxiv.org/abs/2307.13565" rel="external nofollow noopener" target="_blank">JAIR-24</a>, <a href="https://arxiv.org/abs/2311.13087" rel="external nofollow noopener" target="_blank">ECAI-24</a>), and differentiable parametric programming and bilevel learning-to-optimize (<a href="https://arxiv.org/abs/2404.00882" rel="external nofollow noopener" target="_blank">CDC-24</a>, <a href="https://arxiv.org/abs/2507.09050" rel="external nofollow noopener" target="_blank">L4DC-26</a>). We now extend these ideas to constrained continuous diffusion and flow matching (<a href="https://arxiv.org/abs/2502.05625" rel="external nofollow noopener" target="_blank">NeurIPS-25a</a>, <a href="https://arxiv.org/abs/2605.12754" rel="external nofollow noopener" target="_blank">ArXiv:26a</a>), constrained discrete diffusion and search-augmented masked diffusion (<a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">NeurIPS-25b</a>, <a href="https://arxiv.org/abs/2602.02727" rel="external nofollow noopener" target="_blank">ArXiv:26b</a>), and constrained code generation and diffusion-based speculative decoding (<a href="https://arxiv.org/abs/2605.16829" rel="external nofollow noopener" target="_blank">ArXiv:26c</a>, <a href="https://arxiv.org/abs/2511.00606" rel="external nofollow noopener" target="_blank">MLSys-26</a>).</p>
-
-<p><strong>AI for Science and Engineering</strong>: We use these foundations to support scientific discovery and engineering design, including inverse design of protein binders (<a href="https://www.biorxiv.org/content/10.1101/2025.08.06.668648v1" rel="external nofollow noopener" target="_blank">ICLR-26</a>), materials with defects and micro-material design (<a href="https://openreview.net/pdf?id=L3LYjJJoL5" rel="external nofollow noopener" target="_blank">AI4Mat-25</a>, <a href="https://arxiv.org/abs/2402.03559" rel="external nofollow noopener" target="_blank">NeurIPS-24</a>, <a href="https://arxiv.org/abs/2502.05625" rel="external nofollow noopener" target="_blank">NeurIPS-25a</a>), safe multi-robot motion planning (<a href="https://arxiv.org/abs/2502.03607" rel="external nofollow noopener" target="_blank">ICML-25</a>, <a href="https://arxiv.org/abs/2508.20095" rel="external nofollow noopener" target="_blank">AAAI-26</a>), and molecular generation workflows (<a href="https://arxiv.org/abs/2503.09790" rel="external nofollow noopener" target="_blank">NeurIPS-25b</a>, <a href="https://arxiv.org/abs/2508.12331" rel="external nofollow noopener" target="_blank">ArXiv:26</a>).
-  Our physics-informed and constraint-aware methods have also been used to accelerate energy optimization, operational planning, and scheduling tasks (e.g., <a href="https://arxiv.org/abs/1909.10461" rel="external nofollow noopener" target="_blank">AAAI-20</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/20685" rel="external nofollow noopener" target="_blank">AAAI-22</a>, <a href="https://openreview.net/forum?id=2zO2lb7ykMD" rel="external nofollow noopener" target="_blank">NeurIPS-21</a>, <a href="https://www.sciencedirect.com/science/article/pii/S0378779623004406" rel="external nofollow noopener" target="_blank">EPSR-23</a>, <a href="https://arxiv.org/abs/2308.01436" rel="external nofollow noopener" target="_blank">NeurIPS-23</a>, <a href="https://arxiv.org/abs/2410.01786" rel="external nofollow noopener" target="_blank">ICLR-25</a>).</p>
-
-<p><strong>Responsible AI</strong>: We analyze the assurance of AI systems in support of decision-making and learning tasks, focusing especially on privacy, safety, and fairness.
-  Our work has uncovered new theoretical and algorithmic understanding at the intersection of privacy and fairness, including fairness-aware post-processing of private data releases, differentially private and fair learning, and fairness issues in socio-demographic data processes (e.g., <a href="https://doi.org/10.24963/ijcai.2021/312" rel="external nofollow noopener" target="_blank">IJCAI-21</a>, <a href="https://doi.org/10.24963/ijcai.2022/559" rel="external nofollow noopener" target="_blank">IJCAI-22</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17193" rel="external nofollow noopener" target="_blank">AAAI-21</a>, <a href="https://arxiv.org/abs/2408.08471" rel="external nofollow noopener" target="_blank">AAAI-25</a>).
-  We also study how safety and fairness can emerge when machine learning and agentic LLMs pipelines are constrained by systems or robustness considerations, including pruning at initialization (<a href="https://openreview.net/forum?id=VXXTBdy4FA" rel="external nofollow noopener" target="_blank">NeurIPS-22</a>), hardware failures and deployment choices (<a href="https://openreview.net/forum?id=1Lj2XfljS8" rel="external nofollow noopener" target="_blank">ICML-24</a>), and adversarial robustness requirements (<a href="https://doi.org/10.48550/arXiv.2211.11835" rel="external nofollow noopener" target="_blank">IJCAI-24</a>).</p>
-
-<p>For more details, please see our <strong><a href="/publications/">publications</a></strong> and my <strong><a href="/bio/">short bio</a></strong>.</p>
-
-<!-- I am a recipient of the _2022 AWS Amazon Research Award_, the _2022 NSF CAREER award_,
-the 2022 _Google Research Scholar Award_, the _2022 Caspar Bowden PET award_, the
-_2021 ISSNAF Mario Gerla Young Investigator Award_, the _2021 ACP Early Career Researcher Award_,
-the _2017 AI*AI Best AI dissertation award_, and _several best paper awards_.  -->
-
-<h5 id="opportunities-for-undergraduate-students">Opportunities for Undergraduate Students</h5>
-
-<p>I regularly work with undergraduate and graduate interns interested in responsible AI, constraint-aware generative AI, and differentiable optimization.
-See <a href="/projects/projects-Summer25/">this page</a> for examples of recent project directions.</p>
-
-<p>If you are interested in working with us, send me your CV and interests and make sure you check our latest work!</p>
+<section class="home-research-focus" aria-labelledby="research-focus-title">
+  <h2 id="research-focus-title">Research Focus</h2>
+  <ul class="research-focus-list">
+    <li>
+<strong>Foundational ML and Generative AI under Constraints</strong>
+      <span>Differentiable optimization and the integration of optimization with machine learning and generative AI.</span>
+</li>
+    <li>
+<strong>AI for Science and Engineering</strong><span>Generative methods for protein and molecular design, materials science, robotics, energy systems, chip design, and policy optimization.</span>
+</li>
+    <li>
+<strong>Discrete Diffusion Language Models</strong><span>Foundations for constrained discrete generation and its use in speculative technologies for speeding up language generation.</span>
+</li>
+    <li>
+<strong>Decision Focused Learning</strong><span>Training predictive and generative models to optimize downstream decision quality, rather than prediction accuracy alone.</span>
+</li>
+    <li>
+<strong>LLM Multiagent Systems</strong><span>Foundations for distributed coordination and problem solving and Safety</span>
+</li>
+    <li>
+<strong>Responsible AI</strong><span>Assurance for learning and decision systems, with an emphasis on privacy, safety, fairness, and robustness.</span>
+</li>
+  </ul>
+  <a class="home-research-link" href="/research/">Explore our research <span aria-hidden="true">→</span></a>
+</section>
 
           </div>
 
@@ -202,9 +204,14 @@ See <a href="/projects/projects-Summer25/">this page</a> for examples of recent 
           
 
           <!-- Sponsors -->
-          <div class="clearfix">
-          <h3 class="group__title">Research sponsors</h3>
-          Our group is grateful for the generous support from our sponsors:<section class="sponsors-band" aria-label="Sponsors">
+          <div class="clearfix home-section home-sponsors">
+            <div class="home-section__header">
+              <div>
+                <h2 class="group__title">Research Sponsors</h2>
+              </div>
+              <p>Our group is grateful for the generous support of our sponsors.</p>
+            </div>
+<section class="sponsors-band" aria-label="Sponsors">
     <div class="sponsors-inner">
         <div class="sponsors-grid">
             <div class="sponsor-item">
@@ -244,9 +251,14 @@ See <a href="/projects/projects-Summer25/">this page</a> for examples of recent 
           </div>
 
           <!-- Highlighted work -->
-          <div class="clearfix">
-            <h3 class="group__title">Highlighted work</h3>
-            A few recent projects that reflect our current directions and collaborations.<!-- _includes/highlighted_projects.html --><section class="highlight-grid" aria-label="Highlighted projects"><article class="highlight-card">
+          <div class="clearfix home-section home-highlights">
+            <div class="home-section__header">
+              <div>
+                <h2 class="group__title">Highlighted Work</h2>
+              </div>
+              <a class="home-section__link" href="/highlights/">View all <span aria-hidden="true">→</span></a>
+            </div>
+<!-- _includes/highlighted_projects.html --><section class="highlight-grid highlight-grid--home" aria-label="Highlighted projects"><article class="highlight-card">
       <div class="highlight-media">
 <figure>
 
@@ -298,29 +310,6 @@ See <a href="/projects/projects-Summer25/">this page</a> for examples of recent 
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/dp-book-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/dp-book-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/dp-book-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/projects/dp-book.png" class="highlight-img" width="auto" height="auto" alt="Differential Privacy in Artificial Intelligence Book" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-</div>
-      <div class="highlight-body">
-        <h3 class="highlight-title">Differential Privacy in Artificial Intelligence Book</h3>
-        <p class="highlight-text">The most comprehensive and up-to-date resource on differential privacy for AI.</p>
-        <a class="highlight-link" href="/projects/dp-book/">Learn more</a>
-      </div>
-    </article><article class="highlight-card">
-      <div class="highlight-media">
-<figure>
-
-  <picture>
-    
     <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/projects/specdiff2-480.webp"></source>
     <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/projects/specdiff2-800.webp"></source>
     <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/projects/specdiff2-1400.webp"></source>
@@ -339,13 +328,11 @@ See <a href="/projects/projects-Summer25/">this page</a> for examples of recent 
         <a class="highlight-link" href="/projects/speculative-diffusion-decoding/">Learn more</a>
       </div>
     </article></section>
-<a href="/highlights/">View all highlighted work →</a>
-          </div>
+</div>
 
           <!-- News -->
-          <br>
-          <div class="clearfix">
-          <!-- <h2><a href="/news/" style="color: inherit;">News</a></h2> --><!-- _includes/news.html -->
+          <div class="clearfix home-section home-news">
+          <!-- _includes/news.html -->
 <div class="news-compact">
   <!-- Check if this is the main news page or a limited preview -->
     
@@ -609,58 +596,6 @@ We provide introduces a comprehensive framework for data minimization in machine
             </span>
           </li>
         
-          
-          
-          
-          
-          <li class="news-entry" data-category="publication">
-            <span class="news-entry__date">Jun 2025</span>
-            <div class="news-entry__content">
-              <div class="news-entry__text">
-<strong>-</strong> New preprint: <a href="https://arxiv.org/abs/2506.10171" rel="external nofollow noopener" target="_blank">Disclosure Audits for LLM Agents</a>. 
-We provide a model to audit disclosure risks for LLM agentic systems with conversational interfaces. <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">
-<br>
-
-<strong>-</strong> Our paper on <a href="https://arxiv.org/abs/2506.01121" rel="external nofollow noopener" target="_blank">Neuro-symbolic Generative Diffusion</a> was awarded a <strong>DARPA Disruptive Idea Award</strong>! Thank you, DARPA, for the support!
-<br>
-
-<strong>-</strong> We received two <a href="https://4-va.org" rel="external nofollow noopener" target="_blank">4-VA research grants</a>! We will work with George Mason and Virginia Tech to build more aligned and interpretable LLM models and more robust learning to optimize pipelines. 
-Thank you 4-VA for your support!
-</div>
-            </div>
-            <span class="news-entry__badge" data-badge="publication">
-              Publication
-                
-            </span>
-          </li>
-        
-          
-          
-          
-          
-          <li class="news-entry" data-category="publication">
-            <span class="news-entry__date">May 2025</span>
-            <div class="news-entry__content">
-              <div class="news-entry__text">
-<strong>-</strong> Grateful to receive research credits from Google Cloud! We will develop more secure agentic LLM systems . Thank you, Google! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">
-<br>
-
-<strong>-</strong> <a href="https://arxiv.org/abs/2412.17993" rel="external nofollow noopener" target="_blank">Multi-Agent Path Finding in Continuous Spaces with Projected Diffusion Models</a> was accepted at <a href="https://icml.cc" rel="external nofollow noopener" target="_blank">ICML 2025</a>. Congratulations to <a href="https://www.liangjinhao.com" rel="external nofollow noopener" target="_blank">Jinhao</a> and <a href="https://jacobchristopher.github.io" rel="external nofollow noopener" target="_blank">Jacob</a>!
-<br>
-
-<strong>-</strong> <a href="https://arxiv.org/abs/2506.01121" rel="external nofollow noopener" target="_blank">Neuro-symbolic Generative Diffusion Models for Physically Grounded, Robust, and Safe Generation</a> was accepted at <a href="https://neus-2025.github.io" rel="external nofollow noopener" target="_blank">NeuS 2025</a>.
-Congratulations to  <a href="https://jacobchristopher.github.io" rel="external nofollow noopener" target="_blank">Jacob</a>, <a href="https://michaelcardei.github.io" rel="external nofollow noopener" target="_blank">Michael</a>, and <a href="https://www.liangjinhao.com" rel="external nofollow noopener" target="_blank">Jinhao</a>!
-<br>
-
-<strong>-</strong> Congratulations to <a href="https://www.joonhyukko.com" rel="external nofollow noopener" target="_blank">Joon Ko</a>, who was awarded an <strong>Excellence in Research Award</strong> for undergraduate research at UVA CS!
-</div>
-            </div>
-            <span class="news-entry__badge" data-badge="publication">
-              Publication
-                
-            </span>
-          </li>
-        
       </ul>
     </section>
     
@@ -676,8 +611,6 @@ Congratulations to  <a href="https://jacobchristopher.github.io" rel="external n
 </div>
 
           </div>
-
-          <br>
           <!-- Selected papers -->
           
         </article>
@@ -691,7 +624,7 @@ Congratulations to  <a href="https://jacobchristopher.github.io" rel="external n
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2026 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: July 14, 2026.
+Last updated: July 16, 2026.
       </div>
     </footer>
 
