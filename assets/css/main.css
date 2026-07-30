@@ -2686,15 +2686,11 @@ footer.sticky-bottom {
   width: 118px;
   height: 56px;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.78;
-  transition: filter 180ms ease, opacity 180ms ease, transform 180ms ease;
+  transition: transform 180ms ease;
 }
 
 .sponsor-item img:hover,
 .sponsor-item img:focus {
-  filter: none;
-  opacity: 1;
   transform: translateY(-2px);
 }
 
