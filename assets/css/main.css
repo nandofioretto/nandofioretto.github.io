@@ -3338,6 +3338,63 @@ nav[data-toggle=toc] .nav-link.active:hover {
   line-height: 1.72;
 }
 
+.recruitment-callout {
+  clear: both;
+  margin: 1.75rem 0;
+  padding: clamp(1.1rem, 3vw, 1.75rem);
+  border-left: 4px solid #00865f;
+  border-radius: 0 0.6rem 0.6rem 0;
+  background: linear-gradient(110deg, rgba(0, 134, 95, 0.045), rgba(0, 134, 95, 0.09));
+  color: var(--global-text-color);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+.recruitment-callout h2 {
+  margin: 0 0 0.7rem;
+  color: #007b57;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.recruitment-callout p {
+  margin-bottom: 0.65rem;
+}
+.recruitment-callout p:last-child {
+  margin-bottom: 0;
+}
+.recruitment-callout a {
+  color: #007b57;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.recruitment-callout a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.recruitment-callout__areas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem 2rem;
+  margin: 0 0 0.9rem;
+  padding-left: 1.2rem;
+}
+
+html[data-theme=dark] .recruitment-callout {
+  border-left-color: #55cfa5;
+  background: linear-gradient(110deg, rgba(85, 207, 165, 0.06), rgba(85, 207, 165, 0.12));
+}
+html[data-theme=dark] .recruitment-callout h2,
+html[data-theme=dark] .recruitment-callout a {
+  color: #75dfb9;
+}
+
+@media (max-width: 575px) {
+  .recruitment-callout__areas {
+    grid-template-columns: 1fr;
+  }
+}
 .home-research-focus {
   display: flow-root;
   margin-top: 0.9rem;
@@ -3492,18 +3549,8 @@ nav[data-toggle=toc] .nav-link.active:hover {
 }
 
 .research-theme {
-  display: grid;
-  grid-template-columns: 3.25rem minmax(0, 1fr);
-  gap: 1rem;
   margin-top: 0;
   padding: 1.5rem 0;
-}
-.research-theme .research-theme__number {
-  padding-top: 0.32rem;
-  color: var(--global-theme-color);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
 }
 .research-theme h2 {
   margin: 0 0 0.6rem;
@@ -3846,10 +3893,6 @@ nav[data-toggle=toc] .nav-link.active:hover {
   .research-talks__heading p,
   .research-positions__heading p {
     text-align: left;
-  }
-  .research-theme {
-    grid-template-columns: 2.25rem minmax(0, 1fr);
-    gap: 0.65rem;
   }
   .research-talk-archive__grid {
     grid-template-columns: minmax(0, 1fr);
