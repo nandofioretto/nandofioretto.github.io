@@ -144,6 +144,34 @@
   <div class="pub-line">
 <span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2026</span><div class="pub-main">
       <div class="pub-header">
+        <strong class="pub-title has-abstract"><span class="title-abstract-toggle">From Positionwise Confidence to Prefix Scheduling: Verifier Skipping in Speculative Decoding</span></strong>
+</div>
+<div class="pub-authors">Haoxuan Luo, Jameson Sandler, and <strong class="self-author">Ferdinando Fioretto</strong>
+</div>
+<div class="pub-info">
+        <span class="pub-venue"><em></em> 2026</span><span class="pub-links-inline"><span class="pub-link-sep">|</span><a class="abstract pub-link" role="button">Abs</a><span class="pub-link-sep">|</span><a class="bibtex pub-link" role="button">Bib</a><span class="pub-link-sep">|</span><a href="https://www.alphaxiv.org/abs/2608.14787" class="pub-link" rel="external nofollow noopener" target="_blank">AlphaXiv</a></span>
+</div>
+<div class="pub-badges"></div>
+<div class="abstract hidden pub-section">
+          <p>Speculative decoding is a leading technique to reduce the cost of autoregressive generation by using a small drafter to propose several tokens, which are then verified in parallel by a larger target model. Speculative diffusion decoding (SDD) further removes sequential drafting by generating every position in a draft block in parallel with a discrete diffusion model. However, SDD still invokes the target on every block, leaving verification as a potential bottleneck. This paper recognizes that this creates a new control handle: whether to invoke the verifier at all. Thus, we study verifier skipping, a lossy policy that commits a selected draft prefix directly, and ask which confidence signal should schedule it. Interestingly, our study finds that better token predictors need not yield better schedulers: skips require contiguous high-confidence prefixes, while short skips can induce additional drafting rounds. To study this mismatch, we compare raw confidence with learned marginal and conditional survival scores under the same policy, using Strict SDD, lenience, and top-k acceptance as baselines. On HumanEval with DiffuCoder-7B-Instruct and Qwen3-32B, all three confidence signals save 9.6% to 13.5% of verifier calls at the same observed pass@1 as Strict SDD. Surprisingly, raw confidence saves the most; marginal survival has higher positionwise AUROC than raw confidence at most positions, yet neither learned signal dominates online. Our analysis shows that verifier skipping is a useful new lossy axis and, surprisingly, its key challenge is prefix scheduling rather than token prediction alone.</p>
+        </div>
+<div class="bibtex hidden pub-section">
+          <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">fioretto:26l</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{From Positionwise Confidence to Prefix Scheduling: Verifier Skipping in Speculative Decoding}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Luo, Haoxuan and Sandler, Jameson and Fioretto, Ferdinando}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{abs/2608.14787}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html --><div class="pub-item">
+  <div class="pub-line">
+<span class="pub-badge" style="background-color: #e5e7eb; color: #1f2937 !important">preprint 2026</span><div class="pub-main">
+      <div class="pub-header">
         <strong class="pub-title has-abstract"><span class="title-abstract-toggle">Learning Discrete Decisions for MIPs with Constraint-Aware Diffusion</span></strong>
 </div>
 <div class="pub-authors">Vincenzo Di Vito, Mehdi Taghizadeh, Deepjyoti Deka, Kaarthik Sundar, and <strong class="self-author">Ferdinando Fioretto</strong>
@@ -4568,7 +4596,7 @@ Targeted at researchers, practitioners, and policymakers, Differential Privacy i
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2026 Ferdinando (Nando)  Fioretto. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: August 18, 2026.
+Last updated: August 21, 2026.
       </div>
     </footer>
 
