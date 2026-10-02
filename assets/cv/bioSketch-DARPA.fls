@@ -1,8 +1,8 @@
-PWD /Users/ferdinandofloretto/Dropbox/Research/Repos/flab.github.io/assets/cv
+PWD /Users/ferdinandofloretto/Dropbox/Research/Repos/flab.github.io/_site/assets/cv
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/ferdinandofloretto/Dropbox/Research/Repos/flab.github.io/assets/cv/bioSketch-DARPA.tex
+INPUT /Users/ferdinandofloretto/Dropbox/Research/Repos/flab.github.io/_site/assets/cv/bioSketch-DARPA.tex
 OUTPUT bioSketch-DARPA.log
 INPUT ./documentMETADATA.cls
 INPUT ./documentMETADATA.cls
