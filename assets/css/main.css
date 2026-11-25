@@ -133,34 +133,6 @@ body.sticky-bottom-footer {
 /*****************************************************************************
 * Projects
 *****************************************************************************/
-/******************************************************************************
- * Bio
- ******************************************************************************/
-.bio-section {
-  margin-top: 1.75rem;
-}
-.bio-section h4 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: var(--global-text-color);
-  border-bottom: 1px solid var(--global-divider-color);
-  padding-bottom: 0.35rem;
-  margin-bottom: 0.6rem;
-}
-.bio-section ul {
-  margin: 0;
-  padding-left: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-.bio-section ul li {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: var(--global-text-color);
-}
-
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
